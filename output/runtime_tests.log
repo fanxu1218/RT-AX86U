@@ -1,0 +1,19 @@
+LINUX_BUILDER_READY
+PASS missing-session
+PASS invalid-session
+PASS authenticated-read
+PASS authenticated-write
+PASS cross-site-write
+PASS missing-origin
+PASS encoded-traversal
+PASS stock-page
+PASS only authenticated allowed requests reached the private API
+Http on addr 127.0.0.1:3032
+root=/koolshare/webs/
+upload=/tmp/upload
+PASS real-backend-unauthenticated
+PASS real-skipd-value-through-adapter
+PASS real-backend-invalid-session
+PASS vendor-page-with-real-backend
+PASS actual packaged httpdb and skipd/dbus; vendor authentication remains a fixture
+

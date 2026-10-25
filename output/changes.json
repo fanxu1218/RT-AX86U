@@ -1,0 +1,525 @@
+[
+  {
+    "path": "koolshare",
+    "change": "added",
+    "link": "jffs/.koolshare"
+  },
+  {
+    "path": "rom/etc/koolshare",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/.soft_ver",
+    "change": "added",
+    "bytes": 7,
+    "sha256": "205363c367514ed6935bdaf0f149c67125c9bbe8422f444939b20dbe6ab2667f"
+  },
+  {
+    "path": "rom/etc/koolshare/.soft_ver_old",
+    "change": "added",
+    "bytes": 7,
+    "sha256": "9f23b62ef6a19501231be21b9ce649f671466202ed84b389a99a54847a434ea2"
+  },
+  {
+    "path": "rom/etc/koolshare/bin",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/bin/base64_decode",
+    "change": "added",
+    "link": "base64_encode"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/base64_encode",
+    "change": "added",
+    "bytes": 4336,
+    "sha256": "6b1e02e41741cba033d1dbfcdfc78fcc9005b112842c011192a7e76b0963d93b"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/helper.sh",
+    "change": "added",
+    "bytes": 1078,
+    "sha256": "cebda44b4dc57b16d8f86abc1a264443079246ab86a73584d485d949b7759848"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/htop",
+    "change": "added",
+    "bytes": 426824,
+    "sha256": "68a4e6dbdcb10ac9fa8429166c4520940a83433afacfaf8d46756e45e2cdeb64"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/httpdb",
+    "change": "added",
+    "bytes": 281072,
+    "sha256": "17fc8036f38483797df9c4bb29a9b9ba6444c8ed32d0691aacfec65e30a5a10c"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/ks-mount-start.sh",
+    "change": "added",
+    "bytes": 646,
+    "sha256": "c134875547c45bfc1c736bec9c9d0554bbf4840f8b6b6f405b6657470a3aeedf"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/ks-nat-start.sh",
+    "change": "added",
+    "bytes": 748,
+    "sha256": "402a271cb9b455e60c1383f20ada0731df730535634486ab75475f65c0adfb62"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/ks-services-start.sh",
+    "change": "added",
+    "bytes": 409,
+    "sha256": "04d9e3fc0ebce0ed03ea113389b9a163fc380ea6108f29f3f9732c2192010bbe"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/ks-services-stop.sh",
+    "change": "added",
+    "bytes": 410,
+    "sha256": "c354c0cd38b60688d39653acc90b8b52dfa156a4bff59564c2e84d40a00b6e5e"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/ks-unmount.sh",
+    "change": "added",
+    "bytes": 463,
+    "sha256": "cd3ddb6b24cd3396c88da20eb0b3888694cc41091a1916b8e943e90afd2895cd"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/ks-wan-start.sh",
+    "change": "added",
+    "bytes": 1419,
+    "sha256": "75ce1a07252e69f9f5365a8e651d8ff06a23d6ec4f5fd6e1f4790e95b5514079"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/perpboot",
+    "change": "added",
+    "bytes": 18540,
+    "sha256": "3173c0e1f9c3e1062ac19876e963f2bbfbf0534e3964c3982e6401aae83f259c"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/perpctl",
+    "change": "added",
+    "bytes": 18328,
+    "sha256": "991b714c7a3752412e124b6caa69805dee505e63bdfaa8e54db75e1b14b722f6"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/perpd",
+    "change": "added",
+    "bytes": 42860,
+    "sha256": "310d42b455f8c939f34594c3dae5cc68fc6fbdbb3530fb045c3875487b97affe"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/perphup",
+    "change": "added",
+    "bytes": 13320,
+    "sha256": "9d554a3361be87e4c552794a5e794323829d8f1766a20aa7b70d9763e8d98bbd"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/perpls",
+    "change": "added",
+    "bytes": 22548,
+    "sha256": "dda1e8fff50d542ae61dcf1a8bc896d992d88195136ed11fae6017c8fd5f4939"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/perpok",
+    "change": "added",
+    "bytes": 17108,
+    "sha256": "ba9bc022854062a37cbbcd72f4140f15fb461c277b32ab42b1ba2cf9141fcb98"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/perpstat",
+    "change": "added",
+    "bytes": 18992,
+    "sha256": "80b7021c7910ca2893b4b375e2f3bc762b3e13788f9992ff3952f8aa6c3b0800"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/start-stop-daemon",
+    "change": "added",
+    "bytes": 16048,
+    "sha256": "7b2f5abaf14b8df0bbec3c3f5221c500d13c7dd9f02469ce918b59e80f92b1d3"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/tinylog",
+    "change": "added",
+    "bytes": 27784,
+    "sha256": "0d6f63e2bf7046479568262636af579e032b74e64aac14178f7d5d1ef2ea7c12"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/versioncmp",
+    "change": "added",
+    "bytes": 4044,
+    "sha256": "464be5a0535404bf6a8e520101f5abebe3dfe6b2ecd82bf74eb62ba28f933e47"
+  },
+  {
+    "path": "rom/etc/koolshare/init.d",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/init.d/S01softok.sh",
+    "change": "added",
+    "bytes": 802,
+    "sha256": "49fb0305933a50b8afc664814cc4098636bd56c2a370391381281ea98f88ad8c"
+  },
+  {
+    "path": "rom/etc/koolshare/init.d/V01softok.sh",
+    "change": "added",
+    "bytes": 912,
+    "sha256": "be29fb7f267cc1b630538b3f2de12b37b1432da368fece8088157665c47d025f"
+  },
+  {
+    "path": "rom/etc/koolshare/perp",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/perp/.boot",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/perp/.boot/rc.log",
+    "change": "added",
+    "bytes": 72,
+    "sha256": "cce65f7d5e6538ef10b831525273adedb3b247dd465c35b964cf1223c5f6410c"
+  },
+  {
+    "path": "rom/etc/koolshare/perp/.boot/rc.perp",
+    "change": "added",
+    "bytes": 37,
+    "sha256": "0b2b3527b9febb86cd1485c1a15104ac10408267dafc930bb7680f1a10195f01"
+  },
+  {
+    "path": "rom/etc/koolshare/perp/.control",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/perp/httpdb",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/perp/httpdb/rc.main",
+    "change": "added",
+    "bytes": 123,
+    "sha256": "4440d0a4ddd77083cc2d4f1f6bb019c1f02d11e495799f74a3ba89b056b9435e"
+  },
+  {
+    "path": "rom/etc/koolshare/perp/perp.sh",
+    "change": "added",
+    "bytes": 688,
+    "sha256": "1ce78e6879e52fb7114de2c975ef42d67a848aec528c0d1d18192933e6f6b1c9"
+  },
+  {
+    "path": "rom/etc/koolshare/res",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/res/koolshare.png",
+    "change": "added",
+    "bytes": 2574,
+    "sha256": "aae80bd6e7c9c74bd252aa5a56d26c181b54381abcadb2a35c77a94ec32263f4"
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/layer.js",
+    "change": "added",
+    "bytes": 27842,
+    "sha256": "8a5ca36d9ec70fbfbdcf05c93a46e4c8758fe18cdd4a4fdd687a706faa7dd276"
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/mobile",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/mobile/layer.js",
+    "change": "added",
+    "bytes": 3302,
+    "sha256": "e638d65e345e5dce62ec180305e47d5d5afeb05584dd031b47bc091c5771ee2c"
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/mobile/need",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/mobile/need/layer.css",
+    "change": "added",
+    "bytes": 5260,
+    "sha256": "eecc7effcae5f246e6212c30c525cee9e11cadedc7d32aa6def213f1a90d98f6"
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/theme",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/theme/default",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/theme/default/icon-ext.png",
+    "change": "added",
+    "bytes": 5911,
+    "sha256": "e2e7a838c43d0a9a9ffc179fc7bd41435883df6f5103a45dc77db4d30c8825e2"
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/theme/default/icon.png",
+    "change": "added",
+    "bytes": 11493,
+    "sha256": "99942159547fc45a02ddeb5af9570b6c870b18c36f83fd53ccb7c0644d346c89"
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/theme/default/layer.css",
+    "change": "added",
+    "bytes": 18652,
+    "sha256": "f4ab1b1450103e7cae8e2761601259d5aca6b14cc7e5c161ea434ee07a5a510b"
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/theme/default/loading-0.gif",
+    "change": "added",
+    "bytes": 5793,
+    "sha256": "07236f6814a40623bab43f2043860c97678bc7deedbf06feff92f0d6e6673bf5"
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/theme/default/loading-1.gif",
+    "change": "added",
+    "bytes": 701,
+    "sha256": "7c6380e9985c8e4982f41f8dba64d6b1c4a7997d0aa635d9f4bb7643ab815248"
+  },
+  {
+    "path": "rom/etc/koolshare/res/layer/theme/default/loading-2.gif",
+    "change": "added",
+    "bytes": 1787,
+    "sha256": "16ea0cf66d51efdbbc2a62b11ab0419fa72fb3320844f1d0d710480245ac9925"
+  },
+  {
+    "path": "rom/etc/koolshare/res/proceding.gif",
+    "change": "added",
+    "bytes": 1150,
+    "sha256": "0352bd0ad4411d016dff482ee5668f56fce38a767d6bd62f70b31f47c1cafe3c"
+  },
+  {
+    "path": "rom/etc/koolshare/res/soft-v19",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/res/soft-v19/assets",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/res/soft-v19/assets/index.3d07b566.js",
+    "change": "added",
+    "bytes": 79578,
+    "sha256": "bdf39165d282de5a0a8f2df4f31bdf5aca7c7ba648b86881ebc9da76e10f5cc5"
+  },
+  {
+    "path": "rom/etc/koolshare/res/soft-v19/assets/style.588ef2c4.css",
+    "change": "added",
+    "bytes": 281175,
+    "sha256": "97b370e3b9f470690a163c7adf873818dea4ec13457a21e25f652b1e96459791"
+  },
+  {
+    "path": "rom/etc/koolshare/res/soft-v19/assets/vendor.557345b5.js",
+    "change": "added",
+    "bytes": 146930,
+    "sha256": "3ff592b3c076693d352b1b3f8ffc770aebcd0565d33e0f4aa842b43b6bfc8b56"
+  },
+  {
+    "path": "rom/etc/koolshare/res/softcenter.css",
+    "change": "added",
+    "bytes": 10833,
+    "sha256": "fc5891bab2f781e10bd372e57b6a04ed71f0890895d9404ecc6f2be6774a96c1"
+  },
+  {
+    "path": "rom/etc/koolshare/res/softcenter.js",
+    "change": "added",
+    "bytes": 3069,
+    "sha256": "79ddd0694e857023634a17b9ac91b8a11242daec6d76beb76d392069b5d1c95b"
+  },
+  {
+    "path": "rom/etc/koolshare/res/softcenter_asus.css",
+    "change": "added",
+    "bytes": 12121,
+    "sha256": "5b1e20cccd4a4d6834cdfac544ed1741b0da1553950fd1d7d60545df8f2e7b44"
+  },
+  {
+    "path": "rom/etc/koolshare/res/softcenter_rog.css",
+    "change": "added",
+    "bytes": 12449,
+    "sha256": "c4cc2b8c6d169ac4dbc9cfd69e039ad8ec2b13a5c65021d98c2e21631adf8880"
+  },
+  {
+    "path": "rom/etc/koolshare/res/softcenter_ts.css",
+    "change": "added",
+    "bytes": 11902,
+    "sha256": "54d5fa3d75bb82af30af4ec54bd7ea441343e80e6d3dfeb7411a5ca6da15be64"
+  },
+  {
+    "path": "rom/etc/koolshare/res/softcenter_tuf.css",
+    "change": "added",
+    "bytes": 12433,
+    "sha256": "5671d6521097d0a6d629a01576f51a14cb26263b802ff06b9b84dd1ba4062071"
+  },
+  {
+    "path": "rom/etc/koolshare/res/upgrade.png",
+    "change": "added",
+    "bytes": 14302,
+    "sha256": "f2bcbfa19b7b3d95bc8226f47eeaf121ad53839a7127446b6c58c1079c21de11"
+  },
+  {
+    "path": "rom/etc/koolshare/scripts",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/scripts/base.sh",
+    "change": "added",
+    "bytes": 551,
+    "sha256": "33ca6d2e357d629d18044cd6269ae7e1a7a0046692254b333237f085bd0981d2"
+  },
+  {
+    "path": "rom/etc/koolshare/scripts/center_config.sh",
+    "change": "added",
+    "bytes": 2963,
+    "sha256": "17dddc7bed70e66f4816a0b6b8331fc05c2486ca02e5dc682cd338df90646596"
+  },
+  {
+    "path": "rom/etc/koolshare/scripts/dummy_script.sh",
+    "change": "added",
+    "bytes": 85,
+    "sha256": "3acf8183f5e427d93e21b39edec6ad49f18edb640020ec3c746b44a68d2ce4e3"
+  },
+  {
+    "path": "rom/etc/koolshare/scripts/ks_app_install.sh",
+    "change": "added",
+    "bytes": 27313,
+    "sha256": "b1e68372bcfda30a28c5bd367a40d0f231ff7b71d99bb0a5aa830fc34eeb67aa"
+  },
+  {
+    "path": "rom/etc/koolshare/scripts/ks_app_remove.sh",
+    "change": "added",
+    "link": "ks_app_install.sh"
+  },
+  {
+    "path": "rom/etc/koolshare/scripts/ks_home_status.sh",
+    "change": "added",
+    "bytes": 1644,
+    "sha256": "04b7946f709acbcb62190be1d01e92ed183e37f7a6ce4d2a1a133e75ee81f3a7"
+  },
+  {
+    "path": "rom/etc/koolshare/scripts/ks_tar_install.sh",
+    "change": "added",
+    "bytes": 17419,
+    "sha256": "2846662c590866b51a665d83d40812498629d41e8932316cade2bd804ceb68f7"
+  },
+  {
+    "path": "rom/etc/koolshare/webs",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "rom/etc/koolshare/webs/Module_Softcenter.asp",
+    "change": "added",
+    "bytes": 3100,
+    "sha256": "2032a2402b3a18b933dc0d0f6c0046646d2e1c7548487ce2e887cc3aec770f12"
+  },
+  {
+    "path": "rom/etc/koolshare/webs/Module_Softcenter_old.asp",
+    "change": "added",
+    "bytes": 32917,
+    "sha256": "aa7ee6fdcc23a902d92010732f578371ae6491e685e88403cc4d081836d19e08"
+  },
+  {
+    "path": "rom/etc/koolshare/webs/Module_Softsetting.asp",
+    "change": "added",
+    "bytes": 7738,
+    "sha256": "baa0185d3c8cb3cf5d5624fdb33a1290ed3f97ffbc29ff9b35e3d384145af753"
+  },
+  {
+    "path": "rom/etc/localmod-release.json",
+    "change": "added",
+    "bytes": 359,
+    "sha256": "0a3d0cfc0d34e5be7536b696c3c042ac214e8423819a673ba365e87cdddd0d4f"
+  },
+  {
+    "path": "sbin/init",
+    "change": "modified",
+    "bytes": 3444,
+    "sha256": "6a59a7c6bd1c7fa9f18beda9de023542a21558b5fdbf4179cdc059a983c3c834"
+  },
+  {
+    "path": "usr/bin/dbus",
+    "change": "added",
+    "bytes": 502680,
+    "sha256": "ddf95fb274a6dee0bdae5d700950f029d1f40e88ce30f74bef1771a5b3850f31"
+  },
+  {
+    "path": "usr/bin/skipd",
+    "change": "added",
+    "bytes": 1071564,
+    "sha256": "06d3fd7682b6a843ef90ab251eea90c50bc015d461984813784ebf18678bdc0e"
+  },
+  {
+    "path": "usr/lib/localmod",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "usr/lib/localmod/httpd_bridge.so",
+    "change": "added",
+    "bytes": 11260,
+    "sha256": "1866630e54392e39ed38189297490800a8bdbc6f9e51ead3d2b0f70791a3762b"
+  },
+  {
+    "path": "usr/libexec",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "usr/libexec/localmod",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "usr/libexec/localmod/bootstrap.sh",
+    "change": "added",
+    "bytes": 3617,
+    "sha256": "1d01a878da1eee07fb47feba60e66d2078d681a7c7cc4ec9a016f3b5f37e28d2"
+  },
+  {
+    "path": "usr/libexec/localmod/httpd.vendor",
+    "change": "added",
+    "bytes": 690096,
+    "sha256": "d9a24b751b2c6ec0a9bf5931b6b1380e75c136bd672a91a5a5118c6ee9e1586d"
+  },
+  {
+    "path": "usr/sbin/httpd",
+    "change": "modified",
+    "bytes": 4408,
+    "sha256": "ec051867cb20921fb92eef66ddd8f54506ae318d006cd40a9041d4f26bb292ca"
+  },
+  {
+    "path": "www/Module_Localmod.asp",
+    "change": "added",
+    "bytes": 1270,
+    "sha256": "3f59cb33effd90fac632c01cd23115cfc71f8f28af6c50f34125b2c45cc40de0"
+  },
+  {
+    "path": "www/state.js",
+    "change": "modified",
+    "bytes": 164465,
+    "sha256": "63cc9f9483636a4fb0e59bc216d65b60ea8a631f69ebeff41723909019a02680"
+  }
+]

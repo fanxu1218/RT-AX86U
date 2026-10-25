@@ -1,0 +1,6 @@
+LINUX_BUILDER_READY
+PASS software-center ASP stat fallback
+PASS software-center ASP read fallback
+PASS software-center resource existence fallback
+PASS existing vendor file takes precedence
+

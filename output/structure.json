@@ -1,0 +1,58 @@
+{
+  "filename": "RT-AX86U_388_24437_localmod1_EXPERIMENTAL.w",
+  "bytes": 85327892,
+  "sha256": "e46b7164227ed4b408f96de6207b4243a1b5c544e9d2fae730e80b2f7d7f1464",
+  "md5": "56457316edd472fd1f1db8cd81ba1bcf",
+  "start": 0,
+  "volumes": {
+    "0": {
+      "name": "rootfs_ubifs",
+      "reserved": 619,
+      "type": 1,
+      "flags": 1,
+      "blocks": 619,
+      "first_offset": "0x400000",
+      "payload_bytes": 78598144
+    },
+    "1": {
+      "name": "METADATA",
+      "reserved": 1,
+      "type": 1,
+      "flags": 0,
+      "blocks": 1,
+      "first_offset": "0x3c0000",
+      "payload_bytes": 126976
+    },
+    "2": {
+      "name": "METADATACOPY",
+      "reserved": 1,
+      "type": 1,
+      "flags": 0,
+      "blocks": 1,
+      "first_offset": "0x3e0000",
+      "payload_bytes": 126976
+    },
+    "10": {
+      "name": "filestruct_full.bin",
+      "reserved": 28,
+      "type": 2,
+      "flags": 0,
+      "blocks": 28,
+      "first_offset": "0x40000",
+      "payload_bytes": 3525202
+    }
+  },
+  "checks": {
+    "ec_valid": 651,
+    "vid_valid": 651,
+    "data_valid": 28
+  },
+  "trailer": [
+    "0x9d962472",
+    "0x5732",
+    "0x4908",
+    "0x3",
+    "0x2"
+  ],
+  "whole_crc_valid": true
+}

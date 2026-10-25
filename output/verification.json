@@ -1,0 +1,35 @@
+{
+  "image": "output/RT-AX86U_388_24437_localmod1_EXPERIMENTAL.w",
+  "sha256": "e46b7164227ed4b408f96de6207b4243a1b5c544e9d2fae730e80b2f7d7f1464",
+  "bytes": 85327892,
+  "status": "EXPERIMENTAL_NOT_DEVICE_TESTED",
+  "path_count": 3588,
+  "valid_ubifs_nodes": 52244,
+  "valid_volume_table_rows": 256,
+  "checks": {
+    "all_paths_present": true,
+    "all_contents_links_and_metadata_match": true,
+    "no_unreadable_ubifs_blocks": true,
+    "ubifs_nodes_crc_valid": true,
+    "ubi_headers_crc_valid": true,
+    "whole_image_crc_valid": true,
+    "all_volume_table_crc_valid": true,
+    "vendor_boot_region_identical": true,
+    "vendor_model_footer_identical": true,
+    "vendor_rc_identical": true,
+    "vendor_uu_page_identical": true,
+    "vendor_httpd_retained": true,
+    "vendor_kernel_modules_identical": true,
+    "ubifs_format_4": true,
+    "no_host_extended_attributes": true
+  },
+  "errors": [],
+  "bad_ubifs_nodes": [],
+  "not_tested": [
+    "physical boot and flash acceptance",
+    "real vendor login/TLS integration",
+    "Wi-Fi/NAT and firewall lifecycle",
+    "software-center online install and plugin hooks",
+    "UU account and actual acceleration"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "filename": "RT-AX86U_386.3_2_cferom_pureubi_koolcenter_alpha3.w",
+  "bytes": 90570772,
+  "md5": "ace03b30acc5bf4abf8266b5a91ed03d",
+  "sha256": "c3d01f6df5916ab5f14a2dabd9c79b6d7c28c73b44bed122fdc2636568cf6838",
+  "published_md5_match": true,
+  "broadcom_trailer": {
+    "stored_crc": "0xbb145262",
+    "calculated_crc": "0xbb145262",
+    "valid": true,
+    "version_raw": "0x5732",
+    "chip_id_raw": "0x4908",
+    "flash_type_raw": "0x3",
+    "flags_raw": "0x2"
+  },
+  "ubi_start": "0x100000",
+  "ubi_end_exclusive": "0x5660000",
+  "peb_bytes": 131072,
+  "leb_bytes": 126976,
+  "min_io_bytes": 2048,
+  "ubi_checks": {
+    "ec_valid": 683,
+    "vid_valid": 683,
+    "static_data_valid": 28
+  },
+  "ubifs_node_checks": {
+    "valid": 54249
+  },
+  "volumes": {
+    "2147479551": {
+      "name": "UBI layout",
+      "blocks": 2,
+      "first_file_offset": "0x100000",
+      "last_file_offset": "0x120000"
+    },
+    "10": {
+      "name": "filestruct_full.bin",
+      "reserved_pebs": 28,
+      "type": "static",
+      "blocks": 28,
+      "first_file_offset": "0x140000",
+      "last_file_offset": "0x4a0000"
+    },
+    "1": {
+      "name": "METADATA",
+      "reserved_pebs": 1,
+      "type": "dynamic",
+      "blocks": 1,
+      "first_file_offset": "0x4c0000",
+      "last_file_offset": "0x4c0000"
+    },
+    "2": {
+      "name": "METADATACOPY",
+      "reserved_pebs": 1,
+      "type": "dynamic",
+      "blocks": 1,
+      "first_file_offset": "0x4e0000",
+      "last_file_offset": "0x4e0000"
+    },
+    "0": {
+      "name": "rootfs_ubifs",
+      "reserved_pebs": 651,
+      "type": "dynamic",
+      "blocks": 651,
+      "first_file_offset": "0x500000",
+      "last_file_offset": "0x5640000"
+    }
+  }
+}

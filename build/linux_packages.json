@@ -1,0 +1,52 @@
+[
+  {
+    "package": "busybox-static",
+    "version": "1.37.0-r20",
+    "sha256": "ee469aee2958feffd7f64dd96655704025ff60af614f77a1d7323dc237c34da2"
+  },
+  {
+    "package": "libcrypto3",
+    "version": "3.5.9-r0",
+    "sha256": "ede2ef7eca3b65a42e902aaf7890f9c5647dca0c55123a817179ad9f3bc6ef24"
+  },
+  {
+    "package": "libuuid",
+    "version": "2.41.6-r1",
+    "sha256": "24e944e8270c0626a0c2083bcdd4f3ee636923ca1f86fc32caa22c5462ce26b9"
+  },
+  {
+    "package": "linux-virt",
+    "version": "6.12.114-r0",
+    "sha256": "345b2d561443cd8c978cbcc0f36f2374b3ef702debb747221384b4ddc07d6a77"
+  },
+  {
+    "package": "lzo",
+    "version": "2.10-r5",
+    "sha256": "4a031a091b2c2756df771678fc20469ff1ace0512124117cc7c2cc6d4d92f0f2"
+  },
+  {
+    "package": "mtd-utils-ubi",
+    "version": "2.2.1-r0",
+    "sha256": "050370223d822b483057a13e15d360262b572650a52f42af2e36ce4c71aafadb"
+  },
+  {
+    "package": "musl",
+    "version": "1.2.5-r13",
+    "sha256": "d616c430bcbe0bf452b7f6ea2669f2cad14e85644a7599f4f495115d021742ef"
+  },
+  {
+    "package": "qemu-arm",
+    "version": "10.0.0-r1",
+    "sha256": "f9bbb6150d0768c5320d35a023806630beb84676f71d05f164533830c3aa4942"
+  },
+  {
+    "package": "zlib",
+    "version": "1.3.2-r1",
+    "sha256": "2d274cb1b2a36d0e8347d802e6dea8648cab952ea5fae1989ab72e725842a2c3"
+  },
+  {
+    "package": "zstd-libs",
+    "version": "1.5.7-r0",
+    "sha256": "a0e92d2225941a514eb0b2325b137fe6444ef9171627aae8129b74a6ad934ac4"
+  }
+]
