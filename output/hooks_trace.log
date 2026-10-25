@@ -1,0 +1,61 @@
+WORK nvram-buffer-preserved
+VENDOR mount /jffs
+BOOTSTRAP prepare
+USER init-start 
+BOOTSTRAP start
+VENDOR wait 
+USER service-event restart httpd
+WORK restart_httpd
+USER service-event start dnsmasq
+WORK start_dnsmasq
+USER pre-mount /dev/sda1 ext4
+VENDOR mount /tmp/mnt/USB with space
+USER wan-event 1 connected
+USER wan-start 1
+CENTER S start
+USER services-start 
+CENTER V 
+USER wan-event 0 connecting
+USER wan-event 0 connected
+USER wan-start 0
+CENTER S start
+USER service-event-end restart httpd
+USER service-event-end start dnsmasq
+USER post-mount /tmp/mnt/USB with space
+CENTER M /tmp/mnt/USB with space
+ARGC M 1 </tmp/mnt/USB with space>
+USER unmount /tmp/mnt/USB with space
+CENTER U /tmp/mnt/USB with space
+ARGC U 1 </tmp/mnt/USB with space>
+VENDOR umount /tmp/mnt/USB with space
+VENDOR umount /tmp/mnt/USB with space
+POSTCONF /etc/dnsmasq.conf
+VENDOR eval dnsmasq
+POSTCONF /etc/dnsmasq.conf
+VENDOR eval dnsmasq
+VENDOR mount /tmp/mnt/disabled
+VENDOR mount /tmp/mnt/remount
+VENDOR mount /tmp/mnt/bind
+VENDOR wait 
+USER wan-event 3 init
+USER wan-event 3 connecting
+USER wan-event 3 connected
+USER wan-start 3
+CENTER S start
+USER wan-event 3 disconnected
+USER wan-event 3 stopped
+USER wan-event 3 disabled
+USER wan-event 3 stopping
+USER services-stop 
+CENTER T 
+BOOTSTRAP stop
+BOOTSTRAP start
+VENDOR wait 
+VENDOR wait 
+USER services-start 
+CENTER V 
+USER services-stop 
+CENTER T 
+BOOTSTRAP stop
+WORK complete
+BOOTSTRAP skipd-restart

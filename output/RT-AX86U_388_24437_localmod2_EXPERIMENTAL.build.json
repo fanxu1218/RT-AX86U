@@ -1,0 +1,12 @@
+{
+  "image": "output/RT-AX86U_388_24437_localmod2_EXPERIMENTAL.w",
+  "bytes": 85327892,
+  "sha256": "f305a3b405c732ba0c6277f4bd41db2e4e7a8a944bbdd633e930d63562c65b18",
+  "rootfs_lebs": 619,
+  "leb_size": 126976,
+  "rootfs_fmt_version": 4,
+  "vendor_boot_region_unchanged": true,
+  "vendor_descriptor_unchanged": true,
+  "vendor_wfi_parameters_unchanged": true,
+  "status": "EXPERIMENTAL_NOT_DEVICE_TESTED"
+}

@@ -1,0 +1,34 @@
+{
+  "vendor_rc_sha256": "9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62",
+  "rc_imports_verified": [
+    "_eval",
+    "mount",
+    "nvram_get",
+    "nvram_set",
+    "sigwaitinfo",
+    "strsep",
+    "umount",
+    "umount2"
+  ],
+  "donor_additional_asp_handlers": [
+    "asus_sysinfo",
+    "bwdpi_conntrack",
+    "get_connlist_array",
+    "get_custom_settings",
+    "get_ipv6clients_array",
+    "get_ipv6net_array",
+    "get_leases_array",
+    "get_route_array",
+    "get_tcclass_array",
+    "get_tcfilter_array",
+    "get_upnp_array",
+    "get_vserver_array",
+    "get_wl_status",
+    "ipv6_pinholes",
+    "language_support_list",
+    "wan_ipv6_network",
+    "wl_extent_channel"
+  ],
+  "donor_dbus_asp_extensions": false,
+  "scope": "Pinned RT-AX86U 24437 imports and KoolCenter 388.11_0 handler inventory; not an on-device test"
+}

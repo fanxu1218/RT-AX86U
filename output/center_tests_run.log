@@ -1,0 +1,18 @@
+LINUX_BUILDER_READY
+PASS immediate writes survive skipd service restarts
+PASS database value and exact user hook bytes survive managed-core upgrade
+PASS initial center migration archives old plugins; managed-core upgrade preserves current plugins and user hooks
+Http on addr 127.0.0.1:3032
+root=/koolshare/webs/
+upload=/tmp/upload
+INSTALL RPC 200 {"result": "12001"}
+conn=0x1064e0 nc=0x1063f8 id=12001 removed
+PASS actual software-center API invokes offline installer and registers fixture plugin
+conn=0x106460 nc=0x106988 id=12002 removed
+PASS installed plugin script reads fields and returns via actual curl callback {"result": "12002"}
+PASS wrong_platform not installed and failure exit status preserved
+PASS softcenter core overwrite blocked and failure exit status preserved
+PASS offline cleanup preserves private runtime directory
+PASS recovery marker stops the actual private API backend
+PASS software-center controlled fixture workflow; no third-party plugin or internet service was executed
+

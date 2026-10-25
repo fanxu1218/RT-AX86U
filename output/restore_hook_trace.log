@@ -1,0 +1,30 @@
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+firewall-start ppp0
+nat-start 
+CENTER-N-start_nat
+firewall-start ppp0
+firewall-start ppp0

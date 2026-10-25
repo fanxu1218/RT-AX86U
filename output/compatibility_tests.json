@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checks": {
+    "privileged_api_connection": true,
+    "filter_replacement_has_no_observed_exposure": true,
+    "noflush_guard_first": true,
+    "nonrouting_flush_preserves_policy_and_chain_definitions": true,
+    "dry_run_and_errors_do_not_emit_events": true,
+    "nat_filter_event_dispatch": true,
+    "restore_input_retained_and_recovery_supported": true,
+    "database_commit_and_restart": true,
+    "core_migration_preserves_user_state": true,
+    "offline_install_through_real_httpdb_skipd": true,
+    "installed_script_fields_and_callback": true,
+    "wrong_platform_and_core_overwrite_rejected": true,
+    "offline_cleanup_cannot_remove_runtime": true,
+    "recovery_marker_stops_backend": true
+  },
+  "filter_restore_cycles": 24,
+  "nonrouting_flush_cycles": 5,
+  "unprivileged_connection_attempts": 65086,
+  "live_test_kernel": "6.12.114-0-virt",
+  "live_xtables_helper": "iptables v1.8.11 (legacy)",
+  "boundary": "ARM32 production adapters and real packaged httpdb/skipd/dbus; native Alpine curl, xtables and process-launch helper are used in the networkless ARM64 guest. Vendor rc hardware operations and login are fixtures. Stock kernel 4.1/xtables 1.4.12.2 still require device verification."
+}

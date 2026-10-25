@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "boundary": "Actual ARM32 rc adapter and dispatcher; vendor NVRAM/mount/service/signal operations are fixtures, not hardware execution",
+  "checks": {
+    "rc_launcher_preserves_arguments_and_vendor_exit": true,
+    "rc_launcher_recovery_and_skipd_compatibility": true,
+    "vendor_nvram_shared_buffer_is_not_clobbered": true,
+    "init_hook_after_mount_and_prepare": true,
+    "service_before_after_and_multi_command": true,
+    "wan_connected_once_per_unit": true,
+    "fork_does_not_replay_parent_wan": true,
+    "legacy_user_hook_and_center_deduplicated": true,
+    "all_vendor_wan_states_mapped": true,
+    "mount_arguments_and_order": true,
+    "post_mount_finishes_before_unmount": true,
+    "center_mount_paths_remain_one_argument": true,
+    "unmount_retry_runs_hook_once": true,
+    "bind_and_remount_do_not_emit_storage_hooks": true,
+    "disabled_hooks_and_exact_nvram_keys": true,
+    "services_stop_before_shutdown_and_restart_start": true,
+    "halt_also_stops_services": true,
+    "dns_config_and_postconf_before_daemon": true,
+    "timeouts_and_nested_event_guard": true
+  }
+}

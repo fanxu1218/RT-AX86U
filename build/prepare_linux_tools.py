@@ -24,7 +24,7 @@ PROVIDES = {}
 for name, info in PACKAGES.items():
     for item in info.get('p', '').split():
         PROVIDES[item.split('=')[0]] = name
-needed = {'mtd-utils-ubi', 'busybox-static', 'qemu-arm'}
+needed = {'mtd-utils-ubi', 'busybox-static', 'qemu-arm', 'iptables', 'iptables-legacy', 'curl', 'openrc'}
 pending = list(needed)
 while pending:
     p = pending.pop()
@@ -60,7 +60,14 @@ for name, apk in downloaded:
         members = [m for m in archive.getmembers() if m.name and not m.name.startswith('.')]
         for m in members:
             assert not m.name.startswith('/') and '..' not in Path(m.name).parts
-        archive.extractall(root, members=members, filter='tar')
+        for member in members:
+            # APK packages may replace a previously installed absolute symlink
+            # (for example iptables-xml). Unlink the destination itself first;
+            # retain tar_filter's check against escaping through parent links.
+            target = root/member.name
+            if target.is_symlink():
+                target.unlink()
+            archive.extract(member, root, filter='tar')
     print(name, apk.stat().st_size, flush=True)
 (BASE/'linux_packages.json').write_text(json.dumps([
     {'package': name, 'version': PACKAGES[name]['V'], 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}

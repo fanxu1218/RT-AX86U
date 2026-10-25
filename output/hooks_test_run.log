@@ -1,0 +1,119 @@
+LINUX_BUILDER_READY
++ trap 'cp /tmp/hook_trace /work/build/hooks_trace.log 2>/dev/null || true; cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf 2>/dev/null || true' EXIT
++ mkdir -p /usr/libexec/localmod /usr/sbin /jffs/scripts /jffs/configs/dnsmasq.d /koolshare/bin /koolshare/scripts /koolshare/init.d /tmp/.localmod /etc /www/css
++ chmod 700 /tmp/.localmod
++ cp /work/sources/localmod/dispatch.sh /usr/libexec/localmod/dispatch.sh
++ chmod 755 /usr/libexec/localmod/dispatch.sh
++ cat
++ chmod 755 /usr/libexec/localmod/bootstrap.sh
++ cat
++ chmod 755 /usr/libexec/localmod/localmod-event
++ cat
++ chmod 755 /bin/nvram
++ printf 'base-line\n'
++ printf 'custom-option=1\n'
++ cat
++ chmod 755 /jffs/scripts/dnsmasq.postconf
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' init-start
++ chmod 755 /jffs/scripts/init-start
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' services-start
++ chmod 755 /jffs/scripts/services-start
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' services-stop
++ chmod 755 /jffs/scripts/services-stop
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' service-event
++ chmod 755 /jffs/scripts/service-event
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' service-event-end
++ chmod 755 /jffs/scripts/service-event-end
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' wan-event
++ chmod 755 /jffs/scripts/wan-event
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' wan-start
++ chmod 755 /jffs/scripts/wan-start
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' pre-mount
++ chmod 755 /jffs/scripts/pre-mount
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' post-mount
++ chmod 755 /jffs/scripts/post-mount
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' unmount
++ chmod 755 /jffs/scripts/unmount
++ printf '/koolshare/bin/ks-wan-start.sh start\n'
++ cp /work/build/casefs/rootfs/rom/etc/koolshare/bin/ks-services-start.sh /koolshare/bin/ks-services-start.sh
++ chmod 755 /koolshare/bin/ks-services-start.sh
++ cp /work/build/casefs/rootfs/rom/etc/koolshare/bin/ks-services-stop.sh /koolshare/bin/ks-services-stop.sh
++ chmod 755 /koolshare/bin/ks-services-stop.sh
++ cp /work/build/casefs/rootfs/rom/etc/koolshare/bin/ks-wan-start.sh /koolshare/bin/ks-wan-start.sh
++ chmod 755 /koolshare/bin/ks-wan-start.sh
++ cp /work/build/casefs/rootfs/rom/etc/koolshare/bin/ks-nat-start.sh /koolshare/bin/ks-nat-start.sh
++ chmod 755 /koolshare/bin/ks-nat-start.sh
++ cp /work/build/casefs/rootfs/rom/etc/koolshare/bin/ks-mount-start.sh /koolshare/bin/ks-mount-start.sh
++ chmod 755 /koolshare/bin/ks-mount-start.sh
++ cp /work/build/casefs/rootfs/rom/etc/koolshare/bin/ks-unmount.sh /koolshare/bin/ks-unmount.sh
++ chmod 755 /koolshare/bin/ks-unmount.sh
++ cat
++ printf 'background: #4F5B5F\n'
++ printf '#!/bin/sh\nprintf "CENTER %s %%s\\n" "$*" >> /tmp/hook_trace\n' S
++ chmod 755 /koolshare/init.d/S10probe.sh
++ '[' S '=' M ]
++ '[' S '=' U ]
++ printf '#!/bin/sh\nprintf "CENTER %s %%s\\n" "$*" >> /tmp/hook_trace\n' V
++ chmod 755 /koolshare/init.d/V10probe.sh
++ '[' V '=' M ]
++ '[' V '=' U ]
++ printf '#!/bin/sh\nprintf "CENTER %s %%s\\n" "$*" >> /tmp/hook_trace\n' T
++ chmod 755 /koolshare/init.d/T10probe.sh
++ '[' T '=' M ]
++ '[' T '=' U ]
++ printf '#!/bin/sh\nprintf "CENTER %s %%s\\n" "$*" >> /tmp/hook_trace\n' N
++ chmod 755 /koolshare/init.d/N10probe.sh
++ '[' N '=' M ]
++ '[' N '=' U ]
++ printf '#!/bin/sh\nprintf "CENTER %s %%s\\n" "$*" >> /tmp/hook_trace\n' M
++ chmod 755 /koolshare/init.d/M10probe.sh
++ '[' M '=' M ]
++ printf 'printf "ARGC %s %%s <%%s>\\n" "$#" "$1" >> /tmp/hook_trace\n' M
++ printf '#!/bin/sh\nprintf "CENTER %s %%s\\n" "$*" >> /tmp/hook_trace\n' U
++ chmod 755 /koolshare/init.d/U10probe.sh
++ '[' U '=' M ]
++ '[' U '=' U ]
++ printf 'printf "ARGC %s %%s <%%s>\\n" "$#" "$1" >> /tmp/hook_trace\n' U
++ set +e
++ /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs -E 'LD_LIBRARY_PATH=/work/build' -E 'LD_PRELOAD=/work/build/rc_bridge_fixture.so' /work/build/rc-fixture
+event wan-event result 0
+event services-start result 0
+event wan-event result 0
+event wan-event result 0
+event service-event-end result 0
+event service-event-end result 0
+event post-mount result 0
+event wan-event result 0
+event wan-event result 0
+event wan-event result 0
+event wan-event result 0
+event wan-event result 0
+event wan-event result 0
+event wan-event result 0
+event services-start result 0
++ result=0
++ echo fixture-return-0
+fixture-return-0
++ set -e
++ '[' 0 '=' 0 ]
++ /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/localmod-event --drain
++ /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/runtime-fixture
+PASS hook timeout kills descendants; names validated; nested notifications suppressed
++ cp /work/build/test-launcher-vendor /usr/libexec/localmod/rc.vendor
++ chmod 755 /usr/libexec/localmod/rc.vendor
++ set +e
++ /usr/bin/qemu-arm -0 hotplug -L /work/build/casefs/official_rootfs /work/build/rc-launcher usb 'value with space;literal'
++ forward=19
++ touch /jffs/localmod-disabled
++ /usr/bin/qemu-arm -0 hotplug -L /work/build/casefs/official_rootfs /work/build/rc-launcher usb 'value with space;literal'
++ disabled=19
++ rm -f /jffs/localmod-disabled
++ set -e
++ '[' 19 '=' 19 ]
++ '[' 19 '=' 19 ]
++ /usr/bin/qemu-arm -0 service -L /work/build/casefs/official_rootfs /work/build/rc-launcher restart_skipd
++ cp /tmp/hook_trace /work/build/hooks_trace.log
++ cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf
++ cp /tmp/hook_trace /work/build/hooks_trace.log
++ cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf
+

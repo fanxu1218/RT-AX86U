@@ -56,8 +56,9 @@ __attribute__((constructor)) static void setup(void) {
 }
 
 static int api_uri(const char *p) {
- return !strncmp(p,"/_api/",6) || !strcmp(p,"/_api") ||
-        !strcmp(p,"/_upload") || !strncmp(p,"/_temp/",7) ||
+ size_t n=strcspn(p,"?");
+ return !strncmp(p,"/_api/",6) || (n==5 && !strncmp(p,"/_api",5)) ||
+        (n==8 && !strncmp(p,"/_upload",8)) || !strncmp(p,"/_temp/",7) ||
         !strncmp(p,"/_result/",9) || !strncmp(p,"/_root/",7);
 }
 static int field(const char *line,const char *name) {
@@ -95,7 +96,8 @@ char *fgets(char *out,int capacity,FILE *stream) {
  snprintf(request.method,sizeof(request.method),"%s",method);
  snprintf(request.uri,sizeof(request.uri),"%s",uri);
  if(strcmp(method,"GET") && strcmp(method,"POST"))request.rejected=405;
- if(strstr(uri,"..") || strchr(uri,'\\') || strchr(uri,'%'))request.rejected=400;
+ size_t path_len=strcspn(uri,"?");
+ for(size_t i=0;i<path_len;i++)if(uri[i]=='\\' || uri[i]=='%' || (uri[i]=='.' && i+1<path_len && uri[i+1]=='.'))request.rejected=400;
  char line[4096],host[512]="",origin[1024]="",referer[1024]="",cookie[4096]="";
  size_t used=0,replayed=0;int length_seen=0,ended=0;
  while(next_fgets(line,sizeof(line),stream)) {

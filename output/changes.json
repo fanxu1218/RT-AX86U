@@ -58,38 +58,44 @@
   {
     "path": "rom/etc/koolshare/bin/ks-mount-start.sh",
     "change": "added",
-    "bytes": 646,
-    "sha256": "c134875547c45bfc1c736bec9c9d0554bbf4840f8b6b6f405b6657470a3aeedf"
+    "bytes": 860,
+    "sha256": "0914a6f4e19d9524d259e9b7132d3b8f05bde475a62124414aedb7937fa43486"
   },
   {
     "path": "rom/etc/koolshare/bin/ks-nat-start.sh",
     "change": "added",
-    "bytes": 748,
-    "sha256": "402a271cb9b455e60c1383f20ada0731df730535634486ab75475f65c0adfb62"
+    "bytes": 960,
+    "sha256": "bb4efecfb649dc76fc811aae1eeb1e8bd4027d0f3cf1eacbd764b92da2231d23"
   },
   {
     "path": "rom/etc/koolshare/bin/ks-services-start.sh",
     "change": "added",
-    "bytes": 409,
-    "sha256": "04d9e3fc0ebce0ed03ea113389b9a163fc380ea6108f29f3f9732c2192010bbe"
+    "bytes": 622,
+    "sha256": "4327d46e2bfdcff3d1662a31d85a6e0a48e0a81a40b77815b0bcb5209656c6fb"
   },
   {
     "path": "rom/etc/koolshare/bin/ks-services-stop.sh",
     "change": "added",
-    "bytes": 410,
-    "sha256": "c354c0cd38b60688d39653acc90b8b52dfa156a4bff59564c2e84d40a00b6e5e"
+    "bytes": 622,
+    "sha256": "2cf4de0c117581e7b89e30906a5d2fc83a5db7eed5f0c164f95363667411e7ee"
   },
   {
     "path": "rom/etc/koolshare/bin/ks-unmount.sh",
     "change": "added",
-    "bytes": 463,
-    "sha256": "cd3ddb6b24cd3396c88da20eb0b3888694cc41091a1916b8e943e90afd2895cd"
+    "bytes": 673,
+    "sha256": "f2c79773da614e126ba7fd5db961de894ad7a7cec2a5ff35ea08c17642494477"
   },
   {
     "path": "rom/etc/koolshare/bin/ks-wan-start.sh",
     "change": "added",
-    "bytes": 1419,
-    "sha256": "75ce1a07252e69f9f5365a8e651d8ff06a23d6ec4f5fd6e1f4790e95b5514079"
+    "bytes": 1631,
+    "sha256": "3f5e6356e251fb6ca735d76c56853e6aa91c0113401e30e5935ed3daf1e0632d"
+  },
+  {
+    "path": "rom/etc/koolshare/bin/kscore.sh",
+    "change": "added",
+    "bytes": 95,
+    "sha256": "0ff2b96cf05abc1a6941e93fcd57996591768ac08bfda1e7db1f0963bc333142"
   },
   {
     "path": "rom/etc/koolshare/bin/perpboot",
@@ -421,8 +427,8 @@
   {
     "path": "rom/etc/koolshare/scripts/ks_tar_install.sh",
     "change": "added",
-    "bytes": 17419,
-    "sha256": "2846662c590866b51a665d83d40812498629d41e8932316cade2bd804ceb68f7"
+    "bytes": 17860,
+    "sha256": "58854f2b6492be5c8f5fafebfecd51bbc5c23e3f18945ac7c8591215c3fd2a9f"
   },
   {
     "path": "rom/etc/koolshare/webs",
@@ -448,22 +454,46 @@
     "sha256": "baa0185d3c8cb3cf5d5624fdb33a1290ed3f97ffbc29ff9b35e3d384145af753"
   },
   {
+    "path": "rom/etc/localmod-core-id",
+    "change": "added",
+    "bytes": 65,
+    "sha256": "74c77ac5dd85d26576ff3312da70a4dcf4025cd09dfe8ff5027d5bc5fb6e724d"
+  },
+  {
     "path": "rom/etc/localmod-release.json",
     "change": "added",
-    "bytes": 359,
-    "sha256": "0a3d0cfc0d34e5be7536b696c3c042ac214e8423819a673ba365e87cdddd0d4f"
+    "bytes": 647,
+    "sha256": "87b1f40e133ee9446e3c2009b2c4c226c5544f2823254725f5cb4f9ce1084be2"
+  },
+  {
+    "path": "rom/etc/profile",
+    "change": "modified",
+    "bytes": 927,
+    "sha256": "1f5b6c97be6dcd96f5d94e882a9c481cd2f6483247a3670742fb107258b0c7f2"
   },
   {
     "path": "sbin/init",
     "change": "modified",
-    "bytes": 3444,
-    "sha256": "6a59a7c6bd1c7fa9f18beda9de023542a21558b5fdbf4179cdc059a983c3c834"
+    "bytes": 3036,
+    "sha256": "f91aa8acd196aa3cf0f2fdfca7b7f502cb4f408a956ff0fc6aa1edf2ee1a0558"
+  },
+  {
+    "path": "sbin/rc",
+    "change": "modified",
+    "bytes": 3772,
+    "sha256": "fcd797d2e3926a3072b84f57400369b9743051268022bfafdd5831233e0a596e"
   },
   {
     "path": "usr/bin/dbus",
     "change": "added",
     "bytes": 502680,
     "sha256": "ddf95fb274a6dee0bdae5d700950f029d1f40e88ce30f74bef1771a5b3850f31"
+  },
+  {
+    "path": "usr/bin/jffsinit.sh",
+    "change": "added",
+    "bytes": 169,
+    "sha256": "b65cce70761484b34fe9c9d295549a441bf080c9f03235476942cae3ac30753f"
   },
   {
     "path": "usr/bin/skipd",
@@ -479,8 +509,14 @@
   {
     "path": "usr/lib/localmod/httpd_bridge.so",
     "change": "added",
-    "bytes": 11260,
-    "sha256": "1866630e54392e39ed38189297490800a8bdbc6f9e51ead3d2b0f70791a3762b"
+    "bytes": 11340,
+    "sha256": "7a6735fc8e0ce2ed4d98b59175ce75735c02ce488bb5dd25b70dfde8ddea7976"
+  },
+  {
+    "path": "usr/lib/localmod/rc_bridge.so",
+    "change": "added",
+    "bytes": 28448,
+    "sha256": "15793c7e1cd404cf12caf2eb1bad4738b2e5aa64074c66630af8ef1a86ce95f1"
   },
   {
     "path": "usr/libexec",
@@ -495,8 +531,14 @@
   {
     "path": "usr/libexec/localmod/bootstrap.sh",
     "change": "added",
-    "bytes": 3617,
-    "sha256": "1d01a878da1eee07fb47feba60e66d2078d681a7c7cc4ec9a016f3b5f37e28d2"
+    "bytes": 5823,
+    "sha256": "e90ff4d8aa659d1d0308832655c0901b399a7c6d2be4f1058cf34368d0e142dd"
+  },
+  {
+    "path": "usr/libexec/localmod/dispatch.sh",
+    "change": "added",
+    "bytes": 1444,
+    "sha256": "5390c42eacf391323c3db7491fab9fdcb0b4898141ebf4f1bd68ba25de7b8770"
   },
   {
     "path": "usr/libexec/localmod/httpd.vendor",
@@ -505,16 +547,40 @@
     "sha256": "d9a24b751b2c6ec0a9bf5931b6b1380e75c136bd672a91a5a5118c6ee9e1586d"
   },
   {
+    "path": "usr/libexec/localmod/localmod-event",
+    "change": "added",
+    "bytes": 19092,
+    "sha256": "0262da7e620fda666ec81561272f5d0b25e78bba5b921c9ac62acfe92968d10f"
+  },
+  {
+    "path": "usr/libexec/localmod/rc.vendor",
+    "change": "added",
+    "bytes": 2192232,
+    "sha256": "9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62"
+  },
+  {
+    "path": "usr/sbin/helper.sh",
+    "change": "added",
+    "bytes": 287,
+    "sha256": "445b3535b4861b023c3b15253d2cb758bd5f7984277301b7fe5dcb83ef033a9e"
+  },
+  {
     "path": "usr/sbin/httpd",
     "change": "modified",
     "bytes": 4408,
-    "sha256": "ec051867cb20921fb92eef66ddd8f54506ae318d006cd40a9041d4f26bb292ca"
+    "sha256": "04cb26926c4e70005e69c7956869be70340deae50461553abf1573de2b8ac1da"
+  },
+  {
+    "path": "usr/sbin/iptables-restore",
+    "change": "modified",
+    "bytes": 22036,
+    "sha256": "45495ee84051360123788a7e8e46308f39a14a6115d50aa3a703015a474cb8de"
   },
   {
     "path": "www/Module_Localmod.asp",
     "change": "added",
-    "bytes": 1270,
-    "sha256": "3f59cb33effd90fac632c01cd23115cfc71f8f28af6c50f34125b2c45cc40de0"
+    "bytes": 1393,
+    "sha256": "dfa5fb0ee2bf59ff1a33307b76d61a04f642828a5fb7d103b46e182bc0664ac9"
   },
   {
     "path": "www/state.js",

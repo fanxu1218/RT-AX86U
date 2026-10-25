@@ -24,7 +24,7 @@ func main(){
  go backend.Serve(listener);defer backend.Close()
  ctx,cancel:=context.WithTimeout(context.Background(),25*time.Second);defer cancel()
  cmd:=exec.CommandContext(ctx,"/usr/bin/qemu-arm","-L","/work/build/casefs/official_rootfs","-E","LD_PRELOAD=/work/build/httpd_bridge.so","/work/build/bridge-fixture")
- cmd.Stdout=os.Stdout;cmd.Stderr=os.Stderr
+ cmd.Env=append(os.Environ(),"FIXTURE_COUNT=10");cmd.Stdout=os.Stdout;cmd.Stderr=os.Stderr
  if err=cmd.Start();err!=nil{panic(err)};defer cmd.Process.Kill()
  for i:=0;i<60;i++{f,e:=os.Open("/proc/net/tcp");if e==nil{b,_:=io.ReadAll(f);f.Close();if strings.Contains(string(b),":84D0"){break}};time.Sleep(100*time.Millisecond)}
  client:=&http.Client{Timeout:3*time.Second}
@@ -37,6 +37,8 @@ func main(){
   {"missing-origin","POST","/_api/","asus_token=valid","",403,`{"error":"rejected"}`},
   {"encoded-traversal","GET","/_api/a%2f..","asus_token=valid","",400,`{"error":"rejected"}`},
   {"stock-page","GET","/index.asp","asus_token=valid","",200,"VENDORBODY"},
+  {"encoded-query","GET","/_api/test?value=a%20b","asus_token=valid","",200,`{"ok":true}`},
+  {"upload-query","POST","/_upload?nonce=123","asus_token=valid","https://router.test",200,`{"ok":true}`},
  }
  for _,test:=range cases{
   body:="";if test.method=="POST"{body="payload"}
@@ -47,7 +49,7 @@ func main(){
   if e!=nil || response.StatusCode!=test.status || string(b)!=test.body{panic(fmt.Sprintf("%s: status=%d body=%q error=%v",test.name,response.StatusCode,b,e))}
   fmt.Println("PASS",test.name)
  }
- if forwarded.Load()!=2{panic(fmt.Sprintf("unexpected forwarded requests: %d",forwarded.Load()))}
+ if forwarded.Load()!=4{panic(fmt.Sprintf("unexpected forwarded requests: %d",forwarded.Load()))}
  if err=cmd.Wait();err!=nil{panic(err)}
  fmt.Println("PASS only authenticated allowed requests reached the private API")
 }

@@ -1,0 +1,40 @@
+LINUX_BUILDER_READY
+PASS privileged source port reaches private API
+PASS 24 live table replacements reject all unprivileged probes; attempts 65086
+PASS noflush rules keep private API guard first
+PASS non-routing flush preserves custom chains and private API isolation
+PASS test-only restore does not emit events
+PASS malformed input and vendor failures preserve guard and emit no hooks
+PASS NAT restore preserves filter isolation and emits a NAT event
+PASS filename input and original rules retained
+PASS recovery marker delegates original behavior
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event firewall-start result 0
+event nat-start result 0
+event firewall-start result 0
+event firewall-start result 0
+

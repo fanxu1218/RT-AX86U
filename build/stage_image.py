@@ -6,6 +6,7 @@ import os
 import shutil
 import stat
 import argparse
+import re
 from pathlib import Path
 
 root=Path(__file__).resolve().parent.parent
@@ -14,7 +15,7 @@ donor=root/'build/casefs/koolcenter_rootfs'
 stage=root/'build/casefs/rootfs'
 ap=argparse.ArgumentParser();ap.add_argument('--refresh-generated-stage',action='store_true');args=ap.parse_args()
 if args.refresh_generated_stage and stage.exists():
-    assert json.loads((stage/'rom/etc/localmod-release.json').read_text())['variant']=='localmod1'
+    assert json.loads((stage/'rom/etc/localmod-release.json').read_text())['variant'] in {'localmod1','localmod2'}
     assert stage.resolve()==root/'build/casefs/rootfs' and not stage.is_symlink()
     shutil.rmtree(stage)
 assert not stage.exists(), 'Staging directory already exists; keep it for review'
@@ -48,8 +49,34 @@ meta['/koolshare']={'mode':stat.S_IFLNK|0o777,'uid':0,'gid':0,'inum':-1,'nlink':
 put(official/'usr/sbin/httpd','usr/libexec/localmod/httpd.vendor',0o500)
 put(root/'build/httpd-launcher','usr/sbin/httpd',0o500)
 put(root/'build/init-launcher','sbin/init',0o500)
+put(official/'sbin/rc','usr/libexec/localmod/rc.vendor',0o500)
+put(root/'build/rc-launcher','sbin/rc',0o500)
 put(root/'build/httpd_bridge.so','usr/lib/localmod/httpd_bridge.so',0o444)
+put(root/'build/rc_bridge.so','usr/lib/localmod/rc_bridge.so',0o444)
+put(root/'build/localmod-event','usr/libexec/localmod/localmod-event',0o500)
+put(root/'build/iptables-restore-launcher','usr/sbin/iptables-restore',0o500)
 put(root/'sources/localmod/bootstrap.sh','usr/libexec/localmod/bootstrap.sh',0o755)
+put(root/'sources/localmod/dispatch.sh','usr/libexec/localmod/dispatch.sh',0o755)
+put(root/'sources/localmod/jffsinit.sh','usr/bin/jffsinit.sh',0o755)
+put(root/'sources/localmod/kscore.sh',core+'/bin/kscore.sh',0o755)
+put(root/'sources/localmod/helper.sh','usr/sbin/helper.sh',0o755)
+
+# Both old user hooks and the compatibility dispatcher may call a center helper.
+# A per-event directory makes each helper run once without rewriting user files.
+for name in ['ks-services-start.sh','ks-services-stop.sh','ks-wan-start.sh','ks-nat-start.sh','ks-mount-start.sh','ks-unmount.sh']:
+    p=stage/core/'bin'/name
+    text=p.read_text();assert text.startswith('#!/bin/sh')
+    guard='''
+# localmod-event-dedup
+if [ -n "$LOCALMOD_EVENT_DIR" ]; then
+ case "$LOCALMOD_EVENT_DIR" in /tmp/.localmod/event.*) ;; *) exit 1;; esac
+ mkdir "$LOCALMOD_EVENT_DIR/'''+name+'''" 2>/dev/null || exit 0
+fi
+'''
+    text=text.replace('#!/bin/sh','#!/bin/sh\n'+guard,1)
+    for variable in ['MOPATH','KSPATH','ACTION']:
+        text=re.sub(r'(?m)^(\s*)\$i \$'+variable+r'\s*$',lambda m:m.group(1)+'"$i" "$'+variable+'"',text)
+    p.write_text(text)
 
 base=stage/core/'scripts/base.sh'
 text=base.read_text().replace('curl -X POST -d "$ARG0" http://$LANIP:3030/_resp/$ID',
@@ -71,6 +98,35 @@ text=text.replace(needle,needle+'''
  fi
 ''',1)
 installer.write_text(text)
+offline=stage/core/'scripts/ks_tar_install.sh'
+text=offline.read_text();needle='\t# 11. some package not come from koolcenter'
+assert needle in text
+text=text.replace(needle,'''\tif [ "$MODULE_NAME" = softcenter ] || [ "$MODULE_NAME" = koolcenter ]; then
+\t\techo_date "此官改的软件中心核心随固件更新，不接受离线覆盖核心。"
+\t\texit_tar_install 1
+\tfi
+'''+needle,1)
+assert 'exit ${code}' in text
+text=text.replace('exit ${code}','exit ${CODE}')
+pipeline='install_tar | tee -a ${LOG_FILE} ${LOG_FILE_BACKUP}\nclean_backup_log'
+assert pipeline in text
+text=text.replace(pipeline,'''STATUS_FILE=/tmp/upload/.ks_tar_status.$$
+( trap 'printf "%s\\n" "$?" > "$STATUS_FILE"' EXIT; install_tar ) | tee -a ${LOG_FILE} ${LOG_FILE_BACKUP}
+INSTALL_RESULT=$(cat "$STATUS_FILE" 2>/dev/null)
+rm -f "$STATUS_FILE"
+clean_backup_log
+case "$INSTALL_RESULT" in ''|*[!0-9]*) exit 1;; *) exit "$INSTALL_RESULT";; esac''')
+offline.write_text(text)
+
+profile=stage/'rom/etc/profile'
+assert profile.is_file()
+profile.write_text(profile.read_text()+'''
+# localmod center tools for SSH sessions
+if [ ! -e /jffs/localmod-disabled ] && [ -d /koolshare/bin ]; then
+ PATH=/koolshare/bin:/koolshare/scripts:$PATH
+ export PATH
+fi
+''')
 state=stage/'www/state.js'
 state.write_text(state.read_text()+'''
 // localmod-software-center-entry: integrate with the stock asynchronous menu.
@@ -95,13 +151,22 @@ text=ui.read_text()
 assert 'href:"http://"+a.netaddr+":3032"' in text
 text=text.replace('href:"http://"+a.netaddr+":3032"','href:"/Module_Localmod.asp"')
 ui.write_text(text)
-release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod1','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
+release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
          'software_center':'KoolCenter 1.9.50 from 388.11_0-20260429',
+         'event_hooks':['init-start','services-start','services-stop','service-event','service-event-end','wan-event','wan-start','firewall-start','nat-start','pre-mount','post-mount','unmount'],
+         'postconf':['dnsmasq'],
          'uu':'vendor files retained; service operation requires device verification',
          'source_httpd_sha256':hashlib.sha256((official/'usr/sbin/httpd').read_bytes()).hexdigest()}
 release_file=stage/'rom/etc/localmod-release.json'
 release_file.write_text(json.dumps(release,ensure_ascii=False,indent=2)+'\n')
 meta['/rom/etc/localmod-release.json']={'mode':stat.S_IFREG|0o444,'uid':0,'gid':0,'inum':-1,'nlink':1,'xattr_count':0}
+core_id=hashlib.sha256()
+for p in sorted((stage/core).rglob('*')):
+    core_id.update(str(p.relative_to(stage/core)).encode())
+    if p.is_symlink():core_id.update(os.readlink(p).encode())
+    elif p.is_file():core_id.update(p.read_bytes())
+(stage/'rom/etc/localmod-core-id').write_text(core_id.hexdigest()+'\n')
+meta['/rom/etc/localmod-core-id']={'mode':stat.S_IFREG|0o444,'uid':0,'gid':0,'inum':-1,'nlink':1,'xattr_count':0}
 
 # Preserve regular-file hardlinks exported from UBIFS. A directory copy alone
 # would silently convert these to independent inodes.
@@ -151,9 +216,10 @@ for p in sorted(stage.rglob('*')):
     now=entry(p)
     if not original.exists() and not original.is_symlink():changes.append({'path':str(relative),'change':'added',**now})
     elif now!=entry(original):changes.append({'path':str(relative),'change':'modified',**now})
-assert (stage/'sbin/rc').read_bytes()==(official/'sbin/rc').read_bytes()
+assert (stage/'usr/libexec/localmod/rc.vendor').read_bytes()==(official/'sbin/rc').read_bytes()
+assert (stage/'usr/sbin/xtables-multi').read_bytes()==(official/'usr/sbin/xtables-multi').read_bytes()
 assert (stage/'www/UUAccelerator.asp').read_bytes()==(official/'www/UUAccelerator.asp').read_bytes()
 for p in (official/'lib/modules').rglob('*'):
     if p.is_file() and not p.is_symlink():assert p.read_bytes()==(stage/p.relative_to(official)).read_bytes()
 (root/'build/changes.json').write_text(json.dumps(changes,ensure_ascii=False,indent=2))
-print('staged entries',len(meta),'changes',len(changes),'rc, UU page, all kernel modules retained')
+print('staged entries',len(meta),'changes',len(changes),'vendor rc/xtables, UU page, all kernel modules retained')

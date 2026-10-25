@@ -14,8 +14,8 @@ import (
 func main(){
  ctx,cancel:=context.WithTimeout(context.Background(),24*time.Second);defer cancel()
  start:=func(args ...string)*exec.Cmd{cmd:=exec.CommandContext(ctx,"/usr/bin/qemu-arm",args...);cmd.Stdout=os.Stdout;cmd.Stderr=os.Stderr;if e:=cmd.Start();e!=nil{panic(e)};return cmd}
- os.MkdirAll("/tmp/localmod-testdb",0700)
- skipd:=start("/work/build/casefs/rootfs/usr/bin/skipd","-d","/tmp/localmod-testdb");defer skipd.Process.Kill()
+ os.MkdirAll("/tmp/.localmod-testdb",0700)
+ skipd:=start("/work/build/casefs/rootfs/usr/bin/skipd","-d","/tmp/.localmod-testdb");defer skipd.Process.Kill()
  time.Sleep(600*time.Millisecond)
  out,e:=exec.CommandContext(ctx,"/usr/bin/qemu-arm","/work/build/casefs/rootfs/usr/bin/dbus","set","localmod_probe=roundtrip-pass").CombinedOutput()
  if e!=nil{panic(fmt.Sprintf("dbus: %s %v",out,e))}

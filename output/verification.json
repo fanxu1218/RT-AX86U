@@ -1,10 +1,10 @@
 {
-  "image": "output/RT-AX86U_388_24437_localmod1_EXPERIMENTAL.w",
-  "sha256": "e46b7164227ed4b408f96de6207b4243a1b5c544e9d2fae730e80b2f7d7f1464",
+  "image": "output/RT-AX86U_388_24437_localmod2_EXPERIMENTAL.w",
+  "sha256": "f305a3b405c732ba0c6277f4bd41db2e4e7a8a944bbdd633e930d63562c65b18",
   "bytes": 85327892,
   "status": "EXPERIMENTAL_NOT_DEVICE_TESTED",
-  "path_count": 3588,
-  "valid_ubifs_nodes": 52244,
+  "path_count": 3596,
+  "valid_ubifs_nodes": 52288,
   "valid_volume_table_rows": 256,
   "checks": {
     "all_paths_present": true,
@@ -17,6 +17,7 @@
     "vendor_boot_region_identical": true,
     "vendor_model_footer_identical": true,
     "vendor_rc_identical": true,
+    "vendor_xtables_identical": true,
     "vendor_uu_page_identical": true,
     "vendor_httpd_retained": true,
     "vendor_kernel_modules_identical": true,
@@ -27,9 +28,9 @@
   "bad_ubifs_nodes": [],
   "not_tested": [
     "physical boot and flash acceptance",
-    "real vendor login/TLS integration",
-    "Wi-Fi/NAT and firewall lifecycle",
-    "software-center online install and plugin hooks",
+    "real vendor login/TLS and rc event flow on the router",
+    "Wi-Fi/NAT and stock 1.4.12.2 xtables on target kernel 4.1",
+    "third-party online plugins beyond the controlled installation fixture",
     "UU account and actual acceleration"
   ]
 }
