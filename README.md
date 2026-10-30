@@ -17,6 +17,7 @@
 
 - [localmod2 实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-experimental)
 - [完整适配范围与验证边界](output/官改候选版说明.md)
+- [Alpha 3 升级、实机验收与回退步骤](output/Alpha3升级localmod2与实机验收.md) · [验收记录模板](output/localmod2实机验收记录模板.md)
 - [事件测试](output/hooks_tests.json) · [兼容测试](output/compatibility_tests.json) · [原厂接口清单](output/vendor_contracts.json)
 - [镜像回读](output/verification.json) · [卷布局](output/structure.json) · [原始 Alpha 3 分析](analysis/固件分析报告.md)
 - [上一版 localmod1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod1-experimental)

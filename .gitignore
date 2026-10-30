@@ -60,6 +60,8 @@
 !/output/
 /output/*
 !/output/官改候选版说明.md
+!/output/Alpha3升级localmod2与实机验收.md
+!/output/localmod2实机验收记录模板.md
 !/output/SHA256SUMS
 !/output/verification.json
 !/output/structure.json
