@@ -30,6 +30,7 @@ static int (*next_vfprintf)(FILE *, const char *, va_list);
 static size_t (*next_fwrite)(const void *, size_t, size_t, FILE *);
 static int (*next_fputs)(const char *, FILE *);
 static int (*next_fputc)(int, FILE *);
+static int (*next_fgetc)(FILE *);
 static int (*next_fclose)(FILE *);
 static FILE *(*next_fopen64)(const char *, const char *);
 static int (*next_xstat64)(int, const char *, struct stat64 *);
@@ -42,15 +43,24 @@ static struct {
  int rejected, suppress, replied;
 } request;
 
-__attribute__((constructor)) static void setup(void) {
+/* Other DSOs may use stdio from a constructor before ours runs. Resolve on
+ * first interception too, rather than assuming constructor ordering. */
+static void resolve(void) {
+ static int resolved;
+ if(resolved)return;
 #define RESOLVE(field, name) field = dlsym(RTLD_NEXT, name)
  RESOLVE(next_fgets,"fgets"); RESOLVE(next_vfprintf,"vfprintf");
  RESOLVE(next_fwrite,"fwrite"); RESOLVE(next_fputs,"fputs");
  RESOLVE(next_fputc,"fputc");
+ RESOLVE(next_fgetc,"fgetc");
  RESOLVE(next_fclose,"fclose"); RESOLVE(next_fopen64,"fopen64");
  RESOLVE(next_xstat64,"__xstat64"); RESOLVE(next_exists,"check_if_file_exist");
  vendor_auth_result=dlsym(RTLD_DEFAULT,"auth_result");
  vendor_url_do_auth=dlsym(RTLD_DEFAULT,"url_do_auth");
+ resolved=1;
+}
+__attribute__((constructor)) static void setup(void) {
+ resolve();
  /* The adapter belongs only to this server, never to programs it launches. */
  unsetenv("LD_PRELOAD");
 }
@@ -78,8 +88,22 @@ static int same_origin(const char *host,const char *origin) {
  size_t n=strcspn(s,"/?#");
  return n==strlen(host) && !strncasecmp(s,host,n);
 }
+static int session_cookie(const char *cookies) {
+ static const char *names[]={"asus_token=","asus_s_token="};
+ for(const char *p=cookies;*p;){
+  while(*p==' ' || *p=='\t' || *p==';')p++;
+  size_t length=strcspn(p,";");
+  for(size_t i=0;i<sizeof(names)/sizeof(names[0]);i++){
+   size_t n=strlen(names[i]);
+   if(length>n && !strncmp(p,names[i],n))return 1;
+  }
+  p+=length;
+ }
+ return 0;
+}
 
 char *fgets(char *out,int capacity,FILE *stream) {
+ resolve();
  if(capacity<=0){errno=EINVAL;return NULL;}
  if(request.stream==stream && request.replay_at<request.replay_len) {
   char *p=request.replay+request.replay_at, *end=strchr(p,'\n');
@@ -124,7 +148,9 @@ char *fgets(char *out,int capacity,FILE *stream) {
  }
  request.headers[used]=0;
  if(!ended)request.rejected=400;
- if(!strstr(cookie,"asus_token="))request.rejected=401;
+ /* Native HTTPS sessions use asus_s_token; the vendor still validates the
+  * token and its transport. This is only an exact cookie-name presence gate. */
+ if(!session_cookie(cookie))request.rejected=401;
  if(!strcmp(method,"POST") && !same_origin(host,*origin?origin:referer))request.rejected=403;
  memcpy(request.replay+replayed,"\r\n",3);request.replay_len=replayed+2;
  /* index.asp uses the stock authenticated MIME handler. No auth exception is added. */
@@ -169,6 +195,7 @@ static void relay(FILE *stream) {
  close(fd);if(!received)error_reply(stream,503);
 }
 static int bridge_print(FILE *stream,const char *format,va_list args) {
+ resolve();
  if(request.stream==stream){
   va_list copy;va_copy(copy,args);char preview[96];int count=vsnprintf(preview,sizeof(preview),format,copy);va_end(copy);
   if(request.suppress)return count;
@@ -187,12 +214,21 @@ static int bridge_print(FILE *stream,const char *format,va_list args) {
 int vfprintf(FILE *stream,const char *format,va_list args){return bridge_print(stream,format,args);}
 int fprintf(FILE *stream,const char *format,...){va_list args;va_start(args,format);int n=bridge_print(stream,format,args);va_end(args);return n;}
 size_t fwrite(const void *p,size_t size,size_t count,FILE *stream){
+ resolve();
  if(request.stream==stream && request.suppress)return count;
  return next_fwrite(p,size,count,stream);
 }
-int fputs(const char *s,FILE *stream){if(request.stream==stream && request.suppress)return 0;return next_fputs(s,stream);}
-int fputc(int c,FILE *stream){if(request.stream==stream && request.suppress)return (unsigned char)c;return next_fputc(c,stream);}
-int fclose(FILE *stream){if(request.stream==stream)memset(&request,0,sizeof(request));return next_fclose(stream);}
+int fputs(const char *s,FILE *stream){resolve();if(request.stream==stream && request.suppress)return 0;return next_fputs(s,stream);}
+int fputc(int c,FILE *stream){resolve();if(request.stream==stream && request.suppress)return (unsigned char)c;return next_fputc(c,stream);}
+int fgetc(FILE *stream){
+ resolve();
+ /* The authenticated index MIME handler probes for trailing POST bytes even
+  * though its replayed Content-Length is zero. Keep the original body for
+  * relay(), which owns its consumption after native authentication. */
+ if(request.stream==stream && !request.replied){errno=EAGAIN;return EOF;}
+ return next_fgetc(stream);
+}
+int fclose(FILE *stream){resolve();if(request.stream==stream)memset(&request,0,sizeof(request));return next_fclose(stream);}
 
 static const char *mapped(const char *path,char *dest,size_t size) {
  const char *name=path;
@@ -205,14 +241,17 @@ static const char *mapped(const char *path,char *dest,size_t size) {
  return dest;
 }
 FILE *fopen64(const char *path,const char *mode){
+ resolve();
  FILE *f=next_fopen64(path,mode);if(f || mode[0]!='r')return f;
  char dest[PATH_MAX];const char *p=mapped(path,dest,sizeof(dest));return p?next_fopen64(p,mode):NULL;
 }
 int __xstat64(int version,const char *path,struct stat64 *st){
+ resolve();
  int ret=next_xstat64(version,path,st);if(!ret)return ret;
  char dest[PATH_MAX];const char *p=mapped(path,dest,sizeof(dest));return p?next_xstat64(version,p,st):ret;
 }
 int check_if_file_exist(const char *path){
+ resolve();
  int ret=next_exists?next_exists(path):0;if(ret)return ret;
  char dest[PATH_MAX];const char *p=mapped(path,dest,sizeof(dest));
  if(!p)return ret;FILE *f=next_fopen64(p,"r");if(!f)return 0;next_fclose(f);return 1;

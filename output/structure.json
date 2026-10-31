@@ -1,8 +1,8 @@
 {
-  "filename": "RT-AX86U_388_24437_localmod2_r1_EXPERIMENTAL.w",
+  "filename": "RT-AX86U_388_24437_localmod2_r2_EXPERIMENTAL.w",
   "bytes": 85327892,
-  "sha256": "17de463d60fd10e2dae6a22e252b2c2f7a3326ef9bbd9e086a9ebd064a59083e",
-  "md5": "f66c30065b4c0cf3fd108093661e21e8",
+  "sha256": "200471b9ca557904dfd9924514a55b403c08ee6c977ce34b7c5902d8e0b89a3d",
+  "md5": "c9283c7f11880ad3b8a7c742d10e2ebd",
   "start": 0,
   "volumes": {
     "0": {
@@ -48,7 +48,7 @@
     "data_valid": 28
   },
   "trailer": [
-    "0x1a515285",
+    "0x6bb14536",
     "0x5732",
     "0x4908",
     "0x3",

@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "checks": {
+    "http_native_login_page_and_transport": true,
+    "http_wrong_password_rejected": true,
+    "http_native_password_check_and_session_issuance": true,
+    "http_native_protected_page_with_issued_token": true,
+    "http_issued_token_reaches_real_software_center": true,
+    "http_native_post_body_and_real_callback": true,
+    "http_missing_and_invalid_sessions_blocked": true,
+    "http_logout_revokes_session": true,
+    "https_native_login_page_and_transport": true,
+    "https_wrong_password_rejected": true,
+    "https_native_password_check_and_session_issuance": true,
+    "https_native_protected_page_with_issued_token": true,
+    "https_issued_token_reaches_real_software_center": true,
+    "https_native_post_body_and_real_callback": true,
+    "https_missing_and_invalid_sessions_blocked": true,
+    "https_logout_revokes_session": true,
+    "native_ntp_uu_start_once": true,
+    "native_uu_bad_checksum_blocks_execution": true,
+    "native_uu_api_failure_blocks_execution": true,
+    "native_uu_malformed_response_blocks_execution": true,
+    "native_uu_non_china_sku_skipped": true,
+    "native_uu_ap_mode_skipped": true,
+    "early_stdio_before_adapter_constructor": true,
+    "native_httpd_readonly_usr_path_and_bytes": true
+  },
+  "executed_vendor_binary_sha256": {
+    "usr/sbin/httpd": "d9a24b751b2c6ec0a9bf5931b6b1380e75c136bd672a91a5a5118c6ee9e1586d",
+    "sbin/rc": "9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62",
+    "usr/lib/libshared.so": "ebaf2a4586a6fe6ca336f6fe6c3ba9955434ad3d4dd11b65bd017e37e13e9fef",
+    "usr/lib/libpasswd.so": "56a044b22db73dfe8d018c5c1fe76834610ca794d614ac201e375b2d3cad7b04",
+    "usr/lib/libmssl.so": "cb5f7d7ecaa42b0af14b3004f62cb7ac100e24c5cd18d19dae298dde1dd6eafb",
+    "usr/lib/libssl.so.1.1": "5579489cac9b6316b0d993cce06d48a851468b501375217a623ad27dca9751c9",
+    "usr/lib/libcrypto.so.1.1": "f392e5e30cac8ba62b9a474a17d9620826735e281e23e177d6b41e37f5174735"
+  },
+  "native_login_session_password_and_tls_functions_interposed": false,
+  "tls_client_certificate_verification": "Ephemeral fixture CA trusted explicitly; hostname/chain verified, no insecure bypass",
+  "http_session_cookie": "asus_token",
+  "https_session_cookie": "asus_s_token",
+  "uu_native_ntp_signal_and_exec_uu_executed": true,
+  "controlled_monitor_executed": true,
+  "real_uu_monitor_executed": false,
+  "test_fixture_files_in_firmware": [],
+  "fixtures": [
+    "pinned factory defaults with synthetic NVRAM/board inputs",
+    "synthetic local shadow account and ephemeral certificate",
+    "private address on VM loopback; VM has no external NIC",
+    "UU DNS/service notification boundary and observed native pause",
+    "wget test transport maps only approved URLs to local HTTP/curl; all other destinations rejected",
+    "owned monitor script verifies absence of inherited LD_PRELOAD before recording execution"
+  ],
+  "not_tested": [
+    "target kernel 4.1, real NVRAM/board hardware and physical boot",
+    "production certificate creation/persistence and browser UI",
+    "real NTP time synchronization and external UU download/TLS",
+    "UU accounts, entitlement, console discovery, traffic acceleration and device plugin coexistence"
+  ]
+}

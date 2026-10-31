@@ -1,0 +1,25 @@
+LINUX_BUILDER_READY
+S:router.test, I:router.test, 2026/10/31 ~ 2026/10/31
+PASS http_native_login_page_and_transport
+PASS http_wrong_password_rejected
+PASS http_native_password_check_and_session_issuance
+PASS http_native_protected_page_with_issued_token
+PASS http_issued_token_reaches_real_software_center
+PASS http_native_post_body_and_real_callback
+PASS http_missing_and_invalid_sessions_blocked
+PASS http_logout_revokes_session
+PASS https_native_login_page_and_transport
+PASS https_wrong_password_rejected
+PASS https_native_password_check_and_session_issuance
+PASS https_native_protected_page_with_issued_token
+PASS https_issued_token_reaches_real_software_center
+PASS https_native_post_body_and_real_callback
+PASS https_missing_and_invalid_sessions_blocked
+PASS https_logout_revokes_session
+PASS pinned vendor HTTPd, libpasswd, mssl/OpenSSL and token handlers executed; only NVRAM/board inputs are synthetic
+Http on addr 127.0.0.1:3032
+root=/koolshare/webs/
+upload=/tmp/upload
+conn=0x1064e0 nc=0x1063f8 id=51001 removed
+conn=0x106460 nc=0x106988 id=51002 removed
+

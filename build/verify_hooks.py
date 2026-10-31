@@ -7,6 +7,7 @@ conf=(root/'build/hooks_dnsmasq.conf').read_text()
 def index(prefix):return next(i for i,s in enumerate(lines) if s.startswith(prefix))
 def count(prefix):return sum(s.startswith(prefix) for s in lines)
 checks={
+ 'httpd_launcher_keeps_readonly_vendor_path_arguments_exit_and_recovery':json.loads((root/'build/httpd_launcher_forward.json').read_text())=={'args':['httpd','-s','-p','34443'],'preload':'/usr/lib/localmod/httpd_bridge.so'} and json.loads((root/'build/httpd_launcher_disabled.json').read_text())=={'args':['httpd','-s','-p','34443'],'preload':''},
  'rc_launcher_preserves_arguments_and_vendor_exit':json.loads((root/'build/launcher_forward.json').read_text())=={'args':['hotplug','usb','value with space;literal'],'preload':'/usr/lib/localmod/rc_bridge.so'},
  'rc_launcher_recovery_and_skipd_compatibility':json.loads((root/'build/launcher_disabled.json').read_text())=={'args':['hotplug','usb','value with space;literal'],'preload':''} and count('BOOTSTRAP skipd-restart')==1,
  'vendor_nvram_shared_buffer_is_not_clobbered':count('WORK nvram-buffer-preserved')==1,

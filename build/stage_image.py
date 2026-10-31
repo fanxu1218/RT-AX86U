@@ -46,7 +46,7 @@ link=stage/'koolshare'
 assert not link.exists() and not link.is_symlink()
 link.symlink_to('jffs/.koolshare')
 meta['/koolshare']={'mode':stat.S_IFLNK|0o777,'uid':0,'gid':0,'inum':-1,'nlink':1,'xattr_count':0}
-put(official/'usr/sbin/httpd','usr/libexec/localmod/httpd.vendor',0o500)
+put(official/'usr/sbin/httpd','usr/libexec/localmod/httpd',0o500)
 put(root/'build/httpd-launcher','usr/sbin/httpd',0o500)
 put(root/'build/init-launcher','sbin/init',0o500)
 put(official/'sbin/rc','usr/libexec/localmod/rc.vendor',0o500)
@@ -154,7 +154,7 @@ text=ui.read_text()
 assert 'href:"http://"+a.netaddr+":3032"' in text
 text=text.replace('href:"http://"+a.netaddr+":3032"','href:"/Module_Localmod.asp"')
 ui.write_text(text)
-release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','revision':'r1','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
+release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','revision':'r2','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
          'software_center':'KoolCenter 1.9.50 from 388.11_0-20260429',
          'event_hooks':['init-start','services-start','services-stop','service-event','service-event-end','wan-event','wan-start','firewall-start','nat-start','pre-mount','post-mount','unmount'],
          'postconf':['dnsmasq'],

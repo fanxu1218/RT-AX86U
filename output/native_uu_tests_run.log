@@ -1,0 +1,25 @@
+LINUX_BUILDER_READY
+starting ntp...
+download uuplugin script info successfully
+URL: http://127.0.0.1:35000/monitor
+MD5: 871353642cea91235ba460baf1b4ac4c
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS native_ntp_uu_start_once
+starting ntp...
+download uuplugin script info successfully
+URL: http://127.0.0.1:35000/monitor
+MD5: 00000000000000000000000000000000
+download uuplugin script successfully
+PASS native_uu_bad_checksum_blocks_execution
+starting ntp...
+PASS native_uu_api_failure_blocks_execution
+starting ntp...
+download uuplugin script info successfully
+PASS native_uu_malformed_response_blocks_execution
+starting ntp...
+PASS native_uu_non_china_sku_skipped
+starting ntp...
+PASS native_uu_ap_mode_skipped
+PASS original rc ntp SIGTSTP -> exec_uu -> controlled download/checksum/launch; no real UU monitor/account or external network
+

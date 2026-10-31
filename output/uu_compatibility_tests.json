@@ -16,6 +16,7 @@
   },
   "boundary": "Exact retained ASUS 24437 binaries/resources plus ARM32 adapter fixtures; the UU-style commands are observed by a mock vendor _eval, never executed.",
   "actual_downloaded_uu_component_executed": false,
+  "native_local_control_flow_report": "native_runtime_tests.json",
   "not_tested": [
     "native exec_uu/NTP lifecycle on a router",
     "UU account, region eligibility, entitlement and console discovery",

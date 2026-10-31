@@ -1,12 +1,15 @@
 # RT-AX86U 官方底包官改实验
 
-基于 **ASUS 3.0.0.4.388_24437**，集成 **KoolCenter 软件中心 1.9.50**，保留官方 **网易 UU**。当前开发版本为 **localmod2-r1**。
+基于 **ASUS 3.0.0.4.388_24437**，集成 **KoolCenter 软件中心 1.9.50**，保留官方 **网易 UU**。当前开发版本为 **localmod2-r2**。
 
 > **实验候选版，尚未实机验收，暂不建议直接刷入日常主路由。**
 > 源码适配、模型/仿真测试和镜像回读通过；刷入启动、原厂登录/TLS、无线/NAT、具体第三方插件及 UU 实际加速仍待实机验证。
 
 ## 本轮变化
 
+- 修复原厂程序拒绝 `/tmp` 执行路径的问题；HTTPd 原文件在只读 `/usr/libexec/localmod/httpd` 直接运行。
+- 修复适配库初始化前的 stdio 调用崩溃、HTTPS 的 `asus_s_token` 会话兼容和 POST 请求体被页面输入处理预读的问题。
+- 新增运行原厂 HTTPd/libpasswd/mssl/OpenSSL 的 HTTP/TLS 登录、会话及读写回调检查；运行原厂 rc 的 NTP→UU 受控启动流程。
 - 修复 Alpha 3 迁移时旧 `.asusrouter` 链接漏归档；备份冲突会在移动旧核心前拒绝。
 - 修复 `插件名_uninstall.sh` 文件判断错误，避免未执行自带卸载脚本却显示卸载成功。
 - 接入启动、服务启停及事件前后回调、WAN、NAT/防火墙、存储挂载/卸载事件，并支持 DNS 配置扩展。
@@ -17,24 +20,24 @@
 
 ## 下载与说明
 
-- [localmod2-r1 实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r1-experimental)
+- [localmod2-r2 实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r2-experimental)
 - [完整适配范围与验证边界](output/官改候选版说明.md)
 - [Alpha 3 升级、实机验收与回退步骤](output/Alpha3升级localmod2与实机验收.md) · [验收记录模板](output/localmod2实机验收记录模板.md)
-- [事件测试](output/hooks_tests.json) · [兼容测试](output/compatibility_tests.json) · [原厂接口清单](output/vendor_contracts.json) · [UU 静态及模型检查](output/uu_compatibility_tests.json)
+- [事件测试](output/hooks_tests.json) · [兼容测试](output/compatibility_tests.json) · [原厂接口清单](output/vendor_contracts.json) · [UU 静态及模型检查](output/uu_compatibility_tests.json) · [原厂登录/TLS/UU 本地运行检查](output/native_runtime_tests.json)
 - [镜像回读](output/verification.json) · [卷布局](output/structure.json) · [原始 Alpha 3 分析](analysis/固件分析报告.md)
-- [原 localmod2](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-experimental) · [上一版 localmod1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod1-experimental)
+- [localmod2-r1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r1-experimental) · [原 localmod2](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-experimental) · [上一版 localmod1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod1-experimental)
 
-固件 `RT-AX86U_388_24437_localmod2_r1_EXPERIMENTAL.w`，85,327,892 字节。
+固件 `RT-AX86U_388_24437_localmod2_r2_EXPERIMENTAL.w`，85,327,892 字节。
 
 ```text
-SHA256: 17de463d60fd10e2dae6a22e252b2c2f7a3326ef9bbd9e086a9ebd064a59083e
+SHA256: 200471b9ca557904dfd9924514a55b403c08ee6c977ce34b7c5902d8e0b89a3d
 ```
 
 ## 验证摘要
 
-20 项事件模型检查、19 项兼容检查及 7 项 UU 静态/模型检查通过；回读 3,596 个路径和 52,288 个 UBIFS 节点。实时规则测试中，66,724 次普通源端口探测在 24 次表重载和 5 次非路由清空期间均被拒绝。
+21 项事件模型检查、19 项兼容检查、7 项 UU 静态/模型检查及 24 项原程序运行与配套检查通过；回读 3,596 个路径和 52,285 个 UBIFS 节点。实时规则测试中，64,829 次普通源端口探测在 24 次表重载和 5 次非路由清空期间均被拒绝。
 
-受控插件使用实际打包的 httpdb、skipd/dbus 经认证适配层完成真实 multipart 上传、安装、回调及自定义卸载。**官方 rc 硬件动作及登录边界为模型；网络测试采用 Alpine 内核/xtables/curl/启动 helper，不能替代目标设备验证。** 未联网安装第三方插件，也未移植所有 Merlin Addons、VPN/QoS/DDNS 等扩展。
+受控插件使用实际打包的 httpdb、skipd/dbus 经认证适配层完成真实 multipart 上传、安装、回调及自定义卸载。**新增原程序检查实际运行厂商登录/会话/TLS 和 UU 启动代码；NVRAM/账号/证书输入为合成数据，UU 下载为本地受控响应和自有脚本。内核、xtables/curl/部分启动 helper 来自 Alpine；不能替代目标设备及外部 UU 服务验证。** 未联网安装第三方插件，也未移植所有 Merlin Addons、VPN/QoS/DDNS 等扩展。
 
 ## 仓库与构建
 

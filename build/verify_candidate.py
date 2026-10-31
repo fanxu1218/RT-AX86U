@@ -70,7 +70,7 @@ checks={
  'vendor_rc_identical':(target/'usr/libexec/localmod/rc.vendor').read_bytes()==(root/'build/casefs/official_rootfs/sbin/rc').read_bytes(),
  'vendor_xtables_identical':(target/'usr/sbin/xtables-multi').read_bytes()==(root/'build/casefs/official_rootfs/usr/sbin/xtables-multi').read_bytes(),
  'vendor_uu_page_identical':(target/'www/UUAccelerator.asp').read_bytes()==(root/'build/casefs/official_rootfs/www/UUAccelerator.asp').read_bytes(),
- 'vendor_httpd_retained':(target/'usr/libexec/localmod/httpd.vendor').read_bytes()==(root/'build/casefs/official_rootfs/usr/sbin/httpd').read_bytes(),
+ 'vendor_httpd_retained':(target/'usr/libexec/localmod/httpd').read_bytes()==(root/'build/casefs/official_rootfs/usr/sbin/httpd').read_bytes(),
  'vendor_kernel_modules_identical':all(p.read_bytes()==(target/p.relative_to(root/'build/casefs/official_rootfs')).read_bytes() for p in (root/'build/casefs/official_rootfs/lib/modules').rglob('*') if p.is_file() and not p.is_symlink()),
  'ubifs_format_4':struct.unpack_from('<I',volume_data,80)[0]==4,
  'no_host_extended_attributes':all(x['xattr_cnt']==0 for x in meta.values()),

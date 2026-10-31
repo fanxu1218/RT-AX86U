@@ -2,6 +2,7 @@
   "status": "PASS",
   "boundary": "Actual ARM32 rc adapter and dispatcher; vendor NVRAM/mount/service/signal operations are fixtures, not hardware execution",
   "checks": {
+    "httpd_launcher_keeps_readonly_vendor_path_arguments_exit_and_recovery": true,
     "rc_launcher_preserves_arguments_and_vendor_exit": true,
     "rc_launcher_recovery_and_skipd_compatibility": true,
     "vendor_nvram_shared_buffer_is_not_clobbered": true,

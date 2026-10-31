@@ -1,4 +1,4 @@
-# localmod2-r1 adapter
+# localmod2-r2 adapter
 
 This experimental RT-AX86U firmware retains the exact ASUS 24437 kernel, modules, vendor rc, HTTPd and xtables-multi binaries. Small launchers relocate rc and HTTPd and preload narrowly scoped adapters. It is not device tested. See `../../output/官改候选版说明.md` and the machine-readable test reports.
 
@@ -15,11 +15,11 @@ The r1 migration checks all backup destinations, including dangling links, befor
 
 `bootstrap.sh prepare` runs when JFFS mounts and performs a managed-core migration without copying old Alpha-3 plugins into the new center. Upgrades from an existing localmod installation retain current plugins, the database and user hooks. `start` runs at the native init idle boundary. Database shutdown first uses a bounded read barrier to commit pending writes, then waits for the old skipd process to exit; rapid service restarts retain immediately written values. Compatibility entries include `jffsinit.sh`, `kscore.sh` and `service start/stop/restart_skipd`. A recovery marker stops the private backend and allows the launchers to run the unmodified vendor binaries.
 
-The HTTPd adapter still relies on the real vendor login boundary, whose test is a fixture. It also supports encoded query values and upload query parameters without permitting encoded path traversal. Native model-specific kernel modules, arbitrary Merlin Addons APIs, every VPN/QoS hook and all third-party plugins are outside the verified compatibility set.
+The HTTPd adapter relies on the vendor login boundary. The native-runtime job now executes the pinned vendor HTTPd, libpasswd and mssl/OpenSSL with synthetic NVRAM/shadow/certificate inputs, including real session issuance, HTTP/TLS API reads and POST callbacks, rejection and logout. The faster bridge models remain separate. It also supports encoded query values and upload query parameters without permitting encoded path traversal. Native model-specific kernel modules, arbitrary Merlin Addons APIs, every VPN/QoS hook and all third-party plugins are outside the verified compatibility set.
 
 ## Local build
 
-The prepared macOS Apple Silicon workspace needs Zig 0.15.2, Go, Python with `ubi-reader==0.8.16` and `pyelftools==0.32`, the signed Apple Virtualization builder, pinned Alpine packages and the case-sensitive source extractions.
+The prepared macOS Apple Silicon workspace needs OpenSSL (for a synthetic shadow fixture), Zig 0.15.2, Go, Python with `ubi-reader==0.8.16` and `pyelftools==0.32`, the signed Apple Virtualization builder, pinned Alpine packages and the case-sensitive source extractions.
 
 ```sh
 # Run from the repository root. Attach only if the volume is currently detached.
@@ -31,6 +31,8 @@ A fresh mounted volume can be populated with `analysis/.venv/bin/python build/ex
 
 The build runs the existing API/file mapping tests, rc lifecycle fixtures, live legacy-netfilter reload probes and a controlled multipart upload, offline installation, callback and custom uninstall through the ARM32 authenticated adapter and packaged httpdb/skipd/dbus. Alpine curl, xtables and the process-launch helper are used inside the ARM64 guest; the target's old proc/iptables ABI cannot be fully exercised through user-mode QEMU. QEMU executables are given skipd/httpdb names in the lifecycle fixture so pidof/killall see the same names as on the router. No third-party plugin installation, external service or router is exercised.
 
-Offline CRC and filesystem checks do not establish flash acceptance, real boot, vendor TLS/login integration, wireless stability or UU acceleration.
+Offline CRC and filesystem checks do not establish flash acceptance, real boot, on-device TLS/login integration or production certificate lifecycle, wireless stability or UU acceleration.
 
-`verify_uu_compatibility.py` checks retained official UU resources and model-level call transparency. The UU monitor command is checked by a mock vendor `_eval` and never executed; account login, discovery and acceleration remain unverified.
+`verify_uu_compatibility.py` checks retained official UU resources and model-level call transparency. Its earlier command contract remains a model. The new native-runtime job executes the original rc NTP signal handler and UU control flow with an owned monitor and local download shim; the real UU monitor, accounts, discovery and acceleration remain unverified.
+
+The r2 HTTPd launcher executes the retained program directly at `/usr/libexec/localmod/httpd`: the native path check rejects the earlier `/tmp` copy. Stdio hooks resolve lazily to handle calls before the adapter constructor. Exact `asus_token` and `asus_s_token` cookie names are supported, with native session/transport validation retained. The authenticated index handler cannot pre-read the original API body; relay owns that body after authentication.

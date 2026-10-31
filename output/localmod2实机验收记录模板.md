@@ -9,8 +9,8 @@
 | 测试日期/人员 | |
 | 设备 | 大陆普通 RT-AX86U；硬件版本： |
 | 原固件 | 386.3_2 KoolCenter Alpha 3 |
-| 目标文件 | RT-AX86U_388_24437_localmod2_r1_EXPERIMENTAL.w |
-| 实测 SHA256 | 预期 17de463d60fd10e2dae6a22e252b2c2f7a3326ef9bbd9e086a9ebd064a59083e；实测： |
+| 目标文件 | RT-AX86U_388_24437_localmod2_r2_EXPERIMENTAL.w |
+| 实测 SHA256 | 预期 200471b9ca557904dfd9924514a55b403c08ee6c977ce34b7c5902d8e0b89a3d；实测： |
 | 网络/模式 | 主路由/AP；宽带类型；IPv6；AiMesh/双 WAN/USB： |
 | 测试主机/游戏/区服 | 仅填去标识信息，账号权益是否有效： |
 | 电脑端配置、JFFS、DBus、插件备份 | 本地路径；归档可读及哈希；是否另存一份： |

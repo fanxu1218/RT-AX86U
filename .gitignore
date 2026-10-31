@@ -51,6 +51,14 @@
 !/build/verify_hooks.py
 !/build/verify_compatibility.py
 !/build/verify_uu_compatibility.py
+!/build/prepare_native_fixtures.py
+!/build/native_hw_fixture.c
+!/build/native_uu_transport.c
+!/build/test_native_httpd.go
+!/build/test_native_uu.go
+!/build/linux_native_httpd_job.sh
+!/build/linux_native_uu_job.sh
+!/build/verify_native_runtime.py
 !/analysis/
 /analysis/*
 !/analysis/固件分析报告.md
@@ -81,3 +89,7 @@
 !/output/restore_tests_run.log
 !/output/restore_hook_trace.log
 !/output/center_tests_run.log
+!/output/RT-AX86U_388_24437_localmod2_r2_EXPERIMENTAL.build.json
+!/output/native_runtime_tests.json
+!/output/native_httpd_tests_run.log
+!/output/native_uu_tests_run.log

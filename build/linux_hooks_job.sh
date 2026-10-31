@@ -71,5 +71,16 @@ rm -f /jffs/localmod-disabled
 set -e
 [ "$forward" = 19 ] && [ "$disabled" = 19 ]
 /usr/bin/qemu-arm -0 service -L /work/build/casefs/official_rootfs /work/build/rc-launcher restart_skipd
+cp /work/build/test-launcher-vendor /usr/libexec/localmod/httpd
+chmod 500 /usr/libexec/localmod/httpd
+set +e
+/usr/bin/qemu-arm -0 httpd -L /work/build/casefs/official_rootfs /work/build/httpd-launcher -s -p 34443 > /work/build/httpd_launcher_forward.json
+httpd_forward=$?
+touch /jffs/localmod-disabled
+/usr/bin/qemu-arm -0 httpd -L /work/build/casefs/official_rootfs /work/build/httpd-launcher -s -p 34443 > /work/build/httpd_launcher_disabled.json
+httpd_disabled=$?
+rm -f /jffs/localmod-disabled
+set -e
+[ "$httpd_forward" = 19 ] && [ "$httpd_disabled" = 19 ]
 cp /tmp/hook_trace /work/build/hooks_trace.log
 cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf
