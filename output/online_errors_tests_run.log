@@ -1,0 +1,22 @@
+LINUX_BUILDER_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031024929, 2026/10/31 ~ 2046/11/1
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS https_catalog_native_wget_install_and_installed_callback_with_uu
+PASS download_404_keeps_installed_plugin_and_uu
+PASS checksum_mismatch_never_executes_update
+PASS corrupt_archive_fails_and_cleans_only_owned_stage
+PASS wrong_package_root_rejected_before_extraction
+PASS missing_install_script_keeps_old_plugin
+PASS native_wget_rejects_untrusted_repository_certificate
+PASS native_wget_rejects_repository_hostname_mismatch
+PASS failed_update_preserves_previous_uninstaller_metadata_and_live_plugin
+PASS preexisting_stage_is_preserved_and_operation_refused
+PASS low_jffs_space_update_returns_failure_and_keeps_old_state
+PASS online workflow via native HTTPS/session, actual httpdb/skipd, retained wget with verified local repository TLS, and owned plugin/UU workers
+

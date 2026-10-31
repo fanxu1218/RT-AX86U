@@ -1,10 +1,10 @@
 {
-  "image": "output/RT-AX86U_388_24437_localmod2_r2_EXPERIMENTAL.w",
-  "sha256": "200471b9ca557904dfd9924514a55b403c08ee6c977ce34b7c5902d8e0b89a3d",
+  "image": "output/RT-AX86U_388_24437_localmod2_r3_EXPERIMENTAL.w",
+  "sha256": "cc357e6d6ca8358eec97aa60efcc60ed4300ce4d819aa860aed358a8086d15ed",
   "bytes": 85327892,
   "status": "EXPERIMENTAL_NOT_DEVICE_TESTED",
-  "path_count": 3596,
-  "valid_ubifs_nodes": 52285,
+  "path_count": 3597,
+  "valid_ubifs_nodes": 52290,
   "valid_volume_table_rows": 256,
   "checks": {
     "all_paths_present": true,

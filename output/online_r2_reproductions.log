@@ -1,0 +1,18 @@
+R2 controlled reproduction; no router data or real UU account used.
+Image SHA256: 200471b9ca557904dfd9924514a55b403c08ee6c977ce34b7c5902d8e0b89a3d
+Online installer SHA256: ee731b03af4f9f4cac1bdab6b1cd984511c4f3550a6d57af735e3bba70ff621e
+Boundary: actual r2 script and skipd/dbus/versioncmp; owned packages, download fixture and native Alpine start-stop-daemon for the guest proc ABI.
+
+LINUX_BUILDER_READY
+baseline_installed_version=1.0
+baseline_deleted=/jffs/uu-cache/uu.tar.gz
+baseline_deleted=/jffs/uu-cache/uu.tar.gz.md5
+baseline_deleted=/tmp/uu.tar.gz
+baseline_deleted=/tmp/foreign-job/install.sh
+baseline_retained=/tmp/uu/owned-monitor
+baseline_failed_update_version=1.0
+baseline_update_uninstaller=missing
+baseline_failed_uninstall_registration=
+baseline_neighbor_config=
+baseline_neighbor_script=missing
+

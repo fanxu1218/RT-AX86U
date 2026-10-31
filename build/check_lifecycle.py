@@ -21,6 +21,8 @@ verification = json.loads((root / 'output/verification.json').read_text())
 image = root / verification['image']
 assert hashlib.sha256(image.read_bytes()).hexdigest() == verification['sha256']
 assert all(verification['checks'].values()) and not verification['errors']
+for script in ['bootstrap.sh', 'dispatch.sh']:
+    assert (root / 'sources/localmod' / script).read_bytes() == (stage / 'usr/libexec/localmod' / script).read_bytes()
 for name, target in [('httpd_bridge.so', 'usr/lib/localmod/httpd_bridge.so'),
                      ('rc_bridge.so', 'usr/lib/localmod/rc_bridge.so'),
                      ('localmod-event', 'usr/libexec/localmod/localmod-event')]:
@@ -52,7 +54,7 @@ try:
     run(*flags, '-shared', '-fPIC', '-o', 'build/native_uu_transport.so', 'build/native_uu_transport.c', '-ldl')
     run(*flags, '-DNATIVE_NVRAM_CLI', '-o', 'build/native-nvram', 'build/native_hw_fixture.c')
     programs = [('cert-lifecycle', ['build/test_cert_lifecycle.go', 'build/native_runtime_client.go']),
-                ('coexist', ['build/test_coexist.go', 'build/native_runtime_client.go'])]
+                ('coexist', ['build/test_coexist.go', 'build/native_runtime_client.go', 'build/coexist_helpers.go'])]
     if not args.skip_native_regression:
         programs += [('native-httpd', ['build/test_native_httpd.go']),
                      ('native-uu', ['build/test_native_uu.go'])]

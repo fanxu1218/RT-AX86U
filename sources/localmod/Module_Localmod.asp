@@ -4,7 +4,7 @@
 <title>RT-AX86U 官改试验版说明</title>
 <style>body{font:16px/1.8 system-ui,sans-serif;background:#202b33;color:#eee;margin:3em auto;padding:0 1.5em;max-width:760px}a{color:#9fd4ff}li{margin:.7em 0}</style>
 </head><body>
-<h1>RT-AX86U 官改试验版 localmod2-r2</h1>
+<h1>RT-AX86U 官改试验版 localmod2-r3</h1>
 <p>基于华硕 3.0.0.4.388_24437，集成软件中心 1.9.50，并保留官方网易 UU。</p>
 <p><strong>本版本尚未完成路由器实机验收。看到此页面不代表联网、插件或加速功能已经通过测试。</strong></p>
 <ul>

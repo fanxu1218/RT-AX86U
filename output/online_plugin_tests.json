@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r3_EXPERIMENTAL.w",
+  "candidate_sha256": "cc357e6d6ca8358eec97aa60efcc60ed4300ce4d819aa860aed358a8086d15ed",
+  "checks": {
+    "success_https_catalog_native_wget_install_and_installed_callback_with_uu": true,
+    "success_online_update_changes_files_and_metadata_keeps_config_and_uu": true,
+    "success_native_wget_retries_interrupted_https_download_without_uu_restart": true,
+    "success_same_version_is_noop_with_uu_running": true,
+    "success_downgrade_is_noop_and_retains_installed_version": true,
+    "success_enabled_plugin_uninstall_rejected_without_affecting_uu": true,
+    "success_online_uninstall_removes_owned_plugin_and_registration_keeps_uu": true,
+    "errors_https_catalog_native_wget_install_and_installed_callback_with_uu": true,
+    "errors_download_404_keeps_installed_plugin_and_uu": true,
+    "errors_checksum_mismatch_never_executes_update": true,
+    "errors_corrupt_archive_fails_and_cleans_only_owned_stage": true,
+    "errors_wrong_package_root_rejected_before_extraction": true,
+    "errors_missing_install_script_keeps_old_plugin": true,
+    "errors_native_wget_rejects_untrusted_repository_certificate": true,
+    "errors_native_wget_rejects_repository_hostname_mismatch": true,
+    "errors_failed_update_preserves_previous_uninstaller_metadata_and_live_plugin": true,
+    "errors_preexisting_stage_is_preserved_and_operation_refused": true,
+    "errors_low_jffs_space_update_returns_failure_and_keeps_old_state": true,
+    "concurrent_https_catalog_native_wget_install_and_installed_callback_with_uu": true,
+    "concurrent_overlapping_online_rpc_rejected_without_overwriting_active_operation": true,
+    "concurrent_module_specific_uninstall_failure_keeps_registration_and_config": true,
+    "concurrent_copied_uninstall_failure_keeps_registration_and_config": true,
+    "concurrent_default_uninstall_keeps_neighbor_module_prefixes_and_uu": true,
+    "concurrent_online_core_or_invalid_identifier_blocked_softcenter": true,
+    "concurrent_online_core_or_invalid_identifier_blocked_koolcenter": true,
+    "concurrent_online_core_or_invalid_identifier_blocked_.._uu": true
+  },
+  "details": {
+    "success": {
+      "native_wget_sha256": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749",
+      "real_uu_monitor_executed": false,
+      "tls_verification_disabled": false,
+      "uu_api_requests": 1,
+      "uu_launches": 1,
+      "uu_monitor_downloads": 1
+    },
+    "errors": {
+      "native_wget_sha256": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749",
+      "real_uu_monitor_executed": false,
+      "tls_verification_disabled": false,
+      "uu_api_requests": 1,
+      "uu_launches": 1,
+      "uu_monitor_downloads": 1
+    },
+    "concurrent": {
+      "native_wget_sha256": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749",
+      "real_uu_monitor_executed": false,
+      "tls_verification_disabled": false,
+      "uu_api_requests": 1,
+      "uu_launches": 1,
+      "uu_monitor_downloads": 1
+    }
+  },
+  "online_installer_sha256": "ed8cbbe55b36102547042472a76b34dbadbdb6b2dc7e89528efad9139a0919f6",
+  "guard_sha256": "64a9b763ec67690b8f0c73916f1c5a4e15f428f9d425a09f33e86fe742a9bc6a",
+  "retained_native_wget_sha256": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749",
+  "real_uu_monitor_or_third_party_plugin_executed": false,
+  "plugin_download_tls_verification_disabled": false,
+  "environment": [
+    "Networkless ARM64 Linux VM, original ARM32 HTTPd/login/TLS and rc NTP/UU control flow",
+    "Actual packaged perpboot/perpd/httpdb/skipd/dbus/versioncmp and production online installer",
+    "Retained ASUS wget 1.20.1 with owned repository CA; hostname and untrusted CA rejection exercised",
+    "Owned catalog follows pinned frontend RPC fields; owned plugin installs, updates and runs callbacks/worker",
+    "UU API/monitor mapped to guest loopback hostnames and an owned worker; no real UU component/account",
+    "Alpine start-stop-daemon/curl/legacy xtables and QEMU CPU/proc wrappers",
+    "Numeric-IP download protection stays enabled; test hostnames resolve only inside the guest"
+  ],
+  "not_tested": [
+    "Physical router boot, target kernel 4.1, real flash and NVRAM",
+    "Public repository download with router DNS/WAN/default CA bundle and browser rendering",
+    "Real third-party plugins, UU account/entitlement/discovery and actual traffic acceleration",
+    "Rollback of arbitrary changes made by a failing third-party installer",
+    "Concurrent offline installation, SIGKILL/power-loss recovery of an interrupted online operation"
+  ],
+  "public_catalog_read_only_contract_snapshot": {
+    "url": "https://rogsoft.ddnsto.com/koolcenter/app.json.js",
+    "sha256": "89bdf6170b4c7e216da280567ec4c3403ab6debf365d14370fb6396b7a667fcc",
+    "app_count": 65,
+    "keys": [
+      "author",
+      "build_date",
+      "changelog",
+      "description",
+      "home_url",
+      "link",
+      "md5",
+      "module",
+      "name",
+      "order",
+      "port",
+      "server",
+      "tags",
+      "tar_url",
+      "title",
+      "version"
+    ],
+    "read_only": true,
+    "third_party_package_executed": false
+  }
+}

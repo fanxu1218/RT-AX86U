@@ -1,6 +1,6 @@
 # Alpha 3 → localmod2：刷机、实机验收与回退
 
-整理日期：2026-10-31。适用设备：**大陆销售的普通 RT-AX86U**；当前版本：`386.3_2 KoolCenter Alpha 3`；目标：`localmod2-r2-experimental`，基于 ASUS `3.0.0.4.388_24437`，软件中心 `1.9.50`。
+整理日期：2026-10-31。适用设备：**大陆销售的普通 RT-AX86U**；当前版本：`386.3_2 KoolCenter Alpha 3`；目标：`localmod2-r3-experimental`，基于 ASUS `3.0.0.4.388_24437`，软件中心 `1.9.50`。
 
 **这是一份待执行的实验方案。直升/降级是否被设备接受、真实启动、软件中心及 UU 均未在这台路由器上验证。** 已通过的模型和镜像检查见[候选版说明](官改候选版说明.md)，不能替代下列实机项目。本文没有执行任何路由器命令。
 
@@ -18,16 +18,16 @@
 
 | 用途 | 文件 | SHA256 |
 |---|---|---|
-| 本次目标，85,327,892 字节 | `RT-AX86U_388_24437_localmod2_r2_EXPERIMENTAL.w` | `200471b9ca557904dfd9924514a55b403c08ee6c977ce34b7c5902d8e0b89a3d` |
+| 本次目标，85,327,892 字节 | `RT-AX86U_388_24437_localmod2_r3_EXPERIMENTAL.w` | `cc357e6d6ca8358eec97aa60efcc60ed4300ce4d819aa860aed358a8086d15ed` |
 | 刷回原 Alpha 3 | `RT-AX86U_386.3_2_cferom_pureubi_koolcenter_alpha3.w` | `c3d01f6df5916ab5f14a2dabd9c79b6d7c28c73b44bed122fdc2636568cf6838` |
 | 纯官方恢复备用，已在本地核验的固定版本 | `RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w` | `de1caf609347beea394ebab956bddf0b391db592d1ad5f99e9d37e4d0b876af0` |
 
-目标下载：[localmod2 发布页](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r2-experimental)。纯官方包应从 [RT-AX86U 支持页](https://www.asus.com/hk/supportonly/rt-ax86u/helpdesk_bios?model2Name=RT-AX86U)取得；上表固定版本不表示当前最新推荐版本。若另选官方版本，须单独核验来源及型号，不套用此哈希。
+目标下载：[localmod2 发布页](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r3-experimental)。纯官方包应从 [RT-AX86U 支持页](https://www.asus.com/hk/supportonly/rt-ax86u/helpdesk_bios?model2Name=RT-AX86U)取得；上表固定版本不表示当前最新推荐版本。若另选官方版本，须单独核验来源及型号，不套用此哈希。
 
 Mac 终端，进入存放目标固件的目录后运行：
 
 ```sh
-shasum -a 256 RT-AX86U_388_24437_localmod2_r2_EXPERIMENTAL.w
+shasum -a 256 RT-AX86U_388_24437_localmod2_r3_EXPERIMENTAL.w
 ```
 
 结果须与上表完全一致。上传解压后的 `.w` 文件，不能上传 ZIP、源码包或报告，也不要为了绕过拒绝而改扩展名、改头或关闭校验。原 Alpha 3 文件名含 `cferom`，**仅考虑正常管理页接受的整包回刷，不单独写 CFE/引导区**。
@@ -111,7 +111,7 @@ cat /rom/etc/localmod-core-id
 df -k /jffs
 ```
 
-`variant` 应为 `localmod2`、`revision` 应为 `r2`，状态仍是 `EXPERIMENTAL_NOT_DEVICE_TESTED`；两个 core ID 应一致。先保存首次启动日志，再通过管理页恢复默认设置并**手工重建**最小网络；这是本次跨 386→388 的验收策略。不要将 Alpha 3 配置文件或整包 JFFS 导入 localmod2。
+`variant` 应为 `localmod2`、`revision` 应为 `r3`，状态仍是 `EXPERIMENTAL_NOT_DEVICE_TESTED`；两个 core ID 应一致。先保存首次启动日志，再通过管理页恢复默认设置并**手工重建**最小网络；这是本次跨 386→388 的验收策略。不要将 Alpha 3 配置文件或整包 JFFS 导入 localmod2。
 
 普通恢复出厂、WPS 硬重置、JFFS 格式化不是同一件事。若界面另有清除 JFFS/全部持久数据的选项，本次不要顺手勾选；先确认电脑备份和丢失范围。不要假定恢复出厂一定保留或一定清除 JFFS；重启后重新核对隔离目录、新核心和旧归档。
 

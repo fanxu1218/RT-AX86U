@@ -67,6 +67,11 @@
 !/build/linux_cert_restore_job.sh
 !/build/linux_coexist_job.sh
 !/build/check_lifecycle.py
+!/build/coexist_helpers.go
+!/build/test_online.go
+!/build/linux_online_job.sh
+!/build/check_online.py
+!/build/patch_online_installer.py
 !/analysis/
 /analysis/*
 !/analysis/固件分析报告.md
@@ -105,3 +110,9 @@
 !/output/cert_generate_tests_run.log
 !/output/cert_restore_tests_run.log
 !/output/coexist_tests_run.log
+!/output/RT-AX86U_388_24437_localmod2_r3_EXPERIMENTAL.build.json
+!/output/online_r2_reproductions.log
+!/output/online_plugin_tests.json
+!/output/online_success_tests_run.log
+!/output/online_errors_tests_run.log
+!/output/online_concurrent_tests_run.log

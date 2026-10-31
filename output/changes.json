@@ -410,8 +410,8 @@
   {
     "path": "rom/etc/koolshare/scripts/ks_app_install.sh",
     "change": "added",
-    "bytes": 27316,
-    "sha256": "ee731b03af4f9f4cac1bdab6b1cd984511c4f3550a6d57af735e3bba70ff621e"
+    "bytes": 25773,
+    "sha256": "ed8cbbe55b36102547042472a76b34dbadbdb6b2dc7e89528efad9139a0919f6"
   },
   {
     "path": "rom/etc/koolshare/scripts/ks_app_remove.sh",
@@ -457,13 +457,13 @@
     "path": "rom/etc/localmod-core-id",
     "change": "added",
     "bytes": 65,
-    "sha256": "100004f0eda1a75eee8e3851b2ffea3e55de3e1713963a14ad9651b0f91bcdeb"
+    "sha256": "780e0951d7c22f27ac5bd48d3fa0b71f5dd82e02e6f9e8ce9ae1e8ca53e5dba5"
   },
   {
     "path": "rom/etc/localmod-release.json",
     "change": "added",
     "bytes": 667,
-    "sha256": "c526a2c7bec2bdb1f15f6fa6962df6f15980f4e5af83c8c025df7e607cb6270c"
+    "sha256": "0b5b1ea3e085139ba305cb7b20db2ac644c8f98721b96abb5842501e46f17ab3"
   },
   {
     "path": "rom/etc/profile",
@@ -531,8 +531,8 @@
   {
     "path": "usr/libexec/localmod/bootstrap.sh",
     "change": "added",
-    "bytes": 6364,
-    "sha256": "f2f59e278ea119669ec9c0ee18ee65072ad1ff3109bc95dff00a5de1c85166ee"
+    "bytes": 6996,
+    "sha256": "a5ad797e571cc7bf365e831e347214525c53a8d619535d5ec352546abb93d360"
   },
   {
     "path": "usr/libexec/localmod/dispatch.sh",
@@ -545,6 +545,12 @@
     "change": "added",
     "bytes": 690096,
     "sha256": "d9a24b751b2c6ec0a9bf5931b6b1380e75c136bd672a91a5a5118c6ee9e1586d"
+  },
+  {
+    "path": "usr/libexec/localmod/installer-guard.sh",
+    "change": "added",
+    "bytes": 3401,
+    "sha256": "64a9b763ec67690b8f0c73916f1c5a4e15f428f9d425a09f33e86fe742a9bc6a"
   },
   {
     "path": "usr/libexec/localmod/localmod-event",
@@ -580,7 +586,7 @@
     "path": "www/Module_Localmod.asp",
     "change": "added",
     "bytes": 1396,
-    "sha256": "191500059fe9ec0ebf54b031679b86b285c0d011a32990344502c31d09d17186"
+    "sha256": "3f731f37277f56881a11df50f6606c4c9462bc91e9bcb03588abbca13b7f750e"
   },
   {
     "path": "www/state.js",

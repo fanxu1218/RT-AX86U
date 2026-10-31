@@ -1,4 +1,4 @@
-# localmod2-r2 adapter
+# localmod2-r3 adapter
 
 This experimental RT-AX86U firmware retains the exact ASUS 24437 kernel, modules, vendor rc, HTTPd and xtables-multi binaries. Small launchers relocate rc and HTTPd and preload narrowly scoped adapters. It is not device tested. See `../../output/官改候选版说明.md` and the machine-readable test reports.
 
@@ -40,3 +40,9 @@ The 17 lifecycle checks execute the original certificate generation/save/restore
 `verify_uu_compatibility.py` checks retained official UU resources and model-level call transparency. Its earlier command contract remains a model. The new native-runtime job executes the original rc NTP signal handler and UU control flow with an owned monitor and local download shim; the real UU monitor, accounts, discovery and acceleration remain unverified.
 
 The r2 HTTPd launcher executes the retained program directly at `/usr/libexec/localmod/httpd`: the native path check rejects the earlier `/tmp` copy. Stdio hooks resolve lazily to handle calls before the adapter constructor. Exact `asus_token` and `asus_s_token` cookie names are supported, with native session/transport validation retained. The authenticated index handler cannot pre-read the original API body; relay owns that body after authentication.
+
+The r3 online installer patch preserves UU archives and unrelated temporary tasks, locks online install/update/uninstall operations before reading shared request fields, owns only its private download and freshly created stage, and reports the operation result after its logging pipeline. A failed update restores the previous copied uninstaller; a nonzero custom uninstall keeps registration/configuration. Default removal respects module boundaries. The actual patched script remains derived from the pinned donor through `build/patch_online_installer.py`; runtime ownership/lock helpers live in `installer-guard.sh`.
+
+Run `python3 build/check_online.py` against a prepared candidate for the 26 online checks; full builds include it after readback/lifecycle checks. It uses a controlled HTTPS catalog, actual vendor wget with verified fixture CA/hostname, original native HTTPS authentication, real center services and owned plugin/UU workers. Public catalog metadata is inspected read-only, and no real third-party package or UU component is executed. Numeric-IP download protection remains enabled; guest-only hostnames map the local servers to loopback. The process helper for install/uninstall is native Alpine because the packaged ARM32 helper cannot enumerate the ARM64 guest proc ABI. Online/offline overlap and recovery after SIGKILL/power loss remain untested; arbitrary partial changes by third-party scripts cannot be rolled back automatically.
+
+Center shutdown now confirms supervisor exit before stopping the API worker, with bounded retries and a stateless-process fallback. This prevents a late supervisor restart from leaving httpdb active after recovery stop. The skipd read/commit barrier is retained and the database is never force-killed.

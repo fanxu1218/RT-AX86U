@@ -7,6 +7,7 @@ import shutil
 import stat
 import argparse
 import re
+from patch_online_installer import patch_online_installer
 from pathlib import Path
 
 root=Path(__file__).resolve().parent.parent
@@ -57,6 +58,7 @@ put(root/'build/localmod-event','usr/libexec/localmod/localmod-event',0o500)
 put(root/'build/iptables-restore-launcher','usr/sbin/iptables-restore',0o500)
 put(root/'sources/localmod/bootstrap.sh','usr/libexec/localmod/bootstrap.sh',0o755)
 put(root/'sources/localmod/dispatch.sh','usr/libexec/localmod/dispatch.sh',0o755)
+put(root/'sources/localmod/installer-guard.sh','usr/libexec/localmod/installer-guard.sh',0o755)
 put(root/'sources/localmod/jffsinit.sh','usr/bin/jffsinit.sh',0o755)
 put(root/'sources/localmod/kscore.sh',core+'/bin/kscore.sh',0o755)
 put(root/'sources/localmod/helper.sh','usr/sbin/helper.sh',0o755)
@@ -88,18 +90,7 @@ text=perp.read_text()
 assert 'exec httpdb' in text
 perp.write_text(text.replace('exec httpdb','exec httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80'))
 installer=stage/core/'scripts/ks_app_install.sh'
-text=installer.read_text().replace('--no-check-certificate ','')
-broken_uninstall='if [ -f /koolshare/scripts/${softcenter_installing_todo}_uninstall.sh]; then'
-assert broken_uninstall in text
-text=text.replace(broken_uninstall,'if [ -f "/koolshare/scripts/${softcenter_installing_todo}_uninstall.sh" ]; then',1)
-needle='install_ks_module() {'
-assert needle in text
-text=text.replace(needle,needle+'''
- if [ "${softcenter_installing_todo}" = "softcenter" ] || [ "${softcenter_installing_todo}" = "koolcenter" ]; then
-  echo_date "此试验官改的软件中心核心由固件构建维护；请通过固件升级更新核心。普通插件可单独安装。"
-  quit_ks_install
- fi
-''',1)
+text=patch_online_installer(installer.read_text())
 installer.write_text(text)
 offline=stage/core/'scripts/ks_tar_install.sh'
 text=offline.read_text();needle='\t# 11. some package not come from koolcenter'
@@ -154,7 +145,7 @@ text=ui.read_text()
 assert 'href:"http://"+a.netaddr+":3032"' in text
 text=text.replace('href:"http://"+a.netaddr+":3032"','href:"/Module_Localmod.asp"')
 ui.write_text(text)
-release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','revision':'r2','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
+release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','revision':'r3','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
          'software_center':'KoolCenter 1.9.50 from 388.11_0-20260429',
          'event_hooks':['init-start','services-start','services-stop','service-event','service-event-end','wan-event','wan-start','firewall-start','nat-start','pre-mount','post-mount','unmount'],
          'postconf':['dnsmasq'],

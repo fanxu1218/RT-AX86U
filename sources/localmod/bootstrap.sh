@@ -117,6 +117,23 @@ eventd_start(){
 backend_stop(){
  export PATH=/koolshare/bin:/koolshare/scripts:$PATH
  [ ! -f /koolshare/perp/perp.sh ] || sh /koolshare/perp/perp.sh stop
+ # The upstream helper sends signals without waiting. A supervisor can still
+ # respawn httpdb after its first kill; settle supervisors before the backend.
+ for names in 'perpboot perpd tinylog' 'httpdb'; do
+  attempts=3
+  while pidof $names >/dev/null 2>&1; do
+   killall $names 2>/dev/null || true
+   attempts=$((attempts-1))
+   if [ "$attempts" -le 0 ]; then
+    # These are stateless supervisors/API workers. Never force-kill skipd.
+    killall -9 $names 2>/dev/null || true
+    sleep 1
+    if pidof $names >/dev/null 2>&1; then echo "Center processes did not stop: $names"; return 1; fi
+    break
+   fi
+   sleep 1
+  done
+ done
  skipd_stop
 }
 stop(){
