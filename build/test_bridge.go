@@ -24,7 +24,7 @@ func main(){
  go backend.Serve(listener);defer backend.Close()
  ctx,cancel:=context.WithTimeout(context.Background(),25*time.Second);defer cancel()
  cmd:=exec.CommandContext(ctx,"/usr/bin/qemu-arm","-L","/work/build/casefs/official_rootfs","-E","LD_PRELOAD=/work/build/httpd_bridge.so","/work/build/bridge-fixture")
- cmd.Env=append(os.Environ(),"FIXTURE_COUNT=10");cmd.Stdout=os.Stdout;cmd.Stderr=os.Stderr
+ cmd.Env=append(os.Environ(),"FIXTURE_COUNT=12");cmd.Stdout=os.Stdout;cmd.Stderr=os.Stderr
  if err=cmd.Start();err!=nil{panic(err)};defer cmd.Process.Kill()
  for i:=0;i<60;i++{f,e:=os.Open("/proc/net/tcp");if e==nil{b,_:=io.ReadAll(f);f.Close();if strings.Contains(string(b),":84D0"){break}};time.Sleep(100*time.Millisecond)}
  client:=&http.Client{Timeout:3*time.Second}
@@ -37,6 +37,8 @@ func main(){
   {"missing-origin","POST","/_api/","asus_token=valid","",403,`{"error":"rejected"}`},
   {"encoded-traversal","GET","/_api/a%2f..","asus_token=valid","",400,`{"error":"rejected"}`},
   {"stock-page","GET","/index.asp","asus_token=valid","",200,"VENDORBODY"},
+  {"uu-vendor-page","GET","/UUAccelerator.asp","asus_token=valid","",200,"UU_VENDORBODY"},
+  {"uu-vendor-query","GET","/UUAccelerator.asp?probe=test%20only","asus_token=valid","",200,"UU_VENDORBODY"},
   {"encoded-query","GET","/_api/test?value=a%20b","asus_token=valid","",200,`{"ok":true}`},
   {"upload-query","POST","/_upload?nonce=123","asus_token=valid","https://router.test",200,`{"ok":true}`},
  }

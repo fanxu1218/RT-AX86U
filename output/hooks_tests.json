@@ -5,6 +5,7 @@
     "rc_launcher_preserves_arguments_and_vendor_exit": true,
     "rc_launcher_recovery_and_skipd_compatibility": true,
     "vendor_nvram_shared_buffer_is_not_clobbered": true,
+    "uu_style_vendor_eval_arguments_environment_and_return_preserved": true,
     "init_hook_after_mount_and_prepare": true,
     "service_before_after_and_multi_command": true,
     "wan_connected_once_per_unit": true,

@@ -1,6 +1,6 @@
 {
-  "image": "output/RT-AX86U_388_24437_localmod2_EXPERIMENTAL.w",
-  "sha256": "f305a3b405c732ba0c6277f4bd41db2e4e7a8a944bbdd633e930d63562c65b18",
+  "image": "output/RT-AX86U_388_24437_localmod2_r1_EXPERIMENTAL.w",
+  "sha256": "17de463d60fd10e2dae6a22e252b2c2f7a3326ef9bbd9e086a9ebd064a59083e",
   "bytes": 85327892,
   "status": "EXPERIMENTAL_NOT_DEVICE_TESTED",
   "path_count": 3596,

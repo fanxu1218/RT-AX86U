@@ -17,6 +17,12 @@ int main(void){
  nvram_set("unrelated_target",nvram_get("borrowed_source"));
  if(strcmp(nvram_get("unrelated_target"),"vendor-buffer-preserved"))return 5;
  step("nvram-buffer-preserved");
+ char *download[]={"wget","-t","2","-T","30","--dns-timeout=120","--header=Accept:text/plain","-q","--no-check-certificate","https://router.uu.163.com/api/script/monitor?type=asuswrt","-O","/tmp/uu/script_url",NULL};
+ int uu_pid=0;if(_eval(download,"/tmp/uu",45,&uu_pid)!=13 || uu_pid!=4242)return 6;
+ nvram_set("territory_code","CN/01");
+ char *monitor[]={"/bin/sh","/tmp/uu/uuplugin_monitor.sh",nvram_get("territory_code"),NULL};
+ if(_eval(monitor,NULL,0,NULL)!=13)return 7;
+ step("uu-vendor-commands-preserved");
  if(mount("/dev/ubi0","/jffs","ubifs",0,NULL))return 2;
  nvram_set_int("wan0_state_t",2);nvram_set_int("wan0_state_t",2);
  if(fork()==0){nvram_set_int("wan1_state_t",2);exit(0);}wait(NULL);

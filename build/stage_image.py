@@ -89,6 +89,9 @@ assert 'exec httpdb' in text
 perp.write_text(text.replace('exec httpdb','exec httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80'))
 installer=stage/core/'scripts/ks_app_install.sh'
 text=installer.read_text().replace('--no-check-certificate ','')
+broken_uninstall='if [ -f /koolshare/scripts/${softcenter_installing_todo}_uninstall.sh]; then'
+assert broken_uninstall in text
+text=text.replace(broken_uninstall,'if [ -f "/koolshare/scripts/${softcenter_installing_todo}_uninstall.sh" ]; then',1)
 needle='install_ks_module() {'
 assert needle in text
 text=text.replace(needle,needle+'''
@@ -151,7 +154,7 @@ text=ui.read_text()
 assert 'href:"http://"+a.netaddr+":3032"' in text
 text=text.replace('href:"http://"+a.netaddr+":3032"','href:"/Module_Localmod.asp"')
 ui.write_text(text)
-release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
+release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','revision':'r1','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
          'software_center':'KoolCenter 1.9.50 from 388.11_0-20260429',
          'event_hooks':['init-start','services-start','services-stop','service-event','service-event-end','wan-event','wan-start','firewall-start','nat-start','pre-mount','post-mount','unmount'],
          'postconf':['dnsmasq'],

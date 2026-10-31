@@ -29,9 +29,32 @@ EOF
 chmod 755 /usr/libexec/localmod/localmod-event
 mkdir -p /jffs/.koolshare
 printf old-plugin > /jffs/.koolshare/old-plugin
+mkdir -p /jffs/.koolshare/bin
+printf '#!/bin/sh\necho legacy-startup\n' > /jffs/.koolshare/bin/kscore.sh
+ln -s /koolshare/bin/kscore.sh /jffs/.asusrouter
+# Broken links are occupied backup names too. Failed preflight must leave the
+# active old core and startup link intact so the user can recover/retry.
+ln -s /missing/old-core /jffs/.koolshare.pre-localmod
+if sh /usr/libexec/localmod/bootstrap.sh prepare; then echo 'FAIL core backup conflict accepted'; exit 1; fi
+[ "$(cat /koolshare/old-plugin)" = old-plugin ]
+[ "$(readlink /jffs/.koolshare.pre-localmod)" = /missing/old-core ]
+rm /jffs/.koolshare.pre-localmod
+ln -s /missing/old-startup /jffs/.localmod/asusrouter.previous
+if sh /usr/libexec/localmod/bootstrap.sh prepare; then echo 'FAIL startup backup conflict accepted'; exit 1; fi
+if [ ! -e /koolshare/old-plugin ]; then echo 'FAIL startup conflict moved active core before preflight completed'; exit 1; fi
+[ "$(readlink /jffs/.localmod/asusrouter.previous)" = /missing/old-startup ]
+[ "$(readlink /jffs/.asusrouter)" = /koolshare/bin/kscore.sh ]
+rm /jffs/.localmod/asusrouter.previous
+echo 'PASS broken backup links rejected without changing the active old core'
 sh /usr/libexec/localmod/bootstrap.sh prepare
 [ "$(cat /jffs/.koolshare.pre-localmod/old-plugin)" = old-plugin ]
 [ ! -e /koolshare/old-plugin ]
+if [ -L /jffs/.asusrouter ] || [ ! -L /jffs/.localmod/asusrouter.previous ]; then
+ echo 'FAIL legacy asusrouter symlink was not archived before core replacement'
+ exit 1
+fi
+[ "$(readlink /jffs/.localmod/asusrouter.previous)" = /koolshare/bin/kscore.sh ]
+echo 'PASS legacy asusrouter symlink archived without executing the replacement core'
 /usr/bin/dbus set localmod_migration_probe=retained
 sh /usr/libexec/localmod/bootstrap.sh stop
 printf retained-plugin > /koolshare/retained-plugin
@@ -73,8 +96,8 @@ cat > /tmp/package-fixtures/localmod_probe/install.sh <<'EOF'
 #!/bin/sh
 mkdir -p /koolshare/webs /koolshare/scripts
 cp /tmp/localmod_probe/webs/Module_localmod_probe.asp /koolshare/webs/
-cp /tmp/localmod_probe/scripts/localmod_probe.sh /koolshare/scripts/
-chmod 755 /koolshare/scripts/localmod_probe.sh
+cp /tmp/localmod_probe/scripts/localmod_probe.sh /tmp/localmod_probe/scripts/localmod_probe_uninstall.sh /koolshare/scripts/
+chmod 755 /koolshare/scripts/localmod_probe.sh /koolshare/scripts/localmod_probe_uninstall.sh
 dbus set softcenter_module_localmod_probe_install=1
 dbus set softcenter_module_localmod_probe_version=1.0
 EOF
@@ -85,8 +108,12 @@ input=$(dbus get localmod_probe_input)
 dbus set localmod_probe_runtime="$input-ok"
 http_response "$ID"
 EOF
+cat > /tmp/package-fixtures/localmod_probe/scripts/localmod_probe_uninstall.sh <<'EOF'
+#!/bin/sh
+touch /tmp/localmod-custom-uninstall-ran
+rm -f /koolshare/webs/Module_localmod_probe.asp /koolshare/scripts/localmod_probe.sh /koolshare/scripts/localmod_probe_uninstall.sh
+EOF
 for name in localmod_probe wrong_platform softcenter; do
  tar -czf "/tmp/package-fixtures/$name.tar.gz" -C /tmp/package-fixtures "$name"
 done
-cp /tmp/package-fixtures/localmod_probe.tar.gz /tmp/upload/
 /work/build/test-center

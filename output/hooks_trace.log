@@ -1,4 +1,9 @@
 WORK nvram-buffer-preserved
+VENDOR uu-download-contract preserved
+VENDOR eval wget
+VENDOR uu-monitor-contract preserved
+VENDOR eval /bin/sh
+WORK uu-vendor-commands-preserved
 VENDOR mount /jffs
 BOOTSTRAP prepare
 USER init-start 

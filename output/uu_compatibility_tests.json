@@ -1,0 +1,25 @@
+{
+  "status": "STATIC_AND_MODEL_PASS",
+  "checks": {
+    "vendor_rc_identical": true,
+    "uu_page_identical": true,
+    "uu_icon_identical": true,
+    "official_monitor_endpoint_retained": true,
+    "official_navigation_and_label_mac_retained": true,
+    "uu_style_eval_contract_preserved_in_model": true,
+    "uu_page_and_query_bypass_private_api_in_model": true
+  },
+  "sha256": {
+    "vendor_rc": "9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62",
+    "uu_page": "ee62be7154ea2928f8d8e996e3d5b947e255c571894c2aa4c03fc1064898fe48",
+    "uu_icon": "cccb58b8830bebbf84df5409bdecaea8418ae6d033d907422f4a5e678a1c8e6d"
+  },
+  "boundary": "Exact retained ASUS 24437 binaries/resources plus ARM32 adapter fixtures; the UU-style commands are observed by a mock vendor _eval, never executed.",
+  "actual_downloaded_uu_component_executed": false,
+  "not_tested": [
+    "native exec_uu/NTP lifecycle on a router",
+    "UU account, region eligibility, entitlement and console discovery",
+    "monitor download/execution, packet routing and actual acceleration",
+    "third-party plugin and UU coexistence on target hardware"
+  ]
+}

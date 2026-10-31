@@ -20,12 +20,21 @@ prepare(){
   available=$(df -k /jffs | awk 'END {print $4}')
   case "$required:$available" in *[!0-9:]*) return 1;; esac
   [ -n "$required" ] && [ -n "$available" ] && [ "$available" -ge $((required+2048)) ] || return 1
-  if [ -e /jffs/.koolshare ]; then
-   [ ! -e /jffs/.koolshare.pre-localmod ] || { echo 'Old-center backup conflict'; return 1; }
+  # Check every backup destination before moving anything. -e follows links,
+  # so a dangling link is still an occupied backup name.
+  if { [ -e /jffs/.koolshare ] || [ -L /jffs/.koolshare ]; } &&
+     { [ -e /jffs/.koolshare.pre-localmod ] || [ -L /jffs/.koolshare.pre-localmod ]; }; then
+   echo 'Old-center backup conflict'; return 1
+  fi
+  if { [ -e /jffs/.asusrouter ] || [ -L /jffs/.asusrouter ]; } &&
+     { [ -e /jffs/.localmod/asusrouter.previous ] || [ -L /jffs/.localmod/asusrouter.previous ]; }; then
+   echo 'Old startup backup conflict'; return 1
+  fi
+  # Moving the core can break its startup link; archive the link itself.
+  if [ -e /jffs/.koolshare ] || [ -L /jffs/.koolshare ]; then
    mv /jffs/.koolshare /jffs/.koolshare.pre-localmod || return 1
   fi
-  if [ -e /jffs/.asusrouter ]; then
-   [ ! -e /jffs/.localmod/asusrouter.previous ] || return 1
+  if [ -e /jffs/.asusrouter ] || [ -L /jffs/.asusrouter ]; then
    mv /jffs/.asusrouter /jffs/.localmod/asusrouter.previous || return 1
   fi
  fi

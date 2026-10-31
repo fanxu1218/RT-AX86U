@@ -38,7 +38,8 @@ for name,destination in [('build','build/runtime_tests.log'),('filemap','output/
     run('python3','build/run_linux.py',log=destination)
 run('python3','build/verify_hooks.py')
 run('python3','build/verify_compatibility.py')
-image='output/RT-AX86U_388_24437_localmod2_EXPERIMENTAL.w'
+run('python3','build/verify_uu_compatibility.py')
+image='output/RT-AX86U_388_24437_localmod2_r1_EXPERIMENTAL.w'
 run('python3','build/repack_image.py','upstream/RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w','build/localmod-rootfs.ubifs',image)
 run('python3','build/inspect_upstream.py',image,'output/recheck',log='output/structure.json')
 run(str(root/'analysis/.venv/bin/python'),'build/export_metadata.py','output/recheck/rootfs_ubifs','output/recheck/metadata.json')
@@ -50,4 +51,4 @@ run(str(root/'analysis/.venv/bin/python'),'build/verify_candidate.py',image,'out
 for name in ['changes.json','runtime_tests.log','hooks_trace.log','hooks_test_run.log','restore_tests_run.log','restore_hook_trace.log','center_tests_run.log']:
     shutil.copyfile(root/'build'/name,root/'output'/name)
 (root/'output/SHA256SUMS').write_text(hashlib.sha256((root/image).read_bytes()).hexdigest()+'  '+Path(image).name+'\n')
-print('Built localmod2 and verified the experimental candidate; no router was accessed or flashed.')
+print('Built localmod2-r1 and verified the experimental candidate; no router was accessed or flashed.')

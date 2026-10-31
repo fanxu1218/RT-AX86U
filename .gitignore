@@ -50,6 +50,7 @@
 !/build/test_restore.go
 !/build/verify_hooks.py
 !/build/verify_compatibility.py
+!/build/verify_uu_compatibility.py
 !/analysis/
 /analysis/*
 !/analysis/固件分析报告.md
@@ -70,6 +71,8 @@
 !/output/filemap_tests.log
 !/output/RT-AX86U_388_24437_localmod1_EXPERIMENTAL.build.json
 !/output/RT-AX86U_388_24437_localmod2_EXPERIMENTAL.build.json
+!/output/RT-AX86U_388_24437_localmod2_r1_EXPERIMENTAL.build.json
+!/output/uu_compatibility_tests.json
 !/output/hooks_tests.json
 !/output/compatibility_tests.json
 !/output/vendor_contracts.json
