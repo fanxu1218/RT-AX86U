@@ -1,0 +1,20 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+Interrupted plugin operation rolled back; interrupted center/database retained in private recovery history
+REAL_PLUGIN_SETUP_READY
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031112414, 2026/10/31 ~ 2046/11/1
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS fresh_vm_restores_exact_config_files_literal_database_and_version
+PASS interrupted_new_state_retained_in_private_history
+PASS real_ddnsgo_autostart_and_local_page_restored
+PASS retry_after_recovery_commits_and_keeps_uu_data_and_private_api
+INTERRUPT_RESULT {"boot":"verify","case":"damage-manifest","checks":["fresh_vm_restores_exact_config_files_literal_database_and_version","interrupted_new_state_retained_in_private_history","real_ddnsgo_autostart_and_local_page_restored","retry_after_recovery_commits_and_keeps_uu_data_and_private_api"]}
+LINUX_READONLY_JOB_STATUS=0

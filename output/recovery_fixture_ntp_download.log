@@ -1,0 +1,64 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031075109, 2026/10/31 ~ 2046/11/1
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+DIAGNOSTIC /tmp/.localmod/bootstrap.log
+
+DIAGNOSTIC /tmp/upload/soft_install_log.txt
+
+DIAGNOSTIC /tmp/upload/soft_log.txt
+
+DIAGNOSTIC /var/log/perpd/current
+20261031T075217.210095: perpd[896]: starting on /koolshare/perp ...
+20261031T075217.219436: perpd[896]: supervising 0 active services
+20261031T075217.219452: perpd[896]: monitoring 0 client connections
+20261031T075217.219454: perpd[896]: activated new service: ddnsgo
+20261031T075217.219456: perpd[896]: activated new service: httpdb
+20261031T075217.219459: perpd[896]: supervising 2 active services
+20261031T075218.655742: 2026/10/31 07:52:18 You can use 'sudo ./ddns-go -s install' to install service
+20261031T075218.691662: 2026/10/31 07:52:18 Listening on :9876
+20261031T075218.717358: 2026/10/31 07:52:18 Waiting for network connection: lookup alidns.aliyuncs.com on [::1]:53: read udp [::1]:55988->[::1]:53: read: connection refused
+20261031T075218.717465: 2026/10/31 07:52:18 Retry after 5s
+20261031T075218.717475: 2026/10/31 07:52:18 Local DNS exception! Will use 1.1.1.1 by default, you can use -dns to customize DNS server
+20261031T075223.733452: 2026/10/31 07:52:23 Waiting for network connection: lookup esa.cn-hangzhou.aliyuncs.com on [::1]:53: dial udp 1.1.1.1:53: connect: network is unreachable
+20261031T075223.733943: 2026/10/31 07:52:23 Retry after 5s
+20261031T075223.733949: 2026/10/31 07:52:23 Local DNS exception! Will use 8.8.8.8 by default, you can use -dns to customize DNS server
+20261031T075228.735105: 2026/10/31 07:52:28 Waiting for network connection: lookup bcd.baidubce.com on [::1]:53: dial udp 8.8.8.8:53: connect: network is unreachable
+20261031T075228.735125: 2026/10/31 07:52:28 Retry after 5s
+20261031T075228.736112: 2026/10/31 07:52:28 Local DNS exception! Will use 9.9.9.9 by default, you can use -dns to customize DNS server
+
+panic: native NTP handler did not finish [recovered]
+	panic: native NTP handler did not finish
+
+goroutine 1 [running]:
+main.interruptWorker.func1()
+	./interrupt_scenarios.go:202 +0x170
+panic({0x2e30a0?, 0x3e6260?})
+	runtime/panic.go:785 +0x124
+main.coSync(0x40001cc180)
+	./coexist_helpers.go:93 +0x110
+main.onlineUUStart({0x3eb280, 0x40000be000})
+	./test_online.go:258 +0x580
+main.interruptWorker()
+	./interrupt_scenarios.go:214 +0x130
+main.main()
+	./test_interrupt_main.go:18 +0x1b4
+panic: exit status 2
+
+goroutine 1 [running]:
+main.nrMust(...)
+	./native_runtime_client.go:25
+main.interruptController()
+	./interrupt_scenarios.go:498 +0x7d0
+main.main()
+	./test_interrupt_main.go:14 +0x150
+LINUX_READONLY_JOB_STATUS=1

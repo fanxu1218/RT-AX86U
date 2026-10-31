@@ -1,0 +1,436 @@
+{
+  "status": "LOCAL_RECOVERY_FAILURE_SAFETY_PASS",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.w",
+  "candidate_sha256": "d2650339ea0868c472db0f25009642fcf23a5335a40fe2c6a6c3bae1b1cc37eb",
+  "checks": {
+    "safety-seed_one_mib_of_native_plugin_records_synced_before_checkpoint": true,
+    "safety-seed_killed_installer_blocks_writes_without_changing_uu_or_peer_data": true,
+    "safety-seed_sealed_inventory_sha256_matches_independent_reference": true,
+    "safety-seed_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "safety-seed_uu_heartbeat_continues_with_one_launch_at_fault_boundary": true,
+    "safety-seed-legacy_one_mib_of_native_plugin_records_synced_before_checkpoint": true,
+    "safety-seed-legacy_killed_installer_blocks_writes_without_changing_uu_or_peer_data": true,
+    "safety-seed-legacy_legacy_v1_checkpoint_generated_by_pinned_r5_helper": true,
+    "safety-seed-legacy_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "safety-seed-legacy_uu_heartbeat_continues_with_one_launch_at_fault_boundary": true,
+    "damage-tree_stop_native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery": true,
+    "damage-tree_stop_failed_recovery_stops_center_and_database_with_all_usable_copies_retained": true,
+    "damage-tree_stop_same_boot_retry_remains_blocked_and_keeps_checkpoint": true,
+    "damage-tree_stop_fixture_repair_or_space_release_preserves_uu_and_enables_next_boot_validation": true,
+    "damage-tree_resume_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "damage-tree_resume_interrupted_new_state_retained_in_private_history": true,
+    "damage-tree_resume_real_ddnsgo_autostart_and_local_page_restored": true,
+    "damage-tree_resume_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "damage-database_stop_native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery": true,
+    "damage-database_stop_failed_recovery_stops_center_and_database_with_all_usable_copies_retained": true,
+    "damage-database_stop_same_boot_retry_remains_blocked_and_keeps_checkpoint": true,
+    "damage-database_stop_fixture_repair_or_space_release_preserves_uu_and_enables_next_boot_validation": true,
+    "damage-database_resume_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "damage-database_resume_interrupted_new_state_retained_in_private_history": true,
+    "damage-database_resume_real_ddnsgo_autostart_and_local_page_restored": true,
+    "damage-database_resume_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "damage-manifest_stop_native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery": true,
+    "damage-manifest_stop_failed_recovery_stops_center_and_database_with_all_usable_copies_retained": true,
+    "damage-manifest_stop_same_boot_retry_remains_blocked_and_keeps_checkpoint": true,
+    "damage-manifest_stop_fixture_repair_or_space_release_preserves_uu_and_enables_next_boot_validation": true,
+    "damage-manifest_resume_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "damage-manifest_resume_interrupted_new_state_retained_in_private_history": true,
+    "damage-manifest_resume_real_ddnsgo_autostart_and_local_page_restored": true,
+    "damage-manifest_resume_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "damage-ready_stop_native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery": true,
+    "damage-ready_stop_failed_recovery_stops_center_and_database_with_all_usable_copies_retained": true,
+    "damage-ready_stop_same_boot_retry_remains_blocked_and_keeps_checkpoint": true,
+    "damage-ready_stop_fixture_repair_or_space_release_preserves_uu_and_enables_next_boot_validation": true,
+    "damage-ready_resume_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "damage-ready_resume_interrupted_new_state_retained_in_private_history": true,
+    "damage-ready_resume_real_ddnsgo_autostart_and_local_page_restored": true,
+    "damage-ready_resume_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "damage-commit_stop_native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery": true,
+    "damage-commit_stop_failed_recovery_stops_center_and_database_with_all_usable_copies_retained": true,
+    "damage-commit_stop_same_boot_retry_remains_blocked_and_keeps_checkpoint": true,
+    "damage-commit_stop_fixture_repair_or_space_release_preserves_uu_and_enables_next_boot_validation": true,
+    "damage-commit_resume_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "damage-commit_resume_interrupted_new_state_retained_in_private_history": true,
+    "damage-commit_resume_real_ddnsgo_autostart_and_local_page_restored": true,
+    "damage-commit_resume_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "damage-meta_stop_native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery": true,
+    "damage-meta_stop_failed_recovery_stops_center_and_database_with_all_usable_copies_retained": true,
+    "damage-meta_stop_same_boot_retry_remains_blocked_and_keeps_checkpoint": true,
+    "damage-meta_stop_fixture_repair_or_space_release_preserves_uu_and_enables_next_boot_validation": true,
+    "damage-meta_resume_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "damage-meta_resume_interrupted_new_state_retained_in_private_history": true,
+    "damage-meta_resume_real_ddnsgo_autostart_and_local_page_restored": true,
+    "damage-meta_resume_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "damage-active-link_stop_native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery": true,
+    "damage-active-link_stop_failed_recovery_stops_center_and_database_with_all_usable_copies_retained": true,
+    "damage-active-link_stop_same_boot_retry_remains_blocked_and_keeps_checkpoint": true,
+    "damage-active-link_stop_fixture_repair_or_space_release_preserves_uu_and_enables_next_boot_validation": true,
+    "damage-active-link_resume_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "damage-active-link_resume_interrupted_new_state_retained_in_private_history": true,
+    "damage-active-link_resume_real_ddnsgo_autostart_and_local_page_restored": true,
+    "damage-active-link_resume_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "space-full_stop_native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery": true,
+    "space-full_stop_failed_recovery_stops_center_and_database_with_all_usable_copies_retained": true,
+    "space-full_stop_same_boot_retry_remains_blocked_and_keeps_checkpoint": true,
+    "space-full_stop_fixture_repair_or_space_release_preserves_uu_and_enables_next_boot_validation": true,
+    "space-full_resume_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "space-full_resume_interrupted_new_state_retained_in_private_history": true,
+    "space-full_resume_real_ddnsgo_autostart_and_local_page_restored": true,
+    "space-full_resume_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "space-low_stop_native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery": true,
+    "space-low_stop_failed_recovery_stops_center_and_database_with_all_usable_copies_retained": true,
+    "space-low_stop_same_boot_retry_remains_blocked_and_keeps_checkpoint": true,
+    "space-low_stop_fixture_repair_or_space_release_preserves_uu_and_enables_next_boot_validation": true,
+    "space-low_resume_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "space-low_resume_interrupted_new_state_retained_in_private_history": true,
+    "space-low_resume_real_ddnsgo_autostart_and_local_page_restored": true,
+    "space-low_resume_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "space-replay_stop_native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery": true,
+    "space-replay_stop_failed_recovery_stops_center_and_database_with_all_usable_copies_retained": true,
+    "space-replay_stop_same_boot_retry_remains_blocked_and_keeps_checkpoint": true,
+    "space-replay_stop_fixture_repair_or_space_release_preserves_uu_and_enables_next_boot_validation": true,
+    "space-replay_resume_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "space-replay_resume_interrupted_new_state_retained_in_private_history": true,
+    "space-replay_resume_real_ddnsgo_autostart_and_local_page_restored": true,
+    "space-replay_resume_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "legacy-r5_stop_native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery": true,
+    "legacy-r5_stop_failed_recovery_stops_center_and_database_with_all_usable_copies_retained": true,
+    "legacy-r5_stop_same_boot_retry_remains_blocked_and_keeps_checkpoint": true,
+    "legacy-r5_stop_legacy_checkpoint_requires_manual_review_without_adopting_unsealed_bytes": true
+  },
+  "cases": {
+    "damage-tree": {
+      "failure": {
+        "baseline": false,
+        "blocked": true,
+        "case": "damage-tree",
+        "client": {
+          "api_status": 423,
+          "tls_archive_preserved": true,
+          "uu_data_preserved": true,
+          "uu_native_control_alive": true
+        },
+        "processes": {
+          "httpdb": false,
+          "localmod-event": false,
+          "perpd": false,
+          "skipd": false
+        },
+        "retained": true
+      },
+      "next_boot": {
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      }
+    },
+    "damage-database": {
+      "failure": {
+        "baseline": false,
+        "blocked": true,
+        "case": "damage-database",
+        "client": {
+          "api_status": 423,
+          "tls_archive_preserved": true,
+          "uu_data_preserved": true,
+          "uu_native_control_alive": true
+        },
+        "processes": {
+          "httpdb": false,
+          "localmod-event": false,
+          "perpd": false,
+          "skipd": false
+        },
+        "retained": true
+      },
+      "next_boot": {
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      }
+    },
+    "damage-manifest": {
+      "failure": {
+        "baseline": false,
+        "blocked": true,
+        "case": "damage-manifest",
+        "client": {
+          "api_status": 423,
+          "tls_archive_preserved": true,
+          "uu_data_preserved": true,
+          "uu_native_control_alive": true
+        },
+        "processes": {
+          "httpdb": false,
+          "localmod-event": false,
+          "perpd": false,
+          "skipd": false
+        },
+        "retained": true
+      },
+      "next_boot": {
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      }
+    },
+    "damage-ready": {
+      "failure": {
+        "baseline": false,
+        "blocked": true,
+        "case": "damage-ready",
+        "client": {
+          "api_status": 423,
+          "tls_archive_preserved": true,
+          "uu_data_preserved": true,
+          "uu_native_control_alive": true
+        },
+        "processes": {
+          "httpdb": false,
+          "localmod-event": false,
+          "perpd": false,
+          "skipd": false
+        },
+        "retained": true
+      },
+      "next_boot": {
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      }
+    },
+    "damage-commit": {
+      "failure": {
+        "baseline": false,
+        "blocked": true,
+        "case": "damage-commit",
+        "client": {
+          "api_status": 423,
+          "tls_archive_preserved": true,
+          "uu_data_preserved": true,
+          "uu_native_control_alive": true
+        },
+        "processes": {
+          "httpdb": false,
+          "localmod-event": false,
+          "perpd": false,
+          "skipd": false
+        },
+        "retained": true
+      },
+      "next_boot": {
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      }
+    },
+    "damage-meta": {
+      "failure": {
+        "baseline": false,
+        "blocked": true,
+        "case": "damage-meta",
+        "client": {
+          "api_status": 423,
+          "tls_archive_preserved": true,
+          "uu_data_preserved": true,
+          "uu_native_control_alive": true
+        },
+        "processes": {
+          "httpdb": false,
+          "localmod-event": false,
+          "perpd": false,
+          "skipd": false
+        },
+        "retained": true
+      },
+      "next_boot": {
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      }
+    },
+    "damage-active-link": {
+      "failure": {
+        "baseline": false,
+        "blocked": true,
+        "case": "damage-active-link",
+        "client": {
+          "api_status": 423,
+          "tls_archive_preserved": true,
+          "uu_data_preserved": true,
+          "uu_native_control_alive": true
+        },
+        "processes": {
+          "httpdb": false,
+          "localmod-event": false,
+          "perpd": false,
+          "skipd": false
+        },
+        "retained": true
+      },
+      "next_boot": {
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      }
+    },
+    "space-full": {
+      "failure": {
+        "baseline": false,
+        "blocked": true,
+        "case": "space-full",
+        "client": {
+          "api_status": 423,
+          "tls_archive_preserved": true,
+          "uu_data_preserved": true,
+          "uu_native_control_alive": true
+        },
+        "processes": {
+          "httpdb": false,
+          "localmod-event": false,
+          "perpd": false,
+          "skipd": false
+        },
+        "retained": true
+      },
+      "next_boot": {
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      }
+    },
+    "space-low": {
+      "failure": {
+        "baseline": false,
+        "blocked": true,
+        "case": "space-low",
+        "client": {
+          "api_status": 423,
+          "tls_archive_preserved": true,
+          "uu_data_preserved": true,
+          "uu_native_control_alive": true
+        },
+        "processes": {
+          "httpdb": false,
+          "localmod-event": false,
+          "perpd": false,
+          "skipd": false
+        },
+        "retained": true
+      },
+      "next_boot": {
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      }
+    },
+    "space-replay": {
+      "failure": {
+        "baseline": false,
+        "blocked": true,
+        "case": "space-replay",
+        "client": {
+          "api_status": 423,
+          "tls_archive_preserved": true,
+          "uu_data_preserved": true,
+          "uu_native_control_alive": true
+        },
+        "processes": {
+          "httpdb": false,
+          "localmod-event": false,
+          "perpd": false,
+          "skipd": false
+        },
+        "retained": true
+      },
+      "next_boot": {
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      }
+    },
+    "legacy-r5": {
+      "failure": {
+        "baseline": false,
+        "blocked": true,
+        "case": "legacy-r5",
+        "client": {
+          "api_status": 423,
+          "tls_archive_preserved": true,
+          "uu_data_preserved": true,
+          "uu_native_control_alive": true
+        },
+        "processes": {
+          "httpdb": false,
+          "localmod-event": false,
+          "perpd": false,
+          "skipd": false
+        },
+        "retained": true
+      }
+    }
+  },
+  "legacy_fixture": {
+    "source_commit": "791ec5eb6c983c1d1ee24bda471d1194afb8734b",
+    "binary_sha256": "acee866cacece10883d614e2a8a6a783380f98e7e4e1d2e08cdd2d1b2bf909ce",
+    "candidate_sha256": "e55a5178bc4d11a9bc90772362753ee9cc73d644d870a8c572ab5b9376768841"
+  },
+  "production_files": {
+    "usr/libexec/localmod/plugin-txn": "23e575aa4299b075a7fa120fb6672e5c417dca5892f1449c29905f9a862af232",
+    "usr/libexec/localmod/bootstrap.sh": "fd6980a8b1ff18a68897d1ecbe0725dd5918331fe3956c7beadb2e224f33ed3f",
+    "usr/libexec/localmod/installer-guard.sh": "fa6a2ae1084b2546aa873e1ef079c7a2b8df810ece6bc63c2e2ed54b348e63bf",
+    "usr/lib/localmod/httpd_bridge.so": "3eeab339bc4c93769b3459535dc1e49e147a7fbf0d06c0349e7b2cb26d3f415e"
+  },
+  "r5_reproduction": "recovery_r5_baseline.json",
+  "isolation": [
+    "No NIC/physical disk; read-only workspace; one owned 96 MiB ext4 virtual disk per case",
+    "Guest fallocate exhausts real fixture filesystem space before or during replay; only the fixture fill file is removed for retry",
+    "Corrupted bytes are repaired from known synthetic fixture originals, never by trusting or re-sealing corrupt user data"
+  ],
+  "verified": [
+    "Corruption/low space leaves logical checkpoint, current or restored plugin files and quarantined original database available",
+    "Failed recovery stops center services and its newly started replay database; same-boot retry stays blocked",
+    "Native login/TLS, original UU control with owned monitor/worker, persistent UU test data and certificate archive remain usable",
+    "A later VM restores exact plugin records/files, real DDNS-Go autostart and allows changed-version retry after trusted repair/space release",
+    "Unsealed r5 journal is retained for manual review instead of adoption"
+  ],
+  "not_tested": [
+    "Physical NAND/UBIFS faults, stock 4.1 kernel durability and hardware boot",
+    "Real UU account/discovery/entitlement/game traffic",
+    "Reconstruction of already lost/corrupt bytes without a known good backup; active root attacker modifying both data and seals",
+    "Rollback outside the center tree/skipd or concurrent external writers"
+  ],
+  "test_vm_count": 23,
+  "disk_fixture_vcpus": 1,
+  "fixture_kernel_sha256": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1"
+}

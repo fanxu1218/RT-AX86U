@@ -116,7 +116,7 @@ ks_finish(){
  fi
  if [ -d /jffs/.localmod/plugin-txn/active ]; then
   dbus set softcenter_recovery_required=1
-  echo_date "未提交的插件变更已保留检查点。请重启路由器，启动时恢复安装前配置；中断现场会单独保留。"
+  echo_date "未提交的插件变更已保留检查点。请重启检查并尝试恢复；校验或空间异常时会保留副本并停止软件中心。"
  fi
  printf '%s\n' "$KS_CODE" > "$KS_STATUS_FILE"
  echo_date "============================= end ================================="

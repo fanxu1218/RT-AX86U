@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r5_EXPERIMENTAL.w",
-  "candidate_sha256": "e55a5178bc4d11a9bc90772362753ee9cc73d644d870a8c572ab5b9376768841",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.w",
+  "candidate_sha256": "d2650339ea0868c472db0f25009642fcf23a5335a40fe2c6a6c3bae1b1cc37eb",
   "checks": {
     "success_https_catalog_native_wget_install_and_installed_callback_with_uu": true,
     "success_online_update_changes_files_and_metadata_keeps_config_and_uu": true,
@@ -59,7 +59,7 @@
     }
   },
   "online_installer_sha256": "3724f3433cb77eb4d11791d9f1af32877d692f390be6c0d7f05c27714842761a",
-  "guard_sha256": "8480449fa8b4f681c6b78f1a932cce01a239ffd28884570ce2a9f4c62d5a30c3",
+  "guard_sha256": "fa6a2ae1084b2546aa873e1ef079c7a2b8df810ece6bc63c2e2ed54b348e63bf",
   "retained_native_wget_sha256": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749",
   "real_uu_monitor_or_third_party_plugin_executed": false,
   "plugin_download_tls_verification_disabled": false,

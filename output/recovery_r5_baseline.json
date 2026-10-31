@@ -1,0 +1,100 @@
+{
+  "status": "R5_REPRODUCED",
+  "candidate_image": "RT-AX86U_388_24437_localmod2_r5_EXPERIMENTAL.w",
+  "candidate_sha256": "e55a5178bc4d11a9bc90772362753ee9cc73d644d870a8c572ab5b9376768841",
+  "cases": {
+    "damage-tree": {
+      "baseline": true,
+      "blocked": false,
+      "case": "damage-tree",
+      "client": {
+        "api_status": 200,
+        "tls_archive_preserved": true,
+        "uu_data_preserved": true,
+        "uu_native_control_alive": true
+      },
+      "processes": {
+        "httpdb": true,
+        "localmod-event": true,
+        "perpd": true,
+        "skipd": true
+      },
+      "retained": false
+    },
+    "damage-database": {
+      "baseline": true,
+      "blocked": false,
+      "case": "damage-database",
+      "client": {
+        "api_status": 423,
+        "tls_archive_preserved": true,
+        "uu_data_preserved": true,
+        "uu_native_control_alive": true
+      },
+      "processes": {
+        "httpdb": false,
+        "localmod-event": false,
+        "perpd": false,
+        "skipd": true
+      },
+      "retained": true
+    },
+    "damage-ready": {
+      "baseline": true,
+      "blocked": false,
+      "case": "damage-ready",
+      "client": {
+        "api_status": 200,
+        "tls_archive_preserved": true,
+        "uu_data_preserved": true,
+        "uu_native_control_alive": true
+      },
+      "processes": {
+        "httpdb": false,
+        "localmod-event": true,
+        "perpd": true,
+        "skipd": true
+      },
+      "retained": false
+    },
+    "damage-commit": {
+      "baseline": true,
+      "blocked": false,
+      "case": "damage-commit",
+      "client": {
+        "api_status": 200,
+        "tls_archive_preserved": true,
+        "uu_data_preserved": true,
+        "uu_native_control_alive": true
+      },
+      "processes": {
+        "httpdb": true,
+        "localmod-event": true,
+        "perpd": true,
+        "skipd": true
+      },
+      "retained": false
+    },
+    "space-replay": {
+      "baseline": true,
+      "blocked": false,
+      "case": "space-replay",
+      "client": {
+        "api_status": 423,
+        "tls_archive_preserved": true,
+        "uu_data_preserved": true,
+        "uu_native_control_alive": true
+      },
+      "processes": {
+        "httpdb": false,
+        "localmod-event": false,
+        "perpd": false,
+        "skipd": true
+      },
+      "retained": true
+    }
+  },
+  "boundary": "Owned synthetic JFFS/ext4 disks; authentic r5 production helper/bootstrap; native login/TLS/UU control with owned monitor; no physical router",
+  "source_commit": "791ec5eb6c983c1d1ee24bda471d1194afb8734b",
+  "checkpoint_helper_sha256": "acee866cacece10883d614e2a8a6a783380f98e7e4e1d2e08cdd2d1b2bf909ce"
+}

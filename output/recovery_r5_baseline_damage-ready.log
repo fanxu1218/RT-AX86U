@@ -1,0 +1,17 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031053927, 2026/10/31 ~ 2046/11/1
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery
+R5_SAFETY_BASELINE case=damage-ready blocked=false retained=false processes=map[httpdb:false localmod-event:true perpd:true skipd:true]
+SAFETY_RESULT {"baseline":true,"blocked":false,"case":"damage-ready","client":{"api_status":200,"tls_archive_preserved":true,"uu_data_preserved":true,"uu_native_control_alive":true},"processes":{"httpdb":false,"localmod-event":true,"perpd":true,"skipd":true},"retained":false}
+LINUX_READONLY_JOB_STATUS=0

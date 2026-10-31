@@ -60,6 +60,7 @@ report = {
     'status': 'LOCAL_ISOLATION_PASS', 'candidate_image': verification['image'],
     'candidate_sha256': verification['sha256'], 'checks': checks,
     'details': details, 'sources': manifest,
+    'run_observations': ['One initial DDNS-Go read-only status request returned an unexpected EOF after HTTP 200 headers. A fresh full upgrade/fresh VM run, including four distinct status requests, passed without retrying an RPC. Cause remains unconfirmed; server-log diagnostics were added. This is not claimed as a firmware fix.'],
     'production_files': {path: sha256(stage / path) for path in [
         'usr/libexec/localmod/bootstrap.sh', 'usr/libexec/localmod/dispatch.sh',
         'rom/etc/koolshare/scripts/base.sh', 'usr/libexec/localmod/busybox', 'bin/busybox', 'usr/sbin/curl']},

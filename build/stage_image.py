@@ -136,7 +136,7 @@ text=ui.read_text()
 assert 'href:"http://"+a.netaddr+":3032"' in text
 text=text.replace('href:"http://"+a.netaddr+":3032"','href:"/Module_Localmod.asp"')
 ui.write_text(text)
-release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','revision':'r5','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
+release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','revision':'r6','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
          'software_center':'KoolCenter 1.9.50 from 388.11_0-20260429',
          'event_hooks':['init-start','services-start','services-stop','service-event','service-event-end','wan-event','wan-start','firewall-start','nat-start','pre-mount','post-mount','unmount'],
          'postconf':['dnsmasq'],

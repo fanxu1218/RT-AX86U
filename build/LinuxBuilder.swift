@@ -21,7 +21,9 @@ let loader = VZLinuxBootLoader(kernelURL: URL(fileURLWithPath: CommandLine.argum
 loader.initialRamdiskURL = URL(fileURLWithPath: CommandLine.arguments[2])
 loader.commandLine = "console=hvc0 quiet panic=-1" + (readOnly ? " localmod_readonly=1" : "") + (stateDisk ? " localmod_state_disk=1" : "")
 config.bootLoader = loader
-config.cpuCount = 2
+let fixtureCPUs = ProcessInfo.processInfo.environment["LOCALMOD_TEST_CPUS"].flatMap(Int.init) ?? 2
+guard (1...2).contains(fixtureCPUs) else { fputs("Invalid fixture CPU count\n", stderr); exit(2) }
+config.cpuCount = fixtureCPUs
 config.memorySize = 1024 * 1024 * 1024
 let console = VZVirtioConsoleDeviceSerialPortConfiguration()
 console.attachment = VZFileHandleSerialPortAttachment(fileHandleForReading: nil,

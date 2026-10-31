@@ -52,6 +52,7 @@ export NATIVE_CERT_CASE=1 NATIVE_STATE_DIRECTORY=/tmp/native-nvram
 export LOCALMOD_QEMU_ROOT=/ LOCALMOD_TEST_OUTPUT=/tmp/real-plugin-results
 export LOCALMOD_TLS_START_TIMEOUT=60s
 export LOCALMOD_HTTP_REQUEST_TIMEOUT=10s
+export LOCALMOD_NTP_WAIT_TIMEOUT=45s
 export LOCALMOD_PLUGIN_OPERATION_TIMEOUT=45s
 mkdir -p /router/tmp/native-nvram /router/tmp/real-plugin-results
 if grep -qw localmod_state_disk=1 /proc/cmdline; then

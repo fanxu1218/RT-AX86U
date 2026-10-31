@@ -22,4 +22,3 @@ PASS native_uu_non_china_sku_skipped
 starting ntp...
 PASS native_uu_ap_mode_skipped
 PASS original rc ntp SIGTSTP -> exec_uu -> controlled download/checksum/launch; no real UU monitor/account or external network
-

@@ -223,7 +223,7 @@ func main() {
 		if failure := recover(); failure != nil {
 			fmt.Println("DIAGNOSTIC processes", nrCommand("/bin/ps", "w"))
 			fmt.Println("DIAGNOSTIC locks", nrCommand("/bin/ls", "-lR", "/tmp/.localmod"))
-			for _, p := range []string{"/tmp/.localmod/bootstrap.log", "/tmp/upload/soft_install_log.txt", "/tmp/upload/ddnsgo_log.txt", "/tmp/upload/ddnsgo.log", "/tmp/online-wget-calls", "/var/log/perpd/current"} {
+			for _, p := range []string{"/tmp/.localmod/bootstrap.log", "/tmp/upload/soft_install_log.txt", "/tmp/upload/ddnsgo_log.txt", "/tmp/upload/ddnsgo.log", "/tmp/online-wget-calls", "/var/log/perpd/current", nrOutput("real-plugins-server.log")} {
 				if b, e := os.ReadFile(p); e == nil {
 					fmt.Printf("DIAGNOSTIC %s\n%s\n", p, b)
 				}

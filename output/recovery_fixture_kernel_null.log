@@ -1,0 +1,33 @@
+LINUX_BUILDER_READY
+[   30.516732] Unable to handle kernel NULL pointer dereference at virtual address 0000000000000040
+[   30.519923] Mem abort info:
+[   30.519979]   ESR = 0x0000000096000004
+[   30.520074]   EC = 0x25: DABT (current EL), IL = 32 bits
+[   30.520264]   SET = 0, FnV = 0
+[   30.520315]   EA = 0, S1PTW = 0
+[   30.520400]   FSC = 0x04: level 0 translation fault
+[   30.520477] Data abort info:
+[   30.520521]   ISV = 0, ISS = 0x00000004, ISS2 = 0x00000000
+[   30.520629]   CM = 0, WnR = 0, TnD = 0, TagAccess = 0
+[   30.520744]   GCS = 0, Overlay = 0, DirtyBit = 0, Xs = 0
+[   30.520847] user pgtable: 4k pages, 48-bit VAs, pgdp=0000000074ad2000
+[   30.520959] [0000000000000040] pgd=0000000000000000, p4d=0000000000000000
+[   30.521180] Internal error: Oops: 0000000096000004 [#1] SMP
+[   30.521393] Modules linked in: ext4 crc16 mbcache jbd2 
+[   30.521572] Unable to handle kernel paging request at virtual address fffffffffffffff8
+[   30.521903] Mem abort info:
+[   30.521922]   ESR = 0x0000000096000006
+[   30.521976]   EC = 0x25: DABT (current EL), IL = 32 bits
+[   30.522011]   SET = 0, FnV = 0
+[   30.522082]   EA = 0, S1PTW = 0
+[   30.522132]   FSC = 0x06: level 2 translation fault
+[   30.522268] Data abort info:
+[   30.522273]   ISV = 0, ISS = 0x00000006, ISS2 = 0x00000000
+[   30.522354]   CM = 0, WnR = 0, TnD = 0, TagAccess = 0
+[   30.522403]   GCS = 0, Overlay = 0, DirtyBit = 0, Xs = 0
+[   30.522470] swapper pgtable: 4k pages, 48-bit VAs, pgdp=000000007142b000
+[   30.522590] [fffffffffffffff8] pgd=00000000717fd003, p4d=00000000717fd003, pud=00000000717fe003, pmd=0000000000000000
+[   90.518919] rcu: INFO: rcu_preempt detected stalls on CPUs/tasks:
+[   90.529854] rcu: 	0-...0: (0 ticks this GP) idle=e0f4/1/0x4000000000000006 softirq=3035/3035 fqs=4677
+[   90.530313] rcu: 	(detected by 1, t=60003 jiffies, g=8113, q=3 ncpus=2)
+[   90.530732] Sending NMI from CPU 1 to CPUs 0:

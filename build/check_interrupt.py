@@ -18,7 +18,7 @@ CASES = ['download', 'checkpoint', 'kill-parent', 'kill-tree', 'offline', 'fresh
 def compile_fixtures():
     subprocess.run(['go', 'build', '-trimpath', '-o', 'build/test-interrupt',
                     'build/test_interrupt_main.go', 'build/interrupt_scenarios.go',
-                    'build/test_interrupt.go', 'build/test_online.go',
+                    'build/test_interrupt.go', 'build/recovery_safety.go', 'build/test_online.go',
                     'build/native_runtime_client.go', 'build/coexist_helpers.go'], check=True,
                    env=dict(os.environ, GOOS='linux', GOARCH='arm64', CGO_ENABLED='0'))
     subprocess.run(['sources/zig-aarch64-macos-0.15.2/zig', 'cc', '-target',

@@ -1,7 +1,7 @@
 {
   "status": "LOCAL_ISOLATION_PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r5_EXPERIMENTAL.w",
-  "candidate_sha256": "e55a5178bc4d11a9bc90772362753ee9cc73d644d870a8c572ab5b9376768841",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.w",
+  "candidate_sha256": "d2650339ea0868c472db0f25009642fcf23a5335a40fe2c6a6c3bae1b1cc37eb",
   "checks": {
     "upgrade_native_shell_resolution_center_start_original_process_helper_private_api_and_uu": true,
     "upgrade_native_curl_numeric_url_guard_retained_hostname_callback_pinned_to_loopback": true,
@@ -288,7 +288,7 @@
     ]
   },
   "production_files": {
-    "usr/libexec/localmod/bootstrap.sh": "e62b2caf5b70d72d29f3fb4f13a57ebd4dceb7142f0d06e588f3c95a4e0208db",
+    "usr/libexec/localmod/bootstrap.sh": "fd6980a8b1ff18a68897d1ecbe0725dd5918331fe3956c7beadb2e224f33ed3f",
     "usr/libexec/localmod/dispatch.sh": "96fee2f2f2507dcc3371f0ccc95ecbec61699c772a23078b811ae9220a467e4e",
     "rom/etc/koolshare/scripts/base.sh": "d29dcb38a94aa51b0df22b0fdd8a6a9e9636777bad3a2ae4431d9af308773726",
     "usr/libexec/localmod/busybox": "c5541fb5b5eff61565aa416779fcdf66b3c762ba8ef3ef5f52f08df964ffe7e2",
@@ -317,5 +317,8 @@
     "Alibaba DNS API changes, DDNSTO authenticated cloud tunnel, DDNS-Go provider authentication",
     "Real UU monitor/account/discovery/entitlement/game traffic acceleration",
     "Arbitrary plugin ecosystem; separate interruption_tests.json covers defined recovery cases, not physical power loss"
+  ],
+  "run_observations": [
+    "One initial DDNS-Go read-only status request returned an unexpected EOF after HTTP 200 headers. A fresh full upgrade/fresh VM run, including four distinct status requests, passed without retrying an RPC. Cause remains unconfirmed; server-log diagnostics were added. This is not claimed as a firmware fix."
   ]
 }

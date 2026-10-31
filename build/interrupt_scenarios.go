@@ -25,6 +25,7 @@ type interruptPhase struct {
 	Case       string `json:"case"`
 	Initialize bool   `json:"initialize"`
 	Boot       string `json:"boot"`
+	Baseline   bool   `json:"baseline"`
 }
 
 var irqPhase interruptPhase
@@ -250,7 +251,14 @@ func interruptWorker() {
 	if irqDB("localmod_userdata_quote") != irqQuote || irqDB("peer_config") != "unrelated-preserved" {
 		panic("literal database values lost or evaluated")
 	}
+	if strings.HasPrefix(irqPhase.Case, "safety-seed") {
+		safetyLargeSet()
+		syscall.Sync()
+	}
 	if irqPhase.Boot == "verify" {
+		if strings.HasPrefix(irqPhase.Case, "damage-") || strings.HasPrefix(irqPhase.Case, "space-") {
+			safetyLargeCheck()
+		}
 		committed := irqPhase.Case == "after-commit" || irqPhase.Case == "committed-cleanup"
 		want := "1.0"
 		if committed {
@@ -449,6 +457,13 @@ func interruptWorker() {
 }
 func interruptController() {
 	irqLoad()
+	if irqPhase.Boot == "safety" {
+		safetyController()
+		return
+	}
+	if strings.HasPrefix(irqPhase.Case, "safety-seed") && irqPhase.Baseline {
+		nrMust(os.WriteFile("/router/usr/libexec/localmod/plugin-txn.real", nrRead("/work/build/plugin-txn-r5-baseline"), 0500))
+	}
 	mode := irqPhase.Case
 	if irqPhase.Boot == "recover-cut" {
 		mode = "recover-center"
@@ -484,6 +499,19 @@ exit "$status"
 			return
 		case <-time.After(50 * time.Millisecond):
 			if b, e := os.ReadFile("/router/tmp/txn-fault-gate"); e == nil && len(b) > 0 {
+				if strings.HasPrefix(irqPhase.Case, "safety-seed") && string(nrRead("/router/jffs/.localmod/plugin-txn/active/version")) == "2" {
+					manifest := nrRead("/router/jffs/.localmod/plugin-txn/active/manifest.bin")
+					if string(nrRead("/router/jffs/.localmod/plugin-txn/active/ready")) != "LMREADY2 "+irqSHA(manifest)+"\n" {
+						panic("checkpoint SHA256 differs from independent Go implementation")
+					}
+					irqRecord("sealed_inventory_sha256_matches_independent_reference")
+				}
+				if strings.HasPrefix(irqPhase.Case, "safety-seed") && irqPhase.Baseline {
+					if string(nrRead("/router/jffs/.localmod/plugin-txn/active/version")) != "1" {
+						panic("legacy fixture did not come from r5 helper")
+					}
+					irqRecord("legacy_v1_checkpoint_generated_by_pinned_r5_helper")
+				}
 				irqUUData("/router")
 				irqRecord("abrupt_vm_cut_keeps_synced_uu_files")
 				if irqSHA(nrRead("/router/jffs/cert.tgz")) != string(nrRead("/router/jffs/.fixture-cert.sha")) {

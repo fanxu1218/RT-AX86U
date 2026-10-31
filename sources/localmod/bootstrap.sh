@@ -19,8 +19,23 @@ prepare(){
  mkdir -p /jffs/.localmod /tmp/upload /jffs/scripts /jffs/configs/dnsmasq.d
  # Recovery must precede skipd, the center supervisors and plugin hooks.
  # The helper deliberately refuses same-boot rollback under escaped children.
- if [ -d /jffs/.localmod/plugin-txn/active ]; then
+ if [ -L /jffs/.localmod/plugin-txn ] || { [ -e /jffs/.localmod/plugin-txn ] && [ ! -d /jffs/.localmod/plugin-txn ]; }; then
+  echo 'Invalid checkpoint store; preserving all data and stopping center startup'; return 1
+ fi
+ if checkpoint_exists; then
   /usr/libexec/localmod/plugin-txn recover || return 1
+  if checkpoint_exists; then
+   RECOVERY_DB_STARTED=0
+   skipd_start recovery || { recovery_abort; return 1; }
+   /usr/libexec/localmod/plugin-txn restore-database || { recovery_abort; return 1; }
+   # Reopen the native database so verification cannot succeed against only
+   # its in-memory values after a failed disk commit.
+   skipd_stop || { recovery_abort; return 1; }
+   RECOVERY_DB_STARTED=0
+   skipd_start recovery || { recovery_abort; return 1; }
+   /usr/libexec/localmod/plugin-txn finish-recovery || { recovery_abort; return 1; }
+   RECOVERY_DB_STARTED=0
+  fi
  fi
  if [ ! -f /jffs/.localmod/initialized ]; then
   required=$(du -sk /rom/etc/koolshare | awk '{print $1}')
@@ -59,9 +74,6 @@ prepare(){
  nvram set sc_url=https://rogsoft.ddnsto.com
  nvram set sc_skin=ASUSWRT
  skipd_start || return 1
- if [ -d /jffs/.localmod/plugin-txn/active ]; then
-  /usr/libexec/localmod/plugin-txn restore-database || return 1
- fi
  if [ -f /jffs/.localmod/plugin-txn/notice ]; then
   for field in todo title name tar_url version md5; do /usr/bin/dbus set "softcenter_installing_$field="; done
   /usr/bin/dbus set softcenter_installing_result=1
@@ -72,6 +84,30 @@ prepare(){
   sync
  fi
  eventd_start
+}
+
+checkpoint_exists(){ [ -e /jffs/.localmod/plugin-txn/active ] || [ -L /jffs/.localmod/plugin-txn/active ]; }
+
+recovery_abort(){
+ echo 'Recovery failed; all checkpoint/current/interrupted copies retained; center will not start'
+ [ "${RECOVERY_DB_STARTED:-0}" = 1 ] || return 0
+ # Recovery starts only with no existing skipd. These are the newly created
+ # replay database processes, never the quarantined original database.
+ pids=
+ for pid in $(pidof skipd 2>/dev/null); do
+  if [ -r "/proc/$pid/cmdline" ] && tr '\000' ' ' < "/proc/$pid/cmdline" | grep -q -- '-d /jffs/.localmod/ksdb'; then
+   pids="$pids $pid"; kill "$pid" 2>/dev/null
+  fi
+ done
+ attempts=30
+ while pidof skipd >/dev/null 2>&1 && [ "$attempts" -gt 0 ]; do attempts=$((attempts-1)); sleep 0.1; done
+ if pidof skipd >/dev/null 2>&1; then
+  echo 'Stopping only the disposable recovery database after bounded graceful shutdown'
+  for pid in $pids; do
+   if [ -r "/proc/$pid/cmdline" ] && tr '\000' ' ' < "/proc/$pid/cmdline" | grep -q -- '-d /jffs/.localmod/ksdb'; then kill -9 "$pid" 2>/dev/null; fi
+  done
+ fi
+ RECOVERY_DB_STARTED=0
 }
 
 protect_api(){
@@ -86,15 +122,22 @@ protect_api(){
 }
 
 skipd_start(){
- pidof skipd >/dev/null 2>&1 && return 0
+ skipd_mode=${1:-normal}
+ if pidof skipd >/dev/null 2>&1; then
+  [ "$skipd_mode" != recovery ] || { echo 'Refusing to adopt an existing database during recovery'; return 1; }
+  return 0
+ fi
  /usr/bin/skipd -d /jffs/.localmod/ksdb >"$BASE/skipd.log" 2>&1 &
+ [ "$skipd_mode" != recovery ] || RECOVERY_DB_STARTED=1
  retries=30
  while ! /usr/bin/dbus list softcenter_ >/dev/null 2>&1; do
   retries=$((retries-1)); [ "$retries" -gt 0 ] || return 1
   sleep 1
  done
- /usr/bin/dbus set softcenter_version="$(cat /rom/etc/koolshare/.soft_ver)"
- /usr/bin/dbus set softcenter_home_url=https://rogsoft.ddnsto.com
+ if [ "$skipd_mode" != recovery ]; then
+  /usr/bin/dbus set softcenter_version="$(cat /rom/etc/koolshare/.soft_ver)"
+  /usr/bin/dbus set softcenter_home_url=https://rogsoft.ddnsto.com
+ fi
 }
 
 

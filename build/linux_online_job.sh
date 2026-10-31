@@ -1,6 +1,7 @@
 #!/bin/sh
 set -eu
 . /work/build/native_lifecycle_setup.sh
+export LOCALMOD_TLS_START_TIMEOUT=60s LOCALMOD_HTTP_REQUEST_TIMEOUT=10s LOCALMOD_NTP_WAIT_TIMEOUT=12s
 trap 'cat /tmp/.localmod/bootstrap.log 2>/dev/null || true' EXIT
 mkdir -p /rom/etc /usr/bin /usr/sbin /usr/libexec/localmod /tmp/process-tools /tmp/upload /run
 mount -t tmpfs -o size=64m tmpfs /jffs

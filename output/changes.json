@@ -463,7 +463,7 @@
     "path": "rom/etc/localmod-release.json",
     "change": "added",
     "bytes": 667,
-    "sha256": "483360782a95b335002efbe2d02dc7268683e1ef155266e1ae5df5e0a2403900"
+    "sha256": "0fea8b3ee009269808d8be9315d499ce2bb296a67a057dfac5d5d8cd645c2e49"
   },
   {
     "path": "rom/etc/profile",
@@ -519,8 +519,8 @@
   {
     "path": "usr/lib/localmod/httpd_bridge.so",
     "change": "added",
-    "bytes": 12164,
-    "sha256": "5bce7ed8037409755dd44246033c2d87a96256cf4f63654a28e6ed4584875d7a"
+    "bytes": 12276,
+    "sha256": "3eeab339bc4c93769b3459535dc1e49e147a7fbf0d06c0349e7b2cb26d3f415e"
   },
   {
     "path": "usr/lib/localmod/rc_bridge.so",
@@ -541,8 +541,8 @@
   {
     "path": "usr/libexec/localmod/bootstrap.sh",
     "change": "added",
-    "bytes": 8018,
-    "sha256": "e62b2caf5b70d72d29f3fb4f13a57ebd4dceb7142f0d06e588f3c95a4e0208db"
+    "bytes": 10023,
+    "sha256": "fd6980a8b1ff18a68897d1ecbe0725dd5918331fe3956c7beadb2e224f33ed3f"
   },
   {
     "path": "usr/libexec/localmod/busybox",
@@ -565,8 +565,8 @@
   {
     "path": "usr/libexec/localmod/installer-guard.sh",
     "change": "added",
-    "bytes": 4990,
-    "sha256": "8480449fa8b4f681c6b78f1a932cce01a239ffd28884570ce2a9f4c62d5a30c3"
+    "bytes": 5002,
+    "sha256": "fa6a2ae1084b2546aa873e1ef079c7a2b8df810ece6bc63c2e2ed54b348e63bf"
   },
   {
     "path": "usr/libexec/localmod/localmod-event",
@@ -577,8 +577,8 @@
   {
     "path": "usr/libexec/localmod/plugin-txn",
     "change": "added",
-    "bytes": 25092,
-    "sha256": "acee866cacece10883d614e2a8a6a783380f98e7e4e1d2e08cdd2d1b2bf909ce"
+    "bytes": 38860,
+    "sha256": "23e575aa4299b075a7fa120fb6672e5c417dca5892f1449c29905f9a862af232"
   },
   {
     "path": "usr/libexec/localmod/rc.vendor",
@@ -608,7 +608,7 @@
     "path": "www/Module_Localmod.asp",
     "change": "added",
     "bytes": 1574,
-    "sha256": "99df0cf61639513cc300c4fece2c3d95aa34ad131e36e5502d453a4612a16ace"
+    "sha256": "1c8923f92fc3156ebce227867eaa4e5b52d8fb0ba371ebeea8f6be34b72c3f57"
   },
   {
     "path": "www/state.js",

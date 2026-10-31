@@ -1,0 +1,132 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+Interrupted plugin operation rolled back; interrupted center/database retained in private recovery history
+REAL_PLUGIN_SETUP_READY
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031075443, 2026/10/31 ~ 2046/11/1
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+NTP_WAIT_DIAGNOSTIC /proc/1062/status
+Name:	ntp
+Umask:	0022
+State:	S (sleeping)
+Tgid:	1062
+Ngid:	0
+Pid:	1062
+PPid:	464
+TracerPid:	0
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+FDSize:	64
+Groups:	 
+NStgid:	1062
+NSpid:	1062
+NSpgid:	0
+NSsid:	0
+Kthread:	0
+VmPeak:	 4324184 kB
+VmSize:	 4324184 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	   14316 kB
+VmRSS:	   14316 kB
+RssAnon:	    7284 kB
+RssFile:	      56 kB
+RssShmem:	    6976 kB
+VmData:	  135260 kB
+VmStk:	     132 kB
+VmExe:	    3732 kB
+VmLib:	       8 kB
+VmPTE:	     108 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+untag_mask:	0xffffffffffffff
+Threads:	2
+SigQ:	0/3823
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000090000
+SigIgn:	0000000000000000
+SigCgt:	0000003c000864dc
+CapInh:	0000000000000000
+CapPrm:	000001ffffffffff
+CapEff:	000001ffffffffff
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	vulnerable
+SpeculationIndirectBranch:	unknown
+Cpus_allowed:	3
+Cpus_allowed_list:	0-1
+Mems_allowed:	1
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	32
+nonvoluntary_ctxt_switches:	432
+
+NTP_WAIT_DIAGNOSTIC /proc/1062/wchan
+do_wait
+NTP_WAIT_DIAGNOSTIC /tmp/real-plugin-results/online-interrupt-run-ntp.log
+PASS early stdio before adapter constructor
+
+DIAGNOSTIC /tmp/.localmod/bootstrap.log
+Interrupted plugin operation rolled back; interrupted center/database retained in private recovery history
+
+DIAGNOSTIC /tmp/upload/soft_install_log.txt
+
+DIAGNOSTIC /tmp/upload/soft_log.txt
+
+DIAGNOSTIC /var/log/perpd/current
+20261031T075908.258303: perpd[948]: starting on /koolshare/perp ...
+20261031T075908.269643: perpd[948]: supervising 0 active services
+20261031T075908.269658: perpd[948]: monitoring 0 client connections
+20261031T075908.281061: perpd[948]: activated new service: ddnsgo
+20261031T075908.284972: perpd[948]: activated new service: httpdb
+20261031T075908.294024: perpd[948]: supervising 2 active services
+20261031T075916.944632: 2026/10/31 07:59:16 You can use 'sudo ./ddns-go -s install' to install service
+20261031T075917.132437: 2026/10/31 07:59:17 Listening on :9876
+20261031T075917.254822: 2026/10/31 07:59:17 Waiting for network connection: lookup alidns.aliyuncs.com on [::1]:53: read udp [::1]:37344->[::1]:53: read: connection refused
+20261031T075917.358417: 2026/10/31 07:59:17 Retry after 5s
+20261031T075917.365993: 2026/10/31 07:59:17 Local DNS exception! Will use 1.1.1.1 by default, you can use -dns to customize DNS server
+20261031T075922.962124: 2026/10/31 07:59:22 Waiting for network connection: lookup esa.cn-hangzhou.aliyuncs.com on [::1]:53: dial udp 1.1.1.1:53: connect: network is unreachable
+20261031T075922.962361: 2026/10/31 07:59:22 Retry after 5s
+20261031T075922.962491: 2026/10/31 07:59:22 Local DNS exception! Will use 8.8.8.8 by default, you can use -dns to customize DNS server
+20261031T075928.013665: 2026/10/31 07:59:28 Waiting for network connection: lookup bcd.baidubce.com on [::1]:53: dial udp 8.8.8.8:53: connect: network is unreachable
+20261031T075928.013758: 2026/10/31 07:59:28 Retry after 5s
+20261031T075928.013765: 2026/10/31 07:59:28 Local DNS exception! Will use 9.9.9.9 by default, you can use -dns to customize DNS server
+
+panic: native NTP handler did not finish [recovered]
+	panic: native NTP handler did not finish
+
+goroutine 1 [running]:
+main.interruptWorker.func1()
+	./interrupt_scenarios.go:202 +0x170
+panic({0x2e30a0?, 0x3e6380?})
+	runtime/panic.go:785 +0x124
+main.coSync(0x400011a180)
+	./coexist_helpers.go:100 +0x294
+main.onlineUUStart({0x3eb3a0, 0x4000106000})
+	./test_online.go:258 +0x580
+main.interruptWorker()
+	./interrupt_scenarios.go:214 +0x130
+main.main()
+	./test_interrupt_main.go:18 +0x1b4
+panic: exit status 2
+
+goroutine 1 [running]:
+main.nrMust(...)
+	./native_runtime_client.go:25
+main.interruptController()
+	./interrupt_scenarios.go:498 +0x7d0
+main.main()
+	./test_interrupt_main.go:14 +0x150
+LINUX_READONLY_JOB_STATUS=1

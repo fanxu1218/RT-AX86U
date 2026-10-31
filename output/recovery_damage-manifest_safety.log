@@ -1,0 +1,15 @@
+LINUX_BUILDER_READY
+plugin checkpoint: checkpoint integrity/structure invalid; nothing moved: Invalid argument
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031112414, 2026/10/31 ~ 2046/11/1
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS native_login_tls_uu_control_and_persistent_uu_files_survive_failed_recovery
+PASS failed_recovery_stops_center_and_database_with_all_usable_copies_retained
+PASS same_boot_retry_remains_blocked_and_keeps_checkpoint
+PASS fixture_repair_or_space_release_preserves_uu_and_enables_next_boot_validation
+SAFETY_RESULT {"baseline":false,"blocked":true,"case":"damage-manifest","client":{"api_status":423,"tls_archive_preserved":true,"uu_data_preserved":true,"uu_native_control_alive":true},"processes":{"httpdb":false,"localmod-event":false,"perpd":false,"skipd":false},"retained":true}
+LINUX_READONLY_JOB_STATUS=0

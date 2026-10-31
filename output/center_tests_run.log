@@ -8,8 +8,8 @@ Http on addr 127.0.0.1:3032
 root=/koolshare/webs/
 upload=/tmp/upload
 PASS multipart archive uploaded byte-for-byte through authenticated adapter and actual httpdb
-INSTALL RPC 200 {"result": "12001"}
 conn=0x1064e0 nc=0x1063f8 id=12001 removed
+INSTALL RPC 200 {"result": "12001"}
 PASS actual software-center API invokes offline installer and registers fixture plugin
 conn=0x106460 nc=0x106988 id=12002 removed
 PASS installed plugin script reads fields and returns via actual curl callback {"result": "12002"}

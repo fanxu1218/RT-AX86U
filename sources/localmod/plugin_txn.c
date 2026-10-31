@@ -74,7 +74,7 @@ static int child(const char *a,const char *b,const char *c){
  pid_t p=fork();if(p<0)return -1;if(!p){execl(a,a,b,c,(char *)NULL);_exit(127);}int s;while(waitpid(p,&s,0)<0)if(errno!=EINTR)return -1;return WIFEXITED(s)&&WEXITSTATUS(s)==0?0:-1;
 }
 static int safe_name(const char *s){return *s&&strlen(s)<=64&&strspn(s,"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-")==strlen(s);}
-static int transfer(int fd,void *buf,size_t length,int writing){char *p=buf;while(length){ssize_t n=writing?write(fd,p,length):read(fd,p,length);if(n<0&&errno==EINTR)continue;if(n<=0){errno=EIO;return -1;}p+=n;length-=n;}return 0;}
+static int transfer(int fd,void *buf,size_t length,int writing){char *p=buf;while(length){ssize_t n=writing?write(fd,p,length):read(fd,p,length);if(n<0&&errno==EINTR)continue;if(n<0)return -1;if(!n){errno=EIO;return -1;}p+=n;length-=n;}return 0;}
 static int db_connect(void){int fd=socket(AF_UNIX,SOCK_STREAM,0);if(fd<0)return -1;struct sockaddr_un a={.sun_family=AF_UNIX};strcpy(a.sun_path,"/tmp/.skipd_server_sock");struct timeval t={5,0};setsockopt(fd,SOL_SOCKET,SO_RCVTIMEO,&t,sizeof(t));setsockopt(fd,SOL_SOCKET,SO_SNDTIMEO,&t,sizeof(t));if(connect(fd,(void *)&a,sizeof(a))){close(fd);return -1;}return fd;}
 static int db_send(int fd,const char *command,size_t n){if(n>8000000){errno=EFBIG;return -1;}char h[17];snprintf(h,sizeof(h),"magicv1 %07u ",(unsigned)n);return transfer(fd,h,16,1)||transfer(fd,(void *)command,n,1)?-1:0;}
 static char *db_receive(int fd,size_t *length){char h[17];if(transfer(fd,h,16,0))return NULL;h[16]=0;if(memcmp(h,"magicv1 ",8)||h[15]!=' '){errno=EPROTO;return NULL;}for(int i=8;i<15;i++)if(h[i]<'0'||h[i]>'9'){errno=EPROTO;return NULL;}unsigned n=(unsigned)strtoul(h+8,NULL,10);if(!n||n>8000000){errno=EFBIG;return NULL;}char *b=malloc(n+1);if(!b)return NULL;if(transfer(fd,b,n,0)){free(b);return NULL;}b[n]=0;*length=n;return b;}
@@ -86,7 +86,7 @@ static int db_snapshot(const char *dir){
   if(n<6||memcmp(b,"list ",5)){free(b);errno=EPROTO;goto done;}char *split=memchr(b+5,' ',n-5);if(!split){free(b);errno=EPROTO;goto done;}
   size_t key=(size_t)(split-(b+5)),value=n-(size_t)(split+1-b);
   if(key==7&&!memcmp(b+5,"__all__",7)&&value==8&&!memcmp(split+1,"__end__\n",8)){free(b);uint32_t end[2]={0,0};if(transfer(out,end,sizeof(end),1))goto done;r=0;break;}
-  bytes+=key+value+8;if(!key||key>2048||bytes>32*1024*1024||memchr(b,0,n)){free(b);errno=EFBIG;goto done;}
+  bytes+=key+value+8;if(!key||key>2048||value>7900000||bytes>32*1024*1024||memchr(b,0,n)){free(b);errno=EFBIG;goto done;}
   uint32_t sizes[2]={(uint32_t)key,(uint32_t)value};int bad=transfer(out,sizes,sizeof(sizes),1)||transfer(out,b+5,key,1)||transfer(out,split+1,value,1);free(b);if(bad)goto done;
  }
  if(fsync(out)||flushdir(dir))r=-1;
@@ -132,16 +132,18 @@ static int copy_tree(const char *src,const char *dst,const char *relative,dev_t 
  struct timespec times[]={st.st_atim,st.st_mtim};if(!r&&(futimens(out,times)||fsync(out)))r=-1;
  close(in);if(close(out))r=-1;return r;
 }
+#include "checkpoint_integrity.h"
+
 static int begin(pid_t pid,const char *log){
  if(strcmp(log,"soft_install_log.txt")&&strcmp(log,"soft_log.txt")){errno=EINVAL;return fail("invalid log name");}
  if(mkdir(BASE,0700)&&errno!=EEXIST)return fail("create store");if(!directory(BASE)||chmod(BASE,0700))return fail("invalid store");
  if(exists(ACTIVE)){
   if(!directory(ACTIVE))return fail("invalid active record");
-  if(flag("committed")){if(remove_active())return fail("remove committed record");}
+  if(flag("committed")){unsigned char digest[32];if(verify_checkpoint(digest)||marker("committed","LMCOMMIT2 ",digest))return fail("invalid committed checkpoint; retained all copies");if(remove_active())return fail("remove committed record");}
   else {fputs(own_live()?"plugin operation already active\n":"interrupted operation requires reboot recovery\n",stderr);return own_live()?10:11;}
  }
  if(token(pid,owner,sizeof(owner))||mkdir(ACTIVE,0700))return fail("create intent");
- if(put("version","1")||put("boot",boot)||put("owner",owner)||put("log",log)||put("state","preparing")||flushdir(BASE))return fail("persist intent");return 0;
+ if(put("version","2")||put("boot",boot)||put("owner",owner)||put("log",log)||put("state","preparing")||flushdir(BASE))return fail("persist intent");return 0;
 }
 static int checkpoint(pid_t pid,const char *module){
  if(!same_owner(pid)||!safe_name(module)){errno=EINVAL;return fail("checkpoint owner/module");}
@@ -150,31 +152,46 @@ static int checkpoint(pid_t pid,const char *module){
  struct statvfs fs;if(statvfs("/jffs",&fs)||need>(uint64_t)fs.f_bavail*fs.f_frsize){errno=ENOSPC;return fail("insufficient checkpoint space; installer not run");}
  char dst[PATH_MAX];struct stat st;
  if(join(dst,ACTIVE,"database")||db_snapshot(dst))return fail("snapshot database; installer not run");
+ uint64_t db_bytes;unsigned db_count;if(values_validate(&db_bytes,&db_count))return fail("invalid logical database; installer not run");
  if(lstat(targets[0],&st)||join(dst,ACTIVE,"center")||copy_tree(targets[0],dst,"",st.st_dev,0))return fail("checkpoint copy; installer not run");
  if(!same_owner(pid)){errno=ECANCELED;return fail("owner interrupted during checkpoint");}
- if(put("ready","1")||put("state","mutating"))return fail("seal checkpoint");return 0;
+ if(seal_checkpoint()||put("state","mutating"))return fail("seal checkpoint");return 0;
 }
 static int finish(pid_t pid,int code){
  if(!directory(ACTIVE))return 0;
  char recorded[120];if(readfield("owner",recorded,sizeof(recorded))||strtol(recorded,NULL,10)!=pid){errno=EINVAL;return fail("finish identity mismatch");}
  if(!same_owner(pid)){put("state","interrupted");return 1;}
- if(!flag("ready")){if(remove_active())return fail("discard preparation");return 0;}
+ if(!flag("ready")){char state[80]="";readfield("state",state,sizeof(state));if(strcmp(state,"preparing")||flag("recovery-boot")||flag("committed")){errno=EINVAL;return fail("missing seal after possible mutation; retained checkpoint");}if(remove_active())return fail("discard preparation");return 0;}
  if(code){if(put("state","interrupted"))return fail("mark failed mutation");return 0;}
  /* Caller has read skipd's commit barrier. Persist data before the commit point. */
- sync();if(put("committed","1"))return fail("persist commit point");
+ unsigned char digest[32];if(verify_checkpoint(digest))return fail("checkpoint integrity changed; retained all copies");
+ char hex[65],receipt[100];hex_digest(digest,hex);snprintf(receipt,sizeof(receipt),"LMCOMMIT2 %s\n",hex);
+ sync();if(put("committed",receipt))return fail("persist commit point");
  if(remove_active())fputs("plugin checkpoint committed; cleanup deferred\n",stderr);
  return 0;
 }
 static int recover(void){
  if(!exists(ACTIVE))return 0;if(!directory(ACTIVE))return fail("invalid recovery record");
- char previous[80]="";readfield("boot",previous,sizeof(previous));
- if(flag("committed"))return remove_active()?fail("committed cleanup"):0;
+ if(!directory(BASE)){errno=EINVAL;return fail("invalid checkpoint store; retained all copies");}
+ char version[16]="",state[80]="",previous[80]="";readfield("version",version,sizeof(version));readfield("state",state,sizeof(state));readfield("boot",previous,sizeof(previous));
+ if(strcmp(version,"2")){errno=EINVAL;return fail("unsealed legacy or damaged checkpoint; manual review required");}
+ if(intent_valid()||exact_field("state",state,sizeof(state)))return fail("damaged checkpoint metadata; retained all copies");
+ if(strcmp(state,"preparing")&&strcmp(state,"mutating")&&strcmp(state,"interrupted")&&strcmp(state,"restoring-database")&&strcmp(state,"replayed-database")&&strcmp(state,"recovered")){errno=EINVAL;return fail("invalid checkpoint state; retained all copies");}
+ unsigned char digest[32];
+ if(flag("committed")){if(verify_checkpoint(digest)||marker("committed","LMCOMMIT2 ",digest))return fail("invalid commit receipt; retained all copies");return remove_active()?fail("committed cleanup"):0;}
  if(!strcmp(previous,boot)){errno=EBUSY;return fail("same-boot transaction; reboot before recovery");}
- if(!flag("ready")){if(put_at(BASE,"notice","preparation-interrupted")||remove_active())return fail("incomplete checkpoint cleanup");return 0;}
+ if(!flag("ready")){
+  if(strcmp(state,"preparing")||flag("recovery-boot")||flag("failed-center")||flag("failed-database")){errno=EINVAL;return fail("missing checkpoint seal; retained all copies");}
+  if(put_at(BASE,"notice","preparation-interrupted")||remove_active())return fail("incomplete checkpoint cleanup");return 0;
+ }
+ uint64_t db_bytes;unsigned db_count;
+ if(verify_checkpoint(digest)||values_validate(&db_bytes,&db_count))return fail("checkpoint integrity/structure invalid; nothing moved");
+ if(recovery_space(db_bytes))return fail("insufficient recovery space; retained all copies without moving data");
  /* prepare and start can both invoke bootstrap. After a partial replay the
   * database may already be live: never move it again in this recovery boot. */
  char attempted[80]="";readfield("recovery-boot",attempted,sizeof(attempted));
  if(!strcmp(attempted,boot)){errno=EBUSY;return fail("recovery already attempted in this boot; reboot before retry");}
+ int live=db_connect();if(live>=0){close(live);errno=EBUSY;return fail("database already running; refusing recovery");}
  if(put("recovery-boot",boot))return fail("persist recovery boot identity");
  /* Every rename is restartable. Never overwrite a quarantined interrupted tree. */
  for(int i=0;i<1;i++){
@@ -198,7 +215,16 @@ static int recover(void){
 static int restore_database(void){
  if(!exists(ACTIVE))return 0;char previous[80]="",state[80]="",attempted[80]="";readfield("boot",previous,sizeof(previous));readfield("state",state,sizeof(state));readfield("recovery-boot",attempted,sizeof(attempted));
  if(!strcmp(previous,boot)||strcmp(state,"restoring-database")||strcmp(attempted,boot)){errno=EBUSY;return fail("database replay requires this boot's recovery preparation");}
+ unsigned char digest[32];uint64_t bytes;unsigned count;
+ if(verify_checkpoint(digest)||values_validate(&bytes,&count)||recovery_space(bytes))return fail("replay integrity or space check failed; retained all copies");
  if(restore_values())return fail("restore logical database; retained all copies");
+ sync();return put("state","replayed-database")?fail("record replay; retained all copies"):0;
+}
+static int finish_recovery(void){
+ if(!exists(ACTIVE)){errno=EINVAL;return fail("missing recovery checkpoint");}
+ char previous[80]="",attempted[80]="",state[80]="";readfield("boot",previous,sizeof(previous));readfield("recovery-boot",attempted,sizeof(attempted));readfield("state",state,sizeof(state));
+ if(!strcmp(previous,boot)||strcmp(attempted,boot)||strcmp(state,"replayed-database")){errno=EBUSY;return fail("invalid recovery verification phase");}
+ unsigned char digest[32];if(verify_checkpoint(digest)||verify_values())return fail("reopened database verification failed; retained all copies");
  sync();if(put("state","recovered")||put_at(BASE,"notice","rolled-back"))return fail("finish recovery");
  char path[PATH_MAX];if(snprintf(path,sizeof(path),BASE "/recovered-%s",boot)>=(int)sizeof(path)||exists(path)){errno=EEXIST;return fail("recovery history collision");}
  if(rename(ACTIVE,path)||flushdir(BASE))return fail("retain recovery history");
@@ -216,7 +242,7 @@ static int watch(pid_t pid){
    if(strcmp(log,"soft_log.txt"))strcpy(log,"soft_install_log.txt");
    snprintf(path,sizeof(path),"/tmp/upload/%s",log);
    int fd=open(path,O_WRONLY|O_APPEND|O_CREAT|O_NOFOLLOW,0600);
-   const char msg[]="\n安装进程已中断。请重启路由器，启动时将恢复安装前的检查点；可读取的中断现场会保留供检查。\nXU6J03M6\n";
+   const char msg[]="\n安装进程已中断。请重启路由器，启动时会校验检查点并尝试恢复；校验或空间异常时保留副本并停止软件中心。\nXU6J03M6\n";
    if(fd>=0){write(fd,msg,sizeof(msg)-1);close(fd);}child("/usr/bin/dbus","set","softcenter_installing_result=1");child("/usr/bin/dbus","set","softcenter_recovery_required=1");_exit(0);
   }sleep(1);
  }
@@ -227,6 +253,7 @@ int main(int argc,char **argv){
  if(textread("/proc/sys/kernel/random/boot_id",boot,sizeof(boot)))return fail("read boot identity");boot[strcspn(boot,"\r\n")]=0;
  if(argc==2&&!strcmp(argv[1],"recover"))return recover();
  if(argc==2&&!strcmp(argv[1],"restore-database"))return restore_database();
+ if(argc==2&&!strcmp(argv[1],"finish-recovery"))return finish_recovery();
  if(argc<3)return 2;char *end;long value=strtol(argv[2],&end,10);if(value<=1||*end||value>INT_MAX)return 2;pid_t pid=(pid_t)value;
  if(argc==4&&!strcmp(argv[1],"begin"))return begin(pid,argv[3]);
  if(argc==3&&!strcmp(argv[1],"watch"))return watch(pid);

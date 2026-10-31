@@ -29,6 +29,10 @@ int fsync(int fd){int r=real_fsync(fd);char proc[80],p[4096];snprintf(proc,sizeo
  return r;
 }
 ssize_t write(int fd,const void *b,size_t n){
+ if(mode("space-replay")&&n>=18&&!memcmp(b,"set zzzz_recovery_",18)&&access("/tmp/safety-release",F_OK)){
+  int mark=open("/tmp/txn-fault-gate",O_WRONLY|O_CREAT|O_TRUNC,0600);if(mark>=0){real_write(mark,"before-large-database-record",28);close(mark);}
+  while(access("/tmp/safety-release",F_OK))usleep(10000);
+ }
  if(mode("no-space")){char proc[80],p[4096];snprintf(proc,sizeof(proc),"/proc/self/fd/%d",fd);ssize_t count=readlink(proc,p,sizeof(p)-1);if(count>=0){p[count]=0;const char *prefix="/jffs/.localmod/plugin-txn/active/center/";if(!strncmp(p,prefix,strlen(prefix))){errno=ENOSPC;return -1;}}}
  return real_write(fd,b,n);
 }

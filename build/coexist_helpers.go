@@ -74,11 +74,39 @@ func coUUAlive(pid int) {
 func coSync(cmd *exec.Cmd) {
 	os.Remove("/tmp/native-ntp-idle")
 	nrMust(cmd.Process.Signal(syscall.SIGTSTP))
-	for i := 0; i < 100; i++ {
+	limit := 3 * time.Second
+	if raw := os.Getenv("LOCALMOD_NTP_WAIT_TIMEOUT"); raw != "" {
+		var e error
+		limit, e = time.ParseDuration(raw)
+		nrMust(e)
+		if limit <= 0 || limit > time.Minute {
+			panic("invalid NTP fixture wait limit")
+		}
+	}
+	started := time.Now()
+	deadline := started.Add(limit)
+	for time.Now().Before(deadline) {
 		if _, e := os.Stat("/tmp/native-ntp-idle"); e == nil {
+			if elapsed := time.Since(started); elapsed > 3*time.Second {
+				fmt.Printf("NTP_HANDLER_COMPLETED elapsed=%s signals_sent=1\n", elapsed)
+			}
 			return
 		}
 		time.Sleep(30 * time.Millisecond)
+	}
+	if b, e := exec.Command("/bin/ps", "w").CombinedOutput(); e == nil {
+		fmt.Printf("NTP_WAIT_PROCESSES\n%s\n", b)
+	}
+	for _, name := range []string{"status", "wchan", "task/" + strconv.Itoa(cmd.Process.Pid) + "/children"} {
+		p := fmt.Sprintf("/proc/%d/%s", cmd.Process.Pid, name)
+		if b, e := os.ReadFile(p); e == nil {
+			fmt.Printf("NTP_WAIT_DIAGNOSTIC %s\n%s\n", p, b)
+		}
+	}
+	if f, ok := cmd.Stdout.(*os.File); ok {
+		if b, e := os.ReadFile(f.Name()); e == nil {
+			fmt.Printf("NTP_WAIT_DIAGNOSTIC %s\n%s\n", f.Name(), b)
+		}
 	}
 	panic("native NTP handler did not finish")
 }

@@ -1,6 +1,6 @@
 # Alpha 3 → localmod2：刷机、实机验收与回退
 
-整理日期：2026-10-31。适用设备：**大陆销售的普通 RT-AX86U**；当前版本：`386.3_2 KoolCenter Alpha 3`；目标：`localmod2-r5-experimental`，基于 ASUS `3.0.0.4.388_24437`，软件中心 `1.9.50`。
+整理日期：2026-10-31。适用设备：**大陆销售的普通 RT-AX86U**；当前版本：`386.3_2 KoolCenter Alpha 3`；目标：`localmod2-r6-experimental`，基于 ASUS `3.0.0.4.388_24437`，软件中心 `1.9.50`。
 
 **这是一份待执行的实验方案。直升/降级是否被设备接受、真实启动、软件中心及 UU 均未在这台路由器上验证。** 已通过的模型和镜像检查见[候选版说明](官改候选版说明.md)，不能替代下列实机项目。本文没有执行任何路由器命令。
 
@@ -18,16 +18,16 @@
 
 | 用途 | 文件 | SHA256 |
 |---|---|---|
-| 本次目标，85,721,108 字节 | `RT-AX86U_388_24437_localmod2_r5_EXPERIMENTAL.w` | `e55a5178bc4d11a9bc90772362753ee9cc73d644d870a8c572ab5b9376768841` |
+| 本次目标，85,721,108 字节 | `RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.w` | `d2650339ea0868c472db0f25009642fcf23a5335a40fe2c6a6c3bae1b1cc37eb` |
 | 刷回原 Alpha 3 | `RT-AX86U_386.3_2_cferom_pureubi_koolcenter_alpha3.w` | `c3d01f6df5916ab5f14a2dabd9c79b6d7c28c73b44bed122fdc2636568cf6838` |
 | 纯官方恢复备用，已在本地核验的固定版本 | `RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w` | `de1caf609347beea394ebab956bddf0b391db592d1ad5f99e9d37e4d0b876af0` |
 
-目标下载：[localmod2 发布页](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r5-experimental)。纯官方包应从 [RT-AX86U 支持页](https://www.asus.com/hk/supportonly/rt-ax86u/helpdesk_bios?model2Name=RT-AX86U)取得；上表固定版本不表示当前最新推荐版本。若另选官方版本，须单独核验来源及型号，不套用此哈希。
+目标下载：[localmod2 发布页](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r6-experimental)。纯官方包应从 [RT-AX86U 支持页](https://www.asus.com/hk/supportonly/rt-ax86u/helpdesk_bios?model2Name=RT-AX86U)取得；上表固定版本不表示当前最新推荐版本。若另选官方版本，须单独核验来源及型号，不套用此哈希。
 
 Mac 终端，进入存放目标固件的目录后运行：
 
 ```sh
-shasum -a 256 RT-AX86U_388_24437_localmod2_r5_EXPERIMENTAL.w
+shasum -a 256 RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.w
 ```
 
 结果须与上表完全一致。上传解压后的 `.w` 文件，不能上传 ZIP、源码包或报告，也不要为了绕过拒绝而改扩展名、改头或关闭校验。原 Alpha 3 文件名含 `cferom`，**仅考虑正常管理页接受的整包回刷，不单独写 CFE/引导区**。
@@ -272,3 +272,7 @@ sync
 ## r5 插件中断恢复验收补充
 
 在实际升级、备份及基本联网验收完成后，另按 [插件安装中断恢复说明](插件安装中断恢复说明.md) 检查软件中心配置和 UU。当前任务没有操作路由器，不建议为验收直接拔电。若真实安装异常中断，先保留日志及事务目录，正常重启后确认旧插件配置、版本、自启和 UU，再重试安装；不要删除 active 检查点或清空 JFFS 来解除锁。虚拟磁盘结果不能替代实机 UBIFS 断电验证。
+
+## r6 损坏与低空间处理补充
+
+遇到封存校验或恢复空间错误时先保留全部副本，停止安装和设置写入。r6 不会为未知旧数据补算封存，也不会删除 UU/历史数据来腾空间；活动的 r5 未封存记录需人工核查。按 [恢复说明](插件安装中断恢复说明.md) 私下备份并从可信副本修复，或释放已确认可清理的空间，再正常重启。不要删除 active 来跳过校验。当前任务仍未连接或刷写路由器。

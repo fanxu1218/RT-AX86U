@@ -31,7 +31,7 @@ for phase, expected in [('success', 7), ('errors', 13), ('concurrent', 8)]:
     print('Running online workflow VM:', phase, flush=True)
     destination = root / f'build/online_{phase}_tests_run.log'
     with destination.open('w') as log:
-        subprocess.run(['python3', 'build/run_linux.py'], check=True, stdout=log, stderr=subprocess.STDOUT)
+        subprocess.run(['python3', 'build/run_linux.py', '--timeout', '180'], check=True, stdout=log, stderr=subprocess.STDOUT)
     data = json.loads(result.read_text())
     assert len(data['checks']) == expected and len(set(data['checks'])) == expected
     for name in data['checks']:

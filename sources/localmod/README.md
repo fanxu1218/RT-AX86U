@@ -1,4 +1,4 @@
-# localmod2-r5 adapter
+# localmod2-r6 adapter
 
 This experimental RT-AX86U firmware retains the exact ASUS 24437 kernel, modules, vendor rc, HTTPd and xtables-multi binaries. Small launchers relocate rc and HTTPd and preload narrowly scoped adapters. It is not device tested. See `../../output/官改候选版说明.md` and the machine-readable test reports.
 
@@ -45,7 +45,7 @@ The r3 online installer patch preserves UU archives and unrelated temporary task
 
 Run `python3 build/check_online.py` against a prepared candidate for the 28 online checks; full builds include it after readback/lifecycle checks. It uses a controlled HTTPS catalog, actual vendor wget with verified fixture CA/hostname, original native HTTPS authentication, real center services and owned plugin/UU workers. Public catalog metadata is inspected read-only, and no real third-party package or UU component is executed. Numeric-IP download protection remains enabled; guest-only hostnames map the local servers to loopback. The process helper for install/uninstall is native Alpine because the packaged ARM32 helper cannot enumerate the ARM64 guest proc ABI. These earlier RAM-only jobs do not establish interruption recovery. The r5 checks below cover the defined center/skipd rollback scope; arbitrary external changes by privileged scripts remain outside it.
 
-Center shutdown now confirms supervisor exit before stopping the API worker, with bounded retries and a stateless-process fallback. This prevents a late supervisor restart from leaving httpdb active after recovery stop. The skipd read/commit barrier is retained and the database is never force-killed.
+Center shutdown now confirms supervisor exit before stopping the API worker, with bounded retries and a stateless-process fallback. This prevents a late supervisor restart from leaving httpdb active after recovery stop. The skipd read/commit barrier is retained and the preexisting production database is never force-killed. Only a newly created replay database with preserved originals can be terminated on recovery failure.
 
 
 ## Real HND plugin checks (r4)
@@ -67,3 +67,13 @@ Early bootstrap restores the tree before starting plugins, then replays literal 
 `python3 build/check_interrupt.py` is included after image readback and real-package checks. It allows one owned 96 MiB virtual disk under ignored `build/interrupt-private/`, with full host synchronization and a read-only workspace, no NIC or physical disks. A test-only ARM interposer and cp wrapper stop execution at explicit boundaries; genuine DDNS-Go archives stay unchanged. The VM is terminated without guest shutdown, then a new VM resumes with the same ext4 disk. Tests cover preflight/download, checkpoint preparation, SIGKILL of parent/tree, fresh/offline installs, authentic DDNS-Go update, before/after commit, detached commit cleanup, write ENOSPC, and interruption of tree recovery and partial database replay. Firmware never includes the fault interposer or wrappers.
 
 See `../../output/interruption_tests.json` and `../../output/插件安装中断恢复说明.md` for bound-image evidence and scope. Exact synthetic configuration, binary bytes, multiline/quoted database values, unrelated state, UU cache/user-state files, TLS archive and DDNS-Go autostart/page are checked. Physical NAND/UBIFS power cuts, original 4.1 kernel behavior and real UU accounts/acceleration remain unverified. Do not upload fixture disks, recovered user databases or credentials.
+
+## Damaged checkpoints and recovery ENOSPC (r6)
+
+`checkpoint_integrity.h` creates a version-2 SHA256 inventory of names/types, ownership/modes, regular bytes, symlink contents and logical database records. Native Go SHA256 independently checks the seal in the fault fixture. Recovery validates the full inventory, exact marker receipts, record bounds/duplicates/end-of-file and available JFFS space before moving targets. Invalid or missing mutation/commit markers are retained. Unsealed version-1 active journals require manual review; do not generate a new seal over unknown bytes.
+
+Recovery reserves 2 MiB plus three times the logical record bytes. Runtime failures preserve the checkpoint, interrupted tree and original raw database and stop only the newly started replay database. After the native commit barrier, bootstrap closes/reopens skipd and compares the full key/value set from the new process before finalizing recovery. It compares a framed native list in one stream to avoid per-key request delays. Managed core migration and plugin startup follow successful recovery. Native login/TLS/UU endpoints remain independent; invalid/dangling journal paths also block software-center POSTs.
+
+Run `python3 build/check_recovery_safety.py` after the ordinary interruption suite. Tests corrupt owned checkpoint bytes/metadata/markers/paths, exhaust actual ext4 fixture blocks before or during replay, check all original/quarantined copies, enforce stopped services and 423 writes, then reboot after trusted synthetic repair/space release. A fixed r5 helper generates the legacy-format fixture with its published binary digest verified. Test data, disks and keys are never published. Real NAND/UBIFS faults, stock kernel behavior and real UU accounts/acceleration remain outside local validation.
+
+Full-rootfs signal fixtures publish readiness under a blocked signal mask and use `sigsuspend` to avoid the fixture introducing a lost wakeup; native rc handlers are retained. The NTP wait is bounded to 45 seconds for disk-backed jobs and logs the elapsed time for slow completions. Disk tests request one vCPU; this configuration does not establish a fix for the intermittent Alpine guest initialization faults recorded in the candidate notes. The read-only runner fails on a guest kernel oops.

@@ -139,3 +139,10 @@
 !/output/interruption_tests.json
 !/output/interrupt_*.log
 !/output/插件安装中断恢复说明.md
+
+!/build/check_recovery_safety.py
+!/build/recovery_safety.go
+!/output/recovery_safety_tests.json
+!/output/recovery_r5_baseline.json
+!/output/recovery_*.log
+!/output/RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.build.json

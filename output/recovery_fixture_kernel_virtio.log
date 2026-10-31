@@ -1,0 +1,152 @@
+LINUX_BUILDER_READY
+[   15.329690] Internal error: Oops - Undefined instruction: 0000000002000000 [#1] SMP
+[   15.331983] Modules linked in: ext4 crc16 mbcache jbd2 crc32c_generic virtio_blk binfmt_misc virtiofs fuse
+[   15.332301] CPU: 1 UID: 0 PID: 423 Comm: mkfs.ext4 Not tainted 6.12.114-0-virt #1-Alpine
+[   15.332405] pstate: 414000c5 (nZcv daIF +PAN -UAO -TCO +DIT -SSBS BTYPE=--)
+[   15.332486] pc : virtblk_add_req+0x0/0x144 [virtio_blk]
+[   15.332551] lr : virtio_queue_rq+0x7c/0x240 [virtio_blk]
+[   15.332606] sp : ffff8000825eb3f0
+[   15.332668] x29: ffff8000825eb3f0 x28: 00000000ffffffff x27: ffff000035150400
+[   15.332737] x26: ffff0000363c6900 x25: 0000000000000000 x24: ffff0000363c69f0
+[   15.332803] x23: ffff8000825eb488 x22: ffff000035151800 x21: 0000000000000000
+[   15.332904] x20: ffff000035150400 x19: 0000000000000000 x18: 0000000000000000
+[   15.332963] x17: 0000000000000000 x16: 0000000000000000 x15: 0000000000000000
+[   15.333046] x14: 0000000000000000 x13: 0000000000000000 x12: 0000000000000000
+[   15.333142] x11: 0000000000000000 x10: 0000000000000000 x9 : 0000000000000000
+[   15.333237] x8 : 0000000000000000 x7 : 0000000000000000 x6 : 0000000000000000
+[   15.333343] x5 : 0000000000000000 x4 : 0000000000000000 x3 : 0000000000000000
+[   15.333407] x2 : ffff000033ddd280 x1 : ffff0000363c69f0 x0 : ffff000033aea300
+[   15.333457] Call trace:
+[   15.333466]  virtblk_add_req+0x0/0x144 [virtio_blk]
+[   15.333526]  blk_mq_dispatch_rq_list+0x110/0x744
+[   15.333621]  __blk_mq_sched_dispatch_requests+0x4f0/0x5e4
+[   15.333676]  blk_mq_sched_dispatch_requests+0x30/0xa4
+[   15.333742]  blk_mq_run_hw_queue+0x2b8/0x340
+[   15.333787]  blk_mq_flush_plug_list+0x150/0x650
+[   15.333848]  __blk_flush_plug+0xf8/0x178
+[   15.333880]  blk_finish_plug+0x4c/0x74
+[   15.333915]  blkdev_writepages+0x6c/0xb8
+[   15.333932]  do_writepages+0x88/0x2f4
+[   15.333977]  filemap_fdatawrite_wbc+0x8c/0xcc
+[   15.334013]  __filemap_fdatawrite_range+0x68/0xc0
+[   15.334056]  filemap_write_and_wait_range+0x80/0x118
+[   15.334134]  bdev_release+0x1cc/0x1d8
+[   15.334151]  blkdev_release+0x1c/0x40
+[   15.334192]  __fput+0xd8/0x318
+[   15.334334]  ____fput+0x1c/0x38
+[   15.334356]  task_work_run+0x70/0x100
+[   15.334404]  do_exit+0x2f4/0xa00
+[   15.334430]  do_group_exit+0x34/0x98
+[   15.334480]  get_signal+0x97c/0xa40
+[   15.334510]  do_signal+0x144/0x10a0
+[   15.334578]  do_notify_resume+0xe0/0x168
+[   15.334594]  el0_da+0x138/0x140
+[   15.334691]  el0t_64_sync_handler+0xb0/0x100
+[   15.334729]  el0t_64_sync+0x190/0x194
+[   15.334770] Code: 00000000 00000000 00000000 00000000 (00000000) 
+[   15.334828] ---[ end trace 0000000000000000 ]---
+[   15.334943] note: mkfs.ext4[423] exited with irqs disabled
+[   15.335018] note: mkfs.ext4[423] exited with preempt_count 1
+[   15.335069] Fixing recursive fault but reboot is needed!
+[   15.335097] ------------[ cut here ]------------
+[   15.335172] Voluntary context switch within RCU read-side critical section!
+[   15.335227] WARNING: CPU: 1 PID: 423 at kernel/rcu/tree_plugin.h:331 rcu_note_context_switch+0x540/0x5a0
+[   15.335316] Modules linked in: ext4 crc16 mbcache jbd2 crc32c_generic virtio_blk binfmt_misc virtiofs fuse
+[   15.335384] CPU: 1 UID: 0 PID: 423 Comm: mkfs.ext4 Tainted: G      D            6.12.114-0-virt #1-Alpine
+[   15.335460] Tainted: [D]=DIE
+[   15.335500] pstate: 614000c5 (nZCv daIF +PAN -UAO -TCO +DIT -SSBS BTYPE=--)
+[   15.335574] pc : rcu_note_context_switch+0x540/0x5a0
+[   15.335641] lr : rcu_note_context_switch+0x540/0x5a0
+[   15.335726] sp : ffff8000825eafe0
+[   15.335776] x29: ffff8000825eafe0 x28: ffff800080eebcc8 x27: ffff800080eebcd8
+[   15.335809] x26: ffff00006fbe0a40 x25: 0000000000000000 x24: ffff80007a15a764
+[   15.335897] x23: 0000000000000000 x22: ffff0000352d5300 x21: ffff8000815908c0
+[   15.335980] x20: 0000000000000000 x19: ffff00006fbe18c0 x18: 0000000000000000
+[   15.336040] x17: 0000000000000000 x16: 0000000000000000 x15: 0000000000000000
+[   15.336120] x14: 0000000000000000 x13: 0000000000000000 x12: 0000000000000000
+[   15.336173] x11: 0000000000000000 x10: 0000000000000000 x9 : 0000000000000000
+[   15.336238] x8 : 0000000000000000 x7 : 0000000000000000 x6 : 0000000000000000
+[   15.336299] x5 : 0000000000000000 x4 : 0000000000000000 x3 : 0000000000000000
+[   15.336359] x2 : 0000000000000000 x1 : 0000000000000000 x0 : 0000000000000000
+[   15.336440] Call trace:
+[   15.336468]  rcu_note_context_switch+0x540/0x5a0
+[   15.336497]  __schedule+0xbc/0x1800
+[   15.336518]  do_task_dead+0x48/0x4c
+[   15.336564]  __arm64_sys_exit+0x0/0x20
+[   15.336641]  die+0x200/0x260
+[   15.336676]  do_el1_undef+0x54/0xbc
+[   15.336742]  el1_undef+0x34/0x64
+[   15.336821]  el1h_64_sync_handler+0x78/0x1c0
+[   15.336877]  el1h_64_sync+0x64/0x68
+[   15.336930]  virtblk_add_req+0x0/0x144 [virtio_blk]
+[   15.336971]  blk_mq_dispatch_rq_list+0x110/0x744
+[   15.337187]  __blk_mq_sched_dispatch_requests+0x4f0/0x5e4
+[   15.337236]  blk_mq_sched_dispatch_requests+0x30/0xa4
+[   15.337301]  blk_mq_run_hw_queue+0x2b8/0x340
+[   15.337343]  blk_mq_flush_plug_list+0x150/0x650
+[   15.337360]  __blk_flush_plug+0xf8/0x178
+[   15.337461]  blk_finish_plug+0x4c/0x74
+[   15.337489]  blkdev_writepages+0x6c/0xb8
+[   15.337524]  do_writepages+0x88/0x2f4
+[   15.337557]  filemap_fdatawrite_wbc+0x8c/0xcc
+[   15.337606]  __filemap_fdatawrite_range+0x68/0xc0
+[   15.337687]  filemap_write_and_wait_range+0x80/0x118
+[   15.337727]  bdev_release+0x1cc/0x1d8
+[   15.337758]  blkdev_release+0x1c/0x40
+[   15.337805]  __fput+0xd8/0x318
+[   15.337837]  ____fput+0x1c/0x38
+[   15.337863]  task_work_run+0x70/0x100
+[   15.337895]  do_exit+0x2f4/0xa00
+[   15.337926]  do_group_exit+0x34/0x98
+[   15.337952]  get_signal+0x97c/0xa40
+[   15.337987]  do_signal+0x144/0x10a0
+[   15.338019]  do_notify_resume+0xe0/0x168
+[   15.338088]  el0_da+0x138/0x140
+[   15.338135]  el0t_64_sync_handler+0xb0/0x100
+[   15.338191]  el0t_64_sync+0x190/0x194
+[   15.338209] ---[ end trace 0000000000000000 ]---
+[   17.415422] ------------[ cut here ]------------
+[   17.416312] list_del corruption, ffff00003466d000->next is NULL
+[   17.418037] WARNING: CPU: 1 PID: 347 at lib/list_debug.c:52 __list_del_entry_valid_or_report+0x8c/0x150
+[   17.418177] Modules linked in: ext4 crc16 mbcache jbd2 crc32c_generic virtio_blk binfmt_misc virtiofs fuse
+[   17.418575] CPU: 1 UID: 0 PID: 347 Comm: kworker/u8:5 Tainted: G      D W          6.12.114-0-virt #1-Alpine
+[   17.418726] Tainted: [D]=DIE, [W]=WARN
+[   17.418829] Workqueue: kvfree_rcu_reclaim kfree_rcu_monitor
+[   17.418937] pstate: 614000c5 (nZCv daIF +PAN -UAO -TCO +DIT -SSBS BTYPE=--)
+[   17.418998] pc : __list_del_entry_valid_or_report+0x8c/0x150
+[   17.419095] lr : __list_del_entry_valid_or_report+0x8c/0x150
+[   17.419198] sp : ffff800082ee3cc0
+[   17.419270] x29: ffff800082ee3cc0 x28: ffff800082ee3d18 x27: ffff00003466d000
+[   17.419383] x26: 0000000000000000 x25: ffff00003466d000 x24: ffff800082ee3d18
+[   17.419447] x23: ffff8000816c8ac0 x22: ffff00006fbcda50 x21: ffff00006fbcda68
+[   17.419556] x20: 0000000000000000 x19: ffff00003466d000 x18: 0000000000000000
+[   17.419642] x17: 0000000000000000 x16: 0000000000000000 x15: 0000000000000000
+[   17.419710] x14: 0000000000000000 x13: 0000000000000000 x12: 0000000000000000
+[   17.419739] x11: 0000000000000000 x10: 0000000000000000 x9 : 0000000000000000
+[   17.419807] x8 : 0000000000000000 x7 : 0000000000000000 x6 : 0000000000000000
+[   17.419870] x5 : 0000000000000000 x4 : 0000000000000000 x3 : 0000000000000000
+[   17.419960] x2 : 0000000000000000 x1 : 0000000000000000 x0 : 0000000000000000
+[   17.419997] Call trace:
+[   17.420024]  __list_del_entry_valid_or_report+0x8c/0x150
+[   17.420051]  kfree_rcu_monitor+0x23c/0x2f0
+[   17.420096]  process_one_work+0x15c/0x414
+[   17.420141]  worker_thread+0x18c/0x320
+[   17.420230]  kthread+0x110/0x114
+[   17.420271]  ret_from_fork+0x10/0x20
+[   17.420310] ---[ end trace 0000000000000000 ]---
+[   17.420552] Unable to handle kernel NULL pointer dereference at virtual address 0000000000000008
+[   17.420719] Mem abort info:
+[   17.420735]   ESR = 0x0000000096000004
+[   17.420779]   EC = 0x25: DABT (current EL), IL = 32 bits
+[   17.420830]   SET = 0, FnV = 0
+[   17.420907]   EA = 0, S1PTW = 0
+[   17.420944]   FSC = 0x04: level 0 translation fault
+[   17.421024] Data abort info:
+[   17.421057]   ISV = 0, ISS = 0x00000004, ISS2 = 0x00000000
+[   17.421094]   CM = 0, WnR = 0, TnD = 0, TagAccess = 0
+[   17.421128]   GCS = 0, Overlay = 0, DirtyBit = 0, Xs = 0
+[   17.421175] user pgtable: 4k pages, 48-bit VAs, pgdp=000000007446f000
+[   17.421249] [0000000000000008] pgd=0000000000000000, p4d=0000000000000000
+[   17.421391] Internal error: Oops: 0000000096000004 [#2] SMP
+[   17.421827] Modules linked in: ext4 crc16 mbcache jbd2 crc32c_generic virtio_blk binfmt_misc virtiofs fuse
+[   17.421968] CPU: 1 UID: 0 PID: 347 Comm: kworker/u8:5 Tainted: G      D W          6.12.114-0-virt #1-Alpine
