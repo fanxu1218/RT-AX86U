@@ -31,8 +31,8 @@
       "sigalrm_queries": 2,
       "signals_per_query": 3,
       "observed_kernel_eintr": 6,
-      "result": "HTTPS_STABILITY_RESULT phase=https-stability-alone queries=36 failures=0 uu_running=false uu_pid=1618 uu_api_requests=1 uu_downloads=1 uu_launches=start trace_eintr=6",
-      "log_sha256": "b7eade18cf1f5a588169db3b5bc7fd5028914bbda515db99c77d942cf21b578b"
+      "result": "HTTPS_STABILITY_RESULT phase=https-stability-alone queries=36 failures=0 uu_running=false uu_pid=1619 uu_api_requests=1 uu_downloads=1 uu_launches=start trace_eintr=6",
+      "log_sha256": "705ead0f2fa93b9b539f51dd8b2eefdd878dd2306fe5fd510a374592d275d174"
     },
     "https-stability": {
       "queries": 68,
@@ -41,9 +41,9 @@
       "controlled_eintr_before_and_after_header": 2,
       "sigalrm_queries": 2,
       "signals_per_query": 3,
-      "observed_kernel_eintr": 7,
-      "result": "HTTPS_STABILITY_RESULT phase=https-stability queries=68 failures=0 uu_running=true uu_pid=1617 uu_api_requests=1 uu_downloads=1 uu_launches=start trace_eintr=7",
-      "log_sha256": "5517799a1e6b797a26d82658d297899d9aff14ec9cbc28f8f1fd89001388b13d"
+      "observed_kernel_eintr": 6,
+      "result": "HTTPS_STABILITY_RESULT phase=https-stability queries=68 failures=0 uu_running=true uu_pid=1618 uu_api_requests=1 uu_downloads=1 uu_launches=start trace_eintr=6",
+      "log_sha256": "73e32fb4f4acff31734d3650a5f09790dd5e037050b7c8d012a4f3fa64dac565"
     }
   },
   "r6_baseline": {
@@ -73,7 +73,7 @@
     "usr/sbin/wget": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749"
   },
   "test_fixtures": {
-    "build/https_trace_fixture.so": "578530d8bdc37f24ef90f43d239e98ca066d267866f90d70e03b371c376cadba",
+    "build/https_trace_fixture.so": "c84350ad038a96744487c04054ad44928217798988973272b68217009b045ab5",
     "build/relay-idle-fixture": "ec5f97d8ff95fac88b34acb367a08a4d4db83e329c5774cb5f5d032b6766b1f0"
   },
   "scope": [

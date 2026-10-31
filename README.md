@@ -42,6 +42,7 @@
 - [完整适配范围与验证边界](output/官改候选版说明.md)
 - [Alpha 3 升级、实机验收与回退步骤](output/Alpha3升级localmod2与实机验收.md) · [验收记录模板](output/localmod2实机验收记录模板.md)
 - [事件测试](output/hooks_tests.json) · [兼容测试](output/compatibility_tests.json) · [原厂接口清单](output/vendor_contracts.json) · [UU 静态及模型检查](output/uu_compatibility_tests.json) · [原厂登录/TLS/UU 本地运行检查](output/native_runtime_tests.json)
+- [30 分钟持续运行说明](output/持续运行验证说明.md) · [实测报告](output/soak-30m_tests.json)
 - [原厂 HTTPS 与 DDNS-Go 共存稳定性](output/https_stability_tests.json) · [r6 自然复现](output/https_r6_reproduction.json)
 - [损坏与低空间安全检查](output/recovery_safety_tests.json) · [r5 复现对照](output/recovery_r5_baseline.json)
 - [安装中断恢复说明](output/插件安装中断恢复说明.md) · [中断恢复检查](output/interruption_tests.json) · [r4 中断问题复现](output/interrupt_r4_reproductions.log)
@@ -57,6 +58,8 @@ SHA256: 989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677
 ```
 
 ## 验证摘要
+
+追加同一虚拟机 30 分钟实测：1,798 次正常查询无计划外失败，19 次计划重启/断连恢复通过，配置、证书及 UU 测试数据保留。DDNS-Go RSS 有阶梯增长，最大单进程样本增幅约 6.9 MiB，原因未定，不能据此声称长期无泄漏。r7 固件及原发布附件不变。
 
 原厂 HTTPS 定向验证 18 项通过，两台全新虚拟机共完成 104 个独立 DDNS-Go 状态/版本请求；查询期间分别停止和运行自有 UU 工作进程，结果全部完整。包含响应头前后中断、重复真实 SIGALRM、空闲超时边界、后端每个 ID 只完成一次及配置/UU 数据保留。r6 自然对照的 64 次查询出现 1 次同类断连。
 

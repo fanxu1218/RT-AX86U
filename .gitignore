@@ -155,3 +155,11 @@
 !/output/https_stability_tests.json
 !/output/https_r6_reproduction.json
 !/output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.build.json
+
+!/build/check_soak.py
+!/build/test_soak.go
+!/build/soak_init_fixture.c
+!/output/soak_*.log
+!/output/soak-*.log
+!/output/soak-*_tests.json
+!/output/持续运行验证说明.md

@@ -66,5 +66,9 @@ SCRIPT
  chmod 755 /router/usr/libexec/localmod/plugin-txn
  /work/build/test-interrupt controller
 else
- chroot /router /bin/sh /work/build/real_plugins_setup.sh
+ if grep -q '^soak-' /work/build/real-plugin-phase; then
+  /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+ else
+  chroot /router /bin/sh /work/build/real_plugins_setup.sh
+ fi
 fi

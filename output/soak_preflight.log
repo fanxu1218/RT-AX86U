@@ -1,0 +1,122 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031123922, 2026/10/31 ~ 2046/11/1
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":3989,"rss_kib":32748},"elapsed_seconds":0,"events":0,"httpd":{"fds":5,"pid":921,"rss_kib":25668},"httpdb":{"fds":6,"pid":882,"rss_kib":9804},"queries":0,"skipd":{"fds":8,"pid":630,"rss_kib":12564},"uu":{"fds":5,"pid":1616,"rss_kib":10108}}
+SOAK_EVENT_BEGIN index=1 kind=abort
+SOAK_EVENT index=1 kind=abort seconds=2.332 details=client_tcp_rst_while_backend_body_pending
+SOAK_EVENT_BEGIN index=2 kind=partial
+SOAK_EVENT index=2 kind=partial seconds=1.672 details=client_rst_with_incomplete_request_body
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":3989,"rss_kib":34824},"elapsed_seconds":21,"events":2,"httpd":{"fds":5,"pid":921,"rss_kib":25708},"httpdb":{"fds":6,"pid":882,"rss_kib":9904},"queries":24,"skipd":{"fds":8,"pid":630,"rss_kib":12564},"uu":{"fds":5,"pid":1616,"rss_kib":10108}}
+SOAK_EVENT_BEGIN index=3 kind=backend
+SOAK_EVENT index=3 kind=backend seconds=2.312 details=backend_killed=882 pending_http_status=200 pending_body_bytes=0 expected_read_error=unexpected EOF
+SOAK_EVENT_BEGIN index=4 kind=center
+SOAK_PLANNED_WINDOW name=center_restart id=91043 code=200 error=unexpected EOF bytes=0
+SOAK_PLANNED_WINDOW name=center_restart id=91044 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91045 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91046 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91047 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91048 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91049 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91050 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91051 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91052 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91053 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91054 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91055 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91056 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91057 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91058 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91059 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91060 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91061 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91062 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91063 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91064 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91065 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91066 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91067 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91068 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91069 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91070 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91071 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91072 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91073 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91074 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91075 code=503 error=<nil> bytes=20
+SOAK_EVENT index=4 kind=center seconds=7.783 details=production_bootstrap_restart center_restart_reads=34 unavailable=33
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":15024,"rss_kib":32360},"elapsed_seconds":41,"events":4,"httpd":{"fds":5,"pid":921,"rss_kib":25776},"httpdb":{"fds":6,"pid":15027,"rss_kib":10096},"queries":41,"skipd":{"fds":8,"pid":14287,"rss_kib":12224},"uu":{"fds":5,"pid":1616,"rss_kib":10108}}
+SOAK_EVENT_BEGIN index=5 kind=ddns
+SOAK_WINDOW_RESULT ddns_restart_reads=3 unavailable=0
+SOAK_EVENT index=5 kind=ddns seconds=4.201 details=one_original_plugin_restart_rpc
+SOAK_EVENT_BEGIN index=6 kind=uu
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+SOAK_EVENT index=6 kind=uu seconds=5.950 details=one_fresh_native_ntp_uu_control_start uu_restart_reads=9 unavailable=0
+SOAK_EVENT_BEGIN index=7 kind=tls
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031123922, 2026/10/31 ~ 2046/11/1
+SOAK_EVENT index=7 kind=tls seconds=2.105 details=native_https_restart_and_new_login
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":16448,"rss_kib":32236},"elapsed_seconds":60,"events":7,"httpd":{"fds":5,"pid":20324,"rss_kib":25408},"httpdb":{"fds":6,"pid":15027,"rss_kib":10224},"queries":59,"skipd":{"fds":8,"pid":14287,"rss_kib":12232},"uu":{"fds":4,"pid":18930,"rss_kib":9268}}
+SOAK_EVENT_BEGIN index=8 kind=signals
+SOAK_EVENT index=8 kind=signals seconds=2.397 details=three_sigalrm_during_pending_body
+SOAK_EVENT_BEGIN index=9 kind=abort
+SOAK_EVENT index=9 kind=abort seconds=2.383 details=client_tcp_rst_while_backend_body_pending
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":16448,"rss_kib":34632},"elapsed_seconds":80,"events":9,"httpd":{"fds":5,"pid":20324,"rss_kib":25452},"httpdb":{"fds":6,"pid":15027,"rss_kib":10324},"queries":81,"skipd":{"fds":8,"pid":14287,"rss_kib":12232},"uu":{"fds":5,"pid":18930,"rss_kib":9268}}
+SOAK_EVENT_BEGIN index=10 kind=partial
+SOAK_EVENT index=10 kind=partial seconds=1.705 details=client_rst_with_incomplete_request_body
+SOAK_EVENT_BEGIN index=11 kind=backend
+SOAK_EVENT index=11 kind=backend seconds=2.235 details=backend_killed=15027 pending_http_status=200 pending_body_bytes=0 expected_read_error=unexpected EOF
+SOAK_EVENT_BEGIN index=12 kind=center
+SOAK_PLANNED_WINDOW name=center_restart id=91157 code=200 error=unexpected EOF bytes=0
+SOAK_PLANNED_WINDOW name=center_restart id=91158 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91159 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91160 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91161 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91162 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91163 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91164 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91165 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91166 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91167 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91168 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91169 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91170 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91171 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91172 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91173 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91174 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91175 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91176 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91177 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91178 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91179 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91180 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91181 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91182 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91183 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91184 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91185 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91186 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91187 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91188 code=503 error=<nil> bytes=20
+SOAK_EVENT index=12 kind=center seconds=7.610 details=production_bootstrap_restart center_restart_reads=33 unavailable=32
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":760,"rss_kib":31652},"elapsed_seconds":105,"events":12,"httpd":{"fds":5,"pid":20324,"rss_kib":25520},"httpdb":{"fds":6,"pid":761,"rss_kib":9888},"queries":104,"skipd":{"fds":8,"pid":32504,"rss_kib":11908},"uu":{"fds":5,"pid":18930,"rss_kib":9268}}
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":760,"rss_kib":31672},"elapsed_seconds":107,"events":12,"httpd":{"fds":5,"pid":20324,"rss_kib":25524},"httpdb":{"fds":6,"pid":761,"rss_kib":9908},"queries":109,"skipd":{"fds":8,"pid":32504,"rss_kib":11908},"uu":{"fds":4,"pid":18930,"rss_kib":9268}}
+SOAK_RESULT {"counts":{"abort":2,"backend":2,"center":2,"ddns":1,"partial":2,"signals":1,"status":64,"tls":1,"uu":1,"version":45},"data_preserved":true,"duration_seconds":107.97180426,"events":12,"finished_utc":"2026-10-31T12:41:28Z","healthy_queries":109,"latency_ms":{"max":1106.513,"p50":455.055,"p95":830.875},"private_api_denied":true,"requested_duration_seconds":100,"samples":[{"ddnsgo":{"fds":7,"pid":3989,"rss_kib":32748},"elapsed_seconds":0,"events":0,"httpd":{"fds":5,"pid":921,"rss_kib":25668},"httpdb":{"fds":6,"pid":882,"rss_kib":9804},"queries":0,"skipd":{"fds":8,"pid":630,"rss_kib":12564},"uu":{"fds":5,"pid":1616,"rss_kib":10108}},{"ddnsgo":{"fds":7,"pid":3989,"rss_kib":34824},"elapsed_seconds":21,"events":2,"httpd":{"fds":5,"pid":921,"rss_kib":25708},"httpdb":{"fds":6,"pid":882,"rss_kib":9904},"queries":24,"skipd":{"fds":8,"pid":630,"rss_kib":12564},"uu":{"fds":5,"pid":1616,"rss_kib":10108}},{"ddnsgo":{"fds":7,"pid":15024,"rss_kib":32360},"elapsed_seconds":41,"events":4,"httpd":{"fds":5,"pid":921,"rss_kib":25776},"httpdb":{"fds":6,"pid":15027,"rss_kib":10096},"queries":41,"skipd":{"fds":8,"pid":14287,"rss_kib":12224},"uu":{"fds":5,"pid":1616,"rss_kib":10108}},{"ddnsgo":{"fds":7,"pid":16448,"rss_kib":32236},"elapsed_seconds":60,"events":7,"httpd":{"fds":5,"pid":20324,"rss_kib":25408},"httpdb":{"fds":6,"pid":15027,"rss_kib":10224},"queries":59,"skipd":{"fds":8,"pid":14287,"rss_kib":12232},"uu":{"fds":4,"pid":18930,"rss_kib":9268}},{"ddnsgo":{"fds":7,"pid":16448,"rss_kib":34632},"elapsed_seconds":80,"events":9,"httpd":{"fds":5,"pid":20324,"rss_kib":25452},"httpdb":{"fds":6,"pid":15027,"rss_kib":10324},"queries":81,"skipd":{"fds":8,"pid":14287,"rss_kib":12232},"uu":{"fds":5,"pid":18930,"rss_kib":9268}},{"ddnsgo":{"fds":7,"pid":760,"rss_kib":31652},"elapsed_seconds":105,"events":12,"httpd":{"fds":5,"pid":20324,"rss_kib":25520},"httpdb":{"fds":6,"pid":761,"rss_kib":9888},"queries":104,"skipd":{"fds":8,"pid":32504,"rss_kib":11908},"uu":{"fds":5,"pid":18930,"rss_kib":9268}},{"ddnsgo":{"fds":7,"pid":760,"rss_kib":31672},"elapsed_seconds":107,"events":12,"httpd":{"fds":5,"pid":20324,"rss_kib":25524},"httpdb":{"fds":6,"pid":761,"rss_kib":9908},"queries":109,"skipd":{"fds":8,"pid":32504,"rss_kib":11908},"uu":{"fds":4,"pid":18930,"rss_kib":9268}}],"started_utc":"2026-10-31T12:39:40Z","tls_archive_preserved":true,"unplanned_query_failures":0,"uu_launches":2}
+PASS continuous_queries_restarts_and_disconnects_preserve_data_and_uu
+SOAK_REAPER orphans_reaped=145
+LINUX_READONLY_JOB_STATUS=0

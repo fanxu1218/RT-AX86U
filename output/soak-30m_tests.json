@@ -1,0 +1,3054 @@
+{
+  "status": "LOCAL_30_MINUTE_SOAK_PASS",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w",
+  "candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
+  "result": {
+    "counts": {
+      "abort": 3,
+      "backend": 3,
+      "center": 2,
+      "ddns": 2,
+      "partial": 3,
+      "signals": 2,
+      "status": 908,
+      "tls": 2,
+      "uu": 2,
+      "version": 890
+    },
+    "data_preserved": true,
+    "duration_seconds": 1803.532079277,
+    "events": 19,
+    "finished_utc": "2026-10-31T13:12:37Z",
+    "healthy_queries": 1798,
+    "latency_ms": {
+      "max": 1549.604,
+      "p50": 673.2,
+      "p95": 785.603
+    },
+    "private_api_denied": true,
+    "requested_duration_seconds": 1800,
+    "samples": [
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 31588
+        },
+        "elapsed_seconds": 0,
+        "events": 0,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 26812
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8476
+        },
+        "queries": 0,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 31612
+        },
+        "elapsed_seconds": 20,
+        "events": 0,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 26836
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8580
+        },
+        "queries": 21,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 31616
+        },
+        "elapsed_seconds": 40,
+        "events": 0,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 26860
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8660
+        },
+        "queries": 41,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 31624
+        },
+        "elapsed_seconds": 60,
+        "events": 0,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 26888
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8740
+        },
+        "queries": 61,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 31632
+        },
+        "elapsed_seconds": 80,
+        "events": 0,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 26908
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8828
+        },
+        "queries": 81,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 33684
+        },
+        "elapsed_seconds": 101,
+        "events": 1,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 26940
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8864
+        },
+        "queries": 102,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 33700
+        },
+        "elapsed_seconds": 121,
+        "events": 1,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 26964
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8864
+        },
+        "queries": 122,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 33708
+        },
+        "elapsed_seconds": 141,
+        "events": 1,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 26992
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8864
+        },
+        "queries": 142,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 33712
+        },
+        "elapsed_seconds": 161,
+        "events": 1,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27012
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8864
+        },
+        "queries": 162,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 33720
+        },
+        "elapsed_seconds": 180,
+        "events": 1,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27040
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8864
+        },
+        "queries": 181,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 34072
+        },
+        "elapsed_seconds": 200,
+        "events": 2,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27072
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8876
+        },
+        "queries": 203,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 34076
+        },
+        "elapsed_seconds": 220,
+        "events": 2,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27092
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8876
+        },
+        "queries": 222,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 34076
+        },
+        "elapsed_seconds": 240,
+        "events": 2,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27116
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8876
+        },
+        "queries": 242,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 34092
+        },
+        "elapsed_seconds": 260,
+        "events": 2,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27140
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 884,
+          "rss_kib": 8876
+        },
+        "queries": 262,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 34100
+        },
+        "elapsed_seconds": 280,
+        "events": 3,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27168
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 10218,
+          "rss_kib": 8088
+        },
+        "queries": 283,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 34104
+        },
+        "elapsed_seconds": 300,
+        "events": 3,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27192
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 10218,
+          "rss_kib": 8176
+        },
+        "queries": 302,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 34116
+        },
+        "elapsed_seconds": 320,
+        "events": 3,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27216
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 10218,
+          "rss_kib": 8260
+        },
+        "queries": 322,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 34116
+        },
+        "elapsed_seconds": 340,
+        "events": 3,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27240
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 10218,
+          "rss_kib": 8340
+        },
+        "queries": 342,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 4021,
+          "rss_kib": 34116
+        },
+        "elapsed_seconds": 360,
+        "events": 3,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27264
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 10218,
+          "rss_kib": 8420
+        },
+        "queries": 362,
+        "skipd": {
+          "fds": 8,
+          "pid": 629,
+          "rss_kib": 11512
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 2195,
+          "rss_kib": 31780
+        },
+        "elapsed_seconds": 381,
+        "events": 4,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27324
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 9744
+        },
+        "queries": 378,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11340
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 2195,
+          "rss_kib": 31792
+        },
+        "elapsed_seconds": 401,
+        "events": 4,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27348
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 9824
+        },
+        "queries": 398,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11340
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 2195,
+          "rss_kib": 31820
+        },
+        "elapsed_seconds": 421,
+        "events": 4,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27380
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 9904
+        },
+        "queries": 418,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11340
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 2195,
+          "rss_kib": 31828
+        },
+        "elapsed_seconds": 441,
+        "events": 4,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27404
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 9984
+        },
+        "queries": 438,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11340
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 32108
+        },
+        "elapsed_seconds": 461,
+        "events": 5,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27432
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10056
+        },
+        "queries": 456,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 32120
+        },
+        "elapsed_seconds": 481,
+        "events": 5,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27456
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10056
+        },
+        "queries": 476,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34192
+        },
+        "elapsed_seconds": 501,
+        "events": 5,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27476
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10056
+        },
+        "queries": 496,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34200
+        },
+        "elapsed_seconds": 521,
+        "events": 5,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27500
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10056
+        },
+        "queries": 516,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1615,
+          "rss_kib": 9268
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34224
+        },
+        "elapsed_seconds": 547,
+        "events": 6,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27540
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10060
+        },
+        "queries": 539,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34228
+        },
+        "elapsed_seconds": 560,
+        "events": 6,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27556
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 553,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34236
+        },
+        "elapsed_seconds": 580,
+        "events": 6,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27584
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 573,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34584
+        },
+        "elapsed_seconds": 600,
+        "events": 6,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27608
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 592,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34588
+        },
+        "elapsed_seconds": 620,
+        "events": 6,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27628
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 612,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34592
+        },
+        "elapsed_seconds": 640,
+        "events": 7,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26244
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 633,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34608
+        },
+        "elapsed_seconds": 660,
+        "events": 7,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26272
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 653,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34612
+        },
+        "elapsed_seconds": 680,
+        "events": 7,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26296
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 673,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34616
+        },
+        "elapsed_seconds": 700,
+        "events": 7,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26316
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 693,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34620
+        },
+        "elapsed_seconds": 720,
+        "events": 7,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26340
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 712,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34624
+        },
+        "elapsed_seconds": 740,
+        "events": 8,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26372
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 733,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34624
+        },
+        "elapsed_seconds": 761,
+        "events": 8,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26396
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 753,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34624
+        },
+        "elapsed_seconds": 780,
+        "events": 8,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26416
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 772,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34624
+        },
+        "elapsed_seconds": 800,
+        "events": 8,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26440
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 792,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34628
+        },
+        "elapsed_seconds": 820,
+        "events": 9,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26476
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 812,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34628
+        },
+        "elapsed_seconds": 840,
+        "events": 9,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26500
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 832,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34628
+        },
+        "elapsed_seconds": 860,
+        "events": 9,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26524
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 852,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34628
+        },
+        "elapsed_seconds": 880,
+        "events": 9,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26552
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 872,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34628
+        },
+        "elapsed_seconds": 900,
+        "events": 9,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26572
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 892,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34628
+        },
+        "elapsed_seconds": 920,
+        "events": 10,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26604
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 914,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34628
+        },
+        "elapsed_seconds": 940,
+        "events": 10,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26628
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 934,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 34648
+        },
+        "elapsed_seconds": 960,
+        "events": 10,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26652
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 954,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 36700
+        },
+        "elapsed_seconds": 980,
+        "events": 10,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26680
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2197,
+          "rss_kib": 10068
+        },
+        "queries": 974,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 36704
+        },
+        "elapsed_seconds": 1000,
+        "events": 11,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26708
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2009,
+          "rss_kib": 8096
+        },
+        "queries": 995,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 36704
+        },
+        "elapsed_seconds": 1020,
+        "events": 11,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26728
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2009,
+          "rss_kib": 8184
+        },
+        "queries": 1015,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 36704
+        },
+        "elapsed_seconds": 1040,
+        "events": 11,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26756
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2009,
+          "rss_kib": 8264
+        },
+        "queries": 1035,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 39120
+        },
+        "elapsed_seconds": 1060,
+        "events": 11,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26776
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2009,
+          "rss_kib": 8344
+        },
+        "queries": 1055,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 25016,
+          "rss_kib": 39132
+        },
+        "elapsed_seconds": 1080,
+        "events": 11,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26800
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 2009,
+          "rss_kib": 8424
+        },
+        "queries": 1075,
+        "skipd": {
+          "fds": 8,
+          "pid": 1464,
+          "rss_kib": 11348
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 27939,
+          "rss_kib": 33172
+        },
+        "elapsed_seconds": 1100,
+        "events": 12,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26860
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8112
+        },
+        "queries": 1091,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11856
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 27939,
+          "rss_kib": 35244
+        },
+        "elapsed_seconds": 1120,
+        "events": 12,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26880
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8196
+        },
+        "queries": 1111,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11856
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 27939,
+          "rss_kib": 35256
+        },
+        "elapsed_seconds": 1140,
+        "events": 12,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26904
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8280
+        },
+        "queries": 1131,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11856
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 27939,
+          "rss_kib": 35272
+        },
+        "elapsed_seconds": 1160,
+        "events": 12,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26928
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8364
+        },
+        "queries": 1151,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11856
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 32388
+        },
+        "elapsed_seconds": 1180,
+        "events": 13,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26956
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8488
+        },
+        "queries": 1170,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 32396
+        },
+        "elapsed_seconds": 1200,
+        "events": 13,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 26984
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8488
+        },
+        "queries": 1190,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 32412
+        },
+        "elapsed_seconds": 1220,
+        "events": 13,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 27004
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8488
+        },
+        "queries": 1210,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 32424
+        },
+        "elapsed_seconds": 1240,
+        "events": 13,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 27028
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8488
+        },
+        "queries": 1230,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34480
+        },
+        "elapsed_seconds": 1260,
+        "events": 13,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 27052
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8488
+        },
+        "queries": 1250,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16525,
+          "rss_kib": 11256
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34496
+        },
+        "elapsed_seconds": 1281,
+        "events": 14,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 27088
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8496
+        },
+        "queries": 1268,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34504
+        },
+        "elapsed_seconds": 1301,
+        "events": 14,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 27112
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8500
+        },
+        "queries": 1288,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34504
+        },
+        "elapsed_seconds": 1321,
+        "events": 14,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 27136
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8500
+        },
+        "queries": 1308,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34852
+        },
+        "elapsed_seconds": 1341,
+        "events": 14,
+        "httpd": {
+          "fds": 5,
+          "pid": 6333,
+          "rss_kib": 27156
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8500
+        },
+        "queries": 1328,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34864
+        },
+        "elapsed_seconds": 1360,
+        "events": 15,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 26708
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8500
+        },
+        "queries": 1349,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34864
+        },
+        "elapsed_seconds": 1380,
+        "events": 15,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 26736
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8500
+        },
+        "queries": 1369,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34868
+        },
+        "elapsed_seconds": 1400,
+        "events": 15,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 26760
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8500
+        },
+        "queries": 1389,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34872
+        },
+        "elapsed_seconds": 1420,
+        "events": 15,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 26780
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8500
+        },
+        "queries": 1409,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34880
+        },
+        "elapsed_seconds": 1443,
+        "events": 16,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 26816
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8500
+        },
+        "queries": 1432,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34880
+        },
+        "elapsed_seconds": 1461,
+        "events": 16,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 26836
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8504
+        },
+        "queries": 1450,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34888
+        },
+        "elapsed_seconds": 1481,
+        "events": 16,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 26856
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8504
+        },
+        "queries": 1470,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34888
+        },
+        "elapsed_seconds": 1501,
+        "events": 16,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 26884
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8504
+        },
+        "queries": 1490,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34888
+        },
+        "elapsed_seconds": 1521,
+        "events": 16,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 26908
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8504
+        },
+        "queries": 1510,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34888
+        },
+        "elapsed_seconds": 1540,
+        "events": 17,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 26944
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8504
+        },
+        "queries": 1531,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34888
+        },
+        "elapsed_seconds": 1560,
+        "events": 17,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 26968
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8504
+        },
+        "queries": 1551,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34888
+        },
+        "elapsed_seconds": 1580,
+        "events": 17,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 26988
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8504
+        },
+        "queries": 1571,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34888
+        },
+        "elapsed_seconds": 1600,
+        "events": 17,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 27020
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8504
+        },
+        "queries": 1591,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34888
+        },
+        "elapsed_seconds": 1622,
+        "events": 18,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 27056
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8512
+        },
+        "queries": 1614,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34888
+        },
+        "elapsed_seconds": 1640,
+        "events": 18,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 27076
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8512
+        },
+        "queries": 1632,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34900
+        },
+        "elapsed_seconds": 1660,
+        "events": 18,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 27100
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8512
+        },
+        "queries": 1652,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34904
+        },
+        "elapsed_seconds": 1680,
+        "events": 18,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 27124
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8512
+        },
+        "queries": 1672,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 34960
+        },
+        "elapsed_seconds": 1700,
+        "events": 18,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 27148
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 27940,
+          "rss_kib": 8512
+        },
+        "queries": 1692,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 35000
+        },
+        "elapsed_seconds": 1720,
+        "events": 19,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 27176
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 4657,
+          "rss_kib": 8092
+        },
+        "queries": 1713,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 36952
+        },
+        "elapsed_seconds": 1740,
+        "events": 19,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 27200
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 4657,
+          "rss_kib": 8176
+        },
+        "queries": 1733,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 36952
+        },
+        "elapsed_seconds": 1760,
+        "events": 19,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 27224
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 4657,
+          "rss_kib": 8260
+        },
+        "queries": 1753,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 36956
+        },
+        "elapsed_seconds": 1780,
+        "events": 19,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 27248
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 4657,
+          "rss_kib": 8340
+        },
+        "queries": 1773,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 39360
+        },
+        "elapsed_seconds": 1800,
+        "events": 19,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 27268
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 4657,
+          "rss_kib": 8420
+        },
+        "queries": 1793,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 18353,
+          "rss_kib": 39364
+        },
+        "elapsed_seconds": 1803,
+        "events": 19,
+        "httpd": {
+          "fds": 5,
+          "pid": 1684,
+          "rss_kib": 27276
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 4657,
+          "rss_kib": 8424
+        },
+        "queries": 1798,
+        "skipd": {
+          "fds": 8,
+          "pid": 27209,
+          "rss_kib": 11860
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 10258,
+          "rss_kib": 10372
+        }
+      }
+    ],
+    "started_utc": "2026-10-31T12:42:33Z",
+    "tls_archive_preserved": true,
+    "unplanned_query_failures": 0,
+    "uu_launches": 3
+  },
+  "maintenance_windows": [
+    {
+      "name": "center_restart",
+      "queries": 34,
+      "expected_unavailable": 33
+    },
+    {
+      "name": "ddns_restart",
+      "queries": 4,
+      "expected_unavailable": 1
+    },
+    {
+      "name": "uu_restart",
+      "queries": 9,
+      "expected_unavailable": 0
+    },
+    {
+      "name": "center_restart",
+      "queries": 33,
+      "expected_unavailable": 33
+    },
+    {
+      "name": "ddns_restart",
+      "queries": 3,
+      "expected_unavailable": 1
+    },
+    {
+      "name": "uu_restart",
+      "queries": 9,
+      "expected_unavailable": 0
+    }
+  ],
+  "resource_ranges": [
+    {
+      "name": "ddnsgo",
+      "pid": 2195,
+      "samples": 4,
+      "fd_min": 7,
+      "fd_max": 7,
+      "rss_min_kib": 31780,
+      "rss_max_kib": 31828
+    },
+    {
+      "name": "ddnsgo",
+      "pid": 4021,
+      "samples": 19,
+      "fd_min": 7,
+      "fd_max": 7,
+      "rss_min_kib": 31588,
+      "rss_max_kib": 34116
+    },
+    {
+      "name": "ddnsgo",
+      "pid": 18353,
+      "samples": 33,
+      "fd_min": 7,
+      "fd_max": 7,
+      "rss_min_kib": 32388,
+      "rss_max_kib": 39364
+    },
+    {
+      "name": "ddnsgo",
+      "pid": 25016,
+      "samples": 32,
+      "fd_min": 7,
+      "fd_max": 7,
+      "rss_min_kib": 32108,
+      "rss_max_kib": 39132
+    },
+    {
+      "name": "ddnsgo",
+      "pid": 27939,
+      "samples": 4,
+      "fd_min": 7,
+      "fd_max": 7,
+      "rss_min_kib": 33172,
+      "rss_max_kib": 35272
+    },
+    {
+      "name": "httpd",
+      "pid": 920,
+      "samples": 32,
+      "fd_min": 5,
+      "fd_max": 5,
+      "rss_min_kib": 26812,
+      "rss_max_kib": 27628
+    },
+    {
+      "name": "httpd",
+      "pid": 1684,
+      "samples": 24,
+      "fd_min": 5,
+      "fd_max": 5,
+      "rss_min_kib": 26708,
+      "rss_max_kib": 27276
+    },
+    {
+      "name": "httpd",
+      "pid": 6333,
+      "samples": 36,
+      "fd_min": 5,
+      "fd_max": 5,
+      "rss_min_kib": 26244,
+      "rss_max_kib": 27156
+    },
+    {
+      "name": "httpdb",
+      "pid": 884,
+      "samples": 14,
+      "fd_min": 6,
+      "fd_max": 6,
+      "rss_min_kib": 8476,
+      "rss_max_kib": 8876
+    },
+    {
+      "name": "httpdb",
+      "pid": 2009,
+      "samples": 5,
+      "fd_min": 6,
+      "fd_max": 6,
+      "rss_min_kib": 8096,
+      "rss_max_kib": 8424
+    },
+    {
+      "name": "httpdb",
+      "pid": 2197,
+      "samples": 31,
+      "fd_min": 6,
+      "fd_max": 6,
+      "rss_min_kib": 9744,
+      "rss_max_kib": 10068
+    },
+    {
+      "name": "httpdb",
+      "pid": 4657,
+      "samples": 6,
+      "fd_min": 6,
+      "fd_max": 6,
+      "rss_min_kib": 8092,
+      "rss_max_kib": 8424
+    },
+    {
+      "name": "httpdb",
+      "pid": 10218,
+      "samples": 5,
+      "fd_min": 6,
+      "fd_max": 6,
+      "rss_min_kib": 8088,
+      "rss_max_kib": 8420
+    },
+    {
+      "name": "httpdb",
+      "pid": 27940,
+      "samples": 31,
+      "fd_min": 6,
+      "fd_max": 6,
+      "rss_min_kib": 8112,
+      "rss_max_kib": 8512
+    },
+    {
+      "name": "skipd",
+      "pid": 629,
+      "samples": 19,
+      "fd_min": 8,
+      "fd_max": 8,
+      "rss_min_kib": 11512,
+      "rss_max_kib": 11512
+    },
+    {
+      "name": "skipd",
+      "pid": 1464,
+      "samples": 36,
+      "fd_min": 8,
+      "fd_max": 8,
+      "rss_min_kib": 11340,
+      "rss_max_kib": 11348
+    },
+    {
+      "name": "skipd",
+      "pid": 27209,
+      "samples": 37,
+      "fd_min": 8,
+      "fd_max": 8,
+      "rss_min_kib": 11856,
+      "rss_max_kib": 11860
+    },
+    {
+      "name": "uu",
+      "pid": 1615,
+      "samples": 27,
+      "fd_min": 4,
+      "fd_max": 5,
+      "rss_min_kib": 9268,
+      "rss_max_kib": 9268
+    },
+    {
+      "name": "uu",
+      "pid": 10258,
+      "samples": 28,
+      "fd_min": 4,
+      "fd_max": 5,
+      "rss_min_kib": 10372,
+      "rss_max_kib": 10372
+    },
+    {
+      "name": "uu",
+      "pid": 16525,
+      "samples": 37,
+      "fd_min": 4,
+      "fd_max": 5,
+      "rss_min_kib": 11256,
+      "rss_max_kib": 11256
+    }
+  ],
+  "log_sha256": "b2acde5da4d85751fe24c5bc7269b18fd76f4dccf614ee4b1640563904128b2c",
+  "production_files": {
+    "usr/lib/localmod/httpd_bridge.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
+    "usr/libexec/localmod/httpd": "d9a24b751b2c6ec0a9bf5931b6b1380e75c136bd672a91a5a5118c6ee9e1586d",
+    "usr/libexec/localmod/rc.vendor": "9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62",
+    "usr/libexec/localmod/plugin-txn": "23e575aa4299b075a7fa120fb6672e5c417dca5892f1449c29905f9a862af232",
+    "usr/libexec/localmod/bootstrap.sh": "fd6980a8b1ff18a68897d1ecbe0725dd5918331fe3956c7beadb2e224f33ed3f",
+    "rom/etc/koolshare/scripts/base.sh": "d29dcb38a94aa51b0df22b0fdd8a6a9e9636777bad3a2ae4431d9af308773726",
+    "usr/sbin/curl": "79b37917d01852d7624e36613dde5354a31ffa86b470d506bdc205f920a0d2d9",
+    "usr/sbin/wget": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749"
+  },
+  "checks": {
+    "actual_elapsed_time_meets_requested_duration": true,
+    "healthy_queries_complete_without_automatic_retry": true,
+    "client_rst_and_partial_body_disconnect_allow_later_independent_queries": true,
+    "backend_kill_respawns_and_later_queries_recover": true,
+    "center_restart_under_continuous_polling_recovers": true,
+    "ddns_restart_under_continuous_polling_recovers": true,
+    "uu_restart_does_not_interrupt_center_queries": true,
+    "https_restart_preserves_certificate_and_reauthenticates": true,
+    "repeated_sigalrm_keeps_complete_response": true,
+    "plugin_files_and_native_database_records_preserved": true,
+    "uu_synthetic_persistent_and_temporary_data_preserved": true,
+    "only_planned_uu_restarts_observed": true,
+    "private_api_stays_denied_to_unprivileged_ports": true,
+    "resource_samples_have_live_processes_and_valid_fd_rss_counts": true,
+    "workspace_readonly_no_nic_no_physical_router": true
+  },
+  "scope": [
+    "Single disposable ARM64 VM; original ASUS ARM32 HTTPS/login/rc and unmodified real DDNS-Go plugin; no physical router/NIC",
+    "Thirty minutes measured with a monotonic clock after installation/setup; not accelerated time",
+    "New IDs for every request; queries during explicitly planned center/DDNS maintenance can be unavailable; UU restart must not interrupt queries",
+    "Owned synthetic UU monitor/heartbeat worker and test data; original native NTP/download/checksum startup flow",
+    "Test-only subreaper supplies orphan reaping for the minimal guest shell PID 1; it never kills live services",
+    "FD/RSS samples are observations per PID, not proof that no slow leak exists"
+  ],
+  "not_tested": [
+    "Stock 4.1 kernel and physical router/NAND/UBIFS",
+    "Real UU monitor/account/entitlement/game traffic or WAN provider APIs",
+    "Day/week-long operation, high client concurrency and all network failures"
+  ],
+  "orphan_children_reaped": 1850,
+  "resource_observation": "DDNS-Go QEMU process RSS increased in steps; cache/runtime/emulation overhead versus slow leak remains unclassified. FD counts are sampled, not a proof of leak freedom."
+}

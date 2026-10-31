@@ -10,6 +10,9 @@
 #include <sys/socket.h>
 #include <unistd.h>
 static void trace(const char *fmt,...) {
+ int before=errno;
+ if(access("/tmp/https-trace-quiet",F_OK)==0&&access("/tmp/https-fault-mode",F_OK)!=0){errno=before;return;}
+ errno=before;
  int saved=errno;char line[240];va_list a;va_start(a,fmt);int n=vsnprintf(line,sizeof(line),fmt,a);va_end(a);
  int fd=open("/tmp/https-relay-trace",O_WRONLY|O_APPEND|O_CREAT,0600);
  if(fd>=0){if(n>0&&n<(int)sizeof(line))write(fd,line,(size_t)n);close(fd);}errno=saved;
