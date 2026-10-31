@@ -152,6 +152,10 @@ char *fgets(char *out,int capacity,FILE *stream) {
   * token and its transport. This is only an exact cookie-name presence gate. */
  if(!session_cookie(cookie))request.rejected=401;
  if(!strcmp(method,"POST") && !same_origin(host,*origin?origin:referer))request.rejected=403;
+ /* Serialize writes across online/offline installers and configuration RPCs.
+  * Reads and native UU endpoints stay available during a checkpoint/recovery. */
+ if(!request.rejected && !strcmp(method,"POST") &&
+    access("/jffs/.localmod/plugin-txn/active",F_OK)==0)request.rejected=423;
  memcpy(request.replay+replayed,"\r\n",3);request.replay_len=replayed+2;
  /* index.asp uses the stock authenticated MIME handler. No auth exception is added. */
  snprintf(out,(size_t)capacity,"GET /index.asp HTTP/1.0\r\n");return out;

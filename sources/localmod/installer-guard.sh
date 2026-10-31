@@ -23,12 +23,23 @@ ks_operation_begin(){
  printf '%s\n' "$KS_OWNER_PID" > "$KS_LOCK/pid"
  trap 'ks_operation_end' EXIT
  trap 'exit 1' HUP INT TERM
+ if ! /usr/libexec/localmod/plugin-txn begin "$KS_OWNER_PID" "${LOG_FILE##*/}"; then
+  echo_date "插件操作正在运行或中断恢复尚未完成；请查看日志并重启路由器恢复。" >> "$LOG_FILE"
+  http_response "$1"
+  rm -rf "$KS_LOCK"
+  KS_HAVE_LOCK=0
+  return 1
+ fi
+ /usr/libexec/localmod/plugin-txn watch "$KS_OWNER_PID" || return 1
 }
 ks_operation_end(){
  [ "$KS_HAVE_LOCK" = 1 ] || return 0
  # ash subshells retain $$; read proc directly to distinguish the lock owner.
  read KS_SELF_PID KS_PROC_REST < /proc/self/stat
  [ "$KS_SELF_PID" = "$KS_OWNER_PID" ] || return 0
+ if [ ! -f "$KS_STATUS_FILE" ]; then
+  /usr/libexec/localmod/plugin-txn abandon "$KS_OWNER_PID"
+ fi
  ks_scope_clean
  rm -rf "$KS_LOCK"
 }
@@ -39,9 +50,14 @@ ks_operation_validate(){
   echo_date "软件中心：插件标识无效，本次请求未执行。" >> "$LOG_FILE"
   echo XU6J03M6 >> "$LOG_FILE"
   http_response "$1"
+  /usr/libexec/localmod/plugin-txn finish "$KS_OWNER_PID" 1
+  printf '1\n' > "$KS_STATUS_FILE"
   return 1
  fi
  dbus set softcenter_installing_result=running
+}
+ks_checkpoint(){
+ /usr/libexec/localmod/plugin-txn checkpoint "$KS_OWNER_PID" "$softcenter_installing_todo"
 }
 ks_scope_prepare(){
  KS_STAGE=/tmp/$softcenter_installing_todo
@@ -91,6 +107,17 @@ ks_finish(){
  ks_scope_clean
  for KS_FIELD in todo title name tar_url version md5; do dbus set "softcenter_installing_$KS_FIELD="; done
  dbus set "softcenter_installing_result=$KS_CODE"
+ # A read commits the packaged skipd's pending writes. Seal the checkpoint
+ # only after the installer and its version/configuration writes succeeded.
+ if ! dbus list __localmod_plugin_commit_barrier__ >/dev/null 2>&1 ||
+    ! /usr/libexec/localmod/plugin-txn finish "$KS_OWNER_PID" "$KS_CODE"; then
+  KS_CODE=1
+  dbus set softcenter_installing_result=1
+ fi
+ if [ -d /jffs/.localmod/plugin-txn/active ]; then
+  dbus set softcenter_recovery_required=1
+  echo_date "未提交的插件变更已保留检查点。请重启路由器，启动时恢复安装前配置；中断现场会单独保留。"
+ fi
  printf '%s\n' "$KS_CODE" > "$KS_STATUS_FILE"
  echo_date "============================= end ================================="
  echo XU6J03M6

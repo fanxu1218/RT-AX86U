@@ -101,7 +101,7 @@ func main() {
 		panic("generate or restore phase required")
 	}
 	phase := os.Args[1]
-	ctx, cancel := context.WithTimeout(context.Background(), 48*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 150*time.Second)
 	defer cancel()
 	checks := []string{}
 	details := map[string]any{}

@@ -18,6 +18,7 @@ for define,name in [('', 'httpd'),('INIT_LAUNCHER','init'),('RC_LAUNCHER','rc')]
     run(*flags,'-O2','-s',*(['-D'+define] if define else []),'-o',f'build/{name}-launcher','sources/localmod/launcher.c')
 run(*flags,'-O2','-s','-shared','-fPIC','-o','build/rc_bridge.so','sources/localmod/rc_bridge.c',*common,'-ldl','-lpthread')
 run(*flags,'-O2','-s','-o','build/localmod-event','sources/localmod/event.c',*common)
+run(*flags,'-O2','-s','-o','build/plugin-txn','sources/localmod/plugin_txn.c')
 run(*flags,'-O2','-s','-o','build/iptables-restore-launcher','sources/localmod/restore.c',*common)
 run(*flags,'-O0','-rdynamic','-o','build/bridge-fixture','build/bridge_fixture.c')
 run(*flags,'-O0','-shared','-fPIC','-Wl,-soname,libfilemap_vendor.so','-o','build/libfilemap_vendor.so','build/filemap_vendor.c')
@@ -43,7 +44,7 @@ run('python3','build/verify_hooks.py')
 run('python3','build/verify_compatibility.py')
 run('python3','build/verify_native_runtime.py')
 run('python3','build/verify_uu_compatibility.py')
-image='output/RT-AX86U_388_24437_localmod2_r4_EXPERIMENTAL.w'
+image='output/RT-AX86U_388_24437_localmod2_r5_EXPERIMENTAL.w'
 run('python3','build/repack_image.py','upstream/RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w','build/localmod-rootfs.ubifs',image)
 run('python3','build/inspect_upstream.py',image,'output/recheck',log='output/structure.json')
 run(str(root/'analysis/.venv/bin/python'),'build/export_metadata.py','output/recheck/rootfs_ubifs','output/recheck/metadata.json')
@@ -58,4 +59,5 @@ for name in ['changes.json','runtime_tests.log','hooks_trace.log','hooks_test_ru
 run('python3','build/check_lifecycle.py','--skip-native-regression')
 run('python3','build/check_online.py')
 run('python3','build/check_real_plugins.py')
-print('Built localmod2-r4 and verified the experimental candidate; no router was accessed or flashed.')
+run('python3','build/check_interrupt.py')
+print('Built localmod2-r5 and verified the experimental candidate; no router was accessed or flashed.')

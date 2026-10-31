@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r4_EXPERIMENTAL.w",
-  "candidate_sha256": "921c26da74881f868739c0a42a20171c530755c18df6f6349e69e0351c0f3abb",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r5_EXPERIMENTAL.w",
+  "candidate_sha256": "e55a5178bc4d11a9bc90772362753ee9cc73d644d870a8c572ab5b9376768841",
   "checks": {
     "native_auto_generated_ca_server_key_and_verified_tls": true,
     "native_save_cert_archive_contains_all_eight_exact_files": true,
@@ -23,14 +23,14 @@
   },
   "details": {
     "cert_generate": {
-      "generated_leaf_sha256": "50b50ab2988a50f9d0800adcbd9d10fd4852b6df4e6caebac84f7ea31fb5f95d"
+      "generated_leaf_sha256": "606886fa2684fbc36aed29ec53eda5c77b37f1667d3ea4f19bc530a68e327873"
     },
     "cert_restore": {
-      "restored_leaf_sha256": "50b50ab2988a50f9d0800adcbd9d10fd4852b6df4e6caebac84f7ea31fb5f95d"
+      "restored_leaf_sha256": "606886fa2684fbc36aed29ec53eda5c77b37f1667d3ea4f19bc530a68e327873"
     },
     "coexist": {
       "filter_reload_cycles": 3,
-      "leaf_sha256": "50b50ab2988a50f9d0800adcbd9d10fd4852b6df4e6caebac84f7ea31fb5f95d",
+      "leaf_sha256": "606886fa2684fbc36aed29ec53eda5c77b37f1667d3ea4f19bc530a68e327873",
       "parallel_requests": 8,
       "real_uu_monitor_executed": false,
       "uu_api_requests": 1,

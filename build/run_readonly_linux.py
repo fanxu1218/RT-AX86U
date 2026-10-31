@@ -6,10 +6,15 @@ import time
 from pathlib import Path
 
 
-def run(log_path, timeout=270):
+def run(log_path, timeout=270, state_disk=None, expect_cut=False):
     root = Path(__file__).resolve().parent.parent
     args = [str(root / 'build/tools/LinuxBuilder'), str(root / 'build/tools/linux-Image'),
             str(root / 'build/tools/linux-initramfs.gz'), str(root), '--readonly']
+    if state_disk is not None:
+        disk = Path(state_disk).resolve()
+        assert disk.parent == (root / 'build/interrupt-private').resolve()
+        assert disk.suffix == '.img' and disk.stat().st_size == 96 * 1024 * 1024
+        args.append(str(disk))
     proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     stream = selectors.DefaultSelector()
     stream.register(proc.stdout, selectors.EVENT_READ)
@@ -28,6 +33,8 @@ def run(log_path, timeout=270):
                     raise RuntimeError('guest console exceeded bounded output limit')
             if any(b'\nLINUX_READONLY_JOB_STATUS=' + value in data for value in (b'0', b'1')):
                 break
+            if expect_cut and b'\nINTERRUPT_CUT_READY\r\n' in data:
+                break
             if not stream.get_map():
                 break
         else:
@@ -44,7 +51,7 @@ def run(log_path, timeout=270):
         proc.stdout.close()
         Path(log_path).write_bytes(data)
     text = data.decode('utf-8', errors='replace').replace('\r\n', '\n')
-    if '\nLINUX_READONLY_JOB_STATUS=0' not in text:
+    if (expect_cut and '\nINTERRUPT_CUT_READY\n' not in text) or (not expect_cut and '\nLINUX_READONLY_JOB_STATUS=0' not in text):
         raise RuntimeError('read-only job failed; inspect ' + str(log_path))
     # Serial consoles emit CRLF. Keep reviewable logs in the repository's LF format.
     Path(log_path).write_text(text.rstrip('\n') + '\n')

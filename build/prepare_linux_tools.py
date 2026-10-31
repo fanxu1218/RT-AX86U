@@ -24,7 +24,7 @@ PROVIDES = {}
 for name, info in PACKAGES.items():
     for item in info.get('p', '').split():
         PROVIDES[item.split('=')[0]] = name
-needed = {'mtd-utils-ubi', 'busybox-static', 'qemu-arm', 'iptables', 'iptables-legacy', 'curl', 'openrc'}
+needed = {'mtd-utils-ubi', 'busybox-static', 'qemu-arm', 'iptables', 'iptables-legacy', 'curl', 'openrc', 'e2fsprogs'}
 pending = list(needed)
 while pending:
     p = pending.pop()

@@ -1,0 +1,243 @@
+{
+  "status": "LOCAL_INTERRUPTION_RECOVERY_PASS",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r5_EXPERIMENTAL.w",
+  "candidate_sha256": "e55a5178bc4d11a9bc90772362753ee9cc73d644d870a8c572ab5b9376768841",
+  "checks": {
+    "foundation_foundation_real_plugin_configuration_and_uu_synced": true,
+    "download_cut_download_interrupted_before_mutation": true,
+    "download_cut_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "download_cut_uu_heartbeat_continues_with_one_launch_at_fault_boundary": true,
+    "download_verify_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "download_verify_real_ddnsgo_autostart_and_local_page_restored": true,
+    "download_verify_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "checkpoint_cut_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "checkpoint_cut_uu_heartbeat_continues_with_one_launch_at_fault_boundary": true,
+    "checkpoint_verify_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "checkpoint_verify_real_ddnsgo_autostart_and_local_page_restored": true,
+    "checkpoint_verify_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "kill-parent_cut_killed_installer_blocks_writes_without_changing_uu_or_peer_data": true,
+    "kill-parent_cut_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "kill-parent_cut_uu_heartbeat_continues_with_one_launch_at_fault_boundary": true,
+    "kill-parent_recover-db-cut_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "kill-parent_recover-db-cut_duplicate_same_boot_recovery_refused_without_moving_live_database": true,
+    "kill-parent_recover-db-cut_partial_database_replay_keeps_original_checkpoint_and_restored_files": true,
+    "kill-parent_verify_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "kill-parent_verify_interrupted_new_state_retained_in_private_history": true,
+    "kill-parent_verify_real_ddnsgo_autostart_and_local_page_restored": true,
+    "kill-parent_verify_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "kill-tree_cut_killed_installer_blocks_writes_without_changing_uu_or_peer_data": true,
+    "kill-tree_cut_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "kill-tree_cut_uu_heartbeat_continues_with_one_launch_at_fault_boundary": true,
+    "kill-tree_recover-cut_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "kill-tree_recover-cut_recovery_can_be_interrupted_after_quarantine_with_checkpoint_retained": true,
+    "kill-tree_verify_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "kill-tree_verify_interrupted_new_state_retained_in_private_history": true,
+    "kill-tree_verify_real_ddnsgo_autostart_and_local_page_restored": true,
+    "kill-tree_verify_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "offline_cut_killed_installer_blocks_writes_without_changing_uu_or_peer_data": true,
+    "offline_cut_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "offline_cut_uu_heartbeat_continues_with_one_launch_at_fault_boundary": true,
+    "offline_verify_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "offline_verify_interrupted_new_state_retained_in_private_history": true,
+    "offline_verify_real_ddnsgo_autostart_and_local_page_restored": true,
+    "offline_verify_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "fresh_cut_killed_installer_blocks_writes_without_changing_uu_or_peer_data": true,
+    "fresh_cut_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "fresh_cut_uu_heartbeat_continues_with_one_launch_at_fault_boundary": true,
+    "fresh_verify_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "fresh_verify_interrupted_new_state_retained_in_private_history": true,
+    "fresh_verify_real_ddnsgo_autostart_and_local_page_restored": true,
+    "fresh_verify_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "real-ddnsgo_cut_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "real-ddnsgo_cut_uu_heartbeat_continues_with_one_launch_at_fault_boundary": true,
+    "real-ddnsgo_verify_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "real-ddnsgo_verify_interrupted_new_state_retained_in_private_history": true,
+    "real-ddnsgo_verify_real_ddnsgo_autostart_and_local_page_restored": true,
+    "real-ddnsgo_verify_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "before-commit_cut_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "before-commit_cut_uu_heartbeat_continues_with_one_launch_at_fault_boundary": true,
+    "before-commit_verify_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "before-commit_verify_interrupted_new_state_retained_in_private_history": true,
+    "before-commit_verify_real_ddnsgo_autostart_and_local_page_restored": true,
+    "before-commit_verify_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "after-commit_cut_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "after-commit_cut_uu_heartbeat_continues_with_one_launch_at_fault_boundary": true,
+    "after-commit_verify_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "after-commit_verify_real_ddnsgo_autostart_and_local_page_restored": true,
+    "after-commit_verify_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "committed-cleanup_cut_abrupt_vm_cut_keeps_synced_uu_files": true,
+    "committed-cleanup_cut_uu_heartbeat_continues_with_one_launch_at_fault_boundary": true,
+    "committed-cleanup_verify_fresh_vm_restores_exact_config_files_literal_database_and_version": true,
+    "committed-cleanup_verify_real_ddnsgo_autostart_and_local_page_restored": true,
+    "committed-cleanup_verify_retry_after_recovery_commits_and_keeps_uu_data_and_private_api": true,
+    "no-space_exercise_checkpoint_write_enospc_aborts_before_mutation_and_preserves_data": true,
+    "no-space_exercise_retry_after_preparation_failure_succeeds": true
+  },
+  "cases": {
+    "download": {
+      "cut": [
+        "download_interrupted_before_mutation",
+        "abrupt_vm_cut_keeps_synced_uu_files",
+        "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+      ],
+      "verify": [
+        "fresh_vm_restores_exact_config_files_literal_database_and_version",
+        "real_ddnsgo_autostart_and_local_page_restored",
+        "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+      ]
+    },
+    "checkpoint": {
+      "cut": [
+        "abrupt_vm_cut_keeps_synced_uu_files",
+        "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+      ],
+      "verify": [
+        "fresh_vm_restores_exact_config_files_literal_database_and_version",
+        "real_ddnsgo_autostart_and_local_page_restored",
+        "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+      ]
+    },
+    "kill-parent": {
+      "cut": [
+        "killed_installer_blocks_writes_without_changing_uu_or_peer_data",
+        "abrupt_vm_cut_keeps_synced_uu_files",
+        "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+      ],
+      "recover-db-cut": [
+        "abrupt_vm_cut_keeps_synced_uu_files",
+        "duplicate_same_boot_recovery_refused_without_moving_live_database",
+        "partial_database_replay_keeps_original_checkpoint_and_restored_files"
+      ],
+      "verify": [
+        "fresh_vm_restores_exact_config_files_literal_database_and_version",
+        "interrupted_new_state_retained_in_private_history",
+        "real_ddnsgo_autostart_and_local_page_restored",
+        "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+      ]
+    },
+    "kill-tree": {
+      "cut": [
+        "killed_installer_blocks_writes_without_changing_uu_or_peer_data",
+        "abrupt_vm_cut_keeps_synced_uu_files",
+        "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+      ],
+      "recover-cut": [
+        "abrupt_vm_cut_keeps_synced_uu_files",
+        "recovery_can_be_interrupted_after_quarantine_with_checkpoint_retained"
+      ],
+      "verify": [
+        "fresh_vm_restores_exact_config_files_literal_database_and_version",
+        "interrupted_new_state_retained_in_private_history",
+        "real_ddnsgo_autostart_and_local_page_restored",
+        "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+      ]
+    },
+    "offline": {
+      "cut": [
+        "killed_installer_blocks_writes_without_changing_uu_or_peer_data",
+        "abrupt_vm_cut_keeps_synced_uu_files",
+        "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+      ],
+      "verify": [
+        "fresh_vm_restores_exact_config_files_literal_database_and_version",
+        "interrupted_new_state_retained_in_private_history",
+        "real_ddnsgo_autostart_and_local_page_restored",
+        "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+      ]
+    },
+    "fresh": {
+      "cut": [
+        "killed_installer_blocks_writes_without_changing_uu_or_peer_data",
+        "abrupt_vm_cut_keeps_synced_uu_files",
+        "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+      ],
+      "verify": [
+        "fresh_vm_restores_exact_config_files_literal_database_and_version",
+        "interrupted_new_state_retained_in_private_history",
+        "real_ddnsgo_autostart_and_local_page_restored",
+        "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+      ]
+    },
+    "real-ddnsgo": {
+      "cut": [
+        "abrupt_vm_cut_keeps_synced_uu_files",
+        "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+      ],
+      "verify": [
+        "fresh_vm_restores_exact_config_files_literal_database_and_version",
+        "interrupted_new_state_retained_in_private_history",
+        "real_ddnsgo_autostart_and_local_page_restored",
+        "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+      ]
+    },
+    "before-commit": {
+      "cut": [
+        "abrupt_vm_cut_keeps_synced_uu_files",
+        "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+      ],
+      "verify": [
+        "fresh_vm_restores_exact_config_files_literal_database_and_version",
+        "interrupted_new_state_retained_in_private_history",
+        "real_ddnsgo_autostart_and_local_page_restored",
+        "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+      ]
+    },
+    "after-commit": {
+      "cut": [
+        "abrupt_vm_cut_keeps_synced_uu_files",
+        "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+      ],
+      "verify": [
+        "fresh_vm_restores_exact_config_files_literal_database_and_version",
+        "real_ddnsgo_autostart_and_local_page_restored",
+        "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+      ]
+    },
+    "committed-cleanup": {
+      "cut": [
+        "abrupt_vm_cut_keeps_synced_uu_files",
+        "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+      ],
+      "verify": [
+        "fresh_vm_restores_exact_config_files_literal_database_and_version",
+        "real_ddnsgo_autostart_and_local_page_restored",
+        "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+      ]
+    },
+    "no-space": {
+      "exercise": [
+        "checkpoint_write_enospc_aborts_before_mutation_and_preserves_data",
+        "retry_after_preparation_failure_succeeds"
+      ]
+    }
+  },
+  "production_files": {
+    "usr/libexec/localmod/plugin-txn": "acee866cacece10883d614e2a8a6a783380f98e7e4e1d2e08cdd2d1b2bf909ce",
+    "usr/libexec/localmod/installer-guard.sh": "8480449fa8b4f681c6b78f1a932cce01a239ffd28884570ce2a9f4c62d5a30c3",
+    "usr/libexec/localmod/bootstrap.sh": "e62b2caf5b70d72d29f3fb4f13a57ebd4dceb7142f0d06e588f3c95a4e0208db",
+    "usr/lib/localmod/httpd_bridge.so": "5bce7ed8037409755dd44246033c2d87a96256cf4f63654a28e6ed4584875d7a",
+    "rom/etc/koolshare/scripts/ks_app_install.sh": "3724f3433cb77eb4d11791d9f1af32877d692f390be6c0d7f05c27714842761a",
+    "rom/etc/koolshare/scripts/ks_tar_install.sh": "fab2333cbc0bb7ffa7dce9504ddedca73acd8c17168491dfc26d3db4b64d1842"
+  },
+  "r4_baseline": {
+    "image": "RT-AX86U_388_24437_localmod2_r4_EXPERIMENTAL.w",
+    "sha256": "921c26da74881f868739c0a42a20171c530755c18df6f6349e69e0351c0f3abb",
+    "reproduction_log": "interrupt_r4_reproductions.log"
+  },
+  "isolation": [
+    "No NIC or physical device; read-only host workspace; one owned 96 MiB ext4 virtual disk",
+    "VM process terminated at explicit boundary without guest shutdown/sync; next boot is a new VM",
+    "Test-only fault interposer and cp wrapper stay outside firmware and archives remain unchanged"
+  ],
+  "data_checked": [
+    "Exact plugin YAML and binary bytes, literal multiline/quoted skipd records, unrelated plugin key",
+    "Real DDNS-Go 1.28 configuration, version, watchdog autostart and local page after recovery",
+    "UU synthetic persistent cache/checksum/user-state bytes and temporary download; TLS archive bytes",
+    "Failed new center/database quarantined; authenticated write lock and successful retry after reboot"
+  ],
+  "not_tested": [
+    "Physical UBIFS/NAND power cuts, stock 4.1 kernel and actual JFFS durability",
+    "Real UU account, monitor, cloud discovery and acceleration traffic",
+    "Rollback outside the center tree/skipd, arbitrary privileged installer behavior or concurrent background file writers"
+  ]
+}

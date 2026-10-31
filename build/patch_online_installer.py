@@ -39,7 +39,8 @@ def patch_online_installer(text):
             '\tfind /jffs/ -name "uu.tar.gz*" -type f | xargs rm -rf',
             '\t# UU archives belong to UU; ordinary plugin operations must preserve them.')
     replace('\t\t\texit_tar_install 1', '\t\t\tquit_ks_install')
-    replace('\t# 14. 复制uninstall.sh', '\tks_uninstaller_backup || quit_ks_install\n\n\t# 14. 复制uninstall.sh')
+    replace('\t# 14. 复制uninstall.sh', '\tks_checkpoint || quit_ks_install\n'
+            '\tks_uninstaller_backup || quit_ks_install\n\n\t# 14. 复制uninstall.sh')
     replace('\t\trm -rf /koolshare/scripts/uninstall_${softcenter_installing_todo}.sh',
             '\t\tks_uninstaller_restore || echo_date "恢复旧卸载脚本失败，请保留日志。"')
     replace('\t\techo_date "退出本次插件安装！"\n\t\tquit_ks_install\n\tfi\n\n\tks_scope_prepare',

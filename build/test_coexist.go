@@ -19,7 +19,7 @@ import (
 )
 
 func main() {
-	ctx, cancel := context.WithTimeout(context.Background(), 48*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 80*time.Second)
 	defer cancel()
 	checks := []string{}
 	s := nrStart(ctx, "coexist", true)
@@ -163,7 +163,11 @@ func main() {
 	nrMust(os.WriteFile("/jffs/localmod-disabled", nil, 0600))
 	stopped := false
 	for i := 0; i < 280; i++ {
-		if exec.Command("pidof", "httpdb").Run() != nil {
+		// The asynchronous stop can briefly have no httpdb while supervisors
+		// are still settling. The event daemon removes its PID file only
+		// after stop-backend returns; do not mistake the first gap for completion.
+		_, eventErr := os.Stat("/tmp/.localmod/eventd.pid")
+		if os.IsNotExist(eventErr) && exec.Command("pidof", "httpdb", "perpd", "perpboot").Run() != nil {
 			stopped = true
 			break
 		}
@@ -174,9 +178,15 @@ func main() {
 	}
 	coUUPage(s)
 	coUUAlive(pid)
-	code, _ := s.request("GET", "/_api/localmod_coexist_", "")
+	coReadyPort++
+	dialer := net.Dialer{Timeout: 100 * time.Millisecond, LocalAddr: &net.TCPAddr{IP: net.ParseIP("127.0.0.1"), Port: coReadyPort}}
+	if conn, e := dialer.Dial("tcp4", "127.0.0.1:3032"); e == nil {
+		conn.Close()
+		panic("completed recovery stop retained backend listener")
+	}
+	code, body := s.request("GET", "/_api/localmod_coexist_", "")
 	if code == 200 {
-		panic("center API still active after recovery stop")
+		panic(fmt.Sprintf("center API still active after completed recovery stop: %s", body))
 	}
 	checks = append(checks, "center_recovery_stop_keeps_native_https_and_owned_uu")
 	nrCommand("/bin/sh", "/usr/libexec/localmod/bootstrap.sh", "stop")

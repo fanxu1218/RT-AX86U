@@ -19,7 +19,22 @@ mount --bind /work /router/work
 mount -t proc proc /router/proc
 mount --bind /sys /router/sys
 mount --bind /dev /router/dev
-mount -t tmpfs -o size=64m tmpfs /router/jffs
+if grep -qw localmod_state_disk=1 /proc/cmdline; then
+ modprobe virtio_blk
+ modprobe crc32c_generic
+ modprobe ext4
+ for attempt in 1 2 3 4 5; do
+  [ ! -b /dev/vda ] || break
+  sleep 1
+ done
+ [ -b /dev/vda ] || { cat /proc/cmdline; ls /sys/class/block /dev; exit 1; }
+ if grep -q '"initialize": true' /work/build/interrupt-phase.json; then
+  mkfs.ext4 -q -F -O ^metadata_csum,^metadata_csum_seed,^orphan_file -E nodiscard,lazy_itable_init=0,lazy_journal_init=0 -L LOCALMOD_TEST /dev/vda
+ fi
+ mount -t ext4 /dev/vda /router/jffs || { cat /proc/partitions; cat /proc/filesystems; dmesg | tail -12; exit 1; }
+else
+ mount -t tmpfs -o size=64m tmpfs /router/jffs
+fi
 cp /usr/bin/qemu-arm /router/usr/bin/qemu-arm
 mkdir -p /router/fixture/lib /router/fixture/xtables
 cp -a /lib/*.so* /usr/lib/*.so* /router/fixture/lib/
@@ -37,5 +52,18 @@ export NATIVE_CERT_CASE=1 NATIVE_STATE_DIRECTORY=/tmp/native-nvram
 export LOCALMOD_QEMU_ROOT=/ LOCALMOD_TEST_OUTPUT=/tmp/real-plugin-results
 export LOCALMOD_TLS_START_TIMEOUT=60s
 export LOCALMOD_HTTP_REQUEST_TIMEOUT=10s
+export LOCALMOD_PLUGIN_OPERATION_TIMEOUT=45s
 mkdir -p /router/tmp/native-nvram /router/tmp/real-plugin-results
-chroot /router /bin/sh /work/build/real_plugins_setup.sh
+if grep -qw localmod_state_disk=1 /proc/cmdline; then
+ export LOCALMOD_PLUGIN_OPERATION_TIMEOUT=90s
+ mv /router/usr/libexec/localmod/plugin-txn /router/usr/libexec/localmod/plugin-txn.real
+ cp /work/build/txn_fault_fixture.so /router/fixture/
+ cat > /router/usr/libexec/localmod/plugin-txn <<'SCRIPT'
+#!/bin/sh
+exec /usr/bin/qemu-arm -L / -E LD_PRELOAD=/fixture/txn_fault_fixture.so /usr/libexec/localmod/plugin-txn.real "$@"
+SCRIPT
+ chmod 755 /router/usr/libexec/localmod/plugin-txn
+ /work/build/test-interrupt controller
+else
+ chroot /router /bin/sh /work/build/real_plugins_setup.sh
+fi

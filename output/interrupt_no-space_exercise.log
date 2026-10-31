@@ -1,0 +1,17 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031053927, 2026/10/31 ~ 2046/11/1
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS checkpoint_write_enospc_aborts_before_mutation_and_preserves_data
+PASS retry_after_preparation_failure_succeeds
+INTERRUPT_RESULT {"boot":"exercise","case":"no-space","checks":["checkpoint_write_enospc_aborts_before_mutation_and_preserves_data","retry_after_preparation_failure_succeeds"]}
+LINUX_READONLY_JOB_STATUS=0

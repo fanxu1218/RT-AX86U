@@ -84,7 +84,7 @@ report = {
         'Router public repository DNS/WAN/default CA trust and browser rendering',
         'Alibaba DNS API changes, DDNSTO authenticated cloud tunnel, DDNS-Go provider authentication',
         'Real UU monitor/account/discovery/entitlement/game traffic acceleration',
-        'Arbitrary plugin ecosystem, offline/online operation overlap, power-loss interruption recovery',
+        'Arbitrary plugin ecosystem; separate interruption_tests.json covers defined recovery cases, not physical power loss',
     ],
 }
 (ROOT / 'output/real_plugin_tests.json').write_text(json.dumps(report, indent=2) + '\n')

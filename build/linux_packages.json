@@ -20,6 +20,16 @@
     "sha256": "3a9d21f071031f36a323dc245005b6f711e7e0a9f76854dd5c85be0ba8a7e651"
   },
   {
+    "package": "e2fsprogs",
+    "version": "1.47.2-r2",
+    "sha256": "3f57194ef8a75326d95ea2ab72ef92a82349230b1686c988c09e7ee869a1d24f"
+  },
+  {
+    "package": "e2fsprogs-libs",
+    "version": "1.47.2-r2",
+    "sha256": "43118bb26b5b631affeca249dc394055b14240f40a1754b093322bf9f1623344"
+  },
+  {
     "package": "iptables",
     "version": "1.8.11-r1",
     "sha256": "0a10fe634e3525082a1219487cd044d987ac4a55ed5aa551bf758e81223e1cfb"
@@ -30,9 +40,19 @@
     "sha256": "8beced6a354697e50014e2cebe0dcea3dc65d2dbbb708006a149999b3b029919"
   },
   {
+    "package": "libblkid",
+    "version": "2.41.6-r1",
+    "sha256": "76a8fbfae2ab5ff50c7f30e22812c403a2d9375de85a0a0f2c288ab906d24fb4"
+  },
+  {
     "package": "libcap2",
     "version": "2.78-r0",
     "sha256": "de209aee8b76946849bff6bd97151c6af20889be5a96a2e28f9899255e252e3f"
+  },
+  {
+    "package": "libcom_err",
+    "version": "1.47.2-r2",
+    "sha256": "f0f5ea8a160fe0ff6d0b18eff222f80a6a83eb1ca6abb913db7a902d5bd25c43"
   },
   {
     "package": "libcrypto3",
@@ -43,6 +63,11 @@
     "package": "libcurl",
     "version": "8.14.1-r4",
     "sha256": "99768d3f61dc96ac3b35049a0df4107d9cc6c51e118e865628fa8fa781e0b419"
+  },
+  {
+    "package": "libeconf",
+    "version": "0.6.3-r0",
+    "sha256": "cdd4311aff72d53056134468b68a68f22829f995627b434d2f88960884319de9"
   },
   {
     "package": "libidn2",

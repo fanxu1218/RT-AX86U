@@ -9,6 +9,11 @@ ln -s /work/build/casefs/rootfs/rom/etc/koolshare /rom/etc/koolshare
 cp /work/build/casefs/rootfs/rom/etc/localmod-core-id /rom/etc/
 cp /work/sources/localmod/bootstrap.sh /work/sources/localmod/dispatch.sh /usr/libexec/localmod/
 cp /work/build/casefs/rootfs/usr/libexec/localmod/installer-guard.sh /usr/libexec/localmod/
+cat > /usr/libexec/localmod/plugin-txn <<'SCRIPT'
+#!/bin/sh
+exec /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/plugin-txn "$@"
+SCRIPT
+chmod 500 /usr/libexec/localmod/plugin-txn
 modprobe iptable_filter
 modprobe xt_tcpudp
 modprobe ipt_REJECT

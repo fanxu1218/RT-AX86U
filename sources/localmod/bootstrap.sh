@@ -17,6 +17,11 @@ exec >>"$BASE/bootstrap.log" 2>&1
 prepare(){
  grep -q ' /jffs ' /proc/mounts || { echo 'JFFS is not mounted'; return 1; }
  mkdir -p /jffs/.localmod /tmp/upload /jffs/scripts /jffs/configs/dnsmasq.d
+ # Recovery must precede skipd, the center supervisors and plugin hooks.
+ # The helper deliberately refuses same-boot rollback under escaped children.
+ if [ -d /jffs/.localmod/plugin-txn/active ]; then
+  /usr/libexec/localmod/plugin-txn recover || return 1
+ fi
  if [ ! -f /jffs/.localmod/initialized ]; then
   required=$(du -sk /rom/etc/koolshare | awk '{print $1}')
   available=$(df -k /jffs | awk 'END {print $4}')
@@ -53,7 +58,20 @@ prepare(){
  [ -n "$(nvram get jffs2_scripts)" ] || nvram set jffs2_scripts=1
  nvram set sc_url=https://rogsoft.ddnsto.com
  nvram set sc_skin=ASUSWRT
- skipd_start && eventd_start
+ skipd_start || return 1
+ if [ -d /jffs/.localmod/plugin-txn/active ]; then
+  /usr/libexec/localmod/plugin-txn restore-database || return 1
+ fi
+ if [ -f /jffs/.localmod/plugin-txn/notice ]; then
+  for field in todo title name tar_url version md5; do /usr/bin/dbus set "softcenter_installing_$field="; done
+  /usr/bin/dbus set softcenter_installing_result=1
+  /usr/bin/dbus set softcenter_recovery_required=0
+  /usr/bin/dbus set "softcenter_recovery_status=$(cat /jffs/.localmod/plugin-txn/notice)"
+  /usr/bin/dbus list __localmod_recovery_commit_barrier__ >/dev/null 2>&1 || return 1
+  rm -f /jffs/.localmod/plugin-txn/notice
+  sync
+ fi
+ eventd_start
 }
 
 protect_api(){

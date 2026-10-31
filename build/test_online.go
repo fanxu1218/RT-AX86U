@@ -329,7 +329,17 @@ func (t *onlineTest) begin(kind, mirror string) {
 	t.rpc("ks_app_install.sh", "ks_app_install", map[string]string{"softcenter_home_url": mirror, "softcenter_installing_todo": a.Name, "softcenter_installing_title": a.Title, "softcenter_installing_version": a.Version, "softcenter_installing_md5": a.MD5, "softcenter_installing_tar_url": a.TarURL})
 }
 func (t *onlineTest) wait(success bool) string {
-	for i := 0; i < 150; i++ {
+	limit := 12 * time.Second
+	if value := os.Getenv("LOCALMOD_PLUGIN_OPERATION_TIMEOUT"); value != "" {
+		var e error
+		limit, e = time.ParseDuration(value)
+		nrMust(e)
+		if limit <= 0 || limit > 90*time.Second {
+			panic("invalid plugin wait limit")
+		}
+	}
+	deadline := time.Now().Add(limit)
+	for time.Now().Before(deadline) {
 		code, body := t.s.request("GET", "/_temp/soft_install_log.txt", "")
 		if code == 200 && strings.Contains(body, "XU6J03M6") {
 			value := strings.TrimSpace(nrCommand("/usr/bin/dbus", "get", "softcenter_installing_result"))
@@ -350,16 +360,21 @@ func (t *onlineTest) operation(kind, mirror string, success bool) string {
 	return t.wait(success)
 }
 func (t *onlineTest) plugin(version string) {
+	t.pluginCheck(version, true)
+}
+func (t *onlineTest) pluginCheck(version string, callback bool) {
 	if strings.TrimSpace(nrCommand("/usr/bin/dbus", "get", "onlineprobe_config")) != "user-retained" {
 		panic("plugin operation lost retained user configuration")
 	}
 	if strings.TrimSpace(nrCommand("/usr/bin/dbus", "get", "softcenter_module_onlineprobe_version")) != version || string(nrRead("/koolshare/onlineprobe/version")) != version {
 		panic("plugin file/registered version mismatch")
 	}
-	t.rpc("onlineprobe.sh", "probe", map[string]string{"onlineprobe_input": "actual-callback"})
-	value := strings.TrimSpace(nrCommand("/usr/bin/dbus", "get", "onlineprobe_runtime"))
-	if value != version+":actual-callback" {
-		panic("installed plugin callback/version mismatch: " + value)
+	if callback {
+		t.rpc("onlineprobe.sh", "probe", map[string]string{"onlineprobe_input": "actual-callback"})
+		value := strings.TrimSpace(nrCommand("/usr/bin/dbus", "get", "onlineprobe_runtime"))
+		if value != version+":actual-callback" {
+			panic("installed plugin callback/version mismatch: " + value)
+		}
 	}
 	if strings.TrimSpace(nrCommand("/usr/bin/dbus", "get", "onlineprobe_enable")) == "1" {
 		pid, e := strconv.Atoi(strings.TrimSpace(string(nrRead("/tmp/owned-online-plugin.pid"))))
@@ -477,13 +492,6 @@ func onlineFixtureMain() {
 			test.plugin("1.0")
 			test.record(c.name)
 		}
-		previous := nrRead("/koolshare/scripts/uninstall_onlineprobe.sh")
-		test.operation("installfail", "", false)
-		if !bytes.Equal(previous, nrRead("/koolshare/scripts/uninstall_onlineprobe.sh")) {
-			panic("failed update lost/replaced previous uninstaller")
-		}
-		test.plugin("1.0")
-		test.record("failed_update_preserves_previous_uninstaller_metadata_and_live_plugin")
 		nrMust(os.Mkdir("/tmp/onlineprobe", 0700))
 		nrMust(os.WriteFile("/tmp/onlineprobe/owned-existing", []byte("preserve-existing-stage"), 0600))
 		test.operation("v2", "", false)
@@ -521,6 +529,16 @@ func onlineFixtureMain() {
 		}
 		test.plugin("1.0")
 		test.record("low_jffs_space_update_returns_failure_and_keeps_old_state")
+		previous := nrRead("/koolshare/scripts/uninstall_onlineprobe.sh")
+		test.operation("installfail", "", false)
+		if !bytes.Equal(previous, nrRead("/koolshare/scripts/uninstall_onlineprobe.sh")) {
+			panic("failed update lost/replaced previous uninstaller")
+		}
+		if irq := strings.TrimSpace(nrCommand("/usr/bin/dbus", "get", "softcenter_recovery_required")); irq != "1" {
+			panic("failed installer did not require recovery")
+		}
+		test.pluginCheck("1.0", false)
+		test.record("failed_update_preserves_previous_uninstaller_metadata_and_live_plugin")
 	case "concurrent":
 		test.begin("hold", "")
 		select {
@@ -528,10 +546,9 @@ func onlineFixtureMain() {
 		case <-time.After(3 * time.Second):
 			panic("held native download did not start")
 		}
-		test.begin("second", "")
-		body := string(nrRead("/tmp/upload/soft_install_log.txt"))
-		if !strings.Contains(body, "已有插件操作") {
-			panic("overlapping operation was not rejected")
+		code, _ := s.request("POST", "/_api/", `{"id":99100,"method":"ks_app_install.sh","params":["ks_app_install"],"fields":{"softcenter_installing_todo":"secondprobe"}}`)
+		if code != 423 || strings.TrimSpace(nrCommand("/usr/bin/dbus", "get", "softcenter_installing_todo")) != "onlineprobe" {
+			panic("overlapping write was not rejected before field mutation")
 		}
 		close(repo.hold)
 		test.wait(true)
@@ -542,7 +559,7 @@ func onlineFixtureMain() {
 		test.record("overlapping_online_rpc_rejected_without_overwriting_active_operation")
 		test.stopPlugin()
 		nrMust(os.WriteFile("/koolshare/scripts/onlineprobe_uninstall.sh", []byte("#!/bin/sh\nexit 9\n"), 0700))
-		body = test.uninstall(false)
+		body := test.uninstall(false)
 		if strings.Contains(body, "卸载成功") {
 			panic("module-specific uninstall failure reported success")
 		}

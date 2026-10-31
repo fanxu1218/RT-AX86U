@@ -59,6 +59,7 @@ put(root/'build/iptables-restore-launcher','usr/sbin/iptables-restore',0o500)
 put(root/'sources/localmod/bootstrap.sh','usr/libexec/localmod/bootstrap.sh',0o755)
 put(root/'sources/localmod/dispatch.sh','usr/libexec/localmod/dispatch.sh',0o755)
 put(root/'sources/localmod/installer-guard.sh','usr/libexec/localmod/installer-guard.sh',0o755)
+put(root/'build/plugin-txn','usr/libexec/localmod/plugin-txn',0o500)
 put(root/'sources/localmod/jffsinit.sh','usr/bin/jffsinit.sh',0o755)
 put(root/'sources/localmod/kscore.sh',core+'/bin/kscore.sh',0o755)
 put(root/'sources/localmod/helper.sh','usr/sbin/helper.sh',0o755)
@@ -100,25 +101,7 @@ perp.write_text(text.replace('exec httpdb','exec httpdb -p 127.0.0.1:3032 -r 127
 installer=stage/core/'scripts/ks_app_install.sh'
 text=patch_online_installer(installer.read_text())
 installer.write_text(text)
-offline=stage/core/'scripts/ks_tar_install.sh'
-text=offline.read_text();needle='\t# 11. some package not come from koolcenter'
-assert needle in text
-text=text.replace(needle,'''\tif [ "$MODULE_NAME" = softcenter ] || [ "$MODULE_NAME" = koolcenter ]; then
-\t\techo_date "此官改的软件中心核心随固件更新，不接受离线覆盖核心。"
-\t\texit_tar_install 1
-\tfi
-'''+needle,1)
-assert 'exit ${code}' in text
-text=text.replace('exit ${code}','exit ${CODE}')
-pipeline='install_tar | tee -a ${LOG_FILE} ${LOG_FILE_BACKUP}\nclean_backup_log'
-assert pipeline in text
-text=text.replace(pipeline,'''STATUS_FILE=/tmp/upload/.ks_tar_status.$$
-( trap 'printf "%s\\n" "$?" > "$STATUS_FILE"' EXIT; install_tar ) | tee -a ${LOG_FILE} ${LOG_FILE_BACKUP}
-INSTALL_RESULT=$(cat "$STATUS_FILE" 2>/dev/null)
-rm -f "$STATUS_FILE"
-clean_backup_log
-case "$INSTALL_RESULT" in ''|*[!0-9]*) exit 1;; *) exit "$INSTALL_RESULT";; esac''')
-offline.write_text(text)
+put(root/'sources/localmod/offline-installer.sh',core+'/scripts/ks_tar_install.sh',0o755)
 
 profile=stage/'rom/etc/profile'
 assert profile.is_file()
@@ -153,7 +136,7 @@ text=ui.read_text()
 assert 'href:"http://"+a.netaddr+":3032"' in text
 text=text.replace('href:"http://"+a.netaddr+":3032"','href:"/Module_Localmod.asp"')
 ui.write_text(text)
-release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','revision':'r4','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
+release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','revision':'r5','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
          'software_center':'KoolCenter 1.9.50 from 388.11_0-20260429',
          'event_hooks':['init-start','services-start','services-stop','service-event','service-event-end','wan-event','wan-start','firewall-start','nat-start','pre-mount','post-mount','unmount'],
          'postconf':['dnsmasq'],

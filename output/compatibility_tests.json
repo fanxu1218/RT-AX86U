@@ -23,7 +23,7 @@
   },
   "filter_restore_cycles": 24,
   "nonrouting_flush_cycles": 5,
-  "unprivileged_connection_attempts": 62068,
+  "unprivileged_connection_attempts": 63214,
   "live_test_kernel": "6.12.114-0-virt",
   "live_xtables_helper": "iptables v1.8.11 (legacy)",
   "boundary": "ARM32 production adapters and real packaged httpdb/skipd/dbus; native Alpine curl, xtables and process-launch helper are used in the networkless ARM64 guest. Vendor rc hardware operations and login are fixtures. Stock kernel 4.1/xtables 1.4.12.2 still require device verification."

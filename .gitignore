@@ -129,3 +129,13 @@
 !/output/real_plugin_tests.json
 !/output/real_plugins_upgrade_tests_run.log
 !/output/real_plugins_fresh_tests_run.log
+
+!/build/check_interrupt.py
+!/build/test_interrupt_main.go
+!/build/test_interrupt.go
+!/build/interrupt_scenarios.go
+!/build/txn_fault_fixture.c
+!/output/RT-AX86U_388_24437_localmod2_r5_EXPERIMENTAL.build.json
+!/output/interruption_tests.json
+!/output/interrupt_*.log
+!/output/插件安装中断恢复说明.md

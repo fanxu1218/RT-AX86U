@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 """Run one bounded build job, then release the temporary Linux VM."""
+import argparse
 import subprocess
 import time
 from pathlib import Path
 
 root = Path(__file__).resolve().parent.parent
+ap=argparse.ArgumentParser()
+ap.add_argument('--timeout',type=int,default=55)
+args=ap.parse_args()
+assert 1<=args.timeout<=180
 status = root/'build/linux-job.status'
 status.unlink(missing_ok=True)
 with (root/'build/linux_builder.log').open('w') as log:
     proc = subprocess.Popen([str(root/'build/tools/LinuxBuilder'),str(root/'build/tools/linux-Image'),
                              str(root/'build/tools/linux-initramfs.gz'),str(root)],stdout=log,stderr=log)
-    deadline = time.monotonic()+55
+    deadline = time.monotonic()+args.timeout
     while time.monotonic()<deadline and proc.poll() is None and not status.exists():
         time.sleep(.2)
     if proc.poll() is None:

@@ -410,8 +410,8 @@
   {
     "path": "rom/etc/koolshare/scripts/ks_app_install.sh",
     "change": "added",
-    "bytes": 25773,
-    "sha256": "ed8cbbe55b36102547042472a76b34dbadbdb6b2dc7e89528efad9139a0919f6"
+    "bytes": 25807,
+    "sha256": "3724f3433cb77eb4d11791d9f1af32877d692f390be6c0d7f05c27714842761a"
   },
   {
     "path": "rom/etc/koolshare/scripts/ks_app_remove.sh",
@@ -427,8 +427,8 @@
   {
     "path": "rom/etc/koolshare/scripts/ks_tar_install.sh",
     "change": "added",
-    "bytes": 17860,
-    "sha256": "58854f2b6492be5c8f5fafebfecd51bbc5c23e3f18945ac7c8591215c3fd2a9f"
+    "bytes": 2897,
+    "sha256": "fab2333cbc0bb7ffa7dce9504ddedca73acd8c17168491dfc26d3db4b64d1842"
   },
   {
     "path": "rom/etc/koolshare/webs",
@@ -457,13 +457,13 @@
     "path": "rom/etc/localmod-core-id",
     "change": "added",
     "bytes": 65,
-    "sha256": "00e9daec16a2c3e6ad8684e845ba0944a5384170877d04ba5d3c742df3937560"
+    "sha256": "7f574d3544d95d21e9a8fdc0d6ebd48a4bdcb57d9122cce0d466091cb5d7bc22"
   },
   {
     "path": "rom/etc/localmod-release.json",
     "change": "added",
     "bytes": 667,
-    "sha256": "5c92938dca6bc6244982ad7bdf89ff9e976af78e449f90d8577c207118e4d23d"
+    "sha256": "483360782a95b335002efbe2d02dc7268683e1ef155266e1ae5df5e0a2403900"
   },
   {
     "path": "rom/etc/profile",
@@ -519,8 +519,8 @@
   {
     "path": "usr/lib/localmod/httpd_bridge.so",
     "change": "added",
-    "bytes": 11996,
-    "sha256": "df988861485fc7d90f4d30ce3f6844c30436e43a5651623563156a56cf722532"
+    "bytes": 12164,
+    "sha256": "5bce7ed8037409755dd44246033c2d87a96256cf4f63654a28e6ed4584875d7a"
   },
   {
     "path": "usr/lib/localmod/rc_bridge.so",
@@ -541,8 +541,8 @@
   {
     "path": "usr/libexec/localmod/bootstrap.sh",
     "change": "added",
-    "bytes": 7135,
-    "sha256": "97c835d0ef41a8f629048e419bbafa2baba6bb016fe462fc33547f0427d604a8"
+    "bytes": 8018,
+    "sha256": "e62b2caf5b70d72d29f3fb4f13a57ebd4dceb7142f0d06e588f3c95a4e0208db"
   },
   {
     "path": "usr/libexec/localmod/busybox",
@@ -565,14 +565,20 @@
   {
     "path": "usr/libexec/localmod/installer-guard.sh",
     "change": "added",
-    "bytes": 3734,
-    "sha256": "106d5cd104e187a362baa8153a387aeaa57cbe56d0d82b8326c94e8162532136"
+    "bytes": 4990,
+    "sha256": "8480449fa8b4f681c6b78f1a932cce01a239ffd28884570ce2a9f4c62d5a30c3"
   },
   {
     "path": "usr/libexec/localmod/localmod-event",
     "change": "added",
     "bytes": 19092,
     "sha256": "0262da7e620fda666ec81561272f5d0b25e78bba5b921c9ac62acfe92968d10f"
+  },
+  {
+    "path": "usr/libexec/localmod/plugin-txn",
+    "change": "added",
+    "bytes": 25092,
+    "sha256": "acee866cacece10883d614e2a8a6a783380f98e7e4e1d2e08cdd2d1b2bf909ce"
   },
   {
     "path": "usr/libexec/localmod/rc.vendor",
@@ -601,8 +607,8 @@
   {
     "path": "www/Module_Localmod.asp",
     "change": "added",
-    "bytes": 1396,
-    "sha256": "9c1cf6f1342e6f08a7b952c5abde87fa8398c9e43496dccb63423ea9de41c890"
+    "bytes": 1574,
+    "sha256": "99df0cf61639513cc300c4fece2c3d95aa34ad131e36e5502d453a4612a16ace"
   },
   {
     "path": "www/state.js",

@@ -57,5 +57,9 @@ cat /tmp/.localmod/bootstrap.log
 echo REAL_PLUGIN_SETUP_READY
 
 phase=$(cat /work/build/real-plugin-phase)
-case "$phase" in upgrade|fresh) ;; *) exit 2;; esac
+case "$phase" in
+ interrupt-*) exec /work/build/test-interrupt "$phase";;
+ upgrade|fresh) ;;
+ *) exit 2;;
+esac
 exec /work/build/test-real-plugins "$phase"

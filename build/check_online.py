@@ -70,8 +70,8 @@ report = {
         'Physical router boot, target kernel 4.1, real flash and NVRAM',
         'Public repository download with router DNS/WAN/default CA bundle and browser rendering',
         'Real third-party plugins, UU account/entitlement/discovery and actual traffic acceleration',
-        'Rollback of arbitrary changes made by a failing third-party installer',
-        'Concurrent offline installation, SIGKILL/power-loss recovery of an interrupted online operation',
+        'Rollback outside the center/skipd checkpoint scope or arbitrary privileged installer behavior',
+        'These RAM-only cases do not test interruption; see interruption_tests.json for isolated restart coverage',
     ],
 }
 catalog = root / 'build/online_catalog_contract.json'

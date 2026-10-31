@@ -1,12 +1,16 @@
 # RT-AX86U 官方底包官改实验
 
-基于 **ASUS 3.0.0.4.388_24437**，集成 **KoolCenter 软件中心 1.9.50**，保留官方 **网易 UU**。当前开发版本为 **localmod2-r4**。
+基于 **ASUS 3.0.0.4.388_24437**，集成 **KoolCenter 软件中心 1.9.50**，保留官方 **网易 UU**。当前开发版本为 **localmod2-r5**。
 
 > **实验候选版，尚未实机验收，暂不建议直接刷入日常主路由。**
 > 源码适配、模型/仿真测试和镜像回读通过；刷入启动、原厂登录/TLS、无线/NAT、具体第三方插件及 UU 实际加速仍待实机验证。
 
 ## 本轮变化
 
+- 新增持久化安装检查点：安装、更新中断后阻止软件中心继续写入，在下次启动时恢复原配置；中断现场单独保留。
+- 在线与离线安装共用检查点和操作锁；离线安装不再批量清除 UU 临时下载包。准备失败或备份空间不足时不执行安装脚本。
+- 数据库使用逐条长度记录恢复，保留换行、引号等配置内容；提交完成后先持久化撤下事务目录，再清理副本。
+- 新增独立虚拟磁盘的异常中断检查，覆盖安装进程被杀、恢复再次中断、提交前后重启、真实 DDNS-Go 更新及配置/UU 数据保留；不代表实机断电或真实 UU 加速已验收。
 - 在完整原厂根目录中复现并修复 PATH 选错 `sh`、原厂 curl 拒绝数字地址回调、缺少 `tee`/`xargs`，以及已登记插件的空运行目录阻止更新四类问题。
 - 新增 32 项阿里 DDNS、DDNSTO、DDNS-Go 的真实旧版/当前版安装、升级、卸载检查；DDNS-Go 执行真实 ARM 程序、本地网页及监督/事件流程。
 - 真实插件脚本只在无外网网卡的临时虚拟机内执行，宿主目录只读，插件状态写入内存 JFFS；UU 继续使用原厂启动代码和受控工作进程。
@@ -28,24 +32,27 @@
 
 ## 下载与说明
 
-- [localmod2-r4 实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r4-experimental)
+- [localmod2-r5 实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r5-experimental)
 - [完整适配范围与验证边界](output/官改候选版说明.md)
 - [Alpha 3 升级、实机验收与回退步骤](output/Alpha3升级localmod2与实机验收.md) · [验收记录模板](output/localmod2实机验收记录模板.md)
 - [事件测试](output/hooks_tests.json) · [兼容测试](output/compatibility_tests.json) · [原厂接口清单](output/vendor_contracts.json) · [UU 静态及模型检查](output/uu_compatibility_tests.json) · [原厂登录/TLS/UU 本地运行检查](output/native_runtime_tests.json)
+- [安装中断恢复说明](output/插件安装中断恢复说明.md) · [中断恢复检查](output/interruption_tests.json) · [r4 中断问题复现](output/interrupt_r4_reproductions.log)
 - [真实 HND 插件检查](output/real_plugin_tests.json) · [r3 完整根目录缺陷复现](output/real_plugins_r3_reproductions.log)
 - [在线插件检查](output/online_plugin_tests.json) · [r2 缺陷复现](output/online_r2_reproductions.log) · [证书生命周期与共存复核](output/lifecycle_tests.json)：报告绑定当前候选镜像哈希。
 - [镜像回读](output/verification.json) · [卷布局](output/structure.json) · [原始 Alpha 3 分析](analysis/固件分析报告.md)
-- [localmod2-r3](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r3-experimental) · [localmod2-r2](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r2-experimental) · [localmod2-r1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r1-experimental) · [原 localmod2](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-experimental) · [上一版 localmod1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod1-experimental)
+- [localmod2-r4](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r4-experimental) · [localmod2-r3](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r3-experimental) · [localmod2-r2](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r2-experimental) · [localmod2-r1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r1-experimental) · [原 localmod2](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-experimental) · [上一版 localmod1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod1-experimental)
 
-固件 `RT-AX86U_388_24437_localmod2_r4_EXPERIMENTAL.w`，85,721,108 字节。
+固件 `RT-AX86U_388_24437_localmod2_r5_EXPERIMENTAL.w`，85,721,108 字节。
 
 ```text
-SHA256: 921c26da74881f868739c0a42a20171c530755c18df6f6349e69e0351c0f3abb
+SHA256: e55a5178bc4d11a9bc90772362753ee9cc73d644d870a8c572ab5b9376768841
 ```
 
 ## 验证摘要
 
-21 项事件模型检查、19 项兼容检查、7 项 UU 静态/模型检查及 24 项原程序运行与配套检查通过；回读 3,600 个路径和 52,446 个 UBIFS 节点。实时规则测试中，62,068 次普通源端口探测在 24 次表重载和 5 次非路由清空期间均被拒绝。
+本轮 11 类中断场景、69 项检查通过，使用独立虚拟磁盘连续启动 24 次新虚拟机；包括恢复中再次中断、同一次启动重复恢复拒绝，以及在线、离线、新插件和真实 DDNS-Go 的恢复后重试。配置文件/数据库、UU 合成数据和证书存档保持预期状态。详见中断恢复报告；实机 UBIFS 断电和真实 UU 账号/加速仍未验证。
+
+21 项事件模型检查、19 项兼容检查、7 项 UU 静态/模型检查及 24 项原程序运行与配套检查通过；回读 3,601 个路径和 52,456 个 UBIFS 节点。实时规则测试中，63,214 次普通源端口探测在 24 次表重载和 5 次非路由清空期间均被拒绝。
 
 本次 32 项真实插件检查、28 项受控在线管理回归通过，并回归 8 项证书、9 项共存及 24 项原程序运行及配套检查。真实插件分两台全新虚拟机执行：22 项旧版升级、运行/监督、事件、中心重启及卸载检查，10 项当前版从零安装、默认配置及卸载检查。证书由原厂 `gencert.sh`/OpenSSL 生成；全新虚拟机只恢复上一台的自有 `cert.tgz`，证书指纹和 8 个文件保持一致。共存使用实际软件中心服务、原厂 HTTPS/rc 和自有 UU 测试进程；不代表实机断电恢复或真实 UU 加速已验证。
 

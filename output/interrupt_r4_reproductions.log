@@ -1,0 +1,18 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031044523, 2026/10/31 ~ 2046/11/1
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+REPRO r4 killed installer leaves migrated/incomplete active config; no persistent rollback journal
+SKIPD_WIRE "magicv1 0000026 errcmd errkey value error\n" error=<nil>
+INTERRUPT_BASELINE_COMPLETE
+LINUX_READONLY_JOB_STATUS=0

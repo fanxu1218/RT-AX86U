@@ -1,0 +1,6 @@
+LINUX_BUILDER_READY
+PASS abrupt_vm_cut_keeps_synced_uu_files
+PASS recovery_can_be_interrupted_after_quarantine_with_checkpoint_retained
+FAULT_BOUNDARY recovery-center-quarantined
+INTERRUPT_RESULT {"boot":"recover-cut","case":"kill-tree","checks":["abrupt_vm_cut_keeps_synced_uu_files","recovery_can_be_interrupted_after_quarantine_with_checkpoint_retained"]}
+INTERRUPT_CUT_READY

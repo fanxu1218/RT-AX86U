@@ -66,10 +66,11 @@ add('dev/console', stat.S_IFCHR|0o600, rdevmajor=5, rdevminor=1)
 for p in sorted(root.rglob('*')):
     name = str(p.relative_to(root))
     if name.startswith('boot') or (name.startswith('lib/modules') and p.is_file()
-       and not (name.endswith(('/fuse.ko.gz','/virtiofs.ko.gz','/binfmt_misc.ko.gz','/dummy.ko.gz'))
+       and not (name.endswith(('/fuse.ko.gz','/virtiofs.ko.gz','/binfmt_misc.ko.gz','/dummy.ko.gz',
+                             '/virtio_blk.ko.gz','/ext4.ko.gz','/jbd2.ko.gz','/mbcache.ko.gz'))
                 or '/net/netfilter/' in name or '/net/ipv4/netfilter/' in name
                 or '/net/ipv6/netfilter/' in name or '/kernel/lib/' in name
-                or '/kernel/crypto/crc' in name or Path(name).name.startswith('modules.'))):
+                or '/kernel/crypto/crc' in name or 'crc32c' in name or Path(name).name.startswith('modules.'))):
         continue
     st = p.lstat()
     if p.is_symlink():

@@ -8,6 +8,11 @@ ln -s /work/build/casefs/rootfs/rom/etc/koolshare /rom/etc/koolshare
 cp /work/build/casefs/rootfs/rom/etc/localmod-core-id /rom/etc/
 cp /work/sources/localmod/bootstrap.sh /usr/libexec/localmod/
 cp /work/build/casefs/rootfs/usr/libexec/localmod/installer-guard.sh /usr/libexec/localmod/
+cat > /usr/libexec/localmod/plugin-txn <<'SCRIPT'
+#!/bin/sh
+exec /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/plugin-txn "$@"
+SCRIPT
+chmod 500 /usr/libexec/localmod/plugin-txn
 cat > /bin/nvram <<'EOF'
 #!/bin/sh
 case "$1:$2" in get:jffs2_scripts) echo 1;; get:sc_skin) echo ASUSWRT;; get:odmpid|get:productid) echo RT-AX86U;; esac

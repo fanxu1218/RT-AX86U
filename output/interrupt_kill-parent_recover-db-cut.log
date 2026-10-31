@@ -1,0 +1,7 @@
+LINUX_BUILDER_READY
+PASS abrupt_vm_cut_keeps_synced_uu_files
+PASS duplicate_same_boot_recovery_refused_without_moving_live_database
+PASS partial_database_replay_keeps_original_checkpoint_and_restored_files
+FAULT_BOUNDARY database-replay-partially-acknowledged
+INTERRUPT_RESULT {"boot":"recover-db-cut","case":"kill-parent","checks":["abrupt_vm_cut_keeps_synced_uu_files","duplicate_same_boot_recovery_refused_without_moving_live_database","partial_database_replay_keeps_original_checkpoint_and_restored_files"]}
+INTERRUPT_CUT_READY

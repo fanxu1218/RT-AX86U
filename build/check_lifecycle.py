@@ -35,7 +35,7 @@ def job(name, destination):
     print('Running offline VM job:', name, flush=True)
     shutil.copyfile(root / f'build/linux_{name}_job.sh', root / 'build/linux_job.sh')
     with (root / destination).open('w') as output:
-        subprocess.run(['python3', 'build/run_linux.py'], cwd=root, check=True,
+        subprocess.run(['python3', 'build/run_linux.py', '--timeout', '180' if name.startswith('cert_') else '95'], cwd=root, check=True,
                        stdout=output, stderr=subprocess.STDOUT)
 
 private = root / 'build/native-lifecycle-private'
