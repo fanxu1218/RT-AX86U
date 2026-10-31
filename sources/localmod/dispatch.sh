@@ -1,6 +1,6 @@
 #!/bin/sh
 # SPDX-License-Identifier: MIT
-export PATH=/koolshare/bin:/koolshare/scripts:/usr/sbin:/usr/bin:/sbin:/bin
+export PATH=/koolshare/bin:/koolshare/scripts:/bin:/usr/bin:/sbin:/usr/sbin
 [ ! -e /jffs/localmod-disabled ] || exit 0
 [ "$(nvram get jffs2_scripts)" != 0 ] || exit 0
 event=$1

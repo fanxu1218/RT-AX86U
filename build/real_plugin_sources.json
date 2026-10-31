@@ -1,0 +1,87 @@
+{
+  "catalog_url": "https://rogsoft.ddnsto.com/koolcenter/app.json.js",
+  "catalog_snapshot_sha256": "89bdf6170b4c7e216da280567ec4c3403ab6debf365d14370fb6396b7a667fcc",
+  "selected_at": "2026-10-31",
+  "packages": [
+    {
+      "module": "aliddns",
+      "catalog_version": "2.1",
+      "phase": "old",
+      "title": "aliddns",
+      "path": "sources/realplugins/aliddns-history.tar.gz",
+      "source_url": "https://raw.githubusercontent.com/koolshare/rogsoft/4100df46ea63c0c59568636c0ff9af6391592e59/aliddns/aliddns.tar.gz",
+      "sha256": "09da7e6ed0449375e71f805e509572d942f5714bd54fa1d19ba97cbf628e3461",
+      "md5": "d890bac85643e4ae9dce6e830ccb55e4",
+      "internal_version": "2.1",
+      "packaging": "original-published-archive"
+    },
+    {
+      "module": "aliddns",
+      "catalog_version": "2.4",
+      "phase": "current",
+      "title": "aliddns",
+      "path": "sources/realplugins/aliddns-2.4.tar.gz",
+      "source_url": "https://rogsoft.ddnsto.com/aliddns/aliddns.tar.gz",
+      "sha256": "73f5743f02a2b08fe5a9a7858ec96e7adc0290f5cdf84898842bf97ec0a24995",
+      "md5": "4452b3d9ddadb198d73c256570709987",
+      "internal_version": "2.2",
+      "packaging": "original-published-archive"
+    },
+    {
+      "module": "ddnsto",
+      "catalog_version": "3.0.3",
+      "phase": "old",
+      "title": "ddnsto",
+      "path": "sources/realplugins/ddnsto-history.tar.gz",
+      "source_url": "https://raw.githubusercontent.com/koolshare/rogsoft/96cefeb5489beaede5a3421ba02746b56d396973/ddnsto/ddnsto.tar.gz",
+      "sha256": "75e894172bf78433c10956b3821a0f85192a97ecf0f68f59c9244b846f17860b",
+      "md5": "3c3bd23d7ed6e68b9fadb437baf6398f",
+      "internal_version": "3.0.3",
+      "packaging": "original-published-archive"
+    },
+    {
+      "module": "ddnsto",
+      "catalog_version": "4.2.2",
+      "phase": "current",
+      "title": "ddnsto",
+      "path": "sources/realplugins/ddnsto-4.2.2.tar.gz",
+      "source_url": "https://rogsoft.ddnsto.com/ddnsto/ddnsto.tar.gz",
+      "sha256": "afef31317d72c43f2557e66acd6c33cf802ec3db6ca201737537ce73a79bfaf3",
+      "md5": "b6d71c0ee3ac7c3d128334aba64fc620",
+      "internal_version": "4.2.0",
+      "packaging": "original-published-archive"
+    },
+    {
+      "module": "ddnsgo",
+      "catalog_version": "1.28.0",
+      "phase": "old",
+      "title": "ddnsgo",
+      "path": "sources/realplugins/ddnsgo-1.28.0.tar.gz",
+      "source_url": "https://api.github.com/repos/2TimesMeta/koolcenter_ddnsgo/tarball/ea34fb143772d44b064bf5592035419d5dede3dd",
+      "sha256": "c4c44a31df7ec82d76b29267e1c49ac30c1a0818642f377b2cf39b2cca44b67d",
+      "md5": "83a6658218fd6d445e53fe69edf53975",
+      "internal_version": "1.28.0",
+      "packaging": "unchanged-upstream-source-tree",
+      "source_archive_sha256": "d397567ff842a22ff229a4ee6b2462225e677e88747b22e1af35db4fe8917c2a",
+      "git_commit": "ea34fb143772d44b064bf5592035419d5dede3dd"
+    },
+    {
+      "module": "ddnsgo",
+      "catalog_version": "1.29.0",
+      "phase": "current",
+      "title": "ddnsgo",
+      "path": "sources/realplugins/ddnsgo-1.29.0.tar.gz",
+      "source_url": "https://rogsoft.ddnsto.com/ddnsgo/ddnsgo.tar.gz",
+      "sha256": "34f541f8eba6840847a408f408a47032f9ea83b0326a31e21c70a0fbe497dfce",
+      "md5": "7ce2344cc570ba00b6a434e18d45bb4f",
+      "internal_version": "1.29.0",
+      "packaging": "original-published-archive",
+      "upstream_git_commit": "5fbfa15b2a7c0d5faa1e9697a4f76492684bf6a0",
+      "cross_checked_upstream_files": [
+        "bin/ddnsgo",
+        "install.sh",
+        "scripts/ddnsgo_config.sh"
+      ]
+    }
+  ]
+}

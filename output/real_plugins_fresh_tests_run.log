@@ -1,0 +1,28 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031043331, 2026/10/31 ~ 2046/11/1
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS native_shell_resolution_center_start_original_process_helper_private_api_and_uu
+NATIVE_CURL_PROBE numeric_hits=0 numeric_body="" hostname_hits=1 hostname_body="\nowned-curl-probe"
+PASS native_curl_numeric_url_guard_retained_hostname_callback_pinned_to_loopback
+PIPE_REGRESSION "owned-pipe\nowned-pipe\n"
+PASS required_tee_xargs_added_without_replacing_official_busybox
+PASS aliddns_fresh_current_original_scripts_files_and_authenticated_page
+PASS ddnsto_fresh_current_original_scripts_files_and_authenticated_page
+PASS ddnsgo_fresh_current_original_scripts_files_and_authenticated_page
+PASS fresh_current_install_defaults_are_unconfigured
+PASS aliddns_fresh_current_custom_uninstall_preserves_peers_and_uu
+PASS ddnsto_fresh_current_custom_uninstall_preserves_peers_and_uu
+PASS ddnsgo_fresh_current_custom_uninstall_preserves_peers_and_uu
+REAL_PLUGIN_RESULT {"checks":["native_shell_resolution_center_start_original_process_helper_private_api_and_uu","native_curl_numeric_url_guard_retained_hostname_callback_pinned_to_loopback","required_tee_xargs_added_without_replacing_official_busybox","aliddns_fresh_current_original_scripts_files_and_authenticated_page","ddnsto_fresh_current_original_scripts_files_and_authenticated_page","ddnsgo_fresh_current_original_scripts_files_and_authenticated_page","fresh_current_install_defaults_are_unconfigured","aliddns_fresh_current_custom_uninstall_preserves_peers_and_uu","ddnsto_fresh_current_custom_uninstall_preserves_peers_and_uu","ddnsgo_fresh_current_custom_uninstall_preserves_peers_and_uu"],"details":{"actual_process_helper_sha256":"7b2f5abaf14b8df0bbec3c3f5221c500d13c7dd9f02469ce918b59e80f92b1d3","ddnsgo_binary_version":"v6.17.7","ddnsto_binary_version":"4.2.2","guest_architecture":"armv7l","native_wget_sha256":"c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749","plugin_binaries_replaced_by_fixtures":false,"real_third_party_packages_executed":true,"real_uu_monitor_executed":false,"uu_api_requests":1,"uu_launches":1,"uu_monitor_downloads":1}}
+LINUX_READONLY_JOB_STATUS=0

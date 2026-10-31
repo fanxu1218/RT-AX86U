@@ -1,18 +1,18 @@
 {
-  "filename": "RT-AX86U_388_24437_localmod2_r3_EXPERIMENTAL.w",
-  "bytes": 85327892,
-  "sha256": "cc357e6d6ca8358eec97aa60efcc60ed4300ce4d819aa860aed358a8086d15ed",
-  "md5": "2f989925a3b1434176f8454250594dd0",
+  "filename": "RT-AX86U_388_24437_localmod2_r4_EXPERIMENTAL.w",
+  "bytes": 85721108,
+  "sha256": "921c26da74881f868739c0a42a20171c530755c18df6f6349e69e0351c0f3abb",
+  "md5": "dc1dd7e4470b7194906aad1320009d70",
   "start": 0,
   "volumes": {
     "0": {
       "name": "rootfs_ubifs",
-      "reserved": 619,
+      "reserved": 622,
       "type": 1,
       "flags": 1,
-      "blocks": 619,
+      "blocks": 622,
       "first_offset": "0x400000",
-      "payload_bytes": 78598144
+      "payload_bytes": 78979072
     },
     "1": {
       "name": "METADATA",
@@ -43,12 +43,12 @@
     }
   },
   "checks": {
-    "ec_valid": 651,
-    "vid_valid": 651,
+    "ec_valid": 654,
+    "vid_valid": 654,
     "data_valid": 28
   },
   "trailer": [
-    "0x40943cb3",
+    "0x37056905",
     "0x5732",
     "0x4908",
     "0x3",

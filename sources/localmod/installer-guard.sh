@@ -45,6 +45,12 @@ ks_operation_validate(){
 }
 ks_scope_prepare(){
  KS_STAGE=/tmp/$softcenter_installing_todo
+ # DDNS-Go creates an empty runtime directory with its package name. Never
+ # adopt nonempty state or follow links; rmdir also fails closed on a race.
+ if [ -d "$KS_STAGE" ] && [ ! -L "$KS_STAGE" ] &&
+    [ "$(dbus get softcenter_module_${softcenter_installing_todo}_install)" = 1 ]; then
+  rmdir "$KS_STAGE" 2>/dev/null || true
+ fi
  if ! (umask 077; mkdir "$KS_STAGE") 2>/dev/null; then
   echo_date "插件临时目录已存在，保留原内容并停止本次安装：$KS_STAGE"
   return 1

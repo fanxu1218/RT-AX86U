@@ -62,6 +62,14 @@ put(root/'sources/localmod/installer-guard.sh','usr/libexec/localmod/installer-g
 put(root/'sources/localmod/jffsinit.sh','usr/bin/jffsinit.sh',0o755)
 put(root/'sources/localmod/kscore.sh',core+'/bin/kscore.sh',0o755)
 put(root/'sources/localmod/helper.sh','usr/sbin/helper.sh',0o755)
+# The official BusyBox omits tee and xargs. Keep it untouched and expose only the
+# required applets from the already pinned HND donor under a private name.
+put(donor/'bin/busybox','usr/libexec/localmod/busybox',0o500)
+for applet in ['tee', 'xargs']:
+    target=stage/'usr/bin'/applet
+    assert not target.exists() and not target.is_symlink()
+    target.symlink_to('/usr/libexec/localmod/busybox')
+    meta['/usr/bin/'+applet]={'mode':stat.S_IFLNK|0o777,'uid':0,'gid':0,'inum':-1,'nlink':1,'xattr_count':0}
 
 # Both old user hooks and the compatibility dispatcher may call a center helper.
 # A per-event directory makes each helper run once without rewriting user files.
@@ -82,7 +90,7 @@ fi
 
 base=stage/core/'scripts/base.sh'
 text=base.read_text().replace('curl -X POST -d "$ARG0" http://$LANIP:3030/_resp/$ID',
-    'curl --noproxy "*" --local-port 600-1023 -X POST -d "$ARG0" http://127.0.0.1:3032/_resp/$ID')
+    'curl --noproxy "*" --resolve localhost:3032:127.0.0.1 --local-port 600-1023 -X POST -d "$ARG0" http://localhost:3032/_resp/$ID')
 assert ':3030/_resp/' not in text
 base.write_text(text)
 perp=stage/core/'perp/httpdb/rc.main'
@@ -145,7 +153,7 @@ text=ui.read_text()
 assert 'href:"http://"+a.netaddr+":3032"' in text
 text=text.replace('href:"http://"+a.netaddr+":3032"','href:"/Module_Localmod.asp"')
 ui.write_text(text)
-release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','revision':'r3','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
+release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','revision':'r4','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
          'software_center':'KoolCenter 1.9.50 from 388.11_0-20260429',
          'event_hooks':['init-start','services-start','services-stop','service-event','service-event-end','wan-event','wan-start','firewall-start','nat-start','pre-mount','post-mount','unmount'],
          'postconf':['dnsmasq'],

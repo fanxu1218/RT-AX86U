@@ -1,12 +1,12 @@
 LINUX_BUILDER_READY
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031025107, 2026/10/31 ~ 2046/11/1
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031042948, 2026/10/31 ~ 2046/11/1
 starting ntp...
 download uuplugin script info successfully
 URL: http://127.0.0.1:35000/monitor
 MD5: d90649080e15b5165aba44b9ba9ee18f
 download uuplugin script successfully
 prepare to execute uuplugin stript...
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031025107, 2026/10/31 ~ 2046/11/1
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031042948, 2026/10/31 ~ 2046/11/1
 PASS native_restored_tls_login_and_real_center_callback
 PASS original_uu_page_and_private_api_routes_remain_distinct
 PASS native_ntp_uu_starts_owned_worker_with_center_running

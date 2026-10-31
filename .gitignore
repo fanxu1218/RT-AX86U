@@ -72,6 +72,14 @@
 !/build/linux_online_job.sh
 !/build/check_online.py
 !/build/patch_online_installer.py
+!/build/test_online_main.go
+!/build/prepare_real_plugins.py
+!/build/real_plugin_sources.json
+!/build/run_readonly_linux.py
+!/build/linux_real_plugins_job.sh
+!/build/real_plugins_setup.sh
+!/build/test_real_plugins.go
+!/build/check_real_plugins.py
 !/analysis/
 /analysis/*
 !/analysis/固件分析报告.md
@@ -116,3 +124,8 @@
 !/output/online_success_tests_run.log
 !/output/online_errors_tests_run.log
 !/output/online_concurrent_tests_run.log
+!/output/RT-AX86U_388_24437_localmod2_r4_EXPERIMENTAL.build.json
+!/output/real_plugins_r3_reproductions.log
+!/output/real_plugin_tests.json
+!/output/real_plugins_upgrade_tests_run.log
+!/output/real_plugins_fresh_tests_run.log

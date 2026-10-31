@@ -28,7 +28,15 @@ for module in /lib/modules/*/kernel/fs/fuse/fuse.ko.gz /lib/modules/*/kernel/fs/
 done
 if mount -t virtiofs workspace /work; then
   echo "LINUX_BUILDER_READY"
-  if sh /work/build/linux_job.sh; then echo 0 > /work/build/linux-job.status; else echo 1 > /work/build/linux-job.status; fi
+  if grep -qw localmod_readonly=1 /proc/cmdline; then
+    if sh /work/build/linux_real_plugins_job.sh; then
+      echo "LINUX_READONLY_JOB_STATUS=0"
+    else
+      echo "LINUX_READONLY_JOB_STATUS=1"
+    fi
+  else
+    if sh /work/build/linux_job.sh; then echo 0 > /work/build/linux-job.status; else echo 1 > /work/build/linux-job.status; fi
+  fi
   sync
 else
   echo "workspace mount failed"
@@ -58,7 +66,7 @@ add('dev/console', stat.S_IFCHR|0o600, rdevmajor=5, rdevminor=1)
 for p in sorted(root.rglob('*')):
     name = str(p.relative_to(root))
     if name.startswith('boot') or (name.startswith('lib/modules') and p.is_file()
-       and not (name.endswith(('/fuse.ko.gz','/virtiofs.ko.gz'))
+       and not (name.endswith(('/fuse.ko.gz','/virtiofs.ko.gz','/binfmt_misc.ko.gz','/dummy.ko.gz'))
                 or '/net/netfilter/' in name or '/net/ipv4/netfilter/' in name
                 or '/net/ipv6/netfilter/' in name or '/kernel/lib/' in name
                 or '/kernel/crypto/crc' in name or Path(name).name.startswith('modules.'))):

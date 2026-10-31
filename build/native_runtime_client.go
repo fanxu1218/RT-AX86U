@@ -15,6 +15,7 @@ import (
 	"net/url"
 	"os"
 	"os/exec"
+	"path/filepath"
 	"strings"
 	"time"
 )
@@ -25,6 +26,30 @@ func nrMust(e error) {
 	}
 }
 func nrRead(path string) []byte { b, e := os.ReadFile(path); nrMust(e); return b }
+func nrOutput(name string) string {
+	base := os.Getenv("LOCALMOD_TEST_OUTPUT")
+	if base == "" {
+		base = "/work/build"
+	}
+	return filepath.Join(base, name)
+}
+func nrQEMURoot() string {
+	if root := os.Getenv("LOCALMOD_QEMU_ROOT"); root != "" {
+		return root
+	}
+	return "/work/build/casefs/official_rootfs"
+}
+func nrHTTPTimeout() time.Duration {
+	if raw := os.Getenv("LOCALMOD_HTTP_REQUEST_TIMEOUT"); raw != "" {
+		value, e := time.ParseDuration(raw)
+		nrMust(e)
+		if value <= 0 || value > 30*time.Second {
+			panic("invalid native HTTP timeout")
+		}
+		return value
+	}
+	return 2 * time.Second
+}
 func nrCommand(args ...string) string {
 	b, e := exec.Command(args[0], args[1:]...).CombinedOutput()
 	if e != nil {
@@ -42,19 +67,27 @@ type nrServer struct {
 }
 
 func nrStart(ctx context.Context, name string, adapt bool) *nrServer {
-	log, e := os.Create("/work/build/" + name + "-server.log")
+	log, e := os.Create(nrOutput(name + "-server.log"))
 	nrMust(e)
 	preload := "/work/build/native_hw_fixture.so"
 	if adapt {
 		preload = "/work/build/httpd_bridge.so:" + preload
 	}
-	cmd := exec.CommandContext(ctx, "/usr/bin/qemu-arm", "-L", "/work/build/casefs/official_rootfs", "-E", "LD_PRELOAD="+preload, "/usr/libexec/localmod/httpd", "-s", "-p", "34443")
+	cmd := exec.CommandContext(ctx, "/usr/bin/qemu-arm", "-L", nrQEMURoot(), "-E", "LD_PRELOAD="+preload, "/usr/libexec/localmod/httpd", "-s", "-p", "34443")
 	cmd.Dir = "/www"
 	cmd.Stdout = log
 	cmd.Stderr = log
 	nrMust(cmd.Start())
 	s := &nrServer{cmd: cmd, log: log}
-	deadline := time.Now().Add(18 * time.Second)
+	wait := 18 * time.Second
+	if value := os.Getenv("LOCALMOD_TLS_START_TIMEOUT"); value != "" {
+		wait, e = time.ParseDuration(value)
+		nrMust(e)
+		if wait <= 0 || wait > time.Minute {
+			panic("invalid native TLS startup timeout")
+		}
+	}
+	deadline := time.Now().Add(wait)
 	for time.Now().Before(deadline) && ctx.Err() == nil {
 		ca, _ := os.ReadFile("/etc/cacert.pem")
 		cert, _ := os.ReadFile("/etc/cert.pem")
@@ -64,7 +97,7 @@ func nrStart(ctx context.Context, name string, adapt bool) *nrServer {
 			leaf, e := x509.ParseCertificate(block.Bytes)
 			if e == nil {
 				transport := &http.Transport{TLSClientConfig: &tls.Config{RootCAs: roots, MinVersion: tls.VersionTLS12}, DisableKeepAlives: true}
-				client := &http.Client{Transport: transport, Timeout: 2 * time.Second, CheckRedirect: func(*http.Request, []*http.Request) error { return http.ErrUseLastResponse }}
+				client := &http.Client{Transport: transport, Timeout: nrHTTPTimeout(), CheckRedirect: func(*http.Request, []*http.Request) error { return http.ErrUseLastResponse }}
 				res, e := client.Get("https://192.168.77.1:34443/Main_Login.asp")
 				if e == nil {
 					body, err := io.ReadAll(res.Body)
@@ -82,7 +115,7 @@ func nrStart(ctx context.Context, name string, adapt bool) *nrServer {
 		time.Sleep(60 * time.Millisecond)
 	}
 	s.stop()
-	panic("native TLS did not initialize: " + string(nrRead("/work/build/"+name+"-server.log")))
+	panic("native TLS did not initialize: " + string(nrRead(nrOutput(name+"-server.log"))))
 }
 func (s *nrServer) stop() {
 	if s.cmd != nil {
@@ -115,7 +148,10 @@ func (s *nrServer) request(method, path, body string) (int, string) {
 	nrMust(e)
 	b, e := io.ReadAll(res.Body)
 	res.Body.Close()
-	nrMust(e)
+
+	if e != nil {
+		panic(fmt.Sprintf("native response %s %s status=%d length=%d received=%d body=%q: %v", method, path, res.StatusCode, res.ContentLength, len(b), b, e))
+	}
 	for _, c := range res.Cookies() {
 		if c.Name == "asus_s_token" {
 			s.token = c.Value
@@ -137,5 +173,5 @@ func nrResult(name string, checks []string, details map[string]any) {
 	report := map[string]any{"checks": checks, "details": details}
 	b, e := json.MarshalIndent(report, "", "  ")
 	nrMust(e)
-	nrMust(os.WriteFile("/work/build/"+name+"_result.json", append(b, '\n'), 0644))
+	nrMust(os.WriteFile(nrOutput(name+"_result.json"), append(b, '\n'), 0644))
 }

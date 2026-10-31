@@ -236,9 +236,9 @@ func onlineUUStart(ctx context.Context) *onlineUU {
 	l, e := net.Listen("tcp4", "127.0.0.1:35000")
 	nrMust(e)
 	go u.server.Serve(l)
-	u.log, e = os.Create("/work/build/online-" + os.Args[1] + "-ntp.log")
+	u.log, e = os.Create(nrOutput("online-" + os.Args[1] + "-ntp.log"))
 	nrMust(e)
-	u.cmd = exec.CommandContext(ctx, "/usr/bin/qemu-arm", "-0", "ntp", "-L", "/work/build/casefs/official_rootfs", "-E", "LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.so:/work/build/native_uu_transport.so", "/usr/libexec/localmod/rc.vendor")
+	u.cmd = exec.CommandContext(ctx, "/usr/bin/qemu-arm", "-0", "ntp", "-L", nrQEMURoot(), "-E", "LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.so:/work/build/native_uu_transport.so", "/usr/libexec/localmod/rc.vendor")
 	u.cmd.Env = append(os.Environ(), "NATIVE_UU_CASE=1", "NATIVE_UU_TERRITORY=CN/01", "NATIVE_UU_MODE=1")
 	u.cmd.Stdout = u.log
 	u.cmd.Stderr = u.log
@@ -257,7 +257,7 @@ func onlineUUStart(ctx context.Context) *onlineUU {
 	nrMust(os.WriteFile("/tmp/native-ntp-synced", []byte("1"), 0600))
 	coSync(u.cmd)
 	for i := 0; i < 100; i++ {
-		if b, e := os.ReadFile("/tmp/owned-uu-worker.pid"); e == nil {
+		if b, e := os.ReadFile("/tmp/owned-uu-worker.pid"); e == nil && strings.TrimSpace(string(b)) != "" {
 			u.pid, e = strconv.Atoi(strings.TrimSpace(string(b)))
 			nrMust(e)
 			break
@@ -393,7 +393,7 @@ func (t *onlineTest) uninstall(success bool) string {
 	t.rpc("ks_app_remove.sh", "ks_app_remove", map[string]string{"softcenter_installing_todo": "onlineprobe", "softcenter_installing_title": "Owned Online Probe"})
 	return t.wait(success)
 }
-func main() {
+func onlineFixtureMain() {
 	if len(os.Args) != 2 {
 		panic("phase required")
 	}
@@ -492,6 +492,23 @@ func main() {
 		}
 		nrMust(os.RemoveAll("/tmp/onlineprobe"))
 		test.record("preexisting_stage_is_preserved_and_operation_refused")
+		nrMust(os.Mkdir("/tmp/secondprobe", 0700))
+		test.operation("second", "", false)
+		if entries, e := os.ReadDir("/tmp/secondprobe"); e != nil || len(entries) != 0 || repo.count(repo.apps["second"].TarURL) != 0 {
+			panic("unregistered empty directory was adopted or downloaded into")
+		}
+		nrMust(os.Remove("/tmp/secondprobe"))
+		test.record("unregistered_empty_stage_preserved_and_refused")
+		nrMust(os.Mkdir("/tmp/owned-linked-stage", 0700))
+		nrMust(os.WriteFile("/tmp/owned-linked-stage/keep", []byte("linked-runtime"), 0600))
+		nrMust(os.Symlink("/tmp/owned-linked-stage", "/tmp/onlineprobe"))
+		test.operation("v2", "", false)
+		if target, e := os.Readlink("/tmp/onlineprobe"); e != nil || target != "/tmp/owned-linked-stage" || string(nrRead("/tmp/owned-linked-stage/keep")) != "linked-runtime" {
+			panic("registered symlink stage or target changed")
+		}
+		nrMust(os.Remove("/tmp/onlineprobe"))
+		nrMust(os.RemoveAll("/tmp/owned-linked-stage"))
+		test.record("registered_symlink_stage_preserved_and_refused")
 		available, _ := strconv.Atoi(strings.TrimSpace(nrCommand("/bin/sh", "-c", "df -k /jffs | awk 'END {print $4}'")))
 		if available < 4096 {
 			panic("test JFFS unexpectedly full")

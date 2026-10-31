@@ -1,0 +1,60 @@
+localmod2-r3 full-rootfs reproduction, networkless read-only VM
+candidate_sha256=cc357e6d6ca8358eec97aa60efcc60ed4300ce4d819aa860aed358a8086d15ed
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+Error: Address /koolshare/perp/perp.sh is invalid
+
+*** Usage:
+ dw/dh/db <physical address in hex> <number>
+ dw/dh/db <-k> <virtual address in hex> <number>
+ sw/sh/sb <physical address in hex> <data value1> <data value2> ..<data valueN>
+ sw/sh/sb <-k> <virtual address in hex> <data value1> <data value2> ..<data valueN>
+ fw/fh/fb  <physical address in hex> <data value> <length>
+ fw/fh/fb <-k> <virtual address in hex> <data value> <length>
+  -s (currently works with physical addresses for d*/s*/f* commands
+and virtual addresses for s*/f* commands)
+
+REAL_PLUGIN_SETUP_READY
+LINUX_READONLY_JOB_STATUS=0
+E: /bin/sh bootstrap.sh start resolves its unqualified sh to ASUS /usr/sbin/sh -> /bin/memaccess. It prints an invalid-address error for /koolshare/perp/perp.sh; start returns 0 without a backend.
+R: bootstrap and dispatch export /usr/sbin before /bin, conflicting with the official /rom/etc/profile ordering. The prior Alpine root did not contain the vendor memaccess alias.
+F: retain official /bin:/usr/bin:/sbin:/usr/sbin ordering in both owned scripts; preserve all vendor aliases.
+
+Second independent issue, isolated after correcting PATH in the guest:
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+NATIVE_CURL_PROBE numeric_hits=0 numeric_body="" hostname_hits=1 hostname_body="\nowned-curl-probe"
+LINUX_READONLY_JOB_STATUS=0
+retained_vendor_curl_sha256=79b37917d01852d7624e36613dde5354a31ffa86b470d506bdc205f920a0d2d9
+E: actual curl returns exit 0 but sends zero requests for numeric-IP URL; localhost with --resolve reaches the same loopback server once. The authenticated online-install RPC previously timed out waiting for its callback.
+R: retained ASUS curl rejects numeric-IP URLs; r3 base.sh uses http://127.0.0.1:3032/_resp/$ID. The prior Alpine curl fixture did not enforce this vendor check.
+F: use http://localhost:3032 with --resolve localhost:3032:127.0.0.1 and --noproxy, retaining the reserved source port and vendor binary/URL protection.
+
+Third independent issue, after PATH and callback corrections:
+panic: [/bin/sh -c echo owned-pipe | /bin/busybox tee /tmp/real-pipe; cat /tmp/real-pipe]: exit status 1 tee: applet not found
+	cat: can't open '/tmp/real-pipe': No such file or directory
+
+E: official /usr/bin/tee is absent; /bin/busybox tee reports applet not found. Online scripts pipe install/uninstall functions through tee; the operation leaves an empty log and no final result.
+R: required center utility was available only in the prior Alpine fixture, not in the official rootfs.
+F: retain the official BusyBox, add the pinned donor BusyBox under a private path and expose only the missing tee applet.
+
+Fourth independent issue, after preceding corrections:
+DIAGNOSTIC /tmp/upload/soft_install_log.txt
+【2026年10月31日 12:11:13】: =========================== step 1 ================================
+【2026年10月31日 12:11:14】: 插件临时目录已存在，保留原内容并停止本次安装：/tmp/ddnsgo
+【2026年10月31日 12:11:14】: ============================= end =================================
+XU6J03M6
+
+
+E: real DDNS-Go 1.28.0 config/start creates an empty /tmp/ddnsgo directory. The real daemon and local UI work, but updating to 1.29.0 is rejected before download.
+R: r3 guard treats every existing staging name as foreign, including empty runtime directories of registered plugins.
+F: only for an installed module, allow atomic rmdir of an empty real directory before mkdir. A symlink, nonempty directory or failed race still fails closed and retains data.
+
+The same real update also emitted "xargs: not found" from DDNS-Go install.sh; official xargs is absent. The same pinned private donor BusyBox supplies tee and xargs, exposing only those two aliases and retaining /bin/busybox byte-for-byte.

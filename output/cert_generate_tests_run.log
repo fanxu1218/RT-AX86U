@@ -1,8 +1,8 @@
 LINUX_BUILDER_READY
 cacert.pem doesn't exist !!!!!!
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031025107, 2026/10/31 ~ 2046/11/1
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031025107, 2026/10/31 ~ 2046/11/1
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031025107, 2026/10/31 ~ 2046/11/1
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031042948, 2026/10/31 ~ 2046/11/1
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031042948, 2026/10/31 ~ 2046/11/1
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031042948, 2026/10/31 ~ 2046/11/1
 PASS native_auto_generated_ca_server_key_and_verified_tls
 PASS native_save_cert_archive_contains_all_eight_exact_files
 PASS https_process_restart_reuses_existing_certificate

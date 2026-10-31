@@ -1,7 +1,9 @@
 #!/bin/sh
 # SPDX-License-Identifier: MIT
 # prepare runs at JFFS mount completion; start runs at the init idle boundary.
-export PATH=/usr/sbin:/usr/bin:/sbin:/bin
+# The vendor /usr/sbin/sh is the memaccess halfword-write alias. Keep the
+# official shell/tool directories first, as in /rom/etc/profile.
+export PATH=/bin:/usr/bin:/sbin:/usr/sbin
 BASE=/tmp/.localmod
 KSROOT=/koolshare
 export KSROOT PERP_BASE=/koolshare/perp

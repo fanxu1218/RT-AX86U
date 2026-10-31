@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r3_EXPERIMENTAL.w",
-  "candidate_sha256": "cc357e6d6ca8358eec97aa60efcc60ed4300ce4d819aa860aed358a8086d15ed",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r4_EXPERIMENTAL.w",
+  "candidate_sha256": "921c26da74881f868739c0a42a20171c530755c18df6f6349e69e0351c0f3abb",
   "checks": {
     "success_https_catalog_native_wget_install_and_installed_callback_with_uu": true,
     "success_online_update_changes_files_and_metadata_keeps_config_and_uu": true,
@@ -20,6 +20,8 @@
     "errors_native_wget_rejects_repository_hostname_mismatch": true,
     "errors_failed_update_preserves_previous_uninstaller_metadata_and_live_plugin": true,
     "errors_preexisting_stage_is_preserved_and_operation_refused": true,
+    "errors_unregistered_empty_stage_preserved_and_refused": true,
+    "errors_registered_symlink_stage_preserved_and_refused": true,
     "errors_low_jffs_space_update_returns_failure_and_keeps_old_state": true,
     "concurrent_https_catalog_native_wget_install_and_installed_callback_with_uu": true,
     "concurrent_overlapping_online_rpc_rejected_without_overwriting_active_operation": true,
@@ -57,7 +59,7 @@
     }
   },
   "online_installer_sha256": "ed8cbbe55b36102547042472a76b34dbadbdb6b2dc7e89528efad9139a0919f6",
-  "guard_sha256": "64a9b763ec67690b8f0c73916f1c5a4e15f428f9d425a09f33e86fe742a9bc6a",
+  "guard_sha256": "106d5cd104e187a362baa8153a387aeaa57cbe56d0d82b8326c94e8162532136",
   "retained_native_wget_sha256": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749",
   "real_uu_monitor_or_third_party_plugin_executed": false,
   "plugin_download_tls_verification_disabled": false,

@@ -19,11 +19,11 @@ assert (stage / 'usr/libexec/localmod/installer-guard.sh').read_bytes() == (root
 for artifact, path in [('httpd_bridge.so', 'usr/lib/localmod/httpd_bridge.so'),
                        ('rc_bridge.so', 'usr/lib/localmod/rc_bridge.so')]:
     assert (root / 'build' / artifact).read_bytes() == (stage / path).read_bytes()
-subprocess.run(['go', 'build', '-o', 'build/test-online', 'build/test_online.go',
+subprocess.run(['go', 'build', '-o', 'build/test-online', 'build/test_online_main.go', 'build/test_online.go',
                 'build/native_runtime_client.go', 'build/coexist_helpers.go'], check=True,
                env=dict(os.environ, GOOS='linux', GOARCH='arm64', CGO_ENABLED='0'))
 checks, details = {}, {}
-for phase, expected in [('success', 7), ('errors', 11), ('concurrent', 8)]:
+for phase, expected in [('success', 7), ('errors', 13), ('concurrent', 8)]:
     result = root / f'build/online_{phase}_result.json'
     result.unlink(missing_ok=True)
     (root / 'build/online-phase').write_text(phase + '\n')
@@ -78,4 +78,4 @@ catalog = root / 'build/online_catalog_contract.json'
 if catalog.exists():
     report['public_catalog_read_only_contract_snapshot'] = json.loads(catalog.read_text())
 (root / 'output/online_plugin_tests.json').write_text(json.dumps(report, indent=2) + '\n')
-print('PASS all 26 online plugin checks; candidate SHA256', verification['sha256'])
+print('PASS all 28 online plugin checks; candidate SHA256', verification['sha256'])

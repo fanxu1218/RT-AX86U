@@ -9,14 +9,16 @@ final class Delegate: NSObject, VZVirtualMachineDelegate {
     }
 }
 
-guard CommandLine.arguments.count == 4 else {
-    fputs("usage: LinuxBuilder kernel initramfs workspace\n", stderr)
+guard CommandLine.arguments.count == 4 ||
+      (CommandLine.arguments.count == 5 && CommandLine.arguments[4] == "--readonly") else {
+    fputs("usage: LinuxBuilder kernel initramfs workspace [--readonly]\n", stderr)
     exit(2)
 }
+let readOnly = CommandLine.arguments.count == 5
 let config = VZVirtualMachineConfiguration()
 let loader = VZLinuxBootLoader(kernelURL: URL(fileURLWithPath: CommandLine.arguments[1]))
 loader.initialRamdiskURL = URL(fileURLWithPath: CommandLine.arguments[2])
-loader.commandLine = "console=hvc0 quiet panic=-1"
+loader.commandLine = "console=hvc0 quiet panic=-1" + (readOnly ? " localmod_readonly=1" : "")
 config.bootLoader = loader
 config.cpuCount = 2
 config.memorySize = 1024 * 1024 * 1024
@@ -25,9 +27,11 @@ console.attachment = VZFileHandleSerialPortAttachment(fileHandleForReading: nil,
                                                      fileHandleForWriting: .standardOutput)
 config.serialPorts = [console]
 config.entropyDevices = [VZVirtioEntropyDeviceConfiguration()]
+config.networkDevices = []
+config.storageDevices = []
 let fs = VZVirtioFileSystemDeviceConfiguration(tag: "workspace")
 fs.share = VZSingleDirectoryShare(directory: VZSharedDirectory(
-    url: URL(fileURLWithPath: CommandLine.arguments[3]), readOnly: false))
+    url: URL(fileURLWithPath: CommandLine.arguments[3]), readOnly: readOnly))
 config.directorySharingDevices = [fs]
 do { try config.validate() } catch {
     fputs("Linux builder configuration: \(error)\n", stderr)
