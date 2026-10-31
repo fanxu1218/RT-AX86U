@@ -1,0 +1,92 @@
+{
+  "status": "LOCAL_NATIVE_HTTPS_STABILITY_PASS",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w",
+  "candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
+  "checks": {
+    "https-stability-alone_repeated_signals_do_not_restart_the_receive_idle_deadline": true,
+    "https-stability-alone_same_connection_resume_complete_json_and_no_request_replay": true,
+    "https-stability-alone_original_login_tls_uu_page_and_private_plugin_state_preserved": true,
+    "https-stability-alone_interrupted_reads_keep_config_certificates_and_uu_data": true,
+    "https-stability-alone_every_authenticated_readonly_query_returns_complete_expected_json": true,
+    "https-stability-alone_before_and_after_header_eintr_resumes_without_resubmitting_request": true,
+    "https-stability-alone_repeated_real_sigalrm_keeps_tls_forwarding_and_each_backend_id_completes_once": true,
+    "https-stability-alone_native_tls_writes_complete_without_stream_errors": true,
+    "https-stability-alone_uu_native_control_download_and_launch_once": true,
+    "https-stability_repeated_signals_do_not_restart_the_receive_idle_deadline": true,
+    "https-stability_same_connection_resume_complete_json_and_no_request_replay": true,
+    "https-stability_original_login_tls_uu_page_and_private_plugin_state_preserved": true,
+    "https-stability_interrupted_reads_keep_config_certificates_and_uu_data": true,
+    "https-stability_every_authenticated_readonly_query_returns_complete_expected_json": true,
+    "https-stability_before_and_after_header_eintr_resumes_without_resubmitting_request": true,
+    "https-stability_repeated_real_sigalrm_keeps_tls_forwarding_and_each_backend_id_completes_once": true,
+    "https-stability_native_tls_writes_complete_without_stream_errors": true,
+    "https-stability_uu_native_control_download_and_launch_once": true
+  },
+  "details": {
+    "https-stability-alone": {
+      "queries": 36,
+      "status_queries": 18,
+      "version_queries": 18,
+      "controlled_eintr_before_and_after_header": 2,
+      "sigalrm_queries": 2,
+      "signals_per_query": 3,
+      "observed_kernel_eintr": 6,
+      "result": "HTTPS_STABILITY_RESULT phase=https-stability-alone queries=36 failures=0 uu_running=false uu_pid=1618 uu_api_requests=1 uu_downloads=1 uu_launches=start trace_eintr=6",
+      "log_sha256": "b7eade18cf1f5a588169db3b5bc7fd5028914bbda515db99c77d942cf21b578b"
+    },
+    "https-stability": {
+      "queries": 68,
+      "status_queries": 34,
+      "version_queries": 34,
+      "controlled_eintr_before_and_after_header": 2,
+      "sigalrm_queries": 2,
+      "signals_per_query": 3,
+      "observed_kernel_eintr": 7,
+      "result": "HTTPS_STABILITY_RESULT phase=https-stability queries=68 failures=0 uu_running=true uu_pid=1617 uu_api_requests=1 uu_downloads=1 uu_launches=start trace_eintr=7",
+      "log_sha256": "5517799a1e6b797a26d82658d297899d9aff14ec9cbc28f8f1fd89001388b13d"
+    }
+  },
+  "r6_baseline": {
+    "status": "R6_NATURALLY_REPRODUCED",
+    "source_commit": "43e34f09262b8efc5bc89c889763cc59f045ed60",
+    "candidate_image": "output/RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.w",
+    "candidate_sha256": "d2650339ea0868c472db0f25009642fcf23a5335a40fe2c6a6c3bae1b1cc37eb",
+    "httpd_bridge_sha256": "3eeab339bc4c93769b3459535dc1e49e147a7fbf0d06c0349e7b2cb26d3f415e",
+    "log_sha256": "11b01bb7391d456d4b53927fbc9b5c3b0e7fd02966d5b3cfd72ef5f248a4fc02",
+    "queries": 64,
+    "failures": [
+      "READONLY_QUERY id=88035 action=version status=200 bytes=0 valid=false duration=644.820834ms error=unexpected EOF headers=map[Connection:[keep-alive] Content-Type:[application/json]]"
+    ],
+    "uu_launches": 1,
+    "injected_signals_or_errors": false,
+    "cause": "Backend header forwarded, next recv returned EINTR and old loop terminated; native TLS sent exactly the 103 header bytes and closed. Backend completed the ID 88035 callback.",
+    "scope": "Real DDNS-Go current package, original ASUS HTTPS/login/TLS and native UU control with owned monitor/worker; no NIC or router."
+  },
+  "production_files": {
+    "usr/lib/localmod/httpd_bridge.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
+    "usr/libexec/localmod/httpd": "d9a24b751b2c6ec0a9bf5931b6b1380e75c136bd672a91a5a5118c6ee9e1586d",
+    "usr/libexec/localmod/rc.vendor": "9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62",
+    "usr/libexec/localmod/plugin-txn": "23e575aa4299b075a7fa120fb6672e5c417dca5892f1449c29905f9a862af232",
+    "usr/libexec/localmod/bootstrap.sh": "fd6980a8b1ff18a68897d1ecbe0725dd5918331fe3956c7beadb2e224f33ed3f",
+    "rom/etc/koolshare/scripts/base.sh": "d29dcb38a94aa51b0df22b0fdd8a6a9e9636777bad3a2ae4431d9af308773726",
+    "usr/sbin/curl": "79b37917d01852d7624e36613dde5354a31ffa86b470d506bdc205f920a0d2d9",
+    "usr/sbin/wget": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749"
+  },
+  "test_fixtures": {
+    "build/https_trace_fixture.so": "578530d8bdc37f24ef90f43d239e98ca066d267866f90d70e03b371c376cadba",
+    "build/relay-idle-fixture": "ec5f97d8ff95fac88b34acb367a08a4d4db83e329c5774cb5f5d032b6766b1f0"
+  },
+  "scope": [
+    "104 distinct authenticated real DDNS-Go status/version RPCs, no automatic request retry",
+    "Real original ASUS TLS/login, httpdb/skipd/perp, unchanged real DDNS-Go plugin and native curl callback",
+    "Native UU NTP/download/checksum control flow with owned monitor/worker; query phase compares worker stopped vs running",
+    "Actual signal interruption plus deterministic EINTR boundary injection; same production receive helper tested with a one-second idle argument under a repeated signal stream; production remains 120 seconds",
+    "Config file, literal native plugin records, certificate archive and synthetic persistent/temporary UU data checked unchanged",
+    "No NIC, read-only workspace and disposable RAM root/JFFS; no router accessed or flashed"
+  ],
+  "not_tested": [
+    "Physical router, stock kernel 4.1 timing, WAN downloads or long-running field stability",
+    "Real UU monitor/account/entitlement/game acceleration",
+    "Arbitrary TLS/network failures or arbitrary plugins; no guarantee against every cause of truncated responses"
+  ]
+}

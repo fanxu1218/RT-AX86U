@@ -57,6 +57,7 @@ cat /tmp/.localmod/bootstrap.log
 echo REAL_PLUGIN_SETUP_READY
 
 phase=$(cat /work/build/real-plugin-phase)
+case "$phase" in https-stability*) export LOCALMOD_HTTPS_TRACE=1; exec /work/build/test-https-stability "$phase";; esac
 case "$phase" in
  interrupt-*) exec /work/build/test-interrupt "$phase";;
  upgrade|fresh) ;;

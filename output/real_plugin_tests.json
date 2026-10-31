@@ -1,7 +1,7 @@
 {
   "status": "LOCAL_ISOLATION_PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.w",
-  "candidate_sha256": "d2650339ea0868c472db0f25009642fcf23a5335a40fe2c6a6c3bae1b1cc37eb",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w",
+  "candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
   "checks": {
     "upgrade_native_shell_resolution_center_start_original_process_helper_private_api_and_uu": true,
     "upgrade_native_curl_numeric_url_guard_retained_hostname_callback_pinned_to_loopback": true,
@@ -287,6 +287,9 @@
       }
     ]
   },
+  "run_observations": [
+    "The r6 header-only EOF was naturally reproduced in https_r6_reproduction.json. See https_stability_tests.json for the same-connection EINTR fix and focused native HTTPS/UU validation; no RPC is automatically retried."
+  ],
   "production_files": {
     "usr/libexec/localmod/bootstrap.sh": "fd6980a8b1ff18a68897d1ecbe0725dd5918331fe3956c7beadb2e224f33ed3f",
     "usr/libexec/localmod/dispatch.sh": "96fee2f2f2507dcc3371f0ccc95ecbec61699c772a23078b811ae9220a467e4e",
@@ -317,8 +320,5 @@
     "Alibaba DNS API changes, DDNSTO authenticated cloud tunnel, DDNS-Go provider authentication",
     "Real UU monitor/account/discovery/entitlement/game traffic acceleration",
     "Arbitrary plugin ecosystem; separate interruption_tests.json covers defined recovery cases, not physical power loss"
-  ],
-  "run_observations": [
-    "One initial DDNS-Go read-only status request returned an unexpected EOF after HTTP 200 headers. A fresh full upgrade/fresh VM run, including four distinct status requests, passed without retrying an RPC. Cause remains unconfirmed; server-log diagnostics were added. This is not claimed as a firmware fix."
   ]
 }

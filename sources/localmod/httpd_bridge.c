@@ -18,6 +18,7 @@
 #include <sys/socket.h>
 #include <sys/stat.h>
 #include <sys/time.h>
+#include <time.h>
 #include <unistd.h>
 
 #define HEAD_MAX 8192
@@ -177,6 +178,26 @@ static int send_all(int fd,const void *data,size_t length) {
  while(length){ssize_t n=send(fd,p,length,MSG_NOSIGNAL);if(n<0 && errno==EINTR)continue;
   if(n<=0)return -1;p+=n;length-=(size_t)n;}return 0;
 }
+/* ASUS httpd has a periodic SIGALRM. A receive timeout disables Linux's
+ * automatic restart, even with SA_RESTART. Keep the same backend connection
+ * after EINTR; never replay the HTTP request. Signals must not reset the
+ * existing 120-second idle budget. Successful bytes begin the next idle wait. */
+static ssize_t receive_response(int fd,void *data,size_t size,unsigned idle_seconds) {
+ struct timespec now,end;
+ if(clock_gettime(CLOCK_MONOTONIC,&end))return -1;end.tv_sec+=idle_seconds;
+ for(;;){
+  if(clock_gettime(CLOCK_MONOTONIC,&now))return -1;
+  time_t seconds=end.tv_sec-now.tv_sec;long nanos=end.tv_nsec-now.tv_nsec;
+  if(nanos<0){seconds--;nanos+=1000000000L;}
+  if(seconds<0 || (!seconds&&!nanos)){errno=ETIMEDOUT;return -1;}
+  struct timeval remaining={seconds,(nanos+999)/1000};
+  if(remaining.tv_usec>=1000000){remaining.tv_sec++;remaining.tv_usec-=1000000;}
+  if(setsockopt(fd,SOL_SOCKET,SO_RCVTIMEO,&remaining,sizeof(remaining)))return -1;
+  ssize_t n=recv(fd,data,size,0);
+  if(n<0&&errno==EINTR)continue;
+  return n;
+ }
+}
 static void relay(FILE *stream) {
  int fd=socket(AF_INET,SOCK_STREAM,0);
  if(fd<0){error_reply(stream,503);return;}
@@ -197,7 +218,7 @@ static void relay(FILE *stream) {
   request.body_len-=got;
   if(!got || send_all(fd,chunk,got)){close(fd);error_reply(stream,503);return;}}
  int received=0;ssize_t got;
- while((got=recv(fd,chunk,sizeof(chunk),0))>0){received=1;next_fwrite(chunk,1,(size_t)got,stream);}
+ while((got=receive_response(fd,chunk,sizeof(chunk),120))>0){received=1;next_fwrite(chunk,1,(size_t)got,stream);}
  close(fd);if(!received)error_reply(stream,503);
 }
 static int bridge_print(FILE *stream,const char *format,va_list args) {

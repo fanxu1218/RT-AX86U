@@ -38,7 +38,7 @@ retained = {'usr/sbin/httpd': 'usr/libexec/localmod/httpd', 'sbin/rc': 'usr/libe
 for name in paths:
     assert (stage / retained.get(name, name)).read_bytes() == (official / name).read_bytes(), name
 hashes = {name: hashlib.sha256((official / name).read_bytes()).hexdigest() for name in paths}
-test_names = {'native_hw_fixture.so', 'native_uu_transport.so', 'native_shadow_hash.txt',
+test_names = {'https_trace_fixture.so', 'relay-idle-fixture', 'test-https-stability', 'native_hw_fixture.so', 'native_uu_transport.so', 'native_shadow_hash.txt',
               'native_defaults.bin', 'Module_NativeProbe.asp', 'native_probe.sh'}
 fixture_leaks = [str(p.relative_to(stage)) for p in stage.rglob('*') if p.name in test_names]
 assert not fixture_leaks, fixture_leaks

@@ -1,7 +1,7 @@
 {
   "status": "LOCAL_INTERRUPTION_RECOVERY_PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.w",
-  "candidate_sha256": "d2650339ea0868c472db0f25009642fcf23a5335a40fe2c6a6c3bae1b1cc37eb",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w",
+  "candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
   "checks": {
     "foundation_foundation_real_plugin_configuration_and_uu_synced": true,
     "download_cut_download_interrupted_before_mutation": true,
@@ -215,7 +215,7 @@
     "usr/libexec/localmod/plugin-txn": "23e575aa4299b075a7fa120fb6672e5c417dca5892f1449c29905f9a862af232",
     "usr/libexec/localmod/installer-guard.sh": "fa6a2ae1084b2546aa873e1ef079c7a2b8df810ece6bc63c2e2ed54b348e63bf",
     "usr/libexec/localmod/bootstrap.sh": "fd6980a8b1ff18a68897d1ecbe0725dd5918331fe3956c7beadb2e224f33ed3f",
-    "usr/lib/localmod/httpd_bridge.so": "3eeab339bc4c93769b3459535dc1e49e147a7fbf0d06c0349e7b2cb26d3f415e",
+    "usr/lib/localmod/httpd_bridge.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
     "rom/etc/koolshare/scripts/ks_app_install.sh": "3724f3433cb77eb4d11791d9f1af32877d692f390be6c0d7f05c27714842761a",
     "rom/etc/koolshare/scripts/ks_tar_install.sh": "fab2333cbc0bb7ffa7dce9504ddedca73acd8c17168491dfc26d3db4b64d1842"
   },
@@ -239,19 +239,5 @@
     "Physical UBIFS/NAND power cuts, stock 4.1 kernel and actual JFFS durability",
     "Real UU account, monitor, cloud discovery and acceleration traffic",
     "Rollback outside the center tree/skipd, arbitrary privileged installer behavior or concurrent background file writers"
-  ],
-  "execution_notes": {
-    "continued_after_fixture_timeouts": true,
-    "completed_current_image_phase_logs_checked_by_sha256": {
-      "output/interrupt_download_cut.log": "b305a1452bdeaca764157c1dfcda7ffba637430ec75bb20ebba9164b0a22d8f0",
-      "output/interrupt_download_verify.log": "e43ea6c770cc94a5fddf35fefb08de27d62747d7796846bf1789f7cc5d53f3b2",
-      "output/interrupt_checkpoint_cut.log": "46a7415b051e7d6ab316cd2642c7943eba6878ae0312ff95b5d2a0b59b5c1876",
-      "output/interrupt_checkpoint_verify.log": "f72e903216ac5f753483db9a52ab0749d5988033937e47f6bd3ac0bfbd1ca23e",
-      "output/interrupt_kill-parent_cut.log": "f938b4287bf03b6187112f550b65b29e90bd7c07b969942e5132b6ceb7af28d4",
-      "output/interrupt_kill-parent_verify.log": "3c1f94c24db8f055b557108b5695cb41fbe6d67f1c9798eb6674fcbb34a3bdbc",
-      "output/interrupt_kill-parent_recover-db-cut.log": "9c4aba4660259847df62ce1e5876515908a6d95288f3072d05a202c005ad6415"
-    },
-    "same_rpc_automatically_retried": false,
-    "ntp_wait": "Original handler and one signal; atomic fixture readiness; 45 second bounded full-rootfs wait under high host scheduling load"
-  }
+  ]
 }

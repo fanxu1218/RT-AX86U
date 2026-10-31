@@ -22,4 +22,3 @@ root=/koolshare/webs/
 upload=/tmp/upload
 conn=0x1064e0 nc=0x1063f8 id=51001 removed
 conn=0x106460 nc=0x106988 id=51002 removed
-

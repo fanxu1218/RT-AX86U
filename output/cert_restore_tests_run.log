@@ -1,12 +1,11 @@
 LINUX_BUILDER_READY
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031073214, 2026/10/31 ~ 2046/11/1
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031120528, 2026/10/31 ~ 2046/11/1
 cacert.pem doesn't exist !!!!!!
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031073236, 2026/10/31 ~ 2046/11/1
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031120540, 2026/10/31 ~ 2046/11/1
 cacert.pem doesn't exist !!!!!!
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031073244, 2026/10/31 ~ 2046/11/1
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031120545, 2026/10/31 ~ 2046/11/1
 PASS fresh_vm_native_restore_keeps_leaf_and_complete_key_archive
 PASS native_restore_recreates_export_link_and_combined_pem
 PASS native_corrupt_archive_regenerates_valid_tls_and_saved_archive
 PASS native_save_disabled_generates_tls_without_persistent_archive
 PASS original HTTPd/libshared/gencert/OpenSSL executed; synthetic NVRAM and fresh Linux guests, no router or production key
-

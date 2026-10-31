@@ -1,0 +1,16 @@
+{
+  "status": "R6_NATURALLY_REPRODUCED",
+  "source_commit": "43e34f09262b8efc5bc89c889763cc59f045ed60",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.w",
+  "candidate_sha256": "d2650339ea0868c472db0f25009642fcf23a5335a40fe2c6a6c3bae1b1cc37eb",
+  "httpd_bridge_sha256": "3eeab339bc4c93769b3459535dc1e49e147a7fbf0d06c0349e7b2cb26d3f415e",
+  "log_sha256": "11b01bb7391d456d4b53927fbc9b5c3b0e7fd02966d5b3cfd72ef5f248a4fc02",
+  "queries": 64,
+  "failures": [
+    "READONLY_QUERY id=88035 action=version status=200 bytes=0 valid=false duration=644.820834ms error=unexpected EOF headers=map[Connection:[keep-alive] Content-Type:[application/json]]"
+  ],
+  "uu_launches": 1,
+  "injected_signals_or_errors": false,
+  "cause": "Backend header forwarded, next recv returned EINTR and old loop terminated; native TLS sent exactly the 103 header bytes and closed. Backend completed the ID 88035 callback.",
+  "scope": "Real DDNS-Go current package, original ASUS HTTPS/login/TLS and native UU control with owned monitor/worker; no NIC or router."
+}

@@ -72,6 +72,9 @@ func nrStart(ctx context.Context, name string, adapt bool) *nrServer {
 	preload := "/work/build/native_hw_fixture.so"
 	if adapt {
 		preload = "/work/build/httpd_bridge.so:" + preload
+		if os.Getenv("LOCALMOD_HTTPS_TRACE") == "1" {
+			preload = "/work/build/httpd_bridge.so:/work/build/https_trace_fixture.so:/work/build/native_hw_fixture.so"
+		}
 	}
 	cmd := exec.CommandContext(ctx, "/usr/bin/qemu-arm", "-L", nrQEMURoot(), "-E", "LD_PRELOAD="+preload, "/usr/libexec/localmod/httpd", "-s", "-p", "34443")
 	cmd.Dir = "/www"

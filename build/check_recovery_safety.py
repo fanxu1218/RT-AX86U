@@ -44,7 +44,7 @@ def boot(case,phase,disk,baseline=False,cut=False):
 def main():
     os.chdir(ROOT)
     verification=json.loads((ROOT/'output/verification.json').read_text())
-    assert verification['image'].endswith('localmod2_r6_EXPERIMENTAL.w') and all(verification['checks'].values())
+    assert verification['image'].endswith('localmod2_r7_EXPERIMENTAL.w') and all(verification['checks'].values())
     assert sha(ROOT/verification['image'])==verification['sha256']
     stage=ROOT/'build/casefs/rootfs';back=ROOT/'build/casefs/roundtrip'
     paths=['usr/libexec/localmod/plugin-txn','usr/libexec/localmod/bootstrap.sh','usr/libexec/localmod/installer-guard.sh','usr/lib/localmod/httpd_bridge.so']

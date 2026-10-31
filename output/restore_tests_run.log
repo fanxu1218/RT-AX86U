@@ -1,6 +1,6 @@
 LINUX_BUILDER_READY
 PASS privileged source port reaches private API
-PASS 24 live table replacements reject all unprivileged probes; attempts 68875
+PASS 24 live table replacements reject all unprivileged probes; attempts 62601
 PASS noflush rules keep private API guard first
 PASS non-routing flush preserves custom chains and private API isolation
 PASS test-only restore does not emit events
@@ -37,4 +37,3 @@ event firewall-start result 0
 event nat-start result 0
 event firewall-start result 0
 event firewall-start result 0
-

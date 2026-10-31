@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.w",
-  "candidate_sha256": "d2650339ea0868c472db0f25009642fcf23a5335a40fe2c6a6c3bae1b1cc37eb",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w",
+  "candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
   "checks": {
     "success_https_catalog_native_wget_install_and_installed_callback_with_uu": true,
     "success_online_update_changes_files_and_metadata_keeps_config_and_uu": true,

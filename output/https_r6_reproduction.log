@@ -1,0 +1,1153 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031115727, 2026/10/31 ~ 2046/11/1
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+READONLY_QUERY id=88000 action=status status=200 bytes=59 valid=true duration=257.484584ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88001 action=version status=200 bytes=21 valid=true duration=700.284958ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88002 action=status status=200 bytes=59 valid=true duration=268.710375ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88003 action=version status=200 bytes=21 valid=true duration=705.050834ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88004 action=status status=200 bytes=59 valid=true duration=267.595208ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88005 action=version status=200 bytes=21 valid=true duration=712.781834ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88006 action=status status=200 bytes=59 valid=true duration=331.572833ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88007 action=version status=200 bytes=21 valid=true duration=739.985917ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88008 action=status status=200 bytes=59 valid=true duration=286.686958ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88009 action=version status=200 bytes=21 valid=true duration=688.172334ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88010 action=status status=200 bytes=59 valid=true duration=261.886458ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88011 action=version status=200 bytes=21 valid=true duration=782.572ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88012 action=status status=200 bytes=59 valid=true duration=255.877125ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88013 action=version status=200 bytes=21 valid=true duration=687.475084ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88014 action=status status=200 bytes=59 valid=true duration=260.85025ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88015 action=version status=200 bytes=21 valid=true duration=697.145583ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88016 action=status status=200 bytes=59 valid=true duration=259.036541ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88017 action=version status=200 bytes=21 valid=true duration=687.436667ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88018 action=status status=200 bytes=59 valid=true duration=264.507834ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88019 action=version status=200 bytes=21 valid=true duration=692.704792ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88020 action=status status=200 bytes=59 valid=true duration=262.758667ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88021 action=version status=200 bytes=21 valid=true duration=692.803792ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88022 action=status status=200 bytes=59 valid=true duration=257.524166ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88023 action=version status=200 bytes=21 valid=true duration=693.417833ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88024 action=status status=200 bytes=59 valid=true duration=258.473917ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88025 action=version status=200 bytes=21 valid=true duration=694.714875ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88026 action=status status=200 bytes=59 valid=true duration=323.027625ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88027 action=version status=200 bytes=21 valid=true duration=743.182667ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88028 action=status status=200 bytes=59 valid=true duration=285.844334ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88029 action=version status=200 bytes=21 valid=true duration=720.22125ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88030 action=status status=200 bytes=59 valid=true duration=304.492208ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88031 action=version status=200 bytes=21 valid=true duration=865.242376ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88032 action=status status=200 bytes=59 valid=true duration=287.902291ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88033 action=version status=200 bytes=21 valid=true duration=701.280292ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88034 action=status status=200 bytes=59 valid=true duration=274.291ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88035 action=version status=200 bytes=0 valid=false duration=644.820834ms error=unexpected EOF headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+FAILED_BODY ""
+READONLY_QUERY id=88036 action=status status=200 bytes=59 valid=true duration=267.117542ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88037 action=version status=200 bytes=21 valid=true duration=695.757792ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88038 action=status status=200 bytes=59 valid=true duration=256.196709ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88039 action=version status=200 bytes=21 valid=true duration=698.40475ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88040 action=status status=200 bytes=59 valid=true duration=259.629125ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88041 action=version status=200 bytes=21 valid=true duration=692.3345ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88042 action=status status=200 bytes=59 valid=true duration=259.873916ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88043 action=version status=200 bytes=21 valid=true duration=693.183458ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88044 action=status status=200 bytes=59 valid=true duration=277.272292ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88045 action=version status=200 bytes=21 valid=true duration=703.039792ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88046 action=status status=200 bytes=59 valid=true duration=272.667667ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88047 action=version status=200 bytes=21 valid=true duration=689.696ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88048 action=status status=200 bytes=59 valid=true duration=260.122251ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88049 action=version status=200 bytes=21 valid=true duration=684.097917ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88050 action=status status=200 bytes=59 valid=true duration=352.883875ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88051 action=version status=200 bytes=21 valid=true duration=682.438751ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88052 action=status status=200 bytes=59 valid=true duration=256.737375ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88053 action=version status=200 bytes=21 valid=true duration=703.617958ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88054 action=status status=200 bytes=59 valid=true duration=261.577875ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88055 action=version status=200 bytes=21 valid=true duration=696.799542ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88056 action=status status=200 bytes=59 valid=true duration=267.684626ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88057 action=version status=200 bytes=21 valid=true duration=693.06375ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88058 action=status status=200 bytes=59 valid=true duration=259.077375ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88059 action=version status=200 bytes=21 valid=true duration=694.650292ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88060 action=status status=200 bytes=59 valid=true duration=274.377084ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88061 action=version status=200 bytes=21 valid=true duration=700.956875ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88062 action=status status=200 bytes=59 valid=true duration=332.356041ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=88063 action=version status=200 bytes=21 valid=true duration=967.122168ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+HTTPS_STABILITY_RESULT queries=64 failures=1 uu_launches=start
+DIAGNOSTIC /tmp/https-relay-trace
+fwrite stream=0x411f2d10 size=44 count=1 returned=1 error=0 errno=0
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=3
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=3
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=3
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=3
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=3
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=3
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=3
+fwrite stream=0x139950 size=1 count=232 returned=232 error=0 errno=3
+SSL_write ssl=0x12dd78 requested=7740 returned=7740 errno=0
+fwrite stream=0x139950 size=1 count=359 returned=359 error=0 errno=0
+SSL_write ssl=0x12dd78 requested=360 returned=360 errno=0
+fwrite stream=0x139950 size=1 count=47 returned=47 error=0 errno=0
+SSL_write ssl=0x12dd78 requested=143 returned=143 errno=0
+fwrite stream=0x139950 size=1 count=28 returned=28 error=0 errno=0
+fwrite stream=0x139950 size=1 count=258 returned=258 error=0 errno=2
+fwrite stream=0x139950 size=1 count=271 returned=271 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=2295 returned=2295 errno=0
+fwrite stream=0x139950 size=1 count=167 returned=167 error=0 errno=0
+SSL_write ssl=0x12dd78 requested=168 returned=168 errno=0
+fwrite stream=0x139950 size=1 count=511 returned=511 error=0 errno=0
+fwrite stream=0x139950 size=1 count=551 returned=551 error=0 errno=0
+fwrite stream=0x139950 size=1 count=461 returned=461 error=0 errno=2
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=2
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=2
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=2
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=2
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=2
+fwrite stream=0x139950 size=1 count=1020 returned=1020 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=8192 returned=8192 errno=0
+fwrite stream=0x139950 size=1 count=651 returned=651 error=0 errno=0
+fwrite stream=0x139950 size=1 count=42 returned=42 error=0 errno=2
+fwrite stream=0x139950 size=1 count=56 returned=56 error=0 errno=2
+fwrite stream=0x139950 size=1 count=99 returned=99 error=0 errno=2
+fwrite stream=0x139950 size=1 count=143 returned=143 error=0 errno=2
+fwrite stream=0x139950 size=1 count=50 returned=50 error=0 errno=2
+fwrite stream=0x139950 size=1 count=106 returned=106 error=0 errno=2
+fwrite stream=0x139950 size=1 count=138 returned=138 error=0 errno=2
+fwrite stream=0x139950 size=1 count=688 returned=688 error=0 errno=2
+fwrite stream=0x139950 size=1 count=7 returned=7 error=0 errno=2
+fwrite stream=0x139950 size=1 count=109 returned=109 error=0 errno=2
+fwrite stream=0x139950 size=1 count=147 returned=147 error=0 errno=2
+fwrite stream=0x139950 size=1 count=53 returned=53 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1942 returned=1942 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+SSL_write ssl=0x12dd78 requested=17 returned=17 errno=0
+SSL_write ssl=0x12dd78 requested=19 returned=19 errno=0
+SSL_write ssl=0x12dd78 requested=37 returned=37 errno=0
+SSL_write ssl=0x12dd78 requested=25 returned=25 errno=0
+SSL_write ssl=0x12dd78 requested=77 returned=77 errno=0
+SSL_write ssl=0x12dd78 requested=19 returned=19 errno=0
+SSL_write ssl=0x12dd78 requested=2 returned=2 errno=0
+SSL_write ssl=0x12dd78 requested=13 returned=13 errno=0
+SSL_write ssl=0x12dd78 requested=56 returned=56 errno=0
+SSL_write ssl=0x12dd78 requested=15 returned=15 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=30 errno=0 header=0
+fwrite stream=0x139950 size=1 count=30 returned=30 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=133 returned=133 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=303 errno=0 header=1
+fwrite stream=0x139950 size=1 count=303 returned=303 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=303 returned=303 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=409 errno=0 header=1
+fwrite stream=0x139950 size=1 count=409 returned=409 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=409 returned=409 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=409 errno=0 header=1
+fwrite stream=0x139950 size=1 count=409 returned=409 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=409 returned=409 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=409 errno=0 header=1
+fwrite stream=0x139950 size=1 count=409 returned=409 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=409 returned=409 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=409 errno=0 header=1
+fwrite stream=0x139950 size=1 count=409 returned=409 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=409 returned=409 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=409 errno=0 header=1
+fwrite stream=0x139950 size=1 count=409 returned=409 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=409 returned=409 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=592 errno=0 header=1
+fwrite stream=0x139950 size=1 count=592 returned=592 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=592 returned=592 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=592 errno=0 header=1
+fwrite stream=0x139950 size=1 count=592 returned=592 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=592 returned=592 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=592 errno=0 header=1
+fwrite stream=0x139950 size=1 count=592 returned=592 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=592 returned=592 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=592 errno=0 header=1
+fwrite stream=0x139950 size=1 count=592 returned=592 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=592 returned=592 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=592 errno=0 header=1
+fwrite stream=0x139950 size=1 count=592 returned=592 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=592 returned=592 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=689 errno=0 header=1
+fwrite stream=0x139950 size=1 count=689 returned=689 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=689 returned=689 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=759 errno=0 header=1
+fwrite stream=0x139950 size=1 count=759 returned=759 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=759 returned=759 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=824 errno=0 header=1
+fwrite stream=0x139950 size=1 count=824 returned=824 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=824 returned=824 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=824 errno=0 header=1
+fwrite stream=0x139950 size=1 count=824 returned=824 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=824 returned=824 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=824 errno=0 header=1
+fwrite stream=0x139950 size=1 count=824 returned=824 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=824 returned=824 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=824 errno=0 header=1
+fwrite stream=0x139950 size=1 count=824 returned=824 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=824 returned=824 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=824 errno=0 header=1
+fwrite stream=0x139950 size=1 count=824 returned=824 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=824 returned=824 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=824 errno=0 header=1
+fwrite stream=0x139950 size=1 count=824 returned=824 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=824 returned=824 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=966 errno=0 header=1
+fwrite stream=0x139950 size=1 count=966 returned=966 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=966 returned=966 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=966 errno=0 header=1
+fwrite stream=0x139950 size=1 count=966 returned=966 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=966 returned=966 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=966 errno=0 header=1
+fwrite stream=0x139950 size=1 count=966 returned=966 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=966 returned=966 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1065 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1065 returned=1065 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1065 returned=1065 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1065 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1065 returned=1065 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1065 returned=1065 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1065 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1065 returned=1065 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1065 returned=1065 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1065 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1065 returned=1065 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1065 returned=1065 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1065 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1065 returned=1065 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1065 returned=1065 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1065 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1065 returned=1065 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1065 returned=1065 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1065 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1065 returned=1065 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1065 returned=1065 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1164 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1164 returned=1164 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1164 returned=1164 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1266 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1266 returned=1266 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1266 returned=1266 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1266 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1266 returned=1266 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1266 returned=1266 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1266 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1266 returned=1266 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1266 returned=1266 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1266 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1266 returned=1266 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1266 returned=1266 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1266 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1266 returned=1266 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1266 returned=1266 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1266 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1266 returned=1266 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1266 returned=1266 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1266 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1266 returned=1266 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1266 returned=1266 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1391 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1391 returned=1391 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1391 returned=1391 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1391 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1391 returned=1391 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1391 returned=1391 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1391 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1391 returned=1391 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1391 returned=1391 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1453 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1453 returned=1453 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1453 returned=1453 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1515 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1515 returned=1515 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1515 returned=1515 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1515 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1515 returned=1515 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1515 returned=1515 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1577 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1577 returned=1577 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1577 returned=1577 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1577 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1577 returned=1577 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1577 returned=1577 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1577 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1577 returned=1577 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1577 returned=1577 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1577 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1577 returned=1577 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1577 returned=1577 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1577 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1577 returned=1577 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1577 returned=1577 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1640 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1640 returned=1640 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1640 returned=1640 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1640 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1640 returned=1640 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1640 returned=1640 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1640 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1640 returned=1640 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1640 returned=1640 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1640 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1640 returned=1640 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1640 returned=1640 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1640 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1640 returned=1640 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1640 returned=1640 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1640 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1640 returned=1640 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1640 returned=1640 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1640 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1640 returned=1640 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1640 returned=1640 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1822 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1822 returned=1822 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1822 returned=1822 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1822 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1822 returned=1822 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1822 returned=1822 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1822 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1822 returned=1822 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1822 returned=1822 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1981 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1981 returned=1981 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1981 returned=1981 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1981 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1981 returned=1981 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1981 returned=1981 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1981 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1981 returned=1981 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1981 returned=1981 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=1981 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1981 returned=1981 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=1981 returned=1981 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=2092 errno=0 header=1
+fwrite stream=0x139950 size=1 count=2092 returned=2092 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=2092 returned=2092 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=2092 errno=0 header=1
+fwrite stream=0x139950 size=1 count=2092 returned=2092 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=2092 returned=2092 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=30 errno=0 header=0
+fwrite stream=0x139950 size=1 count=30 returned=30 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=133 returned=133 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+fwrite stream=0x139950 size=1 count=504 returned=504 error=0 errno=3
+fwrite stream=0x139950 size=1 count=3 returned=3 error=0 errno=2
+fwrite stream=0x139950 size=1 count=498 returned=498 error=0 errno=2
+fwrite stream=0x139950 size=1 count=21 returned=21 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1339 returned=1339 errno=0
+fwrite stream=0x139950 size=1 count=607 returned=607 error=0 errno=0
+SSL_write ssl=0x12dd78 requested=608 returned=608 errno=0
+SSL_write ssl=0x12dd78 requested=1 returned=1 errno=0
+fwrite stream=0x139950 size=1 count=46 returned=46 error=0 errno=0
+fwrite stream=0x139950 size=1 count=263 returned=263 error=0 errno=2
+fwrite stream=0x139950 size=1 count=362 returned=362 error=0 errno=2
+fwrite stream=0x139950 size=1 count=537 returned=537 error=0 errno=2
+fwrite stream=0x139950 size=1 count=105 returned=105 error=0 errno=2
+fwrite stream=0x139950 size=1 count=34 returned=34 error=0 errno=2
+fwrite stream=0x139950 size=1 count=192 returned=192 error=0 errno=2
+fwrite stream=0x139950 size=1 count=142 returned=142 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1879 returned=1879 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+fwrite stream=0x139950 size=1 count=504 returned=504 error=0 errno=3
+fwrite stream=0x139950 size=1 count=3 returned=3 error=0 errno=2
+fwrite stream=0x139950 size=1 count=498 returned=498 error=0 errno=2
+fwrite stream=0x139950 size=1 count=21 returned=21 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1339 returned=1339 errno=0
+fwrite stream=0x139950 size=1 count=607 returned=607 error=0 errno=0
+SSL_write ssl=0x12dd78 requested=608 returned=608 errno=0
+SSL_write ssl=0x12dd78 requested=1 returned=1 errno=0
+fwrite stream=0x139950 size=1 count=46 returned=46 error=0 errno=0
+fwrite stream=0x139950 size=1 count=263 returned=263 error=0 errno=2
+fwrite stream=0x139950 size=1 count=362 returned=362 error=0 errno=2
+fwrite stream=0x139950 size=1 count=537 returned=537 error=0 errno=2
+fwrite stream=0x139950 size=1 count=105 returned=105 error=0 errno=2
+fwrite stream=0x139950 size=1 count=34 returned=34 error=0 errno=2
+fwrite stream=0x139950 size=1 count=192 returned=192 error=0 errno=2
+fwrite stream=0x139950 size=1 count=142 returned=142 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1879 returned=1879 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+fwrite stream=0x139950 size=1 count=504 returned=504 error=0 errno=3
+fwrite stream=0x139950 size=1 count=3 returned=3 error=0 errno=2
+fwrite stream=0x139950 size=1 count=498 returned=498 error=0 errno=2
+fwrite stream=0x139950 size=1 count=21 returned=21 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1339 returned=1339 errno=0
+fwrite stream=0x139950 size=1 count=607 returned=607 error=0 errno=0
+SSL_write ssl=0x12dd78 requested=608 returned=608 errno=0
+SSL_write ssl=0x12dd78 requested=1 returned=1 errno=0
+fwrite stream=0x139950 size=1 count=46 returned=46 error=0 errno=0
+fwrite stream=0x139950 size=1 count=263 returned=263 error=0 errno=2
+fwrite stream=0x139950 size=1 count=362 returned=362 error=0 errno=2
+fwrite stream=0x139950 size=1 count=537 returned=537 error=0 errno=2
+fwrite stream=0x139950 size=1 count=105 returned=105 error=0 errno=2
+fwrite stream=0x139950 size=1 count=34 returned=34 error=0 errno=2
+fwrite stream=0x139950 size=1 count=192 returned=192 error=0 errno=2
+fwrite stream=0x139950 size=1 count=142 returned=142 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1879 returned=1879 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+fwrite stream=0x139950 size=1 count=504 returned=504 error=0 errno=3
+fwrite stream=0x139950 size=1 count=3 returned=3 error=0 errno=2
+fwrite stream=0x139950 size=1 count=498 returned=498 error=0 errno=2
+fwrite stream=0x139950 size=1 count=21 returned=21 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1339 returned=1339 errno=0
+fwrite stream=0x139950 size=1 count=607 returned=607 error=0 errno=0
+SSL_write ssl=0x12dd78 requested=608 returned=608 errno=0
+SSL_write ssl=0x12dd78 requested=1 returned=1 errno=0
+fwrite stream=0x139950 size=1 count=46 returned=46 error=0 errno=0
+fwrite stream=0x139950 size=1 count=263 returned=263 error=0 errno=2
+fwrite stream=0x139950 size=1 count=362 returned=362 error=0 errno=2
+fwrite stream=0x139950 size=1 count=537 returned=537 error=0 errno=2
+fwrite stream=0x139950 size=1 count=105 returned=105 error=0 errno=2
+fwrite stream=0x139950 size=1 count=34 returned=34 error=0 errno=2
+fwrite stream=0x139950 size=1 count=192 returned=192 error=0 errno=2
+fwrite stream=0x139950 size=1 count=142 returned=142 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1879 returned=1879 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+fwrite stream=0x139950 size=1 count=504 returned=504 error=0 errno=3
+fwrite stream=0x139950 size=1 count=3 returned=3 error=0 errno=2
+fwrite stream=0x139950 size=1 count=498 returned=498 error=0 errno=2
+fwrite stream=0x139950 size=1 count=21 returned=21 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1339 returned=1339 errno=0
+fwrite stream=0x139950 size=1 count=607 returned=607 error=0 errno=0
+SSL_write ssl=0x12dd78 requested=608 returned=608 errno=0
+SSL_write ssl=0x12dd78 requested=1 returned=1 errno=0
+fwrite stream=0x139950 size=1 count=46 returned=46 error=0 errno=0
+fwrite stream=0x139950 size=1 count=263 returned=263 error=0 errno=2
+fwrite stream=0x139950 size=1 count=362 returned=362 error=0 errno=2
+fwrite stream=0x139950 size=1 count=537 returned=537 error=0 errno=2
+fwrite stream=0x139950 size=1 count=105 returned=105 error=0 errno=2
+fwrite stream=0x139950 size=1 count=34 returned=34 error=0 errno=2
+fwrite stream=0x139950 size=1 count=192 returned=192 error=0 errno=2
+fwrite stream=0x139950 size=1 count=142 returned=142 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1879 returned=1879 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=-1 errno=4 header=0
+SSL_write ssl=0x12dd78 requested=103 returned=103 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+fwrite stream=0x139950 size=1 count=504 returned=504 error=0 errno=3
+fwrite stream=0x139950 size=1 count=3 returned=3 error=0 errno=2
+fwrite stream=0x139950 size=1 count=498 returned=498 error=0 errno=2
+fwrite stream=0x139950 size=1 count=21 returned=21 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1339 returned=1339 errno=0
+fwrite stream=0x139950 size=1 count=607 returned=607 error=0 errno=0
+SSL_write ssl=0x12dd78 requested=608 returned=608 errno=0
+SSL_write ssl=0x12dd78 requested=1 returned=1 errno=0
+fwrite stream=0x139950 size=1 count=46 returned=46 error=0 errno=0
+fwrite stream=0x139950 size=1 count=263 returned=263 error=0 errno=2
+fwrite stream=0x139950 size=1 count=362 returned=362 error=0 errno=2
+fwrite stream=0x139950 size=1 count=537 returned=537 error=0 errno=2
+fwrite stream=0x139950 size=1 count=105 returned=105 error=0 errno=2
+fwrite stream=0x139950 size=1 count=34 returned=34 error=0 errno=2
+fwrite stream=0x139950 size=1 count=192 returned=192 error=0 errno=2
+fwrite stream=0x139950 size=1 count=142 returned=142 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1879 returned=1879 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+fwrite stream=0x139950 size=1 count=504 returned=504 error=0 errno=3
+fwrite stream=0x139950 size=1 count=3 returned=3 error=0 errno=2
+fwrite stream=0x139950 size=1 count=498 returned=498 error=0 errno=2
+fwrite stream=0x139950 size=1 count=21 returned=21 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1339 returned=1339 errno=0
+fwrite stream=0x139950 size=1 count=607 returned=607 error=0 errno=0
+SSL_write ssl=0x12dd78 requested=608 returned=608 errno=0
+SSL_write ssl=0x12dd78 requested=1 returned=1 errno=0
+fwrite stream=0x139950 size=1 count=46 returned=46 error=0 errno=0
+fwrite stream=0x139950 size=1 count=263 returned=263 error=0 errno=2
+fwrite stream=0x139950 size=1 count=362 returned=362 error=0 errno=2
+fwrite stream=0x139950 size=1 count=537 returned=537 error=0 errno=2
+fwrite stream=0x139950 size=1 count=105 returned=105 error=0 errno=2
+fwrite stream=0x139950 size=1 count=34 returned=34 error=0 errno=2
+fwrite stream=0x139950 size=1 count=192 returned=192 error=0 errno=2
+fwrite stream=0x139950 size=1 count=142 returned=142 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1879 returned=1879 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+fwrite stream=0x139950 size=1 count=504 returned=504 error=0 errno=3
+fwrite stream=0x139950 size=1 count=3 returned=3 error=0 errno=2
+fwrite stream=0x139950 size=1 count=498 returned=498 error=0 errno=2
+fwrite stream=0x139950 size=1 count=21 returned=21 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1339 returned=1339 errno=0
+fwrite stream=0x139950 size=1 count=607 returned=607 error=0 errno=0
+SSL_write ssl=0x12dd78 requested=608 returned=608 errno=0
+SSL_write ssl=0x12dd78 requested=1 returned=1 errno=0
+fwrite stream=0x139950 size=1 count=46 returned=46 error=0 errno=0
+fwrite stream=0x139950 size=1 count=263 returned=263 error=0 errno=2
+fwrite stream=0x139950 size=1 count=362 returned=362 error=0 errno=2
+fwrite stream=0x139950 size=1 count=537 returned=537 error=0 errno=2
+fwrite stream=0x139950 size=1 count=105 returned=105 error=0 errno=2
+fwrite stream=0x139950 size=1 count=34 returned=34 error=0 errno=2
+fwrite stream=0x139950 size=1 count=192 returned=192 error=0 errno=2
+fwrite stream=0x139950 size=1 count=142 returned=142 error=0 errno=2
+SSL_write ssl=0x12dd78 requested=1879 returned=1879 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=98
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=98
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=70 errno=0 header=0
+fwrite stream=0x139950 size=1 count=70 returned=70 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=173 returned=173 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=103 errno=0 header=1
+fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
+recv fd=6 requested=8192 returned=32 errno=0 header=0
+fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+
+DIAGNOSTIC /tmp/.localmod/bootstrap.log
+
+DIAGNOSTIC /var/log/perpd/current
+20261031T115727.498889: perpd[864]: starting on /koolshare/perp ...
+20261031T115727.503188: perpd[864]: supervising 0 active services
+20261031T115727.503200: perpd[864]: monitoring 0 client connections
+20261031T115727.503205: perpd[864]: activated new service: httpdb
+20261031T115727.503241: perpd[864]: supervising 1 active service
+20261031T115738.640695: Http on addr 127.0.0.1:3032
+20261031T115738.640709: root=/koolshare/webs/
+20261031T115738.640711: upload=/tmp/upload
+20261031T115738.640713: conn=0x1064c8 nc=0x1063e0 id=87001 removed
+20261031T115745.356520: conn=0x106448 nc=0x106970 id=87002 removed
+20261031T115749.060686: conn=0x107ac8 nc=0x106970 id=88000 removed
+20261031T115749.808232: conn=0x107ac8 nc=0x106970 id=88001 removed
+20261031T115750.115479: conn=0x106968 nc=0x107a60 id=88002 removed
+20261031T115750.842892: conn=0x107ac8 nc=0x10abd0 id=88003 removed
+20261031T115751.131527: conn=0x107ac8 nc=0x10abd0 id=88004 removed
+20261031T115751.864729: conn=0x106940 nc=0x10abd0 id=88005 removed
+20261031T115752.214783: conn=0x107ac8 nc=0x10abd0 id=88006 removed
+20261031T115752.999705: conn=0x106940 nc=0x10abd0 id=88007 removed
+20261031T115753.304874: conn=0x107ac8 nc=0x10abd0 id=88008 removed
+20261031T115754.037794: conn=0x106940 nc=0x10abd0 id=88009 removed
+20261031T115754.316873: conn=0x107ac8 nc=0x10abd0 id=88010 removed
+20261031T115755.143118: conn=0x107a60 nc=0x106960 id=88011 removed
+20261031T115755.439849: conn=0x107a60 nc=0x106960 id=88012 removed
+20261031T115756.147185: conn=0x107a60 nc=0x106960 id=88013 removed
+20261031T115756.428919: conn=0x107a60 nc=0x106960 id=88014 removed
+20261031T115757.145339: conn=0x107a60 nc=0x106960 id=88015 removed
+20261031T115757.442855: conn=0x107a60 nc=0x106960 id=88016 removed
+20261031T115758.200938: conn=0x107a60 nc=0x106960 id=88017 removed
+20261031T115758.486814: conn=0x107a60 nc=0x106960 id=88018 removed
+20261031T115759.199784: conn=0x107a60 nc=0x106960 id=88019 removed
+20261031T115759.480433: conn=0x107a60 nc=0x106960 id=88020 removed
+20261031T115800.212484: conn=0x107a60 nc=0x106960 id=88021 removed
+20261031T115800.492705: conn=0x107a60 nc=0x106960 id=88022 removed
+20261031T115801.206738: conn=0x107a60 nc=0x106960 id=88023 removed
+20261031T115801.484262: conn=0x107a60 nc=0x113d90 id=88024 removed
+20261031T115802.227617: conn=0x1068d8 nc=0x113d90 id=88025 removed
+20261031T115802.568581: conn=0x107b10 nc=0x107a60 id=88026 removed
+20261031T115803.356705: conn=0x1068d8 nc=0x113d90 id=88027 removed
+20261031T115803.660706: conn=0x107a60 nc=0x113d90 id=88028 removed
+20261031T115804.401400: conn=0x107a60 nc=0x113d90 id=88029 removed
+20261031T115804.741255: conn=0x107a60 nc=0x113d90 id=88030 removed
+20261031T115805.652517: conn=0x107a60 nc=0x113d90 id=88031 removed
+20261031T115805.981911: conn=0x107a60 nc=0x113d90 id=88032 removed
+20261031T115806.746852: conn=0x107a60 nc=0x113d90 id=88033 removed
+20261031T115807.041468: conn=0x107a60 nc=0x113d90 id=88034 removed
+20261031T115807.700772: conn=0x107a60 nc=0x113d90 id=88035 removed
+20261031T115808.013689: conn=0x107a60 nc=0x113d90 id=88036 removed
+20261031T115808.729713: conn=0x107a60 nc=0x113d90 id=88037 removed
+20261031T115809.023347: conn=0x107a60 nc=0x113d90 id=88038 removed
+20261031T115809.745027: conn=0x107a60 nc=0x113d90 id=88039 removed
+20261031T115810.045792: conn=0x107a60 nc=0x113d90 id=88040 removed
+20261031T115810.780519: conn=0x107a60 nc=0x113d90 id=88041 removed
+20261031T115811.081977: conn=0x107a60 nc=0x113d90 id=88042 removed
+20261031T115811.795092: conn=0x107a60 nc=0x113d90 id=88043 removed
+20261031T115812.094709: conn=0x107a60 nc=0x113d90 id=88044 removed
+20261031T115812.815272: conn=0x107a60 nc=0x113d90 id=88045 removed
+20261031T115813.109703: conn=0x107a60 nc=0x113d90 id=88046 removed
+20261031T115813.820411: conn=0x107a60 nc=0x113d90 id=88047 removed
+20261031T115814.101158: conn=0x107a60 nc=0x113d90 id=88048 removed
+20261031T115814.836676: conn=0x107a60 nc=0x113d90 id=88049 removed
+20261031T115815.206151: conn=0x107a60 nc=0x113d90 id=88050 removed
+20261031T115815.931033: conn=0x107a60 nc=0x113d90 id=88051 removed
+20261031T115816.208522: conn=0x107a60 nc=0x113d90 id=88052 removed
+20261031T115816.931849: conn=0x107a60 nc=0x113d90 id=88053 removed
+20261031T115817.215576: conn=0x107a60 nc=0x113d90 id=88054 removed
+20261031T115817.929258: conn=0x107a60 nc=0x113d90 id=88055 removed
+20261031T115818.217921: conn=0x107a60 nc=0x113d90 id=88056 removed
+20261031T115818.960588: conn=0x107a60 nc=0x113d90 id=88057 removed
+20261031T115819.241690: conn=0x107a60 nc=0x113d90 id=88058 removed
+20261031T115819.954302: conn=0x107a60 nc=0x113d90 id=88059 removed
+20261031T115820.249821: conn=0x107a60 nc=0x113d90 id=88060 removed
+20261031T115820.969237: conn=0x107a60 nc=0x113d90 id=88061 removed
+20261031T115821.345772: conn=0x107a60 nc=0x113d90 id=88062 removed
+20261031T115822.332520: conn=0x107a60 nc=0x113d90 id=88063 removed
+
+DIAGNOSTIC /tmp/real-plugin-results/https-stability-server.log
+PASS early stdio before adapter constructor
+cat: can't open '/etc/key.pem': No such file or directory
+cat: can't open '/etc/cert.pem': No such file or directory
+_netlink_recv_mesg:197  return NULL from rec, why socke is not initialized? 
+
+
+panic: read-only HTTPS query failure
+
+goroutine 1 [running]:
+main.main()
+	./test_https_stability.go:32 +0x13a4
+LINUX_READONLY_JOB_STATUS=1

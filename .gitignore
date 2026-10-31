@@ -146,3 +146,12 @@
 !/output/recovery_r5_baseline.json
 !/output/recovery_*.log
 !/output/RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.build.json
+
+!/build/check_https_stability.py
+!/build/test_https_stability.go
+!/build/https_trace_fixture.c
+!/build/relay_idle_fixture.c
+!/output/https_*.log
+!/output/https_stability_tests.json
+!/output/https_r6_reproduction.json
+!/output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.build.json

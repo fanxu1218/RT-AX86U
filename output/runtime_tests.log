@@ -20,4 +20,3 @@ PASS real-skipd-value-through-adapter
 PASS real-backend-invalid-session
 PASS vendor-page-with-real-backend
 PASS actual packaged httpdb and skipd/dbus; vendor authentication remains a fixture
-

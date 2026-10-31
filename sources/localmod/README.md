@@ -1,4 +1,4 @@
-# localmod2-r6 adapter
+# localmod2-r7 adapter
 
 This experimental RT-AX86U firmware retains the exact ASUS 24437 kernel, modules, vendor rc, HTTPd and xtables-multi binaries. Small launchers relocate rc and HTTPd and preload narrowly scoped adapters. It is not device tested. See `../../output/官改候选版说明.md` and the machine-readable test reports.
 
@@ -77,3 +77,9 @@ Recovery reserves 2 MiB plus three times the logical record bytes. Runtime failu
 Run `python3 build/check_recovery_safety.py` after the ordinary interruption suite. Tests corrupt owned checkpoint bytes/metadata/markers/paths, exhaust actual ext4 fixture blocks before or during replay, check all original/quarantined copies, enforce stopped services and 423 writes, then reboot after trusted synthetic repair/space release. A fixed r5 helper generates the legacy-format fixture with its published binary digest verified. Test data, disks and keys are never published. Real NAND/UBIFS faults, stock kernel behavior and real UU accounts/acceleration remain outside local validation.
 
 Full-rootfs signal fixtures publish readiness under a blocked signal mask and use `sigsuspend` to avoid the fixture introducing a lost wakeup; native rc handlers are retained. The NTP wait is bounded to 45 seconds for disk-backed jobs and logs the elapsed time for slow completions. Disk tests request one vCPU; this configuration does not establish a fix for the intermittent Alpine guest initialization faults recorded in the candidate notes. The read-only runner fails on a guest kernel oops.
+
+## r7 native HTTPS receive contract
+
+A natural r6 run returned HTTP 200 and an empty truncated JSON body after backend `recv` returned EINTR. The backend completed the callback, and native TLS wrote only the headers. The adapter now continues the same receive after EINTR, without reconnecting or resubmitting any RPC. Each successful receive begins the next existing 120-second idle window; monotonic remaining time prevents signals from extending an idle wait indefinitely. Native TLS/session handling, plugin packages, curl callbacks and UU remain unchanged.
+
+`python3 build/check_https_stability.py` checks real DDNS-Go status/version RPCs with the owned UU worker stopped and running, deterministic interruption before/after headers, and real SIGALRM interruptions while waiting for a body. Backend IDs must complete exactly once. Config/database records, UU test data and the certificate archive must remain unchanged. A separate ARM fixture includes the same production helper with a one-second idle argument under repeated signals; the production call remains fixed at 120 seconds. Trace/fault fixtures never enter the image. The retained r6 natural reproduction did not inject signals or errors.

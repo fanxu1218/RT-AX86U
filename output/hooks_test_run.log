@@ -128,4 +128,3 @@ PASS hook timeout kills descendants; names validated; nested notifications suppr
 + cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf
 + cp /tmp/hook_trace /work/build/hooks_trace.log
 + cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf
-

@@ -1,7 +1,7 @@
 {
   "status": "LOCAL_RECOVERY_FAILURE_SAFETY_PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r6_EXPERIMENTAL.w",
-  "candidate_sha256": "d2650339ea0868c472db0f25009642fcf23a5335a40fe2c6a6c3bae1b1cc37eb",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w",
+  "candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
   "checks": {
     "safety-seed_one_mib_of_native_plugin_records_synced_before_checkpoint": true,
     "safety-seed_killed_installer_blocks_writes_without_changing_uu_or_peer_data": true,
@@ -409,9 +409,12 @@
     "usr/libexec/localmod/plugin-txn": "23e575aa4299b075a7fa120fb6672e5c417dca5892f1449c29905f9a862af232",
     "usr/libexec/localmod/bootstrap.sh": "fd6980a8b1ff18a68897d1ecbe0725dd5918331fe3956c7beadb2e224f33ed3f",
     "usr/libexec/localmod/installer-guard.sh": "fa6a2ae1084b2546aa873e1ef079c7a2b8df810ece6bc63c2e2ed54b348e63bf",
-    "usr/lib/localmod/httpd_bridge.so": "3eeab339bc4c93769b3459535dc1e49e147a7fbf0d06c0349e7b2cb26d3f415e"
+    "usr/lib/localmod/httpd_bridge.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c"
   },
   "r5_reproduction": "recovery_r5_baseline.json",
+  "test_vm_count": 23,
+  "disk_fixture_vcpus": 1,
+  "fixture_kernel_sha256": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
   "isolation": [
     "No NIC/physical disk; read-only workspace; one owned 96 MiB ext4 virtual disk per case",
     "Guest fallocate exhausts real fixture filesystem space before or during replay; only the fixture fill file is removed for retry",
@@ -429,8 +432,5 @@
     "Real UU account/discovery/entitlement/game traffic",
     "Reconstruction of already lost/corrupt bytes without a known good backup; active root attacker modifying both data and seals",
     "Rollback outside the center tree/skipd or concurrent external writers"
-  ],
-  "test_vm_count": 23,
-  "disk_fixture_vcpus": 1,
-  "fixture_kernel_sha256": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1"
+  ]
 }

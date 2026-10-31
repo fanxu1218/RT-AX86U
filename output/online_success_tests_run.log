@@ -1,6 +1,6 @@
 LINUX_BUILDER_READY
 cacert.pem doesn't exist !!!!!!
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031073952, 2026/10/31 ~ 2046/11/1
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031120620, 2026/10/31 ~ 2046/11/1
 starting ntp...
 download uuplugin script info successfully
 URL: http://uu.fixture.test:35000/monitor
@@ -15,4 +15,3 @@ PASS downgrade_is_noop_and_retains_installed_version
 PASS enabled_plugin_uninstall_rejected_without_affecting_uu
 PASS online_uninstall_removes_owned_plugin_and_registration_keeps_uu
 PASS online workflow via native HTTPS/session, actual httpdb/skipd, retained wget with verified local repository TLS, and owned plugin/UU workers
-

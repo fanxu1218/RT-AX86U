@@ -463,7 +463,7 @@
     "path": "rom/etc/localmod-release.json",
     "change": "added",
     "bytes": 667,
-    "sha256": "0fea8b3ee009269808d8be9315d499ce2bb296a67a057dfac5d5d8cd645c2e49"
+    "sha256": "cc119939ff2b0d6fbea22a9976a72bd44820f49afa442293b6630f5fb2336384"
   },
   {
     "path": "rom/etc/profile",
@@ -519,8 +519,8 @@
   {
     "path": "usr/lib/localmod/httpd_bridge.so",
     "change": "added",
-    "bytes": 12276,
-    "sha256": "3eeab339bc4c93769b3459535dc1e49e147a7fbf0d06c0349e7b2cb26d3f415e"
+    "bytes": 12660,
+    "sha256": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c"
   },
   {
     "path": "usr/lib/localmod/rc_bridge.so",
@@ -608,7 +608,7 @@
     "path": "www/Module_Localmod.asp",
     "change": "added",
     "bytes": 1574,
-    "sha256": "1c8923f92fc3156ebce227867eaa4e5b52d8fb0ba371ebeea8f6be34b72c3f57"
+    "sha256": "fa2ef2ae1426f5d859edb84e6e40d39f05726301d689009b09b6053fa868a4c6"
   },
   {
     "path": "www/state.js",

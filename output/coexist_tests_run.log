@@ -1,12 +1,12 @@
 LINUX_BUILDER_READY
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031073214, 2026/10/31 ~ 2046/11/1
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031120528, 2026/10/31 ~ 2046/11/1
 starting ntp...
 download uuplugin script info successfully
 URL: http://127.0.0.1:35000/monitor
 MD5: d90649080e15b5165aba44b9ba9ee18f
 download uuplugin script successfully
 prepare to execute uuplugin stript...
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031073214, 2026/10/31 ~ 2046/11/1
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261031120528, 2026/10/31 ~ 2046/11/1
 PASS native_restored_tls_login_and_real_center_callback
 PASS original_uu_page_and_private_api_routes_remain_distinct
 PASS native_ntp_uu_starts_owned_worker_with_center_running
@@ -17,4 +17,3 @@ PASS https_restart_keeps_saved_certificate_center_and_owned_uu
 PASS repeated_ntp_sync_does_not_duplicate_owned_uu_or_disrupt_center
 PASS center_recovery_stop_keeps_native_https_and_owned_uu
 PASS native HTTPd/rc with real center lifecycle; owned UU worker and local download only; no target kernel or actual acceleration
-
