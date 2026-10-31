@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r2_EXPERIMENTAL.w",
+  "candidate_sha256": "200471b9ca557904dfd9924514a55b403c08ee6c977ce34b7c5902d8e0b89a3d",
+  "checks": {
+    "native_auto_generated_ca_server_key_and_verified_tls": true,
+    "native_save_cert_archive_contains_all_eight_exact_files": true,
+    "https_process_restart_reuses_existing_certificate": true,
+    "native_mismatched_server_key_restores_valid_saved_pair": true,
+    "fresh_vm_native_restore_keeps_leaf_and_complete_key_archive": true,
+    "native_restore_recreates_export_link_and_combined_pem": true,
+    "native_corrupt_archive_regenerates_valid_tls_and_saved_archive": true,
+    "native_save_disabled_generates_tls_without_persistent_archive": true,
+    "native_restored_tls_login_and_real_center_callback": true,
+    "original_uu_page_and_private_api_routes_remain_distinct": true,
+    "native_ntp_uu_starts_owned_worker_with_center_running": true,
+    "concurrent_https_center_reads_and_native_uu_page_succeed": true,
+    "filter_reloads_keep_private_api_guard_callback_and_owned_uu_alive": true,
+    "center_restart_preserves_database_certificate_and_owned_uu": true,
+    "https_restart_keeps_saved_certificate_center_and_owned_uu": true,
+    "repeated_ntp_sync_does_not_duplicate_owned_uu_or_disrupt_center": true,
+    "center_recovery_stop_keeps_native_https_and_owned_uu": true
+  },
+  "details": {
+    "cert_generate": {
+      "generated_leaf_sha256": "0cfde99cd82d39fb6fb66395adf8e351c173d2d05c003265b0e21391bd0bd67b"
+    },
+    "cert_restore": {
+      "restored_leaf_sha256": "0cfde99cd82d39fb6fb66395adf8e351c173d2d05c003265b0e21391bd0bd67b"
+    },
+    "coexist": {
+      "filter_reload_cycles": 3,
+      "leaf_sha256": "0cfde99cd82d39fb6fb66395adf8e351c173d2d05c003265b0e21391bd0bd67b",
+      "parallel_requests": 8,
+      "real_uu_monitor_executed": false,
+      "uu_api_requests": 1,
+      "uu_monitor_downloads": 1
+    }
+  },
+  "retained_vendor_sha256": {
+    "usr/sbin/httpd": "d9a24b751b2c6ec0a9bf5931b6b1380e75c136bd672a91a5a5118c6ee9e1586d",
+    "sbin/rc": "9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62",
+    "usr/sbin/gencert.sh": "168202540308216850541d63e65419729369bb4f8e23f6ec9dfceee14914e14e",
+    "usr/sbin/openssl": "a5e3ee7c5b813a001415861a5dc319f9fc201e389fdce514fa36860a8b90e90c",
+    "usr/lib/libshared.so": "ebaf2a4586a6fe6ca336f6fe6c3ba9955434ad3d4dd11b65bd017e37e13e9fef",
+    "rom/etc/openssl.cnf": "9db5c240963522cdd1777bea004424c150c7646a3e5fd380886ba1ee787d0205"
+  },
+  "native_certificate_generation_save_restore_and_tls_functions_replaced": false,
+  "tls_chain_and_hostname_verification_disabled": false,
+  "real_uu_monitor_executed": false,
+  "test_fixtures_in_firmware": [],
+  "environment": [
+    "Networkless ARM64 Linux 6.12 VM with actual ARM32 vendor applications via QEMU",
+    "Actual retained gencert.sh and OpenSSL, synthetic NVRAM/shadow/LAN inputs",
+    "Fresh VM restores only an owned cert.tgz from the previous VM; real flash/NVRAM are not exercised",
+    "Native certificate chain and SAN checked, generated private key permissions checked",
+    "Actual packaged perpboot/perpd/httpdb/skipd/dbus and production bootstrap lifecycle",
+    "Guest CPU/proc wrappers, Alpine curl and legacy xtables; controlled UU download and owned worker"
+  ],
+  "not_tested": [
+    "Router flash, physical reboot, target kernel 4.1, real NVRAM and power-loss durability",
+    "Browser acceptance, ACME renewal and uploaded certificate workflows",
+    "Real UU download/TLS, accounts, entitlement, discovery and acceleration",
+    "Arbitrary third-party plugins and hardware network coexistence"
+  ]
+}

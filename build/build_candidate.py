@@ -55,4 +55,5 @@ run(str(root/'analysis/.venv/bin/python'),'build/verify_candidate.py',image,'out
 for name in ['changes.json','runtime_tests.log','hooks_trace.log','hooks_test_run.log','restore_tests_run.log','restore_hook_trace.log','center_tests_run.log','native_httpd_tests_run.log','native_uu_tests_run.log']:
     shutil.copyfile(root/'build'/name,root/'output'/name)
 (root/'output/SHA256SUMS').write_text(hashlib.sha256((root/image).read_bytes()).hexdigest()+'  '+Path(image).name+'\n')
+run('python3','build/check_lifecycle.py','--skip-native-regression')
 print('Built localmod2-r2 and verified the experimental candidate; no router was accessed or flashed.')

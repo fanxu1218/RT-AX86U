@@ -59,6 +59,14 @@
 !/build/linux_native_httpd_job.sh
 !/build/linux_native_uu_job.sh
 !/build/verify_native_runtime.py
+!/build/native_lifecycle_setup.sh
+!/build/native_runtime_client.go
+!/build/test_cert_lifecycle.go
+!/build/test_coexist.go
+!/build/linux_cert_generate_job.sh
+!/build/linux_cert_restore_job.sh
+!/build/linux_coexist_job.sh
+!/build/check_lifecycle.py
 !/analysis/
 /analysis/*
 !/analysis/固件分析报告.md
@@ -93,3 +101,7 @@
 !/output/native_runtime_tests.json
 !/output/native_httpd_tests_run.log
 !/output/native_uu_tests_run.log
+!/output/lifecycle_tests.json
+!/output/cert_generate_tests_run.log
+!/output/cert_restore_tests_run.log
+!/output/coexist_tests_run.log
