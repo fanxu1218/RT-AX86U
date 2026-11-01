@@ -1,0 +1,162 @@
+{
+  "status": "LOCAL_RSS_DIAGNOSTICS_COMPLETE",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w",
+  "candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
+  "firmware_changed": false,
+  "requested_observation_seconds": 2040,
+  "completed_https_queries_including_three_restore_checks_per_run": 2046,
+  "extra_direct_ddns_page_requests": 2400,
+  "gc_cycles": 25,
+  "gc_live_heap_mib_integer_values": [
+    0
+  ],
+  "observed_exact_thp_steps": [
+    {
+      "from_seconds": 20.57797226,
+      "to_seconds": 40.613666353,
+      "target_rss_delta_kib": 2048,
+      "target_anon_huge_pages_delta_kib": 2048,
+      "gc_cycles_between": 0
+    }
+  ],
+  "run_reports": {
+    "continuous": {
+      "path": "output/ddnsgo_memory_continuous_tests.json",
+      "sha256": "da8142d8e672f47061fc4ea271eac48d6ae4a9a5fc6d3075fc3af408dc24ad21",
+      "post_60s_ranges": {
+        "target_mapping_rss_kib": {
+          "min": 15000,
+          "max": 19420,
+          "first": 15000,
+          "last": 19420,
+          "delta": 4420
+        },
+        "qemu_host_mapping_rss_kib": {
+          "min": 18748,
+          "max": 18960,
+          "first": 18748,
+          "last": 18960,
+          "delta": 212
+        },
+        "smaps_rss_kib": {
+          "min": 33748,
+          "max": 38380,
+          "first": 33748,
+          "last": 38380,
+          "delta": 4632
+        },
+        "fds": {
+          "min": 8,
+          "max": 8,
+          "first": 8,
+          "last": 8,
+          "delta": 0
+        },
+        "threads": {
+          "min": 6,
+          "max": 6,
+          "first": 6,
+          "last": 6,
+          "delta": 0
+        }
+      }
+    },
+    "reuse": {
+      "path": "output/ddnsgo_memory_reuse_tests.json",
+      "sha256": "d25fc83b331fb0b35a679637e4ae893f8b70c8eccb1d29e75b4bd39ec88fe0fb",
+      "post_60s_ranges": {
+        "target_mapping_rss_kib": {
+          "min": 16512,
+          "max": 19828,
+          "first": 17072,
+          "last": 16512,
+          "delta": -560
+        },
+        "qemu_host_mapping_rss_kib": {
+          "min": 17952,
+          "max": 20916,
+          "first": 17952,
+          "last": 20916,
+          "delta": 2964
+        },
+        "smaps_rss_kib": {
+          "min": 35024,
+          "max": 40744,
+          "first": 35024,
+          "last": 37428,
+          "delta": 2404
+        },
+        "fds": {
+          "min": 7,
+          "max": 8,
+          "first": 8,
+          "last": 8,
+          "delta": 0
+        },
+        "threads": {
+          "min": 6,
+          "max": 8,
+          "first": 6,
+          "last": 8,
+          "delta": 2
+        }
+      }
+    },
+    "no-thp": {
+      "path": "output/ddnsgo_memory_no-thp_tests.json",
+      "sha256": "9a83408db7bebe68a48784729112515231845684510bdfe7042a5113902203e5",
+      "post_60s_ranges": {
+        "target_mapping_rss_kib": {
+          "min": 12508,
+          "max": 17064,
+          "first": 12508,
+          "last": 13880,
+          "delta": 1372
+        },
+        "qemu_host_mapping_rss_kib": {
+          "min": 16596,
+          "max": 19588,
+          "first": 16596,
+          "last": 19588,
+          "delta": 2992
+        },
+        "smaps_rss_kib": {
+          "min": 29104,
+          "max": 36612,
+          "first": 29104,
+          "last": 33468,
+          "delta": 4364
+        },
+        "fds": {
+          "min": 7,
+          "max": 8,
+          "first": 8,
+          "last": 8,
+          "delta": 0
+        },
+        "threads": {
+          "min": 5,
+          "max": 8,
+          "first": 5,
+          "last": 8,
+          "delta": 3
+        }
+      }
+    }
+  },
+  "limits": [
+    "RSS includes program mappings, retained runtime pages and QEMU overhead; it is not live heap",
+    "THP counts are already part of RSS; perf address unions are not active allocations",
+    "Integer Go traces cannot exclude retention below 1 MiB or untested workloads",
+    "No stock kernel, physical router, real UU monitor/account, WAN provider or multiday validation"
+  ],
+  "checks": {
+    "three_completed_owned_vm_runs": true,
+    "candidate_and_production_files_unchanged": true,
+    "all_raw_logs_and_run_reports_bound_by_hash": true,
+    "all_requested_windows_measured": true,
+    "exact_thp_rss_step_observed_without_gc": true,
+    "process_only_no_thp_control_verified": true,
+    "configuration_database_certificate_and_owned_uu_data_preserved_in_each_run": true
+  }
+}

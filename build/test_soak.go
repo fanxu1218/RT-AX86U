@@ -156,7 +156,7 @@ func fds(p int) int {
 }
 func (x *soak) sample() {
 	process := map[string]int{"httpd": x.s.cmd.Process.Pid, "httpdb": pid("httpdb"), "skipd": pid("skipd"), "ddnsgo": pid("ddnsgo"), "uu": x.u.pid}
-	row := map[string]any{"elapsed_seconds": int(time.Since(x.started).Seconds()), "queries": x.queries, "events": x.events}
+	row := map[string]any{"elapsed_seconds": int(time.Since(x.started).Seconds()), "queries": x.queries, "events": x.events, "rss_scope": "Linux user-mode QEMU process RSS: target mappings plus emulator mappings"}
 	for name, p := range process {
 		row[name] = map[string]int{"pid": p, "rss_kib": rss(p), "fds": fds(p)}
 	}
@@ -438,6 +438,10 @@ func main() {
 	x.cert = nrRead("/jffs/cert.tgz")
 	x.data()
 	x.started = time.Now()
+	if strings.HasPrefix(os.Args[1], "soak-memory") {
+		memoryRun(x)
+		return
+	}
 	x.sample()
 	deadline := x.started.Add(duration)
 	nextEvent := x.started.Add(period)

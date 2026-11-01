@@ -1,0 +1,9 @@
+{
+  "packaged_binary_sha256": "9a6fb27190b1bbf7078ce89c1ae75db1567547e050cff42aa15b170f19ff2ddc",
+  "package_sha256": "34f541f8eba6840847a408f408a47032f9ea83b0326a31e21c70a0fbe497dfce",
+  "unpacked_binary_sha256": "2338e41376e6473f4c4333b3005cd9fbe6c4439de388af4b85218340b6e96f73",
+  "buildinfo": "unpacked inspection copy: go1.25.0\n\tpath\tgithub.com/jeessy2/ddns-go/v6\n\tmod\tgithub.com/jeessy2/ddns-go/v6\tv6.17.7+dirty\t\n\tdep\tgithub.com/kardianos/service\tv1.3.0\th1:/LGy+xPP2TM+GLTiCZ2di7cy0Jd/qrawlTUfqKYFdTI=\n\tdep\tgithub.com/wagslane/go-password-validator\tv0.3.0\th1:vfxOPzGHkz5S146HDpavl0cw1DSVP061Ry2PX0/ON6I=\n\tdep\tgolang.org/x/crypto\tv0.55.0\th1:+KWHjbgOaAQ66dh/YlkZKHlz9ZUlq61AFirAR9ntP8M=\n\tdep\tgolang.org/x/net\tv0.58.0\th1:ynWG7rqYi4ccpTEuPZ2QGWHktVEM9DMCj9yzDE0Q7To=\n\tdep\tgolang.org/x/sys\tv0.47.0\th1:o7XGOvZQCADBQQ4Y7VNq2dRWQR7JmOUW8Kxx4ZsNgWs=\n\tdep\tgolang.org/x/text\tv0.41.0\th1:vz/seA0lnX87Othu2f/0L24RcgrXD9/YFTSuGjj3rH8=\n\tdep\tgopkg.in/yaml.v3\tv3.0.1\th1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=\n\tbuild\t-buildmode=exe\n\tbuild\t-compiler=gc\n\tbuild\t-trimpath=true\n\tbuild\tCGO_ENABLED=0\n\tbuild\tGOARCH=arm\n\tbuild\tGOOS=linux\n\tbuild\tGOARM=7\n\tbuild\tvcs=git\n\tbuild\tvcs.revision=7aad574de4ba1e4646f07648a38235d34bab6648\n\tbuild\tvcs.time=2026-09-04T12:26:07Z\n\tbuild\tvcs.modified=true\n",
+  "dirty_source_warning": "The packaged binary reports vcs.modified=true; upstream source is not assumed byte-identical.",
+  "executed_binary": "Original UPX-compressed packaged bin/ddnsgo, not the unpacked inspection copy",
+  "inspection": "UPX 5.2.1 read-only decompression copy followed by go version -m; no execution on macOS"
+}
