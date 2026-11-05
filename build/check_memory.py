@@ -18,7 +18,11 @@ ROOT = Path(__file__).resolve().parent.parent
 PHASES = {"continuous": ("soak-memory", 720),
           "reuse": ("soak-memory-reuse", 660),
           "no-thp": ("soak-memory-no-thp", 660),
+          "cycles-no-thp": ("soak-memory-cycles-no-thp", 3600),
+          "cycles-probe-no-thp": ("soak-memory-cycles-probe-no-thp", 90),
           "probe": ("soak-memory-probe", 10)}
+CYCLES = {"cycles-no-thp": dict(warmup_seconds=120, load_seconds=120, idle_seconds=240, rounds=8, final_idle_seconds=600),
+          "cycles-probe-no-thp": dict(warmup_seconds=10, load_seconds=10, idle_seconds=20, rounds=2, final_idle_seconds=20)}
 PATHS = ["usr/lib/localmod/httpd_bridge.so", "usr/libexec/localmod/httpd",
          "usr/libexec/localmod/rc.vendor", "usr/libexec/localmod/plugin-txn",
          "usr/libexec/localmod/bootstrap.sh", "rom/etc/koolshare/scripts/base.sh",
@@ -53,6 +57,55 @@ def parse_gc(lines):
     return cycles
 
 
+def analyze_cycles(mode, result):
+    plan=CYCLES[mode]
+    assert result["cycle_schedule"]==plan
+    initial=result["coexist_initial_pids"]
+    assert set(initial)=={"httpd","httpdb","skipd","uu"}
+    for sample in result["samples"]:
+        assert {k:p["pid"] for k,p in sample["coexist_processes"].items()}==initial
+        assert all(p["rss_kib"]>0 and p["fds"]>0 for p in sample["coexist_processes"].values())
+        maps=sample["target_writable_maps"]
+        assert maps and sum(m["virtual_kib"] for m in maps)==sample["target_virtual_writable_kib"]
+        assert all(m["swap_kib"]==0 for m in maps)
+    boundaries=result["phase_boundaries"]
+    warm=[s for s in boundaries if s["role"]=="warmup_end"]
+    idle=[s for s in boundaries if s["role"]=="idle_end"]
+    load=[s for s in boundaries if s["role"]=="load_end"]
+    final=[s for s in boundaries if s["role"]=="final_idle_end"]
+    assert len(warm)==len(final)==1
+    assert [s["round"] for s in idle]==[s["round"] for s in load]==list(range(1,plan["rounds"]+1))
+    for s in warm+load+idle+final:
+        if s["role"]=="warmup_end": expected=plan["warmup_seconds"]
+        elif s["role"]=="final_idle_end": expected=PHASES[mode][1]
+        else:
+            expected=plan["warmup_seconds"]+s["round"]*(plan["load_seconds"]+plan["idle_seconds"])
+            if s["role"]=="load_end":expected-=plan["idle_seconds"]
+        assert expected<=s["elapsed_seconds"]<expected+10,(s["role"],s["elapsed_seconds"],expected)
+    assert all(result["pressure_page_counts"].get(f"load{i}",0)>=plan["load_seconds"]*3 for i in range(1,plan["rounds"]+1))
+    quiet=warm+idle+final
+    values=[s["target_mapping_rss_kib"] for s in quiet]
+    late=idle[-4:]
+    ys=[s["target_mapping_rss_kib"] for s in late]
+    mean_x=(len(ys)-1)/2;mean_y=sum(ys)/len(ys)
+    slope=sum((i-mean_x)*(y-mean_y) for i,y in enumerate(ys))/sum((i-mean_x)**2 for i in range(len(ys)))
+    def map_by_range(sample):return {(m["start_hex"],m["end_hex"]):m for m in sample["target_writable_maps"]}
+    first,last=map_by_range(warm[0]),map_by_range(final[0])
+    changes=[]
+    for key in sorted(first.keys()|last.keys()):
+        a,b=first.get(key),last.get(key)
+        changes.append(dict(start_hex=key[0],end_hex=key[1],first_rss_kib=a["rss_kib"] if a else None,
+                            last_rss_kib=b["rss_kib"] if b else None,
+                            rss_delta_kib=b["rss_kib"]-a["rss_kib"] if a and b else None,
+                            first_virtual_kib=a["virtual_kib"] if a else None,last_virtual_kib=b["virtual_kib"] if b else None))
+    return dict(quiet_baselines=[{k:s[k] for k in ["role","stage","round","elapsed_seconds","target_mapping_rss_kib","qemu_host_mapping_rss_kib","fds","threads","gc_cycles_seen","latest_gc_trace","latest_scav_trace","target_virtual_writable_kib"]} for s in quiet],
+                quiet_target_deltas_kib=[b-a for a,b in zip(values,values[1:])],
+                late_four_idle_target_span_kib=max(ys)-min(ys),late_four_idle_target_slope_kib_per_round=slope,
+                final_idle_target_delta_kib=values[-1]-values[-2],
+                writable_mapping_changes_after_warmup=changes,
+                interpretation_limit="Finite-window baseline/slope observations only; no RSS threshold is treated as proof of leak freedom.")
+
+
 def analyze(mode, log, fixture):
     phase, seconds = PHASES[mode]
     text = log.read_text()
@@ -77,12 +130,15 @@ def analyze(mode, log, fixture):
         assert p["available"] and p["entries"] > 0
         assert p["entries_in_host_executable_maps"] == p["entries"]
     cycles = parse_gc(r["gc_lines"] or [])
-    if mode != "probe":
+    if mode in CYCLES:
+        cycle_observation=analyze_cycles(mode,r)
+        if mode=="cycles-no-thp":assert len(cycles)>=CYCLES[mode]["rounds"]*2
+    elif mode != "probe":
         assert len(cycles) >= (3 if mode in ("reuse", "no-thp") else 1)
     if mode in ("reuse", "no-thp"):
         assert r["pressure_page_requests"] >= 1000
         assert all(f"name={k}" in text for k in ["warmup", "load1", "idle1", "load2", "idle2"])
-    if mode == "no-thp":
+    if mode.endswith("no-thp"):
         assert r["diagnostic_process_thp_disabled"]
         assert all(s["thp_enabled"] == 0 and not any(s["mapping_groups_anon_huge_pages_kib"].values()) for s in samples)
     warm = [s for s in samples if s["elapsed_seconds"] >= 60]
@@ -91,11 +147,13 @@ def analyze(mode, log, fixture):
         if warm:
             ranges[k] = dict(min=min(s[k] for s in warm), max=max(s[k] for s in warm),
                              first=warm[0][k], last=warm[-1][k], delta=warm[-1][k]-warm[0][k])
-    return {"mode": mode, "phase": phase, "fixture": fixture, "log_sha256": sha(log),
+    report={"mode": mode, "phase": phase, "fixture": fixture, "log_sha256": sha(log),
             "result": r, "gc_cycles": cycles, "post_60s_ranges": ranges,
             "interpretation_limit": "Mapping RSS is not live heap; Go trace values are integer MiB. "
                                     "Perf address union is cumulative JIT addresses, not live allocations. "
                                     "Passing these checks does not assert leak freedom."}
+    if mode in CYCLES:report["cycle_observation"]=cycle_observation
+    return report
 
 
 def summary():
@@ -174,7 +232,7 @@ def main():
                                "build/memory-exec-fixture", "build/memory_exec_fixture.c"], check=True)
         subprocess.run(flags + ["-target", "arm-linux-gnueabi.2.26", "-mcpu=cortex_a53", "-shared", "-fPIC",
                                "-o", "build/https_trace_fixture.so", "build/https_trace_fixture.c", "-ldl"], check=True)
-        sources = ["build/test_soak.go", "build/test_memory.go", "build/native_runtime_client.go",
+        sources = ["build/test_soak.go", "build/test_memory.go", "build/memory_cycles.go", "build/native_runtime_client.go",
                    "build/test_online.go", "build/coexist_helpers.go"]
         subprocess.run(["go", "build", "-trimpath", "-o", "build/test-soak"] + sources, check=True,
                        env=dict(os.environ, GOOS="linux", GOARCH="arm64", CGO_ENABLED="0"))
@@ -193,9 +251,9 @@ def main():
     report = analyze(mode, log, fixture)
     report["lf_capture_sha256"] = capture_sha
     report["log_normalization"] = "Runner converts CRLF to LF; published logs also trim trailing spaces/tabs per line. lf_capture_sha256 is before whitespace trimming."
-    if mode in ("reuse", "no-thp"):
+    if mode in ("reuse", "no-thp") or mode in CYCLES:
         assert report["result"]["packaged_binary_sha256"] == package["files"]["bin/ddnsgo"]
-        assert all(report["result"]["pressure_page_counts"].get(k, 0) >= 400 for k in ["load1", "load2"])
+        if mode not in CYCLES:assert all(report["result"]["pressure_page_counts"].get(k, 0) >= 400 for k in ["load1", "load2"])
     assert candidate() == (v, production)
     report.update(candidate_image=v["image"], candidate_sha256=v["sha256"], production_files=production,
                   packaged_binary_sha256=package["files"]["bin/ddnsgo"], package_sha256=package["sha256"],
@@ -213,6 +271,12 @@ def main():
                       "uu_heartbeat_and_only_expected_launch",
                       "readonly_workspace_no_guest_nic_no_router",
                       "candidate_and_production_files_unchanged"]})
+    if mode in CYCLES:
+        report["checks"].update({k:True for k in ["all_rounds_complete_with_real_load_and_idle_windows",
+                              "quiet_baselines_captured_before_boundary_page_reads_or_forced_gc",
+                              "all_coexistence_service_pids_unchanged",
+                              "no_swap_or_transparent_hugepages_in_target_writable_maps",
+                              "writable_mapping_totals_match_samples"]})
     (ROOT / f"output/ddnsgo_memory_{mode}_tests.json").write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({"status": report["status"], "mode": mode,
                       "seconds": report["result"]["duration_seconds"],

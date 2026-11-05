@@ -1,0 +1,126 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261105154954, 2026/11/5 ~ 2046/11/6
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":3901,"rss_kib":31468},"elapsed_seconds":0,"events":0,"httpd":{"fds":5,"pid":920,"rss_kib":25092},"httpdb":{"fds":6,"pid":876,"rss_kib":10060},"queries":0,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":627,"rss_kib":12624},"uu":{"fds":5,"pid":1614,"rss_kib":11000}}
+SOAK_EVENT_BEGIN index=1 kind=abort
+SOAK_EVENT index=1 kind=abort seconds=2.737 details=client_tcp_rst_while_backend_body_pending
+SOAK_EVENT_BEGIN index=2 kind=partial
+SOAK_EVENT index=2 kind=partial seconds=1.991 details=client_rst_with_incomplete_request_body
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":3901,"rss_kib":31504},"elapsed_seconds":20,"events":2,"httpd":{"fds":5,"pid":920,"rss_kib":27188},"httpdb":{"fds":6,"pid":876,"rss_kib":10156},"queries":23,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":627,"rss_kib":12624},"uu":{"fds":5,"pid":1614,"rss_kib":11000}}
+SOAK_EVENT_BEGIN index=3 kind=backend
+SOAK_EVENT index=3 kind=backend seconds=3.156 details=backend_killed=876 pending_http_status=200 pending_body_bytes=0 expected_read_error=unexpected EOF
+SOAK_EVENT_BEGIN index=4 kind=center
+SOAK_PLANNED_WINDOW name=center_restart id=91040 code=200 error=unexpected EOF bytes=0
+SOAK_PLANNED_WINDOW name=center_restart id=91041 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91042 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91043 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91044 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91045 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91046 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91047 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91048 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91049 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91050 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91051 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91052 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91053 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91054 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91055 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91056 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91057 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91058 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91059 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91060 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91061 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91062 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91063 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91064 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91065 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91066 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91067 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91068 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91069 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91070 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91071 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91072 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91073 code=503 error=<nil> bytes=20
+SOAK_EVENT index=4 kind=center seconds=9.617 details=production_bootstrap_restart center_restart_reads=35 unavailable=34
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":13201,"rss_kib":32672},"elapsed_seconds":43,"events":4,"httpd":{"fds":5,"pid":920,"rss_kib":27252},"httpdb":{"fds":6,"pid":13203,"rss_kib":8056},"queries":38,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":12579,"rss_kib":12216},"uu":{"fds":4,"pid":1614,"rss_kib":11000}}
+SOAK_EVENT_BEGIN index=5 kind=ddns
+SOAK_PLANNED_WINDOW name=ddns_restart id=91081 code=200 error=<nil> bytes=40
+SOAK_WINDOW_RESULT ddns_restart_reads=3 unavailable=1
+SOAK_EVENT index=5 kind=ddns seconds=6.507 details=one_original_plugin_restart_rpc
+SOAK_EVENT_BEGIN index=6 kind=uu
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+SOAK_EVENT index=6 kind=uu seconds=6.122 details=one_fresh_native_ntp_uu_control_start uu_restart_reads=8 unavailable=0
+SOAK_EVENT_BEGIN index=7 kind=tls
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261105154954, 2026/11/5 ~ 2046/11/6
+SOAK_EVENT index=7 kind=tls seconds=2.510 details=native_https_restart_and_new_login
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":14736,"rss_kib":32836},"elapsed_seconds":60,"events":7,"httpd":{"fds":5,"pid":17477,"rss_kib":26952},"httpdb":{"fds":6,"pid":13203,"rss_kib":8208},"queries":50,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":12579,"rss_kib":12224},"uu":{"fds":4,"pid":16606,"rss_kib":10708}}
+SOAK_EVENT_BEGIN index=8 kind=signals
+SOAK_EVENT index=8 kind=signals seconds=2.617 details=three_sigalrm_during_pending_body
+SOAK_EVENT_BEGIN index=9 kind=abort
+SOAK_EVENT index=9 kind=abort seconds=2.812 details=client_tcp_rst_while_backend_body_pending
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":14736,"rss_kib":32852},"elapsed_seconds":80,"events":9,"httpd":{"fds":5,"pid":17477,"rss_kib":27000},"httpdb":{"fds":6,"pid":13203,"rss_kib":8304},"queries":71,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":12579,"rss_kib":12224},"uu":{"fds":5,"pid":16606,"rss_kib":10708}}
+SOAK_EVENT_BEGIN index=10 kind=partial
+SOAK_EVENT index=10 kind=partial seconds=2.008 details=client_rst_with_incomplete_request_body
+SOAK_EVENT_BEGIN index=11 kind=backend
+SOAK_EVENT index=11 kind=backend seconds=2.546 details=backend_killed=13203 pending_http_status=200 pending_body_bytes=0 expected_read_error=unexpected EOF
+SOAK_EVENT_BEGIN index=12 kind=center
+SOAK_PLANNED_WINDOW name=center_restart id=91145 code=200 error=unexpected EOF bytes=0
+SOAK_PLANNED_WINDOW name=center_restart id=91146 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91147 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91148 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91149 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91150 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91151 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91152 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91153 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91154 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91155 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91156 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91157 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91158 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91159 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91160 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91161 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91162 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91163 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91164 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91165 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91166 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91167 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91168 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91169 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91170 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91171 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91172 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91173 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91174 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91175 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91176 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91177 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91178 code=503 error=<nil> bytes=20
+SOAK_EVENT index=12 kind=center seconds=8.338 details=production_bootstrap_restart center_restart_reads=34 unavailable=34
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":28575,"rss_kib":33184},"elapsed_seconds":105,"events":12,"httpd":{"fds":5,"pid":17477,"rss_kib":27072},"httpdb":{"fds":6,"pid":28578,"rss_kib":10076},"queries":92,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":27957,"rss_kib":10808},"uu":{"fds":5,"pid":16606,"rss_kib":10708}}
+SOAK_SAMPLE {"ddnsgo":{"fds":7,"pid":28575,"rss_kib":33196},"elapsed_seconds":109,"events":12,"httpd":{"fds":5,"pid":17477,"rss_kib":27080},"httpdb":{"fds":6,"pid":28578,"rss_kib":10096},"queries":97,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":27957,"rss_kib":10808},"uu":{"fds":5,"pid":16606,"rss_kib":10708}}
+SOAK_RESULT {"counts":{"abort":2,"backend":2,"center":2,"ddns":1,"partial":2,"signals":1,"status":51,"tls":1,"uu":1,"version":46},"data_preserved":true,"duration_seconds":109.009135427,"events":12,"finished_utc":"2026-11-05T15:52:05Z","healthy_queries":97,"latency_ms":{"max":1416.051,"p50":746.59,"p95":1209.649},"private_api_denied":true,"requested_duration_seconds":100,"samples":[{"ddnsgo":{"fds":7,"pid":3901,"rss_kib":31468},"elapsed_seconds":0,"events":0,"httpd":{"fds":5,"pid":920,"rss_kib":25092},"httpdb":{"fds":6,"pid":876,"rss_kib":10060},"queries":0,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":627,"rss_kib":12624},"uu":{"fds":5,"pid":1614,"rss_kib":11000}},{"ddnsgo":{"fds":7,"pid":3901,"rss_kib":31504},"elapsed_seconds":20,"events":2,"httpd":{"fds":5,"pid":920,"rss_kib":27188},"httpdb":{"fds":6,"pid":876,"rss_kib":10156},"queries":23,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":627,"rss_kib":12624},"uu":{"fds":5,"pid":1614,"rss_kib":11000}},{"ddnsgo":{"fds":7,"pid":13201,"rss_kib":32672},"elapsed_seconds":43,"events":4,"httpd":{"fds":5,"pid":920,"rss_kib":27252},"httpdb":{"fds":6,"pid":13203,"rss_kib":8056},"queries":38,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":12579,"rss_kib":12216},"uu":{"fds":4,"pid":1614,"rss_kib":11000}},{"ddnsgo":{"fds":7,"pid":14736,"rss_kib":32836},"elapsed_seconds":60,"events":7,"httpd":{"fds":5,"pid":17477,"rss_kib":26952},"httpdb":{"fds":6,"pid":13203,"rss_kib":8208},"queries":50,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":12579,"rss_kib":12224},"uu":{"fds":4,"pid":16606,"rss_kib":10708}},{"ddnsgo":{"fds":7,"pid":14736,"rss_kib":32852},"elapsed_seconds":80,"events":9,"httpd":{"fds":5,"pid":17477,"rss_kib":27000},"httpdb":{"fds":6,"pid":13203,"rss_kib":8304},"queries":71,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":12579,"rss_kib":12224},"uu":{"fds":5,"pid":16606,"rss_kib":10708}},{"ddnsgo":{"fds":7,"pid":28575,"rss_kib":33184},"elapsed_seconds":105,"events":12,"httpd":{"fds":5,"pid":17477,"rss_kib":27072},"httpdb":{"fds":6,"pid":28578,"rss_kib":10076},"queries":92,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":27957,"rss_kib":10808},"uu":{"fds":5,"pid":16606,"rss_kib":10708}},{"ddnsgo":{"fds":7,"pid":28575,"rss_kib":33196},"elapsed_seconds":109,"events":12,"httpd":{"fds":5,"pid":17477,"rss_kib":27080},"httpdb":{"fds":6,"pid":28578,"rss_kib":10096},"queries":97,"rss_scope":"Linux user-mode QEMU process RSS: target mappings plus emulator mappings","skipd":{"fds":8,"pid":27957,"rss_kib":10808},"uu":{"fds":5,"pid":16606,"rss_kib":10708}}],"started_utc":"2026-11-05T15:50:16Z","tls_archive_preserved":true,"unplanned_query_failures":0,"uu_launches":2}
+PASS continuous_queries_restarts_and_disconnects_preserve_data_and_uu
+SOAK_REAPER orphans_reaped=130
+LINUX_READONLY_JOB_STATUS=0

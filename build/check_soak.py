@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """Bounded live-time coexistence run; never changes the candidate firmware."""
-import os,sys,subprocess,json,hashlib,re
+import os,sys,subprocess,json,hashlib,re,argparse
 from pathlib import Path
 from prepare_real_plugins import prepare
 from run_readonly_linux import run
 ROOT=Path(__file__).resolve().parent.parent
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
+ parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--smoke',action='store_true');parser.add_argument('--label');args=parser.parse_args()
+ if args.label:assert re.fullmatch(r'[a-z0-9-]{1,48}',args.label),'invalid output label'
  os.chdir(ROOT)
  v=json.loads((ROOT/'output/verification.json').read_text());assert sha(ROOT/v['image'])==v['sha256'] and all(v['checks'].values()) and not v['errors']
  stage=ROOT/'build/casefs/rootfs';back=ROOT/'build/casefs/roundtrip'
@@ -17,11 +19,11 @@ def main():
  flags=['sources/zig-aarch64-macos-0.15.2/zig','cc','-O2']
  subprocess.run(flags+['-target','aarch64-linux-musl','-static','-s','-o','build/soak-init-fixture','build/soak_init_fixture.c'],check=True)
  subprocess.run(flags+['-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53','-shared','-fPIC','-o','build/https_trace_fixture.so','build/https_trace_fixture.c','-ldl'],check=True)
- subprocess.run(['go','build','-trimpath','-o','build/test-soak','build/test_soak.go','build/test_memory.go','build/native_runtime_client.go','build/test_online.go','build/coexist_helpers.go'],check=True,env=dict(os.environ,GOOS='linux',GOARCH='arm64',CGO_ENABLED='0'))
- smoke='--smoke' in sys.argv;phase='soak-smoke' if smoke else 'soak-30m'
+ subprocess.run(['go','build','-trimpath','-o','build/test-soak','build/test_soak.go','build/test_memory.go','build/memory_cycles.go','build/native_runtime_client.go','build/test_online.go','build/coexist_helpers.go'],check=True,env=dict(os.environ,GOOS='linux',GOARCH='arm64',CGO_ENABLED='0'))
+ smoke=args.smoke;phase='soak-smoke' if smoke else 'soak-30m';artifact=('soak-'+args.label+('-smoke' if smoke else '-30m')) if args.label else phase
  (ROOT/'build/real-plugin-phase').write_text(phase+'\n')
  print('Running',phase,flush=True)
- log=ROOT/f'output/{phase}.log'
+ log=ROOT/f'output/{artifact}.log'
  text=run(log,timeout=400 if smoke else 2160)
  rows=[json.loads(l.removeprefix('SOAK_RESULT ')) for l in text.splitlines() if l.startswith('SOAK_RESULT ')];assert len(rows)==1
  result=rows[0];assert result['duration_seconds']>=result['requested_duration_seconds']==(100 if smoke else 1800)
@@ -44,6 +46,6 @@ def main():
  for (name,pid),rows in sorted(grouped.items()):
   resources.append({'name':name,'pid':pid,'samples':len(rows),'fd_min':min(r['fds'] for r in rows),'fd_max':max(r['fds'] for r in rows),'rss_min_kib':min(r['rss_kib'] for r in rows),'rss_max_kib':max(r['rss_kib'] for r in rows)})
  report={'status':'LOCAL_SOAK_SMOKE_PASS' if smoke else 'LOCAL_30_MINUTE_SOAK_PASS','candidate_image':v['image'],'candidate_sha256':v['sha256'],'result':result,'maintenance_windows':[{'name':k,'queries':int(n),'expected_unavailable':int(bad)} for k,n,bad in windows],'resource_ranges':resources,'orphan_children_reaped':int(re.search(r'SOAK_REAPER orphans_reaped=(\d+)',text)[1]),'resource_observation':'DDNS-Go QEMU process RSS increased in steps; cache/runtime/emulation overhead versus slow leak remains unclassified. FD counts are sampled, not a proof of leak freedom.','log_sha256':sha(log),'production_files':{p:sha(stage/p) for p in paths},'checks':{k:True for k in ['actual_elapsed_time_meets_requested_duration','healthy_queries_complete_without_automatic_retry','client_rst_and_partial_body_disconnect_allow_later_independent_queries','backend_kill_respawns_and_later_queries_recover','center_restart_under_continuous_polling_recovers','ddns_restart_under_continuous_polling_recovers','uu_restart_does_not_interrupt_center_queries','https_restart_preserves_certificate_and_reauthenticates','repeated_sigalrm_keeps_complete_response','plugin_files_and_native_database_records_preserved','uu_synthetic_persistent_and_temporary_data_preserved','only_planned_uu_restarts_observed','private_api_stays_denied_to_unprivileged_ports','resource_samples_have_live_processes_and_valid_fd_rss_counts','workspace_readonly_no_nic_no_physical_router']},'scope':['Single disposable ARM64 VM; original ASUS ARM32 HTTPS/login/rc and unmodified real DDNS-Go plugin; no physical router/NIC',str(result['requested_duration_seconds'])+' seconds measured with a monotonic clock after installation/setup; not accelerated time','New IDs for every request; queries during explicitly planned center/DDNS maintenance can be unavailable; UU restart must not interrupt queries','Owned synthetic UU monitor/heartbeat worker and test data; original native NTP/download/checksum startup flow','Test-only subreaper supplies orphan reaping for the minimal guest shell PID 1; it never kills live services','FD/RSS samples are observations per PID, not proof that no slow leak exists'],'not_tested':['Stock 4.1 kernel and physical router/NAND/UBIFS','Real UU monitor/account/entitlement/game traffic or WAN provider APIs','Day/week-long operation, high client concurrency and all network failures']}
- (ROOT/f'output/{phase}_tests.json').write_text(json.dumps(report,indent=2)+'\n')
+ (ROOT/f'output/{artifact}_tests.json').write_text(json.dumps(report,indent=2)+'\n')
  print(json.dumps({'status':report['status'],'seconds':result['duration_seconds'],'queries':result['healthy_queries'],'events':result['events'],'sha256':v['sha256']}),flush=True)
 if __name__=='__main__':main()

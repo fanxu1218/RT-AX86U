@@ -387,6 +387,9 @@ func main() {
 		duration = 100 * time.Second
 		period = 8 * time.Second
 	}
+	if len(os.Args) > 1 && strings.HasPrefix(os.Args[1], "soak-memory") {
+		duration = time.Duration(memorySeconds(os.Args[1])) * time.Second
+	}
 	ctx, cancel := context.WithTimeout(context.Background(), duration+4*time.Minute)
 	defer cancel()
 	x.ctx = ctx

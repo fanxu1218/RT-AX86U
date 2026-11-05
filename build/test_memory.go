@@ -114,11 +114,14 @@ func perfStats(p int, maps []memMap) map[string]any {
 	}
 	return map[string]any{"available": true, "file_bytes": len(b), "entries": entries, "entries_in_host_executable_maps": matched, "host_executable_address_union_bytes": covered}
 }
-func memSample(p int, started time.Time) map[string]any {
+func memSample(p int, started time.Time, labels ...map[string]any) map[string]any {
 	maps := smaps(p)
 	guest, host, total := 0, 0, 0
 	groups := map[string]int{}
 	hugeGroups := map[string]int{}
+	dirtyGroups := map[string]int{}
+	var writable []map[string]any
+	writableVirtual := uint64(0)
 	for _, m := range maps {
 		total += m.RSS
 		bucket := "host"
@@ -134,6 +137,12 @@ func memSample(p int, started time.Time) map[string]any {
 		}
 		groups[bucket+" "+m.Perm+" "+name] += m.RSS
 		hugeGroups[bucket+" "+m.Perm+" "+name] += m.Huge
+		dirtyGroups[bucket+" "+m.Perm+" "+name] += m.PrivateDirty
+		if bucket == "guest" && strings.Contains(m.Perm, "w") {
+			writableVirtual += (m.End - m.Start) / 1024
+			writable = append(writable, map[string]any{"start_hex": fmt.Sprintf("%x", m.Start), "end_hex": fmt.Sprintf("%x", m.End),
+				"virtual_kib": (m.End - m.Start) / 1024, "rss_kib": m.RSS, "private_dirty_kib": m.PrivateDirty, "anonymous_kib": m.Anonymous, "swap_kib": m.Swap, "anon_huge_pages_kib": m.Huge})
+		}
 	}
 	status := nrRead(fmt.Sprintf("/proc/%d/status", p))
 	threads, thp := 0, -1
@@ -151,16 +160,26 @@ func memSample(p int, started time.Time) map[string]any {
 		panic(fmt.Sprintf("invalid address separation guest=%d host=%d", guest, host))
 	}
 	row := map[string]any{"elapsed_seconds": time.Since(started).Seconds(), "pid": p, "status_rss_kib": rss(p), "smaps_rss_kib": total, "target_mapping_rss_kib": guest, "qemu_host_mapping_rss_kib": host, "fds": fds(p), "threads": threads, "mapping_groups_rss_kib": groups, "perfmap": perfStats(p, maps)}
-	gcCount, lastGC := 0, ""
+	gcCount, lastGC, lastScav := 0, "", ""
 	for _, line := range strings.Split(string(nrRead("/tmp/ddnsgo-memory-runtime.log")), "\n") {
 		if strings.HasPrefix(line, "gc ") {
 			gcCount++
 			lastGC = line
 		}
+		if strings.HasPrefix(line, "scav ") {
+			lastScav = line
+		}
 	}
 	row["gc_cycles_seen"], row["latest_gc_trace"] = gcCount, lastGC
 	row["mapping_groups_anon_huge_pages_kib"] = hugeGroups
 	row["thp_enabled"] = thp
+	row["latest_scav_trace"] = lastScav
+	row["mapping_groups_private_dirty_kib"], row["target_writable_maps"], row["target_virtual_writable_kib"] = dirtyGroups, writable, writableVirtual
+	for _, label := range labels {
+		for key, value := range label {
+			row[key] = value
+		}
+	}
 	b, _ := json.Marshal(row)
 	fmt.Printf("MEMORY_SAMPLE %s\n", b)
 	return row
@@ -196,7 +215,8 @@ func memoryStage(reuse bool, elapsed time.Duration) string {
 }
 
 func memoryRun(x *soak) {
-	noTHP := os.Args[1] == "soak-memory-no-thp"
+	noTHP := strings.HasSuffix(os.Args[1], "-no-thp")
+	plan, cyclic := cycleSchedule(os.Args[1])
 	binarySHA := fmt.Sprintf("%x", sha256.Sum256(nrRead("/koolshare/bin/ddnsgo")))
 	fmt.Printf("MEMORY_EXECUTABLE sha256=%s\n", binarySHA)
 	fmt.Printf("QEMU_MEMORY_VERSION %s\n", nrCommand("/usr/bin/qemu-arm", "-version"))
@@ -252,14 +272,8 @@ func memoryRun(x *soak) {
 	}
 	fmt.Printf("MEMORY_PROCESS pid=%d original_pid=%d executable_sha256_checked_by_host=true flags=GODEBUG:gctrace,scavtrace QEMU_GUEST_BASE:0x100000000\n", target, old)
 	fmt.Printf("MEMORY_MAPS_BEGIN\n%s\nMEMORY_MAPS_END\n", nrRead(fmt.Sprintf("/proc/%d/maps", target)))
-	seconds := 720
+	seconds := memorySeconds(os.Args[1])
 	reuse := os.Args[1] == "soak-memory-reuse" || noTHP
-	if reuse {
-		seconds = 660
-	}
-	if os.Args[1] == "soak-memory-probe" {
-		seconds = 10
-	}
 	started := time.Now()
 	startedUTC := started.UTC().Format(time.RFC3339Nano)
 	pageClient := &http.Client{Timeout: 3 * time.Second, Transport: &http.Transport{DisableKeepAlives: true}}
@@ -268,45 +282,53 @@ func memoryRun(x *soak) {
 	stageStarts := map[string]float64{}
 	stage := "continuous"
 	var samples []map[string]any
-	samples = append(samples, memSample(target, started))
-	next := started.Add(20 * time.Second)
-	for time.Since(started) < time.Duration(seconds)*time.Second {
-		at := time.Now()
-		current := memoryStage(reuse, time.Since(started))
-		if reuse && current != stage {
-			stage = current
-			x.data()
-			stageStarts[stage] = time.Since(started).Seconds()
-			fmt.Printf("MEMORY_STAGE elapsed_seconds=%.3f name=%s\n", time.Since(started).Seconds(), stage)
-		}
-		x.query([]string{"status", "version"}[x.queries%2])
-		if strings.HasPrefix(stage, "load") {
-			for i := 0; i < 5; i++ {
-				memoryPage(pageClient)
-				pageRequests++
-				pageCounts[stage]++
-			}
-		}
-		if time.Now().After(next) {
-			if pid("ddnsgo") != target {
-				panic("diagnostic process unexpectedly restarted")
-			}
-			if !strings.HasPrefix(stage, "idle") {
+	var cycles memoryCycleObservation
+	if cyclic {
+		cycles = observeMemoryCycles(x, target, started, plan)
+		samples, pageRequests, pageCounts, stageStarts = cycles.samples, cycles.pageRequests, cycles.pageCounts, cycles.stageStarts
+	} else {
+		samples = append(samples, memSample(target, started))
+		next := started.Add(20 * time.Second)
+		for time.Since(started) < time.Duration(seconds)*time.Second {
+			at := time.Now()
+			current := memoryStage(reuse, time.Since(started))
+			if reuse && current != stage {
+				stage = current
 				x.data()
-			} else {
-				coUUAlive(x.u.pid)
+				stageStarts[stage] = time.Since(started).Seconds()
+				fmt.Printf("MEMORY_STAGE elapsed_seconds=%.3f name=%s\n", time.Since(started).Seconds(), stage)
 			}
-			row := memSample(target, started)
-			row["stage"] = stage
-			samples = append(samples, row)
-			next = next.Add(20 * time.Second)
-		}
-		if d := time.Until(at.Add(time.Second)); d > 0 {
-			time.Sleep(d)
+			x.query([]string{"status", "version"}[x.queries%2])
+			if strings.HasPrefix(stage, "load") {
+				for i := 0; i < 5; i++ {
+					memoryPage(pageClient)
+					pageRequests++
+					pageCounts[stage]++
+				}
+			}
+			if time.Now().After(next) {
+				if pid("ddnsgo") != target {
+					panic("diagnostic process unexpectedly restarted")
+				}
+				if !strings.HasPrefix(stage, "idle") {
+					x.data()
+				} else {
+					coUUAlive(x.u.pid)
+				}
+				row := memSample(target, started)
+				row["stage"] = stage
+				samples = append(samples, row)
+				next = next.Add(20 * time.Second)
+			}
+			if d := time.Until(at.Add(time.Second)); d > 0 {
+				time.Sleep(d)
+			}
 		}
 	}
 	x.data()
-	samples = append(samples, memSample(target, started))
+	if !cyclic {
+		samples = append(samples, memSample(target, started))
+	}
 	runtimeLog := nrRead("/tmp/ddnsgo-memory-runtime.log")
 	var gcLines []string
 	for _, line := range strings.Split(string(runtimeLog), "\n") {
@@ -325,6 +347,9 @@ func memoryRun(x *soak) {
 	}
 	x.data()
 	result := map[string]any{"duration_seconds": time.Since(started).Seconds(), "requested_seconds": seconds, "healthy_queries": x.queries, "samples": samples, "gc_lines": gcLines, "runtime_script_restored": bytes.Equal(original, nrRead(path)), "data_preserved": true, "uu_launches": x.launches, "pressure_page_requests": pageRequests, "pressure_page_counts": pageCounts, "stage_start_seconds": stageStarts, "started_utc": startedUTC, "finished_utc": time.Now().UTC().Format(time.RFC3339Nano), "packaged_binary_sha256": binarySHA, "diagnostic_process_thp_disabled": noTHP}
+	if cyclic {
+		result["cycle_schedule"], result["phase_boundaries"], result["coexist_initial_pids"] = plan, cycles.boundaries, cycles.initialPIDs
+	}
 	b, e := json.Marshal(result)
 	nrMust(e)
 	fmt.Printf("MEMORY_RESULT %s\n", b)

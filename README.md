@@ -44,6 +44,7 @@
 - [事件测试](output/hooks_tests.json) · [兼容测试](output/compatibility_tests.json) · [原厂接口清单](output/vendor_contracts.json) · [UU 静态及模型检查](output/uu_compatibility_tests.json) · [原厂登录/TLS/UU 本地运行检查](output/native_runtime_tests.json)
 - [30 分钟持续运行说明](output/持续运行验证说明.md) · [实测报告](output/soak-30m_tests.json)
 - [DDNS-Go RSS 分层排查](output/DDNS-Go内存排查说明.md) · [连续采样](output/ddnsgo_memory_continuous_tests.json) · [重复负载](output/ddnsgo_memory_reuse_tests.json) · [禁用大页对照](output/ddnsgo_memory_no-thp_tests.json)
+- [DDNS-Go 一小时八轮负载/空闲验证](output/DDNS-Go多轮持续内存验证.md) · [专项数据与逐轮基线](output/ddnsgo_memory_cycles-no-thp_tests.json)
 - [原厂 HTTPS 与 DDNS-Go 共存稳定性](output/https_stability_tests.json) · [r6 自然复现](output/https_r6_reproduction.json)
 - [损坏与低空间安全检查](output/recovery_safety_tests.json) · [r5 复现对照](output/recovery_r5_baseline.json)
 - [安装中断恢复说明](output/插件安装中断恢复说明.md) · [中断恢复检查](output/interruption_tests.json) · [r4 中断问题复现](output/interrupt_r4_reproductions.log)
@@ -59,6 +60,8 @@ SHA256: 989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677
 ```
 
 ## 验证摘要
+
+DDNS-Go 同一常驻进程追加一小时、8 轮负载/空闲：3522 次 HTTPS 查询、4640 次额外网页读取完成，55 次 GC 存活堆读数均不足 1 MiB。最终静置基线比第一轮空闲末值低 8 KiB；约 1.3 MiB 留存未随轮次持续放大，趋势更符合首次扩容及容量复用。数据与 UU 测试进程保留，未据此修改固件内存策略；有限观测不等于长期或实机无泄漏证明。
 
 追加同一虚拟机 30 分钟实测：1,798 次正常查询无计划外失败，19 次计划重启/断连恢复通过，配置、证书及 UU 测试数据保留。当时 DDNS-Go 进程总 RSS 最大单生命周期样本增幅约 6.9 MiB，未采集映射与 GC，不能逐阶回溯原因。后续专项已分离目标程序与 QEMU 映射，观测到透明大页台阶和 GC 后内存回收，详见 RSS 排查报告；这仍不能证明长期无泄漏。r7 固件及原发布附件不变。
 

@@ -1,0 +1,2813 @@
+{
+  "mode": "cycles-probe-no-thp",
+  "phase": "soak-memory-cycles-probe-no-thp",
+  "fixture": {
+    "fixture_executable_sha256": "27bac49038dcb23724eb73a18a1accc992bee7f4ab9d30fd3a82a76a12b182f9",
+    "source_sha256": {
+      "build/test_soak.go": "b0a63f874ce5dd6c1fe6aab38051564c65d4b098e5d12410b397cf6dfe3f4aca",
+      "build/test_memory.go": "69838169024c9d0b9e31f2e570f9cde728f8193fe4d0e9f71be059fc080ca42f",
+      "build/memory_cycles.go": "3e9f90d880baa7959bbbc039520c721303f1d2f0254af6d4e91d63b4660bfc31",
+      "build/native_runtime_client.go": "63dbbfc9627136152b01ed997e9460db550234f27a547fdbbd1bb0099a2cd779",
+      "build/test_online.go": "6149e462c16f55e709ecd3cde5d857a5051e4b59ebbf9a0cf97911772b3bfa94",
+      "build/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "build/memory_exec_fixture.c": "b21e9aa6942f4ce0c21fe1863caf182e1a40b63ea66e073d86855addcd67f6d1",
+      "build/soak_init_fixture.c": "411aa2c64c3a3c02e4b86b2717e84ba3ad3685d7349a0a5f1efb67d7efe3099a",
+      "build/https_trace_fixture.c": "8d2c672780430f45c01ad78e7e17667396660aec65564e790bbad9bcb73f872a"
+    },
+    "native_fixture_sha256": {
+      "build/memory-exec-fixture": "2e373f833607812e3a2092f17613c0174ec87f23888fad5961a5b1a7333f9036",
+      "build/soak-init-fixture": "e83b51197ea54aaf11e72dfd8c14bd9d53520985823734f5deab24ad396e9072",
+      "build/https_trace_fixture.so": "9a3f6e162ba2da88b3e600face0cc2e80ccffa7b9de155db24062872e52617d3"
+    }
+  },
+  "log_sha256": "167bdcbfa374849d15e25d33d3cd764c31c8c596cd433d74d78b71c34dafc34c",
+  "result": {
+    "coexist_initial_pids": {
+      "httpd": 921,
+      "httpdb": 885,
+      "skipd": 630,
+      "uu": 1616
+    },
+    "cycle_schedule": {
+      "warmup_seconds": 10,
+      "load_seconds": 10,
+      "idle_seconds": 20,
+      "rounds": 2,
+      "final_idle_seconds": 20
+    },
+    "data_preserved": true,
+    "diagnostic_process_thp_disabled": true,
+    "duration_seconds": 94.318848336,
+    "finished_utc": "2026-11-05T14:46:40.187542226Z",
+    "gc_lines": [
+      "gc 1 @51.283s 0%: 3.4+16+3.2 ms clock, 6.9+3.6/8.7/3.1+6.4 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 2 P",
+      "scav 0 KiB work (bg), 0 KiB work (eager), 3736 KiB now, 32% util"
+    ],
+    "healthy_queries": 88,
+    "packaged_binary_sha256": "9a6fb27190b1bbf7078ce89c1ae75db1567547e050cff42aa15b170f19ff2ddc",
+    "phase_boundaries": [
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26188
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 9772
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 4,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 10.837578213,
+        "fds": 7,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 1688,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 56,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 3180,
+          "host rwxp anonymous": 7608
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 1688,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 56,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 3180,
+          "host rwxp anonymous": 7608
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 132791,
+          "entries_in_host_executable_maps": 132791,
+          "file_bytes": 4024946,
+          "host_executable_address_union_bytes": 3141356
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 13972,
+        "role": "warmup_end",
+        "round": 0,
+        "smaps_rss_kib": 25872,
+        "stage": "warmup",
+        "status_rss_kib": 25872,
+        "target_mapping_rss_kib": 11900,
+        "target_virtual_writable_kib": 14004,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 552,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 552,
+            "rss_kib": 552,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 784,
+            "end_hex": "101400000",
+            "private_dirty_kib": 784,
+            "rss_kib": 784,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 4096
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 44,
+            "end_hex": "140848000",
+            "private_dirty_kib": 44,
+            "rss_kib": 44,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 272
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 48,
+            "end_hex": "140b4a000",
+            "private_dirty_kib": 48,
+            "rss_kib": 48,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 772
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 5
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26204
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 9804
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 4,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 20.181458759,
+        "fds": 8,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 3036,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 68,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4232,
+          "host rwxp anonymous": 9560
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 3036,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 68,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4232,
+          "host rwxp anonymous": 9560
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 158647,
+          "entries_in_host_executable_maps": 158647,
+          "file_bytes": 4817022,
+          "host_executable_address_union_bytes": 3851448
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 16988,
+        "role": "load_end",
+        "round": 1,
+        "smaps_rss_kib": 30236,
+        "stage": "load1",
+        "status_rss_kib": 30236,
+        "target_mapping_rss_kib": 13248,
+        "target_virtual_writable_kib": 14004,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 560,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 560,
+            "rss_kib": 560,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 2044,
+            "end_hex": "101400000",
+            "private_dirty_kib": 2044,
+            "rss_kib": 2044,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 4096
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 44,
+            "end_hex": "140848000",
+            "private_dirty_kib": 44,
+            "rss_kib": 44,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 272
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 128,
+            "end_hex": "140b4a000",
+            "private_dirty_kib": 128,
+            "rss_kib": 128,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 772
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 6
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26224
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 9884
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 4,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 40.484030352,
+        "fds": 8,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 3100,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 68,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4232,
+          "host rwxp anonymous": 9560
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 3100,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 68,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4232,
+          "host rwxp anonymous": 9560
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 158647,
+          "entries_in_host_executable_maps": 158647,
+          "file_bytes": 4817022,
+          "host_executable_address_union_bytes": 3851448
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 16988,
+        "role": "idle_end",
+        "round": 1,
+        "smaps_rss_kib": 30300,
+        "stage": "idle1",
+        "status_rss_kib": 30300,
+        "target_mapping_rss_kib": 13312,
+        "target_virtual_writable_kib": 14004,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 560,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 560,
+            "rss_kib": 560,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 2108,
+            "end_hex": "101400000",
+            "private_dirty_kib": 2108,
+            "rss_kib": 2108,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 4096
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 44,
+            "end_hex": "140848000",
+            "private_dirty_kib": 44,
+            "rss_kib": 44,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 272
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 128,
+            "end_hex": "140b4a000",
+            "private_dirty_kib": 128,
+            "rss_kib": 128,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 772
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 6
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26236
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 9924
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 5,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 50.831022482,
+        "fds": 8,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4588,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 72,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4544,
+          "host rwxp anonymous": 9656
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4588,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 72,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4544,
+          "host rwxp anonymous": 9656
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 160137,
+          "entries_in_host_executable_maps": 160137,
+          "file_bytes": 4861351,
+          "host_executable_address_union_bytes": 3888884
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 17400,
+        "role": "load_end",
+        "round": 2,
+        "smaps_rss_kib": 32200,
+        "stage": "load2",
+        "status_rss_kib": 32200,
+        "target_mapping_rss_kib": 14800,
+        "target_virtual_writable_kib": 18104,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 560,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 560,
+            "rss_kib": 560,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 3556,
+            "end_hex": "101800000",
+            "private_dirty_kib": 3556,
+            "rss_kib": 3556,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 48,
+            "end_hex": "140849000",
+            "private_dirty_kib": 48,
+            "rss_kib": 48,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 276
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 164,
+            "end_hex": "140b4a000",
+            "private_dirty_kib": 164,
+            "rss_kib": 164,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 772
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 7
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26264
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 10004
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 4,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 70.914642409,
+        "fds": 8,
+        "gc_cycles_seen": 1,
+        "latest_gc_trace": "gc 1 @51.283s 0%: 3.4+16+3.2 ms clock, 6.9+3.6/8.7/3.1+6.4 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 2 P",
+        "latest_scav_trace": "scav 0 KiB work (bg), 0 KiB work (eager), 3736 KiB now, 32% util",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4960,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 76,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4724,
+          "host rwxp anonymous": 10828
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4960,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 76,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4724,
+          "host rwxp anonymous": 10828
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 177776,
+          "entries_in_host_executable_maps": 177776,
+          "file_bytes": 5387801,
+          "host_executable_address_union_bytes": 4317384
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 18756,
+        "role": "idle_end",
+        "round": 2,
+        "smaps_rss_kib": 33928,
+        "stage": "idle2",
+        "status_rss_kib": 33928,
+        "target_mapping_rss_kib": 15172,
+        "target_virtual_writable_kib": 18168,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 564,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 564,
+            "rss_kib": 564,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 3684,
+            "end_hex": "101800000",
+            "private_dirty_kib": 3684,
+            "rss_kib": 3684,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 48,
+            "end_hex": "140849000",
+            "private_dirty_kib": 48,
+            "rss_kib": 48,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 276
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 404,
+            "end_hex": "140b5a000",
+            "private_dirty_kib": 404,
+            "rss_kib": 404,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 836
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 7
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26284
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 10072
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 5,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 91.085983793,
+        "fds": 8,
+        "gc_cycles_seen": 1,
+        "latest_gc_trace": "gc 1 @51.283s 0%: 3.4+16+3.2 ms clock, 6.9+3.6/8.7/3.1+6.4 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 2 P",
+        "latest_scav_trace": "scav 0 KiB work (bg), 0 KiB work (eager), 3736 KiB now, 32% util",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4996,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 76,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4724,
+          "host rwxp anonymous": 10832
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4996,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 76,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4724,
+          "host rwxp anonymous": 10832
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 177810,
+          "entries_in_host_executable_maps": 177810,
+          "file_bytes": 5388830,
+          "host_executable_address_union_bytes": 4318076
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 18760,
+        "role": "final_idle_end",
+        "round": 2,
+        "smaps_rss_kib": 33968,
+        "stage": "final_idle",
+        "status_rss_kib": 33968,
+        "target_mapping_rss_kib": 15208,
+        "target_virtual_writable_kib": 18168,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 564,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 564,
+            "rss_kib": 564,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 3716,
+            "end_hex": "101800000",
+            "private_dirty_kib": 3716,
+            "rss_kib": 3716,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 48,
+            "end_hex": "140849000",
+            "private_dirty_kib": 48,
+            "rss_kib": 48,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 276
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 408,
+            "end_hex": "140b5a000",
+            "private_dirty_kib": 408,
+            "rss_kib": 408,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 836
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 7
+      }
+    ],
+    "pressure_page_counts": {
+      "load1": 40,
+      "load2": 50
+    },
+    "pressure_page_requests": 90,
+    "requested_seconds": 90,
+    "runtime_script_restored": true,
+    "samples": [
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26184
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 9744
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 5,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 0.330974583,
+        "fds": 7,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 1668,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 56,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 3156,
+          "host rwxp anonymous": 7540
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 1668,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 56,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 3156,
+          "host rwxp anonymous": 7540
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 131911,
+          "entries_in_host_executable_maps": 131911,
+          "file_bytes": 3998140,
+          "host_executable_address_union_bytes": 3117644
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 13880,
+        "role": "initial",
+        "round": 0,
+        "smaps_rss_kib": 25760,
+        "stage": "warmup",
+        "status_rss_kib": 25760,
+        "target_mapping_rss_kib": 11880,
+        "target_virtual_writable_kib": 14004,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 552,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 552,
+            "rss_kib": 552,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 764,
+            "end_hex": "101400000",
+            "private_dirty_kib": 764,
+            "rss_kib": 764,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 4096
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 44,
+            "end_hex": "140848000",
+            "private_dirty_kib": 44,
+            "rss_kib": 44,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 272
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 48,
+            "end_hex": "140b4a000",
+            "private_dirty_kib": 48,
+            "rss_kib": 48,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 772
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 5
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26188
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 9772
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 4,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 10.837578213,
+        "fds": 7,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 1688,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 56,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 3180,
+          "host rwxp anonymous": 7608
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 1688,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 56,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 3180,
+          "host rwxp anonymous": 7608
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 132791,
+          "entries_in_host_executable_maps": 132791,
+          "file_bytes": 4024946,
+          "host_executable_address_union_bytes": 3141356
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 13972,
+        "role": "warmup_end",
+        "round": 0,
+        "smaps_rss_kib": 25872,
+        "stage": "warmup",
+        "status_rss_kib": 25872,
+        "target_mapping_rss_kib": 11900,
+        "target_virtual_writable_kib": 14004,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 552,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 552,
+            "rss_kib": 552,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 784,
+            "end_hex": "101400000",
+            "private_dirty_kib": 784,
+            "rss_kib": 784,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 4096
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 44,
+            "end_hex": "140848000",
+            "private_dirty_kib": 44,
+            "rss_kib": 44,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 272
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 48,
+            "end_hex": "140b4a000",
+            "private_dirty_kib": 48,
+            "rss_kib": 48,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 772
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 5
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26204
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 9804
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 4,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 20.181458759,
+        "fds": 8,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 3036,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 68,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4232,
+          "host rwxp anonymous": 9560
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 3036,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 68,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4232,
+          "host rwxp anonymous": 9560
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 158647,
+          "entries_in_host_executable_maps": 158647,
+          "file_bytes": 4817022,
+          "host_executable_address_union_bytes": 3851448
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 16988,
+        "role": "load_end",
+        "round": 1,
+        "smaps_rss_kib": 30236,
+        "stage": "load1",
+        "status_rss_kib": 30236,
+        "target_mapping_rss_kib": 13248,
+        "target_virtual_writable_kib": 14004,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 560,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 560,
+            "rss_kib": 560,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 2044,
+            "end_hex": "101400000",
+            "private_dirty_kib": 2044,
+            "rss_kib": 2044,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 4096
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 44,
+            "end_hex": "140848000",
+            "private_dirty_kib": 44,
+            "rss_kib": 44,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 272
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 128,
+            "end_hex": "140b4a000",
+            "private_dirty_kib": 128,
+            "rss_kib": 128,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 772
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 6
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26204
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 9808
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 5,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 21.272308677,
+        "fds": 8,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 3060,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 68,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4232,
+          "host rwxp anonymous": 9560
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 3060,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 68,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4232,
+          "host rwxp anonymous": 9560
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 158647,
+          "entries_in_host_executable_maps": 158647,
+          "file_bytes": 4817022,
+          "host_executable_address_union_bytes": 3851448
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 16988,
+        "role": "periodic",
+        "round": 1,
+        "smaps_rss_kib": 30260,
+        "stage": "idle1",
+        "status_rss_kib": 30260,
+        "target_mapping_rss_kib": 13272,
+        "target_virtual_writable_kib": 14004,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 560,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 560,
+            "rss_kib": 560,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 2068,
+            "end_hex": "101400000",
+            "private_dirty_kib": 2068,
+            "rss_kib": 2068,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 4096
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 44,
+            "end_hex": "140848000",
+            "private_dirty_kib": 44,
+            "rss_kib": 44,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 272
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 128,
+            "end_hex": "140b4a000",
+            "private_dirty_kib": 128,
+            "rss_kib": 128,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 772
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 6
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26224
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 9884
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 4,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 40.484030352,
+        "fds": 8,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 3100,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 68,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4232,
+          "host rwxp anonymous": 9560
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 3100,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 68,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4232,
+          "host rwxp anonymous": 9560
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 158647,
+          "entries_in_host_executable_maps": 158647,
+          "file_bytes": 4817022,
+          "host_executable_address_union_bytes": 3851448
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 16988,
+        "role": "idle_end",
+        "round": 1,
+        "smaps_rss_kib": 30300,
+        "stage": "idle1",
+        "status_rss_kib": 30300,
+        "target_mapping_rss_kib": 13312,
+        "target_virtual_writable_kib": 14004,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 560,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 560,
+            "rss_kib": 560,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 2108,
+            "end_hex": "101400000",
+            "private_dirty_kib": 2108,
+            "rss_kib": 2108,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 4096
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 44,
+            "end_hex": "140848000",
+            "private_dirty_kib": 44,
+            "rss_kib": 44,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 272
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 128,
+            "end_hex": "140b4a000",
+            "private_dirty_kib": 128,
+            "rss_kib": 128,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 772
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 6
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26228
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 9888
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 5,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 41.630424145,
+        "fds": 8,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 3316,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 72,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4536,
+          "host rwxp anonymous": 9568
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 3316,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 72,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4536,
+          "host rwxp anonymous": 9568
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 158750,
+          "entries_in_host_executable_maps": 158750,
+          "file_bytes": 4820111,
+          "host_executable_address_union_bytes": 3854048
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 17304,
+        "role": "periodic",
+        "round": 2,
+        "smaps_rss_kib": 30832,
+        "stage": "load2",
+        "status_rss_kib": 30832,
+        "target_mapping_rss_kib": 13528,
+        "target_virtual_writable_kib": 14004,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 560,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 560,
+            "rss_kib": 560,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 2316,
+            "end_hex": "101400000",
+            "private_dirty_kib": 2316,
+            "rss_kib": 2316,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 4096
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 44,
+            "end_hex": "140848000",
+            "private_dirty_kib": 44,
+            "rss_kib": 44,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 272
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 136,
+            "end_hex": "140b4a000",
+            "private_dirty_kib": 136,
+            "rss_kib": 136,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 772
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 7
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26236
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 9924
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 5,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 50.831022482,
+        "fds": 8,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4588,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 72,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4544,
+          "host rwxp anonymous": 9656
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4588,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 72,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4544,
+          "host rwxp anonymous": 9656
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 160137,
+          "entries_in_host_executable_maps": 160137,
+          "file_bytes": 4861351,
+          "host_executable_address_union_bytes": 3888884
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 17400,
+        "role": "load_end",
+        "round": 2,
+        "smaps_rss_kib": 32200,
+        "stage": "load2",
+        "status_rss_kib": 32200,
+        "target_mapping_rss_kib": 14800,
+        "target_virtual_writable_kib": 18104,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 560,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 560,
+            "rss_kib": 560,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 3556,
+            "end_hex": "101800000",
+            "private_dirty_kib": 3556,
+            "rss_kib": 3556,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 48,
+            "end_hex": "140849000",
+            "private_dirty_kib": 48,
+            "rss_kib": 48,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 276
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 164,
+            "end_hex": "140b4a000",
+            "private_dirty_kib": 164,
+            "rss_kib": 164,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 772
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 7
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26248
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 9964
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 4,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 60.384056987,
+        "fds": 8,
+        "gc_cycles_seen": 1,
+        "latest_gc_trace": "gc 1 @51.283s 0%: 3.4+16+3.2 ms clock, 6.9+3.6/8.7/3.1+6.4 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 2 P",
+        "latest_scav_trace": "scav 0 KiB work (bg), 0 KiB work (eager), 3736 KiB now, 32% util",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4952,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 76,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4724,
+          "host rwxp anonymous": 10828
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4952,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 76,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4724,
+          "host rwxp anonymous": 10828
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 177776,
+          "entries_in_host_executable_maps": 177776,
+          "file_bytes": 5387801,
+          "host_executable_address_union_bytes": 4317384
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 18756,
+        "role": "periodic",
+        "round": 2,
+        "smaps_rss_kib": 33920,
+        "stage": "idle2",
+        "status_rss_kib": 33920,
+        "target_mapping_rss_kib": 15164,
+        "target_virtual_writable_kib": 18168,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 564,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 564,
+            "rss_kib": 564,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 3676,
+            "end_hex": "101800000",
+            "private_dirty_kib": 3676,
+            "rss_kib": 3676,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 48,
+            "end_hex": "140849000",
+            "private_dirty_kib": 48,
+            "rss_kib": 48,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 276
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 404,
+            "end_hex": "140b5a000",
+            "private_dirty_kib": 404,
+            "rss_kib": 404,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 836
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 7
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26264
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 10004
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 4,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 70.914642409,
+        "fds": 8,
+        "gc_cycles_seen": 1,
+        "latest_gc_trace": "gc 1 @51.283s 0%: 3.4+16+3.2 ms clock, 6.9+3.6/8.7/3.1+6.4 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 2 P",
+        "latest_scav_trace": "scav 0 KiB work (bg), 0 KiB work (eager), 3736 KiB now, 32% util",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4960,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 76,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4724,
+          "host rwxp anonymous": 10828
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4960,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 76,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4724,
+          "host rwxp anonymous": 10828
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 177776,
+          "entries_in_host_executable_maps": 177776,
+          "file_bytes": 5387801,
+          "host_executable_address_union_bytes": 4317384
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 18756,
+        "role": "idle_end",
+        "round": 2,
+        "smaps_rss_kib": 33928,
+        "stage": "idle2",
+        "status_rss_kib": 33928,
+        "target_mapping_rss_kib": 15172,
+        "target_virtual_writable_kib": 18168,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 564,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 564,
+            "rss_kib": 564,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 3684,
+            "end_hex": "101800000",
+            "private_dirty_kib": 3684,
+            "rss_kib": 3684,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 48,
+            "end_hex": "140849000",
+            "private_dirty_kib": 48,
+            "rss_kib": 48,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 276
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 404,
+            "end_hex": "140b5a000",
+            "private_dirty_kib": 404,
+            "rss_kib": 404,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 836
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 7
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26272
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 10040
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 4,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 80.555556163,
+        "fds": 8,
+        "gc_cycles_seen": 1,
+        "latest_gc_trace": "gc 1 @51.283s 0%: 3.4+16+3.2 ms clock, 6.9+3.6/8.7/3.1+6.4 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 2 P",
+        "latest_scav_trace": "scav 0 KiB work (bg), 0 KiB work (eager), 3736 KiB now, 32% util",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4984,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 76,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4724,
+          "host rwxp anonymous": 10828
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4984,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 76,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4724,
+          "host rwxp anonymous": 10828
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 177810,
+          "entries_in_host_executable_maps": 177810,
+          "file_bytes": 5388830,
+          "host_executable_address_union_bytes": 4318076
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 18756,
+        "role": "periodic",
+        "round": 2,
+        "smaps_rss_kib": 33952,
+        "stage": "final_idle",
+        "status_rss_kib": 33952,
+        "target_mapping_rss_kib": 15196,
+        "target_virtual_writable_kib": 18168,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 564,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 564,
+            "rss_kib": 564,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 3704,
+            "end_hex": "101800000",
+            "private_dirty_kib": 3704,
+            "rss_kib": 3704,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 48,
+            "end_hex": "140849000",
+            "private_dirty_kib": 48,
+            "rss_kib": 48,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 276
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 408,
+            "end_hex": "140b5a000",
+            "private_dirty_kib": 408,
+            "rss_kib": 408,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 836
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 7
+      },
+      {
+        "coexist_processes": {
+          "httpd": {
+            "fds": 5,
+            "pid": 921,
+            "rss_kib": 26284
+          },
+          "httpdb": {
+            "fds": 6,
+            "pid": 885,
+            "rss_kib": 10072
+          },
+          "skipd": {
+            "fds": 8,
+            "pid": 630,
+            "rss_kib": 12152
+          },
+          "uu": {
+            "fds": 5,
+            "pid": 1616,
+            "rss_kib": 9268
+          }
+        },
+        "coexist_rss_scope": "Linux user-mode QEMU process, target plus emulator",
+        "elapsed_seconds": 91.085983793,
+        "fds": 8,
+        "gc_cycles_seen": 1,
+        "latest_gc_trace": "gc 1 @51.283s 0%: 3.4+16+3.2 ms clock, 6.9+3.6/8.7/3.1+6.4 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 2 P",
+        "latest_scav_trace": "scav 0 KiB work (bg), 0 KiB work (eager), 3736 KiB now, 32% util",
+        "mapping_groups_anon_huge_pages_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 0,
+          "guest rw-p anonymous": 0,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 0,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 0,
+          "host rw-p [heap]": 0,
+          "host rw-p [stack]": 0,
+          "host rw-p anonymous": 0,
+          "host rwxp anonymous": 0
+        },
+        "mapping_groups_private_dirty_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4996,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 64,
+          "host r-xp [vdso]": 0,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 76,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4724,
+          "host rwxp anonymous": 10832
+        },
+        "mapping_groups_rss_kib": {
+          "guest ---p anonymous": 0,
+          "guest r--p /jffs/.koolshare/bin/ddnsgo": 0,
+          "guest r--p anonymous": 10212,
+          "guest rw-p anonymous": 4996,
+          "host ---p [heap]": 0,
+          "host ---p anonymous": 0,
+          "host r--p [vvar]": 0,
+          "host r-xp /usr/bin/qemu-arm": 2752,
+          "host r-xp [vdso]": 4,
+          "host rw-p /usr/bin/qemu-arm": 352,
+          "host rw-p [heap]": 76,
+          "host rw-p [stack]": 20,
+          "host rw-p anonymous": 4724,
+          "host rwxp anonymous": 10832
+        },
+        "perfmap": {
+          "available": true,
+          "entries": 177810,
+          "entries_in_host_executable_maps": 177810,
+          "file_bytes": 5388830,
+          "host_executable_address_union_bytes": 4318076
+        },
+        "pid": 4595,
+        "qemu_host_mapping_rss_kib": 18760,
+        "role": "final_idle_end",
+        "round": 2,
+        "smaps_rss_kib": 33968,
+        "stage": "final_idle",
+        "status_rss_kib": 33968,
+        "target_mapping_rss_kib": 15208,
+        "target_virtual_writable_kib": 18168,
+        "target_writable_maps": [
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 564,
+            "end_hex": "100ab8000",
+            "private_dirty_kib": 564,
+            "rss_kib": 564,
+            "start_hex": "100a10000",
+            "swap_kib": 0,
+            "virtual_kib": 672
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 3716,
+            "end_hex": "101800000",
+            "private_dirty_kib": 3716,
+            "rss_kib": 3716,
+            "start_hex": "101000000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 260,
+            "end_hex": "140801000",
+            "private_dirty_kib": 260,
+            "rss_kib": 260,
+            "start_hex": "140001000",
+            "swap_kib": 0,
+            "virtual_kib": 8192
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 48,
+            "end_hex": "140849000",
+            "private_dirty_kib": 48,
+            "rss_kib": 48,
+            "start_hex": "140804000",
+            "swap_kib": 0,
+            "virtual_kib": 276
+          },
+          {
+            "anon_huge_pages_kib": 0,
+            "anonymous_kib": 408,
+            "end_hex": "140b5a000",
+            "private_dirty_kib": 408,
+            "rss_kib": 408,
+            "start_hex": "140a89000",
+            "swap_kib": 0,
+            "virtual_kib": 836
+          }
+        ],
+        "thp_enabled": 0,
+        "threads": 7
+      }
+    ],
+    "stage_start_seconds": {
+      "final_idle": 71.042316159,
+      "idle1": 20.303204009,
+      "idle2": 50.967090607,
+      "load1": 11.637547339,
+      "load2": 40.616862269,
+      "warmup": 0.378135167
+    },
+    "started_utc": "2026-11-05T14:45:05.868670598Z",
+    "uu_launches": 1
+  },
+  "gc_cycles": [
+    {
+      "number": 1,
+      "elapsed_seconds": 51.283,
+      "heap_start_mib_integer": 3,
+      "heap_end_mib_integer": 3,
+      "live_heap_mib_integer": 0,
+      "goal_mib_integer": 4
+    }
+  ],
+  "post_60s_ranges": {
+    "target_mapping_rss_kib": {
+      "min": 15164,
+      "max": 15208,
+      "first": 15164,
+      "last": 15208,
+      "delta": 44
+    },
+    "qemu_host_mapping_rss_kib": {
+      "min": 18756,
+      "max": 18760,
+      "first": 18756,
+      "last": 18760,
+      "delta": 4
+    },
+    "smaps_rss_kib": {
+      "min": 33920,
+      "max": 33968,
+      "first": 33920,
+      "last": 33968,
+      "delta": 48
+    },
+    "fds": {
+      "min": 8,
+      "max": 8,
+      "first": 8,
+      "last": 8,
+      "delta": 0
+    },
+    "threads": {
+      "min": 7,
+      "max": 7,
+      "first": 7,
+      "last": 7,
+      "delta": 0
+    }
+  },
+  "interpretation_limit": "Mapping RSS is not live heap; Go trace values are integer MiB. Perf address union is cumulative JIT addresses, not live allocations. Passing these checks does not assert leak freedom.",
+  "cycle_observation": {
+    "quiet_baselines": [
+      {
+        "role": "warmup_end",
+        "stage": "warmup",
+        "round": 0,
+        "elapsed_seconds": 10.837578213,
+        "target_mapping_rss_kib": 11900,
+        "qemu_host_mapping_rss_kib": 13972,
+        "fds": 7,
+        "threads": 5,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "target_virtual_writable_kib": 14004
+      },
+      {
+        "role": "idle_end",
+        "stage": "idle1",
+        "round": 1,
+        "elapsed_seconds": 40.484030352,
+        "target_mapping_rss_kib": 13312,
+        "qemu_host_mapping_rss_kib": 16988,
+        "fds": 8,
+        "threads": 6,
+        "gc_cycles_seen": 0,
+        "latest_gc_trace": "",
+        "latest_scav_trace": "",
+        "target_virtual_writable_kib": 14004
+      },
+      {
+        "role": "idle_end",
+        "stage": "idle2",
+        "round": 2,
+        "elapsed_seconds": 70.914642409,
+        "target_mapping_rss_kib": 15172,
+        "qemu_host_mapping_rss_kib": 18756,
+        "fds": 8,
+        "threads": 7,
+        "gc_cycles_seen": 1,
+        "latest_gc_trace": "gc 1 @51.283s 0%: 3.4+16+3.2 ms clock, 6.9+3.6/8.7/3.1+6.4 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 2 P",
+        "latest_scav_trace": "scav 0 KiB work (bg), 0 KiB work (eager), 3736 KiB now, 32% util",
+        "target_virtual_writable_kib": 18168
+      },
+      {
+        "role": "final_idle_end",
+        "stage": "final_idle",
+        "round": 2,
+        "elapsed_seconds": 91.085983793,
+        "target_mapping_rss_kib": 15208,
+        "qemu_host_mapping_rss_kib": 18760,
+        "fds": 8,
+        "threads": 7,
+        "gc_cycles_seen": 1,
+        "latest_gc_trace": "gc 1 @51.283s 0%: 3.4+16+3.2 ms clock, 6.9+3.6/8.7/3.1+6.4 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 2 P",
+        "latest_scav_trace": "scav 0 KiB work (bg), 0 KiB work (eager), 3736 KiB now, 32% util",
+        "target_virtual_writable_kib": 18168
+      }
+    ],
+    "quiet_target_deltas_kib": [
+      1412,
+      1860,
+      36
+    ],
+    "late_four_idle_target_span_kib": 1860,
+    "late_four_idle_target_slope_kib_per_round": 1860.0,
+    "final_idle_target_delta_kib": 36,
+    "writable_mapping_changes_after_warmup": [
+      {
+        "start_hex": "100a10000",
+        "end_hex": "100ab8000",
+        "first_rss_kib": 552,
+        "last_rss_kib": 564,
+        "rss_delta_kib": 12,
+        "first_virtual_kib": 672,
+        "last_virtual_kib": 672
+      },
+      {
+        "start_hex": "101000000",
+        "end_hex": "101400000",
+        "first_rss_kib": 784,
+        "last_rss_kib": null,
+        "rss_delta_kib": null,
+        "first_virtual_kib": 4096,
+        "last_virtual_kib": null
+      },
+      {
+        "start_hex": "101000000",
+        "end_hex": "101800000",
+        "first_rss_kib": null,
+        "last_rss_kib": 3716,
+        "rss_delta_kib": null,
+        "first_virtual_kib": null,
+        "last_virtual_kib": 8192
+      },
+      {
+        "start_hex": "140001000",
+        "end_hex": "140801000",
+        "first_rss_kib": 260,
+        "last_rss_kib": 260,
+        "rss_delta_kib": 0,
+        "first_virtual_kib": 8192,
+        "last_virtual_kib": 8192
+      },
+      {
+        "start_hex": "140804000",
+        "end_hex": "140848000",
+        "first_rss_kib": 44,
+        "last_rss_kib": null,
+        "rss_delta_kib": null,
+        "first_virtual_kib": 272,
+        "last_virtual_kib": null
+      },
+      {
+        "start_hex": "140804000",
+        "end_hex": "140849000",
+        "first_rss_kib": null,
+        "last_rss_kib": 48,
+        "rss_delta_kib": null,
+        "first_virtual_kib": null,
+        "last_virtual_kib": 276
+      },
+      {
+        "start_hex": "140a89000",
+        "end_hex": "140b4a000",
+        "first_rss_kib": 48,
+        "last_rss_kib": null,
+        "rss_delta_kib": null,
+        "first_virtual_kib": 772,
+        "last_virtual_kib": null
+      },
+      {
+        "start_hex": "140a89000",
+        "end_hex": "140b5a000",
+        "first_rss_kib": null,
+        "last_rss_kib": 408,
+        "rss_delta_kib": null,
+        "first_virtual_kib": null,
+        "last_virtual_kib": 836
+      }
+    ],
+    "interpretation_limit": "Finite-window baseline/slope observations only; no RSS threshold is treated as proof of leak freedom."
+  },
+  "lf_capture_sha256": "b987cdaaa163a63c792de8bb340830d86b30d6b95b5574e62186741edb7d6f0c",
+  "log_normalization": "Runner converts CRLF to LF; published logs also trim trailing spaces/tabs per line. lf_capture_sha256 is before whitespace trimming.",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w",
+  "candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
+  "production_files": {
+    "usr/lib/localmod/httpd_bridge.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
+    "usr/libexec/localmod/httpd": "d9a24b751b2c6ec0a9bf5931b6b1380e75c136bd672a91a5a5118c6ee9e1586d",
+    "usr/libexec/localmod/rc.vendor": "9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62",
+    "usr/libexec/localmod/plugin-txn": "23e575aa4299b075a7fa120fb6672e5c417dca5892f1449c29905f9a862af232",
+    "usr/libexec/localmod/bootstrap.sh": "fd6980a8b1ff18a68897d1ecbe0725dd5918331fe3956c7beadb2e224f33ed3f",
+    "rom/etc/koolshare/scripts/base.sh": "d29dcb38a94aa51b0df22b0fdd8a6a9e9636777bad3a2ae4431d9af308773726",
+    "usr/sbin/curl": "79b37917d01852d7624e36613dde5354a31ffa86b470d506bdc205f920a0d2d9",
+    "usr/sbin/wget": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749"
+  },
+  "packaged_binary_sha256": "9a6fb27190b1bbf7078ce89c1ae75db1567547e050cff42aa15b170f19ff2ddc",
+  "package_sha256": "34f541f8eba6840847a408f408a47032f9ea83b0326a31e21c70a0fbe497dfce",
+  "status": "LOCAL_RSS_DIAGNOSTIC_COMPLETE",
+  "checks": {
+    "pinned_archive_and_candidate_readback_hashes_match": true,
+    "requested_real_elapsed_time_observed": true,
+    "strict_authenticated_queries_complete_without_retry": true,
+    "single_ddns_pid_during_observation": true,
+    "target_plus_qemu_mapping_rss_equals_total": true,
+    "all_perfmap_addresses_belong_to_qemu_host_executable_mappings": true,
+    "go_gc_cycles_observed": true,
+    "original_supervisor_restored_and_normal_queries_pass": true,
+    "plugin_config_native_db_certificate_and_owned_uu_data_preserved": true,
+    "uu_heartbeat_and_only_expected_launch": true,
+    "readonly_workspace_no_guest_nic_no_router": true,
+    "candidate_and_production_files_unchanged": true,
+    "all_rounds_complete_with_real_load_and_idle_windows": true,
+    "quiet_baselines_captured_before_boundary_page_reads_or_forced_gc": true,
+    "all_coexistence_service_pids_unchanged": true,
+    "no_swap_or_transparent_hugepages_in_target_writable_maps": true,
+    "writable_mapping_totals_match_samples": true
+  }
+}

@@ -161,11 +161,13 @@
 !/build/soak_init_fixture.c
 !/build/check_memory.py
 !/build/test_memory.go
+!/build/memory_cycles.go
 !/build/memory_exec_fixture.c
 !/output/ddnsgo_memory_*.log
 !/output/ddnsgo_memory_*_tests.json
 !/output/ddnsgo_memory_buildinfo.json
 !/output/DDNS-Go内存排查说明.md
+!/output/DDNS-Go多轮持续内存验证.md
 !/output/soak_*.log
 !/output/soak-*.log
 !/output/soak-*_tests.json

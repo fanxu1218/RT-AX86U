@@ -1,0 +1,447 @@
+{
+  "status": "LOCAL_SOAK_SMOKE_PASS",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w",
+  "candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
+  "result": {
+    "counts": {
+      "abort": 2,
+      "backend": 2,
+      "center": 2,
+      "ddns": 1,
+      "partial": 2,
+      "signals": 1,
+      "status": 51,
+      "tls": 1,
+      "uu": 1,
+      "version": 46
+    },
+    "data_preserved": true,
+    "duration_seconds": 109.009135427,
+    "events": 12,
+    "finished_utc": "2026-11-05T15:52:05Z",
+    "healthy_queries": 97,
+    "latency_ms": {
+      "max": 1416.051,
+      "p50": 746.59,
+      "p95": 1209.649
+    },
+    "private_api_denied": true,
+    "requested_duration_seconds": 100,
+    "samples": [
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 3901,
+          "rss_kib": 31468
+        },
+        "elapsed_seconds": 0,
+        "events": 0,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 25092
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 876,
+          "rss_kib": 10060
+        },
+        "queries": 0,
+        "rss_scope": "Linux user-mode QEMU process RSS: target mappings plus emulator mappings",
+        "skipd": {
+          "fds": 8,
+          "pid": 627,
+          "rss_kib": 12624
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1614,
+          "rss_kib": 11000
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 3901,
+          "rss_kib": 31504
+        },
+        "elapsed_seconds": 20,
+        "events": 2,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27188
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 876,
+          "rss_kib": 10156
+        },
+        "queries": 23,
+        "rss_scope": "Linux user-mode QEMU process RSS: target mappings plus emulator mappings",
+        "skipd": {
+          "fds": 8,
+          "pid": 627,
+          "rss_kib": 12624
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 1614,
+          "rss_kib": 11000
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 13201,
+          "rss_kib": 32672
+        },
+        "elapsed_seconds": 43,
+        "events": 4,
+        "httpd": {
+          "fds": 5,
+          "pid": 920,
+          "rss_kib": 27252
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 13203,
+          "rss_kib": 8056
+        },
+        "queries": 38,
+        "rss_scope": "Linux user-mode QEMU process RSS: target mappings plus emulator mappings",
+        "skipd": {
+          "fds": 8,
+          "pid": 12579,
+          "rss_kib": 12216
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 1614,
+          "rss_kib": 11000
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 14736,
+          "rss_kib": 32836
+        },
+        "elapsed_seconds": 60,
+        "events": 7,
+        "httpd": {
+          "fds": 5,
+          "pid": 17477,
+          "rss_kib": 26952
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 13203,
+          "rss_kib": 8208
+        },
+        "queries": 50,
+        "rss_scope": "Linux user-mode QEMU process RSS: target mappings plus emulator mappings",
+        "skipd": {
+          "fds": 8,
+          "pid": 12579,
+          "rss_kib": 12224
+        },
+        "uu": {
+          "fds": 4,
+          "pid": 16606,
+          "rss_kib": 10708
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 14736,
+          "rss_kib": 32852
+        },
+        "elapsed_seconds": 80,
+        "events": 9,
+        "httpd": {
+          "fds": 5,
+          "pid": 17477,
+          "rss_kib": 27000
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 13203,
+          "rss_kib": 8304
+        },
+        "queries": 71,
+        "rss_scope": "Linux user-mode QEMU process RSS: target mappings plus emulator mappings",
+        "skipd": {
+          "fds": 8,
+          "pid": 12579,
+          "rss_kib": 12224
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16606,
+          "rss_kib": 10708
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 28575,
+          "rss_kib": 33184
+        },
+        "elapsed_seconds": 105,
+        "events": 12,
+        "httpd": {
+          "fds": 5,
+          "pid": 17477,
+          "rss_kib": 27072
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 28578,
+          "rss_kib": 10076
+        },
+        "queries": 92,
+        "rss_scope": "Linux user-mode QEMU process RSS: target mappings plus emulator mappings",
+        "skipd": {
+          "fds": 8,
+          "pid": 27957,
+          "rss_kib": 10808
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16606,
+          "rss_kib": 10708
+        }
+      },
+      {
+        "ddnsgo": {
+          "fds": 7,
+          "pid": 28575,
+          "rss_kib": 33196
+        },
+        "elapsed_seconds": 109,
+        "events": 12,
+        "httpd": {
+          "fds": 5,
+          "pid": 17477,
+          "rss_kib": 27080
+        },
+        "httpdb": {
+          "fds": 6,
+          "pid": 28578,
+          "rss_kib": 10096
+        },
+        "queries": 97,
+        "rss_scope": "Linux user-mode QEMU process RSS: target mappings plus emulator mappings",
+        "skipd": {
+          "fds": 8,
+          "pid": 27957,
+          "rss_kib": 10808
+        },
+        "uu": {
+          "fds": 5,
+          "pid": 16606,
+          "rss_kib": 10708
+        }
+      }
+    ],
+    "started_utc": "2026-11-05T15:50:16Z",
+    "tls_archive_preserved": true,
+    "unplanned_query_failures": 0,
+    "uu_launches": 2
+  },
+  "maintenance_windows": [
+    {
+      "name": "center_restart",
+      "queries": 35,
+      "expected_unavailable": 34
+    },
+    {
+      "name": "ddns_restart",
+      "queries": 3,
+      "expected_unavailable": 1
+    },
+    {
+      "name": "uu_restart",
+      "queries": 8,
+      "expected_unavailable": 0
+    },
+    {
+      "name": "center_restart",
+      "queries": 34,
+      "expected_unavailable": 34
+    }
+  ],
+  "resource_ranges": [
+    {
+      "name": "ddnsgo",
+      "pid": 3901,
+      "samples": 2,
+      "fd_min": 7,
+      "fd_max": 7,
+      "rss_min_kib": 31468,
+      "rss_max_kib": 31504
+    },
+    {
+      "name": "ddnsgo",
+      "pid": 13201,
+      "samples": 1,
+      "fd_min": 7,
+      "fd_max": 7,
+      "rss_min_kib": 32672,
+      "rss_max_kib": 32672
+    },
+    {
+      "name": "ddnsgo",
+      "pid": 14736,
+      "samples": 2,
+      "fd_min": 7,
+      "fd_max": 7,
+      "rss_min_kib": 32836,
+      "rss_max_kib": 32852
+    },
+    {
+      "name": "ddnsgo",
+      "pid": 28575,
+      "samples": 2,
+      "fd_min": 7,
+      "fd_max": 7,
+      "rss_min_kib": 33184,
+      "rss_max_kib": 33196
+    },
+    {
+      "name": "httpd",
+      "pid": 920,
+      "samples": 3,
+      "fd_min": 5,
+      "fd_max": 5,
+      "rss_min_kib": 25092,
+      "rss_max_kib": 27252
+    },
+    {
+      "name": "httpd",
+      "pid": 17477,
+      "samples": 4,
+      "fd_min": 5,
+      "fd_max": 5,
+      "rss_min_kib": 26952,
+      "rss_max_kib": 27080
+    },
+    {
+      "name": "httpdb",
+      "pid": 876,
+      "samples": 2,
+      "fd_min": 6,
+      "fd_max": 6,
+      "rss_min_kib": 10060,
+      "rss_max_kib": 10156
+    },
+    {
+      "name": "httpdb",
+      "pid": 13203,
+      "samples": 3,
+      "fd_min": 6,
+      "fd_max": 6,
+      "rss_min_kib": 8056,
+      "rss_max_kib": 8304
+    },
+    {
+      "name": "httpdb",
+      "pid": 28578,
+      "samples": 2,
+      "fd_min": 6,
+      "fd_max": 6,
+      "rss_min_kib": 10076,
+      "rss_max_kib": 10096
+    },
+    {
+      "name": "skipd",
+      "pid": 627,
+      "samples": 2,
+      "fd_min": 8,
+      "fd_max": 8,
+      "rss_min_kib": 12624,
+      "rss_max_kib": 12624
+    },
+    {
+      "name": "skipd",
+      "pid": 12579,
+      "samples": 3,
+      "fd_min": 8,
+      "fd_max": 8,
+      "rss_min_kib": 12216,
+      "rss_max_kib": 12224
+    },
+    {
+      "name": "skipd",
+      "pid": 27957,
+      "samples": 2,
+      "fd_min": 8,
+      "fd_max": 8,
+      "rss_min_kib": 10808,
+      "rss_max_kib": 10808
+    },
+    {
+      "name": "uu",
+      "pid": 1614,
+      "samples": 3,
+      "fd_min": 4,
+      "fd_max": 5,
+      "rss_min_kib": 11000,
+      "rss_max_kib": 11000
+    },
+    {
+      "name": "uu",
+      "pid": 16606,
+      "samples": 4,
+      "fd_min": 4,
+      "fd_max": 5,
+      "rss_min_kib": 10708,
+      "rss_max_kib": 10708
+    }
+  ],
+  "orphan_children_reaped": 130,
+  "resource_observation": "DDNS-Go QEMU process RSS increased in steps; cache/runtime/emulation overhead versus slow leak remains unclassified. FD counts are sampled, not a proof of leak freedom.",
+  "log_sha256": "bfcff0c82df71f4b0c950edcf403ce4fa65bf881a44da81350c2ed585a7dd045",
+  "production_files": {
+    "usr/lib/localmod/httpd_bridge.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
+    "usr/libexec/localmod/httpd": "d9a24b751b2c6ec0a9bf5931b6b1380e75c136bd672a91a5a5118c6ee9e1586d",
+    "usr/libexec/localmod/rc.vendor": "9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62",
+    "usr/libexec/localmod/plugin-txn": "23e575aa4299b075a7fa120fb6672e5c417dca5892f1449c29905f9a862af232",
+    "usr/libexec/localmod/bootstrap.sh": "fd6980a8b1ff18a68897d1ecbe0725dd5918331fe3956c7beadb2e224f33ed3f",
+    "rom/etc/koolshare/scripts/base.sh": "d29dcb38a94aa51b0df22b0fdd8a6a9e9636777bad3a2ae4431d9af308773726",
+    "usr/sbin/curl": "79b37917d01852d7624e36613dde5354a31ffa86b470d506bdc205f920a0d2d9",
+    "usr/sbin/wget": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749"
+  },
+  "checks": {
+    "actual_elapsed_time_meets_requested_duration": true,
+    "healthy_queries_complete_without_automatic_retry": true,
+    "client_rst_and_partial_body_disconnect_allow_later_independent_queries": true,
+    "backend_kill_respawns_and_later_queries_recover": true,
+    "center_restart_under_continuous_polling_recovers": true,
+    "ddns_restart_under_continuous_polling_recovers": true,
+    "uu_restart_does_not_interrupt_center_queries": true,
+    "https_restart_preserves_certificate_and_reauthenticates": true,
+    "repeated_sigalrm_keeps_complete_response": true,
+    "plugin_files_and_native_database_records_preserved": true,
+    "uu_synthetic_persistent_and_temporary_data_preserved": true,
+    "only_planned_uu_restarts_observed": true,
+    "private_api_stays_denied_to_unprivileged_ports": true,
+    "resource_samples_have_live_processes_and_valid_fd_rss_counts": true,
+    "workspace_readonly_no_nic_no_physical_router": true
+  },
+  "scope": [
+    "Single disposable ARM64 VM; original ASUS ARM32 HTTPS/login/rc and unmodified real DDNS-Go plugin; no physical router/NIC",
+    "100 seconds measured with a monotonic clock after installation/setup; not accelerated time",
+    "New IDs for every request; queries during explicitly planned center/DDNS maintenance can be unavailable; UU restart must not interrupt queries",
+    "Owned synthetic UU monitor/heartbeat worker and test data; original native NTP/download/checksum startup flow",
+    "Test-only subreaper supplies orphan reaping for the minimal guest shell PID 1; it never kills live services",
+    "FD/RSS samples are observations per PID, not proof that no slow leak exists"
+  ],
+  "not_tested": [
+    "Stock 4.1 kernel and physical router/NAND/UBIFS",
+    "Real UU monitor/account/entitlement/game traffic or WAN provider APIs",
+    "Day/week-long operation, high client concurrency and all network failures"
+  ]
+}
