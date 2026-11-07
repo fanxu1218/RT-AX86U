@@ -25,9 +25,11 @@ def main():
  package=next(p for p in fancy['sources']['packages'] if p['phase']=='current')
  assert sha(ROOT/package['adapted_path'])==package['adapted_sha256']
  names+=['output/fancyss_tests.json','output/Fancyss集成说明.md','build/fancyss_sources.json','sources/localmod/fancyss-LICENSE.txt',package['adapted_path'],'output/history_tests.json','output/持久化操作记录说明.md','output/shard_tests.json','output/base_migration_tests.json','build/base_contracts.json','output/隔离分片与底包升级说明.md','output/model_isolation_tests.json','output/构建模型隔离说明.md']
+ names+=['output/softcenter_upgrade_tests.json','output/softcenter_frontend_tests.json','output/softcenter_ui_mock_tests.json','output/merlin_component_tests.json','output/merlin_component_tests.log','build/softcenter_sources.json','build/merlin_sources.json','build/merlin_system_sources.json','sources/localmod/MERLIN_COMPONENTS_NOTICE.txt','output/软件中心1.9.60升级说明.md','output/梅林组件移植说明.md']
  # Match the existing releases' ASCII attachment naming. Keep Chinese source
  # paths/content in Git; only the transport filename is aliased byte-for-byte.
  aliases={'官改加固与优化说明.md':'HARDENING_NOTES.zh-CN.md','构建与发布校验.md':'BUILD_RELEASE_CHECKS.zh-CN.md','Alpha3升级localmod2与实机验收.md':'UPGRADE_ACCEPTANCE.zh-CN.md','Fancyss集成说明.md':'FANCYSS_INTEGRATION.zh-CN.md','持久化操作记录说明.md':'OPERATION_HISTORY.zh-CN.md','隔离分片与底包升级说明.md':'ISOLATION_BASE_MIGRATION.zh-CN.md','构建模型隔离说明.md':'MODEL_ISOLATION.zh-CN.md'}
+ aliases.update({'软件中心1.9.60升级说明.md':'SOFTWARE_CENTER_1960.zh-CN.md','梅林组件移植说明.md':'MERLIN_COMPONENTS.zh-CN.md'})
  folder=ROOT/('build/'+version+'-release-assets');assert not folder.is_symlink();folder.mkdir(mode=0o700,exist_ok=True)
  assets=[];entries=[]
  for name in names:
@@ -38,7 +40,7 @@ def main():
  manifest={'tag':tag,'commit':head,'candidate_sha256':v['sha256'],'assets':entries}
  assert len({p.name for p in assets})==len(assets),'Duplicate release attachment name'
  m=ROOT/('output/'+version.replace('-','_')+'_release_manifest.json');m.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n');assets.append(m)
- notes=ROOT/('build/'+version+'_release_notes.md');notes.write_text(f'''基于官方 24437，集成软件中心并保留官方 UU。新增 Fancyss 3.5.29 HND v8 Full 兼容包和经原厂认证的安装入口，默认不启用代理；保留 UU 文件、原厂日志与共享依赖，使用原厂 HTTPS 和上游 HTTP 查询流程。FRPC/PushPlus 的两处已知脚本问题通过哈希限定的固件适配修复。\n\n本地验证和镜像回读以附件报告绑定的 SHA256 为准：`{v['sha256']}`。Fancyss 兼容包与固件按同一版本发布；插件内自更新不绕过检查点与包校验。新增最多 32 条可跨重启保留的脱敏安装/恢复记录，损坏或写入中断时保留证据。全部 VM 使用独立输入/状态副本：真实插件为只读封存分片，受控构建/早期模型为可写专属副本并在收集结果前核对清单；另附官方底包差异/ABI 检查入口；这些工具不会自动迁移或刷机。\n\n实验候选版，未接触或刷写物理路由器；真实代理节点、UU 账号/加速、无线/NAT/DNS/IPv6、实机升级与断电恢复仍待验收。保留 r8 及历史附件。源码提交：{head}。\n''')
+ notes=ROOT/('build/'+version+'_release_notes.md');notes.write_text(f'''基于官方 24437，软件中心升级到 {CONFIG['software_center_version']}，保留官方 UU 和 Fancyss 3.5.29 HND v8 Full 兼容包。普通 HND 插件经受管理的安装器升级；未经适配的 Fancyss 和直接覆盖核心仍受限制。\n\n移植 Merlin 3004.388.12_2 的 OpenVPN 2.7.6、dnsmasq 2.93、curl 8.17.0、wget 1.25.0、Dropbear 2026.94、miniupnpd 2.3.11 及私有依赖。六个原入口默认使用新版，保留原厂程序和全局认证/TLS 库。原厂 OpenVPN 的 ncp-disable/静态密钥旧配置自动使用原厂程序；miniupnpd 适配原厂私网 WAN 和缺少 postrouting 链的启动/NAT 重载流程。详细范围、回退开关、许可证与测试边界见附件。\n\n本地验证和镜像回读绑定 SHA256：`{v['sha256']}`。真实插件运行在无外网网卡、宿主只读导出的临时 VM 中。组件服务另外通过完整 Cortex-A53 系统仿真验证实际 ARM32 程序和内核调用。保留事务检查点、UU 数据保护、脱敏操作记录和全部 VM 输入/状态隔离。\n\n实验候选版，未访问或刷写物理路由器；真实代理节点、UU 账号/加速、设备无线/NAT/DNS/IPv6、实机升级与断电恢复仍待验收。保留 r8 及历史附件。源码提交：{head}。\n''')
  subprocess.run(['gh','release','create',tag,*[str(p) for p in assets],'--repo',REPO,'--target',head,'--title',version+' experimental','--prerelease','--notes-file',str(notes)],cwd=ROOT,check=True)
  release=api('releases/tags/'+tag);remote={a['name']:a for a in release['assets']}
  assert release['prerelease'] and not release['draft'] and len(remote)==len(assets)

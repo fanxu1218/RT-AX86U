@@ -1,0 +1,64 @@
+{
+  "status": "LOCAL_BROWSER_MOCK_PASS",
+  "frontend_asp_sha256": "bdf76a79bd1c3538001a3d12bdb38b78ca38a7df4ffd697c53bb26013470516f",
+  "checks": {
+    "actual_v2_frontend_rendered_1_9_60": true,
+    "install_completed_and_list_refreshed": true,
+    "new_version_shows_update_then_confirmation": true,
+    "update_uses_actual_payload_without_source_field": true,
+    "install_update_uninstall_logs_lock_close_until_completion": true,
+    "uninstall_removes_owned_entry_and_keeps_fancyss_peer": true,
+    "external_content_failure_does_not_block_operations": true
+  },
+  "captured_operation_payloads": [
+    {
+      "id": 68961213,
+      "method": "ks_app_install.sh",
+      "params": [
+        "ks_app_install"
+      ],
+      "fields": {
+        "softcenter_home_url": "http://127.0.0.1:63717",
+        "softcenter_installing_todo": "onlineprobe",
+        "softcenter_installing_title": "本地安装验收插件",
+        "softcenter_installing_tar_url": "onlineprobe/probe.tar.gz",
+        "softcenter_installing_md5": "0123456789abcdef0123456789abcdef",
+        "softcenter_installing_version": "1.0",
+        "onlineprobe_title": "本地安装验收插件"
+      }
+    },
+    {
+      "id": 54178068,
+      "method": "ks_app_install.sh",
+      "params": [
+        "ks_app_install"
+      ],
+      "fields": {
+        "softcenter_installing_todo": "onlineprobe",
+        "softcenter_installing_title": "本地安装验收插件",
+        "softcenter_installing_tar_url": "onlineprobe/probe.tar.gz",
+        "softcenter_installing_md5": "0123456789abcdef0123456789abcdef",
+        "softcenter_installing_version": "2.0",
+        "onlineprobe_title": "本地安装验收插件"
+      }
+    },
+    {
+      "id": 19465763,
+      "method": "ks_app_remove.sh",
+      "params": [
+        "ks_app_remove"
+      ],
+      "fields": {
+        "softcenter_installing_todo": "onlineprobe",
+        "softcenter_installing_title": "本地安装验收插件"
+      }
+    }
+  ],
+  "screenshot": "output/softcenter1960-ui-mock.png",
+  "screenshot_sha256": "5bd353929768ce5e059b28805c7560265f40dc76ae2765f3a9672febc2a562e7",
+  "limits": [
+    "Chrome desktop with synthetic owned API/catalog; original ASUS shell helpers mocked",
+    "CSP forbids external connections; announcement/rating/DDNSTO error indicators are expected fixture boundaries",
+    "No real router, real plugin execution, proxy nodes or UU account/traffic in this browser mock; native VM tests are separate"
+  ]
+}

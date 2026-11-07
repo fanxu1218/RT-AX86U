@@ -30,6 +30,11 @@
     "sha256": "43118bb26b5b631affeca249dc394055b14240f40a1754b093322bf9f1623344"
   },
   {
+    "package": "iproute2-minimal",
+    "version": "6.15.0-r0",
+    "sha256": "ce97b56e3fc4f0e9a38fdd82f94eb44bfa24d60be62dfee997b74b0f0b9cc75d"
+  },
+  {
     "package": "iptables",
     "version": "1.8.11-r1",
     "sha256": "0a10fe634e3525082a1219487cd044d987ac4a55ed5aa551bf758e81223e1cfb"
@@ -68,6 +73,11 @@
     "package": "libeconf",
     "version": "0.6.3-r0",
     "sha256": "cdd4311aff72d53056134468b68a68f22829f995627b434d2f88960884319de9"
+  },
+  {
+    "package": "libelf",
+    "version": "0.193-r0",
+    "sha256": "cbc2cbd52e27a381f17892392417fecfbeaba354479d3acd923cf57967d1b25a"
   },
   {
     "package": "libidn2",

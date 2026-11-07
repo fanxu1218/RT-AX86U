@@ -95,6 +95,16 @@ int main(int argc,char **argv){
  fclose(out);unlink(temp);
  int result=WIFEXITED(status)?WEXITSTATUS(status):128+WTERMSIG(status);
  if(!result && !test){
+  /* The selected miniupnpd needs an owned WAN postrouting chain absent from
+   * the factory rc's NAT template. Restore it synchronously before rc sends
+   * its UPnP notification; custom JFFS script settings do not control this
+   * required service dependency. Never mask the factory restore result. */
+  if(nat && access("/usr/libexec/localmod/miniupnp-compat",X_OK)==0){
+   pid_t helper=fork();int helper_status=0;
+   if(helper==0){unsetenv("LD_PRELOAD");execl("/usr/libexec/localmod/miniupnp-compat","miniupnp-compat","--firewall",(char *)NULL);_exit(127);}
+   if(helper>0){pid_t waited;do{waited=waitpid(helper,&helper_status,0);}while(waited<0 && errno==EINTR);if(waited!=helper || !WIFEXITED(helper_status) || WEXITSTATUS(helper_status))fputs("localmod: UPnP dependency recovery reported an error\n",stderr);}
+   else if(helper<0)fputs("localmod: UPnP dependency recovery could not start\n",stderr);
+  }
   if(saw_filter && !flush_filter)lm_emit("firewall-start","","",0);
   if(nat)lm_emit("nat-start","","",0);
  }

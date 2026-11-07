@@ -59,7 +59,11 @@ cat > /koolshare/bin/versioncmp <<'SCRIPT'
 exec /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /koolshare/bin/versioncmp.arm "$@"
 SCRIPT
 chmod 755 /koolshare/bin/versioncmp
-cp /work/build/casefs/rootfs/usr/sbin/wget /usr/libexec/localmod/wget
+mkdir -p /usr/lib/localmod/merlin
+cp /work/build/casefs/rootfs/usr/lib/localmod/merlin/* /usr/lib/localmod/merlin/
+# This older CPU model invokes QEMU explicitly. The read-only service gate
+# separately executes the default launcher through the real target entry.
+cp /work/build/casefs/rootfs/usr/libexec/localmod/merlin/bin/wget /usr/libexec/localmod/wget
 chmod 500 /usr/libexec/localmod/wget
 cat > /usr/sbin/wget <<'SCRIPT'
 #!/bin/sh

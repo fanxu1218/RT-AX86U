@@ -5,7 +5,7 @@
 <style>body{font:16px/1.7 system-ui,sans-serif;background:#202b33;color:#eee;margin:2em auto;padding:0 1.3em;max-width:850px}a{color:#a9dcff}button{font:inherit;padding:.5em 1em;background:#466778;color:white;border:1px solid #93b2c1;border-radius:5px;cursor:pointer}button:disabled{opacity:.6}section{background:#2c3b46;border:1px solid #49606e;border-radius:8px;padding:1em 1.3em;margin:1em 0}h1{font-size:1.65em}h2{font-size:1.15em}dl{display:grid;grid-template-columns:8em 1fr;gap:.5em}dd{margin:0;overflow-wrap:anywhere}.note{color:#c5d3db}.error{color:#ffd6ad}li{margin:.5em 0}@media(max-width:500px){dl{grid-template-columns:1fr;gap:.2em}dd{margin-bottom:.6em}}</style>
 </head><body>
 <h1>官改状态与恢复 · @REVISION@</h1>
-<p>华硕 RT-AX86U · 官方 3.0.0.4.388_24437 · 软件中心 1.9.50 · 官方网易 UU</p>
+<p>华硕 RT-AX86U · 官方 3.0.0.4.388_24437 · 软件中心 1.9.60 · 官方网易 UU</p>
 <p class="note">试验版，尚未完成实机验收。此页只读取状态，不会修改配置或删除恢复副本。</p>
 <p><a href="/Module_Softcenter.asp">软件中心</a> · <a href="/UUAccelerator.asp">网易 UU</a> · <a href="/Module_FancyssLocalmod.asp">安装 Fancyss</a> · <a href="/index.asp">管理首页</a></p>
 <section aria-labelledby="health-title"><h2 id="health-title">当前状态</h2>

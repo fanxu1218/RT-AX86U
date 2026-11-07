@@ -1,10 +1,10 @@
 {
-  "image": "output/RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w",
-  "sha256": "02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50",
-  "bytes": 85852180,
+  "image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
+  "sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+  "bytes": 90177556,
   "status": "EXPERIMENTAL_NOT_DEVICE_TESTED",
-  "path_count": 3608,
-  "valid_ubifs_nodes": 52505,
+  "path_count": 3666,
+  "valid_ubifs_nodes": 54649,
   "valid_volume_table_rows": 256,
   "checks": {
     "all_paths_present": true,
@@ -21,10 +21,11 @@
     "vendor_uu_page_identical": true,
     "vendor_httpd_retained": true,
     "vendor_busybox_retained": true,
-    "vendor_curl_retained": true,
+    "vendor_curl_retained_for_fallback": true,
     "vendor_kernel_modules_identical": true,
     "ubifs_format_4": true,
-    "no_host_extended_attributes": true
+    "no_host_extended_attributes": true,
+    "six_merlin_components_and_factory_fallbacks_match_pinned_stage": true
   },
   "errors": [],
   "bad_ubifs_nodes": [],

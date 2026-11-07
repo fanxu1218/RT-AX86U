@@ -1,6 +1,6 @@
 {
   "status": "FINAL_CANDIDATE_NATIVE_INPUT_SIGNAL_PASS",
-  "candidate_sha256": "02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50",
+  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
   "results": {
     "fixed": {
       "cases": [
@@ -84,10 +84,10 @@
         {
           "case": "empty_input_repeated_signal_budget",
           "disconnected": true,
-          "elapsed_seconds": 5.005163585
+          "elapsed_seconds": 5.011778378
         }
       ],
-      "log_sha256": "c7d3a44a4fcb46eadc4036e8cb0aedbc3bca4fb46e8cbeb96a93f3c28e3838a4"
+      "log_sha256": "e19d6ffdf91a166e16679ba8620cb46b1e667c8cb26683b8ea16c88949c030f9"
     },
     "r7": {
       "cases": [
@@ -171,10 +171,10 @@
         {
           "case": "empty_input_repeated_signal_budget",
           "disconnected": true,
-          "elapsed_seconds": 0.401415876
+          "elapsed_seconds": 0.400362751
         }
       ],
-      "log_sha256": "84471f8a5e5aec594a4debf9c6b365dc388de273725daddf66a316ec146d1990"
+      "log_sha256": "33f1f529f10084b5fd2bebd9630cfbe57773ad6b6bf41bbb0b61885fa07be7bd"
     }
   },
   "firmware_rebuilt": true,

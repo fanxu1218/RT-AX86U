@@ -9,6 +9,8 @@ import argparse
 import re
 from prepare_fancyss import prepare as prepare_fancyss, render_page as fancyss_page
 from patch_online_installer import patch_online_installer
+from prepare_softcenter import prepare as prepare_softcenter, patch_frontend
+from prepare_merlin import stage as stage_merlin
 from pathlib import Path
 from release_config import CONFIG
 
@@ -34,10 +36,12 @@ def put(source,path,mode):
     shutil.copyfile(source,target)
     meta['/'+path]={'mode':stat.S_IFREG|mode,'uid':0,'gid':0,'inum':-1,'nlink':1,'xattr_count':0}
 
+merlin = stage_merlin(stage, put, meta)
+
 core='rom/etc/koolshare'
-shutil.copytree(donor/core,stage/core,symlinks=True)
-for path,entry in donor_meta.items():
-    if path.startswith('/'+core):meta[path]=entry
+core_source,core_meta=prepare_softcenter()
+shutil.copytree(core_source,stage/core,symlinks=True)
+meta.update(core_meta)
 # The donor's unauthenticated LAN debug/reset server and Merlin-specific
 # bootstrap are incompatible with this official base. Keep the scoped launcher.
 for relative in ['init.d/V02debug.sh','scripts/ks_debug.sh','bin/kscore.sh','perp/.control/perpd.pid']:
@@ -58,6 +62,7 @@ put(root/'build/httpd_bridge.so','usr/lib/localmod/httpd_bridge.so',0o444)
 put(root/'build/rc_bridge.so','usr/lib/localmod/rc_bridge.so',0o444)
 put(root/'build/localmod-event','usr/libexec/localmod/localmod-event',0o500)
 put(root/'build/iptables-restore-launcher','usr/sbin/iptables-restore',0o500)
+put(root/'build/miniupnp-compat','usr/libexec/localmod/miniupnp-compat',0o500)
 put(root/'sources/localmod/bootstrap.sh','usr/libexec/localmod/bootstrap.sh',0o755)
 put(root/'sources/localmod/dispatch.sh','usr/libexec/localmod/dispatch.sh',0o755)
 put(root/'sources/localmod/installer-guard.sh','usr/libexec/localmod/installer-guard.sh',0o755)
@@ -142,13 +147,11 @@ fancyss=prepare_fancyss()
 assert (root/'sources/localmod/fancyss-packages.sha256').read_text()==''.join(p['adapted_sha256']+'  shadowsocks\n' for p in fancyss['packages'])
 put(root/'sources/localmod/Module_FancyssLocalmod.asp','www/Module_FancyssLocalmod.asp',0o644)
 (stage/'www/Module_FancyssLocalmod.asp').write_text(fancyss_page(fancyss,CONFIG))
-ui=stage/core/'res/soft-v19/assets/index.3d07b566.js'
-text=ui.read_text()
-assert 'href:"http://"+a.netaddr+":3032"' in text
-text=text.replace('href:"http://"+a.netaddr+":3032"','href:"/Module_Localmod.asp"')
-ui.write_text(text)
+for ui in [stage/core/'res/soft-v19/assets/index-DhXhkv_Y.js',stage/core/'webs/Module_Softcenter.asp']:
+    ui.write_text(patch_frontend(ui.read_text()))
 release={'base':CONFIG['base'],'variant':CONFIG['variant'],'revision':CONFIG['revision'],'status':CONFIG['status'],
-         'software_center':'KoolCenter 1.9.50 from 388.11_0-20260429',
+         'software_center':'KoolCenter '+CONFIG['software_center_version']+' published HND core',
+         'merlin_components':merlin['source_tag'],
          'event_hooks':['init-start','services-start','services-stop','service-event','service-event-end','wan-event','wan-start','firewall-start','nat-start','pre-mount','post-mount','unmount'],
          'postconf':['dnsmasq'],
          'uu':'vendor files retained; service operation requires device verification',

@@ -207,6 +207,9 @@ func main() {
 			}
 			nrMust(os.MkdirAll("/koolshare/configs/fancyss", 0700))
 			nrMust(os.WriteFile("/koolshare/configs/fancyss/owned-retained.conf", []byte("owned nonsecret configuration\n"), 0600))
+			if phase == "candidate-fancyss" {
+				softcenterUpgrade(t, record)
+			}
 		} else {
 			if fancyDB("ss_basic_interval") != "4" || string(nrRead("/koolshare/configs/fancyss/owned-retained.conf")) != "owned nonsecret configuration\n" {
 				panic("genuine Fancyss upgrade lost config")

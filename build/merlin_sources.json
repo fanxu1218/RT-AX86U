@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "source_tag": "3004.388.12_2",
+  "source_commit": "433fc608f5fc1689f3d3c3ab5cd2a7d57102260f",
+  "source_url": "https://github.com/RMerl/asuswrt-merlin.ng/tree/3004.388.12_2",
+  "archive": {
+    "zip": "upstream/merlin/RT-AX86U_3004_388.12_2.zip",
+    "zip_bytes": 74796950,
+    "zip_sha256": "f83465b7657baf756bcc5a2b46a492dd4677998785f27a7ab0dc881f7d6dae15",
+    "image": "upstream/merlin/RT-AX86U_3004_388.12_2_pureubi.w",
+    "image_sha256": "864cb94504bd0f036f730089c779aafbf5827721af10d5533924f94d3c20982a",
+    "image_bytes": 83361812,
+    "published_image_sha256_matches": true,
+    "zip_crc_valid": true,
+    "download_url": "https://sourceforge.net/projects/asuswrt-merlin/files/RT-AX86U/Release/RT-AX86U_3004_388.12_2.zip/download"
+  },
+  "programs": {
+    "openvpn": {
+      "path": "usr/sbin/openvpn",
+      "bytes": 765052,
+      "sha256": "ce163e7d9e09c34cf04b7ffbc7d2fb6dc36925b9d3d3e0107d3ac7bc55b57d0c"
+    },
+    "dnsmasq": {
+      "path": "usr/sbin/dnsmasq",
+      "bytes": 530756,
+      "sha256": "503cb8f080b05da54ad0a205ac8dc3e586ba3669b067156bb2deabc3ad1e5346"
+    },
+    "curl": {
+      "path": "usr/sbin/curl",
+      "bytes": 141380,
+      "sha256": "4ae15d7270500863b297d964e59847e5bacf50f6299e1ecad5dda2f9f7b3e0e4"
+    },
+    "wget": {
+      "path": "usr/sbin/wget",
+      "bytes": 325452,
+      "sha256": "76583d9fc879f87bc552c6e0dcd90ac2df7b40435af1aedb2a5452c4d5ca9017"
+    },
+    "dropbearmulti": {
+      "path": "usr/bin/dropbearmulti",
+      "bytes": 363604,
+      "sha256": "96c40f9ac428f938335dcdf6c85a8fb2c2ccdc8d17d70eb057261fff015d03cc"
+    },
+    "miniupnpd": {
+      "path": "usr/sbin/miniupnpd",
+      "bytes": 142072,
+      "sha256": "2342c68fda4f132ca46ba7fa722e46c76f7c8454123cf61471d4ac6866b83ffb"
+    }
+  },
+  "libraries": {
+    "libcurl.so.4": {
+      "path": "usr/lib/libcurl.so.4",
+      "bytes": 559560,
+      "sha256": "0f4271f803edb45a545ec88636114bfdcf80f6affd1a2ec8edac43a250865de5",
+      "source_link": "libcurl.so.4.8.0"
+    },
+    "libssl.so.1.1": {
+      "path": "usr/lib/libssl.so.1.1",
+      "bytes": 447384,
+      "sha256": "1afdb48e254574b334a76b960685bdc5e84ba3955c2c875ed44665110d5df850"
+    },
+    "libcrypto.so.1.1": {
+      "path": "usr/lib/libcrypto.so.1.1",
+      "bytes": 2262556,
+      "sha256": "67afdf81a6ab889c58c2893198c37b89b70230456370bf675d5d81a41dc5b581"
+    },
+    "libcap-ng.so.0": {
+      "path": "usr/lib/libcap-ng.so.0",
+      "bytes": 17908,
+      "sha256": "e23f60f6c6f7d52a16aad0fd410bd105b63ed643bd6324596d4a99a5555b7537",
+      "source_link": "libcap-ng.so.0.0.0"
+    },
+    "libuuid.so.1": {
+      "path": "usr/lib/libuuid.so.1",
+      "bytes": 13744,
+      "sha256": "90fd59dda9863dce0dbe13777a4d3bdd83052c7c0e753a30131594ac33c89da1",
+      "source_link": "libuuid.so.1.2"
+    },
+    "liblzo2.so.2": {
+      "path": "usr/lib/liblzo2.so.2",
+      "bytes": 161184,
+      "sha256": "b42fd7b0e27b55dbbb49938f557e2bc0a05a07741bd695d486c38f4cdc3ddc59"
+    },
+    "liblz4.so.1": {
+      "path": "usr/lib/liblz4.so.1",
+      "bytes": 161240,
+      "sha256": "d2e06372b1fa656d8ff5cdb477371853df3e451bf805c8ac34b126c71b582419",
+      "source_link": "liblz4.so.1.9.2"
+    },
+    "libz.so.1": {
+      "path": "usr/lib/libz.so.1",
+      "bytes": 71228,
+      "sha256": "3da5c75867d154f26563b475dc95e56a183a63d1ad41cee5f2bed19d3c2073ea"
+    }
+  },
+  "rpath": "/usr/lib/localmod/merlin",
+  "patchelf": {
+    "sources/patchelf-0.18.0/src/patchelf.cc": {
+      "bytes": 97983,
+      "sha256": "d0215767b60b8290a2b271a2313dd919b011ac1c985950c5310116a03242065e"
+    },
+    "sources/patchelf-0.18.0/src/patchelf.h": {
+      "bytes": 9236,
+      "sha256": "a921f34d5c2966858574ab9a43f59b9c970da244a3e22a3df8d12248695a8a55"
+    },
+    "sources/patchelf-0.18.0/src/elf.h": {
+      "bytes": 187901,
+      "sha256": "ee9279a21176da387bc3ff2fd4989413ecad4c313e62f8db6c9ab1d70df00d59"
+    },
+    "sources/patchelf-0.18.0/COPYING": {
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    }
+  },
+  "boundaries": [
+    "Only six executables plus private dependencies; factory rc, httpd, kernel, drivers, vendor TLS/shared/NVRAM libraries remain unchanged",
+    "No Merlin VPN UI or libovpn state machine migration",
+    "Original executables retained; /jffs/localmod-merlin-disabled or localmod-disabled selects originals without touching settings",
+    "Factory OpenVPN profiles containing ncp-disable or static-key secret use retained factory program; single-component marker /jffs/localmod-merlin-openvpn-disabled is supported"
+  ],
+  "notice": {
+    "path": "sources/localmod/MERLIN_COMPONENTS_NOTICE.txt",
+    "sha256": "e2c1551452e8f8a5380f3d474049216f5f94656a45a3b432299fdc0e9ab7481c"
+  }
+}

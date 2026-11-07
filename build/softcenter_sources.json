@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "version": "1.9.60",
+  "platform": "hnd",
+  "package_path": "upstream/software-center/koolcenter-hnd-1.9.60.tar.gz",
+  "package_url": "https://rogsoft.ddnsto.com/koolcenter/koolcenter.tar.gz",
+  "version_url": "https://rogsoft.ddnsto.com/koolcenter/version",
+  "package_bytes": 1196055,
+  "package_sha256": "ae0df46dba72ad497be40234610f705e948d7629dd7674f3069fea01544b623a",
+  "published_md5": "c0755d4d0d83693ed25c946e247ce512",
+  "source_url": "https://github.com/koolshare/rogsoft/tree/55b5e9827d6e32a1036a02de3fa725a4d80099a0/koolcenter",
+  "source_commit": "55b5e9827d6e32a1036a02de3fa725a4d80099a0",
+  "source_date": "2026-10-21T09:14:12Z",
+  "baseline_core": "KoolCenter1.9.50 from388.11_0-20260429",
+  "notes": [
+    "Original published HND update payload; never execute its installer on the host/router",
+    "Keep native skipd/dbus and donor busybox; firmware-managed bootstrap/transactions remain authoritative"
+  ],
+  "baseline_image": "output/RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w",
+  "baseline_image_sha256": "02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50",
+  "baseline_core_tree_sha256": "5d5c60d78205bfd48fecd4606a02c40961b83af1d2afa08f25fc7423204c98b7",
+  "baseline_core_id": "6c0593fcdef7902038052e34be9bcb1fda4c3feb1e14d8b61cd9662102678f5e"
+}

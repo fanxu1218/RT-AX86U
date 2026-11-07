@@ -17,6 +17,9 @@ common=['sources/localmod/runtime.c']
 run(*flags,'-O2','-s','-shared','-fPIC','-o','build/httpd_bridge.so','sources/localmod/httpd_bridge.c','-ldl')
 for define,name in [('', 'httpd'),('INIT_LAUNCHER','init'),('RC_LAUNCHER','rc')]:
     run(*flags,'-O2','-s',*(['-D'+define] if define else []),'-o',f'build/{name}-launcher','sources/localmod/launcher.c')
+for name in ['openvpn','dnsmasq','curl','wget','dropbearmulti','miniupnpd']:
+    run(*flags,'-O2','-s','-DLOCALMOD_COMPONENT="'+name+'"',*(['-DLOCALMOD_MINIUPNPD'] if name=='miniupnpd' else ['-DLOCALMOD_OPENVPN'] if name=='openvpn' else []),'-o',f'build/merlin-{name}-launcher','sources/localmod/merlin_launcher.c',*(['sources/localmod/openvpn_compat.c'] if name=='openvpn' else []))
+run(*flags,'-O2','-s','-o','build/miniupnp-compat','sources/localmod/miniupnp_compat.c')
 run(*flags,'-O2','-s','-shared','-fPIC','-o','build/rc_bridge.so','sources/localmod/rc_bridge.c',*common,'-ldl','-lpthread')
 run(*flags,'-O2','-s','-o','build/localmod-event','sources/localmod/event.c',*common)
 run(*flags,'-O2','-s','-o','build/plugin-txn','sources/localmod/plugin_txn.c')
@@ -38,7 +41,10 @@ for name in ['bridge','real-backend','restore','center','launcher-vendor','nativ
     env=dict(os.environ,GOOS='linux',GOARCH='arm64',CGO_ENABLED='0')
     subprocess.run(['go','build','-o',f'build/test-{name}',f'build/test_{name.replace("-","_")}.go'],cwd=root,env=env,check=True)
 if args.compile_only:raise SystemExit(0)
+run('c++','-std=c++17','-O2','-DPACKAGE_STRING="patchelf 0.18.0"',
+    'sources/patchelf-0.18.0/src/patchelf.cc','-o','build/tools/patchelf-0.18.0')
 run('python3','build/stage_image.py','--refresh-generated-stage')
+run(str(root/'analysis/.venv/bin/python'),'build/audit_merlin.py',log='build/merlin_elf_audit.json')
 run(str(root/'analysis/.venv/bin/python'),'build/audit_vendor_contracts.py')
 for name,destination in [('build','build/runtime_tests.log'),('filemap','output/filemap_tests.log'),('hooks','build/hooks_test_run.log'),('restore','build/restore_tests_run.log'),('center','build/center_tests_run.log'),('native_httpd','build/native_httpd_tests_run.log'),('native_uu','build/native_uu_tests_run.log')]:
     run('python3','build/run_linux.py','--job',name,log=destination)
@@ -61,7 +67,8 @@ for name in ['changes.json','runtime_tests.log','hooks_trace.log','hooks_test_ru
 run('python3','build/check_lifecycle.py','--skip-native-regression')
 run('python3','build/check_online.py')
 run('python3','build/check_real_plugins.py')
-run('python3','build/check_fancyss.py','--candidate')
+run('python3','build/check_softcenter.py')
+run('python3','build/check_merlin.py')
 run('python3','build/check_history.py','--candidate')
 run('python3','build/check_https_stability.py')
 run('python3','build/check_interrupt.py')

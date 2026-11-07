@@ -21,8 +21,11 @@ def main():
     extended=prepare_extended()
     v=json.loads((ROOT/'output/verification.json').read_text())
     assert sha(ROOT/v['image'])==v['sha256']
+    if args.candidate:
+        from check_softcenter import prepare_upgrade_inputs
+        prepare_upgrade_inputs()
     subprocess.run(['go','build','-trimpath','-o','build/test-fancyss','build/test_fancyss.go',
-                    'build/test_extended_plugins.go','build/test_online.go','build/native_runtime_client.go','build/coexist_helpers.go'],check=True,
+                    'build/test_softcenter_upgrade.go','build/test_extended_plugins.go','build/test_online.go','build/native_runtime_client.go','build/coexist_helpers.go'],check=True,
                     env=dict(os.environ,GOOS='linux',GOARCH='arm64',CGO_ENABLED='0'))
     phase='candidate-fancyss-baseline' if args.baseline else 'hardening-fancyss'
     if args.proxy:phase='candidate-fancyss-proxy'
@@ -51,6 +54,8 @@ def main():
         assert (ROOT/'build/httpd_bridge.so').read_bytes()==(ROOT/'build/casefs/rootfs/usr/lib/localmod/httpd_bridge.so').read_bytes()==(ROOT/'build/casefs/roundtrip/usr/lib/localmod/httpd_bridge.so').read_bytes()
     source_paths=['sources/localmod/plugin-compat.sh','build/patch_online_installer.py','build/check_installer_boundaries.py','build/check_fancyss.py','build/prepare_fancyss.py','build/fancyss_sources.json','build/prepare_extended_plugins.py','build/extended_plugin_sources.json','build/test_fancyss.go','build/test_extended_plugins.go','build/test_online.go','build/native_runtime_client.go','build/coexist_helpers.go','build/run_readonly_linux.py','build/linux_real_plugins_job.sh','build/real_plugins_setup.sh','sources/localmod/installer-guard.sh','sources/localmod/offline-installer.sh','sources/localmod/fancyss-packages.sha256','sources/localmod/Module_FancyssLocalmod.asp','sources/localmod/Module_Localmod.asp','sources/localmod/fancyss-LICENSE.txt']
     source_hashes={p:sha(ROOT/p) for p in source_paths}
+    for p in ['build/test_softcenter_upgrade.go','build/check_softcenter.py','build/prepare_softcenter.py','build/softcenter_frontend_contract.mjs','build/softcenter_sources.json']:
+        source_hashes[p]=sha(ROOT/p)
     executable_sha=sha(ROOT/'build/test-fancyss')
     (ROOT/'build/real-plugin-phase').write_text(phase+'\n')
     log=ROOT/('build/fancyss_components.log' if args.components else 'build/fancyss_proxy.log' if args.proxy else 'output/fancyss_baseline.log' if args.baseline else 'output/fancyss_lifecycle.log')
@@ -58,7 +63,7 @@ def main():
     rows=[json.loads(line[len('FANCYSS_RESULT '):]) for line in text.splitlines() if line.startswith('FANCYSS_RESULT ')]
     assert len(rows)==1 and rows[0]['checks'] and all(rows[0]['checks'].values())
     assert sha(ROOT/v['image'])==v['sha256']
-    assert source_hashes=={p:sha(ROOT/p) for p in source_paths}
+    assert source_hashes=={p:sha(ROOT/p) for p in source_hashes}
     assert executable_sha==sha(ROOT/'build/test-fancyss')
     if overlay_files:assert overlay_files=={str(p.relative_to(ROOT/'build/hardening-overlay')):sha(p) for p in (ROOT/'build/hardening-overlay').rglob('*') if p.is_file()}
     report=dict(status='BASELINE_REPRODUCED' if args.baseline else 'LOCAL_CANDIDATE_PLUGINS_PASS' if args.candidate else 'LOCAL_SOURCE_OVERLAY_PASS',

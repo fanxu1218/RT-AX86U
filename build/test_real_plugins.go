@@ -44,13 +44,26 @@ func realCurlProbe() {
 	server := &http.Server{Handler: http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) { hits.Add(1); fmt.Fprint(w, "owned-curl-probe") })}
 	go server.Serve(l)
 	defer server.Close()
-	numeric := nrCommand("/usr/sbin/curl", "--noproxy", "*", "--max-time", "2", "http://127.0.0.1:35003/probe")
+	numeric := nrCommand("/usr/sbin/curl", "--silent", "--noproxy", "*", "--max-time", "2", "http://127.0.0.1:35003/probe")
 	before := hits.Load()
 	host := nrCommand("/usr/sbin/curl", "--noproxy", "*", "--resolve", "localhost:35003:127.0.0.1", "--max-time", "2", "http://localhost:35003/probe")
 	fmt.Printf("NATIVE_CURL_PROBE numeric_hits=%d numeric_body=%q hostname_hits=%d hostname_body=%q\n", before, numeric, hits.Load()-before, host)
-	if before != 0 || hits.Load() != 1 || !strings.Contains(host, "owned-curl-probe") {
-		panic("native curl protection probe differs")
+	if before != 1 || hits.Load() != 2 || numeric != "owned-curl-probe" || !strings.Contains(host, "owned-curl-probe") {
+		panic("selected Merlin curl request/loopback resolution differs")
 	}
+	// The requested upstream curl does not carry ASUS's numeric-URL guard.
+	// Keep the actual factory binary as a separate regression control, rather
+	// than requiring the new application to reproduce that vendor behavior.
+	prior := hits.Load()
+	nrCommand("/usr/libexec/localmod/merlin/vendor/curl", "--noproxy", "*", "--max-time", "2", "http://127.0.0.1:35003/probe")
+	if hits.Load() != prior {
+		panic("retained factory numeric guard changed")
+	}
+	factoryHost := nrCommand("/usr/libexec/localmod/merlin/vendor/curl", "--noproxy", "*", "--resolve", "localhost:35003:127.0.0.1", "--max-time", "2", "http://localhost:35003/probe")
+	if hits.Load() != prior+1 || !strings.Contains(factoryHost, "owned-curl-probe") {
+		panic("factory hostname control differs")
+	}
+	fmt.Println("NATIVE_CURL_FACTORY_CONTROL numeric_hits=0 hostname_hits=1")
 }
 func realSHA(data []byte) string { sum := sha256.Sum256(data); return hex.EncodeToString(sum[:]) }
 func (r *realSuite) record(name string) {
@@ -271,7 +284,7 @@ func main() {
 	}
 	r.record("native_shell_resolution_center_start_original_process_helper_private_api_and_uu")
 	realCurlProbe()
-	r.record("native_curl_numeric_url_guard_retained_hostname_callback_pinned_to_loopback")
+	r.record("selected_curl_and_factory_numeric_url_contracts_and_hostname_callback_pinned_to_loopback")
 	fmt.Printf("PIPE_REGRESSION %q\n", nrCommand("/bin/sh", "-c", "echo owned-pipe | tee /tmp/real-pipe; cat /tmp/real-pipe"))
 	if string(nrRead("/tmp/real-pipe")) != "owned-pipe\n" {
 		panic("added tee did not preserve pipeline output")

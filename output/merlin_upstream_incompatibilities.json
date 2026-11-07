@@ -1,0 +1,449 @@
+{
+  "status": "BASELINE_REPRODUCED",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w",
+  "candidate_sha256": "02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50",
+  "staged_overlay": true,
+  "selected_service_probe": "upnp-raw",
+  "full_system_emulation": true,
+  "checks": {
+    "unadapted_miniupnpd_missing-postrouting_failure_reproduced": true,
+    "unadapted_miniupnpd_private-wan_failure_reproduced": true
+  },
+  "result": {
+    "checks": {
+      "unadapted_miniupnpd_missing-postrouting_failure_reproduced": true,
+      "unadapted_miniupnpd_private-wan_failure_reproduced": true
+    },
+    "full_suite": false,
+    "real_uu_monitor_executed": false,
+    "uu_api_requests": 1,
+    "uu_downloads": 1,
+    "versions": {}
+  },
+  "elf_audit": {
+    "openvpn": {
+      "flags": 83886592,
+      "needed": [
+        "libgcc_s.so.1",
+        "libpthread.so.0",
+        "libz.so.1",
+        "libnsl.so.1",
+        "libcap-ng.so.0",
+        "liblzo2.so.2",
+        "liblz4.so.1",
+        "libcrypto.so.1.1",
+        "libssl.so.1.1",
+        "libdl.so.2",
+        "libc.so.6"
+      ],
+      "rpath": [
+        "/usr/lib/localmod/merlin"
+      ],
+      "code": {
+        ".text": "2236e75e79d337f7922894ed549c9477dfb8e1749f65404ebe51fc0c51eac95a",
+        ".rodata": "6b639e28827d784678390a7b7f3c73736a323996cc17b2967b7e1a2bd124b489",
+        ".data": "ec5bb845070896eafbf5272890a0cb45e72727d90209c8e0dea5fe93cf23146c"
+      }
+    },
+    "dnsmasq": {
+      "flags": 83886592,
+      "needed": [
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "rpath": [
+        "/usr/lib/localmod/merlin"
+      ],
+      "code": {
+        ".text": "99292c1e8c6f19dda0d6b37a51035efab52389a4c95c09cb24f41de2aaf6eb53",
+        ".rodata": "159a352d03066002d7e1881edd5554c5840d44e9e7e9cd842f7f23ba0bb3bb33",
+        ".data": "152abb87df2ccc4b7a0b842cca710387d5606a2f3387077807946c0f8976d6c0"
+      }
+    },
+    "curl": {
+      "flags": 83886592,
+      "needed": [
+        "libcurl.so.4",
+        "libdl.so.2",
+        "libssl.so.1.1",
+        "libcrypto.so.1.1",
+        "libpthread.so.0",
+        "libc.so.6"
+      ],
+      "rpath": [
+        "/usr/lib/localmod/merlin"
+      ],
+      "code": {
+        ".text": "43cae2eddd67e8c5c3d33b06c049f50ba1df5c3dc2aefa53a8fe8595702aba2a",
+        ".rodata": "d72d122f5a4d98508a8ef3ea916c280e25059de3f645d5a591547ee4efd710d0",
+        ".data": "b8b7da434ac7a2db6e0c9e551b33ff31b972c3f39617352bc5f8c4f96dd589b1"
+      }
+    },
+    "wget": {
+      "flags": 83886592,
+      "needed": [
+        "libgcc_s.so.1",
+        "libuuid.so.1",
+        "libcrypto.so.1.1",
+        "libssl.so.1.1",
+        "libz.so.1",
+        "libpthread.so.0",
+        "libc.so.6"
+      ],
+      "rpath": [
+        "/usr/lib/localmod/merlin"
+      ],
+      "code": {
+        ".text": "172252579dcd16392b7086b04a2b88f7d05464333dffe33c8add438934d428a8",
+        ".rodata": "74850f1f3f25e162ad9630ca35760398c8432d08876c6c1b5b0ea6c8e5afa38c",
+        ".data": "f3319f6af87ddfc2c522e7ed3284fdfa64d5ed370e8f6a744c6c12a9e6af8c8f"
+      }
+    },
+    "dropbearmulti": {
+      "flags": 83886592,
+      "needed": [
+        "libutil.so.1",
+        "libptcsrv.so",
+        "libnvram.so",
+        "libshared.so",
+        "libwlcsm.so",
+        "libcrypt.so.1",
+        "libc.so.6",
+        "ld-linux.so.3"
+      ],
+      "rpath": [
+        "/usr/lib/localmod/merlin"
+      ],
+      "code": {
+        ".text": "5539a95ecb0aee598d4ad9b5e4d9326fedb3d87528009a55b722ecb2a0c76546",
+        ".rodata": "cdf8b8903dc4c47eda8418f6402dd475f739639c3dce7c323825620cf8c25e14",
+        ".data": "a9ba76441425e7c4a3fb498996bad32cc1e6ef4a24495e19ddd6809977c2ac30"
+      }
+    },
+    "miniupnpd": {
+      "flags": 83886592,
+      "needed": [
+        "libgcc_s.so.1",
+        "libshared.so",
+        "libnvram.so",
+        "libuuid.so.1",
+        "librt.so.1",
+        "libip4tc.so.0",
+        "libc.so.6",
+        "ld-linux.so.3"
+      ],
+      "rpath": [
+        "/usr/lib/localmod/merlin"
+      ],
+      "code": {
+        ".text": "632db1c786278de01a1a1ad2574cc84a031a4c0f9915c0c924fb92b14c51ef8f",
+        ".rodata": "6b1fcf62daa72d56fbcd44a428b6c2cbb9d26e4e85dafa8a924420df338b48c5",
+        ".data": "d99e0133d75b2628c5755cb052644773e95ef33b10fcaa68e59175b8c2c4b1df"
+      }
+    },
+    "libcurl.so.4": {
+      "flags": 83886592,
+      "needed": [
+        "libdl.so.2",
+        "libssl.so.1.1",
+        "libcrypto.so.1.1",
+        "libpthread.so.0",
+        "libc.so.6"
+      ],
+      "rpath": [],
+      "code": {
+        ".text": "5627a01e49f925c1acea19d896b320a1aa71d48a5897bc8c2530f2cd644be7bc",
+        ".rodata": "ab9cbc93b50d794c3751f54669718376576d7c19ad48f7b7f5ddbebb703eeb1f",
+        ".data": "67764fddee4825f26f7cdc5399d6ba11bdc3f80e1421ca638de09ae30c5a3442"
+      }
+    },
+    "libssl.so.1.1": {
+      "flags": 83886592,
+      "needed": [
+        "libcrypto.so.1.1",
+        "libdl.so.2",
+        "libpthread.so.0",
+        "libc.so.6",
+        "ld-linux.so.3"
+      ],
+      "rpath": [],
+      "code": {
+        ".text": "fe3eff5acbbf6ab8bf8f3cafeee664fa84b905be8c5a32ba4f76190010ab663f",
+        ".rodata": "60d9449c2540880a8746caf9ea4eb6b5a2b535ea6d0882d28618ca2af4e220a7",
+        ".data": "8f933085dcafc6fd853041a8dad26eb678177ebb75f88d1bf63c60622e5bdceb"
+      }
+    },
+    "libcrypto.so.1.1": {
+      "flags": 83886592,
+      "needed": [
+        "libdl.so.2",
+        "libpthread.so.0",
+        "libc.so.6",
+        "ld-linux.so.3"
+      ],
+      "rpath": [],
+      "code": {
+        ".text": "cee9551a1baddd7f07ecd55f7be88284e1bc5d56eb4ef088e280228d92226a73",
+        ".rodata": "3f2c88f1a5ebbd13454756e929d7cafd07f28cc070a2a04e6f062177857c6cf1",
+        ".data": "2546fadecae0639672d54f72e306d381103b68cfb3a1400de6beae249f5be213"
+      }
+    },
+    "libcap-ng.so.0": {
+      "flags": 83886592,
+      "needed": [
+        "libgcc_s.so.1",
+        "libpthread.so.0",
+        "libc.so.6",
+        "ld-linux.so.3"
+      ],
+      "rpath": [],
+      "code": {
+        ".text": "42cacd084c8685ac38f4d6bbeab6ebe442ec2a36a1d96c07040c690e0ae8f227",
+        ".rodata": "d161b6b3b7be5cd0fb7c59f4accff9711c1866ac301862fe30e3ce8e569e11ad",
+        ".data": "6b82150ac6b41a1b3345948e1efd0e86938ee5478025a777eb522a2139976b29"
+      }
+    },
+    "libuuid.so.1": {
+      "flags": 83886592,
+      "needed": [
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "rpath": [],
+      "code": {
+        ".text": "56c9c36c01ae0d0a55772428bdf4b0da25bd5dcaf4aa35200186bce4b798528e",
+        ".rodata": "2797bfe1b309294ab36167e2d7d081a22914613706f4b607cdb9d5dc5256d7c1",
+        ".data": "ff977ee28b8f1d4f06d4a1f826323342368dc8c6800939c3124dcedaa74e0abc"
+      }
+    },
+    "liblzo2.so.2": {
+      "flags": 83886592,
+      "needed": [
+        "libc.so.6"
+      ],
+      "rpath": [],
+      "code": {
+        ".text": "61535be83d05e65166d1a5bd903274f77ff511ed5977e9b5eabecf6cbd4ca31e",
+        ".rodata": "91dc1ff348cf6631e9c3e9b4b694f29573bbc8c6bcca9e643cd935b75843bf49",
+        ".data": "2c183d8f8511fbd639c4d258369548071cff6e706ac2e977108bcb3b83201533"
+      }
+    },
+    "liblz4.so.1": {
+      "flags": 83886592,
+      "needed": [
+        "libc.so.6"
+      ],
+      "rpath": [],
+      "code": {
+        ".text": "ff43badd9005e927426c47ce302214628dabf60db38edba9a9dcc16744a11579",
+        ".rodata": "5d248e7a50347f3c766f907dab97e4da0615381be2a374654ab14e8050336474",
+        ".data": "47a57047cdf7b9d34d045d35cc4be487d47dc6f6dee10672b6355ef682e4480d"
+      }
+    },
+    "libz.so.1": {
+      "flags": 83886592,
+      "needed": [
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "rpath": [],
+      "code": {
+        ".text": "3d01bb8521d6eef3c801932e9b8d6422c215f38928e4118bda7eaa7c5da967c4",
+        ".rodata": "8c37e4a9b7fd35a70b12ea59079f3be7f2682e6a14bbbba49c55aeeba76ce54e",
+        ".data": "a6b26f98a297c00419365de3efe7760395318c984dd5b24b6bdb51b27975ecef"
+      }
+    }
+  },
+  "source_sha256": {
+    "build/check_merlin.py": "219e4cefe3562e88af4cf133e052d519d6e16d4cc3c1cf25128a73ede8f2d1f1",
+    "build/audit_merlin.py": "252f2240292c4c6e9a687dfda23ed7f7417a701c95a303f1e7f2bfae7b0dfda1",
+    "build/prepare_merlin.py": "e41353642125b3c50e5f2dc629af645928f1c51b55d5583cb6632f00f09e4d2e",
+    "build/merlin_sources.json": "0637e35d0b3a404075cae91ab0f2983ec42565edaa0bf3e1c5d9a15b18892dc1",
+    "build/test_merlin.go": "9303425feb1bd2f3d648e45942bbf5931462aea92bdc11b4899f33a91d8c7009",
+    "build/merlin_vpn_config_probe.c": "50fd196d4c8fc53644d2a33e69c57128fe995d937e2f1724ce299a7008d48b83",
+    "build/merlin_vpn_config_fixture.c": "90ff082a458318d81aae0869aa7b93d13d4fa0436967b1013648becc4f039e7c",
+    "sources/localmod/merlin_launcher.c": "c9d8411ac01a4cf2d329e9c14381354600201c2491b9578016843f59e7755c18",
+    "build/sealed_vm.py": "44e83268f0e72f999648acb8f56e778735e70b7240d71bb1d90a2ec10a563788",
+    "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
+    "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+    "build/native_runtime_client.go": "2f9515bf6d814c064c7e0957455c0cfaf12ef01483be9732e49fd783cf32acf5",
+    "build/test_online.go": "b04471e23505e03d7700884fdad4adb5d526e7fd8fe33bfe669a3a736d81fd14",
+    "build/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+    "build/make_initramfs.py": "befb1bea33cd882f42b1b3fcb2642e1a3be1d564012a2ca509e81b61eb636ae8",
+    "sources/localmod/miniupnp_compat.c": "a770c0724405dd0ee2fc09d2d4d491621cec789363bc227c8e1d3d87a5790c1b",
+    "sources/localmod/openvpn_compat.c": "f8ad89cb939aee516ce85a40cd81d4b3f2c7c81a0b29077c501187abb194a7a2",
+    "sources/localmod/restore.c": "5870e50e6b0e68d473f996bada75a4f3638fd76cf2479aab01c60cab96f3231c",
+    "build/prepare_merlin_system.py": "35cd33a65f100dda3092e221fe05d24ab9869f32afb43fcf522eb6cd98a82eaa",
+    "build/merlin_system_sources.json": "67da834b6465e7eea49fff0977c00492ad0edff252b9809684665ad8d513c92f",
+    "build/make_merlin_system_initramfs.py": "00efa902e8675d3629e134cf70593de25b00a7b9bdb9e5b7ae44c8b6c1dadf49"
+  },
+  "source": {
+    "schema": 1,
+    "source_tag": "3004.388.12_2",
+    "source_commit": "433fc608f5fc1689f3d3c3ab5cd2a7d57102260f",
+    "source_url": "https://github.com/RMerl/asuswrt-merlin.ng/tree/3004.388.12_2",
+    "archive": {
+      "zip": "upstream/merlin/RT-AX86U_3004_388.12_2.zip",
+      "zip_bytes": 74796950,
+      "zip_sha256": "f83465b7657baf756bcc5a2b46a492dd4677998785f27a7ab0dc881f7d6dae15",
+      "image": "upstream/merlin/RT-AX86U_3004_388.12_2_pureubi.w",
+      "image_sha256": "864cb94504bd0f036f730089c779aafbf5827721af10d5533924f94d3c20982a",
+      "image_bytes": 83361812,
+      "published_image_sha256_matches": true,
+      "zip_crc_valid": true,
+      "download_url": "https://sourceforge.net/projects/asuswrt-merlin/files/RT-AX86U/Release/RT-AX86U_3004_388.12_2.zip/download"
+    },
+    "programs": {
+      "openvpn": {
+        "path": "usr/sbin/openvpn",
+        "bytes": 765052,
+        "sha256": "ce163e7d9e09c34cf04b7ffbc7d2fb6dc36925b9d3d3e0107d3ac7bc55b57d0c"
+      },
+      "dnsmasq": {
+        "path": "usr/sbin/dnsmasq",
+        "bytes": 530756,
+        "sha256": "503cb8f080b05da54ad0a205ac8dc3e586ba3669b067156bb2deabc3ad1e5346"
+      },
+      "curl": {
+        "path": "usr/sbin/curl",
+        "bytes": 141380,
+        "sha256": "4ae15d7270500863b297d964e59847e5bacf50f6299e1ecad5dda2f9f7b3e0e4"
+      },
+      "wget": {
+        "path": "usr/sbin/wget",
+        "bytes": 325452,
+        "sha256": "76583d9fc879f87bc552c6e0dcd90ac2df7b40435af1aedb2a5452c4d5ca9017"
+      },
+      "dropbearmulti": {
+        "path": "usr/bin/dropbearmulti",
+        "bytes": 363604,
+        "sha256": "96c40f9ac428f938335dcdf6c85a8fb2c2ccdc8d17d70eb057261fff015d03cc"
+      },
+      "miniupnpd": {
+        "path": "usr/sbin/miniupnpd",
+        "bytes": 142072,
+        "sha256": "2342c68fda4f132ca46ba7fa722e46c76f7c8454123cf61471d4ac6866b83ffb"
+      }
+    },
+    "libraries": {
+      "libcurl.so.4": {
+        "path": "usr/lib/libcurl.so.4",
+        "bytes": 559560,
+        "sha256": "0f4271f803edb45a545ec88636114bfdcf80f6affd1a2ec8edac43a250865de5",
+        "source_link": "libcurl.so.4.8.0"
+      },
+      "libssl.so.1.1": {
+        "path": "usr/lib/libssl.so.1.1",
+        "bytes": 447384,
+        "sha256": "1afdb48e254574b334a76b960685bdc5e84ba3955c2c875ed44665110d5df850"
+      },
+      "libcrypto.so.1.1": {
+        "path": "usr/lib/libcrypto.so.1.1",
+        "bytes": 2262556,
+        "sha256": "67afdf81a6ab889c58c2893198c37b89b70230456370bf675d5d81a41dc5b581"
+      },
+      "libcap-ng.so.0": {
+        "path": "usr/lib/libcap-ng.so.0",
+        "bytes": 17908,
+        "sha256": "e23f60f6c6f7d52a16aad0fd410bd105b63ed643bd6324596d4a99a5555b7537",
+        "source_link": "libcap-ng.so.0.0.0"
+      },
+      "libuuid.so.1": {
+        "path": "usr/lib/libuuid.so.1",
+        "bytes": 13744,
+        "sha256": "90fd59dda9863dce0dbe13777a4d3bdd83052c7c0e753a30131594ac33c89da1",
+        "source_link": "libuuid.so.1.2"
+      },
+      "liblzo2.so.2": {
+        "path": "usr/lib/liblzo2.so.2",
+        "bytes": 161184,
+        "sha256": "b42fd7b0e27b55dbbb49938f557e2bc0a05a07741bd695d486c38f4cdc3ddc59"
+      },
+      "liblz4.so.1": {
+        "path": "usr/lib/liblz4.so.1",
+        "bytes": 161240,
+        "sha256": "d2e06372b1fa656d8ff5cdb477371853df3e451bf805c8ac34b126c71b582419",
+        "source_link": "liblz4.so.1.9.2"
+      },
+      "libz.so.1": {
+        "path": "usr/lib/libz.so.1",
+        "bytes": 71228,
+        "sha256": "3da5c75867d154f26563b475dc95e56a183a63d1ad41cee5f2bed19d3c2073ea"
+      }
+    },
+    "rpath": "/usr/lib/localmod/merlin",
+    "patchelf": {
+      "sources/patchelf-0.18.0/src/patchelf.cc": {
+        "bytes": 97983,
+        "sha256": "d0215767b60b8290a2b271a2313dd919b011ac1c985950c5310116a03242065e"
+      },
+      "sources/patchelf-0.18.0/src/patchelf.h": {
+        "bytes": 9236,
+        "sha256": "a921f34d5c2966858574ab9a43f59b9c970da244a3e22a3df8d12248695a8a55"
+      },
+      "sources/patchelf-0.18.0/src/elf.h": {
+        "bytes": 187901,
+        "sha256": "ee9279a21176da387bc3ff2fd4989413ecad4c313e62f8db6c9ab1d70df00d59"
+      },
+      "sources/patchelf-0.18.0/COPYING": {
+        "bytes": 35147,
+        "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+      }
+    },
+    "boundaries": [
+      "Only six executables plus private dependencies; factory rc, httpd, kernel, drivers, vendor TLS/shared/NVRAM libraries remain unchanged",
+      "No Merlin VPN UI or libovpn state machine migration",
+      "Original executables retained; /jffs/localmod-merlin-disabled or localmod-disabled selects originals without touching settings",
+      "Factory OpenVPN profiles containing ncp-disable or static-key secret use retained factory program; single-component marker /jffs/localmod-merlin-openvpn-disabled is supported"
+    ],
+    "notice": {
+      "path": "sources/localmod/MERLIN_COMPONENTS_NOTICE.txt",
+      "sha256": "e2c1551452e8f8a5380f3d474049216f5f94656a45a3b432299fdc0e9ab7481c"
+    }
+  },
+  "vm": {
+    "schema": 1,
+    "phase": "candidate-merlin-system",
+    "sealed_manifest_sha256": "0a72a1235ef5a239f878a27fe2c51118212029f5d416b102b7cc4ed7d9c4e497",
+    "exported_entries": 3909,
+    "inputs": {
+      "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
+      "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
+      "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+      "build/merlin-system": "d57d0aa959ff853acd3b7e55f3f982b1e8a062a874d87fa1f971e8c98bdb7e47",
+      "build/merlin-vpn-config-fixture.so": "167396db6a0b69fc115c93b0b3770a646b2dbed51eec567e103ef1cc43e068e9",
+      "build/merlin-vpn-config-probe": "8a100a140a403832d2a954747dfb29ca328871020402f686b8e59d94ac72da6f",
+      "build/merlin_nested_initramfs.gz": "4162de079ecb4e57ed3db762f7fcced85814b0fc7a490333240f09592146cd8c",
+      "build/merlin_nested_job.sh": "842102328dc6c77d6db5b2ed00ce06c46f6d24b8b18db22e66e30c2ba0cff0a3",
+      "build/native-nvram": "9436d8ccf0c93bf9ef282af17776c81cffb8e1692eaac95837743b3e305c3c0c",
+      "build/native_defaults.bin": "f73ef45c89a87068c1a1da70c0d5399595950cb856276f3a0c57db189beeaae1",
+      "build/native_hw_fixture.so": "d0fa1acb27b6a76252a543aa1b10bf7292281ba83e8fc377f836d9c15a23b9ef",
+      "build/native_shadow_hash.txt": "25904697b50265590713cc146bf647887afa3bb25ef9bca672dece31aea8aa41",
+      "build/native_uu_transport.so": "a5bdc3c34095baa1ed9679d3aef7bf40c4b421f6b0b463d34f786f8736600467",
+      "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
+      "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
+      "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
+      "build/test-merlin": "eae006525bfc9d80b9abdbb86b0594b8a86d0420e4787ac00822cbc6ca087762",
+      "build/tools/LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52",
+      "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
+      "build/tools/linux-initramfs.gz": "b2cdb4150bd81b7b08edc74a812255e9bc8d8bce6c07d4167c21745599e5baa1"
+    },
+    "workspace_path": "build/casefs/sealed-private/job-02064554af0e89fd5527e8ef/workspace",
+    "state_disk_attached": false,
+    "state_lock_exclusive": false,
+    "host_export_readonly": true,
+    "guest_network_devices": 0,
+    "preserved_after_failure": false,
+    "cpus": 1,
+    "memory_mib": 1024,
+    "timeout_seconds": 1200,
+    "sealed_inputs_verified_before_and_after": true
+  },
+  "log_sha256": "da5256cda687c65ed9c64b9d92df681e67c89d6fe4c2b706384a14c37e22f3e1",
+  "limits": [
+    "Networkless full Cortex-A53 Linux6.12 system emulation with native kernel ARM32 compatibility",
+    "No physical router, target kernel4.1, NAND flash, wireless drivers or real WAN packet forwarding",
+    "Factory libvpn configuration text is real; synthetic NVRAM/PID1 and captured launches are fixtures",
+    "Local TLS/SSH/VPN/DNS/UPnP services use owned keys, dummy interfaces and data; no WAN accounts or UU acceleration"
+  ]
+}

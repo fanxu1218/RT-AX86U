@@ -1,0 +1,85 @@
+LINUX_BUILDER_READY
+MERLIN_SYSTEM_PROBE_READY
+FIXTURE_ARM_ARCH=aarch64
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+starting ntp...
+NTP_START_READY elapsed=5.66702592s start_attempts=1
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+miniupnpd[696]: it is advised to use network interface name instead of 192.168.77.1
+miniupnpd[696]: system uptime is 30 seconds
+miniupnpd[696]: Reloading rules from lease file
+miniupnpd[696]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794070167
+miniupnpd[696]: Reserved / private IP address 203.0.113.1 on ext interface wan0: Port forwarding is impossible
+miniupnpd[696]: You are probably behind NAT, enable option ext_perform_stun=yes to detect public IP address
+miniupnpd[696]: Or use ext_ip= / -o option to declare public IP address
+miniupnpd[696]: In case that miniupnpd is thinking that it's behind symmetric NAT while it actually is full-cone
+miniupnpd[696]: You can set option ext_allow_private_ipv4=yes to enable port forwarding
+miniupnpd[696]: But you may still need to configure stun server or ext_ip to make it work correctly
+miniupnpd[696]: Public IP address is required by UPnP/PCP/PMP protocols and clients do not work without it
+miniupnpd[696]: HTTP listening on port 35323
+miniupnpd[696]: Listening for NAT-PMP/PCP traffic on port 5351
+miniupnpd[696]: HTTP REQUEST from 192.168.77.1:45805 : GET /rootDesc.xml (HTTP/1.1)
+miniupnpd[696]: Host: 192.168.77.1:35323
+miniupnpd[696]: HTTP REQUEST from 192.168.77.1:42875 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[696]: Host: 192.168.77.1:35323
+miniupnpd[696]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[696]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[696]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[696]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[696]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[696]: Returning UPnPError 501: Action Failed
+miniupnpd[696]: shutting down MiniUPnPd
+miniupnpd[696]: finalize_sendto(): 475 bytes on socket 5
+miniupnpd[696]: finalize_sendto(): 491 bytes on socket 5
+miniupnpd[696]: finalize_sendto(): 473 bytes on socket 5
+miniupnpd[696]: finalize_sendto(): 420 bytes on socket 5
+miniupnpd[696]: finalize_sendto(): 459 bytes on socket 5
+miniupnpd[696]: finalize_sendto(): 420 bytes on socket 5
+miniupnpd[696]: finalize_sendto(): 479 bytes on socket 5
+miniupnpd[696]: finalize_sendto(): 420 bytes on socket 5
+miniupnpd[696]: finalize_sendto(): 483 bytes on socket 5
+miniupnpd[696]: finalize_sendto(): 411 bytes on socket 5
+PASS unadapted_miniupnpd_private-wan_failure_reproduced
+miniupnpd[722]: it is advised to use network interface name instead of 192.168.77.1
+miniupnpd[722]: system uptime is 30 seconds
+miniupnpd[722]: Reloading rules from lease file
+miniupnpd[722]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794070167
+miniupnpd[722]: IGNORED : Reserved / private IP address 203.0.113.1 on ext interface wan0
+miniupnpd[722]: HTTP listening on port 35323
+miniupnpd[722]: Listening for NAT-PMP/PCP traffic on port 5351
+miniupnpd[722]: HTTP REQUEST from 192.168.77.1:55041 : GET /rootDesc.xml (HTTP/1.1)
+miniupnpd[722]: Host: 192.168.77.1:35323
+miniupnpd[722]: HTTP REQUEST from 192.168.77.1:40007 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[722]: Host: 192.168.77.1:35323
+miniupnpd[722]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[722]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[722]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[722]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[722]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[722]: addmasqueraderule() : chain UPNP-POSTROUTING not found
+miniupnpd[722]: add_redirect_rule2(): addmasqueraderule returned -1
+miniupnpd[722]: Returning UPnPError 501: Action Failed
+miniupnpd[722]: shutting down MiniUPnPd
+miniupnpd[722]: finalize_sendto(): 475 bytes on socket 5
+miniupnpd[722]: finalize_sendto(): 491 bytes on socket 5
+miniupnpd[722]: finalize_sendto(): 473 bytes on socket 5
+miniupnpd[722]: finalize_sendto(): 420 bytes on socket 5
+miniupnpd[722]: finalize_sendto(): 459 bytes on socket 5
+miniupnpd[722]: finalize_sendto(): 420 bytes on socket 5
+miniupnpd[722]: finalize_sendto(): 479 bytes on socket 5
+miniupnpd[722]: finalize_sendto(): 420 bytes on socket 5
+miniupnpd[722]: finalize_sendto(): 483 bytes on socket 5
+miniupnpd[722]: finalize_sendto(): 411 bytes on socket 5
+PASS unadapted_miniupnpd_missing-postrouting_failure_reproduced
+MERLIN_RESULT {"checks":{"unadapted_miniupnpd_missing-postrouting_failure_reproduced":true,"unadapted_miniupnpd_private-wan_failure_reproduced":true},"full_suite":false,"real_uu_monitor_executed":false,"uu_api_requests":1,"uu_downloads":1,"versions":{}}
+SOAK_REAPER orphans_reaped=2
+NESTED_MERLIN_JOB_STATUS=0
+[   31.593738] reboot: Power down
+LINUX_READONLY_JOB_STATUS=0

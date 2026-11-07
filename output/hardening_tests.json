@@ -1,7 +1,7 @@
 {
   "status": "FINAL_CANDIDATE_HARDENING_PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w",
-  "candidate_sha256": "02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
+  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
   "production_files": {
     "usr/libexec/localmod/archive-guard": "92e708822c07e97e06f48623fc00d76c99060cec97951b6f05b336e68a007cd1",
     "usr/libexec/localmod/plugin-run": "714285d262804c50a99d4ff5a9d3d7a938ccd27b5a5d9fb6628005561efb59a3",
@@ -10,7 +10,7 @@
     "usr/libexec/localmod/localmod-event": "5652237436b123272cfd2cd78ddbb51cc2fdb801451992ea43d924b81f65617a",
     "usr/libexec/localmod/bootstrap.sh": "43298e06092803e25a7128ba757e4b02587a868819f58b7a2d95a1f494bb9826",
     "usr/libexec/localmod/installer-guard.sh": "ba13e554560c1d9340a39f94df9206ad093bb81f44bcfe6e0fd6c90d165809a4",
-    "www/Module_Localmod.asp": "fff435b61e083230e33371644bef7e84df35ff3c43059492a6d8b515097fe856",
+    "www/Module_Localmod.asp": "a15ce168211e13fbef88f5f551c879bd4df73e6ad7a19d5a7b768f7ecc753613",
     "usr/lib/localmod/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8"
   },
   "source_sha256": {
@@ -21,7 +21,7 @@
     "build/test_health.go": "895583a4b62a0c07301ff68569fcacc218f6b0220e6f2b8ea29a3ac8be8a6272",
     "build/test_installer_boundaries.go": "8286ac006788a4088e10e3b5b1210eabf462cd87e21771ec8cffd8bbaddfe683",
     "build/test_memory.go": "69838169024c9d0b9e31f2e570f9cde728f8193fe4d0e9f71be059fc080ca42f",
-    "build/test_online.go": "6149e462c16f55e709ecd3cde5d857a5051e4b59ebbf9a0cf97911772b3bfa94",
+    "build/test_online.go": "b04471e23505e03d7700884fdad4adb5d526e7fd8fe33bfe669a3a736d81fd14",
     "build/test_resource_bounds.go": "418e3774ed31838e6612bec1d35ebc4ad493b48632a2caaf46747e9f084b0b8c",
     "build/test_soak.go": "908018fec252135807c0df483a5c5951c5866506a0b9b0917a508431c1afa891",
     "build/test_uu_recovery.go": "1a2a0a6a657f4be4d7e779bbc19f49d736cbf1f9a359bc94058d0631693b3f0d"
@@ -96,25 +96,25 @@
           "timeout_preserves_checkpoint_config_and_uu"
         ]
       },
-      "log_sha256": "15c0d1b47f82b8bf804d8e0887a67401a0a0eaeebafe0fbfca371e7354d9f2eb",
+      "log_sha256": "42706e241c444fabb1159b52053501fce844de6cb76f193e14f2894e8d447049",
       "vm": {
         "schema": 1,
         "phase": "candidate-installer",
-        "sealed_manifest_sha256": "3d33a9002d412a1263bd8c89bc777bb6caa6d15e870193287ac8a83a2afdb99d",
-        "exported_entries": 3691,
+        "sealed_manifest_sha256": "e19bf6107ec902bca7ba2509024cb4d26999582f2159639395d45c32dc2ac925",
+        "exported_entries": 3749,
         "inputs": {
           "build/barrier-bounds-fixture": "4179c66e8ca3764f3eeaea85b3b53a5edc840010400a3ce957169af27e7af1e4",
-          "build/casefs/rootfs": "f2b1d742260fa2b2fa275b96359bbe4b03a670f986e19b5c3474bff59f371fe0",
+          "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
           "build/event-bounds-fixture": "25d82c9528c0114a010838c136ddb1cb0fbd6e7b987b21976d165296cd10108c",
           "build/extended_plugin_inputs.json": "f04a5b419bcbecef8c3f6f89e17f2d832b7d649645a36c0365d5c1ef7b913b1b",
           "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
           "build/history-phase": "c9a0647937075c28f1679e9348c5da8d576ff0014b4a37a6f7c35ffa110c7529",
           "build/history_fault_fixture.so": "b29c8832c837d1311f5c5452c25cf4695efb4a77103837d5215a1f2bb50dbe49",
           "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
-          "build/httpd_bridge_next.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
+          "build/httpd_bridge_next.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
           "build/httpd_tls_cache_fixture.so": "29cc9b185fc500d788939f6a77b1478cb32b97513ca1e17ebcc2449859ed0f74",
           "build/https_trace_fixture.so": "334f974097e5d9032cd27f153fd45c37583189dbd204a364f03f96235138d3c8",
-          "build/installer-boundary-inputs": "9163daee01ad1fc028f719f324c2f3b09414f03a1cbed03c23ca8d5fde017a70",
+          "build/installer-boundary-inputs": "07b43477408f094e25f6c5649275d265b2559965272230cf875b2eb27779e847",
           "build/interrupt-phase.json": "b4f7520fbd17bfa3e3f971e3bc6aae69dc0092382b358d96d503989a759cd333",
           "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
           "build/log-limit-bounds-fixture": "a353d88863f8fb24122c6eb4fc49e6124dfba2d0fd983168cbd122db5a6ccdcb",
@@ -127,22 +127,22 @@
           "build/plugin-txn-r5-baseline": "acee866cacece10883d614e2a8a6a783380f98e7e4e1d2e08cdd2d1b2bf909ce",
           "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
           "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
-          "build/real_plugins_setup.sh": "12a6e01d1dcb046ef6ac5934c746e41a51c7c8faf8a48110e15e5f2b8af23432",
+          "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
           "build/relay-idle-fixture": "34cbaa534f6fbb1c1fa2c25bb5146f117477f1471c7adef2093248643022bf8b",
           "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
-          "build/test-fancyss": "22fdb7b8cd980d956781e2eb0056f8fd68e3c3c127bf15946748c5c502580373",
-          "build/test-health": "bba3febef5eb127bfb1c5b4dc8282130903df46d34614d00e4ee20cc7ce60866",
-          "build/test-history": "d98bc9db899ef9ea1ad8283a367c969043d0ff9d417c315d8a249db7482bac54",
-          "build/test-https-stability": "8bc501c32550893c58fc7f6375408f88157c27bed491159550c8dd1f3ed10e55",
-          "build/test-installer-boundaries": "18603dbf0c8b7ba431abdea870b514b31fd5e507eca71c9deb479f7f13ca6888",
-          "build/test-interrupt": "e0dabfb277d3872fdb9821fd29940a888574521ec6de2816c3119aa651189d4f",
-          "build/test-real-plugins": "0ce417b619404993c790d8c2804af6dd44057fe19da2ea9c4ada4b2cdf57c04c",
-          "build/test-resource-bounds": "24b9ef79d27d102ea460ed0eab0e4954cf03151425e6e8a94a06678a86f86ea4",
-          "build/test-soak": "4936e9c85f9deaa5be25077a6d9680007c7bc4aea089e917956fbbdda036f693",
-          "build/test-uu-recovery": "4d3907ed542f2fa309f47a24ca0171e8b48c943cae7a5d815f9700b1c7efdb2e",
+          "build/test-fancyss": "cbd35da285a9f0b0272cbfaf72d109df1e706809ed1e5115f9df49abb354eeaa",
+          "build/test-health": "348add1c715e6fab40f1b48e058584b020ecbaaf9dab361232c856da673d7632",
+          "build/test-history": "14b6b38d29d5d49118a358978a72ff64975efebcb8bd0c3ce59a0d3536332b0f",
+          "build/test-https-stability": "1cf48930ef034d839ec443dc1156a93fc9b9579fda448382b6f6e3f54b9c3248",
+          "build/test-installer-boundaries": "9ed968a581e0e445f98de40841673752b27eeffef6e78e1cc75fc61ae1c8fb84",
+          "build/test-interrupt": "b4add1b538c6f3a0079e3de2004baf1a056d20fcc80750f7e6571c7c3d715678",
+          "build/test-real-plugins": "e056b8be7d23900c56289ca2ef71a7dd05d37aa3efba1d002d71c8155d9fcca7",
+          "build/test-resource-bounds": "11ece2e089ede7b0873db7c3d0ee875a4bf391605d63acb7d92df757d78be7ef",
+          "build/test-soak": "a7031b93b039eae839366b56fb52b312916f3d20905c18b087d14952ac5b0e60",
+          "build/test-uu-recovery": "f4c0fcece68aa17a36431bb5c0094a50ff0ea4ce315bac35308c14b9a8661ba3",
           "build/tools/LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52",
           "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
-          "build/tools/linux-initramfs.gz": "e0c18e382f1c103506de57aab1a172c6063002051b7cbd70a5d6aa25ae1f5ab1",
+          "build/tools/linux-initramfs.gz": "b2cdb4150bd81b7b08edc74a812255e9bc8d8bce6c07d4167c21745599e5baa1",
           "build/txn_fault_fixture.so": "a25e627d8ef3921005e94d765d78287ee379ada053cef7d62fedbf0db18dd7e4",
           "sources/realplugins/aliddns-2.4.tar.gz": "73f5743f02a2b08fe5a9a7858ec96e7adc0290f5cdf84898842bf97ec0a24995",
           "sources/realplugins/aliddns-history.tar.gz": "09da7e6ed0449375e71f805e509572d942f5714bd54fa1d19ba97cbf628e3461",
@@ -159,7 +159,7 @@
           "sources/realplugins/pushplus-current-extended.tar.gz": "3000f98a6112c6af49e1be6b6b990fb49d187f04b500a119d5216455829c8e42",
           "sources/realplugins/pushplus-old-extended.tar.gz": "6af79aaa9b10c6ad663865d96ddc69758c6b85bce688c71b342245907d9d2926"
         },
-        "workspace_path": "build/casefs/sealed-private/job-51218b3c80634a7ec3238673/workspace",
+        "workspace_path": "build/casefs/sealed-private/job-7c4362e9b5d70cb18aa8f1ce/workspace",
         "state_disk_attached": false,
         "state_lock_exclusive": false,
         "host_export_readonly": true,
@@ -190,25 +190,25 @@
         "maximum_queue_entries": 128,
         "rejected": 128
       },
-      "log_sha256": "d6f25f1551b492ac393991912b4e4d9338997563a0399346e28f052560bec5a4",
+      "log_sha256": "58c993853029b6970c27b0600c79b9d37e9e3255333802578e167852fee09e33",
       "vm": {
         "schema": 1,
         "phase": "candidate-resources",
-        "sealed_manifest_sha256": "232392b704a90ef38cbe1f897bd199edf2a316a35bad4d608a9fe535043f77f1",
-        "exported_entries": 3691,
+        "sealed_manifest_sha256": "86960395e03a91ee1a433bf7616d033f5b9a1d51cf51144007b362b94075e45d",
+        "exported_entries": 3749,
         "inputs": {
           "build/barrier-bounds-fixture": "4179c66e8ca3764f3eeaea85b3b53a5edc840010400a3ce957169af27e7af1e4",
-          "build/casefs/rootfs": "f2b1d742260fa2b2fa275b96359bbe4b03a670f986e19b5c3474bff59f371fe0",
+          "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
           "build/event-bounds-fixture": "25d82c9528c0114a010838c136ddb1cb0fbd6e7b987b21976d165296cd10108c",
           "build/extended_plugin_inputs.json": "f04a5b419bcbecef8c3f6f89e17f2d832b7d649645a36c0365d5c1ef7b913b1b",
           "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
           "build/history-phase": "c9a0647937075c28f1679e9348c5da8d576ff0014b4a37a6f7c35ffa110c7529",
           "build/history_fault_fixture.so": "b29c8832c837d1311f5c5452c25cf4695efb4a77103837d5215a1f2bb50dbe49",
           "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
-          "build/httpd_bridge_next.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
+          "build/httpd_bridge_next.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
           "build/httpd_tls_cache_fixture.so": "29cc9b185fc500d788939f6a77b1478cb32b97513ca1e17ebcc2449859ed0f74",
           "build/https_trace_fixture.so": "334f974097e5d9032cd27f153fd45c37583189dbd204a364f03f96235138d3c8",
-          "build/installer-boundary-inputs": "9163daee01ad1fc028f719f324c2f3b09414f03a1cbed03c23ca8d5fde017a70",
+          "build/installer-boundary-inputs": "07b43477408f094e25f6c5649275d265b2559965272230cf875b2eb27779e847",
           "build/interrupt-phase.json": "b4f7520fbd17bfa3e3f971e3bc6aae69dc0092382b358d96d503989a759cd333",
           "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
           "build/log-limit-bounds-fixture": "a353d88863f8fb24122c6eb4fc49e6124dfba2d0fd983168cbd122db5a6ccdcb",
@@ -221,22 +221,22 @@
           "build/plugin-txn-r5-baseline": "acee866cacece10883d614e2a8a6a783380f98e7e4e1d2e08cdd2d1b2bf909ce",
           "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
           "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
-          "build/real_plugins_setup.sh": "12a6e01d1dcb046ef6ac5934c746e41a51c7c8faf8a48110e15e5f2b8af23432",
+          "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
           "build/relay-idle-fixture": "34cbaa534f6fbb1c1fa2c25bb5146f117477f1471c7adef2093248643022bf8b",
           "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
-          "build/test-fancyss": "22fdb7b8cd980d956781e2eb0056f8fd68e3c3c127bf15946748c5c502580373",
-          "build/test-health": "bba3febef5eb127bfb1c5b4dc8282130903df46d34614d00e4ee20cc7ce60866",
-          "build/test-history": "d98bc9db899ef9ea1ad8283a367c969043d0ff9d417c315d8a249db7482bac54",
-          "build/test-https-stability": "8bc501c32550893c58fc7f6375408f88157c27bed491159550c8dd1f3ed10e55",
-          "build/test-installer-boundaries": "18603dbf0c8b7ba431abdea870b514b31fd5e507eca71c9deb479f7f13ca6888",
-          "build/test-interrupt": "e0dabfb277d3872fdb9821fd29940a888574521ec6de2816c3119aa651189d4f",
-          "build/test-real-plugins": "0ce417b619404993c790d8c2804af6dd44057fe19da2ea9c4ada4b2cdf57c04c",
-          "build/test-resource-bounds": "24b9ef79d27d102ea460ed0eab0e4954cf03151425e6e8a94a06678a86f86ea4",
-          "build/test-soak": "4936e9c85f9deaa5be25077a6d9680007c7bc4aea089e917956fbbdda036f693",
-          "build/test-uu-recovery": "4d3907ed542f2fa309f47a24ca0171e8b48c943cae7a5d815f9700b1c7efdb2e",
+          "build/test-fancyss": "cbd35da285a9f0b0272cbfaf72d109df1e706809ed1e5115f9df49abb354eeaa",
+          "build/test-health": "348add1c715e6fab40f1b48e058584b020ecbaaf9dab361232c856da673d7632",
+          "build/test-history": "14b6b38d29d5d49118a358978a72ff64975efebcb8bd0c3ce59a0d3536332b0f",
+          "build/test-https-stability": "1cf48930ef034d839ec443dc1156a93fc9b9579fda448382b6f6e3f54b9c3248",
+          "build/test-installer-boundaries": "9ed968a581e0e445f98de40841673752b27eeffef6e78e1cc75fc61ae1c8fb84",
+          "build/test-interrupt": "b4add1b538c6f3a0079e3de2004baf1a056d20fcc80750f7e6571c7c3d715678",
+          "build/test-real-plugins": "e056b8be7d23900c56289ca2ef71a7dd05d37aa3efba1d002d71c8155d9fcca7",
+          "build/test-resource-bounds": "11ece2e089ede7b0873db7c3d0ee875a4bf391605d63acb7d92df757d78be7ef",
+          "build/test-soak": "a7031b93b039eae839366b56fb52b312916f3d20905c18b087d14952ac5b0e60",
+          "build/test-uu-recovery": "f4c0fcece68aa17a36431bb5c0094a50ff0ea4ce315bac35308c14b9a8661ba3",
           "build/tools/LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52",
           "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
-          "build/tools/linux-initramfs.gz": "e0c18e382f1c103506de57aab1a172c6063002051b7cbd70a5d6aa25ae1f5ab1",
+          "build/tools/linux-initramfs.gz": "b2cdb4150bd81b7b08edc74a812255e9bc8d8bce6c07d4167c21745599e5baa1",
           "build/txn_fault_fixture.so": "a25e627d8ef3921005e94d765d78287ee379ada053cef7d62fedbf0db18dd7e4",
           "sources/realplugins/aliddns-2.4.tar.gz": "73f5743f02a2b08fe5a9a7858ec96e7adc0290f5cdf84898842bf97ec0a24995",
           "sources/realplugins/aliddns-history.tar.gz": "09da7e6ed0449375e71f805e509572d942f5714bd54fa1d19ba97cbf628e3461",
@@ -253,7 +253,7 @@
           "sources/realplugins/pushplus-current-extended.tar.gz": "3000f98a6112c6af49e1be6b6b990fb49d187f04b500a119d5216455829c8e42",
           "sources/realplugins/pushplus-old-extended.tar.gz": "6af79aaa9b10c6ad663865d96ddc69758c6b85bce688c71b342245907d9d2926"
         },
-        "workspace_path": "build/casefs/sealed-private/job-edab45030fc64d54e283b6c3/workspace",
+        "workspace_path": "build/casefs/sealed-private/job-e1aa7f88ab25cbeacabc93e4/workspace",
         "state_disk_attached": false,
         "state_lock_exclusive": false,
         "host_export_readonly": true,
@@ -312,27 +312,27 @@
         },
         "persistent_data_preserved": true,
         "recovery_policy": "fresh native NTP cycle after controlled network restoration; no automatic replay of a failed native once-only cycle",
-        "uu_worker_pid": 1664
+        "uu_worker_pid": 1671
       },
-      "log_sha256": "cf15a621a2808139ff15712854c02ba97004b0bebea9e1992be25cd4cf358bd4",
+      "log_sha256": "2dd7ba9dfae93a077ab724ed2fb0cd96be728bda864d6d72cbd521f6c986c918",
       "vm": {
         "schema": 1,
         "phase": "candidate-uu",
-        "sealed_manifest_sha256": "879269c130f02838af0455ff6ac0db1a6b7c109e1abb806b3b4363b6291149db",
-        "exported_entries": 3691,
+        "sealed_manifest_sha256": "c9eafc64eecf632d9aff3fb093f1bc4cc70b1c352afd5e766145f16c1ea8a034",
+        "exported_entries": 3749,
         "inputs": {
           "build/barrier-bounds-fixture": "4179c66e8ca3764f3eeaea85b3b53a5edc840010400a3ce957169af27e7af1e4",
-          "build/casefs/rootfs": "f2b1d742260fa2b2fa275b96359bbe4b03a670f986e19b5c3474bff59f371fe0",
+          "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
           "build/event-bounds-fixture": "25d82c9528c0114a010838c136ddb1cb0fbd6e7b987b21976d165296cd10108c",
           "build/extended_plugin_inputs.json": "f04a5b419bcbecef8c3f6f89e17f2d832b7d649645a36c0365d5c1ef7b913b1b",
           "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
           "build/history-phase": "c9a0647937075c28f1679e9348c5da8d576ff0014b4a37a6f7c35ffa110c7529",
           "build/history_fault_fixture.so": "b29c8832c837d1311f5c5452c25cf4695efb4a77103837d5215a1f2bb50dbe49",
           "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
-          "build/httpd_bridge_next.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
+          "build/httpd_bridge_next.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
           "build/httpd_tls_cache_fixture.so": "29cc9b185fc500d788939f6a77b1478cb32b97513ca1e17ebcc2449859ed0f74",
           "build/https_trace_fixture.so": "334f974097e5d9032cd27f153fd45c37583189dbd204a364f03f96235138d3c8",
-          "build/installer-boundary-inputs": "9163daee01ad1fc028f719f324c2f3b09414f03a1cbed03c23ca8d5fde017a70",
+          "build/installer-boundary-inputs": "07b43477408f094e25f6c5649275d265b2559965272230cf875b2eb27779e847",
           "build/interrupt-phase.json": "b4f7520fbd17bfa3e3f971e3bc6aae69dc0092382b358d96d503989a759cd333",
           "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
           "build/log-limit-bounds-fixture": "a353d88863f8fb24122c6eb4fc49e6124dfba2d0fd983168cbd122db5a6ccdcb",
@@ -345,22 +345,22 @@
           "build/plugin-txn-r5-baseline": "acee866cacece10883d614e2a8a6a783380f98e7e4e1d2e08cdd2d1b2bf909ce",
           "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
           "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
-          "build/real_plugins_setup.sh": "12a6e01d1dcb046ef6ac5934c746e41a51c7c8faf8a48110e15e5f2b8af23432",
+          "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
           "build/relay-idle-fixture": "34cbaa534f6fbb1c1fa2c25bb5146f117477f1471c7adef2093248643022bf8b",
           "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
-          "build/test-fancyss": "22fdb7b8cd980d956781e2eb0056f8fd68e3c3c127bf15946748c5c502580373",
-          "build/test-health": "bba3febef5eb127bfb1c5b4dc8282130903df46d34614d00e4ee20cc7ce60866",
-          "build/test-history": "d98bc9db899ef9ea1ad8283a367c969043d0ff9d417c315d8a249db7482bac54",
-          "build/test-https-stability": "8bc501c32550893c58fc7f6375408f88157c27bed491159550c8dd1f3ed10e55",
-          "build/test-installer-boundaries": "18603dbf0c8b7ba431abdea870b514b31fd5e507eca71c9deb479f7f13ca6888",
-          "build/test-interrupt": "e0dabfb277d3872fdb9821fd29940a888574521ec6de2816c3119aa651189d4f",
-          "build/test-real-plugins": "0ce417b619404993c790d8c2804af6dd44057fe19da2ea9c4ada4b2cdf57c04c",
-          "build/test-resource-bounds": "24b9ef79d27d102ea460ed0eab0e4954cf03151425e6e8a94a06678a86f86ea4",
-          "build/test-soak": "4936e9c85f9deaa5be25077a6d9680007c7bc4aea089e917956fbbdda036f693",
-          "build/test-uu-recovery": "4d3907ed542f2fa309f47a24ca0171e8b48c943cae7a5d815f9700b1c7efdb2e",
+          "build/test-fancyss": "cbd35da285a9f0b0272cbfaf72d109df1e706809ed1e5115f9df49abb354eeaa",
+          "build/test-health": "348add1c715e6fab40f1b48e058584b020ecbaaf9dab361232c856da673d7632",
+          "build/test-history": "14b6b38d29d5d49118a358978a72ff64975efebcb8bd0c3ce59a0d3536332b0f",
+          "build/test-https-stability": "1cf48930ef034d839ec443dc1156a93fc9b9579fda448382b6f6e3f54b9c3248",
+          "build/test-installer-boundaries": "9ed968a581e0e445f98de40841673752b27eeffef6e78e1cc75fc61ae1c8fb84",
+          "build/test-interrupt": "b4add1b538c6f3a0079e3de2004baf1a056d20fcc80750f7e6571c7c3d715678",
+          "build/test-real-plugins": "e056b8be7d23900c56289ca2ef71a7dd05d37aa3efba1d002d71c8155d9fcca7",
+          "build/test-resource-bounds": "11ece2e089ede7b0873db7c3d0ee875a4bf391605d63acb7d92df757d78be7ef",
+          "build/test-soak": "a7031b93b039eae839366b56fb52b312916f3d20905c18b087d14952ac5b0e60",
+          "build/test-uu-recovery": "f4c0fcece68aa17a36431bb5c0094a50ff0ea4ce315bac35308c14b9a8661ba3",
           "build/tools/LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52",
           "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
-          "build/tools/linux-initramfs.gz": "e0c18e382f1c103506de57aab1a172c6063002051b7cbd70a5d6aa25ae1f5ab1",
+          "build/tools/linux-initramfs.gz": "b2cdb4150bd81b7b08edc74a812255e9bc8d8bce6c07d4167c21745599e5baa1",
           "build/txn_fault_fixture.so": "a25e627d8ef3921005e94d765d78287ee379ada053cef7d62fedbf0db18dd7e4",
           "sources/realplugins/aliddns-2.4.tar.gz": "73f5743f02a2b08fe5a9a7858ec96e7adc0290f5cdf84898842bf97ec0a24995",
           "sources/realplugins/aliddns-history.tar.gz": "09da7e6ed0449375e71f805e509572d942f5714bd54fa1d19ba97cbf628e3461",
@@ -377,7 +377,7 @@
           "sources/realplugins/pushplus-current-extended.tar.gz": "3000f98a6112c6af49e1be6b6b990fb49d187f04b500a119d5216455829c8e42",
           "sources/realplugins/pushplus-old-extended.tar.gz": "6af79aaa9b10c6ad663865d96ddc69758c6b85bce688c71b342245907d9d2926"
         },
-        "workspace_path": "build/casefs/sealed-private/job-3f3db4f374a583440129bc3f/workspace",
+        "workspace_path": "build/casefs/sealed-private/job-9e28585d5aeda83f291adf60/workspace",
         "state_disk_attached": false,
         "state_lock_exclusive": false,
         "host_export_readonly": true,
@@ -411,25 +411,25 @@
         },
         "uu_owned_worker_alive": true
       },
-      "log_sha256": "e7c8c456529ae83b3e6b58e660153a78bfe53dc17d86a5cc4cd7e22786556439",
+      "log_sha256": "b84e4df4740e64ed0a7e624956430cb4218d2317d763204ff761d79c83064afd",
       "vm": {
         "schema": 1,
         "phase": "candidate-health",
-        "sealed_manifest_sha256": "495a696c4951350af5d34ab3f07152ea48a4383e29bdbf9652bf8254888c1f34",
-        "exported_entries": 3691,
+        "sealed_manifest_sha256": "e652ebf31102103f9d6a2a741e0bc7623d8a50c7e821bc592b6173e3711201e2",
+        "exported_entries": 3749,
         "inputs": {
           "build/barrier-bounds-fixture": "4179c66e8ca3764f3eeaea85b3b53a5edc840010400a3ce957169af27e7af1e4",
-          "build/casefs/rootfs": "f2b1d742260fa2b2fa275b96359bbe4b03a670f986e19b5c3474bff59f371fe0",
+          "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
           "build/event-bounds-fixture": "25d82c9528c0114a010838c136ddb1cb0fbd6e7b987b21976d165296cd10108c",
           "build/extended_plugin_inputs.json": "f04a5b419bcbecef8c3f6f89e17f2d832b7d649645a36c0365d5c1ef7b913b1b",
           "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
           "build/history-phase": "c9a0647937075c28f1679e9348c5da8d576ff0014b4a37a6f7c35ffa110c7529",
           "build/history_fault_fixture.so": "b29c8832c837d1311f5c5452c25cf4695efb4a77103837d5215a1f2bb50dbe49",
           "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
-          "build/httpd_bridge_next.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
+          "build/httpd_bridge_next.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
           "build/httpd_tls_cache_fixture.so": "29cc9b185fc500d788939f6a77b1478cb32b97513ca1e17ebcc2449859ed0f74",
           "build/https_trace_fixture.so": "334f974097e5d9032cd27f153fd45c37583189dbd204a364f03f96235138d3c8",
-          "build/installer-boundary-inputs": "9163daee01ad1fc028f719f324c2f3b09414f03a1cbed03c23ca8d5fde017a70",
+          "build/installer-boundary-inputs": "07b43477408f094e25f6c5649275d265b2559965272230cf875b2eb27779e847",
           "build/interrupt-phase.json": "b4f7520fbd17bfa3e3f971e3bc6aae69dc0092382b358d96d503989a759cd333",
           "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
           "build/log-limit-bounds-fixture": "a353d88863f8fb24122c6eb4fc49e6124dfba2d0fd983168cbd122db5a6ccdcb",
@@ -442,22 +442,22 @@
           "build/plugin-txn-r5-baseline": "acee866cacece10883d614e2a8a6a783380f98e7e4e1d2e08cdd2d1b2bf909ce",
           "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
           "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
-          "build/real_plugins_setup.sh": "12a6e01d1dcb046ef6ac5934c746e41a51c7c8faf8a48110e15e5f2b8af23432",
+          "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
           "build/relay-idle-fixture": "34cbaa534f6fbb1c1fa2c25bb5146f117477f1471c7adef2093248643022bf8b",
           "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
-          "build/test-fancyss": "22fdb7b8cd980d956781e2eb0056f8fd68e3c3c127bf15946748c5c502580373",
-          "build/test-health": "bba3febef5eb127bfb1c5b4dc8282130903df46d34614d00e4ee20cc7ce60866",
-          "build/test-history": "d98bc9db899ef9ea1ad8283a367c969043d0ff9d417c315d8a249db7482bac54",
-          "build/test-https-stability": "8bc501c32550893c58fc7f6375408f88157c27bed491159550c8dd1f3ed10e55",
-          "build/test-installer-boundaries": "18603dbf0c8b7ba431abdea870b514b31fd5e507eca71c9deb479f7f13ca6888",
-          "build/test-interrupt": "e0dabfb277d3872fdb9821fd29940a888574521ec6de2816c3119aa651189d4f",
-          "build/test-real-plugins": "0ce417b619404993c790d8c2804af6dd44057fe19da2ea9c4ada4b2cdf57c04c",
-          "build/test-resource-bounds": "24b9ef79d27d102ea460ed0eab0e4954cf03151425e6e8a94a06678a86f86ea4",
-          "build/test-soak": "4936e9c85f9deaa5be25077a6d9680007c7bc4aea089e917956fbbdda036f693",
-          "build/test-uu-recovery": "4d3907ed542f2fa309f47a24ca0171e8b48c943cae7a5d815f9700b1c7efdb2e",
+          "build/test-fancyss": "cbd35da285a9f0b0272cbfaf72d109df1e706809ed1e5115f9df49abb354eeaa",
+          "build/test-health": "348add1c715e6fab40f1b48e058584b020ecbaaf9dab361232c856da673d7632",
+          "build/test-history": "14b6b38d29d5d49118a358978a72ff64975efebcb8bd0c3ce59a0d3536332b0f",
+          "build/test-https-stability": "1cf48930ef034d839ec443dc1156a93fc9b9579fda448382b6f6e3f54b9c3248",
+          "build/test-installer-boundaries": "9ed968a581e0e445f98de40841673752b27eeffef6e78e1cc75fc61ae1c8fb84",
+          "build/test-interrupt": "b4add1b538c6f3a0079e3de2004baf1a056d20fcc80750f7e6571c7c3d715678",
+          "build/test-real-plugins": "e056b8be7d23900c56289ca2ef71a7dd05d37aa3efba1d002d71c8155d9fcca7",
+          "build/test-resource-bounds": "11ece2e089ede7b0873db7c3d0ee875a4bf391605d63acb7d92df757d78be7ef",
+          "build/test-soak": "a7031b93b039eae839366b56fb52b312916f3d20905c18b087d14952ac5b0e60",
+          "build/test-uu-recovery": "f4c0fcece68aa17a36431bb5c0094a50ff0ea4ce315bac35308c14b9a8661ba3",
           "build/tools/LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52",
           "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
-          "build/tools/linux-initramfs.gz": "e0c18e382f1c103506de57aab1a172c6063002051b7cbd70a5d6aa25ae1f5ab1",
+          "build/tools/linux-initramfs.gz": "b2cdb4150bd81b7b08edc74a812255e9bc8d8bce6c07d4167c21745599e5baa1",
           "build/txn_fault_fixture.so": "a25e627d8ef3921005e94d765d78287ee379ada053cef7d62fedbf0db18dd7e4",
           "sources/realplugins/aliddns-2.4.tar.gz": "73f5743f02a2b08fe5a9a7858ec96e7adc0290f5cdf84898842bf97ec0a24995",
           "sources/realplugins/aliddns-history.tar.gz": "09da7e6ed0449375e71f805e509572d942f5714bd54fa1d19ba97cbf628e3461",
@@ -474,7 +474,7 @@
           "sources/realplugins/pushplus-current-extended.tar.gz": "3000f98a6112c6af49e1be6b6b990fb49d187f04b500a119d5216455829c8e42",
           "sources/realplugins/pushplus-old-extended.tar.gz": "6af79aaa9b10c6ad663865d96ddc69758c6b85bce688c71b342245907d9d2926"
         },
-        "workspace_path": "build/casefs/sealed-private/job-d5e2a70fc46ed4416fb133a8/workspace",
+        "workspace_path": "build/casefs/sealed-private/job-d3e0fddcc4945946545c590d/workspace",
         "state_disk_attached": false,
         "state_lock_exclusive": false,
         "host_export_readonly": true,
@@ -489,11 +489,11 @@
     "soak-httpd-cache": {
       "result": {
         "data_preserved": true,
-        "duration_seconds": 28.02517043,
+        "duration_seconds": 28.332256014,
         "protected_page_queries": 300,
         "samples": [
           {
-            "elapsed_seconds": 10.282158797,
+            "elapsed_seconds": 9.971884046,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -756,7 +756,7 @@
               "host rw-p [heap]": 56,
               "host rw-p [stack]": 24,
               "host rw-p anonymous": 2888,
-              "host rwxp anonymous": 9660
+              "host rwxp anonymous": 9656
             },
             "mapping_groups_rss_kib": {
               "guest ---p /lib/libasuslog.so": 0,
@@ -886,20 +886,20 @@
               "host rw-p [heap]": 56,
               "host rw-p [stack]": 24,
               "host rw-p anonymous": 2888,
-              "host rwxp anonymous": 9660
+              "host rwxp anonymous": 9656
             },
             "perfmap": {
               "available": true,
-              "entries": 120681,
-              "entries_in_host_executable_maps": 120681,
-              "file_bytes": 3930557,
-              "host_executable_address_union_bytes": 3670204
+              "entries": 120656,
+              "entries_in_host_executable_maps": 120656,
+              "file_bytes": 3929537,
+              "host_executable_address_union_bytes": 3669200
             },
-            "pid": 969,
-            "qemu_host_mapping_rss_kib": 15800,
-            "smaps_rss_kib": 23196,
+            "pid": 972,
+            "qemu_host_mapping_rss_kib": 15796,
+            "smaps_rss_kib": 23192,
             "stage": "fresh1",
-            "status_rss_kib": 23196,
+            "status_rss_kib": 23192,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7396,
             "target_virtual_writable_kib": 9924,
@@ -1479,7 +1479,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 17.901639467,
+            "elapsed_seconds": 17.991593259,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -1742,7 +1742,7 @@
               "host rw-p [heap]": 60,
               "host rw-p [stack]": 24,
               "host rw-p anonymous": 2900,
-              "host rwxp anonymous": 9728
+              "host rwxp anonymous": 9732
             },
             "mapping_groups_rss_kib": {
               "guest ---p /lib/libasuslog.so": 0,
@@ -1872,20 +1872,20 @@
               "host rw-p [heap]": 60,
               "host rw-p [stack]": 24,
               "host rw-p anonymous": 2900,
-              "host rwxp anonymous": 9728
+              "host rwxp anonymous": 9732
             },
             "perfmap": {
               "available": true,
-              "entries": 121501,
-              "entries_in_host_executable_maps": 121501,
-              "file_bytes": 3957333,
-              "host_executable_address_union_bytes": 3695552
+              "entries": 121506,
+              "entries_in_host_executable_maps": 121506,
+              "file_bytes": 3957365,
+              "host_executable_address_union_bytes": 3695752
             },
-            "pid": 969,
-            "qemu_host_mapping_rss_kib": 15884,
-            "smaps_rss_kib": 23280,
+            "pid": 972,
+            "qemu_host_mapping_rss_kib": 15888,
+            "smaps_rss_kib": 23284,
             "stage": "resumed",
-            "status_rss_kib": 23280,
+            "status_rss_kib": 23284,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7396,
             "target_virtual_writable_kib": 9924,
@@ -2465,7 +2465,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 27.735763763,
+            "elapsed_seconds": 28.059813055,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -2728,7 +2728,7 @@
               "host rw-p [heap]": 60,
               "host rw-p [stack]": 24,
               "host rw-p anonymous": 2900,
-              "host rwxp anonymous": 9728
+              "host rwxp anonymous": 9732
             },
             "mapping_groups_rss_kib": {
               "guest ---p /lib/libasuslog.so": 0,
@@ -2858,20 +2858,20 @@
               "host rw-p [heap]": 60,
               "host rw-p [stack]": 24,
               "host rw-p anonymous": 2900,
-              "host rwxp anonymous": 9728
+              "host rwxp anonymous": 9732
             },
             "perfmap": {
               "available": true,
-              "entries": 121501,
-              "entries_in_host_executable_maps": 121501,
-              "file_bytes": 3957333,
-              "host_executable_address_union_bytes": 3695552
+              "entries": 121506,
+              "entries_in_host_executable_maps": 121506,
+              "file_bytes": 3957365,
+              "host_executable_address_union_bytes": 3695752
             },
-            "pid": 969,
-            "qemu_host_mapping_rss_kib": 15884,
-            "smaps_rss_kib": 23280,
+            "pid": 972,
+            "qemu_host_mapping_rss_kib": 15888,
+            "smaps_rss_kib": 23284,
             "stage": "fresh2",
-            "status_rss_kib": 23280,
+            "status_rss_kib": 23284,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7396,
             "target_virtual_writable_kib": 9924,
@@ -3453,25 +3453,25 @@
         ],
         "uu_launches": 1
       },
-      "log_sha256": "e1907bac61e7755affd0fcb9df83a219ee8e377d3f3da0b01fa92a5eed01801b",
+      "log_sha256": "14f5f2994c4e92a5b4bfd587008171042c2b4074a6248fe55d2256bc337e0270",
       "vm": {
         "schema": 1,
         "phase": "soak-httpd-cache",
-        "sealed_manifest_sha256": "d710f942360b5b1e788a3cc07fa336de80868a3c42c8110efa4ac97bea75816e",
-        "exported_entries": 3691,
+        "sealed_manifest_sha256": "25df10f074d59f1d3cb7dd3a6729eb780497b6de0a7224b10572e7e9ca1259ed",
+        "exported_entries": 3749,
         "inputs": {
           "build/barrier-bounds-fixture": "4179c66e8ca3764f3eeaea85b3b53a5edc840010400a3ce957169af27e7af1e4",
-          "build/casefs/rootfs": "f2b1d742260fa2b2fa275b96359bbe4b03a670f986e19b5c3474bff59f371fe0",
+          "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
           "build/event-bounds-fixture": "25d82c9528c0114a010838c136ddb1cb0fbd6e7b987b21976d165296cd10108c",
           "build/extended_plugin_inputs.json": "f04a5b419bcbecef8c3f6f89e17f2d832b7d649645a36c0365d5c1ef7b913b1b",
           "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
           "build/history-phase": "c9a0647937075c28f1679e9348c5da8d576ff0014b4a37a6f7c35ffa110c7529",
           "build/history_fault_fixture.so": "b29c8832c837d1311f5c5452c25cf4695efb4a77103837d5215a1f2bb50dbe49",
           "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
-          "build/httpd_bridge_next.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
+          "build/httpd_bridge_next.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
           "build/httpd_tls_cache_fixture.so": "29cc9b185fc500d788939f6a77b1478cb32b97513ca1e17ebcc2449859ed0f74",
           "build/https_trace_fixture.so": "334f974097e5d9032cd27f153fd45c37583189dbd204a364f03f96235138d3c8",
-          "build/installer-boundary-inputs": "9163daee01ad1fc028f719f324c2f3b09414f03a1cbed03c23ca8d5fde017a70",
+          "build/installer-boundary-inputs": "07b43477408f094e25f6c5649275d265b2559965272230cf875b2eb27779e847",
           "build/interrupt-phase.json": "b4f7520fbd17bfa3e3f971e3bc6aae69dc0092382b358d96d503989a759cd333",
           "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
           "build/log-limit-bounds-fixture": "a353d88863f8fb24122c6eb4fc49e6124dfba2d0fd983168cbd122db5a6ccdcb",
@@ -3484,22 +3484,22 @@
           "build/plugin-txn-r5-baseline": "acee866cacece10883d614e2a8a6a783380f98e7e4e1d2e08cdd2d1b2bf909ce",
           "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
           "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
-          "build/real_plugins_setup.sh": "12a6e01d1dcb046ef6ac5934c746e41a51c7c8faf8a48110e15e5f2b8af23432",
+          "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
           "build/relay-idle-fixture": "34cbaa534f6fbb1c1fa2c25bb5146f117477f1471c7adef2093248643022bf8b",
           "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
-          "build/test-fancyss": "22fdb7b8cd980d956781e2eb0056f8fd68e3c3c127bf15946748c5c502580373",
-          "build/test-health": "bba3febef5eb127bfb1c5b4dc8282130903df46d34614d00e4ee20cc7ce60866",
-          "build/test-history": "d98bc9db899ef9ea1ad8283a367c969043d0ff9d417c315d8a249db7482bac54",
-          "build/test-https-stability": "8bc501c32550893c58fc7f6375408f88157c27bed491159550c8dd1f3ed10e55",
-          "build/test-installer-boundaries": "18603dbf0c8b7ba431abdea870b514b31fd5e507eca71c9deb479f7f13ca6888",
-          "build/test-interrupt": "e0dabfb277d3872fdb9821fd29940a888574521ec6de2816c3119aa651189d4f",
-          "build/test-real-plugins": "0ce417b619404993c790d8c2804af6dd44057fe19da2ea9c4ada4b2cdf57c04c",
-          "build/test-resource-bounds": "24b9ef79d27d102ea460ed0eab0e4954cf03151425e6e8a94a06678a86f86ea4",
-          "build/test-soak": "4936e9c85f9deaa5be25077a6d9680007c7bc4aea089e917956fbbdda036f693",
-          "build/test-uu-recovery": "4d3907ed542f2fa309f47a24ca0171e8b48c943cae7a5d815f9700b1c7efdb2e",
+          "build/test-fancyss": "cbd35da285a9f0b0272cbfaf72d109df1e706809ed1e5115f9df49abb354eeaa",
+          "build/test-health": "348add1c715e6fab40f1b48e058584b020ecbaaf9dab361232c856da673d7632",
+          "build/test-history": "14b6b38d29d5d49118a358978a72ff64975efebcb8bd0c3ce59a0d3536332b0f",
+          "build/test-https-stability": "1cf48930ef034d839ec443dc1156a93fc9b9579fda448382b6f6e3f54b9c3248",
+          "build/test-installer-boundaries": "9ed968a581e0e445f98de40841673752b27eeffef6e78e1cc75fc61ae1c8fb84",
+          "build/test-interrupt": "b4add1b538c6f3a0079e3de2004baf1a056d20fcc80750f7e6571c7c3d715678",
+          "build/test-real-plugins": "e056b8be7d23900c56289ca2ef71a7dd05d37aa3efba1d002d71c8155d9fcca7",
+          "build/test-resource-bounds": "11ece2e089ede7b0873db7c3d0ee875a4bf391605d63acb7d92df757d78be7ef",
+          "build/test-soak": "a7031b93b039eae839366b56fb52b312916f3d20905c18b087d14952ac5b0e60",
+          "build/test-uu-recovery": "f4c0fcece68aa17a36431bb5c0094a50ff0ea4ce315bac35308c14b9a8661ba3",
           "build/tools/LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52",
           "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
-          "build/tools/linux-initramfs.gz": "e0c18e382f1c103506de57aab1a172c6063002051b7cbd70a5d6aa25ae1f5ab1",
+          "build/tools/linux-initramfs.gz": "b2cdb4150bd81b7b08edc74a812255e9bc8d8bce6c07d4167c21745599e5baa1",
           "build/txn_fault_fixture.so": "a25e627d8ef3921005e94d765d78287ee379ada053cef7d62fedbf0db18dd7e4",
           "sources/realplugins/aliddns-2.4.tar.gz": "73f5743f02a2b08fe5a9a7858ec96e7adc0290f5cdf84898842bf97ec0a24995",
           "sources/realplugins/aliddns-history.tar.gz": "09da7e6ed0449375e71f805e509572d942f5714bd54fa1d19ba97cbf628e3461",
@@ -3516,7 +3516,7 @@
           "sources/realplugins/pushplus-current-extended.tar.gz": "3000f98a6112c6af49e1be6b6b990fb49d187f04b500a119d5216455829c8e42",
           "sources/realplugins/pushplus-old-extended.tar.gz": "6af79aaa9b10c6ad663865d96ddc69758c6b85bce688c71b342245907d9d2926"
         },
-        "workspace_path": "build/casefs/sealed-private/job-b83c2edc884a847f4bc87ca9/workspace",
+        "workspace_path": "build/casefs/sealed-private/job-807e1701cbef16eec61a2620/workspace",
         "state_disk_attached": false,
         "state_lock_exclusive": false,
         "host_export_readonly": true,
@@ -3532,15 +3532,15 @@
       "result": {
         "concurrent_clients": 4,
         "data_preserved": true,
-        "duration_seconds": 516.604788205,
+        "duration_seconds": 547.767205344,
         "healthy_queries": 243,
         "idle_seconds_per_round": 30,
         "logout_and_relogin_verified": true,
         "rounds": 6,
-        "same_httpd_pid": 970,
+        "same_httpd_pid": 971,
         "samples": [
           {
-            "elapsed_seconds": 0.0058845,
+            "elapsed_seconds": 0.00303775,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -3928,19 +3928,19 @@
             },
             "perfmap": {
               "available": true,
-              "entries": 120249,
-              "entries_in_host_executable_maps": 120249,
-              "file_bytes": 3916315,
-              "host_executable_address_union_bytes": 3658524
+              "entries": 120278,
+              "entries_in_host_executable_maps": 120278,
+              "file_bytes": 3917243,
+              "host_executable_address_union_bytes": 3658392
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15760,
             "smaps_rss_kib": 23076,
             "stage": "initial",
             "status_rss_kib": 23076,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -3955,12 +3955,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -4507,7 +4507,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 20.286024801,
+            "elapsed_seconds": 20.260556051000002,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -4895,19 +4895,19 @@
             },
             "perfmap": {
               "available": true,
-              "entries": 120249,
-              "entries_in_host_executable_maps": 120249,
-              "file_bytes": 3916315,
-              "host_executable_address_union_bytes": 3658524
+              "entries": 120278,
+              "entries_in_host_executable_maps": 120278,
+              "file_bytes": 3917243,
+              "host_executable_address_union_bytes": 3658392
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15760,
             "smaps_rss_kib": 23076,
             "stage": "warmup",
             "status_rss_kib": 23076,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -4922,12 +4922,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -5474,7 +5474,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 72.043401951,
+            "elapsed_seconds": 77.530555662,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -5728,10 +5728,10 @@
               "host r-xp /usr/bin/qemu-arm": 0,
               "host r-xp [vdso]": 0,
               "host rw-p /usr/bin/qemu-arm": 352,
-              "host rw-p [heap]": 60,
+              "host rw-p [heap]": 56,
               "host rw-p [stack]": 20,
               "host rw-p anonymous": 2884,
-              "host rwxp anonymous": 9688
+              "host rwxp anonymous": 9692
             },
             "mapping_groups_rss_kib": {
               "guest ---p /lib/libasuslog.so": 0,
@@ -5855,26 +5855,26 @@
               "host r-xp /usr/bin/qemu-arm": 2816,
               "host r-xp [vdso]": 4,
               "host rw-p /usr/bin/qemu-arm": 352,
-              "host rw-p [heap]": 60,
+              "host rw-p [heap]": 56,
               "host rw-p [stack]": 20,
               "host rw-p anonymous": 2884,
-              "host rwxp anonymous": 9688
+              "host rwxp anonymous": 9692
             },
             "perfmap": {
               "available": true,
-              "entries": 120913,
-              "entries_in_host_executable_maps": 120913,
-              "file_bytes": 3937927,
-              "host_executable_address_union_bytes": 3678184
+              "entries": 120977,
+              "entries_in_host_executable_maps": 120977,
+              "file_bytes": 3939936,
+              "host_executable_address_union_bytes": 3679348
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15824,
             "smaps_rss_kib": 23140,
             "stage": "load1",
             "status_rss_kib": 23140,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -5889,12 +5889,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -6441,7 +6441,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 102.225329715,
+            "elapsed_seconds": 107.707422885,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -6695,10 +6695,10 @@
               "host r-xp /usr/bin/qemu-arm": 0,
               "host r-xp [vdso]": 0,
               "host rw-p /usr/bin/qemu-arm": 352,
-              "host rw-p [heap]": 60,
+              "host rw-p [heap]": 56,
               "host rw-p [stack]": 20,
               "host rw-p anonymous": 2884,
-              "host rwxp anonymous": 9688
+              "host rwxp anonymous": 9692
             },
             "mapping_groups_rss_kib": {
               "guest ---p /lib/libasuslog.so": 0,
@@ -6822,26 +6822,26 @@
               "host r-xp /usr/bin/qemu-arm": 2816,
               "host r-xp [vdso]": 4,
               "host rw-p /usr/bin/qemu-arm": 352,
-              "host rw-p [heap]": 60,
+              "host rw-p [heap]": 56,
               "host rw-p [stack]": 20,
               "host rw-p anonymous": 2884,
-              "host rwxp anonymous": 9688
+              "host rwxp anonymous": 9692
             },
             "perfmap": {
               "available": true,
-              "entries": 120913,
-              "entries_in_host_executable_maps": 120913,
-              "file_bytes": 3937927,
-              "host_executable_address_union_bytes": 3678184
+              "entries": 120977,
+              "entries_in_host_executable_maps": 120977,
+              "file_bytes": 3939936,
+              "host_executable_address_union_bytes": 3679348
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15824,
             "smaps_rss_kib": 23140,
             "stage": "idle1",
             "status_rss_kib": 23140,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -6856,12 +6856,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -7408,7 +7408,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 151.371344781,
+            "elapsed_seconds": 164.515112287,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -7662,10 +7662,10 @@
               "host r-xp /usr/bin/qemu-arm": 0,
               "host r-xp [vdso]": 0,
               "host rw-p /usr/bin/qemu-arm": 352,
-              "host rw-p [heap]": 60,
+              "host rw-p [heap]": 56,
               "host rw-p [stack]": 20,
               "host rw-p anonymous": 2884,
-              "host rwxp anonymous": 9688
+              "host rwxp anonymous": 9692
             },
             "mapping_groups_rss_kib": {
               "guest ---p /lib/libasuslog.so": 0,
@@ -7789,26 +7789,26 @@
               "host r-xp /usr/bin/qemu-arm": 2816,
               "host r-xp [vdso]": 4,
               "host rw-p /usr/bin/qemu-arm": 352,
-              "host rw-p [heap]": 60,
+              "host rw-p [heap]": 56,
               "host rw-p [stack]": 20,
               "host rw-p anonymous": 2884,
-              "host rwxp anonymous": 9688
+              "host rwxp anonymous": 9692
             },
             "perfmap": {
               "available": true,
-              "entries": 120913,
-              "entries_in_host_executable_maps": 120913,
-              "file_bytes": 3937927,
-              "host_executable_address_union_bytes": 3678184
+              "entries": 120977,
+              "entries_in_host_executable_maps": 120977,
+              "file_bytes": 3939936,
+              "host_executable_address_union_bytes": 3679348
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15824,
             "smaps_rss_kib": 23140,
             "stage": "load2",
             "status_rss_kib": 23140,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -7823,12 +7823,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -8375,7 +8375,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 181.548964462,
+            "elapsed_seconds": 194.705899843,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -8629,10 +8629,10 @@
               "host r-xp /usr/bin/qemu-arm": 0,
               "host r-xp [vdso]": 0,
               "host rw-p /usr/bin/qemu-arm": 352,
-              "host rw-p [heap]": 60,
+              "host rw-p [heap]": 56,
               "host rw-p [stack]": 20,
               "host rw-p anonymous": 2884,
-              "host rwxp anonymous": 9688
+              "host rwxp anonymous": 9692
             },
             "mapping_groups_rss_kib": {
               "guest ---p /lib/libasuslog.so": 0,
@@ -8756,26 +8756,26 @@
               "host r-xp /usr/bin/qemu-arm": 2816,
               "host r-xp [vdso]": 4,
               "host rw-p /usr/bin/qemu-arm": 352,
-              "host rw-p [heap]": 60,
+              "host rw-p [heap]": 56,
               "host rw-p [stack]": 20,
               "host rw-p anonymous": 2884,
-              "host rwxp anonymous": 9688
+              "host rwxp anonymous": 9692
             },
             "perfmap": {
               "available": true,
-              "entries": 120913,
-              "entries_in_host_executable_maps": 120913,
-              "file_bytes": 3937927,
-              "host_executable_address_union_bytes": 3678184
+              "entries": 120977,
+              "entries_in_host_executable_maps": 120977,
+              "file_bytes": 3939936,
+              "host_executable_address_union_bytes": 3679348
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15824,
             "smaps_rss_kib": 23140,
             "stage": "idle2",
             "status_rss_kib": 23140,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -8790,12 +8790,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -9342,7 +9342,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 234.44306107,
+            "elapsed_seconds": 251.314317328,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -9730,19 +9730,19 @@
             },
             "perfmap": {
               "available": true,
-              "entries": 121040,
-              "entries_in_host_executable_maps": 121040,
-              "file_bytes": 3942046,
-              "host_executable_address_union_bytes": 3682096
+              "entries": 121073,
+              "entries_in_host_executable_maps": 121073,
+              "file_bytes": 3943024,
+              "host_executable_address_union_bytes": 3681992
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15840,
             "smaps_rss_kib": 23156,
             "stage": "load3",
             "status_rss_kib": 23156,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -9757,12 +9757,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -10309,7 +10309,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 264.604109918,
+            "elapsed_seconds": 281.524043842,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -10697,19 +10697,19 @@
             },
             "perfmap": {
               "available": true,
-              "entries": 121040,
-              "entries_in_host_executable_maps": 121040,
-              "file_bytes": 3942046,
-              "host_executable_address_union_bytes": 3682096
+              "entries": 121073,
+              "entries_in_host_executable_maps": 121073,
+              "file_bytes": 3943024,
+              "host_executable_address_union_bytes": 3681992
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15840,
             "smaps_rss_kib": 23156,
             "stage": "idle3",
             "status_rss_kib": 23156,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -10724,12 +10724,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -11276,7 +11276,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 315.567623192,
+            "elapsed_seconds": 338.370214203,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -11664,19 +11664,19 @@
             },
             "perfmap": {
               "available": true,
-              "entries": 121040,
-              "entries_in_host_executable_maps": 121040,
-              "file_bytes": 3942046,
-              "host_executable_address_union_bytes": 3682096
+              "entries": 121073,
+              "entries_in_host_executable_maps": 121073,
+              "file_bytes": 3943024,
+              "host_executable_address_union_bytes": 3681992
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15840,
             "smaps_rss_kib": 23156,
             "stage": "load4",
             "status_rss_kib": 23156,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -11691,12 +11691,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -12243,7 +12243,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 345.75163979,
+            "elapsed_seconds": 368.568187717,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -12631,19 +12631,19 @@
             },
             "perfmap": {
               "available": true,
-              "entries": 121040,
-              "entries_in_host_executable_maps": 121040,
-              "file_bytes": 3942046,
-              "host_executable_address_union_bytes": 3682096
+              "entries": 121073,
+              "entries_in_host_executable_maps": 121073,
+              "file_bytes": 3943024,
+              "host_executable_address_union_bytes": 3681992
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15840,
             "smaps_rss_kib": 23156,
             "stage": "idle4",
             "status_rss_kib": 23156,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -12658,12 +12658,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -13210,7 +13210,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 397.208214314,
+            "elapsed_seconds": 425.409585869,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -13598,19 +13598,19 @@
             },
             "perfmap": {
               "available": true,
-              "entries": 121198,
-              "entries_in_host_executable_maps": 121198,
-              "file_bytes": 3947192,
-              "host_executable_address_union_bytes": 3687272
+              "entries": 121230,
+              "entries_in_host_executable_maps": 121230,
+              "file_bytes": 3948167,
+              "host_executable_address_union_bytes": 3687296
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15852,
             "smaps_rss_kib": 23168,
             "stage": "load5",
             "status_rss_kib": 23168,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -13625,12 +13625,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -14177,7 +14177,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 427.376103245,
+            "elapsed_seconds": 455.574713717,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -14565,19 +14565,19 @@
             },
             "perfmap": {
               "available": true,
-              "entries": 121198,
-              "entries_in_host_executable_maps": 121198,
-              "file_bytes": 3947192,
-              "host_executable_address_union_bytes": 3687272
+              "entries": 121230,
+              "entries_in_host_executable_maps": 121230,
+              "file_bytes": 3948167,
+              "host_executable_address_union_bytes": 3687296
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15852,
             "smaps_rss_kib": 23168,
             "stage": "idle5",
             "status_rss_kib": 23168,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -14592,12 +14592,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -15144,7 +15144,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 480.280413062,
+            "elapsed_seconds": 512.470562828,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -15532,19 +15532,19 @@
             },
             "perfmap": {
               "available": true,
-              "entries": 121198,
-              "entries_in_host_executable_maps": 121198,
-              "file_bytes": 3947192,
-              "host_executable_address_union_bytes": 3687272
+              "entries": 121230,
+              "entries_in_host_executable_maps": 121230,
+              "file_bytes": 3948167,
+              "host_executable_address_union_bytes": 3687296
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15852,
             "smaps_rss_kib": 23168,
             "stage": "load6",
             "status_rss_kib": 23168,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -15559,12 +15559,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -16111,7 +16111,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 510.494245368,
+            "elapsed_seconds": 542.638220884,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -16499,19 +16499,19 @@
             },
             "perfmap": {
               "available": true,
-              "entries": 121198,
-              "entries_in_host_executable_maps": 121198,
-              "file_bytes": 3947192,
-              "host_executable_address_union_bytes": 3687272
+              "entries": 121230,
+              "entries_in_host_executable_maps": 121230,
+              "file_bytes": 3948167,
+              "host_executable_address_union_bytes": 3687296
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15852,
             "smaps_rss_kib": 23168,
             "stage": "idle6",
             "status_rss_kib": 23168,
             "subject": "original_asus_httpd",
             "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -16526,12 +16526,12 @@
               {
                 "anon_huge_pages_kib": 0,
                 "anonymous_kib": 520,
-                "end_hex": "100186000",
+                "end_hex": "100188000",
                 "private_dirty_kib": 520,
                 "rss_kib": 520,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -17078,7 +17078,7 @@
             "threads": 2
           },
           {
-            "elapsed_seconds": 516.432345663,
+            "elapsed_seconds": 547.608076428,
             "fds": 6,
             "gc_cycles_seen": 0,
             "latest_gc_trace": "",
@@ -17325,7 +17325,7 @@
               "guest rw-p /work/build/httpd_bridge.so": 4,
               "guest rw-p /work/build/https_trace_fixture.so": 4,
               "guest rw-p /work/build/native_hw_fixture.so": 4,
-              "guest rw-p anonymous": 956,
+              "guest rw-p anonymous": 960,
               "host ---p [heap]": 0,
               "host ---p anonymous": 0,
               "host r--p [vvar]": 0,
@@ -17452,7 +17452,7 @@
               "guest rw-p /work/build/httpd_bridge.so": 4,
               "guest rw-p /work/build/https_trace_fixture.so": 4,
               "guest rw-p /work/build/native_hw_fixture.so": 4,
-              "guest rw-p anonymous": 956,
+              "guest rw-p anonymous": 960,
               "host ---p [heap]": 0,
               "host ---p anonymous": 0,
               "host r--p [vvar]": 0,
@@ -17466,19 +17466,19 @@
             },
             "perfmap": {
               "available": true,
-              "entries": 121878,
-              "entries_in_host_executable_maps": 121878,
-              "file_bytes": 3967767,
-              "host_executable_address_union_bytes": 3706760
+              "entries": 121911,
+              "entries_in_host_executable_maps": 121911,
+              "file_bytes": 3968762,
+              "host_executable_address_union_bytes": 3706800
             },
-            "pid": 970,
+            "pid": 971,
             "qemu_host_mapping_rss_kib": 15912,
-            "smaps_rss_kib": 23228,
+            "smaps_rss_kib": 23232,
             "stage": "final",
-            "status_rss_kib": 23228,
+            "status_rss_kib": 23232,
             "subject": "original_asus_httpd",
-            "target_mapping_rss_kib": 7316,
-            "target_virtual_writable_kib": 9908,
+            "target_mapping_rss_kib": 7320,
+            "target_virtual_writable_kib": 9916,
             "target_writable_maps": [
               {
                 "anon_huge_pages_kib": 0,
@@ -17492,13 +17492,13 @@
               },
               {
                 "anon_huge_pages_kib": 0,
-                "anonymous_kib": 520,
-                "end_hex": "100186000",
-                "private_dirty_kib": 520,
-                "rss_kib": 520,
+                "anonymous_kib": 524,
+                "end_hex": "100188000",
+                "private_dirty_kib": 524,
+                "rss_kib": 524,
                 "start_hex": "1000c9000",
                 "swap_kib": 0,
-                "virtual_kib": 756
+                "virtual_kib": 764
               },
               {
                 "anon_huge_pages_kib": 0,
@@ -18048,25 +18048,25 @@
         "slow_disconnects": 6,
         "uu_launches": 1
       },
-      "log_sha256": "af26f6e8fce203ecd35ffe36693d7db1d6ec4f0e659a28be84028ad937b2b460",
+      "log_sha256": "a2e8a7fff9635deb1bb7ab16ba2d7ceeb7bba14541d01dbc45066c4c969b85e0",
       "vm": {
         "schema": 1,
         "phase": "soak-httpd-memory",
-        "sealed_manifest_sha256": "5464dff1673e60bb52fde3c9a886136c1b051a28010a8736f3ab9e779da4410f",
-        "exported_entries": 3691,
+        "sealed_manifest_sha256": "d6a433c437b2aa2f85cbffa2ccee3249f152e6cba499fdff0c112ff830ba5fd8",
+        "exported_entries": 3749,
         "inputs": {
           "build/barrier-bounds-fixture": "4179c66e8ca3764f3eeaea85b3b53a5edc840010400a3ce957169af27e7af1e4",
-          "build/casefs/rootfs": "f2b1d742260fa2b2fa275b96359bbe4b03a670f986e19b5c3474bff59f371fe0",
+          "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
           "build/event-bounds-fixture": "25d82c9528c0114a010838c136ddb1cb0fbd6e7b987b21976d165296cd10108c",
           "build/extended_plugin_inputs.json": "f04a5b419bcbecef8c3f6f89e17f2d832b7d649645a36c0365d5c1ef7b913b1b",
           "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
           "build/history-phase": "c9a0647937075c28f1679e9348c5da8d576ff0014b4a37a6f7c35ffa110c7529",
           "build/history_fault_fixture.so": "b29c8832c837d1311f5c5452c25cf4695efb4a77103837d5215a1f2bb50dbe49",
           "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
-          "build/httpd_bridge_next.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
+          "build/httpd_bridge_next.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
           "build/httpd_tls_cache_fixture.so": "29cc9b185fc500d788939f6a77b1478cb32b97513ca1e17ebcc2449859ed0f74",
           "build/https_trace_fixture.so": "334f974097e5d9032cd27f153fd45c37583189dbd204a364f03f96235138d3c8",
-          "build/installer-boundary-inputs": "9163daee01ad1fc028f719f324c2f3b09414f03a1cbed03c23ca8d5fde017a70",
+          "build/installer-boundary-inputs": "07b43477408f094e25f6c5649275d265b2559965272230cf875b2eb27779e847",
           "build/interrupt-phase.json": "b4f7520fbd17bfa3e3f971e3bc6aae69dc0092382b358d96d503989a759cd333",
           "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
           "build/log-limit-bounds-fixture": "a353d88863f8fb24122c6eb4fc49e6124dfba2d0fd983168cbd122db5a6ccdcb",
@@ -18079,22 +18079,22 @@
           "build/plugin-txn-r5-baseline": "acee866cacece10883d614e2a8a6a783380f98e7e4e1d2e08cdd2d1b2bf909ce",
           "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
           "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
-          "build/real_plugins_setup.sh": "12a6e01d1dcb046ef6ac5934c746e41a51c7c8faf8a48110e15e5f2b8af23432",
+          "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
           "build/relay-idle-fixture": "34cbaa534f6fbb1c1fa2c25bb5146f117477f1471c7adef2093248643022bf8b",
           "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
-          "build/test-fancyss": "22fdb7b8cd980d956781e2eb0056f8fd68e3c3c127bf15946748c5c502580373",
-          "build/test-health": "bba3febef5eb127bfb1c5b4dc8282130903df46d34614d00e4ee20cc7ce60866",
-          "build/test-history": "d98bc9db899ef9ea1ad8283a367c969043d0ff9d417c315d8a249db7482bac54",
-          "build/test-https-stability": "8bc501c32550893c58fc7f6375408f88157c27bed491159550c8dd1f3ed10e55",
-          "build/test-installer-boundaries": "18603dbf0c8b7ba431abdea870b514b31fd5e507eca71c9deb479f7f13ca6888",
-          "build/test-interrupt": "e0dabfb277d3872fdb9821fd29940a888574521ec6de2816c3119aa651189d4f",
-          "build/test-real-plugins": "0ce417b619404993c790d8c2804af6dd44057fe19da2ea9c4ada4b2cdf57c04c",
-          "build/test-resource-bounds": "24b9ef79d27d102ea460ed0eab0e4954cf03151425e6e8a94a06678a86f86ea4",
-          "build/test-soak": "4936e9c85f9deaa5be25077a6d9680007c7bc4aea089e917956fbbdda036f693",
-          "build/test-uu-recovery": "4d3907ed542f2fa309f47a24ca0171e8b48c943cae7a5d815f9700b1c7efdb2e",
+          "build/test-fancyss": "cbd35da285a9f0b0272cbfaf72d109df1e706809ed1e5115f9df49abb354eeaa",
+          "build/test-health": "348add1c715e6fab40f1b48e058584b020ecbaaf9dab361232c856da673d7632",
+          "build/test-history": "14b6b38d29d5d49118a358978a72ff64975efebcb8bd0c3ce59a0d3536332b0f",
+          "build/test-https-stability": "1cf48930ef034d839ec443dc1156a93fc9b9579fda448382b6f6e3f54b9c3248",
+          "build/test-installer-boundaries": "9ed968a581e0e445f98de40841673752b27eeffef6e78e1cc75fc61ae1c8fb84",
+          "build/test-interrupt": "b4add1b538c6f3a0079e3de2004baf1a056d20fcc80750f7e6571c7c3d715678",
+          "build/test-real-plugins": "e056b8be7d23900c56289ca2ef71a7dd05d37aa3efba1d002d71c8155d9fcca7",
+          "build/test-resource-bounds": "11ece2e089ede7b0873db7c3d0ee875a4bf391605d63acb7d92df757d78be7ef",
+          "build/test-soak": "a7031b93b039eae839366b56fb52b312916f3d20905c18b087d14952ac5b0e60",
+          "build/test-uu-recovery": "f4c0fcece68aa17a36431bb5c0094a50ff0ea4ce315bac35308c14b9a8661ba3",
           "build/tools/LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52",
           "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
-          "build/tools/linux-initramfs.gz": "e0c18e382f1c103506de57aab1a172c6063002051b7cbd70a5d6aa25ae1f5ab1",
+          "build/tools/linux-initramfs.gz": "b2cdb4150bd81b7b08edc74a812255e9bc8d8bce6c07d4167c21745599e5baa1",
           "build/txn_fault_fixture.so": "a25e627d8ef3921005e94d765d78287ee379ada053cef7d62fedbf0db18dd7e4",
           "sources/realplugins/aliddns-2.4.tar.gz": "73f5743f02a2b08fe5a9a7858ec96e7adc0290f5cdf84898842bf97ec0a24995",
           "sources/realplugins/aliddns-history.tar.gz": "09da7e6ed0449375e71f805e509572d942f5714bd54fa1d19ba97cbf628e3461",
@@ -18111,7 +18111,7 @@
           "sources/realplugins/pushplus-current-extended.tar.gz": "3000f98a6112c6af49e1be6b6b990fb49d187f04b500a119d5216455829c8e42",
           "sources/realplugins/pushplus-old-extended.tar.gz": "6af79aaa9b10c6ad663865d96ddc69758c6b85bce688c71b342245907d9d2926"
         },
-        "workspace_path": "build/casefs/sealed-private/job-0d0483117270390392b81c9d/workspace",
+        "workspace_path": "build/casefs/sealed-private/job-e83de1efa424f8a9e13c225e/workspace",
         "state_disk_attached": false,
         "state_lock_exclusive": false,
         "host_export_readonly": true,

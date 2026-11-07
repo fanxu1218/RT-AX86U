@@ -13,13 +13,19 @@
     "path": "rom/etc/koolshare/.soft_ver",
     "change": "added",
     "bytes": 7,
-    "sha256": "205363c367514ed6935bdaf0f149c67125c9bbe8422f444939b20dbe6ab2667f"
+    "sha256": "27fe473a191d042af7fdae68bfe4522a17b3e4ff70970796b9dedd1f4ae192ab"
   },
   {
     "path": "rom/etc/koolshare/.soft_ver_old",
     "change": "added",
     "bytes": 7,
     "sha256": "9f23b62ef6a19501231be21b9ce649f671466202ed84b389a99a54847a434ea2"
+  },
+  {
+    "path": "rom/etc/koolshare/.valid",
+    "change": "added",
+    "bytes": 4,
+    "sha256": "85fed671fba452682f323b5b543053d5f9709fd40c489ce8a2e816bcc194e59b"
   },
   {
     "path": "rom/etc/koolshare/bin",
@@ -325,22 +331,34 @@
     "directory": true
   },
   {
-    "path": "rom/etc/koolshare/res/soft-v19/assets/index.3d07b566.js",
+    "path": "rom/etc/koolshare/res/soft-v19/assets/asusgo-qr-BFq-fHxk.jpg",
     "change": "added",
-    "bytes": 79578,
-    "sha256": "bdf39165d282de5a0a8f2df4f31bdf5aca7c7ba648b86881ebc9da76e10f5cc5"
+    "bytes": 39863,
+    "sha256": "39b96154903a87cb0f7be786d20f3271cd6b758479651769a80be3fbadc5282c"
   },
   {
-    "path": "rom/etc/koolshare/res/soft-v19/assets/style.588ef2c4.css",
+    "path": "rom/etc/koolshare/res/soft-v19/assets/domain-D-dMmkhM.png",
     "change": "added",
-    "bytes": 281175,
-    "sha256": "97b370e3b9f470690a163c7adf873818dea4ec13457a21e25f652b1e96459791"
+    "bytes": 169903,
+    "sha256": "dcad3c45f8d82a0af09c1036e92365a7663687979c122fc44f39e93f71c97762"
   },
   {
-    "path": "rom/etc/koolshare/res/soft-v19/assets/vendor.557345b5.js",
+    "path": "rom/etc/koolshare/res/soft-v19/assets/index-DhXhkv_Y.js",
     "change": "added",
-    "bytes": 146930,
-    "sha256": "3ff592b3c076693d352b1b3f8ffc770aebcd0565d33e0f4aa842b43b6bfc8b56"
+    "bytes": 524496,
+    "sha256": "c891016eeb1ba4b50f0efb8c73bf8043b5e37bc4b4758ccb517c78b20d474cda"
+  },
+  {
+    "path": "rom/etc/koolshare/res/soft-v19/assets/style-Df_PiGQU.css",
+    "change": "added",
+    "bytes": 129904,
+    "sha256": "e0e98b5235b03d2fa0a906cb4f68bba3fe610efc6ed09ae473eff2c2ced8921c"
+  },
+  {
+    "path": "rom/etc/koolshare/res/soft-v19/assets/welcome-r-W-gAj-.png",
+    "change": "added",
+    "bytes": 16986,
+    "sha256": "bf0205749e1187e83c17cfd7eeb8db3c56ad520617860b152dbcda79b3e256b7"
   },
   {
     "path": "rom/etc/koolshare/res/softcenter.css",
@@ -392,8 +410,8 @@
   {
     "path": "rom/etc/koolshare/scripts/base.sh",
     "change": "added",
-    "bytes": 586,
-    "sha256": "d29dcb38a94aa51b0df22b0fdd8a6a9e9636777bad3a2ae4431d9af308773726"
+    "bytes": 639,
+    "sha256": "90cd25c56693c9677f8e57ebcaa81f7ae905867734e12454a3cd2d2f42d0301d"
   },
   {
     "path": "rom/etc/koolshare/scripts/center_config.sh",
@@ -410,8 +428,8 @@
   {
     "path": "rom/etc/koolshare/scripts/ks_app_install.sh",
     "change": "added",
-    "bytes": 26267,
-    "sha256": "99c3bea4b9a46c7b86619611335dffd1060a01b7163ab5cdbc1544553707df90"
+    "bytes": 26330,
+    "sha256": "3b9e024bca413b20149dd01b4f1bd29a85e4501df6995acb108571a1877846b5"
   },
   {
     "path": "rom/etc/koolshare/scripts/ks_app_remove.sh",
@@ -438,8 +456,8 @@
   {
     "path": "rom/etc/koolshare/webs/Module_Softcenter.asp",
     "change": "added",
-    "bytes": 3100,
-    "sha256": "2032a2402b3a18b933dc0d0f6c0046646d2e1c7548487ce2e887cc3aec770f12"
+    "bytes": 527602,
+    "sha256": "bdf76a79bd1c3538001a3d12bdb38b78ca38a7df4ffd697c53bb26013470516f"
   },
   {
     "path": "rom/etc/koolshare/webs/Module_Softcenter_old.asp",
@@ -457,13 +475,25 @@
     "path": "rom/etc/localmod-core-id",
     "change": "added",
     "bytes": 65,
-    "sha256": "7ad2eee881244a2ca333f8597b312838790303bc1c535948c05315e5bce72573"
+    "sha256": "5b2bbe8a9bcc3d02ac629f5ff01d0a6bab9e84c73fc48cc1ceabb6bca35a5a10"
+  },
+  {
+    "path": "rom/etc/localmod-merlin-notice.txt",
+    "change": "added",
+    "bytes": 124753,
+    "sha256": "e2c1551452e8f8a5380f3d474049216f5f94656a45a3b432299fdc0e9ab7481c"
+  },
+  {
+    "path": "rom/etc/localmod-merlin.json",
+    "change": "added",
+    "bytes": 4578,
+    "sha256": "bee53c2fae187e2bb9f34cd4681defc8a67b86bc1744272a36d28659103e3b34"
   },
   {
     "path": "rom/etc/localmod-release.json",
     "change": "added",
-    "bytes": 667,
-    "sha256": "97d7abd13d3ab472879a384b6e40b4ae641813341f6422b43931e267e8313f73"
+    "bytes": 706,
+    "sha256": "304c805a3e9b73d8cd817cda5fc8638dfb6f58c9dcaab0357aeabb0708c3bd95"
   },
   {
     "path": "rom/etc/profile",
@@ -488,6 +518,12 @@
     "change": "added",
     "bytes": 502680,
     "sha256": "ddf95fb274a6dee0bdae5d700950f029d1f40e88ce30f74bef1771a5b3850f31"
+  },
+  {
+    "path": "usr/bin/dropbearmulti",
+    "change": "modified",
+    "bytes": 3676,
+    "sha256": "1958f55929fbc91250b28c5336ecb5c70db4f93563e696f91c000c6f7eaa89dd"
   },
   {
     "path": "usr/bin/jffsinit.sh",
@@ -521,6 +557,59 @@
     "change": "added",
     "bytes": 28092,
     "sha256": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8"
+  },
+  {
+    "path": "usr/lib/localmod/merlin",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "usr/lib/localmod/merlin/libcap-ng.so.0",
+    "change": "added",
+    "bytes": 17908,
+    "sha256": "e23f60f6c6f7d52a16aad0fd410bd105b63ed643bd6324596d4a99a5555b7537"
+  },
+  {
+    "path": "usr/lib/localmod/merlin/libcrypto.so.1.1",
+    "change": "added",
+    "bytes": 2262556,
+    "sha256": "67afdf81a6ab889c58c2893198c37b89b70230456370bf675d5d81a41dc5b581"
+  },
+  {
+    "path": "usr/lib/localmod/merlin/libcurl.so.4",
+    "change": "added",
+    "bytes": 559560,
+    "sha256": "0f4271f803edb45a545ec88636114bfdcf80f6affd1a2ec8edac43a250865de5"
+  },
+  {
+    "path": "usr/lib/localmod/merlin/liblz4.so.1",
+    "change": "added",
+    "bytes": 161240,
+    "sha256": "d2e06372b1fa656d8ff5cdb477371853df3e451bf805c8ac34b126c71b582419"
+  },
+  {
+    "path": "usr/lib/localmod/merlin/liblzo2.so.2",
+    "change": "added",
+    "bytes": 161184,
+    "sha256": "b42fd7b0e27b55dbbb49938f557e2bc0a05a07741bd695d486c38f4cdc3ddc59"
+  },
+  {
+    "path": "usr/lib/localmod/merlin/libssl.so.1.1",
+    "change": "added",
+    "bytes": 447384,
+    "sha256": "1afdb48e254574b334a76b960685bdc5e84ba3955c2c875ed44665110d5df850"
+  },
+  {
+    "path": "usr/lib/localmod/merlin/libuuid.so.1",
+    "change": "added",
+    "bytes": 13744,
+    "sha256": "90fd59dda9863dce0dbe13777a4d3bdd83052c7c0e753a30131594ac33c89da1"
+  },
+  {
+    "path": "usr/lib/localmod/merlin/libz.so.1",
+    "change": "added",
+    "bytes": 71228,
+    "sha256": "3da5c75867d154f26563b475dc95e56a183a63d1ad41cee5f2bed19d3c2073ea"
   },
   {
     "path": "usr/lib/localmod/rc_bridge.so",
@@ -599,6 +688,239 @@
     "sha256": "7d41c03ccb6d694bbf1b2fca8e87019a1b1af5fb15b13dae7ec0334d5533e340"
   },
   {
+    "path": "usr/libexec/localmod/merlin",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/curl",
+    "change": "added",
+    "bytes": 149572,
+    "sha256": "e078e3c582d2c7c63d7fb4a49142ed19a4ea5c94be39e7fbc8705e007af44d6b"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/dbclient",
+    "change": "added",
+    "link": "dropbearmulti"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/dnsmasq",
+    "change": "added",
+    "bytes": 538948,
+    "sha256": "4fa18ee6c08942b81bab06833301daebd52228820c0eb087275c3f23ddc94ca6"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/dropbear",
+    "change": "added",
+    "link": "dropbearmulti"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/dropbearkey",
+    "change": "added",
+    "link": "dropbearmulti"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/dropbearmulti",
+    "change": "added",
+    "bytes": 371796,
+    "sha256": "9098e75fc13204fb8d638a83950ab5044006cac55b859bff4bca1eeaa11dd452"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/miniupnpd",
+    "change": "added",
+    "bytes": 150264,
+    "sha256": "07b2c8bddb19c40fa07bf811f2d0862af73641db4f212bbe5653ad5763b5f655"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/openvpn",
+    "change": "added",
+    "bytes": 773244,
+    "sha256": "07e2362d1c3b295cc1f1534d1c5d3be1d136dc598cebd69b4ccc1e52c540fafa"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/ssh",
+    "change": "added",
+    "link": "dropbearmulti"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/vpnclient1",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/vpnclient2",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/vpnclient3",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/vpnclient4",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/vpnclient5",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/vpnserver1",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/vpnserver2",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/vpnserver3",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/vpnserver4",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/vpnserver5",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/bin/wget",
+    "change": "added",
+    "bytes": 333644,
+    "sha256": "447374b3eda5ee4f05a3c200276b36a15c41c272647cd37b8cf493f455770a9a"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor",
+    "change": "added",
+    "directory": true
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/curl",
+    "change": "added",
+    "bytes": 116592,
+    "sha256": "79b37917d01852d7624e36613dde5354a31ffa86b470d506bdc205f920a0d2d9"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/dbclient",
+    "change": "added",
+    "link": "dropbearmulti"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/dnsmasq",
+    "change": "added",
+    "bytes": 530788,
+    "sha256": "eaa815b17148d5b7b5787ba9e0f6fec53009bf2544ee36b5e2a59cdcde80172c"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/dropbear",
+    "change": "added",
+    "link": "dropbearmulti"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/dropbearkey",
+    "change": "added",
+    "link": "dropbearmulti"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/dropbearmulti",
+    "change": "added",
+    "bytes": 220064,
+    "sha256": "ad10b6ea239729b7374bcd2c386c61610371652a85c6b821783dae148c8ac388"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/miniupnpd",
+    "change": "added",
+    "bytes": 129744,
+    "sha256": "82e7f3c5302ca1307a1243660d113be70b18135575143a1ddef5b4d469b5cd33"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/openvpn",
+    "change": "added",
+    "bytes": 498660,
+    "sha256": "3a8d0f379e958464fa2a64551c25c1a7674d00bc9cd681ca50984871590bf022"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/ssh",
+    "change": "added",
+    "link": "dropbearmulti"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/vpnclient1",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/vpnclient2",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/vpnclient3",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/vpnclient4",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/vpnclient5",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/vpnserver1",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/vpnserver2",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/vpnserver3",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/vpnserver4",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/vpnserver5",
+    "change": "added",
+    "link": "openvpn"
+  },
+  {
+    "path": "usr/libexec/localmod/merlin/vendor/wget",
+    "change": "added",
+    "bytes": 294236,
+    "sha256": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749"
+  },
+  {
+    "path": "usr/libexec/localmod/miniupnp-compat",
+    "change": "added",
+    "bytes": 13160,
+    "sha256": "d92462d8206c18f11be485d4420c21474ff163557a91ac9bd1b4bfc554062e79"
+  },
+  {
     "path": "usr/libexec/localmod/plugin-compat.sh",
     "change": "added",
     "bytes": 1616,
@@ -623,6 +945,18 @@
     "sha256": "9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62"
   },
   {
+    "path": "usr/sbin/curl",
+    "change": "modified",
+    "bytes": 3084,
+    "sha256": "59652a0300bcbea73df6e878784140c2a670cebc0ec28975be076636829534fb"
+  },
+  {
+    "path": "usr/sbin/dnsmasq",
+    "change": "modified",
+    "bytes": 3084,
+    "sha256": "64113cb95da0f63559139985ad5e763c81be604b502f36d937ec4dda6dfee984"
+  },
+  {
     "path": "usr/sbin/helper.sh",
     "change": "added",
     "bytes": 287,
@@ -637,20 +971,38 @@
   {
     "path": "usr/sbin/iptables-restore",
     "change": "modified",
-    "bytes": 24880,
-    "sha256": "c53619c800a961abf5d38460d64e0ada4756425fd34f254a0f10d433ce9fcec3"
+    "bytes": 25312,
+    "sha256": "1dccb8eac606409a792a578942983d1a5a8d6e04c7a42e6ccbf702faf372ba83"
+  },
+  {
+    "path": "usr/sbin/miniupnpd",
+    "change": "modified",
+    "bytes": 2660,
+    "sha256": "e687f872913f59865da2f3f5b8686d3b1e2d41d692b6e04c38e898633a8816a5"
+  },
+  {
+    "path": "usr/sbin/openvpn",
+    "change": "modified",
+    "bytes": 6740,
+    "sha256": "9669539368c64ce3479a5f427ac01856314693aaa6399238e4579a826a7eef4b"
+  },
+  {
+    "path": "usr/sbin/wget",
+    "change": "modified",
+    "bytes": 3084,
+    "sha256": "5db2633edad452cb37a88cb72288a2dbd8c60b40081f7bd5a609dae9e37d9cce"
   },
   {
     "path": "www/Module_FancyssLocalmod.asp",
     "change": "added",
-    "bytes": 4181,
-    "sha256": "336e60c23cbfab90663c5aee5a78fb182c775f130f6d73685488c77c39636b0d"
+    "bytes": 4184,
+    "sha256": "da48632402ea0a41857bed06372f087f6591cdb6bde9799649779e53dd77f52d"
   },
   {
     "path": "www/Module_Localmod.asp",
     "change": "added",
-    "bytes": 6767,
-    "sha256": "fff435b61e083230e33371644bef7e84df35ff3c43059492a6d8b515097fe856"
+    "bytes": 6770,
+    "sha256": "a15ce168211e13fbef88f5f551c879bd4df73e6ad7a19d5a7b768f7ecc753613"
   },
   {
     "path": "www/state.js",

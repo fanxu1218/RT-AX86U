@@ -72,7 +72,7 @@ report = {
         'Test results returned through bounded serial output; guest has no host-writable results directory',
     ],
     'environment': [
-        'Original ASUS ARM32 HTTPd/login/TLS, rc NTP/UU, curl, wget, BusyBox and native libraries',
+        'Original ASUS ARM32 HTTPd/login/TLS, rc NTP/UU, BusyBox and global native libraries; selected Merlin curl/wget plus retained factory curl control',
         'Actual core httpdb/perp/skipd/dbus/versioncmp/start-stop-daemon, production bootstrap/installer/callback',
         'Six pinned real package versions, unmodified installers/config scripts/uninstallers/binaries',
         'DDNS-Go 1.28.0 packaged from unchanged pinned upstream git files; other five archives used byte-for-byte',

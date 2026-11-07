@@ -72,11 +72,14 @@ checks={
  'vendor_uu_page_identical':(target/'www/UUAccelerator.asp').read_bytes()==(root/'build/casefs/official_rootfs/www/UUAccelerator.asp').read_bytes(),
  'vendor_httpd_retained':(target/'usr/libexec/localmod/httpd').read_bytes()==(root/'build/casefs/official_rootfs/usr/sbin/httpd').read_bytes(),
  'vendor_busybox_retained':(target/'bin/busybox').read_bytes()==(root/'build/casefs/official_rootfs/bin/busybox').read_bytes(),
- 'vendor_curl_retained':(target/'usr/sbin/curl').read_bytes()==(root/'build/casefs/official_rootfs/usr/sbin/curl').read_bytes(),
+ 'vendor_curl_retained_for_fallback':(target/'usr/libexec/localmod/merlin/vendor/curl').read_bytes()==(root/'build/casefs/official_rootfs/usr/sbin/curl').read_bytes(),
  'vendor_kernel_modules_identical':all(p.read_bytes()==(target/p.relative_to(root/'build/casefs/official_rootfs')).read_bytes() for p in (root/'build/casefs/official_rootfs/lib/modules').rglob('*') if p.is_file() and not p.is_symlink()),
  'ubifs_format_4':struct.unpack_from('<I',volume_data,80)[0]==4,
  'no_host_extended_attributes':all(x['xattr_cnt']==0 for x in meta.values()),
 }
+from prepare_merlin import verify as verify_merlin
+verify_merlin(target)
+checks['six_merlin_components_and_factory_fallbacks_match_pinned_stage']=True
 report={'image':str(a.image),'sha256':hashlib.sha256(raw).hexdigest(),'bytes':len(raw),'status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
         'path_count':len(actual),'valid_ubifs_nodes':valid_nodes,'valid_volume_table_rows':valid_table,
         'checks':checks,'errors':errors,'bad_ubifs_nodes':bad_nodes,

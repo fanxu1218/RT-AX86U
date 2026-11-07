@@ -100,11 +100,15 @@ class SealedWorkspace:
         (self.job / 'owner.json').write_bytes(encoded(dict(schema=1, phase=phase, job=self.job.name)))
         try:
             paths = ['build/casefs/rootfs'] + ['build/' + p for p in COMMON]
-            paths += ['build/' + p for p in OPTIONAL if (ROOT / 'build' / p).is_file()]
+            component_phase=phase in {'candidate-merlin-components','candidate-merlin-system'}
+            selected=['test-merlin','merlin-vpn-config-fixture.so','merlin-vpn-config-probe'] if component_phase else OPTIONAL
+            paths += ['build/' + p for p in selected if (ROOT / 'build' / p).is_file()]
             paths += ['build/tools/' + p for p in ['LinuxBuilder', 'linux-Image', 'linux-initramfs.gz']]
             if phase.startswith('hardening-'):
                 paths.append('build/hardening-overlay')
             for name in ['real_plugin_inputs.json', 'fancyss_inputs.json', 'extended_plugin_inputs.json']:
+                if component_phase:
+                    continue
                 path = ROOT / 'build' / name
                 if not path.is_file():
                     continue
@@ -115,10 +119,16 @@ class SealedWorkspace:
                             relative = Path(package[key])
                             assert relative.parts[:2] == ('sources', 'realplugins') and '..' not in relative.parts
                             paths.append(relative.as_posix())
-            if (ROOT / 'build/installer-boundary-inputs').is_dir():
+            if not component_phase and (ROOT / 'build/installer-boundary-inputs').is_dir():
                 paths.append('build/installer-boundary-inputs')
             if phase.endswith('fancyss') or 'fancyss-components' in phase:
                 paths.append('sources/extended-plugin-tree')
+            if phase == 'candidate-fancyss':
+                paths += ['build/softcenter-old-core','build/softcenter-old-inputs.json','build/softcenter_frontend_payloads.json']
+            if phase == 'candidate-merlin-probe':
+                paths.append('build/casefs/merlin38812_rootfs')
+            if phase == 'candidate-merlin-system':
+                paths += ['build/merlin-system','build/merlin_nested_initramfs.gz','build/merlin_nested_job.sh']
             for name in sorted(set(paths)):
                 source, target = ROOT / name, self.workspace / name
                 assert source.exists() and not source.is_symlink(), name

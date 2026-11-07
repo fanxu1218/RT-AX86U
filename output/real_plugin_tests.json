@@ -1,10 +1,10 @@
 {
   "status": "LOCAL_ISOLATION_PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w",
-  "candidate_sha256": "02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
+  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
   "checks": {
     "upgrade_native_shell_resolution_center_start_original_process_helper_private_api_and_uu": true,
-    "upgrade_native_curl_numeric_url_guard_retained_hostname_callback_pinned_to_loopback": true,
+    "upgrade_selected_curl_and_factory_numeric_url_contracts_and_hostname_callback_pinned_to_loopback": true,
     "upgrade_required_tee_xargs_added_without_replacing_official_busybox": true,
     "upgrade_aliddns_fresh_old_original_scripts_files_and_authenticated_page": true,
     "upgrade_ddnsto_fresh_old_original_scripts_files_and_authenticated_page": true,
@@ -26,7 +26,7 @@
     "upgrade_ddnsto_updated_custom_uninstall_preserves_peers_and_uu": true,
     "upgrade_ddnsgo_updated_custom_uninstall_preserves_peers_and_uu": true,
     "fresh_native_shell_resolution_center_start_original_process_helper_private_api_and_uu": true,
-    "fresh_native_curl_numeric_url_guard_retained_hostname_callback_pinned_to_loopback": true,
+    "fresh_selected_curl_and_factory_numeric_url_contracts_and_hostname_callback_pinned_to_loopback": true,
     "fresh_required_tee_xargs_added_without_replacing_official_busybox": true,
     "fresh_aliddns_fresh_current_original_scripts_files_and_authenticated_page": true,
     "fresh_ddnsto_fresh_current_original_scripts_files_and_authenticated_page": true,
@@ -42,7 +42,7 @@
       "ddnsgo_binary_version": "v6.17.7",
       "ddnsto_binary_version": "4.2.2",
       "guest_architecture": "armv7l",
-      "native_wget_sha256": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749",
+      "native_wget_sha256": "5db2633edad452cb37a88cb72288a2dbd8c60b40081f7bd5a609dae9e37d9cce",
       "plugin_binaries_replaced_by_fixtures": false,
       "real_third_party_packages_executed": true,
       "real_uu_monitor_executed": false,
@@ -55,7 +55,7 @@
       "ddnsgo_binary_version": "v6.17.7",
       "ddnsto_binary_version": "4.2.2",
       "guest_architecture": "armv7l",
-      "native_wget_sha256": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749",
+      "native_wget_sha256": "5db2633edad452cb37a88cb72288a2dbd8c60b40081f7bd5a609dae9e37d9cce",
       "plugin_binaries_replaced_by_fixtures": false,
       "real_third_party_packages_executed": true,
       "real_uu_monitor_executed": false,
@@ -293,10 +293,10 @@
   "production_files": {
     "usr/libexec/localmod/bootstrap.sh": "43298e06092803e25a7128ba757e4b02587a868819f58b7a2d95a1f494bb9826",
     "usr/libexec/localmod/dispatch.sh": "96fee2f2f2507dcc3371f0ccc95ecbec61699c772a23078b811ae9220a467e4e",
-    "rom/etc/koolshare/scripts/base.sh": "d29dcb38a94aa51b0df22b0fdd8a6a9e9636777bad3a2ae4431d9af308773726",
+    "rom/etc/koolshare/scripts/base.sh": "90cd25c56693c9677f8e57ebcaa81f7ae905867734e12454a3cd2d2f42d0301d",
     "usr/libexec/localmod/busybox": "c5541fb5b5eff61565aa416779fcdf66b3c762ba8ef3ef5f52f08df964ffe7e2",
     "bin/busybox": "e0cf740ee6906a4cdd7cfdb8c259cb7d347d16d4b58fdf5a589c1602f74ca409",
-    "usr/sbin/curl": "79b37917d01852d7624e36613dde5354a31ffa86b470d506bdc205f920a0d2d9"
+    "usr/sbin/curl": "59652a0300bcbea73df6e878784140c2a670cebc0ec28975be076636829534fb"
   },
   "isolation": [
     "Apple Virtualization ARM64 guest: no network devices, no physical disk/device passthrough",
@@ -306,7 +306,7 @@
     "Test results returned through bounded serial output; guest has no host-writable results directory"
   ],
   "environment": [
-    "Original ASUS ARM32 HTTPd/login/TLS, rc NTP/UU, curl, wget, BusyBox and native libraries",
+    "Original ASUS ARM32 HTTPd/login/TLS, rc NTP/UU, BusyBox and global native libraries; selected Merlin curl/wget plus retained factory curl control",
     "Actual core httpdb/perp/skipd/dbus/versioncmp/start-stop-daemon, production bootstrap/installer/callback",
     "Six pinned real package versions, unmodified installers/config scripts/uninstallers/binaries",
     "DDNS-Go 1.28.0 packaged from unchanged pinned upstream git files; other five archives used byte-for-byte",

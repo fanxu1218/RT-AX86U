@@ -1,0 +1,22 @@
+{
+  "status": "LOCAL_DISTRIBUTED_FRONTEND_CONTRACT_PASS",
+  "checks": {
+    "actual_release_functions_generate_install_update_uninstall_and_offline_payloads": true,
+    "update_uses_same_origin_original_https_json_rpc_without_requiring_redundant_source_field": true,
+    "authentication_and_operation_lock_errors_surface_without_replaying_write": true,
+    "backend_error_is_not_reported_as_success": true,
+    "actual_offline_upload_uses_filename_field_and_same_origin": true,
+    "log_dialog_requires_backend_completion_marker": true,
+    "ordinary_relative_package_updates_are_allowed_missing_metadata_or_unsafe_urls_are_rejected": true
+  },
+  "node_version": "v24.14.1",
+  "frontend_sha256": "c891016eeb1ba4b50f0efb8c73bf8043b5e37bc4b4758ccb517c78b20d474cda",
+  "payloads_sha256": "c9a2d847c1c2731c9f4d1e17765508dfa7e93faa4eca1750d3134b6f7d22764e",
+  "source_sha256": "aab9178890ef765b91640efdf620cad528d483e9f5bb139c0543e78c19b6b9e8",
+  "limits": [
+    "Actual functions extracted from pinned distributed JS and verified against inline ASP; fetch and DOM are not a live browser/router",
+    "No WAN requests, real accounts or physical router; separate native VM checks exercise these payloads through retained authentication/backend"
+  ],
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
+  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2"
+}

@@ -244,7 +244,17 @@ func onlineUUStart(ctx context.Context) *onlineUU {
 	u.cmd.Stderr = u.log
 	nrMust(u.cmd.Start())
 	ready := false
-	for i := 0; i < 180; i++ {
+	startTimeout := 5400 * time.Millisecond
+	if raw := os.Getenv("LOCALMOD_NTP_START_TIMEOUT"); raw != "" {
+		startTimeout, e = time.ParseDuration(raw)
+		nrMust(e)
+		if startTimeout <= 0 || startTimeout > time.Minute {
+			panic("invalid native NTP start timeout")
+		}
+	}
+	started := time.Now()
+	deadline := started.Add(startTimeout)
+	for time.Now().Before(deadline) && ctx.Err() == nil {
 		if _, e := os.Stat("/tmp/native-ntp-idle"); e == nil {
 			ready = true
 			break
@@ -252,7 +262,10 @@ func onlineUUStart(ctx context.Context) *onlineUU {
 		time.Sleep(30 * time.Millisecond)
 	}
 	if !ready {
-		panic("native NTP not ready")
+		panic("native NTP not ready: " + string(nrRead(u.log.Name())))
+	}
+	if elapsed := time.Since(started); elapsed > 5400*time.Millisecond {
+		fmt.Printf("NTP_START_READY elapsed=%s start_attempts=1\n", elapsed)
 	}
 	nrMust(os.WriteFile("/tmp/native-ntp-synced", []byte("1"), 0600))
 	coSync(u.cmd)

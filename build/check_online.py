@@ -43,8 +43,10 @@ for phase, expected in [('success', 7), ('errors', 13), ('concurrent', 8)]:
     details[phase] = data['details']
     shutil.copyfile(destination, root / f'output/online_{phase}_tests_run.log')
 official = root / 'build/casefs/official_rootfs'
-wget = stage / 'usr/sbin/wget'
-assert wget.read_bytes() == (official / 'usr/sbin/wget').read_bytes()
+from prepare_merlin import verify as verify_merlin
+verify_merlin(stage)
+wget = stage / 'usr/libexec/localmod/merlin/bin/wget'
+assert (stage/'usr/libexec/localmod/merlin/vendor/wget').read_bytes() == (official/'usr/sbin/wget').read_bytes()
 assert all(d['native_wget_sha256'] == hashlib.sha256(wget.read_bytes()).hexdigest() for d in details.values())
 assert hashlib.sha256((root / verification['image']).read_bytes()).hexdigest() == verification['sha256']
 fixture_names = {'test-online', 'onlineprobe.sh', 'onlineprobe_worker.sh',
@@ -56,13 +58,14 @@ report = {
     'private_model_job_receipts': job_receipts,
     'online_installer_sha256': hashlib.sha256((stage / 'rom/etc/koolshare/scripts/ks_app_install.sh').read_bytes()).hexdigest(),
     'guard_sha256': hashlib.sha256((stage / 'usr/libexec/localmod/installer-guard.sh').read_bytes()).hexdigest(),
-    'retained_native_wget_sha256': hashlib.sha256(wget.read_bytes()).hexdigest(),
+    'executed_merlin_wget_sha256': hashlib.sha256(wget.read_bytes()).hexdigest(),
+    'default_wget_launcher_sha256': hashlib.sha256((stage/'usr/sbin/wget').read_bytes()).hexdigest(),
     'real_uu_monitor_or_third_party_plugin_executed': False,
     'plugin_download_tls_verification_disabled': False,
     'environment': [
         'Networkless ARM64 Linux VM, original ARM32 HTTPd/login/TLS and rc NTP/UU control flow',
         'Actual packaged perpboot/perpd/httpdb/skipd/dbus/versioncmp and production online installer',
-        'Retained ASUS wget 1.20.1 with owned repository CA; hostname and untrusted CA rejection exercised',
+        'Merlin wget 1.25.0 and private libraries with owned repository CA; hostname and untrusted CA rejection exercised',
         'Owned catalog follows pinned frontend RPC fields; owned plugin installs, updates and runs callbacks/worker',
         'UU API/monitor mapped to guest loopback hostnames and an owned worker; no real UU component/account',
         'Alpine start-stop-daemon/curl/legacy xtables and QEMU CPU/proc wrappers',

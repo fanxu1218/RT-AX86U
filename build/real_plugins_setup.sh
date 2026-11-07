@@ -57,6 +57,7 @@ cat /tmp/.localmod/bootstrap.log
 echo REAL_PLUGIN_SETUP_READY
 
 phase=$(cat /work/build/real-plugin-phase)
+case "$phase" in candidate-merlin-components|candidate-merlin-system) exec /work/build/test-merlin "$phase";; esac
 case "$phase" in hardening-history*|candidate-history*) exec /work/build/test-history "$phase";; esac
 case "$phase" in hardening-fancyss*|candidate-fancyss*) exec /work/build/test-fancyss "$phase";; esac
 case "$phase" in hardening-installer|candidate-installer) exec /work/build/test-installer-boundaries "$phase";; esac
