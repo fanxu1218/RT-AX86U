@@ -1,0 +1,18 @@
+name: Source boundary checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  quick:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Check source and archive/timeout boundaries
+        run: python3 build/check.py quick
+# Full firmware gates require pinned vendor inputs, macOS Virtualization.framework,
+# a case-sensitive mounted volume and isolated VMs. CI does not claim device QA.

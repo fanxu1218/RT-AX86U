@@ -1,5 +1,6 @@
 #!/bin/sh
 set -eu
+. /work/build/model_helpers_setup.sh
 mkdir -p /run /jffs/scripts /tmp/.localmod /usr/libexec/localmod /koolshare/bin /koolshare/init.d /koolshare/scripts /usr/sbin
 chmod 700 /tmp/.localmod
 modprobe iptable_filter

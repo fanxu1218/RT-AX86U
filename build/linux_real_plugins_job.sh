@@ -13,6 +13,9 @@ printf '%s\n' ':arm:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x
 grep -qx 'flags: F' /proc/sys/fs/binfmt_misc/arm
 mkdir /router
 cp -a /work/build/casefs/rootfs/. /router/
+if grep -q '^hardening-' /work/build/real-plugin-phase; then
+ cp -a /work/build/hardening-overlay/. /router/
+fi
 chown -Rh 0:0 /router
 mkdir -p /router/work /router/tmp/var/run /router/tmp/var/lock /router/tmp/var/spool/cron/crontabs
 mount --bind /work /router/work
@@ -54,6 +57,10 @@ export LOCALMOD_TLS_START_TIMEOUT=60s
 export LOCALMOD_HTTP_REQUEST_TIMEOUT=10s
 export LOCALMOD_NTP_WAIT_TIMEOUT=45s
 export LOCALMOD_PLUGIN_OPERATION_TIMEOUT=45s
+if grep -qx 'hardening-health' /work/build/real-plugin-phase; then export LOCALMOD_HTTPD_BRIDGE_OVERLAY=1;fi
+if grep -qx 'soak-httpd-memory' /work/build/real-plugin-phase; then export LOCALMOD_HTTPD_MEMORY_DIAGNOSTIC=1;fi
+if grep -qx 'soak-httpd-cache' /work/build/real-plugin-phase; then export LOCALMOD_HTTPD_MEMORY_DIAGNOSTIC=1 LOCALMOD_HTTPD_TLS_CACHE_TRACE=1;fi
+if grep -qx 'soak-httpd-cache-overlay' /work/build/real-plugin-phase; then export LOCALMOD_HTTPD_MEMORY_DIAGNOSTIC=1 LOCALMOD_HTTPD_TLS_CACHE_TRACE=1 LOCALMOD_HTTPD_BRIDGE_OVERLAY=1;fi
 mkdir -p /router/tmp/native-nvram /router/tmp/real-plugin-results
 if grep -qw localmod_state_disk=1 /proc/cmdline; then
  export LOCALMOD_PLUGIN_OPERATION_TIMEOUT=90s
@@ -66,7 +73,7 @@ SCRIPT
  chmod 755 /router/usr/libexec/localmod/plugin-txn
  /work/build/test-interrupt controller
 else
- if grep -q '^soak-' /work/build/real-plugin-phase; then
+ if grep -Eq '^(soak-|hardening-|candidate-)' /work/build/real-plugin-phase; then
   /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
  else
   chroot /router /bin/sh /work/build/real_plugins_setup.sh

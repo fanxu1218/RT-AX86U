@@ -1,5 +1,6 @@
 #!/bin/sh
 set -eu
+. /work/build/model_helpers_setup.sh
 trap 'cp /tmp/upload/soft_log.txt /work/build/center_install_trace.log 2>/dev/null || true; cp /tmp/.localmod/bootstrap.log /work/build/center_bootstrap_trace.log 2>/dev/null || true' EXIT
 mkdir -p /jffs /rom/etc /usr/bin /usr/sbin /usr/libexec/localmod /tmp/upload /www/css
 mount -t tmpfs -o size=64m tmpfs /jffs

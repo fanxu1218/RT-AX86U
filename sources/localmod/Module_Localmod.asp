@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RT-AX86U 官改试验版说明</title>
-<style>body{font:16px/1.8 system-ui,sans-serif;background:#202b33;color:#eee;margin:3em auto;padding:0 1.5em;max-width:760px}a{color:#9fd4ff}li{margin:.7em 0}</style>
+<title>官改状态与恢复</title>
+<style>body{font:16px/1.7 system-ui,sans-serif;background:#202b33;color:#eee;margin:2em auto;padding:0 1.3em;max-width:850px}a{color:#a9dcff}button{font:inherit;padding:.5em 1em;background:#466778;color:white;border:1px solid #93b2c1;border-radius:5px;cursor:pointer}button:disabled{opacity:.6}section{background:#2c3b46;border:1px solid #49606e;border-radius:8px;padding:1em 1.3em;margin:1em 0}h1{font-size:1.65em}h2{font-size:1.15em}dl{display:grid;grid-template-columns:8em 1fr;gap:.5em}dd{margin:0;overflow-wrap:anywhere}.note{color:#c5d3db}.error{color:#ffd6ad}li{margin:.5em 0}@media(max-width:500px){dl{grid-template-columns:1fr;gap:.2em}dd{margin-bottom:.6em}}</style>
 </head><body>
-<h1>RT-AX86U 官改试验版 localmod2-r7</h1>
-<p>基于华硕 3.0.0.4.388_24437，集成软件中心 1.9.50，并保留官方网易 UU。</p>
-<p><strong>本版本尚未完成路由器实机验收。看到此页面不代表联网、插件或加速功能已经通过测试。</strong></p>
-<ul>
-<li>软件中心沿用路由器的登录入口。此版本没有独立的 3032 调试网页。</li>
-<li>已适配 WAN、服务、NAT/防火墙及挂载事件，并提供 DNS 配置扩展；实际插件和硬件行为仍需实机验证。</li>
-<li>软件中心核心随固件更新，禁止在线或离线覆盖核心。普通插件可单独安装。</li>
-<li>插件安装、更新中断后请重启检查。检查点损坏或空间不足时保留副本并停止软件中心；请保留记录，修复后再验收配置及 UU。</li>
-<li>旧版插件文件保留在 JFFS 备份目录中，不会自动迁入新软件中心。</li>
-<li>UU 账户登录、区域资格、订阅及实际加速效果以官方服务和实机结果为准。</li>
-</ul>
-<p><a href="/Module_Softcenter.asp">进入软件中心</a> · <a href="/UUAccelerator.asp">进入网易 UU</a> · <a href="/index.asp">返回管理首页</a></p>
-</body></html>
+<h1>官改状态与恢复 · @REVISION@</h1>
+<p>华硕 RT-AX86U · 官方 3.0.0.4.388_24437 · 软件中心 1.9.50 · 官方网易 UU</p>
+<p class="note">试验版，尚未完成实机验收。此页只读取状态，不会修改配置或删除恢复副本。</p>
+<p><a href="/Module_Softcenter.asp">软件中心</a> · <a href="/UUAccelerator.asp">网易 UU</a> · <a href="/index.asp">管理首页</a></p>
+<section aria-labelledby="health-title"><h2 id="health-title">当前状态</h2>
+<p id="message" role="status">正在读取…</p>
+<dl><dt>软件中心进程</dt><dd id="center">等待查询</dd><dt>事件进程</dt><dd id="events">等待查询</dd><dt>UU 进程</dt><dd id="uu">等待查询</dd><dt>JFFS 可用空间</dt><dd id="space">等待查询</dd><dt>恢复检查点</dt><dd id="checkpoint">等待查询</dd><dt>最近插件操作</dt><dd id="operation">等待查询</dd></dl>
+<p><button id="refresh" type="button">刷新状态</button> · <a href="/_localmod/diagnostics" download="localmod-diagnostics.json">导出脱敏诊断</a></p>
+<p class="note">进程数量不能证明插件或 UU 加速正常。UU 状态请进入官方页面确认。诊断仅含本页摘要，不导出日志、配置、密码、证书或账号。最近操作记录在重启后清空，时间以路由器时钟为准。</p></section>
+<section><h2>异常时怎么处理</h2><ol>
+<li>先保存脱敏诊断，并备份配置、JFFS 和插件数据。存在检查点时，暂停新的插件写入。</li>
+<li>安装中断后可重启一次，随后检查插件配置、软件中心和 UU。检查点的存在仅表示有待处理记录，页面不会验证副本是否完整。</li>
+<li>若提示副本损坏、空间不足或重启后仍不能恢复，保留副本并停止操作。请按验收文档检查空间和备份，勿手工删除检查点或反复安装。</li>
+<li>需要回退时，使用已核验的原 Alpha 3 固件及对应备份；跨版本请按文档恢复，勿把新版 NVRAM 配置直接导入旧版。</li></ol></section>
+<script>
+(function(){
+ 'use strict';
+ var busy=false,button=document.getElementById('refresh');
+ function text(id,value){document.getElementById(id).textContent=value;}
+ function size(n){return (n/1048576).toFixed(1)+' MiB';}
+ async function refresh(){
+  if(busy)return;busy=true;button.disabled=true;
+  var controller=new AbortController(),timer=setTimeout(function(){controller.abort();},8000);
+  try{
+   var r=await fetch('/_localmod/status',{credentials:'same-origin',cache:'no-store',signal:controller.signal});
+   if(r.status===401||r.status===403)throw new Error('登录已失效，请返回管理首页重新登录。');
+   if(!r.ok)throw new Error('状态读取失败，请保留现有数据并稍后重试。');
+   var s=await r.json();if(s.schema!==1)throw new Error('状态格式不兼容。');
+   text('center','Web 服务 '+s.services.httpdb+' / 数据服务 '+s.services.skipd+' 个进程');
+   text('events',s.services.events+' 个可识别进程');
+   text('uu',s.services.uuplugin>0?s.services.uuplugin+' 个可识别进程（请进入 UU 确认）':'未检测到可识别进程，请进入 UU 页面确认');
+   text('space',s.jffs.available?size(s.jffs.free_bytes)+' / '+size(s.jffs.total_bytes):'暂时无法读取');
+   text('checkpoint',({'none':'未发现活动检查点','pending':'存在检查点：暂停插件写入并检查恢复记录','store-invalid':'恢复存储异常：保留副本并停止插件操作','unavailable':'暂时无法读取：保留副本并停止插件操作'})[s.checkpoint]||'状态未知');
+   var o=s.last_operation;
+   text('operation',o?o.module+' · '+({'running':'执行中','finished':'已结束，返回码 '+o.code,'interrupted':'异常中断'})[o.state]+' · '+new Date(o.epoch*1000).toLocaleString():'本次开机暂无记录');
+   text('message','已刷新 · '+new Date().toLocaleTimeString());document.getElementById('message').className='note';
+  }catch(e){text('message',e.name==='AbortError'?'读取超时，请稍后刷新。':e.message);document.getElementById('message').className='error';}
+  finally{clearTimeout(timer);busy=false;button.disabled=false;}
+ }
+ button.addEventListener('click',refresh);refresh();
+})();
+</script></body></html>

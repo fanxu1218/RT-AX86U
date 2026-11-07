@@ -1,5 +1,6 @@
 #!/bin/sh
 set -eux
+. /work/build/model_helpers_setup.sh
 trap 'cp /tmp/hook_trace /work/build/hooks_trace.log 2>/dev/null || true; cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf 2>/dev/null || true' EXIT
 mkdir -p /usr/libexec/localmod /usr/sbin /jffs/scripts /jffs/configs/dnsmasq.d /koolshare/bin /koolshare/scripts /koolshare/init.d /tmp/.localmod /etc /www/css
 chmod 700 /tmp/.localmod
@@ -17,7 +18,7 @@ EOF
 chmod 755 /usr/libexec/localmod/localmod-event
 cat > /bin/nvram <<'EOF'
 #!/bin/sh
-case "$1:$2" in get:jffs2_scripts) cat /tmp/hook_script_flag;; get:sc_skin) echo ASUSWRT;; esac
+case "$1:$2" in get:jffs2_scripts) cat /tmp/hook_script_flag; sleep 0.02; printf '\n';; get:sc_skin) echo ASUSWRT;; esac
 EOF
 chmod 755 /bin/nvram
 printf 'base-line\n' > /etc/dnsmasq.conf

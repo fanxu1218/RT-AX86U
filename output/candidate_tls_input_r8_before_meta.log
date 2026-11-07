@@ -1,0 +1,112 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107081457, 2026/11/7 ~ 2046/11/8
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+TLS_INPUT_CASE map[code:200 error:<nil> signal:false valid:true]
+TLS_INPUT_CASE map[code:200 error:<nil> signal:false valid:true]
+TLS_INPUT_CASE map[code:200 error:<nil> signal:false valid:true]
+TLS_INPUT_CASE map[code:200 error:<nil> signal:false valid:true]
+TLS_INPUT_CASE map[code:400 error:<nil> signal:true valid:false]
+TLS_INPUT_CASE map[code:400 error:<nil> signal:true valid:false]
+TLS_INPUT_CASE map[code:400 error:<nil> signal:true valid:false]
+TLS_INPUT_CASE map[code:400 error:<nil> signal:true valid:false]
+TLS_INPUT_RESULT [{"code":200,"error":"\u003cnil\u003e","signal":false,"valid":true},{"code":200,"error":"\u003cnil\u003e","signal":false,"valid":true},{"code":200,"error":"\u003cnil\u003e","signal":false,"valid":true},{"code":200,"error":"\u003cnil\u003e","signal":false,"valid":true},{"code":400,"error":"\u003cnil\u003e","signal":true,"valid":false},{"code":400,"error":"\u003cnil\u003e","signal":true,"valid":false},{"code":400,"error":"\u003cnil\u003e","signal":true,"valid":false},{"code":400,"error":"\u003cnil\u003e","signal":true,"valid":false}]
+TLS_INPUT_TRACE
+TLS_PROBE t=6.709 fgets fd=5 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=6.746 fgets fd=6 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=6.942 SSL_accept returned=1 errno=0
+TLS_PROBE t=6.943 SSL_read size=8192 returned=132 errno=0
+TLS_PROBE t=6.949 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=6.952 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=6.967 SSL_write size=7740 returned=7740 errno=0
+TLS_PROBE t=6.969 SSL_write size=360 returned=360 errno=0
+TLS_PROBE t=6.971 SSL_write size=143 returned=143 errno=0
+TLS_PROBE t=6.989 SSL_write size=2295 returned=2295 errno=0
+TLS_PROBE t=6.991 SSL_write size=168 returned=168 errno=0
+TLS_PROBE t=6.991 SSL_write size=8192 returned=8192 errno=0
+TLS_PROBE t=6.992 SSL_write size=1942 returned=1942 errno=0
+TLS_PROBE t=7.020 SSL_accept returned=1 errno=0
+TLS_PROBE t=7.020 SSL_read size=8192 returned=383 errno=0
+TLS_PROBE t=7.024 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=7.026 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=7.028 SSL_write size=17 returned=17 errno=0
+TLS_PROBE t=7.028 SSL_write size=19 returned=19 errno=0
+TLS_PROBE t=7.028 SSL_write size=37 returned=37 errno=0
+TLS_PROBE t=7.028 SSL_write size=25 returned=25 errno=0
+TLS_PROBE t=7.028 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=7.192 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=7.192 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=7.194 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=7.196 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=7.197 SSL_write size=77 returned=77 errno=0
+TLS_PROBE t=7.197 SSL_write size=19 returned=19 errno=0
+TLS_PROBE t=7.197 SSL_write size=2 returned=2 errno=0
+TLS_PROBE t=7.197 SSL_write size=13 returned=13 errno=0
+TLS_PROBE t=7.204 SSL_write size=56 returned=56 errno=0
+TLS_PROBE t=7.204 SSL_write size=15 returned=15 errno=0
+TLS_PROBE t=11.216 SSL_accept returned=1 errno=0
+TLS_PROBE t=11.216 SSL_read size=8192 returned=295 errno=0
+TLS_PROBE t=11.218 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=11.222 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=11.224 SSL_write size=1339 returned=1339 errno=0
+TLS_PROBE t=11.224 SSL_write size=608 returned=608 errno=0
+TLS_PROBE t=11.224 SSL_write size=1 returned=1 errno=0
+TLS_PROBE t=11.226 SSL_write size=1879 returned=1879 errno=0
+TLS_PROBE t=11.251 SSL_accept returned=1 errno=0
+TLS_PROBE t=11.253 SSL_read size=8192 returned=167 errno=0
+TLS_PROBE t=11.352 SSL_read size=8192 returned=2 errno=0
+TLS_PROBE t=11.355 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=11.357 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=11.376 SSL_write size=326 returned=326 errno=0
+TLS_PROBE t=11.443 SSL_accept returned=1 errno=0
+TLS_PROBE t=11.443 SSL_read size=8192 returned=167 errno=0
+TLS_PROBE t=11.542 SSL_read size=8192 returned=2 errno=0
+TLS_PROBE t=11.545 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=11.547 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=11.551 SSL_write size=326 returned=326 errno=0
+TLS_PROBE t=11.624 SSL_accept returned=1 errno=0
+TLS_PROBE t=11.624 SSL_read size=8192 returned=167 errno=0
+TLS_PROBE t=11.723 SSL_read size=8192 returned=2 errno=0
+TLS_PROBE t=11.726 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=11.727 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=11.731 SSL_write size=326 returned=326 errno=0
+TLS_PROBE t=11.793 SSL_accept returned=1 errno=0
+TLS_PROBE t=11.794 SSL_read size=8192 returned=167 errno=0
+TLS_PROBE t=11.894 SSL_read size=8192 returned=2 errno=0
+TLS_PROBE t=11.897 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=11.899 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=11.903 SSL_write size=326 returned=326 errno=0
+TLS_PROBE t=11.965 SSL_accept returned=1 errno=0
+TLS_PROBE t=11.965 SSL_read size=8192 returned=167 errno=0
+TLS_PROBE t=12.065 SSL_read size=8192 returned=-1 errno=4
+TLS_PROBE t=12.068 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=12.070 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=12.074 SSL_write size=138 returned=138 errno=0
+TLS_PROBE t=12.191 SSL_accept returned=1 errno=0
+TLS_PROBE t=12.191 SSL_read size=8192 returned=167 errno=0
+TLS_PROBE t=12.290 SSL_read size=8192 returned=-1 errno=4
+TLS_PROBE t=12.293 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=12.295 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=12.298 SSL_write size=138 returned=138 errno=0
+TLS_PROBE t=12.416 SSL_accept returned=1 errno=0
+TLS_PROBE t=12.416 SSL_read size=8192 returned=167 errno=0
+TLS_PROBE t=12.516 SSL_read size=8192 returned=-1 errno=4
+TLS_PROBE t=12.519 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=12.521 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=12.525 SSL_write size=138 returned=138 errno=0
+TLS_PROBE t=12.643 SSL_accept returned=1 errno=0
+TLS_PROBE t=12.643 SSL_read size=8192 returned=167 errno=0
+TLS_PROBE t=12.742 SSL_read size=8192 returned=-1 errno=4
+TLS_PROBE t=12.745 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=12.747 fgets fd=7 returned=null errno=0 error=0 eof=1
+TLS_PROBE t=12.749 SSL_write size=138 returned=138 errno=0
+LINUX_READONLY_JOB_STATUS=0

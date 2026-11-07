@@ -2,6 +2,7 @@
 """Build and verify the experimental image with the prepared pinned local tools."""
 import argparse,hashlib,json,os,shutil,subprocess
 from pathlib import Path
+from release_config import CONFIG
 root=Path(__file__).resolve().parent.parent
 ap=argparse.ArgumentParser();ap.add_argument('--compile-only',action='store_true');args=ap.parse_args()
 def run(*command,log=None):
@@ -19,6 +20,8 @@ for define,name in [('', 'httpd'),('INIT_LAUNCHER','init'),('RC_LAUNCHER','rc')]
 run(*flags,'-O2','-s','-shared','-fPIC','-o','build/rc_bridge.so','sources/localmod/rc_bridge.c',*common,'-ldl','-lpthread')
 run(*flags,'-O2','-s','-o','build/localmod-event','sources/localmod/event.c',*common)
 run(*flags,'-O2','-s','-o','build/plugin-txn','sources/localmod/plugin_txn.c')
+for name,source in [('archive-guard','archive_guard.c'),('plugin-run','plugin_run.c'),('log-limit','log_limit.c'),('localmod-status','status.c')]:
+    run(*flags,'-O2','-s','-o','build/'+name,'sources/localmod/'+source)
 run(*flags,'-O2','-s','-o','build/iptables-restore-launcher','sources/localmod/restore.c',*common)
 run(*flags,'-O0','-rdynamic','-o','build/bridge-fixture','build/bridge_fixture.c')
 run(*flags,'-O0','-shared','-fPIC','-Wl,-soname,libfilemap_vendor.so','-o','build/libfilemap_vendor.so','build/filemap_vendor.c')
@@ -44,8 +47,8 @@ run('python3','build/verify_hooks.py')
 run('python3','build/verify_compatibility.py')
 run('python3','build/verify_native_runtime.py')
 run('python3','build/verify_uu_compatibility.py')
-image='output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w'
-run('python3','build/repack_image.py','upstream/RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w','build/localmod-rootfs.ubifs',image)
+image=CONFIG['image']
+run('python3','build/repack_image.py',CONFIG['vendor_image'],'build/localmod-rootfs.ubifs',image)
 run('python3','build/inspect_upstream.py',image,'output/recheck',log='output/structure.json')
 run(str(root/'analysis/.venv/bin/python'),'build/export_metadata.py','output/recheck/rootfs_ubifs','output/recheck/metadata.json')
 roundtrip=root/'build/casefs/roundtrip'
@@ -62,4 +65,4 @@ run('python3','build/check_real_plugins.py')
 run('python3','build/check_https_stability.py')
 run('python3','build/check_interrupt.py')
 run('python3','build/check_recovery_safety.py')
-print('Built localmod2-r7 and verified the experimental candidate; no router was accessed or flashed.')
+print('Built '+CONFIG['tag']+' and verified the experimental candidate; no router was accessed or flashed.')

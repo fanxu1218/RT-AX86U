@@ -4,8 +4,14 @@
 #include <stddef.h>
 #include <signal.h>
 extern volatile sig_atomic_t lm_stopping;
+#ifndef LM_BASE
 #define LM_BASE "/tmp/.localmod"
+#endif
+#ifndef LM_DISPATCH
 #define LM_DISPATCH "/usr/libexec/localmod/dispatch.sh"
+#endif
+#define LM_QUEUE_LIMIT 128
+#define LM_BARRIER_RESERVE 8
 #define LM_BOOTSTRAP "/usr/libexec/localmod/bootstrap.sh"
 #define LM_MAGIC 0x4c4d4532U
 struct lm_event { unsigned magic; char name[32], arg1[4096], arg2[256]; };

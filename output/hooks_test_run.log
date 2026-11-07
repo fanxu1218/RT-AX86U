@@ -1,4 +1,14 @@
 LINUX_BUILDER_READY
++ . /work/build/model_helpers_setup.sh
++ mkdir -p /usr/libexec/localmod
++ printf '#!/bin/sh\nexec /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/%s "$@"\n' archive-guard
++ chmod 755 /usr/libexec/localmod/archive-guard
++ printf '#!/bin/sh\nexec /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/%s "$@"\n' plugin-run
++ chmod 755 /usr/libexec/localmod/plugin-run
++ printf '#!/bin/sh\nexec /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/%s "$@"\n' log-limit
++ chmod 755 /usr/libexec/localmod/log-limit
++ printf '#!/bin/sh\nexec /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/%s "$@"\n' localmod-status
++ chmod 755 /usr/libexec/localmod/localmod-status
 + trap 'cp /tmp/hook_trace /work/build/hooks_trace.log 2>/dev/null || true; cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf 2>/dev/null || true' EXIT
 + mkdir -p /usr/libexec/localmod /usr/sbin /jffs/scripts /jffs/configs/dnsmasq.d /koolshare/bin /koolshare/scripts /koolshare/init.d /tmp/.localmod /etc /www/css
 + chmod 700 /tmp/.localmod
@@ -76,21 +86,6 @@ LINUX_BUILDER_READY
 + printf 'printf "ARGC %s %%s <%%s>\\n" "$#" "$1" >> /tmp/hook_trace\n' U
 + set +e
 + /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs -E 'LD_LIBRARY_PATH=/work/build' -E 'LD_PRELOAD=/work/build/rc_bridge_fixture.so' /work/build/rc-fixture
-event wan-event result 0
-event services-start result 0
-event wan-event result 0
-event wan-event result 0
-event service-event-end result 0
-event service-event-end result 0
-event post-mount result 0
-event wan-event result 0
-event wan-event result 0
-event wan-event result 0
-event wan-event result 0
-event wan-event result 0
-event wan-event result 0
-event wan-event result 0
-event services-start result 0
 + result=0
 + echo fixture-return-0
 fixture-return-0
@@ -128,3 +123,4 @@ PASS hook timeout kills descendants; names validated; nested notifications suppr
 + cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf
 + cp /tmp/hook_trace /work/build/hooks_trace.log
 + cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf
+

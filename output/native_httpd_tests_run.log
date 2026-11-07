@@ -1,5 +1,5 @@
 LINUX_BUILDER_READY
-S:router.test, I:router.test, 2026/10/31 ~ 2026/10/31
+S:router.test, I:router.test, 2026/11/7 ~ 2026/11/7
 PASS http_native_login_page_and_transport
 PASS http_wrong_password_rejected
 PASS http_native_password_check_and_session_issuance
@@ -22,3 +22,4 @@ root=/koolshare/webs/
 upload=/tmp/upload
 conn=0x1064e0 nc=0x1063f8 id=51001 removed
 conn=0x106460 nc=0x106988 id=51002 removed
+

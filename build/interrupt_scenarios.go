@@ -2,15 +2,18 @@ package main
 
 import (
 	"archive/tar"
+	"bufio"
 	"bytes"
 	"compress/gzip"
 	"context"
 	"crypto/md5"
 	"crypto/sha256"
+	"crypto/tls"
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"io"
+	"net"
 	"net/http"
 	"os"
 	"os/exec"
@@ -130,12 +133,15 @@ while :;do sleep 1;done
 }
 func irqDDNSAlive() {
 	client := &http.Client{Timeout: time.Second}
-	for i := 0; i < 80; i++ {
+	started := time.Now()
+	deadline := started.Add(20 * time.Second)
+	for time.Now().Before(deadline) {
 		res, e := client.Get("http://127.0.0.1:9876/")
 		if e == nil {
 			b, _ := io.ReadAll(res.Body)
 			res.Body.Close()
 			if res.StatusCode == 200 && strings.Contains(strings.ToLower(string(b)), "ddns") {
+				fmt.Printf("DDNS_READY elapsed_ms=%d budget_ms=20000\n", time.Since(started).Milliseconds())
 				return
 			}
 		}
@@ -193,9 +199,15 @@ func irqPackageOfflineBlob(blob []byte) {
 }
 func interruptWorker() {
 	irqLoad()
+	if _, e := os.Stat("/work/build/irq-tls-probe"); e == nil {
+		os.Setenv("LOCALMOD_HTTPD_TLS_CACHE_TRACE", "1")
+	}
+	if _, e := os.Stat("/work/build/irq-old-httpd-bridge"); e == nil {
+		os.Setenv("LOCALMOD_HTTPD_BRIDGE_OVERLAY", "1")
+	}
 	defer func() {
 		if e := recover(); e != nil {
-			for _, p := range []string{"/tmp/.localmod/bootstrap.log", "/tmp/upload/soft_install_log.txt", "/tmp/upload/soft_log.txt", "/var/log/perpd/current"} {
+			for _, p := range []string{"/tmp/.localmod/bootstrap.log", "/tmp/upload/soft_install_log.txt", "/tmp/upload/soft_log.txt", "/var/log/perpd/current", nrOutput("interrupt-" + irqPhase.Boot + "-server.log"), "/tmp/httpd-tls-probe.log"} {
 				b, _ := os.ReadFile(p)
 				fmt.Printf("DIAGNOSTIC %s\n%s\n", p, b)
 			}
@@ -215,6 +227,10 @@ func interruptWorker() {
 	defer u.close()
 	coUUPage(s)
 	t := &onlineTest{s: s, repo: repo, uu: u, id: 94000, sentinels: map[string][]byte{}, archive: nrRead("/jffs/cert.tgz")}
+	if irqPhase.Boot == "tls-input-probe" {
+		irqTLSInput(s)
+		return
+	}
 	if irqPhase.Initialize {
 		t.operation("v1", "", true)
 		irqSet("onlineprobe_config", "pre-interruption-user-value")
@@ -567,4 +583,103 @@ exit "$status"
 			}
 		}
 	}
+}
+
+// Owned input-phase signal control; no mutation replay or TLS validation bypass.
+func irqTLSInput(s *nrServer) {
+	nrMust(os.WriteFile("/tmp/upload/input-probe.txt", []byte("owned-tls-input-probe"), 0600))
+	rows := []map[string]any{}
+	for i := 0; i < 10; i++ {
+		c, e := tls.DialWithDialer(&net.Dialer{Timeout: 5 * time.Second}, "tcp4", "192.168.77.1:34443", s.client.Transport.(*http.Transport).TLSClientConfig.Clone())
+		nrMust(e)
+		nrMust(c.SetDeadline(time.Now().Add(3 * time.Second)))
+		header := fmt.Sprintf("GET /_temp/input-probe.txt HTTP/1.0\r\nHost: 192.168.77.1:34443\r\nUser-Agent: Mozilla/5.0 native-lifecycle-fixture\r\nCookie: asus_s_token=%s\r\n", s.token)
+		if i < 8 {
+			_, e = c.Write([]byte(header))
+			nrMust(e)
+		}
+		time.Sleep(100 * time.Millisecond)
+		if i >= 4 {
+			nrMust(s.cmd.Process.Signal(syscall.SIGALRM))
+			time.Sleep(100 * time.Millisecond)
+		}
+		if i >= 8 {
+			_, e = c.Write([]byte(header + "\r\n"))
+		} else {
+			_, e = c.Write([]byte("\r\n"))
+		}
+		code := 0
+		valid := false
+		if e == nil {
+			var r *http.Response
+			r, e = http.ReadResponse(bufio.NewReader(c), nil)
+			if e == nil {
+				code = r.StatusCode
+				b, err := io.ReadAll(r.Body)
+				r.Body.Close()
+				e = err
+				valid = string(b) == "owned-tls-input-probe"
+			}
+		}
+		c.Close()
+		row := map[string]any{"before_request_line": i >= 8, "signal": i >= 4, "code": code, "valid": valid, "error": fmt.Sprint(e)}
+		rows = append(rows, row)
+		fmt.Printf("TLS_INPUT_CASE %v\n", row)
+	}
+
+	nrMust(os.WriteFile("/koolshare/scripts/tls_input_probe.sh", []byte("#!/bin/sh\n. /koolshare/scripts/base.sh\nprintf invoked\\n >> /tmp/tls-input-mutations\nhttp_response \"$ID\"\n"), 0755))
+	postBody := `{"id":97861,"method":"tls_input_probe.sh","params":[],"fields":{}}`
+	postConn, postError := tls.DialWithDialer(&net.Dialer{Timeout: 5 * time.Second}, "tcp4", "192.168.77.1:34443", s.client.Transport.(*http.Transport).TLSClientConfig.Clone())
+	nrMust(postError)
+	nrMust(postConn.SetDeadline(time.Now().Add(5 * time.Second)))
+	_, postError = fmt.Fprintf(postConn, "POST /_api/ HTTP/1.0\r\nHost: 192.168.77.1:34443\r\nOrigin: https://192.168.77.1:34443\r\nUser-Agent: Mozilla/5.0 native-lifecycle-fixture\r\nCookie: asus_s_token=%s\r\nContent-Type: application/json\r\nContent-Length: %d\r\n\r\n", s.token, len(postBody))
+	nrMust(postError)
+	time.Sleep(100 * time.Millisecond)
+	nrMust(s.cmd.Process.Signal(syscall.SIGALRM))
+	time.Sleep(100 * time.Millisecond)
+	_, postError = postConn.Write([]byte(postBody))
+	postCode := 0
+	postValid := false
+	if postError == nil {
+		var r *http.Response
+		r, postError = http.ReadResponse(bufio.NewReader(postConn), nil)
+		if postError == nil {
+			postCode = r.StatusCode
+			b, err := io.ReadAll(r.Body)
+			r.Body.Close()
+			postError = err
+			postValid = strings.Contains(string(b), "97861")
+		}
+	}
+	postConn.Close()
+	mutations, _ := os.ReadFile("/tmp/tls-input-mutations")
+	rows = append(rows, map[string]any{"case": "post_body_signal_once", "code": postCode, "valid": postValid, "error": fmt.Sprint(postError), "script_invocations": strings.Count(string(mutations), "invoked")})
+
+	c, e := tls.DialWithDialer(&net.Dialer{Timeout: 5 * time.Second}, "tcp4", "192.168.77.1:34443", s.client.Transport.(*http.Transport).TLSClientConfig.Clone())
+	nrMust(e)
+	nrMust(c.SetDeadline(time.Now().Add(7 * time.Second)))
+	started := time.Now()
+	done := make(chan struct{})
+	go func() {
+		defer close(done)
+		for i := 0; i < 12; i++ {
+			time.Sleep(400 * time.Millisecond)
+			if s.cmd != nil {
+				s.cmd.Process.Signal(syscall.SIGALRM)
+			}
+		}
+	}()
+	_, readError := http.ReadResponse(bufio.NewReader(c), nil)
+	elapsed := time.Since(started).Seconds()
+	c.Close()
+	<-done
+	rows = append(rows, map[string]any{"case": "empty_input_repeated_signal_budget", "elapsed_seconds": elapsed, "disconnected": readError != nil})
+	b, e := json.Marshal(rows)
+	nrMust(e)
+	fmt.Printf("TLS_INPUT_RESULT %s\n", b)
+	trace, _ := os.ReadFile("/tmp/httpd-tls-probe.log")
+	if len(trace) > 32000 {
+		trace = trace[len(trace)-32000:]
+	}
+	fmt.Printf("TLS_INPUT_TRACE\n%s", trace)
 }

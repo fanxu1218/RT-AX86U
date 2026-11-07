@@ -1,0 +1,92 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+Interrupted plugin operation rolled back; interrupted center/database retained in private recovery history
+REAL_PLUGIN_SETUP_READY
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107081457, 2026/11/7 ~ 2046/11/8
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+DDNS_READY elapsed_ms=64 budget_ms=20000
+PASS fresh_vm_restores_exact_config_files_literal_database_and_version
+PASS interrupted_new_state_retained_in_private_history
+PASS real_ddnsgo_autostart_and_local_page_restored
+DIAGNOSTIC /tmp/.localmod/bootstrap.log
+Interrupted plugin operation rolled back; interrupted center/database retained in private recovery history
+
+DIAGNOSTIC /tmp/upload/soft_install_log.txt
+【2026年11月07日 16:33:23】: =========================== step 1 ================================
+【2026年11月07日 16:33:26】: 插件【Owned Online Probe】将会被安装到/jffs文件夹...
+【2026年11月07日 16:33:26】: 插件【Owned Online Probe】的压缩包正在下载中，请稍候...
+【2026年11月07日 16:33:27】: 插件【Owned Online Probe】的安装包：v2.tar.gz下载成功！
+【2026年11月07日 16:33:27】: 准备校验文件：v2.tar.gz
+【2026年11月07日 16:33:28】: 校验一致，准备解压...
+【2026年11月07日 16:33:28】: 解压成功，寻找安装脚本！
+【2026年11月07日 16:33:28】: 找到安装脚本，准备安装！
+【2026年11月07日 16:33:29】: 当前jffs分区剩余：69081KB, 空间满足，继续安装！
+【2026年11月07日 16:33:33】: 使用插件【Owned Online Probe】提供的install.sh脚本进行安装...
+【2026年11月07日 16:33:34】: =========================== step 2 ================================
+
+DIAGNOSTIC /tmp/upload/soft_log.txt
+
+DIAGNOSTIC /var/log/perpd/current
+20261107T083316.875898: perpd[999]: starting on /koolshare/perp ...
+20261107T083316.889133: perpd[999]: supervising 0 active services
+20261107T083316.889145: perpd[999]: monitoring 0 client connections
+20261107T083316.894838: perpd[999]: activated new service: ddnsgo
+20261107T083316.899364: perpd[999]: activated new service: httpdb
+20261107T083316.906073: perpd[999]: supervising 2 active services
+20261107T083318.622878: 2026/11/07 08:33:18 You can use 'sudo ./ddns-go -s install' to install service
+20261107T083318.652592: 2026/11/07 08:33:18 Listening on :9876
+20261107T083318.658723: 2026/11/07 08:33:18 Waiting for network connection: lookup alidns.aliyuncs.com on [::1]:53: read udp [::1]:38302->[::1]:53: read: connection refused
+20261107T083318.659157: 2026/11/07 08:33:18 Retry after 5s
+20261107T083318.659307: 2026/11/07 08:33:18 Local DNS exception! Will use 1.1.1.1 by default, you can use -dns to customize DNS server
+20261107T083323.669380: 2026/11/07 08:33:23 Waiting for network connection: lookup esa.cn-hangzhou.aliyuncs.com on [::1]:53: dial udp 1.1.1.1:53: connect: network is unreachable
+20261107T083323.669553: 2026/11/07 08:33:23 Retry after 5s
+20261107T083323.669622: 2026/11/07 08:33:23 Local DNS exception! Will use 8.8.8.8 by default, you can use -dns to customize DNS server
+20261107T083323.789875: Http on addr 127.0.0.1:3032
+20261107T083323.789914: root=/koolshare/webs/
+20261107T083323.789916: upload=/tmp/upload
+20261107T083323.789918: conn=0x1064c8 nc=0x1063e0 id=94001 removed
+20261107T083328.679269: 2026/11/07 08:33:28 Waiting for network connection: lookup bcd.baidubce.com on [::1]:53: dial udp 8.8.8.8:53: connect: network is unreachable
+20261107T083328.682667: 2026/11/07 08:33:28 Retry after 5s
+20261107T083328.682684: 2026/11/07 08:33:28 Local DNS exception! Will use 9.9.9.9 by default, you can use -dns to customize DNS server
+20261107T083333.691230: 2026/11/07 08:33:33 Waiting for network connection: lookup api.cloudflare.com on [::1]:53: dial udp 9.9.9.9:53: connect: network is unreachable
+20261107T083333.694636: 2026/11/07 08:33:33 Retry after 5s
+20261107T083333.694650: 2026/11/07 08:33:33 Local DNS exception! Will use 223.5.5.5 by default, you can use -dns to customize DNS server
+
+panic: Get "https://192.168.77.1:34443/_temp/soft_install_log.txt": EOF [recovered]
+	panic: Get "https://192.168.77.1:34443/_temp/soft_install_log.txt": EOF
+
+goroutine 1 [running]:
+main.interruptWorker.func1()
+	./interrupt_scenarios.go:205 +0x170
+panic({0x30c260?, 0x400032be00?})
+	runtime/panic.go:785 +0x124
+main.nrMust(...)
+	./native_runtime_client.go:25
+main.(*nrServer).request(0x400007e040, {0x3505d1, 0x3}, {0x359870, 0x1b}, {0x0, 0x0})
+	./native_runtime_client.go:163 +0x708
+main.(*onlineTest).wait(0x400012be28, 0x1)
+	./test_online.go:343 +0xdc
+main.(*onlineTest).operation(0x400012be28, {0x350505?, 0x0?}, {0x0?, 0x1b?}, 0x1)
+	./test_online.go:360 +0x38
+main.interruptWorker()
+	./interrupt_scenarios.go:355 +0x1238
+main.main()
+	./test_interrupt_main.go:18 +0x1b4
+panic: exit status 2
+
+goroutine 1 [running]:
+main.nrMust(...)
+	./native_runtime_client.go:25
+main.interruptController()
+	./interrupt_scenarios.go:501 +0x7d0
+main.main()
+	./test_interrupt_main.go:14 +0x150
+LINUX_READONLY_JOB_STATUS=1

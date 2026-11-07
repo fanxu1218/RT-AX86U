@@ -1,4 +1,6 @@
-# localmod2-r7 adapter
+# localmod2-r8 adapter
+
+Use `python3 build/check.py release` for all release gates. `build_candidate.py` is an internal image/model stage; it does not replace the complete gate or publication checks.
 
 This experimental RT-AX86U firmware retains the exact ASUS 24437 kernel, modules, vendor rc, HTTPd and xtables-multi binaries. Small launchers relocate rc and HTTPd and preload narrowly scoped adapters. It is not device tested. See `../../output/官改候选版说明.md` and the machine-readable test reports.
 
@@ -103,3 +105,17 @@ After all three runs finish, `python3 build/check_memory.py --summary` checks th
 `--mode cycles-probe-no-thp` checks the repeated-phase fixture for 90 seconds. `--mode cycles-no-thp` measures one uninterrupted 3600-second observation: 120 seconds of warmup, eight 120-second load/240-second idle rounds, then 600 more idle seconds. Center RPC polling continues throughout; all service PIDs must remain unchanged. Quiet boundary samples precede integrity page reads and no GC is forced. Reports include writable mapping ranges/residency, private dirty pages, per-round quiet baselines, descriptive late-round slopes, and center/owned-UU PID/RSS/FD samples. The service context timeout follows the selected duration, including the hour-long workload. See [extended investigation](../../output/DDNS-Go多轮持续内存验证.md).
 
 Reports bind image/package/binary hashes, real elapsed time, process identity, raw maps/GC observations, configuration/DB/certificate and owned UU checks. The original status RPC inspects process state; version RPC executes a short-lived `ddnsgo -v`. Those RPCs are not equivalent to load on the long-lived DDNS-Go HTTP process. Host-side metadata decompression is for `go version -m` inspection only; the unpacked copy is never substituted in the VM. No profiling option enters the firmware. See [the memory investigation](../../output/DDNS-Go内存排查说明.md).
+
+
+## r8 bounds, diagnostics and release gates
+
+Archive validation and owned-process execution are bounded before extraction and through download/install/uninstall. Normal event storage accepts 128 entries plus eight reserved barriers, returning explicit backpressure when saturated; accepted events remain ordered. Managed logs retain two files of at most 128 KiB each. Safe USTAR links are supported; unknown extensions and privileged scripts are not sandboxed.
+
+The native OpenSSL resumable-session cache is limited to 256 entries and 300 seconds without increasing stricter original values. Native certificate/crypto/password/cookie validation remains owned by ASUS. A split-output NVRAM utility is read through EOF within one monotonic two-second budget, avoiding false disabled-script results caused by SIGPIPE.
+
+Authenticated GET `/_localmod/status` and `/_localmod/diagnostics` return an allowlisted readonly summary even when the center is stopped. No DB/log/key/token/account data is exported. Counts are observations, not health guarantees; checkpoint presence is not seal validation. The temporary operation record resets after reboot. No forced recovery/cleanup endpoint is provided.
+
+Use `python3 build/check.py quick|dependencies|release`; full local gates require the prepared case-sensitive macOS VM workspace. See [build and publication checks](../../output/构建与发布校验.md). CI runs host boundary smoke checks and compilation only; it does not certify firmware or device behavior.
+
+
+The r8 input fix resumes only `SSL_read` returning EINTR with `SSL_ERROR_WANT_READ`, preserving identical TLS read arguments and the original socket receive budget with a monotonic deadline. EOF, fatal SSL errors and ordinary timeouts are passed through. A native input-phase control reproduces r7 header 400s and pre-request EOF; the fixed candidate completes the requests and a POST executes exactly once. Repeated signals do not extend the five-second silent-input timeout. See `build/check_tls_input.py --candidate` and its artifact-bound report.

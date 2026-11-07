@@ -75,8 +75,20 @@ func nrStart(ctx context.Context, name string, adapt bool) *nrServer {
 		if os.Getenv("LOCALMOD_HTTPS_TRACE") == "1" {
 			preload = "/work/build/httpd_bridge.so:/work/build/https_trace_fixture.so:/work/build/native_hw_fixture.so"
 		}
+		if os.Getenv("LOCALMOD_HTTPD_BRIDGE_OVERLAY") == "1" {
+			preload = strings.Replace(preload, "/work/build/httpd_bridge.so", "/work/build/httpd_bridge_next.so", 1)
+		}
 	}
-	cmd := exec.CommandContext(ctx, "/usr/bin/qemu-arm", "-L", nrQEMURoot(), "-E", "LD_PRELOAD="+preload, "/usr/libexec/localmod/httpd", "-s", "-p", "34443")
+	if os.Getenv("LOCALMOD_HTTPD_TLS_CACHE_TRACE") == "1" {
+		preload = "/work/build/httpd_tls_cache_fixture.so:" + preload
+	}
+	program := "/usr/bin/qemu-arm"
+	argv := []string{"-L", nrQEMURoot(), "-E", "LD_PRELOAD=" + preload, "/usr/libexec/localmod/httpd", "-s", "-p", "34443"}
+	if os.Getenv("LOCALMOD_HTTPD_MEMORY_DIAGNOSTIC") == "1" {
+		program = "/work/build/memory-exec-fixture"
+		argv = append([]string{"/usr/bin/qemu-arm", "-B", "0x100000000", "-perfmap"}, argv...)
+	}
+	cmd := exec.CommandContext(ctx, program, argv...)
 	cmd.Dir = "/www"
 	cmd.Stdout = log
 	cmd.Stderr = log

@@ -37,6 +37,7 @@ func main(){
   if e:=exec.Command("/usr/bin/dbus","set","soft_name="+test.name+".tar.gz").Run();e!=nil{panic(e)}
   command:=exec.CommandContext(ctx,"/bin/sh","/koolshare/scripts/ks_tar_install.sh","12003")
   out,e:=command.CombinedOutput();if e==nil{panic(test.name+" invalid installation returned success: "+string(out))}
+  boundedLog,logErr:=os.ReadFile("/tmp/upload/soft_log.txt");if logErr!=nil{panic(logErr)};out=append(out,boundedLog...)
   if test.name=="wrong_platform" && !strings.Contains(string(out),"不是ASUS hnd平台"){panic("wrong platform failed for a different reason: "+string(out))}
   if test.name=="softcenter" && !strings.Contains(string(out),"不接受离线覆盖核心"){panic("core overwrite failed for a different reason: "+string(out))}
   if _,e=os.Stat("/tmp/"+test.name+"-installed");e==nil{panic(test.name+" installation script ran")}

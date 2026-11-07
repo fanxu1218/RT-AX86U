@@ -1,0 +1,76 @@
+{
+  "status": "SOURCE_OVERLAY_NATIVE_UU_RECOVERY_PASS",
+  "result": {
+    "checks": {
+      "api_503_preserves_center_worker_data_and_native_once_policy": true,
+      "checksum_mismatch_preserves_center_worker_data_and_native_once_policy": true,
+      "controlled_wan_notifications_and_fresh_ntp_cycle_recover_once": true,
+      "delayed_ntp_then_success_preserves_center_worker_data_and_native_once_policy": true,
+      "dns_unavailable_preserves_center_worker_data_and_native_once_policy": true,
+      "existing_owned_uu_worker_pid_stays_alive_through_all_faults": true,
+      "malformed_response_preserves_center_worker_data_and_native_once_policy": true,
+      "no_download_before_delayed_ntp_ready": true,
+      "truncated_monitor_preserves_center_worker_data_and_native_once_policy": true
+    },
+    "details": {
+      "api_503": {
+        "api_calls": 1,
+        "monitor_downloads": 0,
+        "monitor_executed": false
+      },
+      "checksum_mismatch": {
+        "api_calls": 1,
+        "monitor_downloads": 1,
+        "monitor_executed": false
+      },
+      "delayed_ntp_then_success": {
+        "api_calls": 1,
+        "monitor_downloads": 1,
+        "monitor_executed": true
+      },
+      "dns_unavailable": {
+        "api_calls": 0,
+        "monitor_downloads": 0,
+        "monitor_executed": false
+      },
+      "malformed_response": {
+        "api_calls": 1,
+        "monitor_downloads": 0,
+        "monitor_executed": false
+      },
+      "truncated_monitor": {
+        "api_calls": 1,
+        "monitor_downloads": 2,
+        "monitor_executed": false
+      }
+    },
+    "persistent_data_preserved": true,
+    "recovery_policy": "fresh native NTP cycle after controlled network restoration; no automatic replay of a failed native once-only cycle",
+    "uu_worker_pid": 1668
+  },
+  "base_candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
+  "firmware_rebuilt": false,
+  "source_sha256": {
+    "build/test_uu_recovery.go": "1a2a0a6a657f4be4d7e779bbc19f49d736cbf1f9a359bc94058d0631693b3f0d",
+    "build/native_runtime_client.go": "2f9515bf6d814c064c7e0957455c0cfaf12ef01483be9732e49fd783cf32acf5",
+    "build/test_online.go": "6149e462c16f55e709ecd3cde5d857a5051e4b59ebbf9a0cf97911772b3bfa94",
+    "build/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55"
+  },
+  "overlay_files": {
+    "usr/libexec/localmod/plugin-run": "714285d262804c50a99d4ff5a9d3d7a938ccd27b5a5d9fb6628005561efb59a3",
+    "usr/libexec/localmod/log-limit": "7d41c03ccb6d694bbf1b2fca8e87019a1b1af5fb15b13dae7ec0334d5533e340",
+    "usr/libexec/localmod/bootstrap.sh": "015a3f90d8b1cb99cd16797be5ba58e3870e7e3ee237bb09c5afdd737f369917",
+    "usr/libexec/localmod/installer-guard.sh": "998c27747853ec9b860b90fcde727da36a064ffb93ca077a88ec179784c98c7e",
+    "usr/libexec/localmod/archive-guard": "92e708822c07e97e06f48623fc00d76c99060cec97951b6f05b336e68a007cd1",
+    "usr/libexec/localmod/localmod-event": "5652237436b123272cfd2cd78ddbb51cc2fdb801451992ea43d924b81f65617a",
+    "rom/etc/koolshare/scripts/ks_app_install.sh": "4ec103ed7653f5fb1877700a045d92624adc2df3ac7a00ddf181c7a80eea5ca7",
+    "rom/etc/koolshare/scripts/ks_tar_install.sh": "1b885c0c8149ec31f47c46d141695ea9f1812fd22867a42d8dfeb878b45ab810"
+  },
+  "log_sha256": "fa6e7c99f9e841a49652378c8d9ac696013ba2e1b481fe973a9e43c4a75315f5",
+  "limits": [
+    "DNS outage injected at owned transport boundary; no external DNS/WAN",
+    "WAN notifications and fresh native NTP cycle, not physical DHCP/PPP failover",
+    "Original native once-only policy retained; no automatic retry of UU mutation",
+    "Owned monitor and worker only; real UU account, entitlement and acceleration untested"
+  ]
+}

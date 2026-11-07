@@ -11,6 +11,7 @@
 #include <limits.h>
 #include <netinet/in.h>
 #include <stdarg.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,9 +21,12 @@
 #include <sys/time.h>
 #include <time.h>
 #include <unistd.h>
+#include "health.h"
 
 #define HEAD_MAX 8192
 #define BODY_MAX (64UL * 1024 * 1024)
+#define TLS_CACHE_ENTRIES 256L
+#define TLS_CACHE_SECONDS 300L
 #ifndef SC_ROOT
 #define SC_ROOT "/jffs/.koolshare"
 #endif
@@ -66,11 +70,62 @@ __attribute__((constructor)) static void setup(void) {
  unsetenv("LD_PRELOAD");
 }
 
+/* The native mssl stdio reader treats SSL_read <= 0 as EOF, including
+ * SSL_ERROR_WANT_READ after EINTR. Resume only that explicitly retryable TLS
+ * read, with identical arguments and the socket's original receive budget.
+ * Real EOF, fatal SSL errors and ordinary timeouts remain native decisions. */
+int SSL_read(void *ssl,void *buffer,int size){
+ static int (*read_next)(void *,void *,int);
+ static int (*get_fd)(const void *),(*get_error)(const void *,int);
+ if(!read_next){read_next=dlsym(RTLD_NEXT,"SSL_read");get_fd=dlsym(RTLD_NEXT,"SSL_get_fd");get_error=dlsym(RTLD_NEXT,"SSL_get_error");}
+ if(!read_next){errno=ENOSYS;return -1;}
+ struct timeval original;struct timespec now;socklen_t length=sizeof(original);
+ int fd=get_fd?get_fd(ssl):-1;
+ if(fd<0 || !get_error || getsockopt(fd,SOL_SOCKET,SO_RCVTIMEO,&original,&length) ||
+    original.tv_sec<0 || original.tv_sec>120 || (!original.tv_sec&&!original.tv_usec) || clock_gettime(CLOCK_MONOTONIC,&now))return read_next(ssl,buffer,size);
+ int64_t deadline=(int64_t)now.tv_sec*1000000000+now.tv_nsec+(int64_t)original.tv_sec*1000000000+original.tv_usec*1000;
+ int changed=0,n,saved;
+ for(;;){
+  n=read_next(ssl,buffer,size);saved=errno;
+  /* SSL_get_error must immediately follow the I/O on this same thread. */
+  if(n>0 || saved!=EINTR || get_error(ssl,n)!=2)break;
+  if(clock_gettime(CLOCK_MONOTONIC,&now)){n=-1;saved=EIO;break;}
+  int64_t left=deadline-((int64_t)now.tv_sec*1000000000+now.tv_nsec);
+  if(left<=0){n=-1;saved=ETIMEDOUT;break;}
+  struct timeval remaining={(time_t)(left/1000000000),(suseconds_t)((left%1000000000+999)/1000)};
+  if(remaining.tv_usec>=1000000){remaining.tv_sec++;remaining.tv_usec-=1000000;}
+  if(setsockopt(fd,SOL_SOCKET,SO_RCVTIMEO,&remaining,sizeof(remaining))){n=-1;saved=errno;break;}
+  changed=1;
+ }
+ if(changed)setsockopt(fd,SOL_SOCKET,SO_RCVTIMEO,&original,sizeof(original));
+ errno=saved;return n;
+}
+
+/* The retained server configures 20480 OpenSSL sessions for two hours. Native
+ * observation reproduced ~1.1 KiB retained per fresh TLS handshake. Bound only
+ * this internal resumable-session cache; native crypto, cookies and password
+ * validation remain owned by the vendor. OpenSSL performs its normal eviction.
+ * Public SSL_CTX_ctrl selectors: cache size get/set 43/42 (OpenSSL 1.1.1 ABI). */
+int SSL_accept(void *ssl){
+ static int (*accept_next)(void *);
+ static void *(*get_ctx)(const void *);
+ static long (*ctx_ctrl)(void *,int,long,void *);
+ static long (*get_timeout)(const void *);
+ static long (*set_timeout)(void *,long);
+ if(!accept_next){accept_next=dlsym(RTLD_NEXT,"SSL_accept");get_ctx=dlsym(RTLD_NEXT,"SSL_get_SSL_CTX");ctx_ctrl=dlsym(RTLD_NEXT,"SSL_CTX_ctrl");get_timeout=dlsym(RTLD_NEXT,"SSL_CTX_get_timeout");set_timeout=dlsym(RTLD_NEXT,"SSL_CTX_set_timeout");}
+ if(!accept_next){errno=ENOSYS;return -1;}
+ if(get_ctx && ctx_ctrl && get_timeout && set_timeout){void *ctx=get_ctx(ssl);if(ctx){long capacity=ctx_ctrl(ctx,43,0,NULL);if(capacity==0 || capacity>TLS_CACHE_ENTRIES)ctx_ctrl(ctx,42,TLS_CACHE_ENTRIES,NULL);if(get_timeout(ctx)>TLS_CACHE_SECONDS)set_timeout(ctx,TLS_CACHE_SECONDS);}}
+ return accept_next(ssl);
+}
+
 static int api_uri(const char *p) {
  size_t n=strcspn(p,"?");
  return !strncmp(p,"/_api/",6) || (n==5 && !strncmp(p,"/_api",5)) ||
         (n==8 && !strncmp(p,"/_upload",8)) || !strncmp(p,"/_temp/",7) ||
-        !strncmp(p,"/_result/",9) || !strncmp(p,"/_root/",7);
+        !strncmp(p,"/_result/",9) || !strncmp(p,"/_root/",7) || !strncmp(p,"/_localmod/",11);
+}
+static int health_uri(void) {
+ return !strcmp(request.uri,"/_localmod/status") || !strcmp(request.uri,"/_localmod/diagnostics");
 }
 static int field(const char *line,const char *name) {
  size_t n=strlen(name); return !strncasecmp(line,name,n) && line[n]==':';
@@ -121,6 +176,7 @@ char *fgets(char *out,int capacity,FILE *stream) {
  snprintf(request.method,sizeof(request.method),"%s",method);
  snprintf(request.uri,sizeof(request.uri),"%s",uri);
  if(strcmp(method,"GET") && strcmp(method,"POST"))request.rejected=405;
+ if(!strncmp(uri,"/_localmod/",11) && (strcmp(method,"GET") || !health_uri()))request.rejected=405;
  size_t path_len=strcspn(uri,"?");
  for(size_t i=0;i<path_len;i++)if(uri[i]=='\\' || uri[i]=='%' || (uri[i]=='.' && i+1<path_len && uri[i+1]=='.'))request.rejected=400;
  char line[4096],host[512]="",origin[1024]="",referer[1024]="",cookie[4096]="";
@@ -232,7 +288,11 @@ static int bridge_print(FILE *stream,const char *format,va_list args) {
    else if(!vendor_auth_result || !vendor_url_do_auth ||
            *vendor_auth_result!=0 || *vendor_url_do_auth!=1 ||
            (!strstr(preview," 200 ")))error_reply(stream,401);
-   else relay(stream);
+   else if(health_uri()){
+    char body[2048],head[512];int size=lm_health_json(body,sizeof(body));
+    if(size<0)error_reply(stream,503);
+    else {int n=snprintf(head,sizeof(head),"HTTP/1.0 200 OK\r\nContent-Type: application/json; charset=utf-8\r\nCache-Control: no-store\r\nX-Content-Type-Options: nosniff\r\n%sConnection: close\r\nContent-Length: %d\r\n\r\n",!strcmp(request.uri,"/_localmod/diagnostics")?"Content-Disposition: attachment; filename=localmod-diagnostics.json\r\n":"",size);next_fwrite(head,1,(size_t)n,stream);next_fwrite(body,1,(size_t)size,stream);}
+   }else relay(stream);
    request.suppress=1;return count;
   }
  }

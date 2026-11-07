@@ -1,0 +1,34 @@
+{
+  "status": "SOURCE_OVERLAY_NATIVE_HEALTH_PASS",
+  "result": {
+    "backend_stopped_readonly_available": true,
+    "checks": {
+      "authenticated_page_served": true,
+      "certificate_and_uu_data_retained": true,
+      "invalid_cookie_denied": true,
+      "logout_revokes_diagnostics": true,
+      "no_cookie_denied/_localmod/diagnostics": true,
+      "no_cookie_denied/_localmod/status": true,
+      "redacted_none": true,
+      "redacted_pending": true,
+      "redacted_store-invalid": true,
+      "status_none": true,
+      "status_pending": true,
+      "status_store-invalid": true,
+      "write_gate_closed_during_checkpoint": true
+    },
+    "uu_owned_worker_alive": true
+  },
+  "firmware_rebuilt": false,
+  "source_sha256": {
+    "build/test_health.go": "5517b29e4d71ef96418335da030af0b08bbfa57c2ee12803564ae652ed22a477",
+    "build/native_runtime_client.go": "2f9515bf6d814c064c7e0957455c0cfaf12ef01483be9732e49fd783cf32acf5",
+    "build/test_online.go": "6149e462c16f55e709ecd3cde5d857a5051e4b59ebbf9a0cf97911772b3bfa94",
+    "build/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+    "sources/localmod/health.h": "f7a78a47ea14a18c3b5120a2d5b63649f3002f32b0711fba8a14db5472b62df3",
+    "sources/localmod/status.c": "5ecaa70d4623940bf5638c0303aa532c9aa5e843e25912a9ec3b8513e3fd67f7",
+    "sources/localmod/httpd_bridge.c": "2b7cf69fd7cd32ef675ed1f581fee4d8abd1a0070e3af95ad9f82ed5317071ed",
+    "sources/localmod/Module_Localmod.asp": "43defef2ebf5bb43e16004fb71f5f925b4a6e0e73907da4fc0bada4fe32643fd"
+  },
+  "log_sha256": "833e0dbfd3edc6b4d780c82a0637a3cf17daa02ec8d4a7626b32f2cd70e987c9"
+}

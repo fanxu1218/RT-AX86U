@@ -1,0 +1,17 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107073831, 2026/11/7 ~ 2046/11/8
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+INSTALLER_BOUNDARY_RESULT {"archive_cases":{"absolute_member":true,"absolute_symlink":true,"corrupt_crc":true,"declared_large":true,"device":true,"dotdot":true,"duplicate":true,"excessive_entries":true,"fifo":true,"foreign_root":true,"hardlink_escape":true,"link_chain":true,"link_parent":true,"newline_member":true,"pinned_aliddns_current":true,"pinned_aliddns_old":true,"pinned_ddnsgo_current":true,"pinned_ddnsgo_old":true,"pinned_ddnsto_current":true,"pinned_ddnsto_old":true,"regular":true,"safe_hardlink":true,"safe_parent_relative":true,"safe_symlink":true,"setuid":true,"symlink_escape":true,"trailing_payload":true,"truncated":true},"checks":{"completed_oversized_download_rejected":true,"escaping_links_special_files_duplicates_limits_crc_and_truncation_rejected":true,"invalid_archives_never_execute_install_script":true,"offline_reject_device_preserves_plugin_and_uu":true,"offline_reject_link_parent_preserves_plugin_and_uu":true,"offline_reject_symlink_escape_preserves_plugin_and_uu":true,"online_reject_corrupt_crc_preserves_plugin_and_uu":true,"online_reject_declared_large_preserves_plugin_and_uu":true,"online_reject_device_preserves_plugin_and_uu":true,"online_reject_hardlink_escape_preserves_plugin_and_uu":true,"online_reject_link_parent_preserves_plugin_and_uu":true,"online_reject_symlink_escape_preserves_plugin_and_uu":true,"r7_name_only_guard_accepts_escaping_link_metadata":true,"safe_relative_links_and_all_six_pinned_hnd_archives_accepted":true,"script_exit_status_preserved":true,"timeout_kills_owned_process_group_including_term_resistant_child":true,"timeout_preserves_checkpoint_config_and_uu":true,"timeout_recovery_required_blocks_later_writes":true,"valid_update_after_rejections":true},"uu_launches":1,"workflow_records":["initial_install_with_guard","online_reject_symlink_escape","online_reject_link_parent","online_reject_hardlink_escape","online_reject_device","online_reject_declared_large","online_reject_corrupt_crc","offline_reject_symlink_escape","offline_reject_link_parent","offline_reject_device","valid_update_after_rejections","timeout_preserves_checkpoint_config_and_uu"]}
+SOAK_REAPER orphans_reaped=47
+LINUX_READONLY_JOB_STATUS=0

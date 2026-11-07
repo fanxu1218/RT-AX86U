@@ -1,7 +1,7 @@
 {
   "status": "LOCAL_NATIVE_HTTPS_STABILITY_PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w",
-  "candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w",
+  "candidate_sha256": "5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129",
   "checks": {
     "https-stability-alone_repeated_signals_do_not_restart_the_receive_idle_deadline": true,
     "https-stability-alone_same_connection_resume_complete_json_and_no_request_replay": true,
@@ -30,9 +30,9 @@
       "controlled_eintr_before_and_after_header": 2,
       "sigalrm_queries": 2,
       "signals_per_query": 3,
-      "observed_kernel_eintr": 6,
-      "result": "HTTPS_STABILITY_RESULT phase=https-stability-alone queries=36 failures=0 uu_running=false uu_pid=1619 uu_api_requests=1 uu_downloads=1 uu_launches=start trace_eintr=6",
-      "log_sha256": "705ead0f2fa93b9b539f51dd8b2eefdd878dd2306fe5fd510a374592d275d174"
+      "observed_kernel_eintr": 7,
+      "result": "HTTPS_STABILITY_RESULT phase=https-stability-alone queries=36 failures=0 uu_running=false uu_pid=1673 uu_api_requests=1 uu_downloads=1 uu_launches=start trace_eintr=7",
+      "log_sha256": "a1924e58044a5bc61304469efb7e0bac297214b1f17f589f872052fa1280e36f"
     },
     "https-stability": {
       "queries": 68,
@@ -41,9 +41,9 @@
       "controlled_eintr_before_and_after_header": 2,
       "sigalrm_queries": 2,
       "signals_per_query": 3,
-      "observed_kernel_eintr": 6,
-      "result": "HTTPS_STABILITY_RESULT phase=https-stability queries=68 failures=0 uu_running=true uu_pid=1618 uu_api_requests=1 uu_downloads=1 uu_launches=start trace_eintr=6",
-      "log_sha256": "73e32fb4f4acff31734d3650a5f09790dd5e037050b7c8d012a4f3fa64dac565"
+      "observed_kernel_eintr": 9,
+      "result": "HTTPS_STABILITY_RESULT phase=https-stability queries=68 failures=0 uu_running=true uu_pid=1674 uu_api_requests=1 uu_downloads=1 uu_launches=start trace_eintr=9",
+      "log_sha256": "5dbad07f75dd18f2b44334d53d9e83476e6398a419350c8ceaa8c19d0fb3effc"
     }
   },
   "r6_baseline": {
@@ -63,18 +63,18 @@
     "scope": "Real DDNS-Go current package, original ASUS HTTPS/login/TLS and native UU control with owned monitor/worker; no NIC or router."
   },
   "production_files": {
-    "usr/lib/localmod/httpd_bridge.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
+    "usr/lib/localmod/httpd_bridge.so": "5c0f9b73ef10ced872c20e4a75769c69af1cd923cf3260bd9a0bdad8a28b47fb",
     "usr/libexec/localmod/httpd": "d9a24b751b2c6ec0a9bf5931b6b1380e75c136bd672a91a5a5118c6ee9e1586d",
     "usr/libexec/localmod/rc.vendor": "9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62",
     "usr/libexec/localmod/plugin-txn": "23e575aa4299b075a7fa120fb6672e5c417dca5892f1449c29905f9a862af232",
-    "usr/libexec/localmod/bootstrap.sh": "fd6980a8b1ff18a68897d1ecbe0725dd5918331fe3956c7beadb2e224f33ed3f",
+    "usr/libexec/localmod/bootstrap.sh": "015a3f90d8b1cb99cd16797be5ba58e3870e7e3ee237bb09c5afdd737f369917",
     "rom/etc/koolshare/scripts/base.sh": "d29dcb38a94aa51b0df22b0fdd8a6a9e9636777bad3a2ae4431d9af308773726",
     "usr/sbin/curl": "79b37917d01852d7624e36613dde5354a31ffa86b470d506bdc205f920a0d2d9",
     "usr/sbin/wget": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749"
   },
   "test_fixtures": {
-    "build/https_trace_fixture.so": "c84350ad038a96744487c04054ad44928217798988973272b68217009b045ab5",
-    "build/relay-idle-fixture": "ec5f97d8ff95fac88b34acb367a08a4d4db83e329c5774cb5f5d032b6766b1f0"
+    "build/https_trace_fixture.so": "334f974097e5d9032cd27f153fd45c37583189dbd204a364f03f96235138d3c8",
+    "build/relay-idle-fixture": "353e7510d4276018728eefd9bd2acd5dbf8663f67372e060c7dc1205445d7989"
   },
   "scope": [
     "104 distinct authenticated real DDNS-Go status/version RPCs, no automatic request retry",

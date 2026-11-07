@@ -1,7 +1,7 @@
 {
   "status": "LOCAL_INTERRUPTION_RECOVERY_PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w",
-  "candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w",
+  "candidate_sha256": "5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129",
   "checks": {
     "foundation_foundation_real_plugin_configuration_and_uu_synced": true,
     "download_cut_download_interrupted_before_mutation": true,
@@ -213,11 +213,11 @@
   },
   "production_files": {
     "usr/libexec/localmod/plugin-txn": "23e575aa4299b075a7fa120fb6672e5c417dca5892f1449c29905f9a862af232",
-    "usr/libexec/localmod/installer-guard.sh": "fa6a2ae1084b2546aa873e1ef079c7a2b8df810ece6bc63c2e2ed54b348e63bf",
-    "usr/libexec/localmod/bootstrap.sh": "fd6980a8b1ff18a68897d1ecbe0725dd5918331fe3956c7beadb2e224f33ed3f",
-    "usr/lib/localmod/httpd_bridge.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
-    "rom/etc/koolshare/scripts/ks_app_install.sh": "3724f3433cb77eb4d11791d9f1af32877d692f390be6c0d7f05c27714842761a",
-    "rom/etc/koolshare/scripts/ks_tar_install.sh": "fab2333cbc0bb7ffa7dce9504ddedca73acd8c17168491dfc26d3db4b64d1842"
+    "usr/libexec/localmod/installer-guard.sh": "60b26aba176d5e5bb81711032985f29ebeefe55194183774a74ce38541508982",
+    "usr/libexec/localmod/bootstrap.sh": "015a3f90d8b1cb99cd16797be5ba58e3870e7e3ee237bb09c5afdd737f369917",
+    "usr/lib/localmod/httpd_bridge.so": "5c0f9b73ef10ced872c20e4a75769c69af1cd923cf3260bd9a0bdad8a28b47fb",
+    "rom/etc/koolshare/scripts/ks_app_install.sh": "4ec103ed7653f5fb1877700a045d92624adc2df3ac7a00ddf181c7a80eea5ca7",
+    "rom/etc/koolshare/scripts/ks_tar_install.sh": "23bd082e66cc70251b235accc4492528433fda3c52e94eeb5a5bf9c1c283543d"
   },
   "r4_baseline": {
     "image": "RT-AX86U_388_24437_localmod2_r4_EXPERIMENTAL.w",

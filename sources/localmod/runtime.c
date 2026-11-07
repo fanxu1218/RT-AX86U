@@ -13,6 +13,7 @@
 #include <sys/wait.h>
 #include <time.h>
 #include <unistd.h>
+#include "bounded_log.h"
 volatile sig_atomic_t lm_stopping;
 
 int lm_directory(const char *path) {
@@ -30,6 +31,7 @@ int lm_run(char *const argv[],unsigned seconds){
  if(pid==0){
   setsid();sigemptyset(&mask);sigprocmask(SIG_SETMASK,&mask,NULL);
   for(int i=1;i<NSIG;i++)if(i!=SIGKILL && i!=SIGSTOP)signal(i,SIG_DFL);
+  if(!strcmp(argv[0],LM_DISPATCH) && lm_capture_log("events"))_exit(127);
   unsetenv("LD_PRELOAD");setenv("LOCALMOD_HOOK_DEPTH","1",1);
   execv(argv[0],argv);_exit(127);
  }
@@ -69,13 +71,26 @@ int lm_dispatch(const struct lm_event *event){
 }
 static int enqueue(const struct lm_event *event,char *queued,size_t capacity){
  if(lm_directory(LM_BASE) || lm_directory(LM_BASE "/queue"))return -1;
- char temp[]=LM_BASE "/queue/.tmp.XXXXXX";int fd=mkstemp(temp);if(fd<0)return -1;
+ int guard=open(LM_BASE "/queue.lock",O_CREAT|O_RDWR|O_CLOEXEC|O_NOFOLLOW,0600);if(guard<0)return -1;
+ double deadline=monotonic()+0.25;
+ while(flock(guard,LOCK_EX|LOCK_NB)){if(errno!=EWOULDBLOCK || monotonic()>=deadline){close(guard);return -1;}usleep(1000);}
+ DIR *dir=opendir(LM_BASE "/queue");unsigned count=0;struct dirent *entry;
+ if(!dir){close(guard);return -1;}
+ while((entry=readdir(dir))){if(entry->d_name[0]!='.')count++;if(count>=LM_QUEUE_LIMIT+LM_BARRIER_RESERVE)break;}closedir(dir);
+ unsigned limit=!strcmp(event->name,"__barrier")?LM_QUEUE_LIMIT+LM_BARRIER_RESERVE:LM_QUEUE_LIMIT;
+ if(count>=limit){
+  /* Explicit backpressure, never silently replace/reorder WAN or mount events. */
+  char notice[192];int n=snprintf(notice,sizeof(notice),"event queue full (%u), rejected %s; inspect event/status logs\n",count,event->name);
+  lm_log_write("events",notice,(size_t)n);close(guard);errno=EAGAIN;return -1;
+ }
+ char temp[]=LM_BASE "/queue/.tmp.XXXXXX";int fd=mkstemp(temp);if(fd<0){close(guard);return -1;}
  const char *p=(const char *)event;size_t left=sizeof(*event);int ok=1;
  while(left){ssize_t n=write(fd,p,left);if(n<0 && errno==EINTR)continue;if(n<=0){ok=0;break;}p+=n;left-=(size_t)n;}
  if(fsync(fd))ok=0;close(fd);
  struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);
  static unsigned sequence;char final[256];snprintf(final,sizeof(final),LM_BASE "/queue/%020lld.%09ld.%010ld.%08u.evt",(long long)t.tv_sec,t.tv_nsec,(long)getpid(),sequence++);
- if(!ok || rename(temp,final)){unlink(temp);return -1;}
+ if(!ok || rename(temp,final)){unlink(temp);close(guard);return -1;}
+ close(guard);
  if(queued)snprintf(queued,capacity,"%s",final);return 0;
 }
 int lm_emit(const char *name,const char *a,const char *b,int synchronous){

@@ -232,7 +232,7 @@ def main():
                                "build/memory-exec-fixture", "build/memory_exec_fixture.c"], check=True)
         subprocess.run(flags + ["-target", "arm-linux-gnueabi.2.26", "-mcpu=cortex_a53", "-shared", "-fPIC",
                                "-o", "build/https_trace_fixture.so", "build/https_trace_fixture.c", "-ldl"], check=True)
-        sources = ["build/test_soak.go", "build/test_memory.go", "build/memory_cycles.go", "build/native_runtime_client.go",
+        sources = ["build/test_soak.go", "build/test_memory.go", "build/memory_cycles.go", "build/httpd_memory.go", "build/native_runtime_client.go",
                    "build/test_online.go", "build/coexist_helpers.go"]
         subprocess.run(["go", "build", "-trimpath", "-o", "build/test-soak"] + sources, check=True,
                        env=dict(os.environ, GOOS="linux", GOARCH="arm64", CGO_ENABLED="0"))

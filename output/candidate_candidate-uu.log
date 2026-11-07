@@ -1,0 +1,42 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107092346, 2026/11/7 ~ 2046/11/8
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+starting ntp...
+starting ntp...
+starting ntp...
+download uuplugin script info successfully
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: 166d8454e88465a57058a7973ec28ffa
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: 166d8454e88465a57058a7973ec28ffa
+download uuplugin script successfully
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: 166d8454e88465a57058a7973ec28ffa
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: 166d8454e88465a57058a7973ec28ffa
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+UU_RECOVERY_RESULT {"checks":{"api_503_preserves_center_worker_data_and_native_once_policy":true,"checksum_mismatch_preserves_center_worker_data_and_native_once_policy":true,"controlled_wan_notifications_and_fresh_ntp_cycle_recover_once":true,"delayed_ntp_then_success_preserves_center_worker_data_and_native_once_policy":true,"dns_unavailable_preserves_center_worker_data_and_native_once_policy":true,"existing_owned_uu_worker_pid_stays_alive_through_all_faults":true,"malformed_response_preserves_center_worker_data_and_native_once_policy":true,"no_download_before_delayed_ntp_ready":true,"truncated_monitor_preserves_center_worker_data_and_native_once_policy":true},"details":{"api_503":{"api_calls":1,"monitor_downloads":0,"monitor_executed":false},"checksum_mismatch":{"api_calls":1,"monitor_downloads":1,"monitor_executed":false},"delayed_ntp_then_success":{"api_calls":1,"monitor_downloads":1,"monitor_executed":true},"dns_unavailable":{"api_calls":0,"monitor_downloads":0,"monitor_executed":false},"malformed_response":{"api_calls":1,"monitor_downloads":0,"monitor_executed":false},"truncated_monitor":{"api_calls":1,"monitor_downloads":2,"monitor_executed":false}},"persistent_data_preserved":true,"recovery_policy":"fresh native NTP cycle after controlled network restoration; no automatic replay of a failed native once-only cycle","uu_worker_pid":1672}
+SOAK_REAPER orphans_reaped=3
+LINUX_READONLY_JOB_STATUS=0

@@ -57,6 +57,10 @@ cat /tmp/.localmod/bootstrap.log
 echo REAL_PLUGIN_SETUP_READY
 
 phase=$(cat /work/build/real-plugin-phase)
+case "$phase" in hardening-installer|candidate-installer) exec /work/build/test-installer-boundaries "$phase";; esac
+case "$phase" in hardening-resources|candidate-resources) exec /work/build/test-resource-bounds "$phase";; esac
+case "$phase" in hardening-uu|candidate-uu) exec /work/build/test-uu-recovery "$phase";; esac
+case "$phase" in hardening-health|candidate-health) exec /work/build/test-health "$phase";; esac
 case "$phase" in soak-*) export LOCALMOD_HTTPS_TRACE=1; exec /work/build/test-soak "$phase";; esac
 case "$phase" in https-stability*) export LOCALMOD_HTTPS_TRACE=1; exec /work/build/test-https-stability "$phase";; esac
 case "$phase" in

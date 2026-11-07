@@ -12,9 +12,9 @@ offline_install(){
  case "$upload" in ''|*/*|*'..'*|*[!a-zA-Z0-9_.-]*) echo_date "无效的上传文件名。"; ks_finish 1;; esac
  [ -f "/tmp/upload/$upload" ] && [ ! -L "/tmp/upload/$upload" ] || { echo_date "未找到上传的安装包。"; ks_finish 1; }
  cp "/tmp/upload/$upload" "$KS_DOWNLOAD" || ks_finish 1
- tar -tzf "$KS_DOWNLOAD" > "$KS_LOCK/members" 2>/dev/null || ks_finish 1
- softcenter_installing_todo=$(sed 's|^\./||' "$KS_LOCK/members" | head -n1 | cut -d/ -f1)
+ softcenter_installing_todo=$(/usr/libexec/localmod/archive-guard "$KS_DOWNLOAD") || ks_finish 1
  ks_valid_module "$softcenter_installing_todo" || ks_finish 1
+ /usr/libexec/localmod/localmod-status record "$softcenter_installing_todo" running 0 || true
  case "$softcenter_installing_todo" in softcenter|koolcenter) echo_date "此官改的软件中心核心随固件更新，不接受离线覆盖核心。"; ks_finish 1;; esac
  ks_archive_valid || { echo_date "插件压缩包目录不匹配或解压失败！"; ks_finish 1; }
  ks_scope_prepare || ks_finish 1
@@ -31,7 +31,7 @@ offline_install(){
  # version, otherwise the fallback is 0.1 rather than a stale old version.
  dbus remove "softcenter_module_${softcenter_installing_todo}_version"
  chmod 755 "$KS_STAGE/install.sh"
- if ! start-stop-daemon -S -q -x "$KS_STAGE/install.sh"; then
+ if ! ks_run_script "$KS_STAGE/install.sh"; then
   ks_uninstaller_restore
   ks_finish 1
  fi
@@ -45,5 +45,5 @@ offline_install(){
  dbus remove soft_install_version
  ks_finish 0
 }
-offline_install 2>&1 | tee -a "$LOG_FILE" /tmp/upload/soft_log_backup.txt
+offline_install 2>&1 | /usr/libexec/localmod/log-limit --tee offline
 ks_operation_result

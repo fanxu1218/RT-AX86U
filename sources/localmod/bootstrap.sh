@@ -12,7 +12,10 @@ VERSION=$(cat /rom/etc/localmod-core-id 2>/dev/null)
 command=${1:-start}
 mkdir -p "$BASE"
 chmod 700 "$BASE"
-exec >>"$BASE/bootstrap.log" 2>&1
+if [ "${LOCALMOD_BOOTSTRAP_LOGGING:-}" != 1 ]; then
+ exec /usr/libexec/localmod/log-limit bootstrap /bin/sh "$0" "$@"
+fi
+unset LOCALMOD_BOOTSTRAP_LOGGING
 
 prepare(){
  grep -q ' /jffs ' /proc/mounts || { echo 'JFFS is not mounted'; return 1; }
@@ -127,7 +130,7 @@ skipd_start(){
   [ "$skipd_mode" != recovery ] || { echo 'Refusing to adopt an existing database during recovery'; return 1; }
   return 0
  fi
- /usr/bin/skipd -d /jffs/.localmod/ksdb >"$BASE/skipd.log" 2>&1 &
+ /usr/libexec/localmod/log-limit skipd /usr/bin/skipd -d /jffs/.localmod/ksdb >/dev/null 2>&1 &
  [ "$skipd_mode" != recovery ] || RECOVERY_DB_STARTED=1
  retries=30
  while ! /usr/bin/dbus list softcenter_ >/dev/null 2>&1; do
@@ -167,7 +170,7 @@ eventd_start(){
   pid=$(cat "$BASE/eventd.pid")
   if [ -r "/proc/$pid/cmdline" ] && grep -q 'localmod-event' "/proc/$pid/cmdline"; then return 0; fi
  fi
- /usr/libexec/localmod/localmod-event --daemon >"$BASE/events.log" 2>&1 &
+ /usr/libexec/localmod/localmod-event --daemon >/dev/null 2>&1 &
  child=$!
  attempts=10
  while [ "$attempts" -gt 0 ]; do

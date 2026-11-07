@@ -9,6 +9,7 @@ import argparse
 import re
 from patch_online_installer import patch_online_installer
 from pathlib import Path
+from release_config import CONFIG
 
 root=Path(__file__).resolve().parent.parent
 official=root/'build/casefs/official_rootfs'
@@ -60,6 +61,8 @@ put(root/'sources/localmod/bootstrap.sh','usr/libexec/localmod/bootstrap.sh',0o7
 put(root/'sources/localmod/dispatch.sh','usr/libexec/localmod/dispatch.sh',0o755)
 put(root/'sources/localmod/installer-guard.sh','usr/libexec/localmod/installer-guard.sh',0o755)
 put(root/'build/plugin-txn','usr/libexec/localmod/plugin-txn',0o500)
+for name in ['archive-guard','plugin-run','log-limit','localmod-status']:
+    put(root/'build'/name,'usr/libexec/localmod/'+name,0o500)
 put(root/'sources/localmod/jffsinit.sh','usr/bin/jffsinit.sh',0o755)
 put(root/'sources/localmod/kscore.sh',core+'/bin/kscore.sh',0o755)
 put(root/'sources/localmod/helper.sh','usr/sbin/helper.sh',0o755)
@@ -131,12 +134,13 @@ state.write_text(state.read_text()+'''
 })();
 ''')
 put(root/'sources/localmod/Module_Localmod.asp','www/Module_Localmod.asp',0o644)
+(stage/'www/Module_Localmod.asp').write_text((stage/'www/Module_Localmod.asp').read_text().replace('@REVISION@',CONFIG['variant']+'-'+CONFIG['revision']))
 ui=stage/core/'res/soft-v19/assets/index.3d07b566.js'
 text=ui.read_text()
 assert 'href:"http://"+a.netaddr+":3032"' in text
 text=text.replace('href:"http://"+a.netaddr+":3032"','href:"/Module_Localmod.asp"')
 ui.write_text(text)
-release={'base':'ASUS 3.0.0.4.388_24437-g81951d7','variant':'localmod2','revision':'r7','status':'EXPERIMENTAL_NOT_DEVICE_TESTED',
+release={'base':CONFIG['base'],'variant':CONFIG['variant'],'revision':CONFIG['revision'],'status':CONFIG['status'],
          'software_center':'KoolCenter 1.9.50 from 388.11_0-20260429',
          'event_hooks':['init-start','services-start','services-stop','service-event','service-event-end','wan-event','wan-start','firewall-start','nat-start','pre-mount','post-mount','unmount'],
          'postconf':['dnsmasq'],

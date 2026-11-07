@@ -19,7 +19,7 @@ def main():
  flags=['sources/zig-aarch64-macos-0.15.2/zig','cc','-O2']
  subprocess.run(flags+['-target','aarch64-linux-musl','-static','-s','-o','build/soak-init-fixture','build/soak_init_fixture.c'],check=True)
  subprocess.run(flags+['-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53','-shared','-fPIC','-o','build/https_trace_fixture.so','build/https_trace_fixture.c','-ldl'],check=True)
- subprocess.run(['go','build','-trimpath','-o','build/test-soak','build/test_soak.go','build/test_memory.go','build/memory_cycles.go','build/native_runtime_client.go','build/test_online.go','build/coexist_helpers.go'],check=True,env=dict(os.environ,GOOS='linux',GOARCH='arm64',CGO_ENABLED='0'))
+ subprocess.run(['go','build','-trimpath','-o','build/test-soak','build/test_soak.go','build/test_memory.go','build/memory_cycles.go','build/httpd_memory.go','build/native_runtime_client.go','build/test_online.go','build/coexist_helpers.go'],check=True,env=dict(os.environ,GOOS='linux',GOARCH='arm64',CGO_ENABLED='0'))
  smoke=args.smoke;phase='soak-smoke' if smoke else 'soak-30m';artifact=('soak-'+args.label+('-smoke' if smoke else '-30m')) if args.label else phase
  (ROOT/'build/real-plugin-phase').write_text(phase+'\n')
  print('Running',phase,flush=True)

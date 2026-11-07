@@ -8,6 +8,10 @@ def patch_online_installer(text):
         text = text.replace(old, new)
 
     text = text.replace('--no-check-certificate ', '')
+    # Bound the actual frontend log stream, including a noisy root installer.
+    assert 'tee -a $LOG_FILE' in text or 'tee -a "$LOG_FILE"' in text
+    text = text.replace('tee -a $LOG_FILE','/usr/libexec/localmod/log-limit --tee install')
+    text = text.replace('tee -a "$LOG_FILE"','/usr/libexec/localmod/log-limit --tee install')
     replace('source /koolshare/scripts/base.sh\neval $(dbus export softcenter_installing_)',
             'source /koolshare/scripts/base.sh\n'
             'LOG_FILE=/tmp/upload/soft_install_log.txt\n'
@@ -30,7 +34,9 @@ def patch_online_installer(text):
     end = text.index('\techo_date "插件【${softcenter_installing_title}】将会被安装', start)
     text = text[:start] + '\tks_scope_prepare || quit_ks_install\n' + text[end:]
     replace('wget -t 2 -T 20 --dns-timeout=15 ${TAR_URL}',
-            'wget -t 2 -T 20 --dns-timeout=15 -O "$KS_DOWNLOAD" "$TAR_URL"')
+            '/usr/libexec/localmod/plugin-run 90 "$KS_DOWNLOAD" 67108864 wget -t 2 -T 20 --dns-timeout=15 -O "$KS_DOWNLOAD" "$TAR_URL"')
+    replace('start-stop-daemon -S -q -x /tmp/${softcenter_installing_todo}/install.sh',
+            'ks_run_script "/tmp/${softcenter_installing_todo}/install.sh"')
     replace('md5sum /tmp/${FNAME}', 'md5sum "$KS_DOWNLOAD"')
     replace('tar -zxf ${FNAME}',
             'ks_archive_valid || { echo_date "插件压缩包目录不匹配或解压失败！"; quit_ks_install; }\n'
@@ -51,11 +57,11 @@ def patch_online_installer(text):
     replace('if [ -f /koolshare/scripts/${softcenter_installing_todo}_uninstall.sh]; then',
             'if [ -f "/koolshare/scripts/${softcenter_installing_todo}_uninstall.sh" ]; then')
     replace('start-stop-daemon -S -q -x /koolshare/scripts/${softcenter_installing_todo}_uninstall.sh 2>&1',
-            'start-stop-daemon -S -q -x "/koolshare/scripts/${softcenter_installing_todo}_uninstall.sh" 2>&1 || {\n'
+            'ks_run_script "/koolshare/scripts/${softcenter_installing_todo}_uninstall.sh" 2>&1 || {\n'
             '\t\techo_date "插件卸载脚本失败，保留登记和配置。"; quit_ks_uninstall; }')
     start = text.index(' \t\tstart-stop-daemon -S -q -x /koolshare/scripts/uninstall_${softcenter_installing_todo}.sh 2>&1')
     end = text.index('\telse\n\t\techo_date "没有找到插件', start)
-    text = text[:start] + '\t\tstart-stop-daemon -S -q -x "/koolshare/scripts/uninstall_${softcenter_installing_todo}.sh" 2>&1 || {\n' + \
+    text = text[:start] + '\t\tks_run_script "/koolshare/scripts/uninstall_${softcenter_installing_todo}.sh" 2>&1 || {\n' + \
            '\t\t echo_date "插件卸载脚本失败，保留登记和配置。"; quit_ks_uninstall; }\n' + text[end:]
     replace('rm -rf /koolshare/init.d/*${softcenter_installing_todo}*',
             'rm -f /koolshare/init.d/[SVTNMU][0-9][0-9]"${softcenter_installing_todo}".sh')

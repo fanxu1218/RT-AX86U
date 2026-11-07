@@ -18,6 +18,7 @@
 #include <sys/prctl.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
+#include <time.h>
 #include <unistd.h>
 
 static char *(*real_get)(const char *);
@@ -66,12 +67,32 @@ static int scripts_enabled(void){
   execl("/bin/nvram","nvram","get","jffs2_scripts",(char *)NULL);_exit(127);
  }
  close(descriptors[1]);struct pollfd descriptor={.fd=descriptors[0],.events=POLLIN};
- if(child>0 && poll(&descriptor,1,2000)>0){
-  ssize_t n=read(descriptors[0],value,sizeof(value)-1);if(n>=0)ok=1;
- }else if(child>0)kill(child,SIGKILL);
- close(descriptors[0]);if(child>0)while(waitpid(child,&status,0)<0 && errno==EINTR){}
+ /* Read through EOF before closing the pipe. A valid utility may write its
+  * value and newline separately; an early close otherwise delivers SIGPIPE
+  * and turns a true script flag into a false negative. Never repeat nvram. */
+ struct timespec now;clock_gettime(CLOCK_MONOTONIC,&now);
+ double deadline=now.tv_sec+now.tv_nsec/1e9+2.0;size_t used=0;
+ while(child>0){
+  clock_gettime(CLOCK_MONOTONIC,&now);double left=deadline-now.tv_sec-now.tv_nsec/1e9;
+  if(left<=0 || used==sizeof(value)-1)break;
+  int result=poll(&descriptor,1,(int)(left*1000)+1);
+  if(result<0 && errno==EINTR)continue;if(result<=0)break;
+  ssize_t n=read(descriptors[0],value+used,sizeof(value)-1-used);
+  if(n<0 && errno==EINTR)continue;if(n<0)break;
+  if(!n){ok=1;break;}used+=(size_t)n;
+ }
+ close(descriptors[0]);
+ if(child>0){
+  for(;;){
+   pid_t result=waitpid(child,&status,WNOHANG);
+   if(result==child)break;if(result<0 && errno!=EINTR){ok=0;break;}
+   clock_gettime(CLOCK_MONOTONIC,&now);
+   if(!ok || now.tv_sec+now.tv_nsec/1e9>=deadline){kill(child,SIGKILL);while(waitpid(child,&status,0)<0 && errno==EINTR){}ok=0;break;}
+   usleep(1000);
+  }
+ }
  sigaction(SIGCHLD,&oldchild,NULL);sigprocmask(SIG_SETMASK,&oldmask,NULL);
- return ok && WIFEXITED(status) && WEXITSTATUS(status)==0 && value[0]!='0';
+ return ok && used && WIFEXITED(status) && WEXITSTATUS(status)==0 && value[0]!='0';
 }
 static void emit(const char *event,const char *a,const char *b,int sync){if(scripts_enabled()){guard++;lm_emit(event,a,b,sync);guard--;}}
 static void flush_wan(void){

@@ -441,6 +441,14 @@ func main() {
 	x.cert = nrRead("/jffs/cert.tgz")
 	x.data()
 	x.started = time.Now()
+	if os.Args[1] == "soak-httpd-cache" || os.Args[1] == "soak-httpd-cache-overlay" {
+		httpdCacheRun(x)
+		return
+	}
+	if os.Args[1] == "soak-httpd-memory" {
+		httpdMemoryRun(x)
+		return
+	}
 	if strings.HasPrefix(os.Args[1], "soak-memory") {
 		memoryRun(x)
 		return

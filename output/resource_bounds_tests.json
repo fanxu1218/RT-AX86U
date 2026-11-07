@@ -1,0 +1,34 @@
+{
+  "status": "SOURCE_OVERLAY_CHECKS_PASS",
+  "result": {
+    "accepted": 128,
+    "checks": {
+      "accepted_events_drain_once_in_queue_order": true,
+      "all_managed_logs_capped_at_two_128kib_files": true,
+      "barrier_finishes_prior_events_using_reserved_capacity": true,
+      "concurrent_256_events_admit_exactly_128_with_explicit_backpressure": true,
+      "full_queue_preserves_synchronous_pre_mount_execution": true,
+      "legacy_large_logs_trim_and_rotate_without_changing_exit_status": true,
+      "noisy_and_background_hooks_keep_running_with_bounded_private_logs": true,
+      "noisy_online_offline_and_backup_frontend_logs_bounded_with_completion_marker": true,
+      "production_bootstrap_restart_preserves_database_certificate_private_api_and_uu": true,
+      "queue_accepts_again_after_drain": true
+    },
+    "managed_log_limit_bytes": 131072,
+    "maximum_queue_entries": 128,
+    "rejected": 128
+  },
+  "base_candidate_sha256": "989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677",
+  "firmware_rebuilt": false,
+  "overlay_files": {
+    "usr/libexec/localmod/plugin-run": "714285d262804c50a99d4ff5a9d3d7a938ccd27b5a5d9fb6628005561efb59a3",
+    "usr/libexec/localmod/log-limit": "7d41c03ccb6d694bbf1b2fca8e87019a1b1af5fb15b13dae7ec0334d5533e340",
+    "usr/libexec/localmod/bootstrap.sh": "015a3f90d8b1cb99cd16797be5ba58e3870e7e3ee237bb09c5afdd737f369917",
+    "usr/libexec/localmod/installer-guard.sh": "f0e5789ff9abb8258eef30640d441e62de605d096beaeddcad2213a68151d189",
+    "usr/libexec/localmod/archive-guard": "92e708822c07e97e06f48623fc00d76c99060cec97951b6f05b336e68a007cd1",
+    "usr/libexec/localmod/localmod-event": "5652237436b123272cfd2cd78ddbb51cc2fdb801451992ea43d924b81f65617a",
+    "rom/etc/koolshare/scripts/ks_app_install.sh": "4ec103ed7653f5fb1877700a045d92624adc2df3ac7a00ddf181c7a80eea5ca7",
+    "rom/etc/koolshare/scripts/ks_tar_install.sh": "1b885c0c8149ec31f47c46d141695ea9f1812fd22867a42d8dfeb878b45ab810"
+  },
+  "log_sha256": "bc9ccd1203f0f2bbc395bd67c8d6889b46fa17526797a4e54e2c19c3acbcaab7"
+}

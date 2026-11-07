@@ -1,6 +1,6 @@
 # Alpha 3 → localmod2：刷机、实机验收与回退
 
-整理日期：2026-10-31。适用设备：**大陆销售的普通 RT-AX86U**；当前版本：`386.3_2 KoolCenter Alpha 3`；目标：`localmod2-r7-experimental`，基于 ASUS `3.0.0.4.388_24437`，软件中心 `1.9.50`。
+整理日期：2026-11-07。适用设备：**大陆销售的普通 RT-AX86U**；当前版本：`386.3_2 KoolCenter Alpha 3`；目标：`localmod2-r8-experimental`，基于 ASUS `3.0.0.4.388_24437`，软件中心 `1.9.50`。
 
 **这是一份待执行的实验方案。直升/降级是否被设备接受、真实启动、软件中心及 UU 均未在这台路由器上验证。** 已通过的模型和镜像检查见[候选版说明](官改候选版说明.md)，不能替代下列实机项目。本文没有执行任何路由器命令。
 
@@ -18,16 +18,16 @@
 
 | 用途 | 文件 | SHA256 |
 |---|---|---|
-| 本次目标，85,721,108 字节 | `RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w` | `989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677` |
+| 本次目标，85,721,108 字节 | `RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w` | `5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129` |
 | 刷回原 Alpha 3 | `RT-AX86U_386.3_2_cferom_pureubi_koolcenter_alpha3.w` | `c3d01f6df5916ab5f14a2dabd9c79b6d7c28c73b44bed122fdc2636568cf6838` |
 | 纯官方恢复备用，已在本地核验的固定版本 | `RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w` | `de1caf609347beea394ebab956bddf0b391db592d1ad5f99e9d37e4d0b876af0` |
 
-目标下载：[localmod2 发布页](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r7-experimental)。纯官方包应从 [RT-AX86U 支持页](https://www.asus.com/hk/supportonly/rt-ax86u/helpdesk_bios?model2Name=RT-AX86U)取得；上表固定版本不表示当前最新推荐版本。若另选官方版本，须单独核验来源及型号，不套用此哈希。
+目标下载：[localmod2 发布页](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r8-experimental)。纯官方包应从 [RT-AX86U 支持页](https://www.asus.com/hk/supportonly/rt-ax86u/helpdesk_bios?model2Name=RT-AX86U)取得；上表固定版本不表示当前最新推荐版本。若另选官方版本，须单独核验来源及型号，不套用此哈希。
 
 Mac 终端，进入存放目标固件的目录后运行：
 
 ```sh
-shasum -a 256 RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w
+shasum -a 256 RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w
 ```
 
 结果须与上表完全一致。上传解压后的 `.w` 文件，不能上传 ZIP、源码包或报告，也不要为了绕过拒绝而改扩展名、改头或关闭校验。原 Alpha 3 文件名含 `cferom`，**仅考虑正常管理页接受的整包回刷，不单独写 CFE/引导区**。
@@ -280,3 +280,14 @@ sync
 ## r7 HTTPS 与 DDNS-Go 验收补充
 
 实机允许刷写后，以同一浏览器会话连续查询 DDNS-Go 状态和版本，分别核对 UU 未开启和开启时的完整响应、插件进程/配置及 UU 状态；不能只凭 HTTP 200 判定成功。r7 本地修复已定位的信号中断接收问题，不应因此自动重试设置或安装请求。当前任务仍未连接或刷写路由器。
+
+
+## r8 加固与状态页验收补充
+
+先完成本文件的备份和升级前检查；本轮没有执行刷机。获得后续明确刷写安排后，实机应额外核对：
+
+1. 从软件中心进入状态与恢复页，使用同一原厂会话刷新 JFFS、进程和检查点信息；退出后两个摘要接口均应拒绝读取。导出 JSON 不应出现密码、配置、证书、Cookie 或 UU 账号。
+2. 普通 HND 插件完整完成一次安装、更新、卸载；保留配置并检查日志完成标记。非标准 PAX/GNU 扩展归档可能提前拒绝，先核对包格式，勿绕过检查解压。
+3. 检查普通事件及有输出的钩子；发生队列饱和时应记录拒绝，待恢复后重触发必要操作。限额日志只保留有限尾部，故障后及时保存。
+4. 对比 UU 未开启/开启时软件中心和 DDNS-Go 查询，并分别测试网络断开/恢复及 NTP 就绪。原厂失败周期不会由官改强制自动重试，账号与加速状态以官方页面和实际流量为准。
+5. 对照验证 HTTPS 缓存趋稳、登录退出及重启证书恢复；本地六轮不能替代多天实机观察。检查点异常或空间不足时保留副本、停止插件写入，按前文回退；不删除 UU 数据腾空间。

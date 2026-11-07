@@ -5,6 +5,10 @@ ks_valid_module(){
  case "$1" in ''|*[!a-zA-Z0-9_-]*) return 1;; esac
  [ "${#1}" -le 64 ]
 }
+ks_guard_note(){
+ case "$LOG_FILE" in /tmp/upload/soft_log.txt) KS_LOG_KIND=offline;; *) KS_LOG_KIND=install;; esac
+ echo_date "$*" | /usr/libexec/localmod/log-limit --tee "$KS_LOG_KIND"
+}
 ks_operation_begin(){
  KS_HAVE_LOCK=0
  case "$2" in download_log|clean_log) return 0;; esac
@@ -13,7 +17,7 @@ ks_operation_begin(){
  mkdir -p /tmp/.localmod || return 1
  chmod 700 /tmp/.localmod || return 1
  if ! (umask 077; mkdir "$KS_LOCK") 2>/dev/null; then
-  echo_date "软件中心：已有插件操作正在运行，本次请求未执行。" >> "$LOG_FILE"
+  ks_guard_note "软件中心：已有插件操作正在运行，本次请求未执行。"
   http_response "$1"
   return 1
  fi
@@ -24,7 +28,7 @@ ks_operation_begin(){
  trap 'ks_operation_end' EXIT
  trap 'exit 1' HUP INT TERM
  if ! /usr/libexec/localmod/plugin-txn begin "$KS_OWNER_PID" "${LOG_FILE##*/}"; then
-  echo_date "插件操作正在运行或中断恢复尚未完成；请查看日志并重启路由器恢复。" >> "$LOG_FILE"
+  ks_guard_note "插件操作正在运行或中断恢复尚未完成；请查看日志并重启路由器恢复。"
   http_response "$1"
   rm -rf "$KS_LOCK"
   KS_HAVE_LOCK=0
@@ -39,6 +43,7 @@ ks_operation_end(){
  [ "$KS_SELF_PID" = "$KS_OWNER_PID" ] || return 0
  if [ ! -f "$KS_STATUS_FILE" ]; then
   /usr/libexec/localmod/plugin-txn abandon "$KS_OWNER_PID"
+  /usr/libexec/localmod/localmod-status record "${softcenter_installing_todo:-unknown}" interrupted 1 || true
  fi
  ks_scope_clean
  rm -rf "$KS_LOCK"
@@ -47,14 +52,15 @@ ks_operation_validate(){
  [ "$KS_HAVE_LOCK" = 1 ] || return 0
  if ! ks_valid_module "$softcenter_installing_todo"; then
   dbus set softcenter_installing_result=1
-  echo_date "软件中心：插件标识无效，本次请求未执行。" >> "$LOG_FILE"
-  echo XU6J03M6 >> "$LOG_FILE"
+  ks_guard_note "软件中心：插件标识无效，本次请求未执行。"
+  printf 'XU6J03M6\n' | /usr/libexec/localmod/log-limit --tee install
   http_response "$1"
   /usr/libexec/localmod/plugin-txn finish "$KS_OWNER_PID" 1
   printf '1\n' > "$KS_STATUS_FILE"
   return 1
  fi
  dbus set softcenter_installing_result=running
+ /usr/libexec/localmod/localmod-status record "$softcenter_installing_todo" running 0 || true
 }
 ks_checkpoint(){
  /usr/libexec/localmod/plugin-txn checkpoint "$KS_OWNER_PID" "$softcenter_installing_todo"
@@ -82,11 +88,10 @@ ks_scope_clean(){
  rm -f "$KS_DOWNLOAD"
 }
 ks_archive_valid(){
- tar -tzf "$KS_DOWNLOAD" > "$KS_LOCK/members" 2>/dev/null || return 1
- awk -v module="$softcenter_installing_todo" '
-  { sub(/^\.\//, ""); if ($0 != module && index($0,module "/") != 1) bad=1;
-    n=split($0,a,"/"); for(i=1;i<=n;i++) if(a[i]=="..") bad=1; count++ }
-  END { exit (bad || !count) ? 1 : 0 }' "$KS_LOCK/members"
+ /usr/libexec/localmod/archive-guard "$KS_DOWNLOAD" "$softcenter_installing_todo" >/dev/null
+}
+ks_run_script(){
+ /usr/libexec/localmod/plugin-run 300 - 0 start-stop-daemon -S -q -x "$1"
 }
 ks_uninstaller_backup(){
  KS_UNINSTALL=/koolshare/scripts/uninstall_$softcenter_installing_todo.sh
@@ -119,6 +124,7 @@ ks_finish(){
   echo_date "未提交的插件变更已保留检查点。请重启检查并尝试恢复；校验或空间异常时会保留副本并停止软件中心。"
  fi
  printf '%s\n' "$KS_CODE" > "$KS_STATUS_FILE"
+ /usr/libexec/localmod/localmod-status record "${softcenter_installing_todo:-unknown}" finished "$KS_CODE" || true
  echo_date "============================= end ================================="
  echo XU6J03M6
  exit "$KS_CODE"

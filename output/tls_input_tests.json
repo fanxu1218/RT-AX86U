@@ -1,0 +1,194 @@
+{
+  "status": "FINAL_CANDIDATE_NATIVE_INPUT_SIGNAL_PASS",
+  "candidate_sha256": "5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129",
+  "results": {
+    "fixed": {
+      "cases": [
+        {
+          "before_request_line": false,
+          "code": 200,
+          "error": "<nil>",
+          "signal": false,
+          "valid": true
+        },
+        {
+          "before_request_line": false,
+          "code": 200,
+          "error": "<nil>",
+          "signal": false,
+          "valid": true
+        },
+        {
+          "before_request_line": false,
+          "code": 200,
+          "error": "<nil>",
+          "signal": false,
+          "valid": true
+        },
+        {
+          "before_request_line": false,
+          "code": 200,
+          "error": "<nil>",
+          "signal": false,
+          "valid": true
+        },
+        {
+          "before_request_line": false,
+          "code": 200,
+          "error": "<nil>",
+          "signal": true,
+          "valid": true
+        },
+        {
+          "before_request_line": false,
+          "code": 200,
+          "error": "<nil>",
+          "signal": true,
+          "valid": true
+        },
+        {
+          "before_request_line": false,
+          "code": 200,
+          "error": "<nil>",
+          "signal": true,
+          "valid": true
+        },
+        {
+          "before_request_line": false,
+          "code": 200,
+          "error": "<nil>",
+          "signal": true,
+          "valid": true
+        },
+        {
+          "before_request_line": true,
+          "code": 200,
+          "error": "<nil>",
+          "signal": true,
+          "valid": true
+        },
+        {
+          "before_request_line": true,
+          "code": 200,
+          "error": "<nil>",
+          "signal": true,
+          "valid": true
+        },
+        {
+          "case": "post_body_signal_once",
+          "code": 200,
+          "error": "<nil>",
+          "script_invocations": 1,
+          "valid": true
+        },
+        {
+          "case": "empty_input_repeated_signal_budget",
+          "disconnected": true,
+          "elapsed_seconds": 5.004162336
+        }
+      ],
+      "log_sha256": "104fcfebd087808ab2ea01cef4eaf449a8d9362b316ed470a27dfed09bf20093"
+    },
+    "r7": {
+      "cases": [
+        {
+          "before_request_line": false,
+          "code": 200,
+          "error": "<nil>",
+          "signal": false,
+          "valid": true
+        },
+        {
+          "before_request_line": false,
+          "code": 200,
+          "error": "<nil>",
+          "signal": false,
+          "valid": true
+        },
+        {
+          "before_request_line": false,
+          "code": 200,
+          "error": "<nil>",
+          "signal": false,
+          "valid": true
+        },
+        {
+          "before_request_line": false,
+          "code": 200,
+          "error": "<nil>",
+          "signal": false,
+          "valid": true
+        },
+        {
+          "before_request_line": false,
+          "code": 400,
+          "error": "<nil>",
+          "signal": true,
+          "valid": false
+        },
+        {
+          "before_request_line": false,
+          "code": 400,
+          "error": "<nil>",
+          "signal": true,
+          "valid": false
+        },
+        {
+          "before_request_line": false,
+          "code": 400,
+          "error": "<nil>",
+          "signal": true,
+          "valid": false
+        },
+        {
+          "before_request_line": false,
+          "code": 400,
+          "error": "<nil>",
+          "signal": true,
+          "valid": false
+        },
+        {
+          "before_request_line": true,
+          "code": 0,
+          "error": "unexpected EOF",
+          "signal": true,
+          "valid": false
+        },
+        {
+          "before_request_line": true,
+          "code": 0,
+          "error": "unexpected EOF",
+          "signal": true,
+          "valid": false
+        },
+        {
+          "case": "post_body_signal_once",
+          "code": 503,
+          "error": "<nil>",
+          "script_invocations": 0,
+          "valid": false
+        },
+        {
+          "case": "empty_input_repeated_signal_budget",
+          "disconnected": true,
+          "elapsed_seconds": 0.400594167
+        }
+      ],
+      "log_sha256": "472045658e242e4b070f502ebba928ab97cd1356ee9b06233a0ad533f64c58f8"
+    }
+  },
+  "firmware_rebuilt": true,
+  "source_sha256": {
+    "build/native_tls_probe_fixture.c": "738114b75f6d4666df531d40530365cb37a0144d62af8175320858bf400a0754",
+    "build/interrupt_scenarios.go": "8989dc4c639d00affef9789c67297f74e05fcac03dbb57a4305414b308cdd157",
+    "build/check_tls_input.py": "82bbfbe587b538bb9ec18c9c813cd1e05c1d42b08d590c84c790052bfaa23723",
+    "sources/localmod/httpd_bridge.c": "041fef0ad651bea10b6016723297a8dae004322a95c0e074ae6bab0b8c156770",
+    "build/native_runtime_client.go": "2f9515bf6d814c064c7e0957455c0cfaf12ef01483be9732e49fd783cf32acf5"
+  },
+  "r7_baseline_source_commit": "a2ff36df57a555ce6319dc82e2e230c3ec5db15d",
+  "limits": [
+    "Owned partial-header/before-request-line signal controls; does not retroactively identify every earlier EOF",
+    "Same TLS read resumed within original receive budget; no HTTP request resubmitted",
+    "Native certificate, crypto and authentication retained; no router flashed"
+  ]
+}

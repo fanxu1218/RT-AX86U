@@ -10,6 +10,7 @@
 #include <sys/file.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include "bounded_log.h"
 static void terminate(int signal){(void)signal;lm_stopping=1;}
 
 static int event_file(const struct dirent *d){size_t n=strlen(d->d_name);return n>4 && !strcmp(d->d_name+n-4,".evt");}
@@ -40,7 +41,7 @@ int main(int argc,char **argv){
    if(valid){size_t left=sizeof(e);char *p=(char *)&e;while(left){ssize_t got=read(fd,p,left);if(got<0 && errno==EINTR)continue;if(got<=0){valid=0;break;}p+=got;left-=(size_t)got;}}
    if(fd>=0)close(fd);unlink(path);
    if(valid && e.magic==LM_MAGIC && memchr(e.name,0,sizeof(e.name)) && memchr(e.arg1,0,sizeof(e.arg1)) && memchr(e.arg2,0,sizeof(e.arg2))){
-    int result=lm_dispatch(&e);printf("event %s result %d\n",e.name,result);fflush(stdout);
+    int result=lm_dispatch(&e);char message[96];int n=snprintf(message,sizeof(message),"event %s result %d\n",e.name,result);lm_log_write("events",message,(size_t)n);
    }
   }
   free(entries);if(!strcmp(argv[1],"--drain") || lm_stopping)break;

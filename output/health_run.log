@@ -1,0 +1,17 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107075536, 2026/11/7 ~ 2046/11/8
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+HEALTH_RESULT {"backend_stopped_readonly_available":true,"checks":{"authenticated_page_served":true,"certificate_and_uu_data_retained":true,"invalid_cookie_denied":true,"logout_revokes_diagnostics":true,"no_cookie_denied/_localmod/diagnostics":true,"no_cookie_denied/_localmod/status":true,"redacted_none":true,"redacted_pending":true,"redacted_store-invalid":true,"status_none":true,"status_pending":true,"status_store-invalid":true,"write_gate_closed_during_checkpoint":true},"uu_owned_worker_alive":true}
+SOAK_REAPER orphans_reaped=9
+LINUX_READONLY_JOB_STATUS=0

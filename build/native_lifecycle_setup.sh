@@ -1,6 +1,7 @@
 #!/bin/sh
 # Test-only guest setup. All writable state is synthetic and private to this VM.
 set -eu
+. /work/build/model_helpers_setup.sh
 ulimit -c 0
 export PATH=/usr/sbin:/usr/bin:/sbin:/bin
 export NATIVE_CERT_CASE=1 NATIVE_STATE_DIRECTORY=/tmp/native-nvram

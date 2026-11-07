@@ -1,11 +1,16 @@
 # RT-AX86U 官方底包官改实验
 
-基于 **ASUS 3.0.0.4.388_24437**，集成 **KoolCenter 软件中心 1.9.50**，保留官方 **网易 UU**。当前开发版本为 **localmod2-r7**。
+基于 **ASUS 3.0.0.4.388_24437**，集成 **KoolCenter 软件中心 1.9.50**，保留官方 **网易 UU**。当前开发版本为 **localmod2-r8**。
 
 > **实验候选版，尚未实机验收，暂不建议直接刷入日常主路由。**
 > 源码适配、模型/仿真测试和镜像回读通过；刷入启动、原厂登录/TLS、无线/NAT、具体第三方插件及 UU 实际加速仍待实机验证。
 
 ## 本轮变化
+
+r8 集成六项后续完善：归档边界与脚本超时、事件/日志容量、原厂 TLS 会话缓存上限、UU 网络故障对照、经原厂认证的状态/恢复页及脱敏导出、统一构建与发布校验。新增分段 NVRAM 输出夹具复现并修复开关读取竞态；修复原厂 TLS 输入被信号误判为 EOF/400，保留原 5 秒接收预算，并验证 POST 仅执行一次。详细证据与验证边界见 [官改加固与优化说明](output/官改加固与优化说明.md)、[进度](output/后续完善进度.md) 和 [构建发布说明](output/构建与发布校验.md)。
+
+下列历史改动及内存长测主要来自 r7 及前序版本，不能把旧报告直接视为 r8 长时间运行证明；当前候选以镜像回读和绑定哈希的报告为准。
+
 
 - 自然复现并修复 DDNS-Go 只读查询收到 HTTP 200 后正文断连：接收循环不再把 `EINTR` 当成连接结束，继续读取同一后端连接，不重新提交请求。
 - 保留原厂 TLS、登录、UU 和回调程序；单次接收的 120 秒空闲预算使用单调时钟，连续信号不重置预算。新增 UU 查询期停止/运行两组验证，以及响应头前后中断、真实定时信号和超时边界检查。
@@ -38,7 +43,8 @@
 
 ## 下载与说明
 
-- [localmod2-r7 实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r7-experimental)
+- [localmod2-r8 实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r8-experimental)
+- [localmod2-r7 历史实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r7-experimental)
 - [完整适配范围与验证边界](output/官改候选版说明.md)
 - [Alpha 3 升级、实机验收与回退步骤](output/Alpha3升级localmod2与实机验收.md) · [验收记录模板](output/localmod2实机验收记录模板.md)
 - [事件测试](output/hooks_tests.json) · [兼容测试](output/compatibility_tests.json) · [原厂接口清单](output/vendor_contracts.json) · [UU 静态及模型检查](output/uu_compatibility_tests.json) · [原厂登录/TLS/UU 本地运行检查](output/native_runtime_tests.json)
@@ -53,13 +59,18 @@
 - [镜像回读](output/verification.json) · [卷布局](output/structure.json) · [原始 Alpha 3 分析](analysis/固件分析报告.md)
 - [localmod2-r6](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r6-experimental) · [localmod2-r5](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r5-experimental) · [localmod2-r4](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r4-experimental) · [localmod2-r3](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r3-experimental) · [localmod2-r2](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r2-experimental) · [localmod2-r1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r1-experimental) · [原 localmod2](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-experimental) · [上一版 localmod1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod1-experimental)
 
-固件 `RT-AX86U_388_24437_localmod2_r7_EXPERIMENTAL.w`，85,721,108 字节。
+当前固件 `RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w`，85,721,108 字节。
 
 ```text
-SHA256: 989ce7d6f5863ca450dea0857bd483cb40757f6089113c9fcbdb51891704e677
+SHA256: 5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129
 ```
 
 ## 验证摘要
+
+r8 新候选验证：[完整 gate](output/release_gates.json) · [最终镜像组合回归](output/hardening_tests.json) · [发布附件回执](output/release_delivery.json)。早期源码覆盖层报告明确标注未重建镜像，最终组合回归使用组装/回读后的字节。
+
+以下长时间采样属于 r7：
+
 
 DDNS-Go 同一常驻进程追加一小时、8 轮负载/空闲：3522 次 HTTPS 查询、4640 次额外网页读取完成，55 次 GC 存活堆读数均不足 1 MiB。最终静置基线比第一轮空闲末值低 8 KiB；约 1.3 MiB 留存未随轮次持续放大，趋势更符合首次扩容及容量复用。数据与 UU 测试进程保留，未据此修改固件内存策略；有限观测不等于长期或实机无泄漏证明。
 
