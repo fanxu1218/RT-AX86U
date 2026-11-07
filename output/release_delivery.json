@@ -1,0 +1,24 @@
+{
+  "status": "PUBLISHED_AND_ASSETS_VERIFIED",
+  "url": "https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r8-experimental",
+  "commit": "2f47bf9bddaa27839302326233f542ada76153c2",
+  "tag": "localmod2-r8-experimental",
+  "release_id": 437479374,
+  "assets_verified": 31,
+  "candidate_sha256": "5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129",
+  "old_releases_preserved": {
+    "localmod2-r7-experimental": 24,
+    "localmod2-r6-experimental": 22,
+    "localmod2-r5-experimental": 20,
+    "localmod2-r4-experimental": 18,
+    "localmod2-r3-experimental": 16,
+    "localmod2-r2-experimental": 18
+  },
+  "r7_tag_object_preserved": "e442ec2d8ae550490661b0fbe1ad4e16ec242c3c",
+  "router_accessed_or_flashed": false,
+  "ci_source_commit": "2f47bf9bddaa27839302326233f542ada76153c2",
+  "ci_run_url": "https://github.com/fanxu1218/RT-AX86U/actions/runs/42360976375",
+  "ci_conclusion": "success",
+  "release_notes_sha256": "a7468a4cf802ab4eaee306c106444a2b5e87708b3e6818ebbb6ef0370fe9d2be",
+  "asset_manifest_sha256": "be4f4a738bb56274ec562ef086c9a888631767edb8ded6d6bed0c974e5481273"
+}
