@@ -70,7 +70,7 @@ def finalize(inputs):
  assert fancyss_page(fancyss,CONFIG)==(back/'www/Module_FancyssLocalmod.asp').read_text()
  v=json.loads((ROOT/'output/verification.json').read_text());assert v['image']==CONFIG['image'] and sha(ROOT/v['image'])==v['sha256'] and all(v['checks'].values()) and not v['errors']
  reports={}
- for name in ['lifecycle_tests','online_plugin_tests','real_plugin_tests','fancyss_tests','https_stability_tests','interruption_tests','recovery_safety_tests','hardening_tests','tls_input_tests']:
+ for name in ['lifecycle_tests','online_plugin_tests','real_plugin_tests','fancyss_tests','history_tests','https_stability_tests','interruption_tests','recovery_safety_tests','hardening_tests','tls_input_tests']:
   p=ROOT/('output/'+name+'.json');x=json.loads(p.read_text());assert x['candidate_sha256']==v['sha256'],name
   assert ('checks' not in x or all(x['checks'].values())) and (x['status']=='PASS' or x['status'].endswith('_PASS')),name
   reports[str(p.relative_to(ROOT))]=sha(p)

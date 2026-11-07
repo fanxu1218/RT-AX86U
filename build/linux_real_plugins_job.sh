@@ -39,7 +39,7 @@ else
  jffs_size=64m
  # Large authentic plugin coexistence matrix; production JFFS is unchanged.
  if grep -Eq '^(hardening-fancyss|candidate-fancyss)' /work/build/real-plugin-phase; then jffs_size=128m;fi
- mount -t tmpfs -o size=$jffs_size tmpfs /router/jffs
+ mount -t tmpfs -o size=$jffs_size,mode=0755 tmpfs /router/jffs
 fi
 cp /usr/bin/qemu-arm /router/usr/bin/qemu-arm
 mkdir -p /router/fixture/lib /router/fixture/xtables
@@ -66,12 +66,16 @@ if grep -Eq '^(hardening-fancyss|candidate-fancyss)' /work/build/real-plugin-pha
  export LOCALMOD_PLUGIN_OPERATION_TIMEOUT=90s
 fi
 if grep -qx 'hardening-health' /work/build/real-plugin-phase; then export LOCALMOD_HTTPD_BRIDGE_OVERLAY=1;fi
+if grep -q '^hardening-history' /work/build/real-plugin-phase; then export LOCALMOD_HTTPD_BRIDGE_OVERLAY=1;fi
 if grep -qx 'soak-httpd-memory' /work/build/real-plugin-phase; then export LOCALMOD_HTTPD_MEMORY_DIAGNOSTIC=1;fi
 if grep -qx 'soak-httpd-cache' /work/build/real-plugin-phase; then export LOCALMOD_HTTPD_MEMORY_DIAGNOSTIC=1 LOCALMOD_HTTPD_TLS_CACHE_TRACE=1;fi
 if grep -qx 'soak-httpd-cache-overlay' /work/build/real-plugin-phase; then export LOCALMOD_HTTPD_MEMORY_DIAGNOSTIC=1 LOCALMOD_HTTPD_TLS_CACHE_TRACE=1 LOCALMOD_HTTPD_BRIDGE_OVERLAY=1;fi
 mkdir -p /router/tmp/native-nvram /router/tmp/real-plugin-results
 if grep -qw localmod_state_disk=1 /proc/cmdline; then
  export LOCALMOD_PLUGIN_OPERATION_TIMEOUT=90s
+ if grep -Eq '^(hardening-history|candidate-history)' /work/build/real-plugin-phase; then
+  /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+ else
  mv /router/usr/libexec/localmod/plugin-txn /router/usr/libexec/localmod/plugin-txn.real
  cp /work/build/txn_fault_fixture.so /router/fixture/
  cat > /router/usr/libexec/localmod/plugin-txn <<'SCRIPT'
@@ -80,6 +84,7 @@ exec /usr/bin/qemu-arm -L / -E LD_PRELOAD=/fixture/txn_fault_fixture.so /usr/lib
 SCRIPT
  chmod 755 /router/usr/libexec/localmod/plugin-txn
  /work/build/test-interrupt controller
+ fi
 else
  if grep -Eq '^(soak-|hardening-|candidate-)' /work/build/real-plugin-phase; then
   /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh

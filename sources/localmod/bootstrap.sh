@@ -16,6 +16,9 @@ if [ "${LOCALMOD_BOOTSTRAP_LOGGING:-}" != 1 ]; then
  exec /usr/libexec/localmod/log-limit bootstrap /bin/sh "$0" "$@"
 fi
 unset LOCALMOD_BOOTSTRAP_LOGGING
+recovery_record(){
+ /usr/libexec/localmod/localmod-status record software-center "$1" "$2" recovery || true
+}
 
 prepare(){
  grep -q ' /jffs ' /proc/mounts || { echo 'JFFS is not mounted'; return 1; }
@@ -23,10 +26,12 @@ prepare(){
  # Recovery must precede skipd, the center supervisors and plugin hooks.
  # The helper deliberately refuses same-boot rollback under escaped children.
  if [ -L /jffs/.localmod/plugin-txn ] || { [ -e /jffs/.localmod/plugin-txn ] && [ ! -d /jffs/.localmod/plugin-txn ]; }; then
+  recovery_record interrupted 1
   echo 'Invalid checkpoint store; preserving all data and stopping center startup'; return 1
  fi
  if checkpoint_exists; then
-  /usr/libexec/localmod/plugin-txn recover || return 1
+  recovery_record running 0
+  /usr/libexec/localmod/plugin-txn recover || { recovery_record interrupted 1; return 1; }
   if checkpoint_exists; then
    RECOVERY_DB_STARTED=0
    skipd_start recovery || { recovery_abort; return 1; }
@@ -39,6 +44,7 @@ prepare(){
    /usr/libexec/localmod/plugin-txn finish-recovery || { recovery_abort; return 1; }
    RECOVERY_DB_STARTED=0
   fi
+  recovery_record finished 0
  fi
  if [ ! -f /jffs/.localmod/initialized ]; then
   required=$(du -sk /rom/etc/koolshare | awk '{print $1}')
@@ -92,6 +98,7 @@ prepare(){
 checkpoint_exists(){ [ -e /jffs/.localmod/plugin-txn/active ] || [ -L /jffs/.localmod/plugin-txn/active ]; }
 
 recovery_abort(){
+ recovery_record interrupted 1
  echo 'Recovery failed; all checkpoint/current/interrupted copies retained; center will not start'
  [ "${RECOVERY_DB_STARTED:-0}" = 1 ] || return 0
  # Recovery starts only with no existing skipd. These are the newly created

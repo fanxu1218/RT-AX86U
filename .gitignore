@@ -192,6 +192,12 @@
 !/build/prepare_fancyss.py
 !/build/fancyss_sources.json
 !/build/check_fancyss.py
+!/build/check_history.py
+!/build/test_history.go
+!/build/history_fault_fixture.c
+!/output/history_tests.json
+!/output/history_*.log
+!/output/持久化操作记录说明.md
 !/build/test_fancyss.go
 !/build/prepare_extended_plugins.py
 !/build/extended_plugin_sources.json

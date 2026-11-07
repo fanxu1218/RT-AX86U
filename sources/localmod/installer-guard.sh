@@ -12,6 +12,7 @@ ks_guard_note(){
 ks_operation_begin(){
  KS_HAVE_LOCK=0
  case "$2" in download_log|clean_log) return 0;; esac
+ case "$2" in offline) KS_OPERATION_KIND=offline;; *remove*|uninstall) KS_OPERATION_KIND=uninstall;; *) KS_OPERATION_KIND=install;; esac
  KS_OWNER_PID=$$
  KS_LOCK=/tmp/.localmod/plugin-operation.lock
  mkdir -p /tmp/.localmod || return 1
@@ -43,7 +44,7 @@ ks_operation_end(){
  [ "$KS_SELF_PID" = "$KS_OWNER_PID" ] || return 0
  if [ ! -f "$KS_STATUS_FILE" ]; then
   /usr/libexec/localmod/plugin-txn abandon "$KS_OWNER_PID"
-  /usr/libexec/localmod/localmod-status record "${softcenter_installing_todo:-unknown}" interrupted 1 || true
+  ks_record "${softcenter_installing_todo:-unknown}" interrupted 1
  fi
  ks_scope_clean
  rm -rf "$KS_LOCK"
@@ -60,7 +61,13 @@ ks_operation_validate(){
   return 1
  fi
  dbus set softcenter_installing_result=running
- /usr/libexec/localmod/localmod-status record "$softcenter_installing_todo" running 0 || true
+ if [ "$KS_OPERATION_KIND" = install ]; then
+  case "$(dbus get softcenter_module_${softcenter_installing_todo}_install)" in 1|4) KS_OPERATION_KIND=update;; esac
+ fi
+ ks_record "$softcenter_installing_todo" running 0
+}
+ks_record(){
+ LOCALMOD_OPERATION_OWNER=$KS_OWNER_PID /usr/libexec/localmod/localmod-status record "$1" "$2" "$3" "${KS_OPERATION_KIND:-manual}" || true
 }
 ks_checkpoint(){
  /usr/libexec/localmod/plugin-txn checkpoint "$KS_OWNER_PID" "$softcenter_installing_todo"
@@ -144,7 +151,7 @@ ks_finish(){
   echo_date "未提交的插件变更已保留检查点。请重启检查并尝试恢复；校验或空间异常时会保留副本并停止软件中心。"
  fi
  printf '%s\n' "$KS_CODE" > "$KS_STATUS_FILE"
- /usr/libexec/localmod/localmod-status record "${softcenter_installing_todo:-unknown}" finished "$KS_CODE" || true
+ ks_record "${softcenter_installing_todo:-unknown}" finished "$KS_CODE"
  echo_date "============================= end ================================="
  echo XU6J03M6
  exit "$KS_CODE"

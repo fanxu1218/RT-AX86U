@@ -5,10 +5,12 @@
     "checks": {
       "authenticated_page_served": true,
       "certificate_and_uu_data_retained": true,
+      "health_endpoint_is_readonly": true,
       "invalid_cookie_denied": true,
       "logout_revokes_diagnostics": true,
       "no_cookie_denied/_localmod/diagnostics": true,
       "no_cookie_denied/_localmod/status": true,
+      "recent_operation_record_available": true,
       "redacted_none": true,
       "redacted_pending": true,
       "redacted_store-invalid": true,
@@ -21,14 +23,16 @@
   },
   "firmware_rebuilt": false,
   "source_sha256": {
-    "build/test_health.go": "5517b29e4d71ef96418335da030af0b08bbfa57c2ee12803564ae652ed22a477",
+    "build/test_health.go": "895583a4b62a0c07301ff68569fcacc218f6b0220e6f2b8ea29a3ac8be8a6272",
     "build/native_runtime_client.go": "2f9515bf6d814c064c7e0957455c0cfaf12ef01483be9732e49fd783cf32acf5",
     "build/test_online.go": "6149e462c16f55e709ecd3cde5d857a5051e4b59ebbf9a0cf97911772b3bfa94",
     "build/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
-    "sources/localmod/health.h": "f7a78a47ea14a18c3b5120a2d5b63649f3002f32b0711fba8a14db5472b62df3",
-    "sources/localmod/status.c": "5ecaa70d4623940bf5638c0303aa532c9aa5e843e25912a9ec3b8513e3fd67f7",
-    "sources/localmod/httpd_bridge.c": "2b7cf69fd7cd32ef675ed1f581fee4d8abd1a0070e3af95ad9f82ed5317071ed",
-    "sources/localmod/Module_Localmod.asp": "43defef2ebf5bb43e16004fb71f5f925b4a6e0e73907da4fc0bada4fe32643fd"
+    "sources/localmod/health.h": "e9b08eb9f2d2f4eb7ae9ebfc124691ee2f81f7f4395979882728610798fa5128",
+    "sources/localmod/journal.h": "10729e942f6de760bd0b9a53295ab1134bb263f209f529a0c69a04c06c2b9175",
+    "sources/localmod/sha256.h": "b72f0c30bea8f546d5822bb7fd1ee9c631f5cb741fdd56c514469473e0cfce2b",
+    "sources/localmod/status.c": "9319b7a1fbd8d435f25a23cebfd826f9d4139e3b4d0cf5f910a90fa7798a9395",
+    "sources/localmod/httpd_bridge.c": "dc8e13705c133bfac44752e31ee24c6746bf6ea9c6fe8a25be72cf9fb9fafb4d",
+    "sources/localmod/Module_Localmod.asp": "f7ab478673ff5f24fe1de8e994128bcbbb42e00a91a06db3f7e27cf9ce5e64d4"
   },
-  "log_sha256": "833e0dbfd3edc6b4d780c82a0637a3cf17daa02ec8d4a7626b32f2cd70e987c9"
+  "log_sha256": "bede4b7d216ff73b638e4e80085182dda83277ea50c5d8dd766666e37dbb3a1a"
 }

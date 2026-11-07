@@ -4,7 +4,7 @@ set -eu
 export LOCALMOD_TLS_START_TIMEOUT=60s LOCALMOD_HTTP_REQUEST_TIMEOUT=10s LOCALMOD_NTP_WAIT_TIMEOUT=12s
 trap 'cat /tmp/.localmod/bootstrap.log 2>/dev/null || true' EXIT
 mkdir -p /rom/etc /usr/bin /usr/sbin /usr/libexec/localmod /tmp/process-tools /tmp/upload /run
-mount -t tmpfs -o size=64m tmpfs /jffs
+mount -t tmpfs -o size=64m,mode=0755 tmpfs /jffs
 ln -s /jffs/.koolshare /koolshare
 ln -s /work/build/casefs/rootfs/rom/etc/koolshare /rom/etc/koolshare
 cp /work/build/casefs/rootfs/rom/etc/localmod-core-id /rom/etc/

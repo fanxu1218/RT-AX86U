@@ -23,10 +23,10 @@ def main():
  fancy=json.loads((ROOT/'output/fancyss_tests.json').read_text());assert fancy['candidate_sha256']==v['sha256'] and fancy['status'].endswith('_PASS')
  package=next(p for p in fancy['sources']['packages'] if p['phase']=='current')
  assert sha(ROOT/package['adapted_path'])==package['adapted_sha256']
- names+=['output/fancyss_tests.json','output/Fancyss集成说明.md','build/fancyss_sources.json','sources/localmod/fancyss-LICENSE.txt',package['adapted_path']]
+ names+=['output/fancyss_tests.json','output/Fancyss集成说明.md','build/fancyss_sources.json','sources/localmod/fancyss-LICENSE.txt',package['adapted_path'],'output/history_tests.json','output/持久化操作记录说明.md']
  # Match the existing releases' ASCII attachment naming. Keep Chinese source
  # paths/content in Git; only the transport filename is aliased byte-for-byte.
- aliases={'官改加固与优化说明.md':'HARDENING_NOTES.zh-CN.md','构建与发布校验.md':'BUILD_RELEASE_CHECKS.zh-CN.md','Alpha3升级localmod2与实机验收.md':'UPGRADE_ACCEPTANCE.zh-CN.md','Fancyss集成说明.md':'FANCYSS_INTEGRATION.zh-CN.md'}
+ aliases={'官改加固与优化说明.md':'HARDENING_NOTES.zh-CN.md','构建与发布校验.md':'BUILD_RELEASE_CHECKS.zh-CN.md','Alpha3升级localmod2与实机验收.md':'UPGRADE_ACCEPTANCE.zh-CN.md','Fancyss集成说明.md':'FANCYSS_INTEGRATION.zh-CN.md','持久化操作记录说明.md':'OPERATION_HISTORY.zh-CN.md'}
  folder=ROOT/('build/'+version+'-release-assets');assert not folder.is_symlink();folder.mkdir(mode=0o700,exist_ok=True)
  assets=[];entries=[]
  for name in names:

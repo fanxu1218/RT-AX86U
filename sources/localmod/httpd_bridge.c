@@ -289,7 +289,7 @@ static int bridge_print(FILE *stream,const char *format,va_list args) {
            *vendor_auth_result!=0 || *vendor_url_do_auth!=1 ||
            (!strstr(preview," 200 ")))error_reply(stream,401);
    else if(health_uri()){
-    char body[2048],head[512];int size=lm_health_json(body,sizeof(body));
+    char body[LM_HEALTH_CAP],head[512];int size=lm_health_json(body,sizeof(body));
     if(size<0)error_reply(stream,503);
     else {int n=snprintf(head,sizeof(head),"HTTP/1.0 200 OK\r\nContent-Type: application/json; charset=utf-8\r\nCache-Control: no-store\r\nX-Content-Type-Options: nosniff\r\n%sConnection: close\r\nContent-Length: %d\r\n\r\n",!strcmp(request.uri,"/_localmod/diagnostics")?"Content-Disposition: attachment; filename=localmod-diagnostics.json\r\n":"",size);next_fwrite(head,1,(size_t)n,stream);next_fwrite(body,1,(size_t)size,stream);}
    }else relay(stream);

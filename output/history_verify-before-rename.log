@@ -1,0 +1,29 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107115052, 2026/11/7 ~ 2046/11/8
+PASS native_auth_required_/_localmod/status
+PASS native_auth_required_/_localmod/diagnostics
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS abrupt_cut_keeps_a_previous_good_generation_before-rename
+PASS acknowledged_history_survives_abrupt_cut_before-rename
+PASS pre_rename_pending_preserved_after_reboot
+PASS incomplete_write_blocks_new_history_without_deleting_evidence
+PASS retained_history-plugin-config
+PASS retained_history-account
+PASS retained_native_database
+PASS certificate_retained_within_boot
+PASS uu_never_redownloaded_or_restarted_by_history
+HISTORY_RESULT {"checks":{"abrupt_cut_keeps_a_previous_good_generation_before-rename":true,"acknowledged_history_survives_abrupt_cut_before-rename":true,"authenticated_redacted_summary":true,"bounded_compatible_json_schema":true,"certificate_retained_within_boot":true,"incomplete_write_blocks_new_history_without_deleting_evidence":true,"native_auth_required_/_localmod/diagnostics":true,"native_auth_required_/_localmod/status":true,"pre_rename_pending_preserved_after_reboot":true,"retained_history-account":true,"retained_history-plugin-config":true,"retained_native_database":true,"uu_never_redownloaded_or_restarted_by_history":true},"phase":"verify-before-rename","uu_launches":1}
+SOAK_REAPER orphans_reaped=1
+LINUX_READONLY_JOB_STATUS=0

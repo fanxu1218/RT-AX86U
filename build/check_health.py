@@ -7,9 +7,9 @@ os.chdir(ROOT);prepare_resources();folder=ROOT/'build/hardening-overlay'
 flags=['sources/zig-aarch64-macos-0.15.2/zig','cc','-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53','-O2']
 subprocess.run(flags+['-shared','-fPIC','-o','build/httpd_bridge_next.so','sources/localmod/httpd_bridge.c','-ldl'],check=True)
 p=folder/'usr/libexec/localmod/localmod-status';subprocess.run(flags+['-o',str(p),'sources/localmod/status.c'],check=True);p.chmod(0o755)
-p=folder/'www/Module_Localmod.asp';p.parent.mkdir(parents=True,exist_ok=True);p.write_text((ROOT/'sources/localmod/Module_Localmod.asp').read_text().replace('@REVISION@','localmod2-r8'))
+p=folder/'www/Module_Localmod.asp';p.parent.mkdir(parents=True,exist_ok=True);p.write_text((ROOT/'sources/localmod/Module_Localmod.asp').read_text().replace('@REVISION@','localmod2-r9'))
 sources=['build/test_health.go','build/native_runtime_client.go','build/test_online.go','build/coexist_helpers.go']
-inputs={p:sha(ROOT/p) for p in sources+['sources/localmod/health.h','sources/localmod/status.c','sources/localmod/httpd_bridge.c','sources/localmod/Module_Localmod.asp']}
+inputs={p:sha(ROOT/p) for p in sources+['sources/localmod/health.h','sources/localmod/journal.h','sources/localmod/sha256.h','sources/localmod/status.c','sources/localmod/httpd_bridge.c','sources/localmod/Module_Localmod.asp']}
 subprocess.run(['go','build','-trimpath','-o','build/test-health']+sources,check=True,env=dict(os.environ,GOOS='linux',GOARCH='arm64',CGO_ENABLED='0'))
 (ROOT/'build/real-plugin-phase').write_text('hardening-health\n')
 log=ROOT/'output/health_run.log';text=run(log,timeout=240)

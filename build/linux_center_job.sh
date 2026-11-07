@@ -3,7 +3,7 @@ set -eu
 . /work/build/model_helpers_setup.sh
 trap 'cp /tmp/upload/soft_log.txt /work/build/center_install_trace.log 2>/dev/null || true; cp /tmp/.localmod/bootstrap.log /work/build/center_bootstrap_trace.log 2>/dev/null || true' EXIT
 mkdir -p /jffs /rom/etc /usr/bin /usr/sbin /usr/libexec/localmod /tmp/upload /www/css
-mount -t tmpfs -o size=64m tmpfs /jffs
+mount -t tmpfs -o size=64m,mode=0755 tmpfs /jffs
 ln -s /jffs/.koolshare /koolshare
 ln -s /work/build/casefs/rootfs/rom/etc/koolshare /rom/etc/koolshare
 cp /work/build/casefs/rootfs/rom/etc/localmod-core-id /rom/etc/

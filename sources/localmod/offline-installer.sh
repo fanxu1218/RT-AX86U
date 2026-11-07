@@ -14,7 +14,7 @@ offline_install(){
  cp "/tmp/upload/$upload" "$KS_DOWNLOAD" || ks_finish 1
  softcenter_installing_todo=$(/usr/libexec/localmod/archive-guard "$KS_DOWNLOAD") || ks_finish 1
  ks_valid_module "$softcenter_installing_todo" || ks_finish 1
- /usr/libexec/localmod/localmod-status record "$softcenter_installing_todo" running 0 || true
+ ks_record "$softcenter_installing_todo" running 0
  case "$softcenter_installing_todo" in softcenter|koolcenter) echo_date "此官改的软件中心核心随固件更新，不接受离线覆盖核心。"; ks_finish 1;; esac
  ks_archive_valid || { echo_date "插件压缩包目录不匹配或解压失败！"; ks_finish 1; }
  ks_scope_prepare || ks_finish 1

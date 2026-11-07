@@ -1,0 +1,97 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107115052, 2026/11/7 ~ 2046/11/8
+PASS native_auth_required_/_localmod/status
+PASS native_auth_required_/_localmod/diagnostics
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS retention_keeps_latest_32_with_monotonic_sequences
+PASS independent_go_sha256_matches_slot0
+PASS independent_go_sha256_matches_slot1
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS live_owner_remains_running
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS killed_owner_inferred_without_history_write
+PASS inference_is_readonly
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS completed_start_is_not_falsely_reported_interrupted
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS actual_online_update_offline_uninstall_record_typed_events
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS single_corrupt_slot_preserved_and_verified_copy_readonly
+PASS history_corruption_does_not_block_plugin_install_or_uu
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS both_corrupt_slots_export_no_unverified_rows
+PASS both_corrupt_slots_never_overwritten
+PASS retained_history-plugin-config
+PASS retained_history-account
+PASS retained_native_database
+PASS certificate_retained_within_boot
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS symlinked_history_store_denied
+PASS symlinked_history_writer_denied
+PASS retained_history-plugin-config
+PASS retained_history-account
+PASS retained_native_database
+PASS certificate_retained_within_boot
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS hardlinked_secret_not_read_or_overwritten
+PASS hardlink_writer_denied
+PASS retained_history-plugin-config
+PASS retained_history-account
+PASS retained_native_database
+PASS certificate_retained_within_boot
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS actual_low_space_keeps_committed_history_and_reports_ram_fallback
+PASS retained_history-plugin-config
+PASS retained_history-account
+PASS retained_native_database
+PASS certificate_retained_within_boot
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS pending_partial_retained
+PASS good_generations_untouched_after_partial
+PASS retained_history-plugin-config
+PASS retained_history-account
+PASS retained_native_database
+PASS certificate_retained_within_boot
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS pending_rename-fail_retained
+PASS good_generations_untouched_after_rename-fail
+PASS retained_history-plugin-config
+PASS retained_history-account
+PASS retained_native_database
+PASS certificate_retained_within_boot
+PASS authenticated_redacted_summary
+PASS bounded_compatible_json_schema
+PASS bootstrap_blocked_recovery_recorded_without_clearing_checkpoint
+PASS retained_history-plugin-config
+PASS retained_history-account
+PASS retained_native_database
+PASS certificate_retained_within_boot
+PASS synced_owned_state_for_new_vm_boot
+PASS uu_never_redownloaded_or_restarted_by_history
+HISTORY_RESULT {"checks":{"actual_low_space_keeps_committed_history_and_reports_ram_fallback":true,"actual_online_update_offline_uninstall_record_typed_events":true,"authenticated_redacted_summary":true,"bootstrap_blocked_recovery_recorded_without_clearing_checkpoint":true,"both_corrupt_slots_export_no_unverified_rows":true,"both_corrupt_slots_never_overwritten":true,"bounded_compatible_json_schema":true,"certificate_retained_within_boot":true,"completed_start_is_not_falsely_reported_interrupted":true,"good_generations_untouched_after_partial":true,"good_generations_untouched_after_rename-fail":true,"hardlink_writer_denied":true,"hardlinked_secret_not_read_or_overwritten":true,"history_corruption_does_not_block_plugin_install_or_uu":true,"independent_go_sha256_matches_slot0":true,"independent_go_sha256_matches_slot1":true,"inference_is_readonly":true,"killed_owner_inferred_without_history_write":true,"live_owner_remains_running":true,"native_auth_required_/_localmod/diagnostics":true,"native_auth_required_/_localmod/status":true,"pending_partial_retained":true,"pending_rename-fail_retained":true,"retained_history-account":true,"retained_history-plugin-config":true,"retained_native_database":true,"retention_keeps_latest_32_with_monotonic_sequences":true,"single_corrupt_slot_preserved_and_verified_copy_readonly":true,"symlinked_history_store_denied":true,"symlinked_history_writer_denied":true,"synced_owned_state_for_new_vm_boot":true,"uu_never_redownloaded_or_restarted_by_history":true},"phase":"init","uu_launches":1}
+SOAK_REAPER orphans_reaped=27
+LINUX_READONLY_JOB_STATUS=0
