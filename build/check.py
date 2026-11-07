@@ -70,10 +70,14 @@ def finalize(inputs):
  assert fancyss_page(fancyss,CONFIG)==(back/'www/Module_FancyssLocalmod.asp').read_text()
  v=json.loads((ROOT/'output/verification.json').read_text());assert v['image']==CONFIG['image'] and sha(ROOT/v['image'])==v['sha256'] and all(v['checks'].values()) and not v['errors']
  reports={}
- for name in ['lifecycle_tests','online_plugin_tests','real_plugin_tests','fancyss_tests','history_tests','https_stability_tests','interruption_tests','recovery_safety_tests','hardening_tests','tls_input_tests']:
+ for name in ['lifecycle_tests','online_plugin_tests','real_plugin_tests','fancyss_tests','history_tests','shard_tests','https_stability_tests','interruption_tests','recovery_safety_tests','hardening_tests','tls_input_tests']:
   p=ROOT/('output/'+name+'.json');x=json.loads(p.read_text());assert x['candidate_sha256']==v['sha256'],name
   assert ('checks' not in x or all(x['checks'].values())) and (x['status']=='PASS' or x['status'].endswith('_PASS')),name
   reports[str(p.relative_to(ROOT))]=sha(p)
+ p=ROOT/'output/base_migration_tests.json';base=json.loads(p.read_text())
+ assert base['status']=='LOCAL_BASE_MIGRATION_AUDIT_PASS' and all(base['checks'].values()) and not base['errors']
+ assert base['candidate_sha256']==sha(ROOT/CONFIG['vendor_image'])
+ reports[str(p.relative_to(ROOT))]=sha(p)
  modified={'rom/etc/profile','sbin/init','sbin/rc','usr/sbin/httpd','usr/sbin/iptables-restore','www/state.js'}
  added={'koolshare','rom/etc/localmod-core-id','rom/etc/localmod-release.json','usr/bin/dbus','usr/bin/skipd','usr/bin/jffsinit.sh','usr/bin/tee','usr/bin/xargs','usr/libexec','usr/sbin/helper.sh','www/Module_Localmod.asp','www/Module_FancyssLocalmod.asp'}
  prefixes=['rom/etc/koolshare','usr/lib/localmod','usr/libexec/localmod']
@@ -91,8 +95,10 @@ def main():
  if a.mode=='finalize':resume=finalize(inputs)
  else:
   (ROOT/'build/release_run_inputs.json').write_text(json.dumps(dict(schema=1,source_sha256=inputs,allowed_source_changes=[]),indent=2)+'\n')
+  run(str(ROOT/'analysis/.venv/bin/python'),'build/base_migration.py','--image',CONFIG['vendor_image'])
   run('python3','build/build_candidate.py')
   run('python3','build/check_hardening.py')
+  run('python3','build/check_shards.py','--candidate')
   run('python3','build/check_tls_input.py','--candidate')
   resume=finalize(inputs)
  assert owned_sources()==inputs,'Sources changed during release validation; rerun required'

@@ -39,19 +39,21 @@ def main():
     subprocess.run(['go','build','-trimpath','-o','build/test-history']+sources,check=True,env=dict(os.environ,GOOS='linux',GOARCH='arm64',CGO_ENABLED='0'))
     subprocess.run(flags+['-shared','-fPIC','-o','build/history_fault_fixture.so','build/history_fault_fixture.c','-ldl'],check=True)
     subprocess.run(['sources/zig-aarch64-macos-0.15.2/zig','cc','-target','aarch64-linux-musl','-static','-O2','-o','build/soak-init-fixture','build/soak_init_fixture.c'],check=True)
-    paths=sources+['build/check_history.py','build/history_fault_fixture.c','build/run_readonly_linux.py','build/linux_real_plugins_job.sh','build/real_plugins_setup.sh','build/prepare_hardening_overlay.py','build/check_installer_boundaries.py','build/patch_online_installer.py','sources/localmod/status.c','sources/localmod/health.h','sources/localmod/journal.h','sources/localmod/sha256.h','sources/localmod/bootstrap.sh','sources/localmod/installer-guard.sh','sources/localmod/offline-installer.sh','sources/localmod/httpd_bridge.c','sources/localmod/Module_Localmod.asp']
+    paths=sources+['build/check_history.py','build/history_fault_fixture.c','build/run_readonly_linux.py','build/sealed_vm.py','build/linux_real_plugins_job.sh','build/real_plugins_setup.sh','build/prepare_hardening_overlay.py','build/check_installer_boundaries.py','build/patch_online_installer.py','sources/localmod/status.c','sources/localmod/health.h','sources/localmod/journal.h','sources/localmod/sha256.h','sources/localmod/bootstrap.sh','sources/localmod/installer-guard.sh','sources/localmod/offline-installer.sh','sources/localmod/httpd_bridge.c','sources/localmod/Module_Localmod.asp']
     inputs={p:sha(ROOT/p) for p in paths}
     binaries={p:sha(ROOT/p) for p in ['build/test-history','build/history_fault_fixture.so','build/httpd_bridge.so','build/httpd_bridge_next.so','build/native_hw_fixture.so','build/soak-init-fixture'] if (ROOT/p).exists()}
     private=ROOT/'build/interrupt-private';private.mkdir(exist_ok=True,mode=0o700);private.chmod(0o700)
     run_id=secrets.token_hex(6);base=private/('history-'+run_id+'-base.img')
     with base.open('xb') as f:f.truncate(96*1024*1024)
-    base.chmod(0o600);disks=[base];results={};checks={};logs={}
+    base.chmod(0o600);disks=[base];results={};checks={};logs={};vms={}
     def boot(phase,disk,initialize=False,cut=False):
         (ROOT/'build/interrupt-phase.json').write_text(json.dumps({'initialize':initialize})+'\n')
         (ROOT/'build/history-phase').write_text(phase+'\n')
         (ROOT/'build/real-plugin-phase').write_text(('candidate-history' if a.candidate else 'hardening-history')+'\n')
         log=ROOT/('output/history_'+phase+'.log');print('History VM:',phase,'(owned ext4 state, read-only export, no NIC)',flush=True)
-        text=run(log,timeout=360,state_disk=disk,expect_cut=cut)
+        receipt={};text=run(log,timeout=360,state_disk=disk,expect_cut=cut,receipt=receipt)
+        assert receipt['sealed_inputs_verified_before_and_after'] and receipt['state_lock_exclusive']
+        vms[phase]=receipt
         rows=[json.loads(line[len('HISTORY_RESULT '):]) for line in text.splitlines() if line.startswith('HISTORY_RESULT ')]
         assert len(rows)==1 and rows[0]['phase']==phase and rows[0]['checks'] and all(rows[0]['checks'].values()),phase
         if not cut:assert rows[0]['uu_launches']==1
@@ -66,7 +68,7 @@ def main():
     assert sha(ROOT/v['image'])==v['sha256'] and inputs=={p:sha(ROOT/p) for p in paths}
     assert binaries=={p:sha(ROOT/p) for p in binaries}
     if overlay:assert overlay=={str(p.relative_to(ROOT/'build/hardening-overlay')):sha(p) for p in (ROOT/'build/hardening-overlay').rglob('*') if p.is_file()}
-    report=dict(status='LOCAL_HISTORY_SMOKE_PASS' if a.smoke else 'LOCAL_PERSISTENT_HISTORY_PASS',base_candidate_image=v['image'],base_candidate_sha256=v['sha256'],source_overlay_used=not a.candidate,source_sha256=inputs,binary_sha256=binaries,overlay_files=overlay,checks=checks,phases=results,logs=logs,physical_router_accessed=False,
+    report=dict(status='LOCAL_HISTORY_SMOKE_PASS' if a.smoke else 'LOCAL_PERSISTENT_HISTORY_PASS',base_candidate_image=v['image'],base_candidate_sha256=v['sha256'],source_overlay_used=not a.candidate,source_sha256=inputs,binary_sha256=binaries,overlay_files=overlay,checks=checks,phases=results,logs=logs,sealed_vms=vms,physical_router_accessed=False,
                 scope=['Original ASUS login/TLS, center database/installer and UU download/checksum path with owned worker','Root-private bounded checksummed journal; no raw configuration/account/log payload','Three owned 96 MiB ext4 state images; actual partial writes, failed rename, disk pressure, corruption and forced VM cuts'],
                 limits=['Alpine 6.12/QEMU; no physical router, original 4.1 kernel or NAND/UBIFS durability claim','Real UU account/traffic and arbitrary hostile root writers not tested','Damaged/incomplete history is retained read-only and recording becomes best effort; it never owns plugin or UU recovery','Read-only inference of an interrupted operation is not a claim that a plugin was rolled back'])
     if a.candidate:report.update(candidate_image=v['image'],candidate_sha256=v['sha256'])

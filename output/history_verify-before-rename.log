@@ -4,7 +4,7 @@ start-stop-daemon 1.9.18 for Debian - small and fast C version written by
 Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
 
 REAL_PLUGIN_SETUP_READY
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107115052, 2026/11/7 ~ 2046/11/8
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107120823, 2026/11/7 ~ 2046/11/8
 PASS native_auth_required_/_localmod/status
 PASS native_auth_required_/_localmod/diagnostics
 starting ntp...

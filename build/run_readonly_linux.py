@@ -7,8 +7,8 @@ import time
 from pathlib import Path
 
 
-def run(log_path, timeout=270, state_disk=None, expect_cut=False):
-    root = Path(__file__).resolve().parent.parent
+def _run(log_path, root, timeout=270, state_disk=None, expect_cut=False,
+         cancel=None, cpus=2, on_started=None, slot_fd=None):
     args = [str(root / 'build/tools/LinuxBuilder'), str(root / 'build/tools/linux-Image'),
             str(root / 'build/tools/linux-initramfs.gz'), str(root), '--readonly']
     if state_disk is not None:
@@ -17,16 +17,21 @@ def run(log_path, timeout=270, state_disk=None, expect_cut=False):
         assert disk.suffix == '.img' and disk.stat().st_size == 96 * 1024 * 1024
         args.append(str(disk))
     env = dict(os.environ)
-    if state_disk is not None:
-        env["LOCALMOD_TEST_CPUS"] = "1"
-    proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, env=env)
+    assert cpus in (1, 2)
+    env["LOCALMOD_TEST_CPUS"] = "1" if state_disk is not None else str(cpus)
+    proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, env=env,
+                            pass_fds=() if slot_fd is None else (slot_fd,))
     stream = selectors.DefaultSelector()
     stream.register(proc.stdout, selectors.EVENT_READ)
     data = bytearray()
     deadline = time.monotonic() + timeout
     guest_fault = None
     try:
+        if on_started is not None:
+            on_started(proc.pid)
         while time.monotonic() < deadline:
+            if cancel is not None and cancel.is_set():
+                raise InterruptedError('Owned read-only VM cancelled')
             for key, _ in stream.select(.2):
                 chunk = key.fileobj.read1(65536)
                 if not chunk:
@@ -68,6 +73,47 @@ def run(log_path, timeout=270, state_disk=None, expect_cut=False):
     # Serial consoles emit CRLF. Keep reviewable logs in the repository's LF format.
     Path(log_path).write_text(text.rstrip('\n') + '\n')
     return text
+
+
+def run(log_path, timeout=270, state_disk=None, expect_cut=False, *,
+        sealed=None, cancel=None, cpus=2, on_started=None, receipt=None):
+    """Seal before launch; cancellation only terminates this owned VM process.
+
+    Legacy checker preparation remains serial. The shard executor prepares all
+    jobs first and supplies separate sealed inputs before running at most two.
+    """
+    import json
+    from sealed_vm import SealedWorkspace, acquire_slot
+    assert 0 < timeout <= 7200
+    log_path = Path(log_path)
+    slot = None
+    job = sealed
+    try:
+        slot = acquire_slot(cancel)
+        if job is None:
+            job = SealedWorkspace(state_disk=state_disk)
+        else:
+            assert state_disk is None, 'State must be attached when sealing'
+        job.verify()
+        job.started = True
+        result = _run(log_path, job.workspace, timeout=timeout, state_disk=job.state,
+                      expect_cut=expect_cut, cancel=cancel, cpus=cpus, on_started=on_started, slot_fd=slot)
+        job.verify()
+        job.ok = True
+        return result
+    finally:
+        try:
+            if job is not None:
+                details = job.receipt()
+                details.update(cpus=1 if job.state is not None else cpus, memory_mib=1024,
+                               timeout_seconds=timeout, sealed_inputs_verified_before_and_after=job.ok)
+                if receipt is not None:
+                    receipt.update(details)
+                log_path.with_suffix(log_path.suffix + '.vm.json').write_text(json.dumps(details, indent=2) + '\n')
+                job.close()
+        finally:
+            if slot is not None:
+                os.close(slot)
 
 
 if __name__ == '__main__':

@@ -195,6 +195,15 @@
 !/build/check_history.py
 !/build/test_history.go
 !/build/history_fault_fixture.c
+!/build/sealed_vm.py
+!/build/check_shards.py
+!/build/hardening_inputs.py
+!/build/base_migration.py
+!/build/base_contracts.json
+!/output/shard_tests.json
+!/output/shard_*.log
+!/output/base_migration_tests.json
+!/output/隔离分片与底包升级说明.md
 !/output/history_tests.json
 !/output/history_*.log
 !/output/持久化操作记录说明.md

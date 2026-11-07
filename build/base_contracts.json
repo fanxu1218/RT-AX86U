@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "image": "upstream/RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w",
+  "image_sha256": "de1caf609347beea394ebab956bddf0b391db592d1ad5f99e9d37e4d0b876af0",
+  "tree_sha256": "6047a939e9f1eb05546a6589e6dc9137e54c71317ff9da862586ee6dbd55aab1",
+  "critical_sha256": {
+    "sbin/rc": "9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62",
+    "usr/sbin/httpd": "d9a24b751b2c6ec0a9bf5931b6b1380e75c136bd672a91a5a5118c6ee9e1586d",
+    "usr/lib/libssl.so.1.1": "5579489cac9b6316b0d993cce06d48a851468b501375217a623ad27dca9751c9",
+    "usr/lib/libcrypto.so.1.1": "f392e5e30cac8ba62b9a474a17d9620826735e281e23e177d6b41e37f5174735",
+    "usr/lib/libshared.so": "ebaf2a4586a6fe6ca336f6fe6c3ba9955434ad3d4dd11b65bd017e37e13e9fef",
+    "lib/ld-linux.so.3": "c019efd3ed301f4d5b67f6cf119e165878a919cfc3c443877f6b862967934262",
+    "lib/libc.so.6": "ba92e7b4d99da8c0f92205dd3d017cc93999744366c7cc31744c96b50edc7970",
+    "usr/sbin/openssl": "a5e3ee7c5b813a001415861a5dc319f9fc201e389fdce514fa36860a8b90e90c",
+    "usr/sbin/gencert.sh": "168202540308216850541d63e65419729369bb4f8e23f6ec9dfceee14914e14e",
+    "usr/sbin/wget": "c8ffb9ea5cd39f3b5d41dfa174a7b78d37a919c304dd7fc5d0ac073b943ab749",
+    "usr/sbin/curl": "79b37917d01852d7624e36613dde5354a31ffa86b470d506bdc205f920a0d2d9",
+    "usr/sbin/xtables-multi": "d6817c985a7945f6c65f546320126b518771a47be2f114aaa3c1c55c1f73391b",
+    "bin/busybox": "e0cf740ee6906a4cdd7cfdb8c259cb7d347d16d4b58fdf5a589c1602f74ca409",
+    "bin/nvram": "b1dcecac5810b42ca3ea4623cd9c6a73b26b21b72b60364e1c992cce1540cb32",
+    "www/Main_Login.asp": "bc12649895e6b220a903f609335fa2b1433e8b320502814b0bbda503b8d8d7b1",
+    "www/UUAccelerator.asp": "ee62be7154ea2928f8d8e996e3d5b947e255c571894c2aa4c03fc1064898fe48",
+    "www/state.js": "90da7246be902d451042527f70ea5e864090855583109b35751c7e00e2c42dc7",
+    "rom/etc/profile": "4a4ba7e88f619e8dbd12f68c2da4010c7e19d7b9642866764132231e9b87cded"
+  },
+  "model": "RT-AX86U"
+}
