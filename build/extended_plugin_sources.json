@@ -1,0 +1,233 @@
+{
+  "schema": 1,
+  "selected_at": "2026-11-07",
+  "packages": [
+    {
+      "module": "frpc",
+      "phase": "old",
+      "version": "1.7",
+      "path": "sources/realplugins/frpc-old-extended.tar.gz",
+      "packaging": "original-published-archive",
+      "source_url": "https://raw.githubusercontent.com/koolshare/rogsoft/4100df46ea63c0c59568636c0ff9af6391592e59/frpc/frpc.tar.gz",
+      "sha256": "fb8b38896ee7aa66e7c850b98fa6635075b1ef982566373ca0ffb87e1d6ef2ba",
+      "md5": "f61034661635103fb49bd9c96f11eb95"
+    },
+    {
+      "module": "frpc",
+      "phase": "current",
+      "version": "2.4",
+      "path": "sources/realplugins/frpc-current-extended.tar.gz",
+      "packaging": "pinned-upstream-build-recipe",
+      "source_commit": "9a9ec81892627e4638616e55c60a2a351be9c294",
+      "source_url": "https://github.com/koolshare/rogsoft/tree/9a9ec81892627e4638616e55c60a2a351be9c294/frpc",
+      "source_files": [
+        {
+          "path": "frpc/build.sh",
+          "mode": "100755",
+          "git_blob": "c21105ad8e898bff5d9194d4fa776cae711833a1",
+          "sha256": "7ec35716c2ecee8f5fe9583051071501b7da63c9a041f784d3de487179af2cec"
+        },
+        {
+          "path": "frpc/frpc/.valid",
+          "mode": "100644",
+          "git_blob": "acb936e1e763a7dbe8845d3af09b67224674ed52",
+          "sha256": "85fed671fba452682f323b5b543053d5f9709fd40c489ce8a2e816bcc194e59b"
+        },
+        {
+          "path": "frpc/frpc/bin/frpc",
+          "mode": "100755",
+          "git_blob": "f76e149c678f560c23c3f41535bde2cd9b0d78bf",
+          "sha256": "51d555c35ce918dde4657fbdfb4f04d4d52cfa81e204d92bb19af0060d4b9f2b"
+        },
+        {
+          "path": "frpc/frpc/bin/frpc-arm",
+          "mode": "100755",
+          "git_blob": "66269892c00da7174ffa9daf1281f375853c762d",
+          "sha256": "ed35cfb13ef731b58b7ba59d29835b3a06ce3c025daaf27a1ff73e1db801a263"
+        },
+        {
+          "path": "frpc/frpc/bin/frpc-arm64",
+          "mode": "100755",
+          "git_blob": "60a63e4d17bcabb3a424584198d8c6973f7b9efe",
+          "sha256": "c0d5489e736d615efea1938a950b01bbe9e4dfe0f91248fc5c1ced2bbe3fc0f5"
+        },
+        {
+          "path": "frpc/frpc/install.sh",
+          "mode": "100755",
+          "git_blob": "3abe74ebcabea34bd59bdb7876bae4e716372388",
+          "sha256": "42164ef46201d0fa33805196818fd01666ce46638f0e74d8b7e340fa01127a3e"
+        },
+        {
+          "path": "frpc/frpc/res/icon-frpc.png",
+          "mode": "100644",
+          "git_blob": "81e01b56a1e5185437f0a7343091d87bd5028599",
+          "sha256": "c05a5f09446f571105a3b4dd9e079385632fea9e190f94f93fb75967d74151d4"
+        },
+        {
+          "path": "frpc/frpc/scripts/frpc_config.sh",
+          "mode": "100755",
+          "git_blob": "82505a80428387ccac52757062dca112dc130799",
+          "sha256": "9d20dc111aca49fcfd347c7495984d1b96bbe334e2cc522a19737873fd9e32c3"
+        },
+        {
+          "path": "frpc/frpc/scripts/frpc_status.sh",
+          "mode": "100755",
+          "git_blob": "3fca502fa746074d744ffc573a42080e862d8974",
+          "sha256": "efabe126349a5f0d557357fdfc3d484331a937783a174b8388c0a9de969d93db"
+        },
+        {
+          "path": "frpc/frpc/uninstall.sh",
+          "mode": "100755",
+          "git_blob": "f383fa7f0ff84b37ad092a64a86604ce2aeb808c",
+          "sha256": "9bc3a58da0a4559f01dd3c0cca1d0e7c8897fc5420fb6fa68d9bcb94b92b597a"
+        },
+        {
+          "path": "frpc/frpc/version",
+          "mode": "100644",
+          "git_blob": "d3bdbdf1fdaecae544df2a889f92ae49320ee31b",
+          "sha256": "2894c5729307b0246d73c17758d6394fe47087f69a25a0f8351810387663dac5"
+        },
+        {
+          "path": "frpc/frpc/webs/Module_frpc.asp",
+          "mode": "100644",
+          "git_blob": "d143341511d8c3dbaf64af1bab13eb63abe41f4f",
+          "sha256": "c62d882adc5492458bf23e9706031a0e498bd7ea6c17d60228b8bb347ed84827"
+        }
+      ],
+      "generated_metadata": [
+        "version",
+        ".valid"
+      ],
+      "binary_selection": "bin/frpc-arm -> bin/frpc",
+      "runtime_adaptations": {
+        "install.sh": {
+          "input_sha256": "42164ef46201d0fa33805196818fd01666ce46638f0e74d8b7e340fa01127a3e",
+          "output_sha256": "9cbecaf7af1525c6c1c79395e0c8887b07eadb60bcd8b48bb7b697b759fdabc5",
+          "purpose": "Scope installer cleanup to its owned stage"
+        }
+      },
+      "sha256": "dcfe13b3632d5b9ef61e110051aa4294b5eca8e3ef5c22c1d785bbc16d912960",
+      "md5": "89cb07ac86b5afe0dc2f502801106654"
+    },
+    {
+      "module": "pushplus",
+      "phase": "old",
+      "version": "0.4",
+      "path": "sources/realplugins/pushplus-old-extended.tar.gz",
+      "packaging": "original-published-archive",
+      "source_url": "https://raw.githubusercontent.com/koolshare/rogsoft/4100df46ea63c0c59568636c0ff9af6391592e59/pushplus/pushplus.tar.gz",
+      "sha256": "6af79aaa9b10c6ad663865d96ddc69758c6b85bce688c71b342245907d9d2926",
+      "md5": "b7555108eb5881fb2e8d7f8d0026698f",
+      "runtime_adaptations": {
+        "scripts/pushplus_config.sh": {
+          "input_sha256": "e1ff1be042266bce1f5e73b5a69cd82da2b9c72f278aef3c5e3a78d3fb743d21",
+          "output_sha256": "0c5c059fd38886c40f20acf9d48665aa92cd4fa5fb523dd76c696b91580322b5",
+          "purpose": "Acknowledge numeric HTTP RPC IDs"
+        }
+      }
+    },
+    {
+      "module": "pushplus",
+      "phase": "current",
+      "version": "0.7",
+      "path": "sources/realplugins/pushplus-current-extended.tar.gz",
+      "packaging": "pinned-upstream-build-recipe",
+      "source_commit": "9a9ec81892627e4638616e55c60a2a351be9c294",
+      "source_url": "https://github.com/koolshare/rogsoft/tree/9a9ec81892627e4638616e55c60a2a351be9c294/pushplus",
+      "source_files": [
+        {
+          "path": "pushplus/build.sh",
+          "mode": "100755",
+          "git_blob": "177d4bc75aa8e30432906f26cb3e68000d0df294",
+          "sha256": "fd7602404f53de30992f3084f8ea66d0822a38fbcdf87413074e317a20d3fae2"
+        },
+        {
+          "path": "pushplus/pushplus/.valid",
+          "mode": "100644",
+          "git_blob": "acb936e1e763a7dbe8845d3af09b67224674ed52",
+          "sha256": "85fed671fba452682f323b5b543053d5f9709fd40c489ce8a2e816bcc194e59b"
+        },
+        {
+          "path": "pushplus/pushplus/bin/jq",
+          "mode": "100755",
+          "git_blob": "4464f85ec2e04d84b30f389fb9b0b49c36d03929",
+          "sha256": "13a1c00e405b5e4c23a142e2aa85f95825d0c22647d6745b057d99026973c001"
+        },
+        {
+          "path": "pushplus/pushplus/install.sh",
+          "mode": "100755",
+          "git_blob": "1843624b3c74096b3d7b954848d2974611635ef8",
+          "sha256": "a207bde0d6a7d82599bdca4f34a6f9d27565155503ed2282498b396199a7d99b"
+        },
+        {
+          "path": "pushplus/pushplus/res/icon-pushplus.png",
+          "mode": "100644",
+          "git_blob": "f2668dc151c2b1de7916bcf70eac745f798cda97",
+          "sha256": "4f1a2e1cf122d516bd488b31ad5bedf82df7c254393b577af05a0284cec0e0a2"
+        },
+        {
+          "path": "pushplus/pushplus/scripts/pushplus_check.sh",
+          "mode": "100755",
+          "git_blob": "68524eb0f28a124acabf625d9f4e23aecf11545e",
+          "sha256": "320ede9f983753cba5addaceb1002911b08c77d2da539f732c0046c800fd8c79"
+        },
+        {
+          "path": "pushplus/pushplus/scripts/pushplus_check_task.sh",
+          "mode": "100755",
+          "git_blob": "549051ad9b4e7126024cb5f89072cc24673d1e27",
+          "sha256": "b260a7b67cbb0e71f81f81111c54db766b0e11217b274088453fda2e9cd15fbe"
+        },
+        {
+          "path": "pushplus/pushplus/scripts/pushplus_config.sh",
+          "mode": "100755",
+          "git_blob": "5f966e4319011fa6e44fe510d54dd9365f730f6e",
+          "sha256": "e1ff1be042266bce1f5e73b5a69cd82da2b9c72f278aef3c5e3a78d3fb743d21"
+        },
+        {
+          "path": "pushplus/pushplus/scripts/pushplus_dhcp_trigger.sh",
+          "mode": "100755",
+          "git_blob": "142acf70b66912dbcc3d1a649327583e41d3b1fd",
+          "sha256": "2e3bb66b78f19250c55ebe1804b7a14546768186710ad27c28fd820c7b73035c"
+        },
+        {
+          "path": "pushplus/pushplus/scripts/pushplus_ifup_trigger.sh",
+          "mode": "100755",
+          "git_blob": "6b99c978a1db381c9777a9dbc8004bbde041ca90",
+          "sha256": "82648f037b3ee7630e3be72e5f164e1e14fcec9955c86b1ef1f5f119e39e4399"
+        },
+        {
+          "path": "pushplus/pushplus/uninstall.sh",
+          "mode": "100755",
+          "git_blob": "f4591b9ab958276376d5f7aeff9fbfcb96a4f9ae",
+          "sha256": "512402707b38c680790ec0223d5ff7d5ec61b9eea96ae5ae1892ea1df8d0f3f3"
+        },
+        {
+          "path": "pushplus/pushplus/version",
+          "mode": "100644",
+          "git_blob": "2eb3c4fe4eebcdea3da0790cc0ba74cb286ec4f4",
+          "sha256": "8d5c1b5a87c51f970807fc0c2057b3ab3aaf11638ab667dc5956edc8f5bcf138"
+        },
+        {
+          "path": "pushplus/pushplus/webs/Module_pushplus.asp",
+          "mode": "100644",
+          "git_blob": "6ee233a12cdc8c868591a9080d7db756356427a3",
+          "sha256": "45f70527f4159feaaa153ddccdb7b06c42b52ae0f8b5062c65973f9ad8dfdcd1"
+        }
+      ],
+      "generated_metadata": [
+        "version",
+        ".valid"
+      ],
+      "binary_selection": "unchanged",
+      "runtime_adaptations": {
+        "scripts/pushplus_config.sh": {
+          "input_sha256": "e1ff1be042266bce1f5e73b5a69cd82da2b9c72f278aef3c5e3a78d3fb743d21",
+          "output_sha256": "0c5c059fd38886c40f20acf9d48665aa92cd4fa5fb523dd76c696b91580322b5",
+          "purpose": "Acknowledge numeric HTTP RPC IDs"
+        }
+      },
+      "sha256": "3000f98a6112c6af49e1be6b6b990fb49d187f04b500a119d5216455829c8e42",
+      "md5": "37c2b22a330c03a603c7dc591902a5e7"
+    }
+  ]
+}

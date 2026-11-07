@@ -19,8 +19,8 @@ offline_install(){
  ks_archive_valid || { echo_date "插件压缩包目录不匹配或解压失败！"; ks_finish 1; }
  ks_scope_prepare || ks_finish 1
  tar -zxf "$KS_DOWNLOAD" -C /tmp || ks_finish 1
- [ -f "$KS_STAGE/install.sh" ] && [ -f "$KS_STAGE/.valid" ] &&
-  grep -qw hnd "$KS_STAGE/.valid" || { echo_date "安装包不是ASUS hnd平台或缺少安装脚本。"; ks_finish 1; }
+ [ -f "$KS_STAGE/install.sh" ] && ks_platform_valid || { echo_date "安装包不是受支持的ASUS HND平台或缺少安装脚本。"; ks_finish 1; }
+ ks_prepare_plugin || { echo_date "插件兼容适配未通过校验，安装未执行。"; ks_finish 1; }
  ks_checkpoint || ks_finish 1
  ks_uninstaller_backup || ks_finish 1
  if [ -f "$KS_STAGE/uninstall.sh" ]; then

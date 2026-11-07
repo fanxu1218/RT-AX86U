@@ -88,7 +88,27 @@ ks_scope_clean(){
  rm -f "$KS_DOWNLOAD"
 }
 ks_archive_valid(){
- /usr/libexec/localmod/archive-guard "$KS_DOWNLOAD" "$softcenter_installing_todo" >/dev/null
+ /usr/libexec/localmod/archive-guard "$KS_DOWNLOAD" "$softcenter_installing_todo" >/dev/null || return 1
+ if [ "$softcenter_installing_todo" = shadowsocks ]; then
+  # Only reviewed adaptations preserve UU and stay behind native login/TLS.
+  # Unknown future upstream/self-update installers must never bypass this gate.
+  KS_PACKAGE_HASH=$(/usr/sbin/openssl dgst -sha256 "$KS_DOWNLOAD") || return 1
+  KS_PACKAGE_HASH=${KS_PACKAGE_HASH##* }
+  if ! grep -Fxq "$KS_PACKAGE_HASH  shadowsocks" /usr/libexec/localmod/fancyss-packages.sha256; then
+   echo_date "Fancyss：请使用 localmod 适配并校验的兼容包；原始包可能清理 UU 数据，本次未执行。"
+   return 1
+  fi
+ fi
+}
+ks_platform_valid(){
+ [ -f "$KS_STAGE/.valid" ] || return 1
+ grep -qw hnd "$KS_STAGE/.valid" && return 0
+ # This firmware targets the ordinary RT-AX86U with the retained ARM64 loader.
+ grep -qx hnd_v8 "$KS_STAGE/.valid" &&
+  [ "$(nvram get productid)" = RT-AX86U ] && [ -x /lib/ld-linux-aarch64.so.1 ]
+}
+ks_prepare_plugin(){
+ /bin/sh /usr/libexec/localmod/plugin-compat.sh "$softcenter_installing_todo" "$KS_STAGE"
 }
 ks_run_script(){
  /usr/libexec/localmod/plugin-run 300 - 0 start-stop-daemon -S -q -x "$1"

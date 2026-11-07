@@ -82,6 +82,8 @@ def overlay():
       'usr/libexec/localmod/plugin-run':ROOT/'build/plugin-run',
       'usr/libexec/localmod/log-limit':ROOT/'build/log-limit',
       'usr/libexec/localmod/installer-guard.sh':ROOT/'sources/localmod/installer-guard.sh',
+      'usr/libexec/localmod/plugin-compat.sh':ROOT/'sources/localmod/plugin-compat.sh',
+      'usr/libexec/localmod/fancyss-packages.sha256':ROOT/'sources/localmod/fancyss-packages.sha256',
       'rom/etc/koolshare/scripts/ks_tar_install.sh':ROOT/'sources/localmod/offline-installer.sh',
     }
     for dst,src in files.items():

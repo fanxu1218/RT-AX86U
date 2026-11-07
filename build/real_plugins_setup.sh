@@ -57,6 +57,7 @@ cat /tmp/.localmod/bootstrap.log
 echo REAL_PLUGIN_SETUP_READY
 
 phase=$(cat /work/build/real-plugin-phase)
+case "$phase" in hardening-fancyss*|candidate-fancyss*) exec /work/build/test-fancyss "$phase";; esac
 case "$phase" in hardening-installer|candidate-installer) exec /work/build/test-installer-boundaries "$phase";; esac
 case "$phase" in hardening-resources|candidate-resources) exec /work/build/test-resource-bounds "$phase";; esac
 case "$phase" in hardening-uu|candidate-uu) exec /work/build/test-uu-recovery "$phase";; esac

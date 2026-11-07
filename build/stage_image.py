@@ -7,6 +7,7 @@ import shutil
 import stat
 import argparse
 import re
+from prepare_fancyss import prepare as prepare_fancyss, render_page as fancyss_page
 from patch_online_installer import patch_online_installer
 from pathlib import Path
 from release_config import CONFIG
@@ -60,6 +61,8 @@ put(root/'build/iptables-restore-launcher','usr/sbin/iptables-restore',0o500)
 put(root/'sources/localmod/bootstrap.sh','usr/libexec/localmod/bootstrap.sh',0o755)
 put(root/'sources/localmod/dispatch.sh','usr/libexec/localmod/dispatch.sh',0o755)
 put(root/'sources/localmod/installer-guard.sh','usr/libexec/localmod/installer-guard.sh',0o755)
+put(root/'sources/localmod/plugin-compat.sh','usr/libexec/localmod/plugin-compat.sh',0o755)
+put(root/'sources/localmod/fancyss-packages.sha256','usr/libexec/localmod/fancyss-packages.sha256',0o444)
 put(root/'build/plugin-txn','usr/libexec/localmod/plugin-txn',0o500)
 for name in ['archive-guard','plugin-run','log-limit','localmod-status']:
     put(root/'build'/name,'usr/libexec/localmod/'+name,0o500)
@@ -135,6 +138,10 @@ state.write_text(state.read_text()+'''
 ''')
 put(root/'sources/localmod/Module_Localmod.asp','www/Module_Localmod.asp',0o644)
 (stage/'www/Module_Localmod.asp').write_text((stage/'www/Module_Localmod.asp').read_text().replace('@REVISION@',CONFIG['variant']+'-'+CONFIG['revision']))
+fancyss=prepare_fancyss()
+assert (root/'sources/localmod/fancyss-packages.sha256').read_text()==''.join(p['adapted_sha256']+'  shadowsocks\n' for p in fancyss['packages'])
+put(root/'sources/localmod/Module_FancyssLocalmod.asp','www/Module_FancyssLocalmod.asp',0o644)
+(stage/'www/Module_FancyssLocalmod.asp').write_text(fancyss_page(fancyss,CONFIG))
 ui=stage/core/'res/soft-v19/assets/index.3d07b566.js'
 text=ui.read_text()
 assert 'href:"http://"+a.netaddr+":3032"' in text

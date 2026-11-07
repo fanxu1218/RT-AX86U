@@ -7,7 +7,7 @@
 <h1>官改状态与恢复 · @REVISION@</h1>
 <p>华硕 RT-AX86U · 官方 3.0.0.4.388_24437 · 软件中心 1.9.50 · 官方网易 UU</p>
 <p class="note">试验版，尚未完成实机验收。此页只读取状态，不会修改配置或删除恢复副本。</p>
-<p><a href="/Module_Softcenter.asp">软件中心</a> · <a href="/UUAccelerator.asp">网易 UU</a> · <a href="/index.asp">管理首页</a></p>
+<p><a href="/Module_Softcenter.asp">软件中心</a> · <a href="/UUAccelerator.asp">网易 UU</a> · <a href="/Module_FancyssLocalmod.asp">安装 Fancyss</a> · <a href="/index.asp">管理首页</a></p>
 <section aria-labelledby="health-title"><h2 id="health-title">当前状态</h2>
 <p id="message" role="status">正在读取…</p>
 <dl><dt>软件中心进程</dt><dd id="center">等待查询</dd><dt>事件进程</dt><dd id="events">等待查询</dd><dt>UU 进程</dt><dd id="uu">等待查询</dd><dt>JFFS 可用空间</dt><dd id="space">等待查询</dd><dt>恢复检查点</dt><dd id="checkpoint">等待查询</dd><dt>最近插件操作</dt><dd id="operation">等待查询</dd></dl>

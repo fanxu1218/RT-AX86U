@@ -62,6 +62,7 @@ for name in ['changes.json','runtime_tests.log','hooks_trace.log','hooks_test_ru
 run('python3','build/check_lifecycle.py','--skip-native-regression')
 run('python3','build/check_online.py')
 run('python3','build/check_real_plugins.py')
+run('python3','build/check_fancyss.py','--candidate')
 run('python3','build/check_https_stability.py')
 run('python3','build/check_interrupt.py')
 run('python3','build/check_recovery_safety.py')

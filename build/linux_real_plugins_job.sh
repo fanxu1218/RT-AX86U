@@ -36,7 +36,10 @@ if grep -qw localmod_state_disk=1 /proc/cmdline; then
  fi
  mount -t ext4 /dev/vda /router/jffs || { cat /proc/partitions; cat /proc/filesystems; dmesg | tail -12; exit 1; }
 else
- mount -t tmpfs -o size=64m tmpfs /router/jffs
+ jffs_size=64m
+ # Large authentic plugin coexistence matrix; production JFFS is unchanged.
+ if grep -Eq '^(hardening-fancyss|candidate-fancyss)' /work/build/real-plugin-phase; then jffs_size=128m;fi
+ mount -t tmpfs -o size=$jffs_size tmpfs /router/jffs
 fi
 cp /usr/bin/qemu-arm /router/usr/bin/qemu-arm
 mkdir -p /router/fixture/lib /router/fixture/xtables
@@ -57,6 +60,11 @@ export LOCALMOD_TLS_START_TIMEOUT=60s
 export LOCALMOD_HTTP_REQUEST_TIMEOUT=10s
 export LOCALMOD_NTP_WAIT_TIMEOUT=45s
 export LOCALMOD_PLUGIN_OPERATION_TIMEOUT=45s
+if grep -Eq '^(hardening-fancyss|candidate-fancyss)' /work/build/real-plugin-phase; then
+ # The 19 MiB authentic full package needs a larger observation window than
+ # the small fixtures. Production download/script limits remain 90/300 s.
+ export LOCALMOD_PLUGIN_OPERATION_TIMEOUT=90s
+fi
 if grep -qx 'hardening-health' /work/build/real-plugin-phase; then export LOCALMOD_HTTPD_BRIDGE_OVERLAY=1;fi
 if grep -qx 'soak-httpd-memory' /work/build/real-plugin-phase; then export LOCALMOD_HTTPD_MEMORY_DIAGNOSTIC=1;fi
 if grep -qx 'soak-httpd-cache' /work/build/real-plugin-phase; then export LOCALMOD_HTTPD_MEMORY_DIAGNOSTIC=1 LOCALMOD_HTTPD_TLS_CACHE_TRACE=1;fi

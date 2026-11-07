@@ -45,7 +45,8 @@ def patch_online_installer(text):
             '\tfind /jffs/ -name "uu.tar.gz*" -type f | xargs rm -rf',
             '\t# UU archives belong to UU; ordinary plugin operations must preserve them.')
     replace('\t\t\texit_tar_install 1', '\t\t\tquit_ks_install')
-    replace('\t# 14. 复制uninstall.sh', '\tks_checkpoint || quit_ks_install\n'
+    replace('\t# 14. 复制uninstall.sh', '\tks_prepare_plugin || { echo_date "插件兼容适配未通过校验，安装未执行。"; quit_ks_install; }\n'
+            '\tks_checkpoint || quit_ks_install\n'
             '\tks_uninstaller_backup || quit_ks_install\n\n\t# 14. 复制uninstall.sh')
     replace('\t\trm -rf /koolshare/scripts/uninstall_${softcenter_installing_todo}.sh',
             '\t\tks_uninstaller_restore || echo_date "恢复旧卸载脚本失败，请保留日志。"')
@@ -67,6 +68,11 @@ def patch_online_installer(text):
             'rm -f /koolshare/init.d/[SVTNMU][0-9][0-9]"${softcenter_installing_todo}".sh')
     replace('rm -rf /koolshare/scripts/${softcenter_installing_todo}*.sh',
             'rm -f /koolshare/scripts/"${softcenter_installing_todo}".sh /koolshare/scripts/"${softcenter_installing_todo}"_*.sh /koolshare/scripts/"uninstall_${softcenter_installing_todo}.sh"')
+    replace('\t# 4. remove software center value for specific plugin',
+            '\t# A successful custom uninstaller may leave its own invocation entry.\n'
+            '\trm -f "/koolshare/scripts/${softcenter_installing_todo}_uninstall.sh" "/koolshare/scripts/uninstall_${softcenter_installing_todo}.sh" || {\n'
+            '\t echo_date "清理插件卸载入口失败，保留登记。"; quit_ks_uninstall; }\n\n'
+            '\t# 4. remove software center value for specific plugin')
     replace('local txt=$(dbus list ${softcenter_installing_todo})', 'local txt=$(dbus list "${softcenter_installing_todo}_")')
     replace('\techo_date "卸载成功！"\n\tquit_ks_uninstall', '\techo_date "卸载成功！"\n\tquit_ks_uninstall 0')
     assert text.rstrip().endswith('esac')

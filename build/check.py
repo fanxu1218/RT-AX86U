@@ -7,7 +7,7 @@ def sha(p):
  with p.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
 def owned_sources():
  paths=subprocess.check_output(['git','ls-files','-co','--exclude-standard','--','sources/localmod','build','.github'],cwd=ROOT,text=True).splitlines()
- return {p:sha(ROOT/p) for p in sorted(set(paths)) if (ROOT/p).is_file() and Path(p).suffix in {'.c','.h','.go','.py','.sh','.asp','.swift','.json','.yml'}}
+ return {p:sha(ROOT/p) for p in sorted(set(paths)) if (ROOT/p).is_file() and Path(p).suffix in {'.c','.h','.go','.py','.sh','.asp','.swift','.json','.yml','.sha256','.txt'}}
 def run(*args):subprocess.run(args,cwd=ROOT,check=True)
 def quick():
  paths=owned_sources()
@@ -58,20 +58,24 @@ def finalize(inputs):
         'httpd-launcher':'usr/sbin/httpd','init-launcher':'sbin/init','rc-launcher':'sbin/rc','iptables-restore-launcher':'usr/sbin/iptables-restore'}
  for name in ['localmod-event','plugin-txn','archive-guard','plugin-run','log-limit','localmod-status']:pairs[name]='usr/libexec/localmod/'+name
  for p,target in pairs.items():assert (ROOT/'build'/p).read_bytes()==(stage/target).read_bytes()==(back/target).read_bytes(),p
- for name in ['bootstrap.sh','dispatch.sh','installer-guard.sh']:
+ for name in ['bootstrap.sh','dispatch.sh','installer-guard.sh','plugin-compat.sh','fancyss-packages.sha256']:
   assert (ROOT/'sources/localmod'/name).read_bytes()==(back/'usr/libexec/localmod'/name).read_bytes(),name
  assert (ROOT/'sources/localmod/offline-installer.sh').read_bytes()==(back/'rom/etc/koolshare/scripts/ks_tar_install.sh').read_bytes()
  from patch_online_installer import patch_online_installer
  assert patch_online_installer((ROOT/'build/casefs/koolcenter_rootfs/rom/etc/koolshare/scripts/ks_app_install.sh').read_text())==(back/'rom/etc/koolshare/scripts/ks_app_install.sh').read_text()
  assert (ROOT/'sources/localmod/Module_Localmod.asp').read_text().replace('@REVISION@',CONFIG['variant']+'-'+CONFIG['revision'])==(back/'www/Module_Localmod.asp').read_text()
+ from prepare_fancyss import prepare as prepare_fancyss,render_page as fancyss_page
+ fancyss=prepare_fancyss()
+ assert (ROOT/'sources/localmod/fancyss-packages.sha256').read_text()==''.join(p['adapted_sha256']+'  shadowsocks\n' for p in fancyss['packages'])
+ assert fancyss_page(fancyss,CONFIG)==(back/'www/Module_FancyssLocalmod.asp').read_text()
  v=json.loads((ROOT/'output/verification.json').read_text());assert v['image']==CONFIG['image'] and sha(ROOT/v['image'])==v['sha256'] and all(v['checks'].values()) and not v['errors']
  reports={}
- for name in ['lifecycle_tests','online_plugin_tests','real_plugin_tests','https_stability_tests','interruption_tests','recovery_safety_tests','hardening_tests','tls_input_tests']:
+ for name in ['lifecycle_tests','online_plugin_tests','real_plugin_tests','fancyss_tests','https_stability_tests','interruption_tests','recovery_safety_tests','hardening_tests','tls_input_tests']:
   p=ROOT/('output/'+name+'.json');x=json.loads(p.read_text());assert x['candidate_sha256']==v['sha256'],name
   assert ('checks' not in x or all(x['checks'].values())) and (x['status']=='PASS' or x['status'].endswith('_PASS')),name
   reports[str(p.relative_to(ROOT))]=sha(p)
  modified={'rom/etc/profile','sbin/init','sbin/rc','usr/sbin/httpd','usr/sbin/iptables-restore','www/state.js'}
- added={'koolshare','rom/etc/localmod-core-id','rom/etc/localmod-release.json','usr/bin/dbus','usr/bin/skipd','usr/bin/jffsinit.sh','usr/bin/tee','usr/bin/xargs','usr/libexec','usr/sbin/helper.sh','www/Module_Localmod.asp'}
+ added={'koolshare','rom/etc/localmod-core-id','rom/etc/localmod-release.json','usr/bin/dbus','usr/bin/skipd','usr/bin/jffsinit.sh','usr/bin/tee','usr/bin/xargs','usr/libexec','usr/sbin/helper.sh','www/Module_Localmod.asp','www/Module_FancyssLocalmod.asp'}
  prefixes=['rom/etc/koolshare','usr/lib/localmod','usr/libexec/localmod']
  changes=json.loads((ROOT/'build/changes.json').read_text())
  for row in changes:
