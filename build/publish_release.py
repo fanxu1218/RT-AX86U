@@ -19,8 +19,17 @@ def main():
  tag=CONFIG['tag'];version=CONFIG['variant']+'-'+CONFIG['revision'];source=ROOT/('output/'+version.replace('-','_')+'_sources.tar.gz')
  raw=subprocess.check_output(['git','archive','--format=tar','--prefix='+version+'/','HEAD'],cwd=ROOT);source.write_bytes(gzip.compress(raw,mtime=0))
  names=[CONFIG['image'],str(Path(CONFIG['image']).with_suffix('.build.json')),'output/SHA256SUMS','output/verification.json','output/structure.json','output/changes.json','output/release_gates.json','output/hardening_tests.json','output/tls_input_tests.json','output/health_tests.json','output/installer_boundaries_tests.json','output/resource_bounds_tests.json','output/httpd_memory_tests.json','output/httpd_cache_tests.json','output/httpd_cache_bounded_tests.json','output/uu_recovery_tests.json','output/native_runtime_tests.json','output/lifecycle_tests.json','output/compatibility_tests.json','output/hooks_tests.json','output/uu_compatibility_tests.json','output/online_plugin_tests.json','output/real_plugin_tests.json','output/interruption_tests.json','output/recovery_safety_tests.json','output/https_stability_tests.json','output/官改加固与优化说明.md','output/构建与发布校验.md','output/Alpha3升级localmod2与实机验收.md',str(source.relative_to(ROOT))]
- assets=[ROOT/p for p in names]
- manifest={'tag':tag,'commit':head,'candidate_sha256':v['sha256'],'assets':[{'name':p.name,'bytes':p.stat().st_size,'sha256':sha(p)} for p in assets]}
+ # Match the existing releases' ASCII attachment naming. Keep Chinese source
+ # paths/content in Git; only the transport filename is aliased byte-for-byte.
+ aliases={'官改加固与优化说明.md':'HARDENING_NOTES.zh-CN.md','构建与发布校验.md':'BUILD_RELEASE_CHECKS.zh-CN.md','Alpha3升级localmod2与实机验收.md':'UPGRADE_ACCEPTANCE.zh-CN.md'}
+ folder=ROOT/('build/'+version+'-release-assets');assert not folder.is_symlink();folder.mkdir(mode=0o700,exist_ok=True)
+ assets=[];entries=[]
+ for name in names:
+  original=ROOT/name;p=original
+  if original.name in aliases:
+   p=folder/aliases[original.name];assert not p.is_symlink();p.write_bytes(original.read_bytes());assert sha(p)==sha(original)
+  assert p.name.isascii();assets.append(p);entries.append({'name':p.name,'source_path':name,'bytes':p.stat().st_size,'sha256':sha(p)})
+ manifest={'tag':tag,'commit':head,'candidate_sha256':v['sha256'],'assets':entries}
  m=ROOT/('output/'+version.replace('-','_')+'_release_manifest.json');m.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n');assets.append(m)
  notes=ROOT/'build/r8_release_notes.md';notes.write_text(f'''基于官方 24437，集成软件中心并保留官方 UU。本次完善归档/超时、队列/日志、TLS 缓存上限、UU 故障恢复验证、认证状态与脱敏导出，以及构建发布校验。\n\n本地回读、插件/中断恢复、原厂 HTTPS/证书/UU 控制流及六轮并发共存检查通过。SHA256: `{v['sha256']}`。\n\n实验候选版，未接触或刷写物理路由器；真实 UU 账号/加速、无线/NAT、实机升级与断电恢复仍待验收。发布保留 r7 及历史附件。源码提交：{head}。\n''')
  subprocess.run(['gh','release','create',tag,*[str(p) for p in assets],'--repo',REPO,'--target',head,'--title',version+' experimental','--prerelease','--notes-file',str(notes)],cwd=ROOT,check=True)

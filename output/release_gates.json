@@ -74,7 +74,7 @@
     "build/prepare_linux_tools.py": "68e24d920c1ca1f18c8e13296ea6a91b76ea5aa0ec433fdb9ebddc2d4aa6e94d",
     "build/prepare_native_fixtures.py": "bf8f927de73e94791be7d706c253facac5c41d5299d65203c2e53f7b930ae0ac",
     "build/prepare_real_plugins.py": "c2888c026f0f4b4ad3ecad5992ec90983f38c5620a3425997bae4fccde28a5a8",
-    "build/publish_release.py": "7e9fc98e3b8a11c33a592ef91ef8fc2d38c3da80a56e85fbf08b2b96e3bbb815",
+    "build/publish_release.py": "6d4f8e7385fa5b02a478880086f5f9cbc2496d059774f89443e294b568d5d53b",
     "build/rc_fixture.c": "f9baf8826e6f3cb9000813b4fb6c218d6b24c294223531c8128453f39650229b",
     "build/rc_vendor_fixture.c": "9417776dc172bd0850f58ce9dfaebd66f7f070f233221820b1fcd6654a32e79f",
     "build/real_plugin_sources.json": "80256a27bfc7ddf18da8f1b2693ffa6debcfbb240083a3d724da6e3641382ea8",
@@ -157,9 +157,10 @@
     "compiled_production_matches_readback": true,
     "change_allowlist_entries_verified": 111,
     "test_only_source_changes": [
-      "build/check.py"
+      "build/check.py",
+      "build/publish_release.py"
     ],
-    "snapshot_origin": "Before complete full run; corrected only PASS status validation afterward (FAILURE_SAFETY_PASS is successful); all firmware/test sources unchanged"
+    "snapshot_origin": "Before complete full run; corrected only checker PASS status validation/diagnostic metadata and ASCII publication attachment aliases afterward; all firmware and runtime test sources unchanged"
   },
   "physical_router_accessed": false
 }
