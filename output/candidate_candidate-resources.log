@@ -5,7 +5,7 @@ Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
 
 REAL_PLUGIN_SETUP_READY
 cacert.pem doesn't exist !!!!!!
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107092311, 2026/11/7 ~ 2046/11/8
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107131846, 2026/11/7 ~ 2046/11/8
 starting ntp...
 download uuplugin script info successfully
 URL: http://uu.fixture.test:35000/monitor
@@ -13,5 +13,5 @@ MD5: d90649080e15b5165aba44b9ba9ee18f
 download uuplugin script successfully
 prepare to execute uuplugin stript...
 RESOURCE_BOUNDS_RESULT {"accepted":128,"checks":{"accepted_events_drain_once_in_queue_order":true,"all_managed_logs_capped_at_two_128kib_files":true,"barrier_finishes_prior_events_using_reserved_capacity":true,"concurrent_256_events_admit_exactly_128_with_explicit_backpressure":true,"full_queue_preserves_synchronous_pre_mount_execution":true,"legacy_large_logs_trim_and_rotate_without_changing_exit_status":true,"noisy_and_background_hooks_keep_running_with_bounded_private_logs":true,"noisy_online_offline_and_backup_frontend_logs_bounded_with_completion_marker":true,"production_bootstrap_restart_preserves_database_certificate_private_api_and_uu":true,"queue_accepts_again_after_drain":true},"managed_log_limit_bytes":131072,"maximum_queue_entries":128,"rejected":128}
-SOAK_REAPER orphans_reaped=277
+SOAK_REAPER orphans_reaped=281
 LINUX_READONLY_JOB_STATUS=0

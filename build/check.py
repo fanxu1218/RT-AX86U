@@ -70,10 +70,16 @@ def finalize(inputs):
  assert fancyss_page(fancyss,CONFIG)==(back/'www/Module_FancyssLocalmod.asp').read_text()
  v=json.loads((ROOT/'output/verification.json').read_text());assert v['image']==CONFIG['image'] and sha(ROOT/v['image'])==v['sha256'] and all(v['checks'].values()) and not v['errors']
  reports={}
- for name in ['lifecycle_tests','online_plugin_tests','real_plugin_tests','fancyss_tests','history_tests','shard_tests','https_stability_tests','interruption_tests','recovery_safety_tests','hardening_tests','tls_input_tests']:
+ for name in ['lifecycle_tests','online_plugin_tests','real_plugin_tests','fancyss_tests','history_tests','shard_tests','model_isolation_tests','https_stability_tests','interruption_tests','recovery_safety_tests','hardening_tests','tls_input_tests']:
   p=ROOT/('output/'+name+'.json');x=json.loads(p.read_text());assert x['candidate_sha256']==v['sha256'],name
   assert ('checks' not in x or all(x['checks'].values())) and (x['status']=='PASS' or x['status'].endswith('_PASS')),name
   reports[str(p.relative_to(ROOT))]=sha(p)
+ for name in ['lifecycle_tests','online_plugin_tests']:
+  x=json.loads((ROOT/('output/'+name+'.json')).read_text())
+  jobs=x['private_model_job_receipts'];assert len(jobs)>=3
+  for job in jobs:assert job['outcome']=='PASS' and job['immutable_inputs_verified'] and not job['checkout_exported'] and job['runner_sha256']==inputs['build/model_private.py']
+ model=json.loads((ROOT/'output/model_isolation_tests.json').read_text())
+ assert all(inputs[p]==digest for p,digest in model['source_sha256'].items())
  p=ROOT/'output/base_migration_tests.json';base=json.loads(p.read_text())
  assert base['status']=='LOCAL_BASE_MIGRATION_AUDIT_PASS' and all(base['checks'].values()) and not base['errors']
  assert base['candidate_sha256']==sha(ROOT/CONFIG['vendor_image'])
@@ -85,7 +91,7 @@ def finalize(inputs):
  for row in changes:
   p=row['path'];assert (row['change']=='modified' and p in modified) or (row['change']=='added' and (p in added or any(p==q or p.startswith(q+'/') for q in prefixes))),('Unreviewed vendor change',row)
  assert owned_sources()==inputs
- return dict(previous_phase_reports_verified=receipt.get('previous_reports',{}),artifact_bound_reports=reports,compiled_production_matches_readback=True,change_allowlist_entries_verified=len(changes),test_only_source_changes=sorted(changed),snapshot_origin=receipt.get('snapshot_origin','before full run'))
+ return dict(previous_phase_reports_verified=receipt.get('previous_reports',{}),artifact_bound_reports=reports,compiled_production_matches_readback=True,change_allowlist_entries_verified=len(changes),test_only_source_changes=sorted(changed),test_only_source_change_reviews=receipt.get('test_only_source_change_reviews',{}),snapshot_origin=receipt.get('snapshot_origin','before full run'))
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['quick','dependencies','release','finalize']);a=ap.parse_args();os.chdir(ROOT)
  if a.mode=='dependencies':dependencies();return
@@ -97,6 +103,7 @@ def main():
   (ROOT/'build/release_run_inputs.json').write_text(json.dumps(dict(schema=1,source_sha256=inputs,allowed_source_changes=[]),indent=2)+'\n')
   run(str(ROOT/'analysis/.venv/bin/python'),'build/base_migration.py','--image',CONFIG['vendor_image'])
   run('python3','build/build_candidate.py')
+  run('python3','build/check_model_isolation.py')
   run('python3','build/check_hardening.py')
   run('python3','build/check_shards.py','--candidate')
   run('python3','build/check_tls_input.py','--candidate')

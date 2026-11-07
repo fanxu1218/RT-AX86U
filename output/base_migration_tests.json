@@ -4421,7 +4421,7 @@
     "build/base_migration.py": "9d5351ec17369cf53dfa37eafcf22786bdf776503e9fff935cf85be6130704b7",
     "build/base_contracts.json": "0827a9a868309f5d27518ed8b7f2a8b432356f54e7baac7c43b28283493b95cb",
     "build/inspect_upstream.py": "1295abd96cdb502c9e79caacb1eeaa27b8330a4aca36cee5b07a6fa91f278bcc",
-    "build/sealed_vm.py": "e9054c88b942a32273467eeae8aff13ea0040181d891569a1ad826b0f8e7b061"
+    "build/sealed_vm.py": "7674b42753433543b7efacea60f6ef5b23829513a4048a445a89e2dbd7a26838"
   },
   "rebuild_required": false,
   "automatic_migration_or_flash": false,

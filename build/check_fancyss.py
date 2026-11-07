@@ -76,7 +76,7 @@ def main():
     if args.candidate:report.update(candidate_image=v['image'],candidate_sha256=v['sha256'])
     out=ROOT/('build/fancyss_components.json' if args.components else 'build/fancyss_proxy.json' if args.proxy else 'build/fancyss_baseline.json' if args.baseline else 'output/fancyss_tests.json')
     out.write_text(json.dumps(report,indent=2)+'\n')
-    print('PASS',len(rows[0]['checks']),'Fancyss checks; source overlay only',flush=True)
+    print('PASS',len(rows[0]['checks']),'Fancyss checks; '+('rebuilt candidate' if args.candidate else 'baseline' if args.baseline else 'source overlay only'),flush=True)
 
 
 if __name__=='__main__':main()

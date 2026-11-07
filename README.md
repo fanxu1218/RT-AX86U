@@ -1,17 +1,19 @@
 # RT-AX86U 官方底包官改实验
 
-基于 **ASUS 3.0.0.4.388_24437**，集成 **KoolCenter 软件中心 1.9.50**，保留官方 **网易 UU**。当前已发布候选为 **localmod2-r8**；**localmod2-r9** 正在开发验证，尚未发布新镜像。
+基于 **ASUS 3.0.0.4.388_24437**，集成 **KoolCenter 软件中心 1.9.50**，保留官方 **网易 UU**。当前候选为 **localmod2-r9**；r8 及历史镜像、标签和发布附件保留。
 
 > **实验候选版，尚未实机验收，暂不建议直接刷入日常主路由。**
 > 源码适配、模型/仿真测试和镜像回读通过；刷入启动、原厂登录/TLS、无线/NAT、具体第三方插件及 UU 实际加速仍待实机验证。
 
 ## 本轮变化
 
-r9 开发增加 Fancyss 3.5.29 HND v8 Full 兼容包、原厂认证安装入口及 FRPC/PushPlus 真实版本共存检查。使用固定来源、哈希校验和同一插件事务路径，保留 UU 数据；原厂底包保持 24437。源码覆盖层验证不能代替新镜像回读和实机验收，具体状态见 [第二轮进度](output/第二轮优化进度.md) 和 [Fancyss 集成说明](output/Fancyss集成说明.md)。
+r9 增加 Fancyss 3.5.29 HND v8 Full 兼容包、原厂认证安装入口及 FRPC/PushPlus 真实版本共存检查。使用固定来源、哈希校验和同一插件事务路径，保留 UU 数据；原厂底包保持 24437。已从官方底包重新组装并回读，新镜像的本地证据绑定同一 SHA256；实机仍未验收。具体状态见 [第二轮进度](output/第二轮优化进度.md) 和 [Fancyss 集成说明](output/Fancyss集成说明.md)。
+
+r9 同时增加最多 32 条跨重启的脱敏操作/恢复记录、全部 VM 的独立输入与状态副本、有界并行/取消隔离，以及官方底包差异和 ABI 检查入口。详细验证见 [持久化记录](output/持久化操作记录说明.md)、[隔离与底包升级](output/隔离分片与底包升级说明.md) 和 [构建模型隔离](output/构建模型隔离说明.md)。
 
 r8 集成六项后续完善：归档边界与脚本超时、事件/日志容量、原厂 TLS 会话缓存上限、UU 网络故障对照、经原厂认证的状态/恢复页及脱敏导出、统一构建与发布校验。新增分段 NVRAM 输出夹具复现并修复开关读取竞态；修复原厂 TLS 输入被信号误判为 EOF/400，保留原 5 秒接收预算，并验证 POST 仅执行一次。详细证据与验证边界见 [官改加固与优化说明](output/官改加固与优化说明.md)、[进度](output/后续完善进度.md) 和 [构建发布说明](output/构建与发布校验.md)。
 
-下列历史改动及内存长测主要来自 r7 及前序版本，不能把旧报告直接视为 r8 长时间运行证明；当前候选以镜像回读和绑定哈希的报告为准。
+下列历史改动及内存长测主要来自 r7 及前序版本，不能把旧报告直接视为 r9 长时间运行证明；当前候选以镜像回读和绑定哈希的报告为准。
 
 
 - 自然复现并修复 DDNS-Go 只读查询收到 HTTP 200 后正文断连：接收循环不再把 `EINTR` 当成连接结束，继续读取同一后端连接，不重新提交请求。
@@ -45,7 +47,8 @@ r8 集成六项后续完善：归档边界与脚本超时、事件/日志容量�
 
 ## 下载与说明
 
-- [localmod2-r8 实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r8-experimental)
+- [localmod2-r9 实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r9-experimental)
+- [localmod2-r8 历史实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r8-experimental)
 - [localmod2-r7 历史实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r7-experimental)
 - [完整适配范围与验证边界](output/官改候选版说明.md)
 - [Alpha 3 升级、实机验收与回退步骤](output/Alpha3升级localmod2与实机验收.md) · [验收记录模板](output/localmod2实机验收记录模板.md)
@@ -61,15 +64,17 @@ r8 集成六项后续完善：归档边界与脚本超时、事件/日志容量�
 - [镜像回读](output/verification.json) · [卷布局](output/structure.json) · [原始 Alpha 3 分析](analysis/固件分析报告.md)
 - [localmod2-r6](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r6-experimental) · [localmod2-r5](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r5-experimental) · [localmod2-r4](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r4-experimental) · [localmod2-r3](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r3-experimental) · [localmod2-r2](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r2-experimental) · [localmod2-r1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r1-experimental) · [原 localmod2](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-experimental) · [上一版 localmod1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod1-experimental)
 
-当前固件 `RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w`，85,721,108 字节。
+当前固件 `RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w`，85,852,180 字节。
 
 ```text
-SHA256: 5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129
+SHA256: 02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50
 ```
 
 ## 验证摘要
 
-r8 新候选验证：[完整 gate](output/release_gates.json) · [最终镜像组合回归](output/hardening_tests.json) · [发布附件回执](output/release_delivery.json)。早期源码覆盖层报告明确标注未重建镜像，最终组合回归使用组装/回读后的字节。
+r9 候选验证：[完整 gate](output/release_gates.json) · [最终镜像组合回归](output/hardening_tests.json) · [发布附件回执](output/release_delivery.json)。早期源码覆盖层报告明确标注未重建镜像，最终组合回归使用组装/回读后的字节。
+
+本轮 Fancyss/FRPC/PushPlus 26 项、原有三个真实 HND 插件 32 项、在线插件 28 项、证书/共存 17 项、持久化记录 85 次阶段断言、HTTPS 18 项、安装中断 69 项、损坏/低空间 94 项检查使用同一 r9 候选；另有 12 项封存/并行与 13 项官方底包审计。构建模型及其负面对照单独记录在 [模型隔离报告](output/model_isolation_tests.json)。
 
 以下长时间采样属于 r7：
 
@@ -89,6 +94,12 @@ DDNS-Go 同一常驻进程追加一小时、8 轮负载/空闲：3522 次 HTTPS 
 本次 32 项真实插件检查、28 项受控在线管理回归通过，并回归 8 项证书、9 项共存及 24 项原程序运行及配套检查。真实插件分两台全新虚拟机执行：22 项旧版升级、运行/监督、事件、中心重启及卸载检查，10 项当前版从零安装、默认配置及卸载检查。证书由原厂 `gencert.sh`/OpenSSL 生成；全新虚拟机只恢复上一台的自有 `cert.tgz`，证书指纹和 8 个文件保持一致。共存使用实际软件中心服务、原厂 HTTPS/rc 和自有 UU 测试进程；不代表实机断电恢复或真实 UU 加速已验证。
 
 受控插件使用实际打包的 httpdb、skipd/dbus 经认证适配层完成真实 multipart 上传、安装、回调及自定义卸载。**新增原程序检查实际运行厂商登录/会话/TLS 和 UU 启动代码；NVRAM/账号/证书输入为合成数据，UU 下载为本地受控响应和自有脚本。原有夹具的内核、xtables/curl/部分启动 helper 来自 Alpine；新增真实插件组使用原厂 curl 和打包的启动工具，内核/xtables 仍是测试边界；不能替代目标设备及外部 UU 服务验证。** 新增三个真实 HND 插件的本地隔离验证；公网下载、外部账号服务及其目标设备行为仍未验证。未移植所有 Merlin Addons、VPN/QoS/DDNS 等扩展。
+
+## 后续官方固件升级
+
+无需重新开发整套官改功能。`sources/localmod/` 的适配代码、固定来源的兼容包及构建/回归脚本可以复用；新官方底包仍须执行差异/接口审计、适配、重新构建与回读，再跑完整门禁和实机验收。同分支更新与更换内核/认证/分区结构的更新，工作量可能明显不同，不能保证自动合并成功。
+
+直接刷纯官方会覆盖固件内适配；JFFS 中保留了配置也不等于软件中心、UU 或插件在新底包上兼容。后续使用针对该官方版本验证的新官改包升级，并先保留可读备份和回退包。当前工具不会自动切换官方版本或刷机，见 [底包迁移检查](output/隔离分片与底包升级说明.md)。
 
 ## 仓库与构建
 

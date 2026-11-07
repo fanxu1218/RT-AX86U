@@ -1,0 +1,128 @@
+LINUX_BUILDER_READY
+MODEL_PRIVATE_EXPORT_READY
++ . /work/build/model_helpers_setup.sh
++ mkdir -p /usr/libexec/localmod
++ cp /work/sources/localmod/plugin-compat.sh /work/sources/localmod/fancyss-packages.sha256 /usr/libexec/localmod/
++ printf '#!/bin/sh\nexec /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/%s "$@"\n' archive-guard
++ chmod 755 /usr/libexec/localmod/archive-guard
++ printf '#!/bin/sh\nexec /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/%s "$@"\n' plugin-run
++ chmod 755 /usr/libexec/localmod/plugin-run
++ printf '#!/bin/sh\nexec /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/%s "$@"\n' log-limit
++ chmod 755 /usr/libexec/localmod/log-limit
++ printf '#!/bin/sh\nexec /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/%s "$@"\n' localmod-status
++ chmod 755 /usr/libexec/localmod/localmod-status
++ trap 'cp /tmp/hook_trace /work/build/hooks_trace.log 2>/dev/null || true; cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf 2>/dev/null || true' EXIT
++ mkdir -p /usr/libexec/localmod /usr/sbin /jffs/scripts /jffs/configs/dnsmasq.d /koolshare/bin /koolshare/scripts /koolshare/init.d /tmp/.localmod /etc /www/css
++ chmod 700 /tmp/.localmod
++ cp /work/sources/localmod/dispatch.sh /usr/libexec/localmod/dispatch.sh
++ chmod 755 /usr/libexec/localmod/dispatch.sh
++ cat
++ chmod 755 /usr/libexec/localmod/bootstrap.sh
++ cat
++ chmod 755 /usr/libexec/localmod/localmod-event
++ cat
++ chmod 755 /bin/nvram
++ printf 'base-line\n'
++ printf 'custom-option=1\n'
++ cat
++ chmod 755 /jffs/scripts/dnsmasq.postconf
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' init-start
++ chmod 755 /jffs/scripts/init-start
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' services-start
++ chmod 755 /jffs/scripts/services-start
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' services-stop
++ chmod 755 /jffs/scripts/services-stop
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' service-event
++ chmod 755 /jffs/scripts/service-event
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' service-event-end
++ chmod 755 /jffs/scripts/service-event-end
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' wan-event
++ chmod 755 /jffs/scripts/wan-event
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' wan-start
++ chmod 755 /jffs/scripts/wan-start
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' pre-mount
++ chmod 755 /jffs/scripts/pre-mount
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' post-mount
++ chmod 755 /jffs/scripts/post-mount
++ printf '#!/bin/sh\nprintf "USER %s %%s\\n" "$*" >> /tmp/hook_trace\n' unmount
++ chmod 755 /jffs/scripts/unmount
++ printf '/koolshare/bin/ks-wan-start.sh start\n'
++ cp /work/build/casefs/rootfs/rom/etc/koolshare/bin/ks-services-start.sh /koolshare/bin/ks-services-start.sh
++ chmod 755 /koolshare/bin/ks-services-start.sh
++ cp /work/build/casefs/rootfs/rom/etc/koolshare/bin/ks-services-stop.sh /koolshare/bin/ks-services-stop.sh
++ chmod 755 /koolshare/bin/ks-services-stop.sh
++ cp /work/build/casefs/rootfs/rom/etc/koolshare/bin/ks-wan-start.sh /koolshare/bin/ks-wan-start.sh
++ chmod 755 /koolshare/bin/ks-wan-start.sh
++ cp /work/build/casefs/rootfs/rom/etc/koolshare/bin/ks-nat-start.sh /koolshare/bin/ks-nat-start.sh
++ chmod 755 /koolshare/bin/ks-nat-start.sh
++ cp /work/build/casefs/rootfs/rom/etc/koolshare/bin/ks-mount-start.sh /koolshare/bin/ks-mount-start.sh
++ chmod 755 /koolshare/bin/ks-mount-start.sh
++ cp /work/build/casefs/rootfs/rom/etc/koolshare/bin/ks-unmount.sh /koolshare/bin/ks-unmount.sh
++ chmod 755 /koolshare/bin/ks-unmount.sh
++ cat
++ printf 'background: #4F5B5F\n'
++ printf '#!/bin/sh\nprintf "CENTER %s %%s\\n" "$*" >> /tmp/hook_trace\n' S
++ chmod 755 /koolshare/init.d/S10probe.sh
++ '[' S '=' M ]
++ '[' S '=' U ]
++ printf '#!/bin/sh\nprintf "CENTER %s %%s\\n" "$*" >> /tmp/hook_trace\n' V
++ chmod 755 /koolshare/init.d/V10probe.sh
++ '[' V '=' M ]
++ '[' V '=' U ]
++ printf '#!/bin/sh\nprintf "CENTER %s %%s\\n" "$*" >> /tmp/hook_trace\n' T
++ chmod 755 /koolshare/init.d/T10probe.sh
++ '[' T '=' M ]
++ '[' T '=' U ]
++ printf '#!/bin/sh\nprintf "CENTER %s %%s\\n" "$*" >> /tmp/hook_trace\n' N
++ chmod 755 /koolshare/init.d/N10probe.sh
++ '[' N '=' M ]
++ '[' N '=' U ]
++ printf '#!/bin/sh\nprintf "CENTER %s %%s\\n" "$*" >> /tmp/hook_trace\n' M
++ chmod 755 /koolshare/init.d/M10probe.sh
++ '[' M '=' M ]
++ printf 'printf "ARGC %s %%s <%%s>\\n" "$#" "$1" >> /tmp/hook_trace\n' M
++ printf '#!/bin/sh\nprintf "CENTER %s %%s\\n" "$*" >> /tmp/hook_trace\n' U
++ chmod 755 /koolshare/init.d/U10probe.sh
++ '[' U '=' M ]
++ '[' U '=' U ]
++ printf 'printf "ARGC %s %%s <%%s>\\n" "$#" "$1" >> /tmp/hook_trace\n' U
++ set +e
++ /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs -E 'LD_LIBRARY_PATH=/work/build' -E 'LD_PRELOAD=/work/build/rc_bridge_fixture.so' /work/build/rc-fixture
++ result=0
++ echo fixture-return-0
+fixture-return-0
++ set -e
++ '[' 0 '=' 0 ]
++ /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/localmod-event --drain
++ /usr/bin/qemu-arm -L /work/build/casefs/official_rootfs /work/build/runtime-fixture
+PASS hook timeout kills descendants; names validated; nested notifications suppressed
++ cp /work/build/test-launcher-vendor /usr/libexec/localmod/rc.vendor
++ chmod 755 /usr/libexec/localmod/rc.vendor
++ set +e
++ /usr/bin/qemu-arm -0 hotplug -L /work/build/casefs/official_rootfs /work/build/rc-launcher usb 'value with space;literal'
++ forward=19
++ touch /jffs/localmod-disabled
++ /usr/bin/qemu-arm -0 hotplug -L /work/build/casefs/official_rootfs /work/build/rc-launcher usb 'value with space;literal'
++ disabled=19
++ rm -f /jffs/localmod-disabled
++ set -e
++ '[' 19 '=' 19 ]
++ '[' 19 '=' 19 ]
++ /usr/bin/qemu-arm -0 service -L /work/build/casefs/official_rootfs /work/build/rc-launcher restart_skipd
++ cp /work/build/test-launcher-vendor /usr/libexec/localmod/httpd
++ chmod 500 /usr/libexec/localmod/httpd
++ set +e
++ /usr/bin/qemu-arm -0 httpd -L /work/build/casefs/official_rootfs /work/build/httpd-launcher -s -p 34443
++ httpd_forward=19
++ touch /jffs/localmod-disabled
++ /usr/bin/qemu-arm -0 httpd -L /work/build/casefs/official_rootfs /work/build/httpd-launcher -s -p 34443
++ httpd_disabled=19
++ rm -f /jffs/localmod-disabled
++ set -e
++ '[' 19 '=' 19 ]
++ '[' 19 '=' 19 ]
++ cp /tmp/hook_trace /work/build/hooks_trace.log
++ cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf
++ cp /tmp/hook_trace /work/build/hooks_trace.log
++ cp /etc/dnsmasq.conf /work/build/hooks_dnsmasq.conf
+MODEL_RECEIPT {"checkout_exported": false, "console_sha256": "d9561d774aadc1dd7bd99c1818e487e699f695400485bd73d97efe53c9ee54df", "cpus": 1, "guest_network_devices": 0, "immutable_inputs_verified": true, "input_sha256": {"build/archive-guard": "92e708822c07e97e06f48623fc00d76c99060cec97951b6f05b336e68a007cd1", "build/bridge-fixture": "e221ccff302946e837154676bee4b8a4634b1124a581966ef9b50061f7db902d", "build/casefs/official_rootfs": "3658a32a2f656f7f03ffedcc92c9af21ac7f48caf5c9608c5e6f77f359acc0d1", "build/casefs/rootfs": "f2b1d742260fa2b2fa275b96359bbe4b03a670f986e19b5c3474bff59f371fe0", "build/filemap-fixture": "a1bcbf294916809a35a1a4382fe5ca14402727cceb952e6d82b842d14839b2e6", "build/httpd-launcher": "b41af2a016a3b374c89be8c32a1c4d9a6dde944ef026372f750cfeaf4a02b178", "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8", "build/init-launcher": "f91aa8acd196aa3cf0f2fdfca7b7f502cb4f408a956ff0fc6aa1edf2ee1a0558", "build/iptables-restore-launcher": "c53619c800a961abf5d38460d64e0ada4756425fd34f254a0f10d433ce9fcec3", "build/libfilemap_vendor.so": "f1bfb677c1d5f47e924264a198f7a6f6e935e9b584543d79949a1def14576ed9", "build/librc_vendor_fixture.so": "e8ff858a8fef3d93bcdc780b7761b184b2194f4daed841b77dd515b40d52c347", "build/linux_hooks_job.sh": "a1bd58fca2132d0d138e1c68f91b37d321e0620e83c78fcb327a752516bf43ae", "build/localmod-event": "5652237436b123272cfd2cd78ddbb51cc2fdb801451992ea43d924b81f65617a", "build/localmod-status": "346ba82a54ccae267c20ba4e742eaed1ded2558d8837affc0e9a9c28587d5922", "build/log-limit": "7d41c03ccb6d694bbf1b2fca8e87019a1b1af5fb15b13dae7ec0334d5533e340", "build/model_helpers_setup.sh": "23b5fef2e88dcc95d6b9b1a8aabb07606f86a76eb942981654af85fd37fdcbc7", "build/native-nvram": "9436d8ccf0c93bf9ef282af17776c81cffb8e1692eaac95837743b3e305c3c0c", "build/native_defaults.bin": "f73ef45c89a87068c1a1da70c0d5399595950cb856276f3a0c57db189beeaae1", "build/native_hw_fixture.so": "d0fa1acb27b6a76252a543aa1b10bf7292281ba83e8fc377f836d9c15a23b9ef", "build/native_lifecycle_setup.sh": "1da48bd61bd7a0032264bb0721448e985a4a5a524f59cc5d7007b6d21bf8ce05", "build/native_shadow_hash.txt": "25904697b50265590713cc146bf647887afa3bb25ef9bca672dece31aea8aa41", "build/native_uu_transport.so": "a5bdc3c34095baa1ed9679d3aef7bf40c4b421f6b0b463d34f786f8736600467", "build/plugin-run": "714285d262804c50a99d4ff5a9d3d7a938ccd27b5a5d9fb6628005561efb59a3", "build/plugin-txn": "23e575aa4299b075a7fa120fb6672e5c417dca5892f1449c29905f9a862af232", "build/rc-fixture": "c83212e210072912d695c04ed2cde9c9032f5c44f072972b3897f1b2f8a6ce81", "build/rc-launcher": "fcd797d2e3926a3072b84f57400369b9743051268022bfafdd5831233e0a596e", "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734", "build/rc_bridge_fixture.so": "a3cda3c294c33229c8d0142424a8bb13f80b418d2477f7d2b56923c6bf8ed902", "build/restore-fixture": "b0953df54d80f4f91718cb3bf72239e6fdf573b1ed1607c2e906444e07799cb9", "build/runtime-fixture": "086f15dec8f88f468f113f8af1862cb59b4f9c46a15f63f8870f96df16b5b2c2", "build/test-bridge": "3cb12cabf47041c1ddb306915565b4d1d9c688166113996c2034b5725a45a0eb", "build/test-center": "e74e9e25952f2e09bdb595bd51ba75fbce5bb357a969f5a8b1f183be3ce14a3a", "build/test-cert-lifecycle": "8f97f4f6d261003a2b1c821c57ada34fed16dade55d806c2aabfe15ed42f51f0", "build/test-coexist": "4bf3cb69a5cc738137016668cda537aec7dcdd5d92f0b2cbbac1d982149f22c3", "build/test-launcher-vendor": "a967b934738c75373c4b87666d9f8a97e0232c11835a8bc45a6573f3b808e714", "build/test-native-httpd": "108238bb961beeb33dd66219f5d017174999118e39684d69d9fbca9da2bfdd3f", "build/test-native-uu": "83aedb00b3daa161cdb145be57744b533fe453a2f6a68e785a327187b0c66131", "build/test-online": "64651e9d73bb02c61416efcd4dde17c20dc428547fe2576b3c5e5a550d86d641", "build/test-real-backend": "9f03c269f1a37fd6e1b5318357f042ec92cf1d56db5db6672872e8b81dfb649f", "build/test-restore": "c87579b9b1be59a77520a9734c6821bc7a748ed6ce32b5c0ac0ab635bfeb36d3", "build/tools/LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52", "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1", "build/tools/linux-initramfs.gz": "e0c18e382f1c103506de57aab1a172c6063002051b7cbd70a5d6aa25ae1f5ab1", "sources/localmod/Module_FancyssLocalmod.asp": "15ed32f1227f971f8a3584e175e0d3596236f73cc01607dc653b15743bd81076", "sources/localmod/Module_Localmod.asp": "f7ab478673ff5f24fe1de8e994128bcbbb42e00a91a06db3f7e27cf9ce5e64d4", "sources/localmod/README.md": "3e3bc58bed4b9d701134f6dd661124b390b644391cb23ea98d21950cae63844e", "sources/localmod/archive_guard.c": "e7a6afb66aa94fb9efbb54a4c2ed9dc884438aa0dc2fa547548a47bddda3c8e4", "sources/localmod/bootstrap.sh": "43298e06092803e25a7128ba757e4b02587a868819f58b7a2d95a1f494bb9826", "sources/localmod/bounded_log.h": "ac86f672fa6e7799e99fd2f0b84658f3e6af6fd00f65b1287e51a28e3d86e7bc", "sources/localmod/checkpoint_integrity.h": "89d4578d57ada05154212108f8b831b0ae0e6d65b3335603a40c1875bd773231", "sources/localmod/dispatch.sh": "96fee2f2f2507dcc3371f0ccc95ecbec61699c772a23078b811ae9220a467e4e", "sources/localmod/event.c": "f871e173e06dab3f4bb87ab6f5cb380d257c2dff262e8a15aba20e80f7c0faae", "sources/localmod/fancyss-LICENSE.txt": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986", "sources/localmod/fancyss-packages.sha256": "bea614c02eeadff189ca54fb6963e58853b5fa719dd29254049b0615cd51dbd9", "sources/localmod/health.h": "e9b08eb9f2d2f4eb7ae9ebfc124691ee2f81f7f4395979882728610798fa5128", "sources/localmod/helper.sh": "445b3535b4861b023c3b15253d2cb758bd5f7984277301b7fe5dcb83ef033a9e", "sources/localmod/httpd_bridge.c": "dc8e13705c133bfac44752e31ee24c6746bf6ea9c6fe8a25be72cf9fb9fafb4d", "sources/localmod/installer-guard.sh": "ba13e554560c1d9340a39f94df9206ad093bb81f44bcfe6e0fd6c90d165809a4", "sources/localmod/jffsinit.sh": "b65cce70761484b34fe9c9d295549a441bf080c9f03235476942cae3ac30753f", "sources/localmod/journal.h": "10729e942f6de760bd0b9a53295ab1134bb263f209f529a0c69a04c06c2b9175", "sources/localmod/kscore.sh": "0ff2b96cf05abc1a6941e93fcd57996591768ac08bfda1e7db1f0963bc333142", "sources/localmod/launcher.c": "bda9ab680a5ba3a6437152f779d61791b7c861ada1dec58dd88f732e842ba41e", "sources/localmod/log_limit.c": "0d60f5643f5a534e5eb7b6436e2d65ef0a2e721dbc12df5ddcc8d0a3ae94bbcc", "sources/localmod/offline-installer.sh": "cf2c039e147179237005080b8aff8042d1342e0707627987261a467c27a2ebed", "sources/localmod/plugin-compat.sh": "7addf5ead49207c9090e0acb48a0ae1c9b2871e329dc11b99ec907c3643bb836", "sources/localmod/plugin_run.c": "5b1794ad640808d30e21cf316253f03e61a52fda947dc60d7ce82c269d007f27", "sources/localmod/plugin_txn.c": "cb551629c45b9450b7547ccb5630455cac730e43a3351c2d4bc1db45f99986a5", "sources/localmod/rc_bridge.c": "91d2c46b2d443f33ff5a5fbced6c9d86122e2319f7c9736082b17f3a8a290e7e", "sources/localmod/restore.c": "9e030aa88cf87781facd040c2ef1645a78b5b5c16044f8266d92636d74d5bdd1", "sources/localmod/runtime.c": "68d2d790f4a65fa0f5bf155748e07cbe862f1c1f8b41195fcc5f72f79e43c10d", "sources/localmod/runtime.h": "816914a8ace37e05a51c62854693954020ccc53371cf7c6756bcb20c850b3bca", "sources/localmod/sha256.h": "b72f0c30bea8f546d5822bb7fd1ee9c631f5cb741fdd56c514469473e0cfce2b", "sources/localmod/status.c": "9319b7a1fbd8d435f25a23cebfd826f9d4139e3b4d0cf5f910a90fa7798a9395"}, "job": "build/casefs/model-private/job-9af8afb34f3300cf5f293e11", "manifest_sha256": "e4abb2bca5a71b17cc64fe4ada099892e470dba606ebe14bf2b40c3055f7ff2d", "memory_mib": 1024, "name": "hooks", "named_output_sha256": {"hooks_dnsmasq.conf": "c5b99946eb2fc94a3c3035998830a4bf456ec801482d56494abbeaa6528db478", "hooks_trace.log": "608399f5b1108649a992ffc2bd8148c72c8827b55db56e04fe2d737c801c11dd", "httpd_launcher_disabled.json": "0bdf540f8ad3a5c8b0462c9ca7f5d32c23fc215d0982a6930cd3938a9c2f4354", "httpd_launcher_forward.json": "454d05631709dde355d7981b447aa7e893930f868412a738d1febf7a19b74850", "launcher_disabled.json": "b8169b7978c9f1d6aad4f1545c683fae35b4eb59d4ad37d0e70e30f784ba648c", "launcher_forward.json": "b7f81c0f23b3f1e6e94d177320256d6837b102ee650713fc7d56539f0713fcb7"}, "outcome": "PASS", "output_root": "build", "phase": null, "runner_sha256": "d9e10c3922bfeaba60f20d57557ca909f8972a8ba58ba35ea30d3f13e22fd2e4", "state_id": null, "state_lock_exclusive": false}

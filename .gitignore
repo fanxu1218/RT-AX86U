@@ -34,6 +34,8 @@
 !/build/prepare_linux_tools.py
 !/build/repack_image.py
 !/build/run_linux.py
+!/build/model_private.py
+!/build/check_model_isolation.py
 !/build/stage_image.py
 !/build/test_bridge.go
 !/build/test_real_backend.go
@@ -97,6 +99,9 @@
 !/output/localmod2实机验收记录模板.md
 !/output/SHA256SUMS
 !/output/verification.json
+!/output/model_isolation_tests.json
+!/output/model_*_tests_run.log
+!/output/构建模型隔离说明.md
 !/output/structure.json
 !/output/changes.json
 !/output/runtime_tests.log

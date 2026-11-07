@@ -1,7 +1,7 @@
 {
   "status": "LOCAL_ISOLATION_PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w",
-  "candidate_sha256": "5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w",
+  "candidate_sha256": "02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50",
   "checks": {
     "upgrade_native_shell_resolution_center_start_original_process_helper_private_api_and_uu": true,
     "upgrade_native_curl_numeric_url_guard_retained_hostname_callback_pinned_to_loopback": true,
@@ -291,7 +291,7 @@
     "The r6 header-only EOF was naturally reproduced in https_r6_reproduction.json. See https_stability_tests.json for the same-connection EINTR fix and focused native HTTPS/UU validation; no RPC is automatically retried."
   ],
   "production_files": {
-    "usr/libexec/localmod/bootstrap.sh": "015a3f90d8b1cb99cd16797be5ba58e3870e7e3ee237bb09c5afdd737f369917",
+    "usr/libexec/localmod/bootstrap.sh": "43298e06092803e25a7128ba757e4b02587a868819f58b7a2d95a1f494bb9826",
     "usr/libexec/localmod/dispatch.sh": "96fee2f2f2507dcc3371f0ccc95ecbec61699c772a23078b811ae9220a467e4e",
     "rom/etc/koolshare/scripts/base.sh": "d29dcb38a94aa51b0df22b0fdd8a6a9e9636777bad3a2ae4431d9af308773726",
     "usr/libexec/localmod/busybox": "c5541fb5b5eff61565aa416779fcdf66b3c762ba8ef3ef5f52f08df964ffe7e2",

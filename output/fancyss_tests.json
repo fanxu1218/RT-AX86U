@@ -1,8 +1,8 @@
 {
-  "status": "LOCAL_SOURCE_OVERLAY_PASS",
-  "base_candidate_image": "output/RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w",
-  "base_candidate_sha256": "5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129",
-  "firmware_rebuilt": false,
+  "status": "LOCAL_CANDIDATE_PLUGINS_PASS",
+  "base_candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w",
+  "base_candidate_sha256": "02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50",
+  "firmware_rebuilt": true,
   "checks": {
     "actual_aarch64_xray_and_node_tool_execute_with_retained_vendor_libraries": true,
     "actual_frpc_0_65_0_binary_runs_with_fancyss_and_uu": true,
@@ -54,7 +54,8 @@
         "upstream_md5": "2bc26c09c42b558d04bc3b5a6ed35ecc",
         "adapted_sha256": "31cf0b0eb97bcbc51acc04f671ac9d51b488327b3b9e540b21d846e2c18912ed",
         "adapted_md5": "c0960594007e2115385e5f5bcc3e0f17",
-        "expanded_bytes": 26591030,
+        "upstream_expanded_bytes": 26591030,
+        "expanded_bytes": 26622907,
         "files": {
           "configs/fancyss/node_shunt_rules.json": {
             "upstream_sha256": "74a59a6140fb990d4552f47a0d59c0633f52cabf36c239e261f8f2c50f173233",
@@ -746,7 +747,8 @@
         "upstream_md5": "aabdb77f6837200b14cb853decebebdc",
         "adapted_sha256": "154d5f1f38f84c6719fa698ca3979f4178c89c677357f0d25274363238d72cf4",
         "adapted_md5": "fe8df34ef98843dd202fd149e477f78d",
-        "expanded_bytes": 26638423,
+        "upstream_expanded_bytes": 26638423,
+        "expanded_bytes": 26670300,
         "files": {
           "configs/fancyss/node_shunt_rules.json": {
             "upstream_sha256": "74a59a6140fb990d4552f47a0d59c0633f52cabf36c239e261f8f2c50f173233",
@@ -1822,6 +1824,7 @@
     ]
   },
   "result": {
+    "archive_file_count": 164,
     "checks": {
       "actual_aarch64_xray_and_node_tool_execute_with_retained_vendor_libraries": true,
       "actual_frpc_0_65_0_binary_runs_with_fancyss_and_uu": true,
@@ -1851,51 +1854,39 @@
       "unadapted_upstream_package_denied_uu_and_router_logs_retained": true
     },
     "end_id": "134023",
-    "original_binary_files": 164,
-    "phase": "hardening-fancyss",
+    "phase": "candidate-fancyss",
     "platform_gate_fixture": true,
     "uu_api_requests": 1,
     "uu_launches": 1,
     "xray_version": "Xray 26.5.9 (Xray, Penetrates Everything.) 1bdb488 (go1.26.3 linux/arm64)\nA unified platform for anti-censorship."
   },
-  "overlay_files": {
-    "www/Module_FancyssLocalmod.asp": "336e60c23cbfab90663c5aee5a78fb182c775f130f6d73685488c77c39636b0d",
-    "www/Module_Localmod.asp": "d709215477b37e6a12079ac5618d507a196632ee8881f083c5960a221b1c3a53",
-    "usr/libexec/localmod/plugin-run": "714285d262804c50a99d4ff5a9d3d7a938ccd27b5a5d9fb6628005561efb59a3",
-    "usr/libexec/localmod/plugin-compat.sh": "7addf5ead49207c9090e0acb48a0ae1c9b2871e329dc11b99ec907c3643bb836",
-    "usr/libexec/localmod/log-limit": "7d41c03ccb6d694bbf1b2fca8e87019a1b1af5fb15b13dae7ec0334d5533e340",
-    "usr/libexec/localmod/fancyss-packages.sha256": "bea614c02eeadff189ca54fb6963e58853b5fa719dd29254049b0615cd51dbd9",
-    "usr/libexec/localmod/installer-guard.sh": "fd99d9d7d4e4c020b1ac30269da1a36ad7b77712709d753da15e8481c3bd1351",
-    "usr/libexec/localmod/archive-guard": "92e708822c07e97e06f48623fc00d76c99060cec97951b6f05b336e68a007cd1",
-    "rom/etc/koolshare/scripts/ks_app_install.sh": "99c3bea4b9a46c7b86619611335dffd1060a01b7163ab5cdbc1544553707df90",
-    "rom/etc/koolshare/scripts/ks_tar_install.sh": "94f6787369642379f1448a85c970f8a283ef8e950c72534c0c27dfe853eb0d40"
-  },
-  "log_sha256": "56598a7fbdea5548bb2693e25eaf60046c91c2b8dcd43c404d13f2fa9e22a3fc",
+  "overlay_files": {},
+  "log_sha256": "2312f710e5be540b5f0177ef4c4f8c065e7e5b1cbc875ab1fcb49447684b4dba",
   "source_sha256": {
     "sources/localmod/plugin-compat.sh": "7addf5ead49207c9090e0acb48a0ae1c9b2871e329dc11b99ec907c3643bb836",
     "build/patch_online_installer.py": "c4a132cece30306b0f7cebf3b4fbbb02f29adf592e375f9c102e25cee80d7ae8",
     "build/check_installer_boundaries.py": "28e065e3fe1acf8bcf71cf6201a294cc1c0f0f522d1f953492b87c2b5b617cca",
     "build/check_fancyss.py": "402a15047ce06d5a105541688d9ef205c49b0cae16a9103ce7641c57e009fd50",
-    "build/prepare_fancyss.py": "bf2715683ab2164aee9a2c235c01ece5ba245b36aeaa85a73ed8bdd8f033c188",
+    "build/prepare_fancyss.py": "c0df38989d32fb9730710b57a7b49d2a5847b81f476e4cde41da8f70a881e4d3",
     "build/fancyss_sources.json": "907f0c23f3016e0496eac7d7156baff4e0bc09ac28c3d984a5df22f3155b085e",
     "build/prepare_extended_plugins.py": "6e46f2d48ea5ce5424059e4431ebcd417f8928d39f073d3189e4813ba384ff7a",
     "build/extended_plugin_sources.json": "cdeaa68b2ec8c4e8a3d745ecda5576c5b1ab5d8637e42c651ba3b62ef476ab84",
-    "build/test_fancyss.go": "632106f8cfc641f621b10bc627c4b9587354e11450907b6d87d32c48e51b4730",
+    "build/test_fancyss.go": "97f7e6f80c88a3c43ed2792900c80d7fe2e2fb1e1b9d407279de8b8f7d001d8f",
     "build/test_extended_plugins.go": "2d71aac456e85ff0ad4d9bcadd689ea26bce4a95bc9b1a5df806ecc89028d6fa",
     "build/test_online.go": "6149e462c16f55e709ecd3cde5d857a5051e4b59ebbf9a0cf97911772b3bfa94",
     "build/native_runtime_client.go": "2f9515bf6d814c064c7e0957455c0cfaf12ef01483be9732e49fd783cf32acf5",
     "build/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
-    "build/run_readonly_linux.py": "ddd163e5a73cbcd8646fb02f1d9bd844ca4e498ff2c3ef93daa7ea30538210ab",
-    "build/linux_real_plugins_job.sh": "bdaceb494e293f2c2c3152050dbb71569188300346b11ce9ad6b196ae602726c",
-    "build/real_plugins_setup.sh": "69fd683abdc2924a9cdc91748ebe0acbd6979f2dedaf5163fec8fbaa67836a94",
-    "sources/localmod/installer-guard.sh": "fd99d9d7d4e4c020b1ac30269da1a36ad7b77712709d753da15e8481c3bd1351",
-    "sources/localmod/offline-installer.sh": "94f6787369642379f1448a85c970f8a283ef8e950c72534c0c27dfe853eb0d40",
+    "build/run_readonly_linux.py": "eeb77fb1d07ba997388aa0feaa7e558bb4ad96b5fb73a3588643390bef06135f",
+    "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+    "build/real_plugins_setup.sh": "12a6e01d1dcb046ef6ac5934c746e41a51c7c8faf8a48110e15e5f2b8af23432",
+    "sources/localmod/installer-guard.sh": "ba13e554560c1d9340a39f94df9206ad093bb81f44bcfe6e0fd6c90d165809a4",
+    "sources/localmod/offline-installer.sh": "cf2c039e147179237005080b8aff8042d1342e0707627987261a467c27a2ebed",
     "sources/localmod/fancyss-packages.sha256": "bea614c02eeadff189ca54fb6963e58853b5fa719dd29254049b0615cd51dbd9",
     "sources/localmod/Module_FancyssLocalmod.asp": "15ed32f1227f971f8a3584e175e0d3596236f73cc01607dc653b15743bd81076",
-    "sources/localmod/Module_Localmod.asp": "747e160194b514cf221edbe4a2dbf5bb6a5c8580f36b96989796d5e59b699e1c",
+    "sources/localmod/Module_Localmod.asp": "f7ab478673ff5f24fe1de8e994128bcbbb42e00a91a06db3f7e27cf9ce5e64d4",
     "sources/localmod/fancyss-LICENSE.txt": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
   },
-  "test_executable_sha256": "2f1e415981958c0c56f5b46934bd1fcee89e2b6308c49e74c3ded1a121fb627d",
+  "test_executable_sha256": "22fdb7b8cd980d956781e2eb0056f8fd68e3c3c127bf15946748c5c502580373",
   "isolation": [
     "No guest NIC, host workspace read-only, synthetic accounts, RAM-only 128 MiB test JFFS (production capacity is unchanged)",
     "Original ASUS login/TLS and UU download/checksum flow with owned local UU worker",
@@ -1907,5 +1898,7 @@
     "Real proxy node, WAN/DNS/IPv6 routing, provider subscriptions and cloud rule downloads",
     "Original 4.1.52 kernel: package identity check uses a declared uname fixture on Alpine 6.12",
     "WebSocket-only live streaming features: upstream authenticated HTTP fallbacks selected"
-  ]
+  ],
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w",
+  "candidate_sha256": "02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50"
 }

@@ -1,6 +1,6 @@
 # Alpha 3 → localmod2：刷机、实机验收与回退
 
-整理日期：2026-11-07。适用设备：**大陆销售的普通 RT-AX86U**；当前版本：`386.3_2 KoolCenter Alpha 3`；目标：`localmod2-r8-experimental`，基于 ASUS `3.0.0.4.388_24437`，软件中心 `1.9.50`。
+整理日期：2026-11-07。适用设备：**大陆销售的普通 RT-AX86U**；当前版本：`386.3_2 KoolCenter Alpha 3`；目标：`localmod2-r9-experimental`，基于 ASUS `3.0.0.4.388_24437`，软件中心 `1.9.50`。
 
 **这是一份待执行的实验方案。直升/降级是否被设备接受、真实启动、软件中心及 UU 均未在这台路由器上验证。** 已通过的模型和镜像检查见[候选版说明](官改候选版说明.md)，不能替代下列实机项目。本文没有执行任何路由器命令。
 
@@ -18,16 +18,16 @@
 
 | 用途 | 文件 | SHA256 |
 |---|---|---|
-| 本次目标，85,721,108 字节 | `RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w` | `5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129` |
+| 本次目标，85,852,180 字节 | `RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w` | `02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50` |
 | 刷回原 Alpha 3 | `RT-AX86U_386.3_2_cferom_pureubi_koolcenter_alpha3.w` | `c3d01f6df5916ab5f14a2dabd9c79b6d7c28c73b44bed122fdc2636568cf6838` |
 | 纯官方恢复备用，已在本地核验的固定版本 | `RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w` | `de1caf609347beea394ebab956bddf0b391db592d1ad5f99e9d37e4d0b876af0` |
 
-目标下载：[localmod2 发布页](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r8-experimental)。纯官方包应从 [RT-AX86U 支持页](https://www.asus.com/hk/supportonly/rt-ax86u/helpdesk_bios?model2Name=RT-AX86U)取得；上表固定版本不表示当前最新推荐版本。若另选官方版本，须单独核验来源及型号，不套用此哈希。
+目标下载：[localmod2 发布页](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r9-experimental)。纯官方包应从 [RT-AX86U 支持页](https://www.asus.com/hk/supportonly/rt-ax86u/helpdesk_bios?model2Name=RT-AX86U)取得；上表固定版本不表示当前最新推荐版本。若另选官方版本，须单独核验来源及型号，不套用此哈希。
 
 Mac 终端，进入存放目标固件的目录后运行：
 
 ```sh
-shasum -a 256 RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w
+shasum -a 256 RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w
 ```
 
 结果须与上表完全一致。上传解压后的 `.w` 文件，不能上传 ZIP、源码包或报告，也不要为了绕过拒绝而改扩展名、改头或关闭校验。原 Alpha 3 文件名含 `cferom`，**仅考虑正常管理页接受的整包回刷，不单独写 CFE/引导区**。
@@ -291,3 +291,14 @@ sync
 3. 检查普通事件及有输出的钩子；发生队列饱和时应记录拒绝，待恢复后重触发必要操作。限额日志只保留有限尾部，故障后及时保存。
 4. 对比 UU 未开启/开启时软件中心和 DDNS-Go 查询，并分别测试网络断开/恢复及 NTP 就绪。原厂失败周期不会由官改强制自动重试，账号与加速状态以官方页面和实际流量为准。
 5. 对照验证 HTTPS 缓存趋稳、登录退出及重启证书恢复；本地六轮不能替代多天实机观察。检查点异常或空间不足时保留副本、停止插件写入，按前文回退；不删除 UU 数据腾空间。
+
+
+## r9 操作记录与可选 Fancyss 验收补充
+
+本轮未连接路由器，也尚未备份当前 Alpha 3。先完成前述备份验证与软件中心/UU 基线，获得后续刷写安排后再执行：
+
+1. 状态页查看一次安装/更新记录，重启后核对记录仍在；退出登录后无法查询或导出。导出不应包含节点、密码、证书、Cookie 或 UU 账号。未结束提示只表示需要核查，不等于已回退。
+2. 使用同一 r9 发布附件中的 Fancyss HND v8 Full 兼容包，经固件认证入口或软件中心手动安装。不要替换为上游原包或使用绕过事务的自更新。安装完成先保持代理关闭，检查软件中心、共享 jq 和 UU 数据；已有节点先做私下导出。
+3. 逐一验证 Fancyss、FRPC、PushPlus 的配置保存、单独启停及卸载，并在 UU 关闭/开启两组中检查状态、DDNS-Go 查询和实际游戏加速。Fancyss 的真实节点、订阅、DNS/IPv6/NAT 与 UU 账号/流量均属于待执行实机项目。
+4. 记录损坏或空间不足时先保留副本，不删除插件、检查点或 UU 数据来腾空间。按前文可信备份与回退方法处理；安装/更新检查点不承诺卸载中途断电回滚。
+5. 后续官方有更新时，等待针对新底包构建并验证的官改包；直接升级纯官方会覆盖固件内适配。保留了 JFFS 数据也不等于新版本插件兼容已确认。

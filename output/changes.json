@@ -410,8 +410,8 @@
   {
     "path": "rom/etc/koolshare/scripts/ks_app_install.sh",
     "change": "added",
-    "bytes": 25859,
-    "sha256": "4ec103ed7653f5fb1877700a045d92624adc2df3ac7a00ddf181c7a80eea5ca7"
+    "bytes": 26267,
+    "sha256": "99c3bea4b9a46c7b86619611335dffd1060a01b7163ab5cdbc1544553707df90"
   },
   {
     "path": "rom/etc/koolshare/scripts/ks_app_remove.sh",
@@ -427,8 +427,8 @@
   {
     "path": "rom/etc/koolshare/scripts/ks_tar_install.sh",
     "change": "added",
-    "bytes": 2907,
-    "sha256": "23bd082e66cc70251b235accc4492528433fda3c52e94eeb5a5bf9c1c283543d"
+    "bytes": 2938,
+    "sha256": "cf2c039e147179237005080b8aff8042d1342e0707627987261a467c27a2ebed"
   },
   {
     "path": "rom/etc/koolshare/webs",
@@ -457,13 +457,13 @@
     "path": "rom/etc/localmod-core-id",
     "change": "added",
     "bytes": 65,
-    "sha256": "a431d1e0a301fe19fdc097f1592c67c295b3d1a6105eb5da38e79f02ebd84a2f"
+    "sha256": "7ad2eee881244a2ca333f8597b312838790303bc1c535948c05315e5bce72573"
   },
   {
     "path": "rom/etc/localmod-release.json",
     "change": "added",
     "bytes": 667,
-    "sha256": "eb46c5966a494b4adf474734db60ff8ebeb33b2b187d58a7f911060b6290a828"
+    "sha256": "97d7abd13d3ab472879a384b6e40b4ae641813341f6422b43931e267e8313f73"
   },
   {
     "path": "rom/etc/profile",
@@ -519,8 +519,8 @@
   {
     "path": "usr/lib/localmod/httpd_bridge.so",
     "change": "added",
-    "bytes": 18828,
-    "sha256": "5c0f9b73ef10ced872c20e4a75769c69af1cd923cf3260bd9a0bdad8a28b47fb"
+    "bytes": 28092,
+    "sha256": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8"
   },
   {
     "path": "usr/lib/localmod/rc_bridge.so",
@@ -547,8 +547,8 @@
   {
     "path": "usr/libexec/localmod/bootstrap.sh",
     "change": "added",
-    "bytes": 10164,
-    "sha256": "015a3f90d8b1cb99cd16797be5ba58e3870e7e3ee237bb09c5afdd737f369917"
+    "bytes": 10430,
+    "sha256": "43298e06092803e25a7128ba757e4b02587a868819f58b7a2d95a1f494bb9826"
   },
   {
     "path": "usr/libexec/localmod/busybox",
@@ -563,6 +563,12 @@
     "sha256": "96fee2f2f2507dcc3371f0ccc95ecbec61699c772a23078b811ae9220a467e4e"
   },
   {
+    "path": "usr/libexec/localmod/fancyss-packages.sha256",
+    "change": "added",
+    "bytes": 156,
+    "sha256": "bea614c02eeadff189ca54fb6963e58853b5fa719dd29254049b0615cd51dbd9"
+  },
+  {
     "path": "usr/libexec/localmod/httpd",
     "change": "added",
     "bytes": 690096,
@@ -571,8 +577,8 @@
   {
     "path": "usr/libexec/localmod/installer-guard.sh",
     "change": "added",
-    "bytes": 5377,
-    "sha256": "60b26aba176d5e5bb81711032985f29ebeefe55194183774a74ce38541508982"
+    "bytes": 6717,
+    "sha256": "ba13e554560c1d9340a39f94df9206ad093bb81f44bcfe6e0fd6c90d165809a4"
   },
   {
     "path": "usr/libexec/localmod/localmod-event",
@@ -583,14 +589,20 @@
   {
     "path": "usr/libexec/localmod/localmod-status",
     "change": "added",
-    "bytes": 7216,
-    "sha256": "7185f5f8b2c16296038fabee01253837e73c0f713e26385ac3f2b2a65fd48a7f"
+    "bytes": 20964,
+    "sha256": "346ba82a54ccae267c20ba4e742eaed1ded2558d8837affc0e9a9c28587d5922"
   },
   {
     "path": "usr/libexec/localmod/log-limit",
     "change": "added",
     "bytes": 6496,
     "sha256": "7d41c03ccb6d694bbf1b2fca8e87019a1b1af5fb15b13dae7ec0334d5533e340"
+  },
+  {
+    "path": "usr/libexec/localmod/plugin-compat.sh",
+    "change": "added",
+    "bytes": 1616,
+    "sha256": "7addf5ead49207c9090e0acb48a0ae1c9b2871e329dc11b99ec907c3643bb836"
   },
   {
     "path": "usr/libexec/localmod/plugin-run",
@@ -629,10 +641,16 @@
     "sha256": "c53619c800a961abf5d38460d64e0ada4756425fd34f254a0f10d433ce9fcec3"
   },
   {
+    "path": "www/Module_FancyssLocalmod.asp",
+    "change": "added",
+    "bytes": 4181,
+    "sha256": "336e60c23cbfab90663c5aee5a78fb182c775f130f6d73685488c77c39636b0d"
+  },
+  {
     "path": "www/Module_Localmod.asp",
     "change": "added",
-    "bytes": 5110,
-    "sha256": "399519e4258047d3f6018391d489a7176d857c69754853a9661e9fb3042d5a0c"
+    "bytes": 6767,
+    "sha256": "fff435b61e083230e33371644bef7e84df35ff3c43059492a6d8b515097fe856"
   },
   {
     "path": "www/state.js",

@@ -22,16 +22,17 @@ for artifact, path in [('httpd_bridge.so', 'usr/lib/localmod/httpd_bridge.so'),
 subprocess.run(['go', 'build', '-o', 'build/test-online', 'build/test_online_main.go', 'build/test_online.go',
                 'build/native_runtime_client.go', 'build/coexist_helpers.go'], check=True,
                env=dict(os.environ, GOOS='linux', GOARCH='arm64', CGO_ENABLED='0'))
-checks, details = {}, {}
+checks, details, job_receipts = {}, {}, []
 for phase, expected in [('success', 7), ('errors', 13), ('concurrent', 8)]:
     result = root / f'build/online_{phase}_result.json'
     result.unlink(missing_ok=True)
-    (root / 'build/online-phase').write_text(phase + '\n')
-    shutil.copyfile(root / 'build/linux_online_job.sh', root / 'build/linux_job.sh')
     print('Running online workflow VM:', phase, flush=True)
     destination = root / f'build/online_{phase}_tests_run.log'
     with destination.open('w') as log:
-        subprocess.run(['python3', 'build/run_linux.py', '--timeout', '180'], check=True, stdout=log, stderr=subprocess.STDOUT)
+        subprocess.run(['python3', 'build/run_linux.py', '--job', 'online', '--phase', phase, '--timeout', '180'], check=True, stdout=log, stderr=subprocess.STDOUT)
+    receipts = [json.loads(s[len('MODEL_RECEIPT '):]) for s in destination.read_text().splitlines() if s.startswith('MODEL_RECEIPT ')]
+    assert len(receipts) == 1 and receipts[0]['outcome'] == 'PASS'
+    job_receipts.append(receipts[0])
     data = json.loads(result.read_text())
     assert len(data['checks']) == expected and len(set(data['checks'])) == expected
     for name in data['checks']:
@@ -52,6 +53,7 @@ assert not [str(p) for p in stage.rglob('*') if p.name in fixture_names]
 report = {
     'status': 'PASS', 'candidate_image': verification['image'], 'candidate_sha256': verification['sha256'],
     'checks': checks, 'details': details,
+    'private_model_job_receipts': job_receipts,
     'online_installer_sha256': hashlib.sha256((stage / 'rom/etc/koolshare/scripts/ks_app_install.sh').read_bytes()).hexdigest(),
     'guard_sha256': hashlib.sha256((stage / 'usr/libexec/localmod/installer-guard.sh').read_bytes()).hexdigest(),
     'retained_native_wget_sha256': hashlib.sha256(wget.read_bytes()).hexdigest(),

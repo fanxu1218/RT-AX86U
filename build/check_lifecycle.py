@@ -6,7 +6,9 @@ import json
 import os
 import shutil
 import subprocess
+import secrets
 from pathlib import Path
+from model_private import cleanup_state
 
 root = Path(__file__).resolve().parent.parent
 os.chdir(root)
@@ -31,21 +33,21 @@ for name, target in [('httpd_bridge.so', 'usr/lib/localmod/httpd_bridge.so'),
 def run(*command):
     subprocess.run(command, cwd=root, check=True)
 
+state_id = 'state-' + secrets.token_hex(12)
+job_receipts = []
 def job(name, destination):
     print('Running offline VM job:', name, flush=True)
-    shutil.copyfile(root / f'build/linux_{name}_job.sh', root / 'build/linux_job.sh')
     with (root / destination).open('w') as output:
-        subprocess.run(['python3', 'build/run_linux.py', '--timeout', '180' if name.startswith('cert_') else '95'], cwd=root, check=True,
+        command = ['python3', 'build/run_linux.py', '--job', name, '--timeout', '180' if name.startswith('cert_') else '95']
+        if name in ['cert_generate', 'cert_restore', 'coexist']:
+            command += ['--state-id', state_id]
+        subprocess.run(command, cwd=root, check=True,
                        stdout=output, stderr=subprocess.STDOUT)
+    rows = [json.loads(s[len('MODEL_RECEIPT '):]) for s in (root / destination).read_text().splitlines() if s.startswith('MODEL_RECEIPT ')]
+    assert len(rows) == 1 and rows[0]['outcome'] == 'PASS'
+    job_receipts.append(rows[0])
 
-private = root / 'build/native-lifecycle-private'
-def clean_private():
-    if private.exists():
-        assert private.is_dir() and not private.is_symlink()
-        assert private.resolve() == root / 'build/native-lifecycle-private'
-        shutil.rmtree(private)
-
-clean_private()
+success = False
 try:
     flags = [str(root / 'sources/zig-aarch64-macos-0.15.2/zig'), 'cc',
              '-target', 'arm-linux-gnueabi.2.26', '-mcpu=cortex_a53', '-O2']
@@ -97,6 +99,7 @@ try:
     report = {
         'status': 'PASS', 'candidate_image': verification['image'],
         'candidate_sha256': verification['sha256'], 'checks': checks, 'details': details,
+        'private_model_job_receipts': job_receipts,
         'retained_vendor_sha256': hashes,
         'native_certificate_generation_save_restore_and_tls_functions_replaced': False,
         'tls_chain_and_hostname_verification_disabled': False,
@@ -118,5 +121,9 @@ try:
     }
     (root / 'output/lifecycle_tests.json').write_text(json.dumps(report, indent=2) + '\n')
     print('PASS all 17 certificate/coexistence checks; candidate SHA256', verification['sha256'])
+    success = True
 finally:
-    clean_private()
+    if success:
+        cleanup_state(state_id)
+    else:
+        print('Owned synthetic lifecycle state retained:', state_id, flush=True)
