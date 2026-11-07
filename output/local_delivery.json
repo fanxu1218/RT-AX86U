@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "status": "LOCAL_VALIDATED_MANUAL_REMOTE_HANDOFF",
+  "revision": "localmod2-r9-experimental",
+  "validated_source_commit": "acfff1cc12a84a7216f94a84741b9277eb95294c",
+  "implementation_commits": [
+    "6f35af48117a5a85f64eade2c04d64b986d34ae6",
+    "084ca6fcc942bf0f5f12a85d78f4802fb999c51c",
+    "87c972993a7fee3c869073620670b765a9e6b27d",
+    "acfff1cc12a84a7216f94a84741b9277eb95294c"
+  ],
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w",
+  "candidate_bytes": 85852180,
+  "candidate_sha256": "02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50",
+  "source_inputs_verified": 151,
+  "artifact_bound_report_sha256": {
+    "output/lifecycle_tests.json": "1081e216d0bc3d61b8858ac485a3e0364a15d86af5e6096dfb60358ceef41f4b",
+    "output/online_plugin_tests.json": "4272b96b49a2af4a2f8962f59fffbc5f6b72b75a03dd4d6d7fc7d803a252f251",
+    "output/real_plugin_tests.json": "9fea29f8367b8e1e1bc6e1042103e03a682deab3e1036db10e49054a844b902d",
+    "output/fancyss_tests.json": "06862890c9495e41741d45c6a2e4aea5aeb5e87137cc70f725311463fc9093cf",
+    "output/history_tests.json": "0029d9f65e58d24a85d2be10bd710fb1fbca6d1ba16f25a00a73fe7a3a34f2a4",
+    "output/shard_tests.json": "83b897ea3bb70834c4aa723636584e63a0651acb13986bba48a7d0f5f0883b71",
+    "output/model_isolation_tests.json": "060c60cadca85e46955f5e1fc6ee877c33973226c1a509a3935e592dc262b05d",
+    "output/https_stability_tests.json": "7da3795d94d8cb235bdef74c8b7ed2837c6e8faa240a09601f2af934e66ce91d",
+    "output/interruption_tests.json": "1682d8872b1145ead55d542f0816b404f06b205c3f124bbc22df2f584969b22a",
+    "output/recovery_safety_tests.json": "cfcf168b0f94be82d7c37308cf367ffa1feba17e819cf16a280f204cfc24500c",
+    "output/hardening_tests.json": "e4792c8849fa21fdb0c9b4fe0998316af950a899157f0050e3ddd5fd5ac7d876",
+    "output/tls_input_tests.json": "eea0e0adb361fb9cd83079631238278a6213d031e5a3d4afd71ce1acd87276e2",
+    "output/base_migration_tests.json": "3078ea81504cfaac3e467dd5e3949fb9ea841c1814f7144c953f588e12f31c77"
+  },
+  "local_results": {
+    "real_plugin_tests": {
+      "status": "LOCAL_ISOLATION_PASS",
+      "checks": 32,
+      "sha256": "9fea29f8367b8e1e1bc6e1042103e03a682deab3e1036db10e49054a844b902d"
+    },
+    "fancyss_tests": {
+      "status": "LOCAL_CANDIDATE_PLUGINS_PASS",
+      "checks": 26,
+      "sha256": "06862890c9495e41741d45c6a2e4aea5aeb5e87137cc70f725311463fc9093cf"
+    },
+    "history_tests": {
+      "status": "LOCAL_PERSISTENT_HISTORY_PASS",
+      "checks": 85,
+      "sha256": "0029d9f65e58d24a85d2be10bd710fb1fbca6d1ba16f25a00a73fe7a3a34f2a4"
+    },
+    "shard_tests": {
+      "status": "LOCAL_SEALED_SHARDS_PASS",
+      "checks": 12,
+      "sha256": "83b897ea3bb70834c4aa723636584e63a0651acb13986bba48a7d0f5f0883b71"
+    },
+    "model_isolation_tests": {
+      "status": "LOCAL_PRIVATE_MODEL_PASS",
+      "checks": 16,
+      "sha256": "060c60cadca85e46955f5e1fc6ee877c33973226c1a509a3935e592dc262b05d"
+    },
+    "lifecycle_tests": {
+      "status": "PASS",
+      "checks": 17,
+      "sha256": "1081e216d0bc3d61b8858ac485a3e0364a15d86af5e6096dfb60358ceef41f4b"
+    },
+    "online_plugin_tests": {
+      "status": "PASS",
+      "checks": 28,
+      "sha256": "4272b96b49a2af4a2f8962f59fffbc5f6b72b75a03dd4d6d7fc7d803a252f251"
+    },
+    "interruption_tests": {
+      "status": "LOCAL_INTERRUPTION_RECOVERY_PASS",
+      "checks": 69,
+      "sha256": "1682d8872b1145ead55d542f0816b404f06b205c3f124bbc22df2f584969b22a"
+    },
+    "recovery_safety_tests": {
+      "status": "LOCAL_RECOVERY_FAILURE_SAFETY_PASS",
+      "checks": 94,
+      "sha256": "cfcf168b0f94be82d7c37308cf367ffa1feba17e819cf16a280f204cfc24500c"
+    }
+  },
+  "base_migration": {
+    "checks": 13,
+    "changed_paths": 0,
+    "sha256": "3078ea81504cfaac3e467dd5e3949fb9ea841c1814f7144c953f588e12f31c77"
+  },
+  "compiled_production_matches_readback": true,
+  "original_images_preserved_sha256": {
+    "output/RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w": "5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129",
+    "RT-AX86U_386.3_2_cferom_pureubi_koolcenter_alpha3.w": "c3d01f6df5916ab5f14a2dabd9c79b6d7c28c73b44bed122fdc2636568cf6838"
+  },
+  "push_owner": "user",
+  "r9_push_or_publication_completed_by_agent": false,
+  "remote_ci_for_delivery_commit": "NOT_RUN",
+  "existing_release_receipt": {
+    "path": "output/release_delivery.json",
+    "tag": "localmod2-r8-experimental",
+    "candidate_sha256": "5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129"
+  },
+  "manual_instructions": "output/手动推送与发布步骤.md",
+  "physical_router_accessed": false,
+  "physical_router_backup_performed": false,
+  "physical_router_flashed": false,
+  "not_tested": [
+    "Physical router upgrade and boot acceptance",
+    "Target kernel4.1, WiFi/NAT/DNS/IPv6 and NAND power loss",
+    "Real proxy nodes/subscriptions and UU accounts/game acceleration"
+  ],
+  "current_candidate_hardening_phases": {
+    "candidate-installer": {
+      "checks": 19,
+      "metrics": {
+        "uu_launches": 1
+      }
+    },
+    "candidate-resources": {
+      "checks": 10,
+      "metrics": {}
+    },
+    "candidate-uu": {
+      "checks": 9,
+      "metrics": {}
+    },
+    "candidate-health": {
+      "checks": 15,
+      "metrics": {}
+    },
+    "soak-httpd-cache": {
+      "checks": 0,
+      "metrics": {
+        "data_preserved": true,
+        "duration_seconds": 28.02517043,
+        "protected_page_queries": 300,
+        "uu_launches": 1
+      }
+    },
+    "soak-httpd-memory": {
+      "checks": 0,
+      "metrics": {
+        "data_preserved": true,
+        "duration_seconds": 516.604788205,
+        "concurrent_clients": 4,
+        "rounds": 6,
+        "healthy_queries": 243,
+        "slow_disconnects": 6,
+        "uu_launches": 1,
+        "same_httpd_pid": 970,
+        "logout_and_relogin_verified": true
+      }
+    }
+  },
+  "local_quick_check": "PASS: syntax, ARM ABI, archive boundary and owned timeout rechecked after documentation-only handoff changes"
+}

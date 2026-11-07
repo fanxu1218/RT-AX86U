@@ -4,6 +4,8 @@
 
 localmod2-r9 已从官方 24437 重新组装并回读，r8 已发布的镜像、标签和附件保留。本轮先在 r8 加 RAM 覆盖层开发，再在 r9 候选字节上重跑 26 项检查；当前 `fancyss_tests.json` 为 `LOCAL_CANDIDATE_PLUGINS_PASS`，绑定 r9 SHA256。没有连接或刷写物理路由器。
 
+当前按用户安排保留本地交付，尚未创建 r9 预发布。兼容包已放入本地交付包；固件入口依赖同版本 GitHub 发布附件，发布前不能用该入口从公网下载。后续取得刷写安排并完成基础验收后，可通过软件中心离线安装本地兼容包；直接推送 Git 源码不会上传这些二进制附件。
+
 ## 固定版本与安装方式
 
 2026-11-07 核对的上游历史包仓库最新版本为 **3.5.29**，提交 `fa1009b56d36a46b0f205fc8ce860be6d61397d6`（2026-05-20）。普通 RT-AX86U 使用 **HND v8 Full**。对应 Fancyss 源码提交为 `9fc37ef7fc452de2740a9f1c03a2aac90a7e0b12`。来源见 [上游包](https://github.com/hq450/fancyss_history_package/tree/fa1009b56d36a46b0f205fc8ce860be6d61397d6/fancyss_hnd_v8)、[对应源码](https://github.com/hq450/fancyss/tree/9fc37ef7fc452de2740a9f1c03a2aac90a7e0b12)。

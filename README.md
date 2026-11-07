@@ -2,6 +2,8 @@
 
 基于 **ASUS 3.0.0.4.388_24437**，集成 **KoolCenter 软件中心 1.9.50**，保留官方 **网易 UU**。当前候选为 **localmod2-r9**；r8 及历史镜像、标签和发布附件保留。
 
+**r9 当前完成本地验证与提交，尚未上传 GitHub 或创建预发布；推送按用户安排后续手动进行。** 本地交付状态见 [local_delivery.json](output/local_delivery.json)，操作见 [手动推送与发布步骤](output/手动推送与发布步骤.md)。`release_delivery.json` 当前仍是历史 r8 发布回执，不能当作 r9 已发布证明。
+
 > **实验候选版，尚未实机验收，暂不建议直接刷入日常主路由。**
 > 源码适配、模型/仿真测试和镜像回读通过；刷入启动、原厂登录/TLS、无线/NAT、具体第三方插件及 UU 实际加速仍待实机验证。
 
@@ -47,7 +49,7 @@ r8 集成六项后续完善：归档边界与脚本超时、事件/日志容量�
 
 ## 下载与说明
 
-- [localmod2-r9 实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r9-experimental)
+- r9 本地候选：见 [本地交付状态](output/local_delivery.json)；[计划预发布地址](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r9-experimental) 仅在后续手动发布成功后可用。
 - [localmod2-r8 历史实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r8-experimental)
 - [localmod2-r7 历史实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r7-experimental)
 - [完整适配范围与验证边界](output/官改候选版说明.md)
@@ -72,7 +74,7 @@ SHA256: 02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50
 
 ## 验证摘要
 
-r9 候选验证：[完整 gate](output/release_gates.json) · [最终镜像组合回归](output/hardening_tests.json) · [发布附件回执](output/release_delivery.json)。早期源码覆盖层报告明确标注未重建镜像，最终组合回归使用组装/回读后的字节。
+r9 候选验证：[完整 gate](output/release_gates.json) · [最终镜像组合回归](output/hardening_tests.json) · [本地交付状态](output/local_delivery.json)。[发布回执](output/release_delivery.json) 仍记录历史 r8，后续发布 r9 后才更新。早期源码覆盖层报告明确标注未重建镜像，最终组合回归使用组装/回读后的字节。
 
 本轮 Fancyss/FRPC/PushPlus 26 项、原有三个真实 HND 插件 32 项、在线插件 28 项、证书/共存 17 项、持久化记录 85 次阶段断言、HTTPS 18 项、安装中断 69 项、损坏/低空间 94 项检查使用同一 r9 候选；另有 12 项封存/并行与 13 项官方底包审计。构建模型及其负面对照单独记录在 [模型隔离报告](output/model_isolation_tests.json)。
 

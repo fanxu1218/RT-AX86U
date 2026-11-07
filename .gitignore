@@ -229,6 +229,9 @@
 !/output/hardening_tests.json
 !/output/release_gates.json
 !/output/release_delivery.json
+!/output/local_delivery.json
+!/output/手动推送与发布步骤.md
+!/output/localmod2_r9_release_manifest.json
 !/output/构建与发布校验.md
 !/output/RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.build.json
 !/output/RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.build.json
