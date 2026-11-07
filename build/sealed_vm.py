@@ -24,6 +24,7 @@ OPTIONAL = ['test-real-plugins', 'test-fancyss', 'test-interrupt', 'test-https-s
             'httpd_tls_cache_fixture.so', 'memory-exec-fixture', 'relay-idle-fixture',
             'log-limit-bounds-fixture', 'event-bounds-fixture', 'barrier-bounds-fixture',
             'plugin-txn-r5-baseline',
+            'irq-tls-probe', 'irq-old-httpd-bridge',
             'history-phase', 'interrupt-phase.json', 'soak-plan.json']
 
 
