@@ -64,7 +64,9 @@ def _run(log_path, root, timeout=270, state_disk=None, expect_cut=False,
                 proc.wait()
         stream.close()
         proc.stdout.close()
-        Path(log_path).write_bytes(data)
+        # Exception/cancellation logs are reviewable text too. Keep LF output
+        # before propagating the failure, just as on successful completion.
+        Path(log_path).write_bytes(bytes(data).replace(b'\r\n', b'\n').replace(b'\r', b''))
     text = data.decode('utf-8', errors='replace').replace('\r\n', '\n').replace('\r', '')
     if guest_fault is not None:
         raise RuntimeError('test guest kernel fault before completion; inspect ' + str(log_path))

@@ -23,6 +23,7 @@ OPTIONAL = ['test-real-plugins', 'test-fancyss', 'test-interrupt', 'test-https-s
             'txn_fault_fixture.so', 'https_trace_fixture.so', 'httpd_bridge_next.so',
             'httpd_tls_cache_fixture.so', 'memory-exec-fixture', 'relay-idle-fixture',
             'log-limit-bounds-fixture', 'event-bounds-fixture', 'barrier-bounds-fixture',
+            'plugin-txn-r5-baseline',
             'history-phase', 'interrupt-phase.json', 'soak-plan.json']
 
 

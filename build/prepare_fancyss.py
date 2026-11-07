@@ -86,7 +86,7 @@ def prepare():
         blob = path.read_bytes()
         assert sha(blob) == package['sha256']
         assert hashlib.md5(blob).hexdigest() == package['upstream_md5']
-        files, changes, total, seen = {}, {}, 0, set()
+        files, changes, total, adapted_total, seen = {}, {}, 0, 0, set()
         out = io.BytesIO()
         with tarfile.open(fileobj=io.BytesIO(blob)) as src, tarfile.open(fileobj=out, mode='w', format=tarfile.USTAR_FORMAT) as dst:
             for original in src:
@@ -112,6 +112,7 @@ def prepare():
                     if patched != data:
                         changes[name] = files[name]
                     data = patched
+                    adapted_total += len(data)
                     item.size = len(data)
                     if name == 'ss/version':
                         assert data.decode().strip() == package['version']
@@ -131,6 +132,7 @@ def prepare():
                 assert name not in files
                 item=tarfile.TarInfo('shadowsocks/'+name);item.mode=0o644;item.size=len(data)
                 dst.addfile(item,io.BytesIO(data));files[name]=dict(upstream_sha256=None,sha256=sha(data))
+                adapted_total += len(data)
         assert set(changes) == {'install.sh', 'uninstall.sh', 'ss/ssconfig.sh', 'webs/Module_shadowsocks.asp', 'scripts/ss_update.sh'}
         compressed=io.BytesIO()
         with gzip.GzipFile(fileobj=compressed,mode='wb',filename='',mtime=0) as z:z.write(out.getvalue())
@@ -138,7 +140,7 @@ def prepare():
         adapted = ROOT / package['adapted_path']
         adapted.write_bytes(zipped)
         package.update(adapted_sha256=sha(zipped), adapted_md5=hashlib.md5(zipped).hexdigest(),
-                       expanded_bytes=total, files=files, changed_files=changes)
+                       upstream_expanded_bytes=total, expanded_bytes=adapted_total, files=files, changed_files=changes)
     dest = ROOT / 'build/fancyss_inputs.json'
     dest.write_text(json.dumps(manifest, indent=2) + '\n')
     return manifest

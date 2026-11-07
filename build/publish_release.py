@@ -36,7 +36,7 @@ def main():
   assert p.name.isascii();assets.append(p);entries.append({'name':p.name,'source_path':name,'bytes':p.stat().st_size,'sha256':sha(p)})
  manifest={'tag':tag,'commit':head,'candidate_sha256':v['sha256'],'assets':entries}
  m=ROOT/('output/'+version.replace('-','_')+'_release_manifest.json');m.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n');assets.append(m)
- notes=ROOT/('build/'+version+'_release_notes.md');notes.write_text(f'''基于官方 24437，集成软件中心并保留官方 UU。新增 Fancyss 3.5.29 HND v8 Full 兼容包和经原厂认证的安装入口，默认不启用代理；保留 UU 文件、原厂日志与共享依赖，使用原厂 HTTPS 和上游 HTTP 查询流程。FRPC/PushPlus 的两处已知脚本问题通过哈希限定的固件适配修复。\n\n本地验证和镜像回读以附件报告绑定的 SHA256 为准：`{v['sha256']}`。Fancyss 兼容包与固件按同一版本发布；插件内自更新不绕过检查点与包校验。\n\n实验候选版，未接触或刷写物理路由器；真实代理节点、UU 账号/加速、无线/NAT/DNS/IPv6、实机升级与断电恢复仍待验收。保留 r8 及历史附件。源码提交：{head}。\n''')
+ notes=ROOT/('build/'+version+'_release_notes.md');notes.write_text(f'''基于官方 24437，集成软件中心并保留官方 UU。新增 Fancyss 3.5.29 HND v8 Full 兼容包和经原厂认证的安装入口，默认不启用代理；保留 UU 文件、原厂日志与共享依赖，使用原厂 HTTPS 和上游 HTTP 查询流程。FRPC/PushPlus 的两处已知脚本问题通过哈希限定的固件适配修复。\n\n本地验证和镜像回读以附件报告绑定的 SHA256 为准：`{v['sha256']}`。Fancyss 兼容包与固件按同一版本发布；插件内自更新不绕过检查点与包校验。新增最多 32 条可跨重启保留的脱敏安装/恢复记录，损坏或写入中断时保留证据。完整门禁使用独立封存的只读 VM 分片，并附官方底包差异/ABI 检查入口；这些工具不会自动迁移或刷机。\n\n实验候选版，未接触或刷写物理路由器；真实代理节点、UU 账号/加速、无线/NAT/DNS/IPv6、实机升级与断电恢复仍待验收。保留 r8 及历史附件。源码提交：{head}。\n''')
  subprocess.run(['gh','release','create',tag,*[str(p) for p in assets],'--repo',REPO,'--target',head,'--title',version+' experimental','--prerelease','--notes-file',str(notes)],cwd=ROOT,check=True)
  release=api('releases/tags/'+tag);remote={a['name']:a for a in release['assets']}
  assert release['prerelease'] and not release['draft'] and len(remote)==len(assets)

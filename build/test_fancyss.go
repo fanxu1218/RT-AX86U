@@ -295,6 +295,6 @@ func main() {
 	if u.calls.Load() != 1 || u.downloads.Load() != 1 {
 		panic("UU download/restart changed")
 	}
-	fmt.Printf("FANCYSS_RESULT %s\n", mustFancyJSON(map[string]any{"checks": checks, "xray_version": strings.TrimSpace(version), "uu_api_requests": u.calls.Load(), "uu_launches": strings.Count(string(nrRead("/tmp/owned-uu-launches")), "start\n"), "platform_gate_fixture": true, "original_binary_files": len(current.Files), "phase": phase, "end_id": strconv.Itoa(t.id)}))
+	fmt.Printf("FANCYSS_RESULT %s\n", mustFancyJSON(map[string]any{"checks": checks, "xray_version": strings.TrimSpace(version), "uu_api_requests": u.calls.Load(), "uu_launches": strings.Count(string(nrRead("/tmp/owned-uu-launches")), "start\n"), "platform_gate_fixture": true, "archive_file_count": len(current.Files), "phase": phase, "end_id": strconv.Itoa(t.id)}))
 }
 func mustFancyJSON(v any) string { b, e := json.Marshal(v); nrMust(e); return string(b) }
