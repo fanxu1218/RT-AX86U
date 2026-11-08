@@ -1,0 +1,773 @@
+LINUX_BUILDER_READY
+MERLIN_SYSTEM_PROBE_READY
+FIXTURE_ARM_ARCH=aarch64
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+COEXIST_SETUP native_https_and_uu
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108052540, 2026/11/8 ~ 2046/11/9
+starting ntp...
+NTP_START_READY elapsed=6.064629296s start_attempts=1
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+COEXIST_SETUP real_ddnsgo_install
+COEXIST_SETUP real_fancyss_install
+COEXIST_SETUP six_components
+miniupnpd[6935]: it is advised to use network interface name instead of 192.168.77.1
+miniupnpd[6935]: system uptime is 140 seconds
+miniupnpd[6935]: Reloading rules from lease file
+miniupnpd[6935]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794115658
+miniupnpd[6935]: IGNORED : Reserved / private IP address 203.0.113.1 on ext interface wan0
+miniupnpd[6935]: HTTP listening on port 35323
+miniupnpd[6935]: Listening for NAT-PMP/PCP traffic on port 5351
+miniupnpd[6935]: HTTP REQUEST from 192.168.77.1:49951 : GET /rootDesc.xml (HTTP/1.1)
+miniupnpd[6935]: Host: 192.168.77.1:35323
+miniupnpd[6935]: HTTP REQUEST from 192.168.77.1:55273 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[6935]: Host: 192.168.77.1:35323
+miniupnpd[6935]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[6935]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[6935]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[6935]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[6935]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[6935]: HTTP REQUEST from 192.168.77.1:54543 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[6935]: Host: 192.168.77.1:35323
+miniupnpd[6935]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[6935]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[6935]: HTTP REQUEST from 192.168.77.1:58339 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[6935]: Host: 192.168.77.1:35323
+miniupnpd[6935]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[6935]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[6935]: removing redirect rule port 45001 TCP
+miniupnpd[6935]: Trying to delete nat rule at index 0
+miniupnpd[6935]: Trying to delete filter rule at index 0
+miniupnpd[6935]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[6935]: Trying to delete peer rule at index 0
+PASS dnsmasq_real_dhcp_discover_offer_request_ack_and_lease_file_retained_after_restart
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":5.936726992,"error":"\u003cnil\u003e","id":91005,"index":0,"script_stages":"169.11 pid=9154 stage=before_base\n172.80 pid=9154 stage=after_base\n173.07 pid=9154 stage=before_callback\n173.16 pid=9154 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":5.933350464,"request_written":1.6383589600000001,"tls_done":1.634413408},"valid":true}
+FANCY_LATENCY_PROCESS_SNAPSHOT
+  PID USER       VSZ STAT COMMAND
+    1 admin     1272 S    {init} /bin/busybox.static sh /init
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [pool_workqueue_]
+    4 admin        0 IW<  [kworker/R-kvfre]
+    5 admin        0 IW<  [kworker/R-rcu_g]
+    6 admin        0 IW<  [kworker/R-sync_]
+    7 admin        0 IW<  [kworker/R-slub_]
+    8 admin        0 IW<  [kworker/R-netns]
+    9 admin        0 IW   [kworker/0:0-eve]
+   10 admin        0 IW<  [kworker/0:0H-ev]
+   11 admin        0 IW   [kworker/0:1-mm_]
+   12 admin        0 IW   [kworker/u4:0-ev]
+   13 admin        0 IW<  [kworker/R-mm_pe]
+   14 admin        0 IW   [kworker/u4:1-ev]
+   15 admin        0 IW   [rcu_tasks_kthre]
+   16 admin        0 IW   [rcu_tasks_trace]
+   17 admin        0 SW   [ksoftirqd/0]
+   18 admin        0 IW   [rcu_preempt]
+   19 admin        0 SW   [rcu_exp_par_gp_]
+   20 admin        0 SW   [rcu_exp_gp_kthr]
+   21 admin        0 SW   [migration/0]
+   22 admin        0 SW   [cpuhp/0]
+   23 admin        0 SW   [kdevtmpfs]
+   24 admin        0 IW<  [kworker/R-inet_]
+   25 admin        0 SW   [kauditd]
+   26 admin        0 SW   [khungtaskd]
+   27 admin        0 SW   [oom_reaper]
+   28 admin        0 IW<  [kworker/R-write]
+   29 admin        0 SW   [kcompactd0]
+   30 admin        0 SWN  [ksmd]
+   31 admin        0 SWN  [khugepaged]
+   32 admin        0 IW<  [kworker/R-kinte]
+   33 admin        0 IW<  [kworker/R-kbloc]
+   34 admin        0 IW<  [kworker/R-blkcg]
+   35 admin        0 IW<  [kworker/R-md]
+   36 admin        0 IW<  [kworker/R-md_bi]
+   37 admin        0 IW   [kworker/u4:2-ev]
+   38 admin        0 IW   [kworker/u4:3-ev]
+   39 admin        0 IW<  [kworker/R-quota]
+   40 admin        0 IW<  [kworker/0:1H]
+   43 admin        0 SW   [kswapd0]
+   54 admin        0 IW<  [kworker/R-kthro]
+   99 admin        0 IW   [kworker/u4:4-ev]
+  122 admin        0 IW<  [kworker/R-mld]
+  128 admin        0 IW<  [kworker/R-ipv6_]
+  129 admin        0 IW<  [kworker/R-kstrp]
+  215 admin        0 IW   [kworker/u4:5-ev]
+  309 admin        0 IW   [kworker/u4:6]
+  340 admin        0 IW<  [kworker/u5:0]
+  366 admin     1272 S    sh /work/build/merlin_nested_job.sh
+  371 admin        0 IW   [kworker/0:2-eve]
+  445 admin      192 S    /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+  446 admin    1266m S    /work/build/test-merlin candidate-merlin-system
+  519 admin     1500 S    /usr/bin/skipd -d /jffs/.localmod/ksdb
+  521 admin     1752 S    log-limit --sink skipd 3
+  532 admin     1904 S    /usr/libexec/localmod/localmod-event --daemon
+  548 admin     1752 S    log-limit --sink bootstrap 3
+  606 admin     1596 S    perpboot -d
+  607 admin     1736 S    tinylog -k 3 -s 50000 -t /var/log/perpd
+  609 admin     1784 S    perpd -a 6 /koolshare/perp
+  616 admin     1168 S    httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80
+  627 admin    83096 S    /usr/bin/qemu-arm -L / -E LD_PRELOAD=/work/build/httpd_bridge.so:/work/build/https_trace_fixture.so:/work
+  827 admin    81476 S    {ntp} /usr/bin/qemu-arm -0 ntp -L / -E LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.
+  880 admin     3200 S    /bin/sh /tmp/owned-uu-worker.sh
+ 2132 admin     529m S    ddnsgo -l :9876 -f 300 -cacheTimes 5 -c /koolshare/configs/ddnsgo/default.yaml
+ 6654 nobody    2540 S    /usr/sbin/dnsmasq --keep-in-foreground --conf-file=/tmp/merlin/dnsmasq.conf
+ 6684 admin     3832 S    dropbear -F -E -s -p 127.0.0.1:35322 -r /jffs/.ssh/dropbear_ed25519_host_key
+ 6935 admin     3328 S    /usr/sbin/miniupnpd -d -f /tmp/.localmod-merlin/miniupnpd.conf -P /tmp/merlin/miniupnpd.pid
+ 7017 admin     6752 S    /usr/sbin/openvpn --config /tmp/merlin/server.ovpn
+ 7018 admin     6612 S    /usr/sbin/openvpn --config /tmp/merlin/client.ovpn
+ 7207 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-0.json
+ 7455 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-1.json
+ 9154 admin     3200 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91005 1
+ 9176 admin     3200 R    /bin/ps w
+
+FANCY_LATENCY_PROCESS_SNAPSHOT
+  PID USER       VSZ STAT COMMAND
+    1 admin     1272 S    {init} /bin/busybox.static sh /init
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [pool_workqueue_]
+    4 admin        0 IW<  [kworker/R-kvfre]
+    5 admin        0 IW<  [kworker/R-rcu_g]
+    6 admin        0 IW<  [kworker/R-sync_]
+    7 admin        0 IW<  [kworker/R-slub_]
+    8 admin        0 IW<  [kworker/R-netns]
+    9 admin        0 IW   [kworker/0:0-eve]
+   10 admin        0 IW<  [kworker/0:0H-ev]
+   11 admin        0 IW   [kworker/0:1-mm_]
+   12 admin        0 IW   [kworker/u4:0-ev]
+   13 admin        0 IW<  [kworker/R-mm_pe]
+   14 admin        0 IW   [kworker/u4:1-ev]
+   15 admin        0 IW   [rcu_tasks_kthre]
+   16 admin        0 IW   [rcu_tasks_trace]
+   17 admin        0 SW   [ksoftirqd/0]
+   18 admin        0 IW   [rcu_preempt]
+   19 admin        0 SW   [rcu_exp_par_gp_]
+   20 admin        0 SW   [rcu_exp_gp_kthr]
+   21 admin        0 SW   [migration/0]
+   22 admin        0 SW   [cpuhp/0]
+   23 admin        0 SW   [kdevtmpfs]
+   24 admin        0 IW<  [kworker/R-inet_]
+   25 admin        0 SW   [kauditd]
+   26 admin        0 SW   [khungtaskd]
+   27 admin        0 SW   [oom_reaper]
+   28 admin        0 IW<  [kworker/R-write]
+   29 admin        0 SW   [kcompactd0]
+   30 admin        0 SWN  [ksmd]
+   31 admin        0 SWN  [khugepaged]
+   32 admin        0 IW<  [kworker/R-kinte]
+   33 admin        0 IW<  [kworker/R-kbloc]
+   34 admin        0 IW<  [kworker/R-blkcg]
+   35 admin        0 IW<  [kworker/R-md]
+   36 admin        0 IW<  [kworker/R-md_bi]
+   37 admin        0 IW   [kworker/u4:2-ev]
+   38 admin        0 IW   [kworker/u4:3-ev]
+   39 admin        0 IW<  [kworker/R-quota]
+   40 admin        0 IW<  [kworker/0:1H]
+   43 admin        0 SW   [kswapd0]
+   54 admin        0 IW<  [kworker/R-kthro]
+   99 admin        0 IW   [kworker/u4:4-ev]
+  122 admin        0 IW<  [kworker/R-mld]
+  128 admin        0 IW<  [kworker/R-ipv6_]
+  129 admin        0 IW<  [kworker/R-kstrp]
+  215 admin        0 IW   [kworker/u4:5-ev]
+  309 admin        0 IW   [kworker/u4:6]
+  340 admin        0 IW<  [kworker/u5:0]
+  366 admin     1272 S    sh /work/build/merlin_nested_job.sh
+  371 admin        0 IW   [kworker/0:2-eve]
+  445 admin      192 S    /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+  446 admin    1266m S    /work/build/test-merlin candidate-merlin-system
+  519 admin     1500 S    /usr/bin/skipd -d /jffs/.localmod/ksdb
+  521 admin     1752 S    log-limit --sink skipd 3
+  532 admin     1904 S    /usr/libexec/localmod/localmod-event --daemon
+  548 admin     1752 S    log-limit --sink bootstrap 3
+  606 admin     1596 S    perpboot -d
+  607 admin     1736 S    tinylog -k 3 -s 50000 -t /var/log/perpd
+  609 admin     1784 S    perpd -a 6 /koolshare/perp
+  616 admin     1168 S    httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80
+  627 admin    83096 S    /usr/bin/qemu-arm -L / -E LD_PRELOAD=/work/build/httpd_bridge.so:/work/build/https_trace_fixture.so:/work
+  827 admin    81476 S    {ntp} /usr/bin/qemu-arm -0 ntp -L / -E LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.
+  880 admin     3200 S    /bin/sh /tmp/owned-uu-worker.sh
+ 2132 admin     529m S    ddnsgo -l :9876 -f 300 -cacheTimes 5 -c /koolshare/configs/ddnsgo/default.yaml
+ 6654 nobody    2540 S    /usr/sbin/dnsmasq --keep-in-foreground --conf-file=/tmp/merlin/dnsmasq.conf
+ 6684 admin     3832 S    dropbear -F -E -s -p 127.0.0.1:35322 -r /jffs/.ssh/dropbear_ed25519_host_key
+ 6935 admin     3328 S    /usr/sbin/miniupnpd -d -f /tmp/.localmod-merlin/miniupnpd.conf -P /tmp/merlin/miniupnpd.pid
+ 7017 admin     6752 S    /usr/sbin/openvpn --config /tmp/merlin/server.ovpn
+ 7018 admin     6612 S    /usr/sbin/openvpn --config /tmp/merlin/client.ovpn
+ 7207 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-0.json
+ 7455 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-1.json
+ 9154 admin     3868 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91005 1
+ 9384 admin     3200 R    /bin/ps w
+ 9385 admin     3868 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91005 1
+
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":6.532850624,"error":"\u003cnil\u003e","id":91007,"index":1,"script_stages":"181.66 pid=10280 stage=before_base\n187.04 pid=10280 stage=after_base\n187.34 pid=10280 stage=before_callback\n187.44 pid=10280 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":6.530026416,"request_written":0.41523192,"tls_done":0.41140288},"valid":true}
+FANCY_LATENCY_PROCESS_SNAPSHOT
+  PID USER       VSZ STAT COMMAND
+    1 admin     1272 S    {init} /bin/busybox.static sh /init
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [pool_workqueue_]
+    4 admin        0 IW<  [kworker/R-kvfre]
+    5 admin        0 IW<  [kworker/R-rcu_g]
+    6 admin        0 IW<  [kworker/R-sync_]
+    7 admin        0 IW<  [kworker/R-slub_]
+    8 admin        0 IW<  [kworker/R-netns]
+    9 admin        0 IW   [kworker/0:0-eve]
+   10 admin        0 IW<  [kworker/0:0H-ev]
+   11 admin        0 IW   [kworker/0:1-mm_]
+   12 admin        0 IW   [kworker/u4:0-ev]
+   13 admin        0 IW<  [kworker/R-mm_pe]
+   14 admin        0 IW   [kworker/u4:1-ev]
+   15 admin        0 IW   [rcu_tasks_kthre]
+   16 admin        0 IW   [rcu_tasks_trace]
+   17 admin        0 SW   [ksoftirqd/0]
+   18 admin        0 IW   [rcu_preempt]
+   19 admin        0 SW   [rcu_exp_par_gp_]
+   20 admin        0 SW   [rcu_exp_gp_kthr]
+   21 admin        0 SW   [migration/0]
+   22 admin        0 SW   [cpuhp/0]
+   23 admin        0 SW   [kdevtmpfs]
+   24 admin        0 IW<  [kworker/R-inet_]
+   25 admin        0 SW   [kauditd]
+   26 admin        0 SW   [khungtaskd]
+   27 admin        0 SW   [oom_reaper]
+   28 admin        0 IW<  [kworker/R-write]
+   29 admin        0 SW   [kcompactd0]
+   30 admin        0 SWN  [ksmd]
+   31 admin        0 SWN  [khugepaged]
+   32 admin        0 IW<  [kworker/R-kinte]
+   33 admin        0 IW<  [kworker/R-kbloc]
+   34 admin        0 IW<  [kworker/R-blkcg]
+   35 admin        0 IW<  [kworker/R-md]
+   36 admin        0 IW<  [kworker/R-md_bi]
+   37 admin        0 IW   [kworker/u4:2-ev]
+   38 admin        0 IW   [kworker/u4:3-ev]
+   39 admin        0 IW<  [kworker/R-quota]
+   40 admin        0 IW<  [kworker/0:1H]
+   43 admin        0 SW   [kswapd0]
+   54 admin        0 IW<  [kworker/R-kthro]
+   99 admin        0 IW   [kworker/u4:4-ev]
+  122 admin        0 IW<  [kworker/R-mld]
+  128 admin        0 IW<  [kworker/R-ipv6_]
+  129 admin        0 IW<  [kworker/R-kstrp]
+  215 admin        0 IW   [kworker/u4:5-ev]
+  309 admin        0 IW   [kworker/u4:6]
+  340 admin        0 IW<  [kworker/u5:0]
+  366 admin     1272 S    sh /work/build/merlin_nested_job.sh
+  371 admin        0 IW   [kworker/0:2-eve]
+  445 admin      192 S    /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+  446 admin    1266m S    /work/build/test-merlin candidate-merlin-system
+  519 admin     1500 S    /usr/bin/skipd -d /jffs/.localmod/ksdb
+  521 admin     1752 S    log-limit --sink skipd 3
+  532 admin     1904 S    /usr/libexec/localmod/localmod-event --daemon
+  548 admin     1752 S    log-limit --sink bootstrap 3
+  606 admin     1596 S    perpboot -d
+  607 admin     1736 S    tinylog -k 3 -s 50000 -t /var/log/perpd
+  609 admin     1784 S    perpd -a 6 /koolshare/perp
+  616 admin     1168 S    httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80
+  627 admin    83096 S    /usr/bin/qemu-arm -L / -E LD_PRELOAD=/work/build/httpd_bridge.so:/work/build/https_trace_fixture.so:/work
+  827 admin    81476 S    {ntp} /usr/bin/qemu-arm -0 ntp -L / -E LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.
+  880 admin     3200 S    /bin/sh /tmp/owned-uu-worker.sh
+ 2132 admin     529m S    ddnsgo -l :9876 -f 300 -cacheTimes 5 -c /koolshare/configs/ddnsgo/default.yaml
+ 6654 nobody    2540 S    /usr/sbin/dnsmasq --keep-in-foreground --conf-file=/tmp/merlin/dnsmasq.conf
+ 6684 admin     3832 S    dropbear -F -E -s -p 127.0.0.1:35322 -r /jffs/.ssh/dropbear_ed25519_host_key
+ 6935 admin     3328 S    /usr/sbin/miniupnpd -d -f /tmp/.localmod-merlin/miniupnpd.conf -P /tmp/merlin/miniupnpd.pid
+ 7017 admin     6752 S    /usr/sbin/openvpn --config /tmp/merlin/server.ovpn
+ 7018 admin     6612 S    /usr/sbin/openvpn --config /tmp/merlin/client.ovpn
+ 7207 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-0.json
+ 7455 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-1.json
+10280 admin     3604 R    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91007 1
+10328 admin     3200 R    /bin/ps w
+
+FANCY_LATENCY_PROCESS_SNAPSHOT
+  PID USER       VSZ STAT COMMAND
+    1 admin     1272 S    {init} /bin/busybox.static sh /init
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [pool_workqueue_]
+    4 admin        0 IW<  [kworker/R-kvfre]
+    5 admin        0 IW<  [kworker/R-rcu_g]
+    6 admin        0 IW<  [kworker/R-sync_]
+    7 admin        0 IW<  [kworker/R-slub_]
+    8 admin        0 IW<  [kworker/R-netns]
+    9 admin        0 IW   [kworker/0:0-eve]
+   10 admin        0 IW<  [kworker/0:0H-ev]
+   11 admin        0 IW   [kworker/0:1-mm_]
+   12 admin        0 IW   [kworker/u4:0-ev]
+   13 admin        0 IW<  [kworker/R-mm_pe]
+   14 admin        0 IW   [kworker/u4:1-ev]
+   15 admin        0 IW   [rcu_tasks_kthre]
+   16 admin        0 IW   [rcu_tasks_trace]
+   17 admin        0 SW   [ksoftirqd/0]
+   18 admin        0 IW   [rcu_preempt]
+   19 admin        0 SW   [rcu_exp_par_gp_]
+   20 admin        0 SW   [rcu_exp_gp_kthr]
+   21 admin        0 SW   [migration/0]
+   22 admin        0 SW   [cpuhp/0]
+   23 admin        0 SW   [kdevtmpfs]
+   24 admin        0 IW<  [kworker/R-inet_]
+   25 admin        0 SW   [kauditd]
+   26 admin        0 SW   [khungtaskd]
+   27 admin        0 SW   [oom_reaper]
+   28 admin        0 IW<  [kworker/R-write]
+   29 admin        0 SW   [kcompactd0]
+   30 admin        0 SWN  [ksmd]
+   31 admin        0 SWN  [khugepaged]
+   32 admin        0 IW<  [kworker/R-kinte]
+   33 admin        0 IW<  [kworker/R-kbloc]
+   34 admin        0 IW<  [kworker/R-blkcg]
+   35 admin        0 IW<  [kworker/R-md]
+   36 admin        0 IW<  [kworker/R-md_bi]
+   37 admin        0 IW   [kworker/u4:2-ev]
+   38 admin        0 IW   [kworker/u4:3-ev]
+   39 admin        0 IW<  [kworker/R-quota]
+   40 admin        0 IW<  [kworker/0:1H]
+   43 admin        0 SW   [kswapd0]
+   54 admin        0 IW<  [kworker/R-kthro]
+   99 admin        0 IW   [kworker/u4:4-ev]
+  122 admin        0 IW<  [kworker/R-mld]
+  128 admin        0 IW<  [kworker/R-ipv6_]
+  129 admin        0 IW<  [kworker/R-kstrp]
+  215 admin        0 IW   [kworker/u4:5-ev]
+  309 admin        0 IW   [kworker/u4:6]
+  340 admin        0 IW<  [kworker/u5:0]
+  366 admin     1272 S    sh /work/build/merlin_nested_job.sh
+  371 admin        0 IW   [kworker/0:2-eve]
+  445 admin      192 S    /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+  446 admin    1266m S    /work/build/test-merlin candidate-merlin-system
+  519 admin     1500 S    /usr/bin/skipd -d /jffs/.localmod/ksdb
+  521 admin     1752 S    log-limit --sink skipd 3
+  532 admin     1904 S    /usr/libexec/localmod/localmod-event --daemon
+  548 admin     1752 S    log-limit --sink bootstrap 3
+  606 admin     1596 S    perpboot -d
+  607 admin     1736 S    tinylog -k 3 -s 50000 -t /var/log/perpd
+  609 admin     1784 S    perpd -a 6 /koolshare/perp
+  616 admin     1168 S    httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80
+  627 admin    83096 S    /usr/bin/qemu-arm -L / -E LD_PRELOAD=/work/build/httpd_bridge.so:/work/build/https_trace_fixture.so:/work
+  827 admin    81476 S    {ntp} /usr/bin/qemu-arm -0 ntp -L / -E LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.
+  880 admin     3200 R    /bin/sh /tmp/owned-uu-worker.sh
+ 2132 admin     529m S    ddnsgo -l :9876 -f 300 -cacheTimes 5 -c /koolshare/configs/ddnsgo/default.yaml
+ 6654 nobody    2540 S    /usr/sbin/dnsmasq --keep-in-foreground --conf-file=/tmp/merlin/dnsmasq.conf
+ 6684 admin     3832 S    dropbear -F -E -s -p 127.0.0.1:35322 -r /jffs/.ssh/dropbear_ed25519_host_key
+ 6935 admin     3328 S    /usr/sbin/miniupnpd -d -f /tmp/.localmod-merlin/miniupnpd.conf -P /tmp/merlin/miniupnpd.pid
+ 7017 admin     6752 S    /usr/sbin/openvpn --config /tmp/merlin/server.ovpn
+ 7018 admin     6612 S    /usr/sbin/openvpn --config /tmp/merlin/client.ovpn
+ 7207 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-0.json
+ 7455 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-1.json
+10280 admin     3868 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91007 1
+10496 admin     3200 R    /bin/ps w
+
+FANCY_LATENCY_PROCESS_SNAPSHOT
+  PID USER       VSZ STAT COMMAND
+    1 admin     1272 S    {init} /bin/busybox.static sh /init
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [pool_workqueue_]
+    4 admin        0 IW<  [kworker/R-kvfre]
+    5 admin        0 IW<  [kworker/R-rcu_g]
+    6 admin        0 IW<  [kworker/R-sync_]
+    7 admin        0 IW<  [kworker/R-slub_]
+    8 admin        0 IW<  [kworker/R-netns]
+    9 admin        0 IW   [kworker/0:0-eve]
+   10 admin        0 IW<  [kworker/0:0H-ev]
+   11 admin        0 IW   [kworker/0:1-mm_]
+   12 admin        0 IW   [kworker/u4:0-ev]
+   13 admin        0 IW<  [kworker/R-mm_pe]
+   14 admin        0 IW   [kworker/u4:1-ev]
+   15 admin        0 IW   [rcu_tasks_kthre]
+   16 admin        0 IW   [rcu_tasks_trace]
+   17 admin        0 SW   [ksoftirqd/0]
+   18 admin        0 IW   [rcu_preempt]
+   19 admin        0 SW   [rcu_exp_par_gp_]
+   20 admin        0 SW   [rcu_exp_gp_kthr]
+   21 admin        0 SW   [migration/0]
+   22 admin        0 SW   [cpuhp/0]
+   23 admin        0 SW   [kdevtmpfs]
+   24 admin        0 IW<  [kworker/R-inet_]
+   25 admin        0 SW   [kauditd]
+   26 admin        0 SW   [khungtaskd]
+   27 admin        0 SW   [oom_reaper]
+   28 admin        0 IW<  [kworker/R-write]
+   29 admin        0 SW   [kcompactd0]
+   30 admin        0 SWN  [ksmd]
+   31 admin        0 RWN  [khugepaged]
+   32 admin        0 IW<  [kworker/R-kinte]
+   33 admin        0 IW<  [kworker/R-kbloc]
+   34 admin        0 IW<  [kworker/R-blkcg]
+   35 admin        0 IW<  [kworker/R-md]
+   36 admin        0 IW<  [kworker/R-md_bi]
+   37 admin        0 IW   [kworker/u4:2-ev]
+   38 admin        0 IW   [kworker/u4:3-ev]
+   39 admin        0 IW<  [kworker/R-quota]
+   40 admin        0 IW<  [kworker/0:1H]
+   43 admin        0 SW   [kswapd0]
+   54 admin        0 IW<  [kworker/R-kthro]
+   99 admin        0 IW   [kworker/u4:4-ev]
+  122 admin        0 IW<  [kworker/R-mld]
+  128 admin        0 IW<  [kworker/R-ipv6_]
+  129 admin        0 IW<  [kworker/R-kstrp]
+  215 admin        0 IW   [kworker/u4:5-ev]
+  309 admin        0 IW   [kworker/u4:6]
+  340 admin        0 IW<  [kworker/u5:0]
+  366 admin     1272 S    sh /work/build/merlin_nested_job.sh
+  371 admin        0 IW   [kworker/0:2-mm_]
+  445 admin      192 S    /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+  446 admin    1266m S    /work/build/test-merlin candidate-merlin-system
+  519 admin     1500 S    /usr/bin/skipd -d /jffs/.localmod/ksdb
+  521 admin     1752 S    log-limit --sink skipd 3
+  532 admin     1904 S    /usr/libexec/localmod/localmod-event --daemon
+  548 admin     1752 S    log-limit --sink bootstrap 3
+  606 admin     1596 S    perpboot -d
+  607 admin     1736 S    tinylog -k 3 -s 50000 -t /var/log/perpd
+  609 admin     1784 S    perpd -a 6 /koolshare/perp
+  616 admin     1168 S    httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80
+  627 admin    83096 S    /usr/bin/qemu-arm -L / -E LD_PRELOAD=/work/build/httpd_bridge.so:/work/build/https_trace_fixture.so:/work
+  827 admin    81476 S    {ntp} /usr/bin/qemu-arm -0 ntp -L / -E LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.
+  880 admin     3200 S    /bin/sh /tmp/owned-uu-worker.sh
+ 2132 admin     529m S    ddnsgo -l :9876 -f 300 -cacheTimes 5 -c /koolshare/configs/ddnsgo/default.yaml
+ 6654 nobody    2540 S    /usr/sbin/dnsmasq --keep-in-foreground --conf-file=/tmp/merlin/dnsmasq.conf
+ 6684 admin     3832 S    dropbear -F -E -s -p 127.0.0.1:35322 -r /jffs/.ssh/dropbear_ed25519_host_key
+ 6935 admin     3328 S    /usr/sbin/miniupnpd -d -f /tmp/.localmod-merlin/miniupnpd.conf -P /tmp/merlin/miniupnpd.pid
+ 7017 admin     6752 S    /usr/sbin/openvpn --config /tmp/merlin/server.ovpn
+ 7018 admin     6612 S    /usr/sbin/openvpn --config /tmp/merlin/client.ovpn
+ 7207 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-0.json
+ 7455 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-1.json
+10280 admin     3868 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91007 1
+10705 admin     3200 R    /bin/ps w
+
+miniupnpd[6935]: setting timeout to 60 sec
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":5.218617424,"error":"\u003cnil\u003e","id":91009,"index":2,"script_stages":"197.38 pid=11472 stage=before_base\n201.42 pid=11472 stage=after_base\n201.72 pid=11472 stage=before_callback\n201.83 pid=11472 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":5.211295168,"request_written":0.471775664,"tls_done":0.468152832},"valid":true}
+FANCY_LATENCY_PROCESS_SNAPSHOT
+  PID USER       VSZ STAT COMMAND
+    1 admin     1272 S    {init} /bin/busybox.static sh /init
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [pool_workqueue_]
+    4 admin        0 IW<  [kworker/R-kvfre]
+    5 admin        0 IW<  [kworker/R-rcu_g]
+    6 admin        0 IW<  [kworker/R-sync_]
+    7 admin        0 IW<  [kworker/R-slub_]
+    8 admin        0 IW<  [kworker/R-netns]
+    9 admin        0 IW   [kworker/0:0-eve]
+   10 admin        0 IW<  [kworker/0:0H-ev]
+   11 admin        0 IW   [kworker/0:1-mm_]
+   12 admin        0 IW   [kworker/u4:0-ev]
+   13 admin        0 IW<  [kworker/R-mm_pe]
+   14 admin        0 IW   [kworker/u4:1-ev]
+   15 admin        0 IW   [rcu_tasks_kthre]
+   16 admin        0 IW   [rcu_tasks_trace]
+   17 admin        0 SW   [ksoftirqd/0]
+   18 admin        0 RW   [rcu_preempt]
+   19 admin        0 SW   [rcu_exp_par_gp_]
+   20 admin        0 SW   [rcu_exp_gp_kthr]
+   21 admin        0 SW   [migration/0]
+   22 admin        0 SW   [cpuhp/0]
+   23 admin        0 SW   [kdevtmpfs]
+   24 admin        0 IW<  [kworker/R-inet_]
+   25 admin        0 SW   [kauditd]
+   26 admin        0 SW   [khungtaskd]
+   27 admin        0 SW   [oom_reaper]
+   28 admin        0 IW<  [kworker/R-write]
+   29 admin        0 SW   [kcompactd0]
+   30 admin        0 SWN  [ksmd]
+   31 admin        0 SWN  [khugepaged]
+   32 admin        0 IW<  [kworker/R-kinte]
+   33 admin        0 IW<  [kworker/R-kbloc]
+   34 admin        0 IW<  [kworker/R-blkcg]
+   35 admin        0 IW<  [kworker/R-md]
+   36 admin        0 IW<  [kworker/R-md_bi]
+   37 admin        0 IW   [kworker/u4:2-ev]
+   38 admin        0 IW   [kworker/u4:3-ev]
+   39 admin        0 IW<  [kworker/R-quota]
+   40 admin        0 IW<  [kworker/0:1H]
+   43 admin        0 SW   [kswapd0]
+   54 admin        0 IW<  [kworker/R-kthro]
+   99 admin        0 IW   [kworker/u4:4-ev]
+  122 admin        0 IW<  [kworker/R-mld]
+  128 admin        0 IW<  [kworker/R-ipv6_]
+  129 admin        0 IW<  [kworker/R-kstrp]
+  215 admin        0 IW   [kworker/u4:5-ev]
+  309 admin        0 IW   [kworker/u4:6]
+  340 admin        0 IW<  [kworker/u5:0]
+  366 admin     1272 S    sh /work/build/merlin_nested_job.sh
+  371 admin        0 IW   [kworker/0:2-mm_]
+  445 admin      192 S    /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+  446 admin    1266m S    /work/build/test-merlin candidate-merlin-system
+  519 admin     1500 S    /usr/bin/skipd -d /jffs/.localmod/ksdb
+  521 admin     1752 S    log-limit --sink skipd 3
+  532 admin     1904 S    /usr/libexec/localmod/localmod-event --daemon
+  548 admin     1752 S    log-limit --sink bootstrap 3
+  606 admin     1596 S    perpboot -d
+  607 admin     1736 S    tinylog -k 3 -s 50000 -t /var/log/perpd
+  609 admin     1784 S    perpd -a 6 /koolshare/perp
+  616 admin     1168 S    httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80
+  627 admin    83096 S    /usr/bin/qemu-arm -L / -E LD_PRELOAD=/work/build/httpd_bridge.so:/work/build/https_trace_fixture.so:/work
+  827 admin    81476 S    {ntp} /usr/bin/qemu-arm -0 ntp -L / -E LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.
+  880 admin     3200 S    /bin/sh /tmp/owned-uu-worker.sh
+ 2132 admin     529m S    ddnsgo -l :9876 -f 300 -cacheTimes 5 -c /koolshare/configs/ddnsgo/default.yaml
+ 6654 nobody    2540 S    /usr/sbin/dnsmasq --keep-in-foreground --conf-file=/tmp/merlin/dnsmasq.conf
+ 6684 admin     3832 S    dropbear -F -E -s -p 127.0.0.1:35322 -r /jffs/.ssh/dropbear_ed25519_host_key
+ 6935 admin     3328 S    /usr/sbin/miniupnpd -d -f /tmp/.localmod-merlin/miniupnpd.conf -P /tmp/merlin/miniupnpd.pid
+ 7017 admin     6752 S    /usr/sbin/openvpn --config /tmp/merlin/server.ovpn
+ 7018 admin     6612 S    /usr/sbin/openvpn --config /tmp/merlin/client.ovpn
+ 7207 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-0.json
+ 7455 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-1.json
+11472 admin     3604 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91009 1
+11579 admin     3200 R    /bin/ps w
+11581 admin     3604 R    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91009 1
+11582 admin     1516 R    echo /koolshare/bin:/koolshare/scripts:/koolshare/bin:/koolshare/scripts:/bin:/usr/bin:/sbin:/usr/sbin
+
+FANCY_LATENCY_PROCESS_SNAPSHOT
+  PID USER       VSZ STAT COMMAND
+    1 admin     1272 S    {init} /bin/busybox.static sh /init
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [pool_workqueue_]
+    4 admin        0 IW<  [kworker/R-kvfre]
+    5 admin        0 IW<  [kworker/R-rcu_g]
+    6 admin        0 IW<  [kworker/R-sync_]
+    7 admin        0 IW<  [kworker/R-slub_]
+    8 admin        0 IW<  [kworker/R-netns]
+    9 admin        0 IW   [kworker/0:0-eve]
+   10 admin        0 IW<  [kworker/0:0H-ev]
+   11 admin        0 IW   [kworker/0:1-mm_]
+   12 admin        0 IW   [kworker/u4:0-ev]
+   13 admin        0 IW<  [kworker/R-mm_pe]
+   14 admin        0 IW   [kworker/u4:1-ev]
+   15 admin        0 IW   [rcu_tasks_kthre]
+   16 admin        0 IW   [rcu_tasks_trace]
+   17 admin        0 SW   [ksoftirqd/0]
+   18 admin        0 RW   [rcu_preempt]
+   19 admin        0 SW   [rcu_exp_par_gp_]
+   20 admin        0 SW   [rcu_exp_gp_kthr]
+   21 admin        0 SW   [migration/0]
+   22 admin        0 SW   [cpuhp/0]
+   23 admin        0 SW   [kdevtmpfs]
+   24 admin        0 IW<  [kworker/R-inet_]
+   25 admin        0 SW   [kauditd]
+   26 admin        0 SW   [khungtaskd]
+   27 admin        0 SW   [oom_reaper]
+   28 admin        0 IW<  [kworker/R-write]
+   29 admin        0 SW   [kcompactd0]
+   30 admin        0 SWN  [ksmd]
+   31 admin        0 SWN  [khugepaged]
+   32 admin        0 IW<  [kworker/R-kinte]
+   33 admin        0 IW<  [kworker/R-kbloc]
+   34 admin        0 IW<  [kworker/R-blkcg]
+   35 admin        0 IW<  [kworker/R-md]
+   36 admin        0 IW<  [kworker/R-md_bi]
+   37 admin        0 IW   [kworker/u4:2-ev]
+   38 admin        0 IW   [kworker/u4:3-ev]
+   39 admin        0 IW<  [kworker/R-quota]
+   40 admin        0 IW<  [kworker/0:1H]
+   43 admin        0 SW   [kswapd0]
+   54 admin        0 IW<  [kworker/R-kthro]
+   99 admin        0 IW   [kworker/u4:4-ev]
+  122 admin        0 IW<  [kworker/R-mld]
+  128 admin        0 IW<  [kworker/R-ipv6_]
+  129 admin        0 IW<  [kworker/R-kstrp]
+  215 admin        0 IW   [kworker/u4:5-ev]
+  309 admin        0 IW   [kworker/u4:6]
+  340 admin        0 IW<  [kworker/u5:0]
+  366 admin     1272 S    sh /work/build/merlin_nested_job.sh
+  371 admin        0 IW   [kworker/0:2-mm_]
+  445 admin      192 S    /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+  446 admin    1266m S    /work/build/test-merlin candidate-merlin-system
+  519 admin     1500 S    /usr/bin/skipd -d /jffs/.localmod/ksdb
+  521 admin     1752 S    log-limit --sink skipd 3
+  532 admin     1904 S    /usr/libexec/localmod/localmod-event --daemon
+  548 admin     1752 S    log-limit --sink bootstrap 3
+  606 admin     1596 S    perpboot -d
+  607 admin     1736 S    tinylog -k 3 -s 50000 -t /var/log/perpd
+  609 admin     1784 S    perpd -a 6 /koolshare/perp
+  616 admin     1168 S    httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80
+  627 admin    83096 S    /usr/bin/qemu-arm -L / -E LD_PRELOAD=/work/build/httpd_bridge.so:/work/build/https_trace_fixture.so:/work
+  827 admin    81476 S    {ntp} /usr/bin/qemu-arm -0 ntp -L / -E LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.
+  880 admin     3200 S    /bin/sh /tmp/owned-uu-worker.sh
+ 2132 admin     529m S    ddnsgo -l :9876 -f 300 -cacheTimes 5 -c /koolshare/configs/ddnsgo/default.yaml
+ 6654 nobody    2540 S    /usr/sbin/dnsmasq --keep-in-foreground --conf-file=/tmp/merlin/dnsmasq.conf
+ 6684 admin     3832 S    dropbear -F -E -s -p 127.0.0.1:35322 -r /jffs/.ssh/dropbear_ed25519_host_key
+ 6935 admin     3328 S    /usr/sbin/miniupnpd -d -f /tmp/.localmod-merlin/miniupnpd.conf -P /tmp/merlin/miniupnpd.pid
+ 7017 admin     6752 S    /usr/sbin/openvpn --config /tmp/merlin/server.ovpn
+ 7018 admin     6612 S    /usr/sbin/openvpn --config /tmp/merlin/client.ovpn
+ 7207 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-0.json
+ 7455 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-1.json
+11472 admin     3868 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91009 1
+11794 admin     3868 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91009 1
+11795 admin     3868 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91009 1
+11798 admin     3200 R    /bin/ps w
+11799 admin     3868 R    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91009 1
+
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.862678992,"error":"\u003cnil\u003e","id":91011,"index":3,"script_stages":"210.48 pid=12506 stage=before_base\n214.27 pid=12506 stage=after_base\n214.55 pid=12506 stage=before_callback\n214.65 pid=12506 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.859879424,"request_written":0.427076032,"tls_done":0.423442704},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.740251376,"error":"\u003cnil\u003e","id":91013,"index":4,"script_stages":"227.50 pid=13671 stage=before_base\n231.16 pid=13671 stage=after_base\n231.44 pid=13671 stage=before_callback\n231.52 pid=13671 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.735974592,"request_written":0.412350512,"tls_done":0.403983344},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.776003632,"error":"\u003cnil\u003e","id":91015,"index":5,"script_stages":"239.45 pid=14775 stage=before_base\n243.28 pid=14775 stage=after_base\n243.55 pid=14775 stage=before_callback\n243.63 pid=14775 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.775377872,"request_written":0.379276624,"tls_done":0.378796256},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.343481456,"error":"\u003cnil\u003e","id":91017,"index":6,"script_stages":"253.12 pid=15958 stage=before_base\n256.46 pid=15958 stage=after_base\n256.76 pid=15958 stage=before_callback\n256.86 pid=15958 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.338136752,"request_written":0.36557792,"tls_done":0.365272464},"valid":true}
+miniupnpd[6935]: cleaning expired Port Mappings
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.909717712,"error":"\u003cnil\u003e","id":91019,"index":7,"script_stages":"264.98 pid=17190 stage=before_base\n267.99 pid=17190 stage=after_base\n268.22 pid=17190 stage=before_callback\n268.31 pid=17190 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.906819168,"request_written":0.35583088,"tls_done":0.355222048},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.787437888,"error":"\u003cnil\u003e","id":91021,"index":8,"script_stages":"277.53 pid=18408 stage=before_base\n280.90 pid=18408 stage=after_base\n281.22 pid=18408 stage=before_callback\n281.54 pid=18408 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.748818752,"request_written":0.372272672,"tls_done":0.371916624},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.30977504,"error":"\u003cnil\u003e","id":91023,"index":9,"script_stages":"290.57 pid=19720 stage=before_base\n293.77 pid=19720 stage=after_base\n294.16 pid=19720 stage=before_callback\n294.28 pid=19720 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.306971632,"request_written":0.371449008,"tls_done":0.368103168},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.380184448,"error":"\u003cnil\u003e","id":91025,"index":10,"script_stages":"303.31 pid=20927 stage=before_base\n306.71 pid=20927 stage=after_base\n306.98 pid=20927 stage=before_callback\n307.06 pid=20927 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.379530864,"request_written":0.39363208,"tls_done":0.392036544},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.232808336,"error":"\u003cnil\u003e","id":91027,"index":11,"script_stages":"314.70 pid=22099 stage=before_base\n317.93 pid=22099 stage=after_base\n318.20 pid=22099 stage=before_callback\n318.32 pid=22099 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.232185376,"request_written":0.367400864,"tls_done":0.367099376},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.935916416,"error":"\u003cnil\u003e","id":91029,"index":12,"script_stages":"327.20 pid=23359 stage=before_base\n330.22 pid=23359 stage=after_base\n330.44 pid=23359 stage=before_callback\n330.52 pid=23359 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.932929584,"request_written":0.377186416,"tls_done":0.370344736},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.404145376,"error":"\u003cnil\u003e","id":91031,"index":13,"script_stages":"338.10 pid=24512 stage=before_base\n341.60 pid=24512 stage=after_base\n341.85 pid=24512 stage=before_callback\n341.93 pid=24512 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.4006950400000004,"request_written":0.36005216,"tls_done":0.35970104},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.7432266720000005,"error":"\u003cnil\u003e","id":91033,"index":14,"script_stages":"351.02 pid=25764 stage=before_base\n354.79 pid=25764 stage=after_base\n355.07 pid=25764 stage=before_callback\n355.16 pid=25764 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.7417276,"request_written":0.366006928,"tls_done":0.36562592},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":5.017603712,"error":"\u003cnil\u003e","id":91035,"index":15,"script_stages":"363.04 pid=26939 stage=before_base\n366.67 pid=26939 stage=after_base\n366.93 pid=26939 stage=before_callback\n367.25 pid=26939 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.949113408,"request_written":0.380926576,"tls_done":0.380566336},"valid":true}
+FANCY_LATENCY_PROCESS_SNAPSHOT
+  PID USER       VSZ STAT COMMAND
+    1 admin     1272 S    {init} /bin/busybox.static sh /init
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [pool_workqueue_]
+    4 admin        0 IW<  [kworker/R-kvfre]
+    5 admin        0 IW<  [kworker/R-rcu_g]
+    6 admin        0 IW<  [kworker/R-sync_]
+    7 admin        0 IW<  [kworker/R-slub_]
+    8 admin        0 IW<  [kworker/R-netns]
+    9 admin        0 IW   [kworker/0:0-eve]
+   10 admin        0 IW<  [kworker/0:0H-ev]
+   12 admin        0 IW   [kworker/u4:0-ev]
+   13 admin        0 IW<  [kworker/R-mm_pe]
+   15 admin        0 IW   [rcu_tasks_kthre]
+   16 admin        0 IW   [rcu_tasks_trace]
+   17 admin        0 SW   [ksoftirqd/0]
+   18 admin        0 RW   [rcu_preempt]
+   19 admin        0 SW   [rcu_exp_par_gp_]
+   20 admin        0 SW   [rcu_exp_gp_kthr]
+   21 admin        0 SW   [migration/0]
+   22 admin        0 SW   [cpuhp/0]
+   23 admin        0 SW   [kdevtmpfs]
+   24 admin        0 IW<  [kworker/R-inet_]
+   25 admin        0 SW   [kauditd]
+   26 admin        0 SW   [khungtaskd]
+   27 admin        0 SW   [oom_reaper]
+   28 admin        0 IW<  [kworker/R-write]
+   29 admin        0 SW   [kcompactd0]
+   30 admin        0 SWN  [ksmd]
+   31 admin        0 RWN  [khugepaged]
+   32 admin        0 IW<  [kworker/R-kinte]
+   33 admin        0 IW<  [kworker/R-kbloc]
+   34 admin        0 IW<  [kworker/R-blkcg]
+   35 admin        0 IW<  [kworker/R-md]
+   36 admin        0 IW<  [kworker/R-md_bi]
+   37 admin        0 IW   [kworker/u4:2-ev]
+   38 admin        0 IW   [kworker/u4:3-ev]
+   39 admin        0 IW<  [kworker/R-quota]
+   40 admin        0 IW<  [kworker/0:1H]
+   43 admin        0 SW   [kswapd0]
+   54 admin        0 IW<  [kworker/R-kthro]
+  122 admin        0 IW<  [kworker/R-mld]
+  128 admin        0 IW<  [kworker/R-ipv6_]
+  129 admin        0 IW<  [kworker/R-kstrp]
+  309 admin        0 IW   [kworker/u4:6]
+  340 admin        0 IW<  [kworker/u5:0]
+  366 admin     1272 S    sh /work/build/merlin_nested_job.sh
+  371 admin        0 IW   [kworker/0:2-eve]
+  445 admin      192 S    /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+  446 admin    1266m S    /work/build/test-merlin candidate-merlin-system
+  519 admin     1500 S    /usr/bin/skipd -d /jffs/.localmod/ksdb
+  521 admin     1752 S    log-limit --sink skipd 3
+  532 admin     1904 S    /usr/libexec/localmod/localmod-event --daemon
+  548 admin     1752 S    log-limit --sink bootstrap 3
+  606 admin     1596 S    perpboot -d
+  607 admin     1736 S    tinylog -k 3 -s 50000 -t /var/log/perpd
+  609 admin     1784 S    perpd -a 6 /koolshare/perp
+  616 admin     1168 S    httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80
+  627 admin    83096 S    /usr/bin/qemu-arm -L / -E LD_PRELOAD=/work/build/httpd_bridge.so:/work/build/https_trace_fixture.so:/work
+  827 admin    81476 S    {ntp} /usr/bin/qemu-arm -0 ntp -L / -E LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.
+  880 admin     3200 R    /bin/sh /tmp/owned-uu-worker.sh
+ 2132 admin     529m S    ddnsgo -l :9876 -f 300 -cacheTimes 5 -c /koolshare/configs/ddnsgo/default.yaml
+ 6654 nobody    2540 S    /usr/sbin/dnsmasq --keep-in-foreground --conf-file=/tmp/merlin/dnsmasq.conf
+ 6684 admin     3832 S    dropbear -F -E -s -p 127.0.0.1:35322 -r /jffs/.ssh/dropbear_ed25519_host_key
+ 6935 admin     3328 S    /usr/sbin/miniupnpd -d -f /tmp/.localmod-merlin/miniupnpd.conf -P /tmp/merlin/miniupnpd.pid
+ 7017 admin     6752 S    /usr/sbin/openvpn --config /tmp/merlin/server.ovpn
+ 7018 admin     6612 S    /usr/sbin/openvpn --config /tmp/merlin/client.ovpn
+ 7207 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-0.json
+ 7455 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-1.json
+26939 admin     3868 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91035 1
+27094 admin     3200 R    /bin/ps w
+
+FANCY_LATENCY_PROCESS_SNAPSHOT
+  PID USER       VSZ STAT COMMAND
+    1 admin     1272 S    {init} /bin/busybox.static sh /init
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [pool_workqueue_]
+    4 admin        0 IW<  [kworker/R-kvfre]
+    5 admin        0 IW<  [kworker/R-rcu_g]
+    6 admin        0 IW<  [kworker/R-sync_]
+    7 admin        0 IW<  [kworker/R-slub_]
+    8 admin        0 IW<  [kworker/R-netns]
+    9 admin        0 IW   [kworker/0:0-eve]
+   10 admin        0 IW<  [kworker/0:0H-ev]
+   12 admin        0 IW   [kworker/u4:0-ev]
+   13 admin        0 IW<  [kworker/R-mm_pe]
+   15 admin        0 IW   [rcu_tasks_kthre]
+   16 admin        0 IW   [rcu_tasks_trace]
+   17 admin        0 SW   [ksoftirqd/0]
+   18 admin        0 IW   [rcu_preempt]
+   19 admin        0 SW   [rcu_exp_par_gp_]
+   20 admin        0 SW   [rcu_exp_gp_kthr]
+   21 admin        0 SW   [migration/0]
+   22 admin        0 SW   [cpuhp/0]
+   23 admin        0 SW   [kdevtmpfs]
+   24 admin        0 IW<  [kworker/R-inet_]
+   25 admin        0 SW   [kauditd]
+   26 admin        0 SW   [khungtaskd]
+   27 admin        0 SW   [oom_reaper]
+   28 admin        0 IW<  [kworker/R-write]
+   29 admin        0 SW   [kcompactd0]
+   30 admin        0 SWN  [ksmd]
+   31 admin        0 SWN  [khugepaged]
+   32 admin        0 IW<  [kworker/R-kinte]
+   33 admin        0 IW<  [kworker/R-kbloc]
+   34 admin        0 IW<  [kworker/R-blkcg]
+   35 admin        0 IW<  [kworker/R-md]
+   36 admin        0 IW<  [kworker/R-md_bi]
+   37 admin        0 IW   [kworker/u4:2-ev]
+   38 admin        0 IW   [kworker/u4:3-ev]
+   39 admin        0 IW<  [kworker/R-quota]
+   40 admin        0 IW<  [kworker/0:1H]
+   43 admin        0 SW   [kswapd0]
+   54 admin        0 IW<  [kworker/R-kthro]
+  122 admin        0 IW<  [kworker/R-mld]
+  128 admin        0 IW<  [kworker/R-ipv6_]
+  129 admin        0 IW<  [kworker/R-kstrp]
+  309 admin        0 IW   [kworker/u4:6]
+  340 admin        0 IW<  [kworker/u5:0]
+  366 admin     1272 S    sh /work/build/merlin_nested_job.sh
+  371 admin        0 IW   [kworker/0:2-eve]
+  445 admin      192 S    /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+  446 admin    1266m S    /work/build/test-merlin candidate-merlin-system
+  519 admin     1500 S    /usr/bin/skipd -d /jffs/.localmod/ksdb
+  521 admin     1752 S    log-limit --sink skipd 3
+  532 admin     1904 S    /usr/libexec/localmod/localmod-event --daemon
+  548 admin     1752 S    log-limit --sink bootstrap 3
+  606 admin     1596 S    perpboot -d
+  607 admin     1736 S    tinylog -k 3 -s 50000 -t /var/log/perpd
+  609 admin     1784 S    perpd -a 6 /koolshare/perp
+  616 admin     1168 S    httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80
+  627 admin    83096 S    /usr/bin/qemu-arm -L / -E LD_PRELOAD=/work/build/httpd_bridge.so:/work/build/https_trace_fixture.so:/work
+  827 admin    81476 S    {ntp} /usr/bin/qemu-arm -0 ntp -L / -E LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.
+  880 admin     3200 S    /bin/sh /tmp/owned-uu-worker.sh
+ 2132 admin     529m S    ddnsgo -l :9876 -f 300 -cacheTimes 5 -c /koolshare/configs/ddnsgo/default.yaml
+ 6654 nobody    2540 S    /usr/sbin/dnsmasq --keep-in-foreground --conf-file=/tmp/merlin/dnsmasq.conf
+ 6684 admin     3832 S    dropbear -F -E -s -p 127.0.0.1:35322 -r /jffs/.ssh/dropbear_ed25519_host_key
+ 6935 admin     3328 S    /usr/sbin/miniupnpd -d -f /tmp/.localmod-merlin/miniupnpd.conf -P /tmp/merlin/miniupnpd.pid
+ 7017 admin     6752 S    /usr/sbin/openvpn --config /tmp/merlin/server.ovpn
+ 7018 admin     6612 S    /usr/sbin/openvpn --config /tmp/merlin/client.ovpn
+ 7207 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-0.json
+ 7455 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-1.json
+26939 admin     3868 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91035 1
+27329 admin     3200 R    /bin/ps w
+
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.028369504,"error":"\u003cnil\u003e","id":91037,"index":16,"script_stages":"378.40 pid=28236 stage=before_base\n381.52 pid=28236 stage=after_base\n381.74 pid=28236 stage=before_callback\n381.83 pid=28236 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.024900016,"request_written":0.378227088,"tls_done":0.377753376},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.139319952,"error":"\u003cnil\u003e","id":91039,"index":17,"script_stages":"389.39 pid=29457 stage=before_base\n392.59 pid=29457 stage=after_base\n392.82 pid=29457 stage=before_callback\n392.91 pid=29457 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.137400832,"request_written":0.392926496,"tls_done":0.392563536},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.821924928,"error":"\u003cnil\u003e","id":91041,"index":18,"script_stages":"401.93 pid=30824 stage=before_base\n404.89 pid=30824 stage=after_base\n405.12 pid=30824 stage=before_callback\n405.19 pid=30824 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.82011576,"request_written":0.34891096,"tls_done":0.348629552},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.37414112,"error":"\u003cnil\u003e","id":91043,"index":19,"script_stages":"412.87 pid=31992 stage=before_base\n416.23 pid=31992 stage=after_base\n416.49 pid=31992 stage=before_callback\n416.60 pid=31992 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.370598624,"request_written":0.413720624,"tls_done":0.40818592},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.9583331680000002,"error":"\u003cnil\u003e","id":91045,"index":20,"script_stages":"425.58 pid=788 stage=before_base\n428.66 pid=788 stage=after_base\n428.89 pid=788 stage=before_callback\n428.97 pid=788 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.9576877120000002,"request_written":0.359627664,"tls_done":0.357056704},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.8987165919999995,"error":"\u003cnil\u003e","id":91047,"index":21,"script_stages":"436.48 pid=2001 stage=before_base\n440.00 pid=2001 stage=after_base\n440.34 pid=2001 stage=before_callback\n440.63 pid=2001 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.862594,"request_written":0.357620512,"tls_done":0.355488416},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.009502784,"error":"\u003cnil\u003e","id":91049,"index":22,"script_stages":"451.22 pid=3380 stage=before_base\n454.36 pid=3380 stage=after_base\n454.58 pid=3380 stage=before_callback\n454.66 pid=3380 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.006684704,"request_written":0.34822904,"tls_done":0.346250416},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.867578288,"error":"\u003cnil\u003e","id":91051,"index":23,"script_stages":"462.49 pid=4624 stage=before_base\n465.48 pid=4624 stage=after_base\n465.71 pid=4624 stage=before_callback\n465.79 pid=4624 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.8657070879999997,"request_written":0.356361376,"tls_done":0.351982832},"valid":true}
+FANCY_LATENCY_RESULT {"cases":[{"bytes":116,"code":200,"elapsed_seconds":5.936726992,"error":"\u003cnil\u003e","id":91005,"index":0,"script_stages":"169.11 pid=9154 stage=before_base\n172.80 pid=9154 stage=after_base\n173.07 pid=9154 stage=before_callback\n173.16 pid=9154 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":5.933350464,"request_written":1.6383589600000001,"tls_done":1.634413408},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":6.532850624,"error":"\u003cnil\u003e","id":91007,"index":1,"script_stages":"181.66 pid=10280 stage=before_base\n187.04 pid=10280 stage=after_base\n187.34 pid=10280 stage=before_callback\n187.44 pid=10280 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":6.530026416,"request_written":0.41523192,"tls_done":0.41140288},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":5.218617424,"error":"\u003cnil\u003e","id":91009,"index":2,"script_stages":"197.38 pid=11472 stage=before_base\n201.42 pid=11472 stage=after_base\n201.72 pid=11472 stage=before_callback\n201.83 pid=11472 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":5.211295168,"request_written":0.471775664,"tls_done":0.468152832},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.862678992,"error":"\u003cnil\u003e","id":91011,"index":3,"script_stages":"210.48 pid=12506 stage=before_base\n214.27 pid=12506 stage=after_base\n214.55 pid=12506 stage=before_callback\n214.65 pid=12506 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.859879424,"request_written":0.427076032,"tls_done":0.423442704},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.740251376,"error":"\u003cnil\u003e","id":91013,"index":4,"script_stages":"227.50 pid=13671 stage=before_base\n231.16 pid=13671 stage=after_base\n231.44 pid=13671 stage=before_callback\n231.52 pid=13671 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.735974592,"request_written":0.412350512,"tls_done":0.403983344},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.776003632,"error":"\u003cnil\u003e","id":91015,"index":5,"script_stages":"239.45 pid=14775 stage=before_base\n243.28 pid=14775 stage=after_base\n243.55 pid=14775 stage=before_callback\n243.63 pid=14775 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.775377872,"request_written":0.379276624,"tls_done":0.378796256},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.343481456,"error":"\u003cnil\u003e","id":91017,"index":6,"script_stages":"253.12 pid=15958 stage=before_base\n256.46 pid=15958 stage=after_base\n256.76 pid=15958 stage=before_callback\n256.86 pid=15958 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.338136752,"request_written":0.36557792,"tls_done":0.365272464},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.909717712,"error":"\u003cnil\u003e","id":91019,"index":7,"script_stages":"264.98 pid=17190 stage=before_base\n267.99 pid=17190 stage=after_base\n268.22 pid=17190 stage=before_callback\n268.31 pid=17190 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.906819168,"request_written":0.35583088,"tls_done":0.355222048},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.787437888,"error":"\u003cnil\u003e","id":91021,"index":8,"script_stages":"277.53 pid=18408 stage=before_base\n280.90 pid=18408 stage=after_base\n281.22 pid=18408 stage=before_callback\n281.54 pid=18408 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.748818752,"request_written":0.372272672,"tls_done":0.371916624},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.30977504,"error":"\u003cnil\u003e","id":91023,"index":9,"script_stages":"290.57 pid=19720 stage=before_base\n293.77 pid=19720 stage=after_base\n294.16 pid=19720 stage=before_callback\n294.28 pid=19720 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.306971632,"request_written":0.371449008,"tls_done":0.368103168},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.380184448,"error":"\u003cnil\u003e","id":91025,"index":10,"script_stages":"303.31 pid=20927 stage=before_base\n306.71 pid=20927 stage=after_base\n306.98 pid=20927 stage=before_callback\n307.06 pid=20927 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.379530864,"request_written":0.39363208,"tls_done":0.392036544},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.232808336,"error":"\u003cnil\u003e","id":91027,"index":11,"script_stages":"314.70 pid=22099 stage=before_base\n317.93 pid=22099 stage=after_base\n318.20 pid=22099 stage=before_callback\n318.32 pid=22099 stage=after_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.232185376,"request_written":0.367400864,"tls_done":0.367099376},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.935916416,"error":"\u003cnil\u003e","id":91029,"index":12,"script_stages":"327.20 pid=23359 stage=before_base\n330.22 pid=23359 stage=after_base\n330.44 pid=23359 stage=before_callback\n330.52 pid=23359 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.932929584,"request_written":0.377186416,"tls_done":0.370344736},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.404145376,"error":"\u003cnil\u003e","id":91031,"index":13,"script_stages":"338.10 pid=24512 stage=before_base\n341.60 pid=24512 stage=after_base\n341.85 pid=24512 stage=before_callback\n341.93 pid=24512 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.4006950400000004,"request_written":0.36005216,"tls_done":0.35970104},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.7432266720000005,"error":"\u003cnil\u003e","id":91033,"index":14,"script_stages":"351.02 pid=25764 stage=before_base\n354.79 pid=25764 stage=after_base\n355.07 pid=25764 stage=before_callback\n355.16 pid=25764 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.7417276,"request_written":0.366006928,"tls_done":0.36562592},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":5.017603712,"error":"\u003cnil\u003e","id":91035,"index":15,"script_stages":"363.04 pid=26939 stage=before_base\n366.67 pid=26939 stage=after_base\n366.93 pid=26939 stage=before_callback\n367.25 pid=26939 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.949113408,"request_written":0.380926576,"tls_done":0.380566336},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.028369504,"error":"\u003cnil\u003e","id":91037,"index":16,"script_stages":"378.40 pid=28236 stage=before_base\n381.52 pid=28236 stage=after_base\n381.74 pid=28236 stage=before_callback\n381.83 pid=28236 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.024900016,"request_written":0.378227088,"tls_done":0.377753376},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.139319952,"error":"\u003cnil\u003e","id":91039,"index":17,"script_stages":"389.39 pid=29457 stage=before_base\n392.59 pid=29457 stage=after_base\n392.82 pid=29457 stage=before_callback\n392.91 pid=29457 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.137400832,"request_written":0.392926496,"tls_done":0.392563536},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.821924928,"error":"\u003cnil\u003e","id":91041,"index":18,"script_stages":"401.93 pid=30824 stage=before_base\n404.89 pid=30824 stage=after_base\n405.12 pid=30824 stage=before_callback\n405.19 pid=30824 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.82011576,"request_written":0.34891096,"tls_done":0.348629552},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.37414112,"error":"\u003cnil\u003e","id":91043,"index":19,"script_stages":"412.87 pid=31992 stage=before_base\n416.23 pid=31992 stage=after_base\n416.49 pid=31992 stage=before_callback\n416.60 pid=31992 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.370598624,"request_written":0.413720624,"tls_done":0.40818592},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.9583331680000002,"error":"\u003cnil\u003e","id":91045,"index":20,"script_stages":"425.58 pid=788 stage=before_base\n428.66 pid=788 stage=after_base\n428.89 pid=788 stage=before_callback\n428.97 pid=788 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.9576877120000002,"request_written":0.359627664,"tls_done":0.357056704},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.8987165919999995,"error":"\u003cnil\u003e","id":91047,"index":21,"script_stages":"436.48 pid=2001 stage=before_base\n440.00 pid=2001 stage=after_base\n440.34 pid=2001 stage=before_callback\n440.63 pid=2001 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.862594,"request_written":0.357620512,"tls_done":0.355488416},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.009502784,"error":"\u003cnil\u003e","id":91049,"index":22,"script_stages":"451.22 pid=3380 stage=before_base\n454.36 pid=3380 stage=after_base\n454.58 pid=3380 stage=before_callback\n454.66 pid=3380 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.006684704,"request_written":0.34822904,"tls_done":0.346250416},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.867578288,"error":"\u003cnil\u003e","id":91051,"index":23,"script_stages":"462.49 pid=4624 stage=before_base\n465.48 pid=4624 stage=after_base\n465.71 pid=4624 stage=before_callback\n465.79 pid=4624 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.8657070879999997,"request_written":0.356361376,"tls_done":0.351982832},"valid":true}],"data_preserved":true,"query_replay":false,"script_metadata_instrumentation_only":true}
+miniupnpd[6935]: shutting down MiniUPnPd
+SOAK_REAPER orphans_reaped=59
+NESTED_MERLIN_JOB_STATUS=0
+[  474.676182] reboot: Power down
+LINUX_READONLY_JOB_STATUS=0

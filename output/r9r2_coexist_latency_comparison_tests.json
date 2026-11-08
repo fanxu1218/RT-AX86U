@@ -1,0 +1,29 @@
+{
+  "status": "LOCAL_LATENCY_EXECUTION_COMPARISON_COMPLETE",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+  "qemu_user": {
+    "report": "output/r9r2_coexist_fancy_latency_tests.json",
+    "count": 24,
+    "http_total_min_seconds": 3.821924928,
+    "http_total_median_seconds": 4.377162783999999,
+    "http_total_max_seconds": 6.532850624,
+    "tls_median_seconds": 0.37113068,
+    "all_under_original_10_seconds": true
+  },
+  "kernel_native_arm32": {
+    "report": "output/r9r2_coexist_fancy_native_latency_tests.json",
+    "count": 24,
+    "http_total_min_seconds": 3.385367408,
+    "http_total_median_seconds": 3.890821352,
+    "http_total_max_seconds": 5.082694096,
+    "tls_median_seconds": 0.06964184,
+    "all_under_original_10_seconds": true
+  },
+  "production_changed": false,
+  "interpretation": "Additional QEMU-user layer measurably increases handshake and request time. Small sequential trials did not reproduce the prior10s timeout; do not claim its exact retrospective cause proven. Continue10s-budget full coexistence under direct ARM32 system-kernel execution.",
+  "method": "Same pinned HTTPd/bridge and plugin scripts; diagnostic-only script stage metadata;12trials10s+12trials30s perexecution; no HTTP replay",
+  "source_sha256": {
+    "output/r9r2_coexist_fancy_latency_tests.json": "2b1d3ba38f0e6168c563ed1c32eaabf03309436c2e5bc03f24419cb6d913145b",
+    "output/r9r2_coexist_fancy_native_latency_tests.json": "d9596107d751929fdf941a7b7c890004b8f0591802950371be81f6201e3a1fdc"
+  }
+}

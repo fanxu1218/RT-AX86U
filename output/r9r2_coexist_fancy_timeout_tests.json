@@ -1,0 +1,86 @@
+{
+  "status": "FANCYSS_STATUS_CLIENT_TIMEOUT_REPRODUCED",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+  "last_sample": {
+    "ddnsgo": {
+      "executable": "/jffs/.koolshare/bin/ddnsgo",
+      "fds": 7,
+      "pid": 2026,
+      "rss_kib": 15320
+    },
+    "dnsmasq": {
+      "executable": "/usr/libexec/localmod/merlin/bin/dnsmasq",
+      "fds": 9,
+      "pid": 6083,
+      "rss_kib": 1932
+    },
+    "dropbear": {
+      "executable": "/usr/libexec/localmod/merlin/bin/dropbearmulti",
+      "fds": 4,
+      "pid": 6107,
+      "rss_kib": 2124
+    },
+    "elapsed_seconds": 247.803481456,
+    "events": 2,
+    "httpd": {
+      "executable": "/usr/bin/qemu-arm",
+      "fds": 5,
+      "pid": 624,
+      "rss_kib": 25568
+    },
+    "httpdb": {
+      "executable": "/jffs/.koolshare/bin/httpdb",
+      "fds": 6,
+      "pid": 613,
+      "rss_kib": 1040
+    },
+    "miniupnpd": {
+      "executable": "/usr/libexec/localmod/merlin/bin/miniupnpd",
+      "fds": 7,
+      "pid": 6336,
+      "rss_kib": 2060
+    },
+    "openvpn-client": {
+      "executable": "/usr/libexec/localmod/merlin/bin/openvpn",
+      "fds": 6,
+      "pid": 6418,
+      "rss_kib": 5432
+    },
+    "openvpn-server": {
+      "executable": "/router/usr/libexec/localmod/merlin/bin/openvpn",
+      "fds": 7,
+      "pid": 6417,
+      "rss_kib": 5500
+    },
+    "queries": 31,
+    "skipd": {
+      "executable": "/usr/bin/skipd",
+      "fds": 8,
+      "pid": 516,
+      "rss_kib": 1200
+    },
+    "uu": {
+      "executable": "/bin/busybox",
+      "fds": 4,
+      "pid": 877,
+      "rss_kib": 1620
+    },
+    "xray-client": {
+      "executable": "/jffs/.koolshare/bin/xray",
+      "fds": 6,
+      "pid": 6832,
+      "rss_kib": 37640
+    },
+    "xray-server": {
+      "executable": "/jffs/.koolshare/bin/xray",
+      "fds": 6,
+      "pid": 6618,
+      "rss_kib": 36908
+    }
+  },
+  "error": "Fancyss ss_status.sh action1 POST /_api/ exceeded client10s awaitingheaders",
+  "owner": "UNRESOLVED; TLS handshake recorded success; investigate callbackscript/runtime scheduling",
+  "log_sha256": "b9740324b07deb8d4245c9f3fa4801da50c50bc121d8019df49f8571c1463819",
+  "one_hour_result": "NOT_PASS; investigate narrow path first",
+  "production_modified_since_gate": false
+}

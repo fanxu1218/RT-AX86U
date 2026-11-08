@@ -1,0 +1,526 @@
+{
+  "status": "LOCAL_FANCYSS_LATENCY_DIAGNOSTIC_COMPLETE",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+  "result": {
+    "cases": [
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 5.936726992,
+        "error": "<nil>",
+        "id": 91005,
+        "index": 0,
+        "script_stages": "169.11 pid=9154 stage=before_base\n172.80 pid=9154 stage=after_base\n173.07 pid=9154 stage=before_callback\n173.16 pid=9154 stage=after_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 5.933350464,
+          "request_written": 1.6383589600000001,
+          "tls_done": 1.634413408
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 6.532850624,
+        "error": "<nil>",
+        "id": 91007,
+        "index": 1,
+        "script_stages": "181.66 pid=10280 stage=before_base\n187.04 pid=10280 stage=after_base\n187.34 pid=10280 stage=before_callback\n187.44 pid=10280 stage=after_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 6.530026416,
+          "request_written": 0.41523192,
+          "tls_done": 0.41140288
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 5.218617424,
+        "error": "<nil>",
+        "id": 91009,
+        "index": 2,
+        "script_stages": "197.38 pid=11472 stage=before_base\n201.42 pid=11472 stage=after_base\n201.72 pid=11472 stage=before_callback\n201.83 pid=11472 stage=after_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 5.211295168,
+          "request_written": 0.471775664,
+          "tls_done": 0.468152832
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.862678992,
+        "error": "<nil>",
+        "id": 91011,
+        "index": 3,
+        "script_stages": "210.48 pid=12506 stage=before_base\n214.27 pid=12506 stage=after_base\n214.55 pid=12506 stage=before_callback\n214.65 pid=12506 stage=after_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 4.859879424,
+          "request_written": 0.427076032,
+          "tls_done": 0.423442704
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.740251376,
+        "error": "<nil>",
+        "id": 91013,
+        "index": 4,
+        "script_stages": "227.50 pid=13671 stage=before_base\n231.16 pid=13671 stage=after_base\n231.44 pid=13671 stage=before_callback\n231.52 pid=13671 stage=after_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 4.735974592,
+          "request_written": 0.412350512,
+          "tls_done": 0.403983344
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.776003632,
+        "error": "<nil>",
+        "id": 91015,
+        "index": 5,
+        "script_stages": "239.45 pid=14775 stage=before_base\n243.28 pid=14775 stage=after_base\n243.55 pid=14775 stage=before_callback\n243.63 pid=14775 stage=after_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 4.775377872,
+          "request_written": 0.379276624,
+          "tls_done": 0.378796256
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.343481456,
+        "error": "<nil>",
+        "id": 91017,
+        "index": 6,
+        "script_stages": "253.12 pid=15958 stage=before_base\n256.46 pid=15958 stage=after_base\n256.76 pid=15958 stage=before_callback\n256.86 pid=15958 stage=after_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 4.338136752,
+          "request_written": 0.36557792,
+          "tls_done": 0.365272464
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.909717712,
+        "error": "<nil>",
+        "id": 91019,
+        "index": 7,
+        "script_stages": "264.98 pid=17190 stage=before_base\n267.99 pid=17190 stage=after_base\n268.22 pid=17190 stage=before_callback\n268.31 pid=17190 stage=after_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 3.906819168,
+          "request_written": 0.35583088,
+          "tls_done": 0.355222048
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.787437888,
+        "error": "<nil>",
+        "id": 91021,
+        "index": 8,
+        "script_stages": "277.53 pid=18408 stage=before_base\n280.90 pid=18408 stage=after_base\n281.22 pid=18408 stage=before_callback\n281.54 pid=18408 stage=after_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 4.748818752,
+          "request_written": 0.372272672,
+          "tls_done": 0.371916624
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.30977504,
+        "error": "<nil>",
+        "id": 91023,
+        "index": 9,
+        "script_stages": "290.57 pid=19720 stage=before_base\n293.77 pid=19720 stage=after_base\n294.16 pid=19720 stage=before_callback\n294.28 pid=19720 stage=after_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 4.306971632,
+          "request_written": 0.371449008,
+          "tls_done": 0.368103168
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.380184448,
+        "error": "<nil>",
+        "id": 91025,
+        "index": 10,
+        "script_stages": "303.31 pid=20927 stage=before_base\n306.71 pid=20927 stage=after_base\n306.98 pid=20927 stage=before_callback\n307.06 pid=20927 stage=after_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 4.379530864,
+          "request_written": 0.39363208,
+          "tls_done": 0.392036544
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.232808336,
+        "error": "<nil>",
+        "id": 91027,
+        "index": 11,
+        "script_stages": "314.70 pid=22099 stage=before_base\n317.93 pid=22099 stage=after_base\n318.20 pid=22099 stage=before_callback\n318.32 pid=22099 stage=after_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 4.232185376,
+          "request_written": 0.367400864,
+          "tls_done": 0.367099376
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.935916416,
+        "error": "<nil>",
+        "id": 91029,
+        "index": 12,
+        "script_stages": "327.20 pid=23359 stage=before_base\n330.22 pid=23359 stage=after_base\n330.44 pid=23359 stage=before_callback\n330.52 pid=23359 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 3.932929584,
+          "request_written": 0.377186416,
+          "tls_done": 0.370344736
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.404145376,
+        "error": "<nil>",
+        "id": 91031,
+        "index": 13,
+        "script_stages": "338.10 pid=24512 stage=before_base\n341.60 pid=24512 stage=after_base\n341.85 pid=24512 stage=before_callback\n341.93 pid=24512 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.4006950400000004,
+          "request_written": 0.36005216,
+          "tls_done": 0.35970104
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.7432266720000005,
+        "error": "<nil>",
+        "id": 91033,
+        "index": 14,
+        "script_stages": "351.02 pid=25764 stage=before_base\n354.79 pid=25764 stage=after_base\n355.07 pid=25764 stage=before_callback\n355.16 pid=25764 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.7417276,
+          "request_written": 0.366006928,
+          "tls_done": 0.36562592
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 5.017603712,
+        "error": "<nil>",
+        "id": 91035,
+        "index": 15,
+        "script_stages": "363.04 pid=26939 stage=before_base\n366.67 pid=26939 stage=after_base\n366.93 pid=26939 stage=before_callback\n367.25 pid=26939 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.949113408,
+          "request_written": 0.380926576,
+          "tls_done": 0.380566336
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.028369504,
+        "error": "<nil>",
+        "id": 91037,
+        "index": 16,
+        "script_stages": "378.40 pid=28236 stage=before_base\n381.52 pid=28236 stage=after_base\n381.74 pid=28236 stage=before_callback\n381.83 pid=28236 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.024900016,
+          "request_written": 0.378227088,
+          "tls_done": 0.377753376
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.139319952,
+        "error": "<nil>",
+        "id": 91039,
+        "index": 17,
+        "script_stages": "389.39 pid=29457 stage=before_base\n392.59 pid=29457 stage=after_base\n392.82 pid=29457 stage=before_callback\n392.91 pid=29457 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.137400832,
+          "request_written": 0.392926496,
+          "tls_done": 0.392563536
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.821924928,
+        "error": "<nil>",
+        "id": 91041,
+        "index": 18,
+        "script_stages": "401.93 pid=30824 stage=before_base\n404.89 pid=30824 stage=after_base\n405.12 pid=30824 stage=before_callback\n405.19 pid=30824 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 3.82011576,
+          "request_written": 0.34891096,
+          "tls_done": 0.348629552
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.37414112,
+        "error": "<nil>",
+        "id": 91043,
+        "index": 19,
+        "script_stages": "412.87 pid=31992 stage=before_base\n416.23 pid=31992 stage=after_base\n416.49 pid=31992 stage=before_callback\n416.60 pid=31992 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.370598624,
+          "request_written": 0.413720624,
+          "tls_done": 0.40818592
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.9583331680000002,
+        "error": "<nil>",
+        "id": 91045,
+        "index": 20,
+        "script_stages": "425.58 pid=788 stage=before_base\n428.66 pid=788 stage=after_base\n428.89 pid=788 stage=before_callback\n428.97 pid=788 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 3.9576877120000002,
+          "request_written": 0.359627664,
+          "tls_done": 0.357056704
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.8987165919999995,
+        "error": "<nil>",
+        "id": 91047,
+        "index": 21,
+        "script_stages": "436.48 pid=2001 stage=before_base\n440.00 pid=2001 stage=after_base\n440.34 pid=2001 stage=before_callback\n440.63 pid=2001 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.862594,
+          "request_written": 0.357620512,
+          "tls_done": 0.355488416
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.009502784,
+        "error": "<nil>",
+        "id": 91049,
+        "index": 22,
+        "script_stages": "451.22 pid=3380 stage=before_base\n454.36 pid=3380 stage=after_base\n454.58 pid=3380 stage=before_callback\n454.66 pid=3380 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.006684704,
+          "request_written": 0.34822904,
+          "tls_done": 0.346250416
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.867578288,
+        "error": "<nil>",
+        "id": 91051,
+        "index": 23,
+        "script_stages": "462.49 pid=4624 stage=before_base\n465.48 pid=4624 stage=after_base\n465.71 pid=4624 stage=before_callback\n465.79 pid=4624 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 3.8657070879999997,
+          "request_written": 0.356361376,
+          "tls_done": 0.351982832
+        },
+        "valid": true
+      }
+    ],
+    "data_preserved": true,
+    "query_replay": false,
+    "script_metadata_instrumentation_only": true
+  },
+  "source_sha256": {
+    "analysis/r9r1_coexist/check.py": "85b9358ea234d1f0a61872d9e6e1514c8ee04c9ef1ebdec651ef52973c6bc4f6",
+    "analysis/r9r1_coexist/workload.go": "598e0f23c5e45c742e381ae9e06d5d705cb7ddeec3ef3baa246fcc74450aeb50",
+    "build/test_merlin.go": "76f8e5231b5eadeb0809464d029f2621874f4f05f46e1277cb5c7a5014c13165",
+    "build/test_soak.go": "908018fec252135807c0df483a5c5951c5866506a0b9b0917a508431c1afa891",
+    "build/test_memory.go": "69838169024c9d0b9e31f2e570f9cde728f8193fe4d0e9f71be059fc080ca42f",
+    "build/memory_cycles.go": "3e9f90d880baa7959bbbc039520c721303f1d2f0254af6d4e91d63b4660bfc31",
+    "build/httpd_memory.go": "cdc5a4a600b11938ccabccd58e8f6f51fde8744f439ebf547cc60ebbec174191",
+    "build/native_runtime_client.go": "2f9515bf6d814c064c7e0957455c0cfaf12ef01483be9732e49fd783cf32acf5",
+    "build/test_online.go": "b04471e23505e03d7700884fdad4adb5d526e7fd8fe33bfe669a3a736d81fd14",
+    "build/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+    "build/check_merlin.py": "219e4cefe3562e88af4cf133e052d519d6e16d4cc3c1cf25128a73ede8f2d1f1",
+    "build/sealed_vm.py": "44e83268f0e72f999648acb8f56e778735e70b7240d71bb1d90a2ec10a563788",
+    "build/run_readonly_linux.py": "eeb77fb1d07ba997388aa0feaa7e558bb4ad96b5fb73a3588643390bef06135f",
+    "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
+    "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+    "build/make_merlin_system_initramfs.py": "00efa902e8675d3629e134cf70593de25b00a7b9bdb9e5b7ae44c8b6c1dadf49",
+    "build/prepare_merlin_system.py": "35cd33a65f100dda3092e221fe05d24ab9869f32afb43fcf522eb6cd98a82eaa",
+    "build/merlin_system_sources.json": "67da834b6465e7eea49fff0977c00492ad0edff252b9809684665ad8d513c92f",
+    "build/prepare_fancyss.py": "c0df38989d32fb9730710b57a7b49d2a5847b81f476e4cde41da8f70a881e4d3",
+    "build/fancyss_sources.json": "907f0c23f3016e0496eac7d7156baff4e0bc09ac28c3d984a5df22f3155b085e",
+    "build/real_plugin_sources.json": "80256a27bfc7ddf18da8f1b2693ffa6debcfbb240083a3d724da6e3641382ea8",
+    "build/https_trace_fixture.c": "8d2c672780430f45c01ad78e7e17667396660aec65564e790bbad9bcb73f872a",
+    "analysis/r9r1_coexist/tls_trace.c": "0e0d804fd099fc197066e735a0bef10817d897eaa822e4de8aab1d41593b6c7f",
+    "sources/localmod/httpd_bridge.c": "d689713756d20aeab486352f84f806e08f1b1a3ca03951635b9e171c55bfd8a9",
+    "analysis/r9r1_coexist/fancy_probe.go": "610a24770d06a09e8a48053e7292d9efedf507e3f22d2131d5c3aba01592931d",
+    "analysis/r9r1_coexist/fancy_probe.py": "e2271279c18c6671d531b1dfc01fd773d57e2cde2c845430efbea69e2fe2c341"
+  },
+  "generated_test_source": {
+    "analysis/r9r1_coexist/workload.go": {
+      "sha256": "8eba7879c0d888b26faab1c50c8fa1f3586e10ec148ed932bcbdf5fb57716633",
+      "changes": [
+        "Owned focused Fancyss latency diagnostics instead of handshake probe"
+      ]
+    },
+    "build/test_merlin.go": {
+      "sha256": "49013bf93a414f5c50e320831d31bab6c2098bc52170ec207ef719fde54bcd2d",
+      "changes": [
+        "Rename historical standalone main; helpers unchanged",
+        "Owned test VPN certificate expiry3h for1h run, not router credentials"
+      ]
+    },
+    "build/test_soak.go": {
+      "sha256": "1b1533831cec483658302b40635b8be16225b080223dfd42820e8c7f114e2100",
+      "changes": [
+        "Rename historical standalone main; helpers unchanged"
+      ]
+    },
+    "build/test_memory.go": {
+      "sha256": "69838169024c9d0b9e31f2e570f9cde728f8193fe4d0e9f71be059fc080ca42f",
+      "changes": []
+    },
+    "build/memory_cycles.go": {
+      "sha256": "3e9f90d880baa7959bbbc039520c721303f1d2f0254af6d4e91d63b4660bfc31",
+      "changes": []
+    },
+    "build/httpd_memory.go": {
+      "sha256": "cdc5a4a600b11938ccabccd58e8f6f51fde8744f439ebf547cc60ebbec174191",
+      "changes": []
+    },
+    "build/native_runtime_client.go": {
+      "sha256": "2f9515bf6d814c064c7e0957455c0cfaf12ef01483be9732e49fd783cf32acf5",
+      "changes": []
+    },
+    "build/test_online.go": {
+      "sha256": "c49c6f3b897120929a525884af10f9bbd023d2a258bb6f9470aef69bc9a11669",
+      "changes": [
+        "Owned HTTPS repository fixture certificate expiry3h; normal certificate verification remains enabled"
+      ]
+    },
+    "build/coexist_helpers.go": {
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "changes": []
+    },
+    "analysis/r9r1_coexist/fancy_probe.go": {
+      "sha256": "610a24770d06a09e8a48053e7292d9efedf507e3f22d2131d5c3aba01592931d",
+      "changes": []
+    }
+  },
+  "baseline_preserved_sha256": {
+    "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+    "output/release_gates.json": "e8655961d79d6324ae46956b57b04ecec88a14ed50fc4698966da3ca58722453",
+    "output/local_delivery.json": "f88da268fbd5bf884c80771c3c2560e37321337f2b5da66191f4bb490e383fd7",
+    "output/localmod2-r9-r1-local-delivery.tar.gz": "f5837805c4088d8a3d21d43724d6205460d90f658cfc769703fdeba617357a5e",
+    "output/localmod2-r9-local-delivery.tar.gz": "35234c1017282d687adefed0854cf8dd5251801ccfaa66c2d5d77eaac1e6ffcd",
+    "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2"
+  },
+  "log_sha256": "2686fc366ad90078270a9527742b60c56f46e56b77fd3ce926731bf35ff9da92",
+  "vm": {
+    "schema": 1,
+    "phase": "candidate-merlin-system",
+    "sealed_manifest_sha256": "fe1f52ecbac7e2a3a7357e0790f3c3c18e82b2efd242bd28ae29b34fd1b18380",
+    "exported_entries": 3916,
+    "inputs": {
+      "build/casefs/rootfs": "4bc554f2673aba78acb8b7a1fdd49ef3ec73e9aa444b6da488fd6dec2b530ceb",
+      "build/httpd_bridge.so": "c9077a10841d321723ce9fa23b3335bf9126db99cb8f698f10620c7c281d75ec",
+      "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+      "build/merlin-system": "d57d0aa959ff853acd3b7e55f3f982b1e8a062a874d87fa1f971e8c98bdb7e47",
+      "build/merlin-vpn-config-fixture.so": "167396db6a0b69fc115c93b0b3770a646b2dbed51eec567e103ef1cc43e068e9",
+      "build/merlin-vpn-config-probe": "8a100a140a403832d2a954747dfb29ca328871020402f686b8e59d94ac72da6f",
+      "build/merlin_nested_initramfs.gz": "4162de079ecb4e57ed3db762f7fcced85814b0fc7a490333240f09592146cd8c",
+      "build/merlin_nested_job.sh": "0c80aa8cdc21e1959b71302079209dde42f645bbec929d629ca4d5e1458f9573",
+      "build/native-nvram": "9436d8ccf0c93bf9ef282af17776c81cffb8e1692eaac95837743b3e305c3c0c",
+      "build/native_defaults.bin": "f73ef45c89a87068c1a1da70c0d5399595950cb856276f3a0c57db189beeaae1",
+      "build/native_hw_fixture.so": "d0fa1acb27b6a76252a543aa1b10bf7292281ba83e8fc377f836d9c15a23b9ef",
+      "build/native_shadow_hash.txt": "25904697b50265590713cc146bf647887afa3bb25ef9bca672dece31aea8aa41",
+      "build/native_uu_transport.so": "a5bdc3c34095baa1ed9679d3aef7bf40c4b421f6b0b463d34f786f8736600467",
+      "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
+      "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
+      "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
+      "build/test-merlin": "42af9f7b8139295c08f502732ddf7bfde45f99600b967b2fe33787e3a55c6c02",
+      "build/tools/LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52",
+      "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
+      "build/tools/linux-initramfs.gz": "b2cdb4150bd81b7b08edc74a812255e9bc8d8bce6c07d4167c21745599e5baa1",
+      "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
+      "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
+      "sources/realplugins/fancyss_hnd_v8_full_3.5.29_localmod1.tar.gz": "154d5f1f38f84c6719fa698ca3979f4178c89c677357f0d25274363238d72cf4",
+      "sources/realplugins/ddnsgo-1.29.0.tar.gz": "34f541f8eba6840847a408f408a47032f9ea83b0326a31e21c70a0fbe497dfce",
+      "build/https_trace_fixture.so": "e589a9c2af47de0f5a538ae4db9340e7d66f2bf67803bcefb5c8ef0c11d9876e"
+    },
+    "workspace_path": "build/casefs/sealed-private/job-bc7f4171f0782c505a2874aa/workspace",
+    "state_disk_attached": false,
+    "state_lock_exclusive": false,
+    "host_export_readonly": true,
+    "guest_network_devices": 0,
+    "preserved_after_failure": false,
+    "cpus": 1,
+    "memory_mib": 1024,
+    "timeout_seconds": 1800,
+    "sealed_inputs_verified_before_and_after": true
+  }
+}

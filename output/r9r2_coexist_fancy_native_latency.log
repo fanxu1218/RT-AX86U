@@ -1,0 +1,239 @@
+LINUX_BUILDER_READY
+MERLIN_SYSTEM_PROBE_READY
+FIXTURE_ARM_ARCH=aarch64
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+COEXIST_SETUP native_https_and_uu
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108053411, 2026/11/8 ~ 2046/11/9
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+COEXIST_SETUP real_ddnsgo_install
+COEXIST_SETUP real_fancyss_install
+COEXIST_SETUP six_components
+miniupnpd[7304]: it is advised to use network interface name instead of 192.168.77.1
+miniupnpd[7304]: system uptime is 103 seconds
+miniupnpd[7304]: Reloading rules from lease file
+miniupnpd[7304]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794116136
+miniupnpd[7304]: IGNORED : Reserved / private IP address 203.0.113.1 on ext interface wan0
+miniupnpd[7304]: HTTP listening on port 35323
+miniupnpd[7304]: Listening for NAT-PMP/PCP traffic on port 5351
+miniupnpd[7304]: HTTP REQUEST from 192.168.77.1:54839 : GET /rootDesc.xml (HTTP/1.1)
+miniupnpd[7304]: Host: 192.168.77.1:35323
+miniupnpd[7304]: HTTP REQUEST from 192.168.77.1:32873 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[7304]: Host: 192.168.77.1:35323
+miniupnpd[7304]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[7304]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[7304]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[7304]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[7304]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[7304]: HTTP REQUEST from 192.168.77.1:46629 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[7304]: Host: 192.168.77.1:35323
+miniupnpd[7304]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[7304]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[7304]: HTTP REQUEST from 192.168.77.1:53823 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[7304]: Host: 192.168.77.1:35323
+miniupnpd[7304]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[7304]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[7304]: removing redirect rule port 45001 TCP
+miniupnpd[7304]: Trying to delete nat rule at index 0
+miniupnpd[7304]: Trying to delete filter rule at index 0
+miniupnpd[7304]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[7304]: Trying to delete peer rule at index 0
+PASS dnsmasq_real_dhcp_discover_offer_request_ack_and_lease_file_retained_after_restart
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.467027504,"error":"\u003cnil\u003e","id":91005,"index":0,"script_stages":"127.57 pid=9891 stage=before_base\n130.54 pid=9891 stage=after_base\n130.76 pid=9891 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.459931632,"request_written":0.142439952,"tls_done":0.136088784},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.385367408,"error":"\u003cnil\u003e","id":91007,"index":1,"script_stages":"135.96 pid=11079 stage=before_base\n138.92 pid=11079 stage=after_base\n139.14 pid=11079 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.382477744,"request_written":0.065719408,"tls_done":0.062988576},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.67591904,"error":"\u003cnil\u003e","id":91009,"index":2,"script_stages":"146.65 pid=12374 stage=before_base\n149.88 pid=12374 stage=after_base\n150.11 pid=12374 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.670688464,"request_written":0.064622288,"tls_done":0.059754576},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.409083328,"error":"\u003cnil\u003e","id":91011,"index":3,"script_stages":"155.29 pid=13549 stage=before_base\n158.29 pid=13549 stage=after_base\n158.51 pid=13549 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.408396752,"request_written":0.062690288,"tls_done":0.062243632},"valid":true}
+miniupnpd[7304]: setting timeout to 60 sec
+miniupnpd[7304]: setting timeout to 59 sec
+miniupnpd[7304]: setting timeout to 59 sec
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":5.082694096,"error":"\u003cnil\u003e","id":91013,"index":4,"script_stages":"165.17 pid=14653 stage=before_base\n169.75 pid=14653 stage=after_base\n170.00 pid=14653 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":5.080673216,"request_written":0.066184128,"tls_done":0.06571488},"valid":true}
+FANCY_LATENCY_PROCESS_SNAPSHOT
+  PID USER       VSZ STAT COMMAND
+    1 admin     1272 S    {init} /bin/busybox.static sh /init
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [pool_workqueue_]
+    4 admin        0 IW<  [kworker/R-kvfre]
+    5 admin        0 IW<  [kworker/R-rcu_g]
+    6 admin        0 IW<  [kworker/R-sync_]
+    7 admin        0 IW<  [kworker/R-slub_]
+    8 admin        0 IW<  [kworker/R-netns]
+    9 admin        0 IW   [kworker/0:0-mm_]
+   10 admin        0 IW<  [kworker/0:0H-ev]
+   11 admin        0 IW   [kworker/0:1-eve]
+   12 admin        0 IW   [kworker/u4:0-ev]
+   13 admin        0 IW<  [kworker/R-mm_pe]
+   14 admin        0 IW   [kworker/u4:1-ev]
+   15 admin        0 IW   [rcu_tasks_kthre]
+   16 admin        0 IW   [rcu_tasks_trace]
+   17 admin        0 SW   [ksoftirqd/0]
+   18 admin        0 IW   [rcu_preempt]
+   19 admin        0 SW   [rcu_exp_par_gp_]
+   20 admin        0 SW   [rcu_exp_gp_kthr]
+   21 admin        0 SW   [migration/0]
+   22 admin        0 SW   [cpuhp/0]
+   23 admin        0 SW   [kdevtmpfs]
+   24 admin        0 IW<  [kworker/R-inet_]
+   25 admin        0 SW   [kauditd]
+   26 admin        0 SW   [khungtaskd]
+   27 admin        0 SW   [oom_reaper]
+   28 admin        0 IW<  [kworker/R-write]
+   29 admin        0 SW   [kcompactd0]
+   30 admin        0 SWN  [ksmd]
+   31 admin        0 SWN  [khugepaged]
+   32 admin        0 IW<  [kworker/R-kinte]
+   33 admin        0 IW<  [kworker/R-kbloc]
+   34 admin        0 IW<  [kworker/R-blkcg]
+   35 admin        0 IW<  [kworker/R-md]
+   36 admin        0 IW<  [kworker/R-md_bi]
+   37 admin        0 IW   [kworker/u4:2-ev]
+   38 admin        0 IW   [kworker/u4:3-ev]
+   39 admin        0 IW<  [kworker/R-quota]
+   40 admin        0 IW<  [kworker/0:1H]
+   41 admin        0 SW   [kswapd0]
+   54 admin        0 IW<  [kworker/R-kthro]
+  125 admin        0 IW<  [kworker/R-mld]
+  127 admin        0 IW<  [kworker/R-ipv6_]
+  128 admin        0 IW<  [kworker/R-kstrp]
+  200 admin        0 IW   [kworker/u4:4-ev]
+  275 admin        0 IW   [kworker/u4:5-ev]
+  323 admin        0 IW   [kworker/u4:6-ev]
+  340 admin        0 IW<  [kworker/u5:0]
+  366 admin     1272 S    sh /work/build/merlin_nested_job.sh
+  371 admin        0 IW   [kworker/0:2-mm_]
+  445 admin      192 S    /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+  446 admin    1266m S    /work/build/test-merlin candidate-merlin-system
+  519 admin     1500 S    /usr/bin/skipd -d /jffs/.localmod/ksdb
+  521 admin     1752 S    log-limit --sink skipd 3
+  532 admin     1904 S    /usr/libexec/localmod/localmod-event --daemon
+  548 admin     1752 S    log-limit --sink bootstrap 3
+  606 admin     1596 S    perpboot -d
+  607 admin     1736 S    tinylog -k 3 -s 50000 -t /var/log/perpd
+  609 admin     1784 S    perpd -a 6 /koolshare/perp
+  616 admin     1168 S    httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80
+  627 admin    12312 S    /usr/libexec/localmod/httpd -s -p 34443
+  821 admin    81476 S    {ntp} /usr/bin/qemu-arm -0 ntp -L / -E LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.
+  874 admin     3200 S    /bin/sh /tmp/owned-uu-worker.sh
+ 1989 admin     529m S    ddnsgo -l :9876 -f 300 -cacheTimes 5 -c /koolshare/configs/ddnsgo/default.yaml
+ 6978 nobody    2540 S    /usr/sbin/dnsmasq --keep-in-foreground --conf-file=/tmp/merlin/dnsmasq.conf
+ 7011 admin     3832 S    dropbear -F -E -s -p 127.0.0.1:35322 -r /jffs/.ssh/dropbear_ed25519_host_key
+ 7304 admin     3328 S    /usr/sbin/miniupnpd -d -f /tmp/.localmod-merlin/miniupnpd.conf -P /tmp/merlin/miniupnpd.pid
+ 7382 admin     6752 S    /usr/sbin/openvpn --config /tmp/merlin/server.ovpn
+ 7383 admin     6612 S    /usr/sbin/openvpn --config /tmp/merlin/client.ovpn
+ 7840 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-0.json
+ 8132 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-1.json
+14653 admin     3604 R    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91013 1
+14780 admin     3200 R    /bin/ps w
+
+FANCY_LATENCY_PROCESS_SNAPSHOT
+  PID USER       VSZ STAT COMMAND
+    1 admin     1272 S    {init} /bin/busybox.static sh /init
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [pool_workqueue_]
+    4 admin        0 IW<  [kworker/R-kvfre]
+    5 admin        0 IW<  [kworker/R-rcu_g]
+    6 admin        0 IW<  [kworker/R-sync_]
+    7 admin        0 IW<  [kworker/R-slub_]
+    8 admin        0 IW<  [kworker/R-netns]
+    9 admin        0 IW   [kworker/0:0-mm_]
+   10 admin        0 IW<  [kworker/0:0H-ev]
+   11 admin        0 IW   [kworker/0:1-eve]
+   12 admin        0 IW   [kworker/u4:0-ev]
+   13 admin        0 IW<  [kworker/R-mm_pe]
+   14 admin        0 IW   [kworker/u4:1-ev]
+   15 admin        0 IW   [rcu_tasks_kthre]
+   16 admin        0 IW   [rcu_tasks_trace]
+   17 admin        0 SW   [ksoftirqd/0]
+   18 admin        0 IW   [rcu_preempt]
+   19 admin        0 SW   [rcu_exp_par_gp_]
+   20 admin        0 SW   [rcu_exp_gp_kthr]
+   21 admin        0 SW   [migration/0]
+   22 admin        0 SW   [cpuhp/0]
+   23 admin        0 SW   [kdevtmpfs]
+   24 admin        0 IW<  [kworker/R-inet_]
+   25 admin        0 SW   [kauditd]
+   26 admin        0 SW   [khungtaskd]
+   27 admin        0 SW   [oom_reaper]
+   28 admin        0 IW<  [kworker/R-write]
+   29 admin        0 SW   [kcompactd0]
+   30 admin        0 SWN  [ksmd]
+   31 admin        0 SWN  [khugepaged]
+   32 admin        0 IW<  [kworker/R-kinte]
+   33 admin        0 IW<  [kworker/R-kbloc]
+   34 admin        0 IW<  [kworker/R-blkcg]
+   35 admin        0 IW<  [kworker/R-md]
+   36 admin        0 IW<  [kworker/R-md_bi]
+   37 admin        0 IW   [kworker/u4:2-ev]
+   38 admin        0 IW   [kworker/u4:3-ev]
+   39 admin        0 IW<  [kworker/R-quota]
+   40 admin        0 IW<  [kworker/0:1H]
+   41 admin        0 SW   [kswapd0]
+   54 admin        0 IW<  [kworker/R-kthro]
+  125 admin        0 IW<  [kworker/R-mld]
+  127 admin        0 IW<  [kworker/R-ipv6_]
+  128 admin        0 IW<  [kworker/R-kstrp]
+  200 admin        0 IW   [kworker/u4:4-ev]
+  275 admin        0 IW   [kworker/u4:5-ev]
+  323 admin        0 IW   [kworker/u4:6-ev]
+  340 admin        0 IW<  [kworker/u5:0]
+  366 admin     1272 S    sh /work/build/merlin_nested_job.sh
+  371 admin        0 IW   [kworker/0:2-mm_]
+  445 admin      192 S    /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/real_plugins_setup.sh
+  446 admin    1266m S    /work/build/test-merlin candidate-merlin-system
+  519 admin     1500 S    /usr/bin/skipd -d /jffs/.localmod/ksdb
+  521 admin     1752 S    log-limit --sink skipd 3
+  532 admin     1904 S    /usr/libexec/localmod/localmod-event --daemon
+  548 admin     1752 S    log-limit --sink bootstrap 3
+  606 admin     1596 S    perpboot -d
+  607 admin     1736 S    tinylog -k 3 -s 50000 -t /var/log/perpd
+  609 admin     1784 S    perpd -a 6 /koolshare/perp
+  616 admin     1168 S    httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80
+  627 admin    12312 S    /usr/libexec/localmod/httpd -s -p 34443
+  821 admin    81476 S    {ntp} /usr/bin/qemu-arm -0 ntp -L / -E LD_PRELOAD=/work/build/rc_bridge.so:/work/build/native_hw_fixture.
+  874 admin     3200 S    /bin/sh /tmp/owned-uu-worker.sh
+ 1989 admin     529m S    ddnsgo -l :9876 -f 300 -cacheTimes 5 -c /koolshare/configs/ddnsgo/default.yaml
+ 6978 nobody    2540 S    /usr/sbin/dnsmasq --keep-in-foreground --conf-file=/tmp/merlin/dnsmasq.conf
+ 7011 admin     3832 S    dropbear -F -E -s -p 127.0.0.1:35322 -r /jffs/.ssh/dropbear_ed25519_host_key
+ 7304 admin     3328 S    /usr/sbin/miniupnpd -d -f /tmp/.localmod-merlin/miniupnpd.conf -P /tmp/merlin/miniupnpd.pid
+ 7382 admin     6752 S    /usr/sbin/openvpn --config /tmp/merlin/server.ovpn
+ 7383 admin     6612 S    /usr/sbin/openvpn --config /tmp/merlin/client.ovpn
+ 7840 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-0.json
+ 8132 admin    1259m S    /koolshare/bin/xray run -c /koolshare/configs/fancyss/coexist-1.json
+14653 admin     3868 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91013 1
+14975 admin     3868 S    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91013 1
+14976 admin     3868 R    {ss_status.sh} /bin/sh /koolshare/scripts/ss_status.sh 91013 1
+14980 admin     3200 R    /bin/ps w
+
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.892052832,"error":"\u003cnil\u003e","id":91015,"index":5,"script_stages":"175.49 pid=15699 stage=before_base\n178.89 pid=15699 stage=after_base\n179.13 pid=15699 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.8881317600000003,"request_written":0.08059288,"tls_done":0.080080208},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.889589872,"error":"\u003cnil\u003e","id":91017,"index":6,"script_stages":"185.79 pid=16833 stage=before_base\n189.22 pid=16833 stage=after_base\n189.45 pid=16833 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.883707088,"request_written":0.071384752,"tls_done":0.071087712},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.772662912,"error":"\u003cnil\u003e","id":91019,"index":7,"script_stages":"194.65 pid=17960 stage=before_base\n198.00 pid=17960 stage=after_base\n198.23 pid=17960 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.7720304479999998,"request_written":0.062477824,"tls_done":0.062192336},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.363137712,"error":"\u003cnil\u003e","id":91021,"index":8,"script_stages":"204.76 pid=19177 stage=before_base\n208.38 pid=19177 stage=after_base\n208.86 pid=19177 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.358254384,"request_written":0.057562416,"tls_done":0.057214},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.244399456,"error":"\u003cnil\u003e","id":91023,"index":9,"script_stages":"214.29 pid=20237 stage=before_base\n218.04 pid=20237 stage=after_base\n218.31 pid=20237 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.243775712,"request_written":0.070387408,"tls_done":0.068189168},"valid":true}
+miniupnpd[7304]: cleaning expired Port Mappings
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.607585536,"error":"\u003cnil\u003e","id":91025,"index":10,"script_stages":"225.22 pid=21333 stage=before_base\n229.19 pid=21333 stage=after_base\n229.41 pid=21333 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.60457184,"request_written":0.255002048,"tls_done":0.25408592},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.972418416,"error":"\u003cnil\u003e","id":91027,"index":11,"script_stages":"234.81 pid=22410 stage=before_base\n238.27 pid=22410 stage=after_base\n238.52 pid=22410 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.9673652,"request_written":0.084439664,"tls_done":0.083847328},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.501724784,"error":"\u003cnil\u003e","id":91029,"index":12,"script_stages":"246.29 pid=23576 stage=before_base\n250.07 pid=23576 stage=after_base\n250.35 pid=23576 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.49448,"request_written":0.0963092,"tls_done":0.092117712},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.893449872,"error":"\u003cnil\u003e","id":91031,"index":13,"script_stages":"255.94 pid=24665 stage=before_base\n259.38 pid=24665 stage=after_base\n259.63 pid=24665 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.892722208,"request_written":0.070233328,"tls_done":0.067508416},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.156440624,"error":"\u003cnil\u003e","id":91033,"index":14,"script_stages":"266.31 pid=25805 stage=before_base\n269.99 pid=25805 stage=after_base\n270.22 pid=25805 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.152464624,"request_written":0.074694576,"tls_done":0.074345488},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.76197216,"error":"\u003cnil\u003e","id":91035,"index":15,"script_stages":"275.63 pid=26866 stage=before_base\n278.93 pid=26866 stage=after_base\n279.17 pid=26866 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.759045712,"request_written":0.06652024,"tls_done":0.066136656},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.565831504,"error":"\u003cnil\u003e","id":91037,"index":16,"script_stages":"285.96 pid=28053 stage=before_base\n289.03 pid=28053 stage=after_base\n289.30 pid=28053 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.565172448,"request_written":0.08869496,"tls_done":0.088246784},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.128344,"error":"\u003cnil\u003e","id":91039,"index":17,"script_stages":"294.55 pid=29125 stage=before_base\n298.23 pid=29125 stage=after_base\n298.46 pid=29125 stage=before_callback\n298.56 pid=29125 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.125402624,"request_written":0.062969952,"tls_done":0.062551664},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.533838256,"error":"\u003cnil\u003e","id":91041,"index":18,"script_stages":"305.07 pid=30290 stage=before_base\n308.15 pid=30290 stage=after_base\n308.38 pid=30290 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.52852496,"request_written":0.063972832,"tls_done":0.063487216},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.0411188,"error":"\u003cnil\u003e","id":91043,"index":19,"script_stages":"313.56 pid=31408 stage=before_base\n317.11 pid=31408 stage=after_base\n317.35 pid=31408 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.038257392,"request_written":0.068680432,"tls_done":0.068195968},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":4.048776336,"error":"\u003cnil\u003e","id":91045,"index":20,"script_stages":"324.01 pid=32606 stage=before_base\n327.41 pid=32606 stage=after_base\n327.82 pid=32606 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.046877216,"request_written":0.079297168,"tls_done":0.075861584},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.73920712,"error":"\u003cnil\u003e","id":91047,"index":21,"script_stages":"333.09 pid=1277 stage=before_base\n336.40 pid=1277 stage=after_base\n336.63 pid=1277 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.738531664,"request_written":0.074049456,"tls_done":0.07120984},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.882424928,"error":"\u003cnil\u003e","id":91049,"index":22,"script_stages":"343.26 pid=2469 stage=before_base\n346.67 pid=2469 stage=after_base\n346.90 pid=2469 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.87900296,"request_written":0.075001872,"tls_done":0.072094384},"valid":true}
+FANCY_LATENCY_CASE {"bytes":116,"code":200,"elapsed_seconds":3.874053456,"error":"\u003cnil\u003e","id":91051,"index":23,"script_stages":"352.27 pid=3581 stage=before_base\n355.67 pid=3581 stage=after_base\n355.92 pid=3581 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.871950464,"request_written":0.07523424,"tls_done":0.074302656},"valid":true}
+FANCY_LATENCY_RESULT {"cases":[{"bytes":116,"code":200,"elapsed_seconds":3.467027504,"error":"\u003cnil\u003e","id":91005,"index":0,"script_stages":"127.57 pid=9891 stage=before_base\n130.54 pid=9891 stage=after_base\n130.76 pid=9891 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.459931632,"request_written":0.142439952,"tls_done":0.136088784},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.385367408,"error":"\u003cnil\u003e","id":91007,"index":1,"script_stages":"135.96 pid=11079 stage=before_base\n138.92 pid=11079 stage=after_base\n139.14 pid=11079 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.382477744,"request_written":0.065719408,"tls_done":0.062988576},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.67591904,"error":"\u003cnil\u003e","id":91009,"index":2,"script_stages":"146.65 pid=12374 stage=before_base\n149.88 pid=12374 stage=after_base\n150.11 pid=12374 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.670688464,"request_written":0.064622288,"tls_done":0.059754576},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.409083328,"error":"\u003cnil\u003e","id":91011,"index":3,"script_stages":"155.29 pid=13549 stage=before_base\n158.29 pid=13549 stage=after_base\n158.51 pid=13549 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.408396752,"request_written":0.062690288,"tls_done":0.062243632},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":5.082694096,"error":"\u003cnil\u003e","id":91013,"index":4,"script_stages":"165.17 pid=14653 stage=before_base\n169.75 pid=14653 stage=after_base\n170.00 pid=14653 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":5.080673216,"request_written":0.066184128,"tls_done":0.06571488},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.892052832,"error":"\u003cnil\u003e","id":91015,"index":5,"script_stages":"175.49 pid=15699 stage=before_base\n178.89 pid=15699 stage=after_base\n179.13 pid=15699 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.8881317600000003,"request_written":0.08059288,"tls_done":0.080080208},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.889589872,"error":"\u003cnil\u003e","id":91017,"index":6,"script_stages":"185.79 pid=16833 stage=before_base\n189.22 pid=16833 stage=after_base\n189.45 pid=16833 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.883707088,"request_written":0.071384752,"tls_done":0.071087712},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.772662912,"error":"\u003cnil\u003e","id":91019,"index":7,"script_stages":"194.65 pid=17960 stage=before_base\n198.00 pid=17960 stage=after_base\n198.23 pid=17960 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.7720304479999998,"request_written":0.062477824,"tls_done":0.062192336},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.363137712,"error":"\u003cnil\u003e","id":91021,"index":8,"script_stages":"204.76 pid=19177 stage=before_base\n208.38 pid=19177 stage=after_base\n208.86 pid=19177 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.358254384,"request_written":0.057562416,"tls_done":0.057214},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.244399456,"error":"\u003cnil\u003e","id":91023,"index":9,"script_stages":"214.29 pid=20237 stage=before_base\n218.04 pid=20237 stage=after_base\n218.31 pid=20237 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.243775712,"request_written":0.070387408,"tls_done":0.068189168},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.607585536,"error":"\u003cnil\u003e","id":91025,"index":10,"script_stages":"225.22 pid=21333 stage=before_base\n229.19 pid=21333 stage=after_base\n229.41 pid=21333 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":4.60457184,"request_written":0.255002048,"tls_done":0.25408592},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.972418416,"error":"\u003cnil\u003e","id":91027,"index":11,"script_stages":"234.81 pid=22410 stage=before_base\n238.27 pid=22410 stage=after_base\n238.52 pid=22410 stage=before_callback\n","timeout_seconds":10,"timings":{"first_response_byte":3.9673652,"request_written":0.084439664,"tls_done":0.083847328},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.501724784,"error":"\u003cnil\u003e","id":91029,"index":12,"script_stages":"246.29 pid=23576 stage=before_base\n250.07 pid=23576 stage=after_base\n250.35 pid=23576 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.49448,"request_written":0.0963092,"tls_done":0.092117712},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.893449872,"error":"\u003cnil\u003e","id":91031,"index":13,"script_stages":"255.94 pid=24665 stage=before_base\n259.38 pid=24665 stage=after_base\n259.63 pid=24665 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.892722208,"request_written":0.070233328,"tls_done":0.067508416},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.156440624,"error":"\u003cnil\u003e","id":91033,"index":14,"script_stages":"266.31 pid=25805 stage=before_base\n269.99 pid=25805 stage=after_base\n270.22 pid=25805 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.152464624,"request_written":0.074694576,"tls_done":0.074345488},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.76197216,"error":"\u003cnil\u003e","id":91035,"index":15,"script_stages":"275.63 pid=26866 stage=before_base\n278.93 pid=26866 stage=after_base\n279.17 pid=26866 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.759045712,"request_written":0.06652024,"tls_done":0.066136656},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.565831504,"error":"\u003cnil\u003e","id":91037,"index":16,"script_stages":"285.96 pid=28053 stage=before_base\n289.03 pid=28053 stage=after_base\n289.30 pid=28053 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.565172448,"request_written":0.08869496,"tls_done":0.088246784},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.128344,"error":"\u003cnil\u003e","id":91039,"index":17,"script_stages":"294.55 pid=29125 stage=before_base\n298.23 pid=29125 stage=after_base\n298.46 pid=29125 stage=before_callback\n298.56 pid=29125 stage=after_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.125402624,"request_written":0.062969952,"tls_done":0.062551664},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.533838256,"error":"\u003cnil\u003e","id":91041,"index":18,"script_stages":"305.07 pid=30290 stage=before_base\n308.15 pid=30290 stage=after_base\n308.38 pid=30290 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.52852496,"request_written":0.063972832,"tls_done":0.063487216},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.0411188,"error":"\u003cnil\u003e","id":91043,"index":19,"script_stages":"313.56 pid=31408 stage=before_base\n317.11 pid=31408 stage=after_base\n317.35 pid=31408 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.038257392,"request_written":0.068680432,"tls_done":0.068195968},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":4.048776336,"error":"\u003cnil\u003e","id":91045,"index":20,"script_stages":"324.01 pid=32606 stage=before_base\n327.41 pid=32606 stage=after_base\n327.82 pid=32606 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":4.046877216,"request_written":0.079297168,"tls_done":0.075861584},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.73920712,"error":"\u003cnil\u003e","id":91047,"index":21,"script_stages":"333.09 pid=1277 stage=before_base\n336.40 pid=1277 stage=after_base\n336.63 pid=1277 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.738531664,"request_written":0.074049456,"tls_done":0.07120984},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.882424928,"error":"\u003cnil\u003e","id":91049,"index":22,"script_stages":"343.26 pid=2469 stage=before_base\n346.67 pid=2469 stage=after_base\n346.90 pid=2469 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.87900296,"request_written":0.075001872,"tls_done":0.072094384},"valid":true},{"bytes":116,"code":200,"elapsed_seconds":3.874053456,"error":"\u003cnil\u003e","id":91051,"index":23,"script_stages":"352.27 pid=3581 stage=before_base\n355.67 pid=3581 stage=after_base\n355.92 pid=3581 stage=before_callback\n","timeout_seconds":30,"timings":{"first_response_byte":3.871950464,"request_written":0.07523424,"tls_done":0.074302656},"valid":true}],"data_preserved":true,"query_replay":false,"script_metadata_instrumentation_only":true}
+miniupnpd[7304]: shutting down MiniUPnPd
+SOAK_REAPER orphans_reaped=59
+NESTED_MERLIN_JOB_STATUS=0
+[  364.237506] reboot: Power down
+LINUX_READONLY_JOB_STATUS=0

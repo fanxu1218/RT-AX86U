@@ -1,0 +1,529 @@
+{
+  "status": "LOCAL_FANCYSS_LATENCY_DIAGNOSTIC_COMPLETE",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+  "result": {
+    "cases": [
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.467027504,
+        "error": "<nil>",
+        "id": 91005,
+        "index": 0,
+        "script_stages": "127.57 pid=9891 stage=before_base\n130.54 pid=9891 stage=after_base\n130.76 pid=9891 stage=before_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 3.459931632,
+          "request_written": 0.142439952,
+          "tls_done": 0.136088784
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.385367408,
+        "error": "<nil>",
+        "id": 91007,
+        "index": 1,
+        "script_stages": "135.96 pid=11079 stage=before_base\n138.92 pid=11079 stage=after_base\n139.14 pid=11079 stage=before_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 3.382477744,
+          "request_written": 0.065719408,
+          "tls_done": 0.062988576
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.67591904,
+        "error": "<nil>",
+        "id": 91009,
+        "index": 2,
+        "script_stages": "146.65 pid=12374 stage=before_base\n149.88 pid=12374 stage=after_base\n150.11 pid=12374 stage=before_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 3.670688464,
+          "request_written": 0.064622288,
+          "tls_done": 0.059754576
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.409083328,
+        "error": "<nil>",
+        "id": 91011,
+        "index": 3,
+        "script_stages": "155.29 pid=13549 stage=before_base\n158.29 pid=13549 stage=after_base\n158.51 pid=13549 stage=before_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 3.408396752,
+          "request_written": 0.062690288,
+          "tls_done": 0.062243632
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 5.082694096,
+        "error": "<nil>",
+        "id": 91013,
+        "index": 4,
+        "script_stages": "165.17 pid=14653 stage=before_base\n169.75 pid=14653 stage=after_base\n170.00 pid=14653 stage=before_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 5.080673216,
+          "request_written": 0.066184128,
+          "tls_done": 0.06571488
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.892052832,
+        "error": "<nil>",
+        "id": 91015,
+        "index": 5,
+        "script_stages": "175.49 pid=15699 stage=before_base\n178.89 pid=15699 stage=after_base\n179.13 pid=15699 stage=before_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 3.8881317600000003,
+          "request_written": 0.08059288,
+          "tls_done": 0.080080208
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.889589872,
+        "error": "<nil>",
+        "id": 91017,
+        "index": 6,
+        "script_stages": "185.79 pid=16833 stage=before_base\n189.22 pid=16833 stage=after_base\n189.45 pid=16833 stage=before_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 3.883707088,
+          "request_written": 0.071384752,
+          "tls_done": 0.071087712
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.772662912,
+        "error": "<nil>",
+        "id": 91019,
+        "index": 7,
+        "script_stages": "194.65 pid=17960 stage=before_base\n198.00 pid=17960 stage=after_base\n198.23 pid=17960 stage=before_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 3.7720304479999998,
+          "request_written": 0.062477824,
+          "tls_done": 0.062192336
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.363137712,
+        "error": "<nil>",
+        "id": 91021,
+        "index": 8,
+        "script_stages": "204.76 pid=19177 stage=before_base\n208.38 pid=19177 stage=after_base\n208.86 pid=19177 stage=before_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 4.358254384,
+          "request_written": 0.057562416,
+          "tls_done": 0.057214
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.244399456,
+        "error": "<nil>",
+        "id": 91023,
+        "index": 9,
+        "script_stages": "214.29 pid=20237 stage=before_base\n218.04 pid=20237 stage=after_base\n218.31 pid=20237 stage=before_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 4.243775712,
+          "request_written": 0.070387408,
+          "tls_done": 0.068189168
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.607585536,
+        "error": "<nil>",
+        "id": 91025,
+        "index": 10,
+        "script_stages": "225.22 pid=21333 stage=before_base\n229.19 pid=21333 stage=after_base\n229.41 pid=21333 stage=before_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 4.60457184,
+          "request_written": 0.255002048,
+          "tls_done": 0.25408592
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.972418416,
+        "error": "<nil>",
+        "id": 91027,
+        "index": 11,
+        "script_stages": "234.81 pid=22410 stage=before_base\n238.27 pid=22410 stage=after_base\n238.52 pid=22410 stage=before_callback\n",
+        "timeout_seconds": 10,
+        "timings": {
+          "first_response_byte": 3.9673652,
+          "request_written": 0.084439664,
+          "tls_done": 0.083847328
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.501724784,
+        "error": "<nil>",
+        "id": 91029,
+        "index": 12,
+        "script_stages": "246.29 pid=23576 stage=before_base\n250.07 pid=23576 stage=after_base\n250.35 pid=23576 stage=before_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.49448,
+          "request_written": 0.0963092,
+          "tls_done": 0.092117712
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.893449872,
+        "error": "<nil>",
+        "id": 91031,
+        "index": 13,
+        "script_stages": "255.94 pid=24665 stage=before_base\n259.38 pid=24665 stage=after_base\n259.63 pid=24665 stage=before_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 3.892722208,
+          "request_written": 0.070233328,
+          "tls_done": 0.067508416
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.156440624,
+        "error": "<nil>",
+        "id": 91033,
+        "index": 14,
+        "script_stages": "266.31 pid=25805 stage=before_base\n269.99 pid=25805 stage=after_base\n270.22 pid=25805 stage=before_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.152464624,
+          "request_written": 0.074694576,
+          "tls_done": 0.074345488
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.76197216,
+        "error": "<nil>",
+        "id": 91035,
+        "index": 15,
+        "script_stages": "275.63 pid=26866 stage=before_base\n278.93 pid=26866 stage=after_base\n279.17 pid=26866 stage=before_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 3.759045712,
+          "request_written": 0.06652024,
+          "tls_done": 0.066136656
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.565831504,
+        "error": "<nil>",
+        "id": 91037,
+        "index": 16,
+        "script_stages": "285.96 pid=28053 stage=before_base\n289.03 pid=28053 stage=after_base\n289.30 pid=28053 stage=before_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 3.565172448,
+          "request_written": 0.08869496,
+          "tls_done": 0.088246784
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.128344,
+        "error": "<nil>",
+        "id": 91039,
+        "index": 17,
+        "script_stages": "294.55 pid=29125 stage=before_base\n298.23 pid=29125 stage=after_base\n298.46 pid=29125 stage=before_callback\n298.56 pid=29125 stage=after_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.125402624,
+          "request_written": 0.062969952,
+          "tls_done": 0.062551664
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.533838256,
+        "error": "<nil>",
+        "id": 91041,
+        "index": 18,
+        "script_stages": "305.07 pid=30290 stage=before_base\n308.15 pid=30290 stage=after_base\n308.38 pid=30290 stage=before_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 3.52852496,
+          "request_written": 0.063972832,
+          "tls_done": 0.063487216
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.0411188,
+        "error": "<nil>",
+        "id": 91043,
+        "index": 19,
+        "script_stages": "313.56 pid=31408 stage=before_base\n317.11 pid=31408 stage=after_base\n317.35 pid=31408 stage=before_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.038257392,
+          "request_written": 0.068680432,
+          "tls_done": 0.068195968
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 4.048776336,
+        "error": "<nil>",
+        "id": 91045,
+        "index": 20,
+        "script_stages": "324.01 pid=32606 stage=before_base\n327.41 pid=32606 stage=after_base\n327.82 pid=32606 stage=before_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 4.046877216,
+          "request_written": 0.079297168,
+          "tls_done": 0.075861584
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.73920712,
+        "error": "<nil>",
+        "id": 91047,
+        "index": 21,
+        "script_stages": "333.09 pid=1277 stage=before_base\n336.40 pid=1277 stage=after_base\n336.63 pid=1277 stage=before_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 3.738531664,
+          "request_written": 0.074049456,
+          "tls_done": 0.07120984
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.882424928,
+        "error": "<nil>",
+        "id": 91049,
+        "index": 22,
+        "script_stages": "343.26 pid=2469 stage=before_base\n346.67 pid=2469 stage=after_base\n346.90 pid=2469 stage=before_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 3.87900296,
+          "request_written": 0.075001872,
+          "tls_done": 0.072094384
+        },
+        "valid": true
+      },
+      {
+        "bytes": 116,
+        "code": 200,
+        "elapsed_seconds": 3.874053456,
+        "error": "<nil>",
+        "id": 91051,
+        "index": 23,
+        "script_stages": "352.27 pid=3581 stage=before_base\n355.67 pid=3581 stage=after_base\n355.92 pid=3581 stage=before_callback\n",
+        "timeout_seconds": 30,
+        "timings": {
+          "first_response_byte": 3.871950464,
+          "request_written": 0.07523424,
+          "tls_done": 0.074302656
+        },
+        "valid": true
+      }
+    ],
+    "data_preserved": true,
+    "query_replay": false,
+    "script_metadata_instrumentation_only": true
+  },
+  "source_sha256": {
+    "analysis/r9r1_coexist/check.py": "85b9358ea234d1f0a61872d9e6e1514c8ee04c9ef1ebdec651ef52973c6bc4f6",
+    "analysis/r9r1_coexist/workload.go": "598e0f23c5e45c742e381ae9e06d5d705cb7ddeec3ef3baa246fcc74450aeb50",
+    "build/test_merlin.go": "76f8e5231b5eadeb0809464d029f2621874f4f05f46e1277cb5c7a5014c13165",
+    "build/test_soak.go": "908018fec252135807c0df483a5c5951c5866506a0b9b0917a508431c1afa891",
+    "build/test_memory.go": "69838169024c9d0b9e31f2e570f9cde728f8193fe4d0e9f71be059fc080ca42f",
+    "build/memory_cycles.go": "3e9f90d880baa7959bbbc039520c721303f1d2f0254af6d4e91d63b4660bfc31",
+    "build/httpd_memory.go": "cdc5a4a600b11938ccabccd58e8f6f51fde8744f439ebf547cc60ebbec174191",
+    "build/native_runtime_client.go": "2f9515bf6d814c064c7e0957455c0cfaf12ef01483be9732e49fd783cf32acf5",
+    "build/test_online.go": "b04471e23505e03d7700884fdad4adb5d526e7fd8fe33bfe669a3a736d81fd14",
+    "build/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+    "build/check_merlin.py": "219e4cefe3562e88af4cf133e052d519d6e16d4cc3c1cf25128a73ede8f2d1f1",
+    "build/sealed_vm.py": "44e83268f0e72f999648acb8f56e778735e70b7240d71bb1d90a2ec10a563788",
+    "build/run_readonly_linux.py": "eeb77fb1d07ba997388aa0feaa7e558bb4ad96b5fb73a3588643390bef06135f",
+    "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
+    "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+    "build/make_merlin_system_initramfs.py": "00efa902e8675d3629e134cf70593de25b00a7b9bdb9e5b7ae44c8b6c1dadf49",
+    "build/prepare_merlin_system.py": "35cd33a65f100dda3092e221fe05d24ab9869f32afb43fcf522eb6cd98a82eaa",
+    "build/merlin_system_sources.json": "67da834b6465e7eea49fff0977c00492ad0edff252b9809684665ad8d513c92f",
+    "build/prepare_fancyss.py": "c0df38989d32fb9730710b57a7b49d2a5847b81f476e4cde41da8f70a881e4d3",
+    "build/fancyss_sources.json": "907f0c23f3016e0496eac7d7156baff4e0bc09ac28c3d984a5df22f3155b085e",
+    "build/real_plugin_sources.json": "80256a27bfc7ddf18da8f1b2693ffa6debcfbb240083a3d724da6e3641382ea8",
+    "build/https_trace_fixture.c": "8d2c672780430f45c01ad78e7e17667396660aec65564e790bbad9bcb73f872a",
+    "analysis/r9r1_coexist/tls_trace.c": "0e0d804fd099fc197066e735a0bef10817d897eaa822e4de8aab1d41593b6c7f",
+    "sources/localmod/httpd_bridge.c": "d689713756d20aeab486352f84f806e08f1b1a3ca03951635b9e171c55bfd8a9",
+    "analysis/r9r1_coexist/fancy_probe.go": "610a24770d06a09e8a48053e7292d9efedf507e3f22d2131d5c3aba01592931d",
+    "analysis/r9r1_coexist/fancy_probe.py": "e2271279c18c6671d531b1dfc01fd773d57e2cde2c845430efbea69e2fe2c341",
+    "analysis/r9r1_coexist/native_probe.py": "98b9c3abf362a791c48b8db2ee8cd574b4912387003bdd5fa62b5bb39dfa0d3f"
+  },
+  "generated_test_source": {
+    "analysis/r9r1_coexist/workload.go": {
+      "sha256": "8eba7879c0d888b26faab1c50c8fa1f3586e10ec148ed932bcbdf5fb57716633",
+      "changes": [
+        "Owned focused Fancyss latency diagnostics instead of handshake probe"
+      ]
+    },
+    "build/test_merlin.go": {
+      "sha256": "49013bf93a414f5c50e320831d31bab6c2098bc52170ec207ef719fde54bcd2d",
+      "changes": [
+        "Rename historical standalone main; helpers unchanged",
+        "Owned test VPN certificate expiry3h for1h run, not router credentials"
+      ]
+    },
+    "build/test_soak.go": {
+      "sha256": "1b1533831cec483658302b40635b8be16225b080223dfd42820e8c7f114e2100",
+      "changes": [
+        "Rename historical standalone main; helpers unchanged"
+      ]
+    },
+    "build/test_memory.go": {
+      "sha256": "69838169024c9d0b9e31f2e570f9cde728f8193fe4d0e9f71be059fc080ca42f",
+      "changes": []
+    },
+    "build/memory_cycles.go": {
+      "sha256": "3e9f90d880baa7959bbbc039520c721303f1d2f0254af6d4e91d63b4660bfc31",
+      "changes": []
+    },
+    "build/httpd_memory.go": {
+      "sha256": "cdc5a4a600b11938ccabccd58e8f6f51fde8744f439ebf547cc60ebbec174191",
+      "changes": []
+    },
+    "build/native_runtime_client.go": {
+      "sha256": "3464e2e35e46d531a8d6b1167da7c8b5dae1dd5764ed1274137e564c017244fa",
+      "changes": [
+        "Full Cortex-A53 system native ARM32 kernel compatibility executes original HTTPd directly; same LD_PRELOAD and TLS library"
+      ]
+    },
+    "build/test_online.go": {
+      "sha256": "c49c6f3b897120929a525884af10f9bbd023d2a258bb6f9470aef69bc9a11669",
+      "changes": [
+        "Owned HTTPS repository fixture certificate expiry3h; normal certificate verification remains enabled"
+      ]
+    },
+    "build/coexist_helpers.go": {
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "changes": []
+    },
+    "analysis/r9r1_coexist/fancy_probe.go": {
+      "sha256": "610a24770d06a09e8a48053e7292d9efedf507e3f22d2131d5c3aba01592931d",
+      "changes": []
+    }
+  },
+  "baseline_preserved_sha256": {
+    "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+    "output/release_gates.json": "e8655961d79d6324ae46956b57b04ecec88a14ed50fc4698966da3ca58722453",
+    "output/local_delivery.json": "f88da268fbd5bf884c80771c3c2560e37321337f2b5da66191f4bb490e383fd7",
+    "output/localmod2-r9-r1-local-delivery.tar.gz": "f5837805c4088d8a3d21d43724d6205460d90f658cfc769703fdeba617357a5e",
+    "output/localmod2-r9-local-delivery.tar.gz": "35234c1017282d687adefed0854cf8dd5251801ccfaa66c2d5d77eaac1e6ffcd",
+    "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2"
+  },
+  "log_sha256": "c2ce5388100406639f9930f55d00b9562fdf6edc4c0d0bde15cfced9e6f94a78",
+  "vm": {
+    "schema": 1,
+    "phase": "candidate-merlin-system",
+    "sealed_manifest_sha256": "a255d0697f622c52493bb890a4d57a0ca642af57df19c8fcae7562b0bbf06570",
+    "exported_entries": 3916,
+    "inputs": {
+      "build/casefs/rootfs": "4bc554f2673aba78acb8b7a1fdd49ef3ec73e9aa444b6da488fd6dec2b530ceb",
+      "build/httpd_bridge.so": "c9077a10841d321723ce9fa23b3335bf9126db99cb8f698f10620c7c281d75ec",
+      "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+      "build/merlin-system": "d57d0aa959ff853acd3b7e55f3f982b1e8a062a874d87fa1f971e8c98bdb7e47",
+      "build/merlin-vpn-config-fixture.so": "167396db6a0b69fc115c93b0b3770a646b2dbed51eec567e103ef1cc43e068e9",
+      "build/merlin-vpn-config-probe": "8a100a140a403832d2a954747dfb29ca328871020402f686b8e59d94ac72da6f",
+      "build/merlin_nested_initramfs.gz": "4162de079ecb4e57ed3db762f7fcced85814b0fc7a490333240f09592146cd8c",
+      "build/merlin_nested_job.sh": "0c80aa8cdc21e1959b71302079209dde42f645bbec929d629ca4d5e1458f9573",
+      "build/native-nvram": "9436d8ccf0c93bf9ef282af17776c81cffb8e1692eaac95837743b3e305c3c0c",
+      "build/native_defaults.bin": "f73ef45c89a87068c1a1da70c0d5399595950cb856276f3a0c57db189beeaae1",
+      "build/native_hw_fixture.so": "d0fa1acb27b6a76252a543aa1b10bf7292281ba83e8fc377f836d9c15a23b9ef",
+      "build/native_shadow_hash.txt": "25904697b50265590713cc146bf647887afa3bb25ef9bca672dece31aea8aa41",
+      "build/native_uu_transport.so": "a5bdc3c34095baa1ed9679d3aef7bf40c4b421f6b0b463d34f786f8736600467",
+      "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
+      "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
+      "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
+      "build/test-merlin": "fe972a7f6138bda393e2a1fc4aff19ff3b643223c2c52089ce7ae739c905accd",
+      "build/tools/LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52",
+      "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
+      "build/tools/linux-initramfs.gz": "b2cdb4150bd81b7b08edc74a812255e9bc8d8bce6c07d4167c21745599e5baa1",
+      "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
+      "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
+      "sources/realplugins/fancyss_hnd_v8_full_3.5.29_localmod1.tar.gz": "154d5f1f38f84c6719fa698ca3979f4178c89c677357f0d25274363238d72cf4",
+      "sources/realplugins/ddnsgo-1.29.0.tar.gz": "34f541f8eba6840847a408f408a47032f9ea83b0326a31e21c70a0fbe497dfce",
+      "build/https_trace_fixture.so": "e589a9c2af47de0f5a538ae4db9340e7d66f2bf67803bcefb5c8ef0c11d9876e"
+    },
+    "workspace_path": "build/casefs/sealed-private/job-71f81b232e2654d934b4d9b3/workspace",
+    "state_disk_attached": false,
+    "state_lock_exclusive": false,
+    "host_export_readonly": true,
+    "guest_network_devices": 0,
+    "preserved_after_failure": false,
+    "cpus": 1,
+    "memory_mib": 1024,
+    "timeout_seconds": 1800,
+    "sealed_inputs_verified_before_and_after": true
+  }
+}

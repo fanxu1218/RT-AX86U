@@ -302,3 +302,10 @@
 !/output/r9-r2长时间共存验证.md
 
 !/analysis/r9r1_coexist/review.py
+
+!/analysis/r9r1_coexist/fancy_probe.py
+!/analysis/r9r1_coexist/fancy_probe.go
+!/analysis/r9r1_coexist/native_probe.py
+!/analysis/r9r1_coexist/native_run.py
+
+!/analysis/r9r1_coexist/observed_run.py
