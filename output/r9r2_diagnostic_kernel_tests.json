@@ -1,0 +1,32 @@
+{
+  "status": "TARGET_KERNEL_CONFIGURATION_READBACK_COMPLETE",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+  "vendor_image": "upstream/RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w",
+  "vendor_sha256": "de1caf609347beea394ebab956bddf0b391db592d1ad5f99e9d37e4d0b876af0",
+  "boot_volume_sha256": "8755bbead1974adf3c55cd43254480ed8e9356ddca4c5cef71ce9a2455cff36c",
+  "boot_static_volume_crc_verified_blocks": 28,
+  "kernel_compressed_sha256": "c53d2c9fadb3d24973a03a8d47fe268742f584450e8dcce290a03facc9508bf1",
+  "kernel_decompressed_sha256": "ec37c406fdd8a5114d66b444f88b4e810004e6560aa1efa0dbe09f104a81d74c",
+  "ikconfig_sha256": "3e873b04ea617659d07f6bd999c72239b5f0e85c63fa1bc777c1ee4bcdadcb90",
+  "kernel_configuration_header": "# Linux/arm64 4.1.52 Kernel Configuration",
+  "thp_enabled_in_target_kernel_build": false,
+  "target_configuration_lines": [
+    "CONFIG_ARM64=y",
+    "CONFIG_HAVE_ARCH_TRANSPARENT_HUGEPAGE=y",
+    "# CONFIG_TRANSPARENT_HUGEPAGE is not set",
+    "CONFIG_COMPAT=y"
+  ],
+  "vendor_and_candidate_kernel_identical": true,
+  "source_sha256": {
+    "analysis/r9r2_diagnostics/kernel.py": "1c3d745fb13de21fb5269c400986ad6997460398343890f1ba77ff33b3001a1c",
+    "build/dependencies.lock.json": "59b00242146e8381cad51056e8499964d0f5808e94459830a0951a612354971c",
+    "build/release_config.json": "667d22ceb8ac364f0ac2e2f0c6001f8b7ea261750ca1291ef007a3185553fed9",
+    "output/release_gates.json": "e8655961d79d6324ae46956b57b04ecec88a14ed50fc4698966da3ca58722453"
+  },
+  "limits": [
+    "Static image readback, not physical boot evidence",
+    "The observed Linux6.12 THP promotion cannot be attributed to this target4.1.52 kernel build",
+    "No inference of exact target RSS, page reclaim performance or leak freedom"
+  ]
+}
