@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "status": "EXPERIMENTAL_PRERELEASE_PUBLISHED_ASSETS_VERIFIED_NOT_DEVICE_ACCEPTED",
+  "repository": "fanxu1218/RT-AX86U",
+  "release_id": 438357174,
+  "tag": "localmod-native-38812-p6-experimental",
+  "url": "https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod-native-38812-p6-experimental",
+  "title": "RT-AX86U 388.12_2 P6 实验预发布（未实机验收 / NOT_FLASH_READY）",
+  "published_at": "2026-11-08T16:12:20Z",
+  "source_commit": "266dc076542a69710cadf9e5dfbebb942f6e025c",
+  "tag_commit_verified": true,
+  "prerelease": true,
+  "draft": false,
+  "is_latest": false,
+  "flash_ready": false,
+  "physical_router_accessed": false,
+  "physical_router_flashed": false,
+  "real_uu_acceleration_tested": false,
+  "main_firmware_sha256": "fc7af429b6b9824dab8a06882e36b940ea69eb9e54617e8d89c770c6c194d3ab",
+  "fancyss_version": "3.5.29",
+  "fancyss_adaptation": 2,
+  "verification_scope": "Local isolated validation only; P5 evidence retained and separately related to P6 by checked production-file equivalence",
+  "assets": {
+    "fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz": {
+      "id": 724452961,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz",
+      "bytes": 19790810,
+      "sha256": "b45d1294022b7914f6ffa6ae67c688e4870ef7aa07f3556657feec37a034d592",
+      "github_digest": "sha256:b45d1294022b7914f6ffa6ae67c688e4870ef7aa07f3556657feec37a034d592",
+      "github_digest_matches_local": true
+    },
+    "fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz.sha256": {
+      "id": 724453014,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz.sha256",
+      "bytes": 110,
+      "sha256": "14ec3af2b53ca569b7d60d897e2237ab651510219f8a1c87e9c1bfcee0536960",
+      "github_digest": "sha256:14ec3af2b53ca569b7d60d897e2237ab651510219f8a1c87e9c1bfcee0536960",
+      "github_digest_matches_local": true
+    },
+    "merlin38812-native-P6-sources.tar.gz": {
+      "id": 724453055,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/merlin38812-native-P6-sources.tar.gz",
+      "bytes": 520676,
+      "sha256": "f9433a4fc4283fe1d1bf51f253334b29a683899aa5d1a902e703c6cf974c3eb4",
+      "github_digest": "sha256:f9433a4fc4283fe1d1bf51f253334b29a683899aa5d1a902e703c6cf974c3eb4",
+      "github_digest_matches_local": true
+    },
+    "merlin38812_local_gate.json": {
+      "id": 724453110,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/merlin38812_local_gate.json",
+      "bytes": 21532,
+      "sha256": "9b1c8d3641b2ba26b4307506693a4fc0acf9d00a46a47114981cca78c24b4d72",
+      "github_digest": "sha256:9b1c8d3641b2ba26b4307506693a4fc0acf9d00a46a47114981cca78c24b4d72",
+      "github_digest_matches_local": true
+    },
+    "merlin38812_P5_P6_equivalence.json": {
+      "id": 724453058,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/merlin38812_P5_P6_equivalence.json",
+      "bytes": 3688,
+      "sha256": "c91b3331581edb758720981e5a7adf5a9b58b785fa5d829b8276a720f8bfd1db",
+      "github_digest": "sha256:c91b3331581edb758720981e5a7adf5a9b58b785fa5d829b8276a720f8bfd1db",
+      "github_digest_matches_local": true
+    },
+    "P6-VALIDATION.md": {
+      "id": 724452960,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/P6-VALIDATION.md",
+      "bytes": 5903,
+      "sha256": "96f683e28b2bf0cc8c8e146a47f442a7bb0a6cab4b9331ad5c69e6664e705e29",
+      "github_digest": "sha256:96f683e28b2bf0cc8c8e146a47f442a7bb0a6cab4b9331ad5c69e6664e705e29",
+      "github_digest_matches_local": true
+    },
+    "RT-AX86U_3004_388.12_2_localmod_native_P6_32bd61b0_NOT_FLASH_READY.w": {
+      "id": 724452980,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/RT-AX86U_3004_388.12_2_localmod_native_P6_32bd61b0_NOT_FLASH_READY.w",
+      "bytes": 86769684,
+      "sha256": "fc7af429b6b9824dab8a06882e36b940ea69eb9e54617e8d89c770c6c194d3ab",
+      "github_digest": "sha256:fc7af429b6b9824dab8a06882e36b940ea69eb9e54617e8d89c770c6c194d3ab",
+      "github_digest_matches_local": true
+    },
+    "RT-AX86U_3004_388.12_2_localmod_native_P6_32bd61b0_NOT_FLASH_READY.w.sha256": {
+      "id": 724452976,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/RT-AX86U_3004_388.12_2_localmod_native_P6_32bd61b0_NOT_FLASH_READY.w.sha256",
+      "bytes": 135,
+      "sha256": "f8a81b21afe32b2cdad3330e8f2a7df7920968fc279e64636def1d13f1efc13b",
+      "github_digest": "sha256:f8a81b21afe32b2cdad3330e8f2a7df7920968fc279e64636def1d13f1efc13b",
+      "github_digest_matches_local": true
+    },
+    "SHA256SUMS": {
+      "id": 724452975,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/SHA256SUMS",
+      "bytes": 885,
+      "sha256": "d3013b487ddc6994b782f9e7598a0b15df8231ae3c322bee1cfc04e8ca4af858",
+      "github_digest": "sha256:d3013b487ddc6994b782f9e7598a0b15df8231ae3c322bee1cfc04e8ca4af858",
+      "github_digest_matches_local": true
+    }
+  },
+  "historical_sealed_build_metadata_unchanged": true,
+  "public_download_checks": {
+    "fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz": {
+      "status": 200,
+      "method": "unauthenticated HTTPS HEAD with redirects"
+    },
+    "RT-AX86U_3004_388.12_2_localmod_native_P6_32bd61b0_NOT_FLASH_READY.w": {
+      "status": 200,
+      "method": "unauthenticated HTTPS HEAD with redirects"
+    }
+  }
+}

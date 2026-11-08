@@ -2,11 +2,11 @@
 
 当前开发候选为普通大陆版 RT-AX86U 的 **3004.388.12_2 / localmod-native-P6**：完整继承该机型的上游梅林框架，追加 **软件中心 1.9.60**，保留原生 **网易 UU** 启动路径及页面，提供 Fancyss 3.5.29 HND v8 Full 兼容安装入口。
 
-**P6 仍标记 `NOT_FLASH_READY`，未刷机、未实机验收、未发布固件 Release。** 本地集成与验证已完成：P6 实测 3,603.1 秒、1,029 次正常查询、35 次异常/重启，16 类事件各至少两轮，零计划外失败；完整数据与独立门禁见 [P6 本地门禁](output/merlin38812_local_gate.json)。本地交付以 [交付记录](output/merlin38812_native_local_delivery.json) 为准。原生框架范围、真实 UU 验证边界和进度见 [388.12_2 原生框架进度](output/388.12_2原生框架进度.md)，复核与手动推送见 [本地交付说明](output/388.12_2本地交付与手动推送.md)。旧 r9-r2 镜像与历史发布保留。
+**P6 已发布为[实验预发布](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod-native-38812-p6-experimental)，仍标记 `NOT_FLASH_READY`，未刷机、未实机验收。** 本地集成与验证已完成：P6 实测 3,603.1 秒、1,029 次正常查询、35 次异常/重启，16 类事件各至少两轮，零计划外失败；完整数据与独立门禁见 [P6 本地门禁](output/merlin38812_local_gate.json)。本地交付以 [交付记录](output/merlin38812_native_local_delivery.json) 为准。线上固件、Fancyss 兼容包及校验见 [Release](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod-native-38812-p6-experimental)，上传核对见 [发布回执](output/merlin38812_release_delivery.json)。原生框架范围、真实 UU 验证边界和进度见 [388.12_2 原生框架进度](output/388.12_2原生框架进度.md)，复核与手动推送见 [本地交付说明](output/388.12_2本地交付与手动推送.md)。旧 r9-r2 镜像与历史发布保留。
 
 原厂 UU 为必保留项，用户接受分阶段移植。原生 VPN 页面、库、服务控制框架和内核模块均来自固定上游镜像；本地已验证配置生成、启停通知、真实 OpenVPN 隧道，以及软件中心和插件恢复流程。配置/通知夹具、隔离系统通信和目标设备启动分别记录，不能互相替代。
 
-2026-11-09 用户授权由代理提交并推送本地源码、必要配置依赖和验证报告。普通 Git 推送不上传被忽略的固件二进制，也不创建 Release；当前源码状态以 GitHub 分支提交为准。封存交付包中的 `git_commit_created: false`、`agent_pushed_or_published: false` 记录封存当时的状态，后续提交不改写这些校验绑定的历史证据。
+2026-11-09 源码、必要配置依赖和验证报告已提交推送；随后按用户授权发布 P6 实验预发布，共 9 个附件。两个主附件的公开下载入口返回 HTTP 200，全部附件的 GitHub SHA256 摘要与本地一致。Release 绑定已验证源码提交 `266dc07`，不设为 Latest；普通 Git 分支和发布附件分别记录。封存交付包中的 `git_commit_created: false`、`agent_pushed_or_published: false` 记录封存当时的状态，后续提交不改写这些校验绑定的历史证据。
 
 ## 已保留的官方底包 r9-r2 历史记录
 
