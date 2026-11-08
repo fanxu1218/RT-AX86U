@@ -309,3 +309,14 @@
 !/analysis/r9r1_coexist/native_run.py
 
 !/analysis/r9r1_coexist/observed_run.py
+
+# Independent r9-r2 latency and memory attribution evidence.
+!/analysis/r9r2_diagnostics/
+/analysis/r9r2_diagnostics/*
+!/analysis/r9r2_diagnostics/check.py
+!/analysis/r9r2_diagnostics/diagnostics.go
+!/analysis/r9r2_diagnostics/analyze.py
+!/output/r9r2_diagnostic_*_tests.json
+!/output/r9r2_diagnostic_*_review.json
+!/output/r9r2_diagnostic_*.log
+!/output/r9-r2延迟与内存归因.md

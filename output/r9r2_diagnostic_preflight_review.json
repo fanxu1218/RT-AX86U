@@ -1,0 +1,949 @@
+{
+  "status": "LOCAL_ATTRIBUTION_REVIEW_COMPLETE",
+  "mode": "preflight",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+  "same_pid": 9120,
+  "duration_seconds": 180.864645664,
+  "normal_status_queries": 31,
+  "page_requests": 90,
+  "page_counts": {
+    "load_1": 59,
+    "warmup": 31
+  },
+  "gc_cycles": 1,
+  "gc_live_trace_mb_values": [
+    0.0
+  ],
+  "runtime_forced_gc_count": 0,
+  "gc": [
+    {
+      "number": 1,
+      "process_elapsed_seconds": 247.275,
+      "heap_before_trace_mb": 3.0,
+      "heap_after_trace_mb": 3.0,
+      "live_heap_trace_mb": 0.0,
+      "goal_trace_mb": 4.0,
+      "runtime_forced": false,
+      "raw": "gc 1 @247.275s 0%: 10+39+4.3 ms clock, 10+7.5/12/0+4.3 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 1 P"
+    }
+  ],
+  "no_thp_control_gc": [
+    {
+      "number": 1,
+      "process_elapsed_seconds": 251.64,
+      "heap_before_trace_mb": 3.0,
+      "heap_after_trace_mb": 3.0,
+      "live_heap_trace_mb": 0.0,
+      "goal_trace_mb": 4.0,
+      "runtime_forced": false,
+      "raw": "gc 1 @251.640s 0%: 8.3+29+5.8 ms clock, 8.3+0/12/0+5.8 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 1 P"
+    }
+  ],
+  "no_thp_control_gc_live_trace_mb_values": [
+    0.0
+  ],
+  "no_thp_control_quiet_boundaries": [
+    {
+      "stage": "idle_1",
+      "elapsed_seconds": 166.529057696,
+      "rss_kib": 15184,
+      "anonymous_kib": 15180,
+      "huge_kib": 0,
+      "gc_count": 1,
+      "latest_gc": {
+        "number": 1,
+        "process_elapsed_seconds": 251.64,
+        "heap_before_trace_mb": 3.0,
+        "heap_after_trace_mb": 3.0,
+        "live_heap_trace_mb": 0.0,
+        "goal_trace_mb": 4.0,
+        "runtime_forced": false,
+        "raw": "gc 1 @251.640s 0%: 8.3+29+5.8 ms clock, 8.3+0/12/0+5.8 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 1 P"
+      },
+      "rollup": {
+        "AnonHugePages": 0,
+        "Anonymous": 15180,
+        "FilePmdMapped": 0,
+        "KSM": 0,
+        "LazyFree": 0,
+        "Locked": 0,
+        "Private_Clean": 0,
+        "Private_Dirty": 15180,
+        "Private_Hugetlb": 0,
+        "Pss": 15182,
+        "Pss_Anon": 15180,
+        "Pss_Dirty": 15180,
+        "Pss_File": 2,
+        "Pss_Shmem": 0,
+        "Referenced": 15184,
+        "Rss": 15184,
+        "Shared_Clean": 4,
+        "Shared_Dirty": 0,
+        "Shared_Hugetlb": 0,
+        "ShmemPmdMapped": 0,
+        "Swap": 0,
+        "SwapPss": 0
+      },
+      "default_minus_control_rss_kib": 2440
+    },
+    {
+      "stage": "final_idle",
+      "elapsed_seconds": 180.37081496,
+      "rss_kib": 15204,
+      "anonymous_kib": 15200,
+      "huge_kib": 0,
+      "gc_count": 1,
+      "latest_gc": {
+        "number": 1,
+        "process_elapsed_seconds": 251.64,
+        "heap_before_trace_mb": 3.0,
+        "heap_after_trace_mb": 3.0,
+        "live_heap_trace_mb": 0.0,
+        "goal_trace_mb": 4.0,
+        "runtime_forced": false,
+        "raw": "gc 1 @251.640s 0%: 8.3+29+5.8 ms clock, 8.3+0/12/0+5.8 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 1 P"
+      },
+      "rollup": {
+        "AnonHugePages": 0,
+        "Anonymous": 15200,
+        "FilePmdMapped": 0,
+        "KSM": 0,
+        "LazyFree": 0,
+        "Locked": 0,
+        "Private_Clean": 0,
+        "Private_Dirty": 15200,
+        "Private_Hugetlb": 0,
+        "Pss": 15202,
+        "Pss_Anon": 15200,
+        "Pss_Dirty": 15200,
+        "Pss_File": 2,
+        "Pss_Shmem": 0,
+        "Referenced": 15204,
+        "Rss": 15204,
+        "Shared_Clean": 4,
+        "Shared_Dirty": 0,
+        "Shared_Hugetlb": 0,
+        "ShmemPmdMapped": 0,
+        "Swap": 0,
+        "SwapPss": 0
+      },
+      "default_minus_control_rss_kib": 2424
+    }
+  ],
+  "no_thp_control_page_counts": {
+    "load_1": 59,
+    "warmup": 31
+  },
+  "no_thp_control_final_minus_first_idle_rss_kib": 20,
+  "quiet_boundaries": [
+    {
+      "stage": "idle_1",
+      "role": "phase_end",
+      "elapsed_seconds": 166.529057696,
+      "rss_kib": 17624,
+      "anonymous_kib": 17620,
+      "private_dirty_kib": 17620,
+      "huge_kib": 12288,
+      "gc_count": 1,
+      "latest_gc": {
+        "number": 1,
+        "process_elapsed_seconds": 247.275,
+        "heap_before_trace_mb": 3.0,
+        "heap_after_trace_mb": 3.0,
+        "live_heap_trace_mb": 0.0,
+        "goal_trace_mb": 4.0,
+        "runtime_forced": false,
+        "raw": "gc 1 @247.275s 0%: 10+39+4.3 ms clock, 10+7.5/12/0+4.3 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 1 P"
+      },
+      "threads": "4",
+      "fds": 6
+    },
+    {
+      "stage": "final_idle",
+      "role": "final_idle_end",
+      "elapsed_seconds": 180.37081496,
+      "rss_kib": 17628,
+      "anonymous_kib": 17624,
+      "private_dirty_kib": 17624,
+      "huge_kib": 12288,
+      "gc_count": 1,
+      "latest_gc": {
+        "number": 1,
+        "process_elapsed_seconds": 247.275,
+        "heap_before_trace_mb": 3.0,
+        "heap_after_trace_mb": 3.0,
+        "live_heap_trace_mb": 0.0,
+        "goal_trace_mb": 4.0,
+        "runtime_forced": false,
+        "raw": "gc 1 @247.275s 0%: 10+39+4.3 ms clock, 10+7.5/12/0+4.3 ms cpu, 3->3->0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 1 P"
+      },
+      "threads": "4",
+      "fds": 6
+    }
+  ],
+  "load_boundaries": [
+    {
+      "stage": "load_1",
+      "role": "phase_end",
+      "elapsed_seconds": 45.374348976,
+      "rss_kib": 15340,
+      "anonymous_kib": 15336,
+      "private_dirty_kib": 15336,
+      "huge_kib": 10240,
+      "gc_count": 0,
+      "latest_gc": null,
+      "threads": "4",
+      "fds": 6
+    }
+  ],
+  "quiet_rss_deltas_kib": [
+    4
+  ],
+  "final_minus_first_idle_rss_kib": 4,
+  "mapping_changes_after_first_idle": [
+    {
+      "group": "---p anonymous",
+      "first_rss_kib": 0,
+      "final_rss_kib": 0,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0
+    },
+    {
+      "group": "r--p /jffs/.koolshare/bin/ddnsgo",
+      "first_rss_kib": 0,
+      "final_rss_kib": 0,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0
+    },
+    {
+      "group": "r--p anonymous",
+      "first_rss_kib": 4792,
+      "final_rss_kib": 4792,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0
+    },
+    {
+      "group": "r-xp [sigpage]",
+      "first_rss_kib": 4,
+      "final_rss_kib": 4,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0
+    },
+    {
+      "group": "r-xp [vectors]",
+      "first_rss_kib": 0,
+      "final_rss_kib": 0,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0
+    },
+    {
+      "group": "r-xp anonymous",
+      "first_rss_kib": 5412,
+      "final_rss_kib": 5412,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0
+    },
+    {
+      "group": "rw-p [stack]",
+      "first_rss_kib": 260,
+      "final_rss_kib": 260,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0
+    },
+    {
+      "group": "rw-p anonymous",
+      "first_rss_kib": 7156,
+      "final_rss_kib": 7160,
+      "rss_delta_kib": 4,
+      "private_dirty_delta_kib": 4
+    }
+  ],
+  "timing_groups": [
+    {
+      "kind": "backend",
+      "method": "ss_status.sh",
+      "valid": 6,
+      "errors": 0,
+      "total_seconds": {
+        "count": 6,
+        "minimum": 3.8225143360000002,
+        "median": 3.9270929839999997,
+        "maximum": 4.579910784
+      },
+      "tls_seconds": null,
+      "script_base_seconds": {
+        "count": 6,
+        "minimum": 3.430000000000007,
+        "median": 3.519999999999982,
+        "maximum": 4.1699999999999875
+      }
+    },
+    {
+      "kind": "controlled_pause_12s",
+      "method": "ss_status.sh",
+      "valid": 0,
+      "errors": 1,
+      "total_seconds": {
+        "count": 1,
+        "minimum": 10.016492928,
+        "median": 10.016492928,
+        "maximum": 10.016492928
+      },
+      "tls_seconds": {
+        "count": 1,
+        "minimum": 0.136847504,
+        "median": 0.136847504,
+        "maximum": 0.136847504
+      },
+      "script_base_seconds": {
+        "count": 1,
+        "minimum": 3.5900000000000034,
+        "median": 3.5900000000000034,
+        "maximum": 3.5900000000000034
+      }
+    },
+    {
+      "kind": "controlled_pause_4s",
+      "method": "ss_status.sh",
+      "valid": 1,
+      "errors": 0,
+      "total_seconds": {
+        "count": 1,
+        "minimum": 7.935924096,
+        "median": 7.935924096,
+        "maximum": 7.935924096
+      },
+      "tls_seconds": {
+        "count": 1,
+        "minimum": 0.05986950399999999,
+        "median": 0.05986950399999999,
+        "maximum": 0.05986950399999999
+      },
+      "script_base_seconds": {
+        "count": 1,
+        "minimum": 3.430000000000007,
+        "median": 3.430000000000007,
+        "maximum": 3.430000000000007
+      }
+    },
+    {
+      "kind": "native_0",
+      "method": "diag_fancy_control.sh",
+      "valid": 2,
+      "errors": 0,
+      "total_seconds": {
+        "count": 2,
+        "minimum": 0.393854128,
+        "median": 0.403944008,
+        "maximum": 0.414033888
+      },
+      "tls_seconds": {
+        "count": 2,
+        "minimum": 0.12164212799999999,
+        "median": 0.136729728,
+        "maximum": 0.151817328
+      },
+      "script_base_seconds": null
+    },
+    {
+      "kind": "native_0",
+      "method": "ss_status.sh",
+      "valid": 2,
+      "errors": 0,
+      "total_seconds": {
+        "count": 2,
+        "minimum": 4.061981088,
+        "median": 4.274462688,
+        "maximum": 4.486944288
+      },
+      "tls_seconds": {
+        "count": 2,
+        "minimum": 0.059095616000000004,
+        "median": 0.157047824,
+        "maximum": 0.255000032
+      },
+      "script_base_seconds": {
+        "count": 2,
+        "minimum": 3.4799999999999898,
+        "median": 3.5349999999999966,
+        "maximum": 3.5900000000000034
+      }
+    },
+    {
+      "kind": "native_2",
+      "method": "diag_fancy_control.sh",
+      "valid": 2,
+      "errors": 0,
+      "total_seconds": {
+        "count": 2,
+        "minimum": 0.429259744,
+        "median": 0.456957192,
+        "maximum": 0.48465464
+      },
+      "tls_seconds": {
+        "count": 2,
+        "minimum": 0.155129792,
+        "median": 0.163072376,
+        "maximum": 0.17101496
+      },
+      "script_base_seconds": null
+    },
+    {
+      "kind": "native_2",
+      "method": "ss_status.sh",
+      "valid": 2,
+      "errors": 0,
+      "total_seconds": {
+        "count": 2,
+        "minimum": 3.9179748,
+        "median": 4.158791176,
+        "maximum": 4.399607552
+      },
+      "tls_seconds": {
+        "count": 2,
+        "minimum": 0.084917712,
+        "median": 0.087027592,
+        "maximum": 0.089137472
+      },
+      "script_base_seconds": {
+        "count": 2,
+        "minimum": 3.4000000000000057,
+        "median": 3.510000000000005,
+        "maximum": 3.6200000000000045
+      }
+    },
+    {
+      "kind": "native_cycles",
+      "method": "ss_status.sh",
+      "valid": 6,
+      "errors": 0,
+      "total_seconds": {
+        "count": 6,
+        "minimum": 3.880812544,
+        "median": 4.0897973919999995,
+        "maximum": 4.561925248
+      },
+      "tls_seconds": {
+        "count": 6,
+        "minimum": 0.060316704,
+        "median": 0.06219487200000001,
+        "maximum": 0.201547376
+      },
+      "script_base_seconds": {
+        "count": 6,
+        "minimum": 3.3700000000000045,
+        "median": 3.605000000000018,
+        "maximum": 4.019999999999982
+      }
+    },
+    {
+      "kind": "qemu_user",
+      "method": "diag_fancy_control.sh",
+      "valid": 2,
+      "errors": 0,
+      "total_seconds": {
+        "count": 2,
+        "minimum": 2.02267696,
+        "median": 2.117264168,
+        "maximum": 2.211851376
+      },
+      "tls_seconds": {
+        "count": 2,
+        "minimum": 1.5887397600000002,
+        "median": 1.665716824,
+        "maximum": 1.742693888
+      },
+      "script_base_seconds": null
+    },
+    {
+      "kind": "qemu_user",
+      "method": "ss_status.sh",
+      "valid": 2,
+      "errors": 0,
+      "total_seconds": {
+        "count": 2,
+        "minimum": 4.908219136,
+        "median": 4.927259255999999,
+        "maximum": 4.946299376
+      },
+      "tls_seconds": {
+        "count": 2,
+        "minimum": 0.367858368,
+        "median": 0.37166488799999997,
+        "maximum": 0.375471408
+      },
+      "script_base_seconds": {
+        "count": 2,
+        "minimum": 3.579999999999984,
+        "median": 3.7549999999999955,
+        "maximum": 3.930000000000007
+      }
+    }
+  ],
+  "latency_observations": [
+    {
+      "id": 91005,
+      "kind": "native_0",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 4.486944288,
+      "error": "<nil>",
+      "script_base_seconds": 3.4799999999999898,
+      "callback_ids": [
+        "91005"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91006,
+      "kind": "native_0",
+      "method": "diag_fancy_control.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 0.393854128,
+      "error": "<nil>",
+      "script_base_seconds": null,
+      "callback_ids": [],
+      "script_invocations": 0,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91007,
+      "kind": "backend",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 3.959835504,
+      "error": "<nil>",
+      "script_base_seconds": 3.549999999999983,
+      "callback_ids": [
+        "91007"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91008,
+      "kind": "native_0",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 4.061981088,
+      "error": "<nil>",
+      "script_base_seconds": 3.5900000000000034,
+      "callback_ids": [
+        "91008"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91009,
+      "kind": "native_0",
+      "method": "diag_fancy_control.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 0.414033888,
+      "error": "<nil>",
+      "script_base_seconds": null,
+      "callback_ids": [],
+      "script_invocations": 0,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91010,
+      "kind": "backend",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 3.8225143360000002,
+      "error": "<nil>",
+      "script_base_seconds": 3.430000000000007,
+      "callback_ids": [
+        "91010"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91011,
+      "kind": "qemu_user",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 4.946299376,
+      "error": "<nil>",
+      "script_base_seconds": 3.579999999999984,
+      "callback_ids": [
+        "91011"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91012,
+      "kind": "qemu_user",
+      "method": "diag_fancy_control.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 2.211851376,
+      "error": "<nil>",
+      "script_base_seconds": null,
+      "callback_ids": [],
+      "script_invocations": 0,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91013,
+      "kind": "backend",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 4.524611536,
+      "error": "<nil>",
+      "script_base_seconds": 4.110000000000014,
+      "callback_ids": [
+        "91013"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91014,
+      "kind": "qemu_user",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 4.908219136,
+      "error": "<nil>",
+      "script_base_seconds": 3.930000000000007,
+      "callback_ids": [
+        "91014"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91015,
+      "kind": "qemu_user",
+      "method": "diag_fancy_control.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 2.02267696,
+      "error": "<nil>",
+      "script_base_seconds": null,
+      "callback_ids": [],
+      "script_invocations": 0,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91016,
+      "kind": "backend",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 4.579910784,
+      "error": "<nil>",
+      "script_base_seconds": 4.1699999999999875,
+      "callback_ids": [
+        "91016"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91017,
+      "kind": "native_2",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 4.399607552,
+      "error": "<nil>",
+      "script_base_seconds": 3.6200000000000045,
+      "callback_ids": [
+        "91017"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91018,
+      "kind": "native_2",
+      "method": "diag_fancy_control.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 0.429259744,
+      "error": "<nil>",
+      "script_base_seconds": null,
+      "callback_ids": [],
+      "script_invocations": 0,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91019,
+      "kind": "backend",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 3.8926086399999997,
+      "error": "<nil>",
+      "script_base_seconds": 3.4799999999999898,
+      "callback_ids": [
+        "91019"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91020,
+      "kind": "native_2",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 3.9179748,
+      "error": "<nil>",
+      "script_base_seconds": 3.4000000000000057,
+      "callback_ids": [
+        "91020"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91021,
+      "kind": "native_2",
+      "method": "diag_fancy_control.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 0.48465464,
+      "error": "<nil>",
+      "script_base_seconds": null,
+      "callback_ids": [],
+      "script_invocations": 0,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91022,
+      "kind": "backend",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 3.894350464,
+      "error": "<nil>",
+      "script_base_seconds": 3.4899999999999807,
+      "callback_ids": [
+        "91022"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91023,
+      "kind": "controlled_pause_4s",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 7.935924096,
+      "error": "<nil>",
+      "script_base_seconds": 3.430000000000007,
+      "callback_ids": [
+        "91023"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 4
+    },
+    {
+      "id": 91024,
+      "kind": "controlled_pause_12s",
+      "method": "ss_status.sh",
+      "valid": false,
+      "code": 0,
+      "elapsed_seconds": 10.016492928,
+      "error": "Post \"https://192.168.77.1:34443/_api/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "script_base_seconds": 3.5900000000000034,
+      "callback_ids": [
+        "91024"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 12
+    },
+    {
+      "id": 91027,
+      "kind": "native_cycles",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 4.54420992,
+      "error": "<nil>",
+      "script_base_seconds": 3.9099999999999966,
+      "callback_ids": [
+        "91027"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91034,
+      "kind": "native_cycles",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 4.561925248,
+      "error": "<nil>",
+      "script_base_seconds": 4.019999999999982,
+      "callback_ids": [
+        "91034"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91040,
+      "kind": "native_cycles",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 3.880812544,
+      "error": "<nil>",
+      "script_base_seconds": 3.3700000000000045,
+      "callback_ids": [
+        "91040"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91047,
+      "kind": "native_cycles",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 4.242525408,
+      "error": "<nil>",
+      "script_base_seconds": 3.75,
+      "callback_ids": [
+        "91047"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91054,
+      "kind": "native_cycles",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 3.937069376,
+      "error": "<nil>",
+      "script_base_seconds": 3.4600000000000364,
+      "callback_ids": [
+        "91054"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    },
+    {
+      "id": 91061,
+      "kind": "native_cycles",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 3.926813584,
+      "error": "<nil>",
+      "script_base_seconds": 3.4499999999999886,
+      "callback_ids": [
+        "91061"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 0
+    }
+  ],
+  "natural_latency_failures": [],
+  "controlled_fault_observations": [
+    {
+      "id": 91023,
+      "kind": "controlled_pause_4s",
+      "method": "ss_status.sh",
+      "valid": true,
+      "code": 200,
+      "elapsed_seconds": 7.935924096,
+      "error": "<nil>",
+      "script_base_seconds": 3.430000000000007,
+      "callback_ids": [
+        "91023"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 4
+    },
+    {
+      "id": 91024,
+      "kind": "controlled_pause_12s",
+      "method": "ss_status.sh",
+      "valid": false,
+      "code": 0,
+      "elapsed_seconds": 10.016492928,
+      "error": "Post \"https://192.168.77.1:34443/_api/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "script_base_seconds": 3.5900000000000034,
+      "callback_ids": [
+        "91024"
+      ],
+      "script_invocations": 1,
+      "controlled_pause_seconds": 12
+    }
+  ],
+  "pprof_available": false,
+  "resource_ranges": {
+    "smaps_rss_kib": {
+      "count": 16,
+      "minimum": 13204,
+      "median": 15340.0,
+      "maximum": 17628
+    },
+    "private_dirty_kib": {
+      "count": 16,
+      "minimum": 13200,
+      "median": 15336.0,
+      "maximum": 17624
+    },
+    "anonymous_kib": {
+      "count": 16,
+      "minimum": 13200,
+      "median": 15336.0,
+      "maximum": 17624
+    },
+    "anon_huge_pages_kib": {
+      "count": 16,
+      "minimum": 8192,
+      "median": 10240.0,
+      "maximum": 12288
+    },
+    "swap_kib": {
+      "count": 16,
+      "minimum": 0,
+      "median": 0.0,
+      "maximum": 0
+    }
+  },
+  "fd_range": {
+    "count": 16,
+    "minimum": 6,
+    "median": 6.0,
+    "maximum": 6
+  },
+  "thread_values": [
+    "4"
+  ],
+  "source_sha256": {
+    "output/r9r2_diagnostic_preflight_tests.json": "ea94f384d4d8ec4782a30b1020fe1ba81c4ce0fd5985d31f42f9e657e6f83f78",
+    "analysis/r9r2_diagnostics/analyze.py": "44d40c28f99e80cecbc55297e34681debdc6561385671b74ce4f4234f6512be8"
+  },
+  "limits": [
+    "Deliberate SIGSTOP is an attribution control, not reproduction of the unexplained natural timeout",
+    "No latency success threshold turns failure observations into a stability pass; requests are not replayed",
+    "GC trace labels have coarse MB precision; RSS is resident mappings, not retained application objects",
+    "Target DDNS-Go is native ARM32 in the system guest; only the labelled HTTPd calibration uses QEMU-user",
+    "Repeated quiet baselines bound observed growth only; no multiday or real-device proof"
+  ]
+}
