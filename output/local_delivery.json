@@ -1,118 +1,120 @@
 {
   "schema": 1,
   "status": "LOCAL_VALIDATED_MANUAL_REMOTE_HANDOFF",
-  "revision": "localmod2-r9-r1-experimental",
-  "validated_source_commit": "976e3ba95a7ea6a02b1fa8d397db922a5299e945",
+  "revision": "localmod2-r9-r2-experimental",
+  "validated_source_commit": "828175c467207627863255856b08dbca5382f8b2",
   "implementation_commits": [
-    "976e3ba95a7ea6a02b1fa8d397db922a5299e945"
+    "976e3ba95a7ea6a02b1fa8d397db922a5299e945",
+    "828175c467207627863255856b08dbca5382f8b2"
   ],
-  "baseline_commit": "59a2e1801176d7e2eb59232799fe84f83ce42309",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
+  "baseline_commit": "e9f0f14aed2e661a6bbece3b8632aeb49282ca31",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w",
   "candidate_bytes": 90177556,
-  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+  "validated_runtime_bridge_sha256": "c9077a10841d321723ce9fa23b3335bf9126db99cb8f698f10620c7c281d75ec",
   "source_inputs_verified": 170,
   "dependency_files_verified": 93,
   "artifact_bound_report_sha256": {
-    "output/lifecycle_tests.json": "58a722fce3623bbe6a84763eb0e59c05e89cec385613eac53d32c2705f0a497c",
-    "output/online_plugin_tests.json": "21be0befd560cc1d51749a084ef76f5c73c2744707be9af056b238ef7e848d8a",
-    "output/real_plugin_tests.json": "a13b9a5fde925f0bce4518021b4cc81aa9fbd47ec614722219af12dba6115f3d",
-    "output/fancyss_tests.json": "22dc2b56592060c04eebe1f2200cb98cd1cc2bb45dd0e46ff96ad2ab6d44d723",
-    "output/softcenter_upgrade_tests.json": "b974e2c8db16a451a316094f5ca8eaed07057026d05fc2f81349ea0cadc3fc49",
-    "output/softcenter_frontend_tests.json": "3aab243f2d97d863a3dbadd84809a8640aee4a5d6b37ec94baecef871709b02f",
-    "output/merlin_component_tests.json": "b47c6ef72769720877283270c363ff03ba246c95032e099aea0b61fbcfc4b609",
-    "output/history_tests.json": "46483126a3ae24a6f5dbbfa7e048385d11546822011422f3949bfb5f6dfbefc0",
-    "output/shard_tests.json": "7a2dba2d6cbf17815fc274ce2cd477dc5c3d5e6195b2d1fb7b47f579278c34c5",
-    "output/model_isolation_tests.json": "5975f0a04719ab1bcc76111586c74968566f94e5f91ce122448f8a8247042d58",
-    "output/https_stability_tests.json": "6b65953d0cfdcc862aad59d232edd6b0f39f14233582e6f9f7c0f63336858427",
-    "output/interruption_tests.json": "b242198c450b183b6ba1d3bd8ebbd1ddf952f75b7100f50cebd4178582a9974d",
-    "output/recovery_safety_tests.json": "6fb755515ccf7f62aa1c296def1c3d1778015e161cbf53ccb9a392bc0d802986",
-    "output/hardening_tests.json": "e65b2c89d61e22786155cd8c1bee3af17aede6002f17fba9fd9f94728fd76059",
-    "output/tls_input_tests.json": "d2135d69ca56767f24b8beefce0a23b939b428ef15baae989c687359e2b2c32f",
+    "output/lifecycle_tests.json": "941b56b79b88a98773cfa352a8c3c11a008db4adfb89dfe753226d7fffa2189f",
+    "output/online_plugin_tests.json": "6e11500345d99d8e16bc1895e3f1042e2290915ab56b50ccbb45e2ea0ab010d5",
+    "output/real_plugin_tests.json": "d4051cc99b5a44dfdf94ff37802fc48d4c11ff7a721a62a52b10b43dfc9bc0e7",
+    "output/fancyss_tests.json": "54ecbd777b20768dba4298312be13166169bc5f21ec4ce0ed22a49e81a1ce0dc",
+    "output/softcenter_upgrade_tests.json": "c67776022b9c3844120a07211723fdc15081ecba1964a5e3fed57a57543ffad4",
+    "output/softcenter_frontend_tests.json": "997e8bf4f0d665b4fffb8a851e3d1c01f9c11669137b86b88675c94b702e23ad",
+    "output/merlin_component_tests.json": "ed9e42c9d089b1367bb1cd3e694f4c1a70c337102633a825bb60a8569f488d7e",
+    "output/history_tests.json": "6109344fbfdc43006cc66320d00eff91f861389cb1a34666a1ae3801e19039d0",
+    "output/shard_tests.json": "50e965a472a16c74120a5c5a4dfe17dc0bf9404596bb0eb9b1e534d060f5b919",
+    "output/model_isolation_tests.json": "816d585cef9186999d882a46f5d18ddded2bd63aac919ef2b4d54b23337883e1",
+    "output/https_stability_tests.json": "fe32d6874a0ce093334aad9e0ad0be0ae335b5674aab75f1b71c6554ac55e8ab",
+    "output/interruption_tests.json": "95d2350cb0ad7e2aec6f10a70c85428060f4e8bd9cd7dbfcdd46cdc587d97044",
+    "output/recovery_safety_tests.json": "b7700b78d7f07b4f8cdda6a34c525e6f4fcc3f4c9368fb5f2ffa74a814768757",
+    "output/hardening_tests.json": "d4335b612850472da685a940956c0eec2521d16479890bd803ea02d306718d5e",
+    "output/tls_input_tests.json": "0cd7708540789f3c6ce40d867718289ddc5c7773f570e60b83734d572093c454",
     "output/softcenter_ui_mock_tests.json": "30b7107d3b5c721708c702a6e2292dc7fa9fe98821a211f5f8f85769434542a4",
     "output/base_migration_tests.json": "b7b3d5d360beb9cf8322c5088392cd8c069ba072fce78f831c09bc61832821ed"
   },
   "local_results": {
-    "lifecycle_tests": {
+    "output/lifecycle_tests.json": {
       "status": "PASS",
       "checks": 17,
-      "sha256": "58a722fce3623bbe6a84763eb0e59c05e89cec385613eac53d32c2705f0a497c"
+      "sha256": "941b56b79b88a98773cfa352a8c3c11a008db4adfb89dfe753226d7fffa2189f"
     },
-    "online_plugin_tests": {
+    "output/online_plugin_tests.json": {
       "status": "PASS",
       "checks": 28,
-      "sha256": "21be0befd560cc1d51749a084ef76f5c73c2744707be9af056b238ef7e848d8a"
+      "sha256": "6e11500345d99d8e16bc1895e3f1042e2290915ab56b50ccbb45e2ea0ab010d5"
     },
-    "real_plugin_tests": {
+    "output/real_plugin_tests.json": {
       "status": "LOCAL_ISOLATION_PASS",
       "checks": 32,
-      "sha256": "a13b9a5fde925f0bce4518021b4cc81aa9fbd47ec614722219af12dba6115f3d"
+      "sha256": "d4051cc99b5a44dfdf94ff37802fc48d4c11ff7a721a62a52b10b43dfc9bc0e7"
     },
-    "fancyss_tests": {
+    "output/fancyss_tests.json": {
       "status": "LOCAL_CANDIDATE_PLUGINS_PASS",
       "checks": 35,
-      "sha256": "22dc2b56592060c04eebe1f2200cb98cd1cc2bb45dd0e46ff96ad2ab6d44d723"
+      "sha256": "54ecbd777b20768dba4298312be13166169bc5f21ec4ce0ed22a49e81a1ce0dc"
     },
-    "softcenter_upgrade_tests": {
+    "output/softcenter_upgrade_tests.json": {
       "status": "LOCAL_SOFTCENTER_1960_UPGRADE_PASS",
       "checks": 9,
-      "sha256": "b974e2c8db16a451a316094f5ca8eaed07057026d05fc2f81349ea0cadc3fc49"
+      "sha256": "c67776022b9c3844120a07211723fdc15081ecba1964a5e3fed57a57543ffad4"
     },
-    "softcenter_frontend_tests": {
+    "output/softcenter_frontend_tests.json": {
       "status": "LOCAL_DISTRIBUTED_FRONTEND_CONTRACT_PASS",
       "checks": 7,
-      "sha256": "3aab243f2d97d863a3dbadd84809a8640aee4a5d6b37ec94baecef871709b02f"
+      "sha256": "997e8bf4f0d665b4fffb8a851e3d1c01f9c11669137b86b88675c94b702e23ad"
     },
-    "merlin_component_tests": {
+    "output/merlin_component_tests.json": {
       "status": "LOCAL_MERLIN_COMPONENTS_PASS",
       "checks": 19,
-      "sha256": "b47c6ef72769720877283270c363ff03ba246c95032e099aea0b61fbcfc4b609"
+      "sha256": "ed9e42c9d089b1367bb1cd3e694f4c1a70c337102633a825bb60a8569f488d7e"
     },
-    "history_tests": {
+    "output/history_tests.json": {
       "status": "LOCAL_PERSISTENT_HISTORY_PASS",
       "checks": 85,
-      "sha256": "46483126a3ae24a6f5dbbfa7e048385d11546822011422f3949bfb5f6dfbefc0"
+      "sha256": "6109344fbfdc43006cc66320d00eff91f861389cb1a34666a1ae3801e19039d0"
     },
-    "shard_tests": {
+    "output/shard_tests.json": {
       "status": "LOCAL_SEALED_SHARDS_PASS",
       "checks": 12,
-      "sha256": "7a2dba2d6cbf17815fc274ce2cd477dc5c3d5e6195b2d1fb7b47f579278c34c5"
+      "sha256": "50e965a472a16c74120a5c5a4dfe17dc0bf9404596bb0eb9b1e534d060f5b919"
     },
-    "model_isolation_tests": {
+    "output/model_isolation_tests.json": {
       "status": "LOCAL_PRIVATE_MODEL_PASS",
       "checks": 16,
-      "sha256": "5975f0a04719ab1bcc76111586c74968566f94e5f91ce122448f8a8247042d58"
+      "sha256": "816d585cef9186999d882a46f5d18ddded2bd63aac919ef2b4d54b23337883e1"
     },
-    "https_stability_tests": {
+    "output/https_stability_tests.json": {
       "status": "LOCAL_NATIVE_HTTPS_STABILITY_PASS",
       "checks": 18,
-      "sha256": "6b65953d0cfdcc862aad59d232edd6b0f39f14233582e6f9f7c0f63336858427"
+      "sha256": "fe32d6874a0ce093334aad9e0ad0be0ae335b5674aab75f1b71c6554ac55e8ab"
     },
-    "interruption_tests": {
+    "output/interruption_tests.json": {
       "status": "LOCAL_INTERRUPTION_RECOVERY_PASS",
       "checks": 69,
-      "sha256": "b242198c450b183b6ba1d3bd8ebbd1ddf952f75b7100f50cebd4178582a9974d"
+      "sha256": "95d2350cb0ad7e2aec6f10a70c85428060f4e8bd9cd7dbfcdd46cdc587d97044"
     },
-    "recovery_safety_tests": {
+    "output/recovery_safety_tests.json": {
       "status": "LOCAL_RECOVERY_FAILURE_SAFETY_PASS",
       "checks": 94,
-      "sha256": "6fb755515ccf7f62aa1c296def1c3d1778015e161cbf53ccb9a392bc0d802986"
+      "sha256": "b7700b78d7f07b4f8cdda6a34c525e6f4fcc3f4c9368fb5f2ffa74a814768757"
     },
-    "hardening_tests": {
+    "output/hardening_tests.json": {
       "status": "FINAL_CANDIDATE_HARDENING_PASS",
       "checks": 0,
-      "sha256": "e65b2c89d61e22786155cd8c1bee3af17aede6002f17fba9fd9f94728fd76059"
+      "sha256": "d4335b612850472da685a940956c0eec2521d16479890bd803ea02d306718d5e"
     },
-    "tls_input_tests": {
+    "output/tls_input_tests.json": {
       "status": "FINAL_CANDIDATE_NATIVE_INPUT_SIGNAL_PASS",
       "checks": 0,
-      "sha256": "d2135d69ca56767f24b8beefce0a23b939b428ef15baae989c687359e2b2c32f"
+      "sha256": "0cd7708540789f3c6ce40d867718289ddc5c7773f570e60b83734d572093c454"
     },
-    "softcenter_ui_mock_tests": {
+    "output/softcenter_ui_mock_tests.json": {
       "status": "LOCAL_BROWSER_MOCK_PASS",
       "checks": 7,
       "sha256": "30b7107d3b5c721708c702a6e2292dc7fa9fe98821a211f5f8f85769434542a4"
     },
-    "base_migration_tests": {
+    "output/base_migration_tests.json": {
       "status": "LOCAL_BASE_MIGRATION_AUDIT_PASS",
       "checks": 13,
       "sha256": "b7b3d5d360beb9cf8322c5088392cd8c069ba072fce78f831c09bc61832821ed"
@@ -128,149 +130,65 @@
     "Dropbear": "2026.94",
     "miniupnpd": "2.3.11"
   },
-  "observed_cli_versions": {
-    "curl": "curl 8.17.0 (arm-buildroot-linux-gnueabi) libcurl/8.17.0 OpenSSL/1.1.1w",
-    "dnsmasq": "Dnsmasq version 2.93  Copyright (c) 2000-2026 Simon Kelley",
-    "dropbear": "Dropbear v2026.94",
-    "miniupnpd": "miniupnpd 2.3.11 3004.388-433fc608f5 Aug 20 2026",
-    "openvpn": "OpenVPN 2.7.6 [git:3004.388/433fc608f5fc1689+] arm-buildroot-linux-gnueabi [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [MH/PKTINFO] [AEAD] built on Aug 20 2026",
-    "wget": "GNU Wget 1.25.0 built on linux-gnueabi."
+  "coexist_soak": {
+    "report": "output/r9r2_coexist_60m_tests.json",
+    "sha256": "d4c8df038d94514d419c940aa605f296aeda35b6073360a70243e174399bceef",
+    "duration_seconds": 3606.774425184,
+    "queries": 819,
+    "events": 35,
+    "unplanned_failures": 0,
+    "data_preserved": true
   },
-  "compatibility_limits": [
-    "Factory ncp-disable/static-key secret OpenVPN profiles use retained factory2.4.12, not2.7; single-component marker can force original",
-    "New curl accepts numeric URLs; retained factory binary preserves its original guard; authenticated API/firewall boundaries remain",
-    "Unadapted Fancyss and direct software-center core replacement remain blocked; ordinary newer plugin management passed",
-    "SSH public-key auth and three host-key formats tested locally; real password login/target hardware still pending"
-  ],
-  "compiled_production_matches_readback": true,
-  "test_only_source_change_reviews": {
-    "build/test_real_plugins.go": "Test-only correction for explicitly requested Merlin curl numeric URL behavior; adds actual retained factory curl negative/hostname control and corrects test environment description. No production bytes changed. Real-plugin phases and every subsequent gate rerun.",
-    "build/check_real_plugins.py": "Test-only correction for explicitly requested Merlin curl numeric URL behavior; adds actual retained factory curl negative/hostname control and corrects test environment description. No production bytes changed. Real-plugin phases and every subsequent gate rerun.",
-    "build/test_merlin.go": "Adds RSA and ECDSA host-key format/authentication preservation from actual factory dropbearkey, in addition to Ed25519. Factory ssh.c persists these three types. Test-only; no production bytes changed. Full component suite runs after this change. The original OpenVPN --version naturally exits1, so its single-component marker assertion compares factory output and success/failure status instead of requiring0; six-family control already used this contract. Full-system TCG factory2048-bit RSA fixture generation exceeded generic20s: key generation only gets one bounded90s attempt with elapsed/attempts logged; all ordinary commands/readiness and production limits unchanged."
+  "resource_review": {
+    "report": "output/r9r2_coexist_resources_tests.json",
+    "sha256": "011454f6e5a4d1b434986173e51085b035b757ef43c6f69731524f04c549b042"
   },
-  "report_refresh_review": {
-    "initial": "Fresh r9-r1 build/readback plus native/certificate/online gates; resumed after test-only correction to selected curl versus factory control",
-    "refreshed_reports": {
-      "output/compatibility_tests.json": {
-        "prior_sha256": "d6512925a9aed1ed85922502a2832da3441a877032e5281a3a7476774158107c",
-        "replacement_sha256": "1d7671baf3e6a602ef062c8b5b0c67a775ea839c86cbc6506f6416a31290c95d",
-        "reason": "Intentional complete seven-job private model regression and verifier re-generation; new immutable job receipts/serial output and live probe counts supersede early run. Same candidate and production bytes."
-      },
-      "output/filemap_tests.log": {
-        "prior_sha256": "01a09e21c0c20eed2e2d976e57a0f3560dac4be2d0a7fae4c578c801451a2fb4",
-        "replacement_sha256": "bb70107258dc7a7bbb36bd43ea7571499e278ed69694e0d4f12e2c330f4e128b",
-        "reason": "Intentional complete seven-job private model regression and verifier re-generation; new immutable job receipts/serial output and live probe counts supersede early run. Same candidate and production bytes."
-      },
-      "output/runtime_tests.log": {
-        "prior_sha256": "f67011ae3d1231f2ea3bf603a45d2a5e3fb8cfee0cd6d1785cf4195a94fd3bf7",
-        "replacement_sha256": "b7f7f2695f9ae713b5ea2c44f11aefd0be04a7db49a5d17d0f47fcc29ea8d466",
-        "reason": "Intentional complete seven-job private model regression and verifier re-generation; new immutable job receipts/serial output and live probe counts supersede early run. Same candidate and production bytes."
-      },
-      "output/hooks_test_run.log": {
-        "prior_sha256": "85d1b07c9b96c449b393cbbae0d296a842094bc074e0454e25574531a7e0fd8a",
-        "replacement_sha256": "65a4643722d0da6b1f9f803bfac0114e434efc213a2065f6487e7013f3eca747",
-        "reason": "Intentional complete seven-job private model regression and verifier re-generation; new immutable job receipts/serial output and live probe counts supersede early run. Same candidate and production bytes."
-      },
-      "output/restore_tests_run.log": {
-        "prior_sha256": "8bc18d2740d24968d577771458a803e4061ed1db0a13e913bc77e1e9544343a4",
-        "replacement_sha256": "7c2c7f49cc485fb2586d5d83d4a4fa5936daec298dedf0885482218fe6e43932",
-        "reason": "Intentional complete seven-job private model regression and verifier re-generation; new immutable job receipts/serial output and live probe counts supersede early run. Same candidate and production bytes."
-      },
-      "output/center_tests_run.log": {
-        "prior_sha256": "c924675f5b3b92c409973704e10f8744fdf8fceb3c6f6007d386f824a666daf8",
-        "replacement_sha256": "6f4ef4d14309400ddb4f29e566e6c4f073c759da2566483e7d7ebaedacea8c7c",
-        "reason": "Intentional complete seven-job private model regression and verifier re-generation; new immutable job receipts/serial output and live probe counts supersede early run. Same candidate and production bytes."
-      },
-      "output/native_httpd_tests_run.log": {
-        "prior_sha256": "76a11918004ab00a851280e626533d0af7066eca10dc35c67d305b252471ebc4",
-        "replacement_sha256": "2baa799d66159e20459d743c96078820063e7e706d008bbfcc3ee63107e25588",
-        "reason": "Intentional complete seven-job private model regression and verifier re-generation; new immutable job receipts/serial output and live probe counts supersede early run. Same candidate and production bytes."
-      },
-      "output/native_uu_tests_run.log": {
-        "prior_sha256": "64115f0930cdccd82f18e7c9c5233d04cbb86013c949656b419808901af1c63b",
-        "replacement_sha256": "3e6a4fc7bb7c378b403898a219c9618d16410ba41a1a0b44ee18edc91edfa1ce",
-        "reason": "Intentional complete seven-job private model regression and verifier re-generation; new immutable job receipts/serial output and live probe counts supersede early run. Same candidate and production bytes."
-      }
-    },
-    "replacement_controller": "build/check_model_isolation.py",
-    "replacement_controller_sha256": "766bfb9ae7dc5fcbaaeb859ba5cc7aad14000cd4de213827eb1550ae8304b3f4",
-    "replacement_gate": "output/model_isolation_tests.json",
-    "replacement_gate_sha256": "5975f0a04719ab1bcc76111586c74968566f94e5f91ce122448f8a8247042d58",
-    "all_16_replacement_gate_checks_passed": true,
-    "source_change_scope": "Exactly three reviewed test-only files; production recompile/readback remains mandatory"
-  },
-  "current_candidate_hardening_phases": {
-    "candidate-installer": {
-      "checks": 19,
-      "metrics": {
-        "uu_launches": 1
-      }
-    },
-    "candidate-resources": {
-      "checks": 10,
-      "metrics": {}
-    },
-    "candidate-uu": {
-      "checks": 9,
-      "metrics": {}
-    },
-    "candidate-health": {
-      "checks": 15,
-      "metrics": {}
-    },
-    "soak-httpd-cache": {
-      "checks": 0,
-      "metrics": {
-        "duration_seconds": 28.332256014,
-        "data_preserved": true,
-        "protected_page_queries": 300,
-        "uu_launches": 1
-      }
-    },
-    "soak-httpd-memory": {
-      "checks": 0,
-      "metrics": {
-        "duration_seconds": 547.767205344,
-        "data_preserved": true,
-        "concurrent_clients": 4,
-        "rounds": 6,
-        "healthy_queries": 243,
-        "slow_disconnects": 6,
-        "uu_launches": 1,
-        "same_httpd_pid": 971,
-        "logout_and_relogin_verified": true
-      }
-    }
+  "tls_handshake_recovery": {
+    "report": "output/r9r2_coexist_native_probe_tests.json",
+    "sha256": "2ab559bfb486e727dafa2a6734900b7b53a9d8db58b712d22ad34a174e5a61a4",
+    "cases": 14,
+    "center_restart_cycles": 6,
+    "queries": 110,
+    "source_overlay_used": false,
+    "httpd_execution": "native ARM32 through full Cortex-A53 kernel compatibility; no QEMU-user"
   },
   "original_artifacts_preserved_sha256": {
     "output/RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w": "02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50",
     "output/localmod2-r9-local-delivery.tar.gz": "35234c1017282d687adefed0854cf8dd5251801ccfaa66c2d5d77eaac1e6ffcd",
     "output/RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w": "5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129",
-    "RT-AX86U_386.3_2_cferom_pureubi_koolcenter_alpha3.w": "c3d01f6df5916ab5f14a2dabd9c79b6d7c28c73b44bed122fdc2636568cf6838"
+    "RT-AX86U_386.3_2_cferom_pureubi_koolcenter_alpha3.w": "c3d01f6df5916ab5f14a2dabd9c79b6d7c28c73b44bed122fdc2636568cf6838",
+    "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+    "output/localmod2-r9-r1-local-delivery.tar.gz": "f5837805c4088d8a3d21d43724d6205460d90f658cfc769703fdeba617357a5e"
   },
   "local_bundle": {
-    "path": "output/localmod2-r9-r1-local-delivery.tar.gz",
-    "sha256_file": "output/localmod2-r9-r1-local-delivery.tar.gz.sha256",
-    "manifest": "LOCAL_MANIFEST.json",
-    "contents": "Candidate, adapted Fancyss, exact delivery-commit source archive, pinned sources, licenses, current reports and guides; mock screenshot explicitly labelled"
+    "path": "output/localmod2-r9-r2-local-delivery.tar.gz",
+    "sha256_file": "output/localmod2-r9-r2-local-delivery.tar.gz.sha256",
+    "manifest": "LOCAL_MANIFEST.json"
   },
-  "source_archive": "output/localmod2_r9_r1_sources.tar.gz",
+  "source_archive": "output/localmod2_r9_r2_sources.tar.gz",
   "push_owner": "user",
   "agent_pushed_or_published": false,
   "remote_ci_for_delivery_commit": "NOT_RUN",
   "existing_release_receipt": {
     "path": "output/release_delivery.json",
-    "tag": "localmod2-r8-experimental",
-    "candidate_sha256": "5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129"
+    "recorded_tag": "localmod2-r8-experimental",
+    "not_current_remote_verification": true
   },
   "manual_instructions": "output/手动推送与发布步骤.md",
   "physical_router_accessed": false,
   "physical_router_backup_performed": false,
   "physical_router_flashed": false,
   "not_tested": [
-    "Physical router flash/boot, kernel4.1, wireless/NAT/DNS/IPv6, NAND power cuts",
-    "Real VPN/proxy provider nodes/subscriptions, UU account/game acceleration",
-    "Fresh hour-scale component soak; prior r7 long measurements remain historical"
+    "Physical router flash/boot, kernel4.1, wireless/WAN/NAT/IPv6, real NAND power cuts",
+    "Real provider subscriptions, Fancyss transparent/global routing, UU account/game acceleration",
+    "Multi-day uptime or proof of absence of slow memory leaks"
   ],
-  "local_validation_boundary": "No guest NIC; host readonly or separately inventoried private copies; synthetic keys/accounts/JFFS and owned UU worker. Component suite uses full Cortex-A53 system emulation with native ARM32 kernel compatibility."
+  "local_validation_boundary": [
+    "Networkless full Cortex-A53 Linux6.12 system emulation,640MiB inner/1024MiB outer; no target4.1 kernel or physical router",
+    "Actual pinned Fancyss installed via production installer; real Xray SOCKS/VLESS traffic uses owned loopback endpoints, transparent/global proxy mode remains disabled",
+    "UU uses original NTP/download/checksum flow and owned worker; no real UU monitor/account/game acceleration",
+    "Program restarts and upstream failures are owned/manual maintenance; only existing perp/OpenVPN recovery is automatic",
+    "RSS includes guest program/runtime and QEMU-user overhead where observed executable is qemu-arm; QEMU-system host RAM is outside guest samples",
+    "One-hour bounded observation cannot establish day/week stability or leak freedom"
+  ]
 }
