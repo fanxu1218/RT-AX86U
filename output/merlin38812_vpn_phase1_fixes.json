@@ -4,46 +4,58 @@
     {
       "stage": "dso_alignment",
       "log": "output/merlin38812_vpn_phase1_alignment_before.log",
-      "log_sha256": "7abc7253ad343e055b4fffe1323f9d816626e8c07d7d556d43481301f25ed15a",
+      "log_sha256": "288f7af0ca9ff1d684eab49ea7376f4cace4614032c7bf3248061a506096cd71",
       "before_source_sha256": {
         "model.c": "482a2a97ead9976728e02e6807aa7ac7b6807a258e78d00d16a33ef3084d0148",
         "manifest.json": "76307509dc9562b3951ff447c81b1c76c0027ee97cb3b9d877ad3a9a95c9cbc2",
         "prepare.py": "78e4f5db56ea852e0bebd71c4b2c4bdc8f3b91a15e149b3e1cb6491e00728005"
       },
-      "retained_local_source_directory": "build/merlin-vpn-phase1-alignment-before"
+      "retained_local_source_directory": "build/merlin-vpn-phase1-alignment-before",
+      "original_console_sha256": "7abc7253ad343e055b4fffe1323f9d816626e8c07d7d556d43481301f25ed15a",
+      "original_console_path": "build/merlin-vpn-phase1-alignment-before/original_console.log",
+      "review_log_normalization": "strip trailing spaces and tabs only; original console retained"
     },
     {
       "stage": "dependency_lookup",
       "log": "output/merlin38812_vpn_phase1_loader_before.log",
-      "log_sha256": "200336e7d1031c69aafbf6a8d328c966faf13fbd75b94d26c4269dfce961f0e2",
+      "log_sha256": "761f45ad71cbb52b106a99cb1c198d53e9f70f8e335b6fd74ec03e5a4a10f0cf",
       "before_source_sha256": {
         "model.c": "482a2a97ead9976728e02e6807aa7ac7b6807a258e78d00d16a33ef3084d0148",
         "manifest.json": "005f926c189492ed0ee924fb6efeac9c023b54bc10c75b0eb022b2b0cc242ad3",
         "prepare.py": "cfb374945bdb9c2f2781ee07c048c59e850c30825fd16fd6446dcef6d30fafd7"
       },
-      "retained_local_source_directory": "build/merlin-vpn-phase1-loader-before"
+      "retained_local_source_directory": "build/merlin-vpn-phase1-loader-before",
+      "original_console_sha256": "200336e7d1031c69aafbf6a8d328c966faf13fbd75b94d26c4269dfce961f0e2",
+      "original_console_path": "build/merlin-vpn-phase1-loader-before/original_console.log",
+      "review_log_normalization": "strip trailing spaces and tabs only; original console retained"
     },
     {
       "stage": "dependency_cycle",
       "log": "output/merlin38812_vpn_phase1_cycle_before.log",
-      "log_sha256": "1a1d7b9e6917627a309aa2b8f7564084e208add29e6d4bf5fff8e4abf4c703c2",
+      "log_sha256": "27b8fa19f964c75630c64564dfe482a761c724d2f4de486a78a10842237c77e0",
       "before_source_sha256": {
         "model.c": "ce0ccbf0866e772c53bd44a70bd6ec101bc98be626ce34c4b08508d4a71ad44d",
         "manifest.json": "6ab6f31bba92e61a0a014496fc0e742c9f6ab0bde8010f07f8fe9531967bd6e6",
         "prepare.py": "965591242cc67649eab14f54ba6a6db5926f1638e6b9eee2ab32f783010a6ba4"
       },
-      "retained_local_source_directory": "build/merlin-vpn-phase1-cycle-before"
+      "retained_local_source_directory": "build/merlin-vpn-phase1-cycle-before",
+      "original_console_sha256": "1a1d7b9e6917627a309aa2b8f7564084e208add29e6d4bf5fff8e4abf4c703c2",
+      "original_console_path": "build/merlin-vpn-phase1-cycle-before/original_console.log",
+      "review_log_normalization": "strip trailing spaces and tabs only; original console retained"
     },
     {
       "stage": "dependency_scope",
       "log": "output/merlin38812_vpn_phase1_owner_before.log",
-      "log_sha256": "010428dc850f7254ebccda75380eec4fe57d8528e082e5024918b7d9efc472b4",
+      "log_sha256": "2394ed8cc3bbf192580100377b70d571a94ab1317df1b18293162880141e06c0",
       "before_source_sha256": {
         "model.c": "51927e33f5455dc9b3c16d4d89ed8db4a36f84ac39c8931ca88c4f283235a44e",
         "manifest.json": "d2c93719be9ffa0e20306ea6eee50da4b5b0f8049d3b8f2028309a060fefecb0",
         "prepare.py": "b09dacf40933fbfe9d24715070b5f705a5c9c43cc03382d22396315eb5632aa8"
       },
-      "retained_local_source_directory": "build/merlin-vpn-phase1-owner-before"
+      "retained_local_source_directory": "build/merlin-vpn-phase1-owner-before",
+      "original_console_sha256": "010428dc850f7254ebccda75380eec4fe57d8528e082e5024918b7d9efc472b4",
+      "original_console_path": "build/merlin-vpn-phase1-owner-before/original_console.log",
+      "review_log_normalization": "strip trailing spaces and tabs only; original console retained"
     }
   ],
   "production_defects_claimed": false,
