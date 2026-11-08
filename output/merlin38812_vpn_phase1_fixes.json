@@ -1,0 +1,58 @@
+{
+  "status": "PRIVATE_PROTOTYPE_LOADING_FIXED",
+  "failures": [
+    {
+      "stage": "dso_alignment",
+      "log": "output/merlin38812_vpn_phase1_alignment_before.log",
+      "log_sha256": "7abc7253ad343e055b4fffe1323f9d816626e8c07d7d556d43481301f25ed15a",
+      "before_source_sha256": {
+        "model.c": "482a2a97ead9976728e02e6807aa7ac7b6807a258e78d00d16a33ef3084d0148",
+        "manifest.json": "76307509dc9562b3951ff447c81b1c76c0027ee97cb3b9d877ad3a9a95c9cbc2",
+        "prepare.py": "78e4f5db56ea852e0bebd71c4b2c4bdc8f3b91a15e149b3e1cb6491e00728005"
+      },
+      "retained_local_source_directory": "build/merlin-vpn-phase1-alignment-before"
+    },
+    {
+      "stage": "dependency_lookup",
+      "log": "output/merlin38812_vpn_phase1_loader_before.log",
+      "log_sha256": "200336e7d1031c69aafbf6a8d328c966faf13fbd75b94d26c4269dfce961f0e2",
+      "before_source_sha256": {
+        "model.c": "482a2a97ead9976728e02e6807aa7ac7b6807a258e78d00d16a33ef3084d0148",
+        "manifest.json": "005f926c189492ed0ee924fb6efeac9c023b54bc10c75b0eb022b2b0cc242ad3",
+        "prepare.py": "cfb374945bdb9c2f2781ee07c048c59e850c30825fd16fd6446dcef6d30fafd7"
+      },
+      "retained_local_source_directory": "build/merlin-vpn-phase1-loader-before"
+    },
+    {
+      "stage": "dependency_cycle",
+      "log": "output/merlin38812_vpn_phase1_cycle_before.log",
+      "log_sha256": "1a1d7b9e6917627a309aa2b8f7564084e208add29e6d4bf5fff8e4abf4c703c2",
+      "before_source_sha256": {
+        "model.c": "ce0ccbf0866e772c53bd44a70bd6ec101bc98be626ce34c4b08508d4a71ad44d",
+        "manifest.json": "6ab6f31bba92e61a0a014496fc0e742c9f6ab0bde8010f07f8fe9531967bd6e6",
+        "prepare.py": "965591242cc67649eab14f54ba6a6db5926f1638e6b9eee2ab32f783010a6ba4"
+      },
+      "retained_local_source_directory": "build/merlin-vpn-phase1-cycle-before"
+    },
+    {
+      "stage": "dependency_scope",
+      "log": "output/merlin38812_vpn_phase1_owner_before.log",
+      "log_sha256": "010428dc850f7254ebccda75380eec4fe57d8528e082e5024918b7d9efc472b4",
+      "before_source_sha256": {
+        "model.c": "51927e33f5455dc9b3c16d4d89ed8db4a36f84ac39c8931ca88c4f283235a44e",
+        "manifest.json": "d2c93719be9ffa0e20306ea6eee50da4b5b0f8049d3b8f2028309a060fefecb0",
+        "prepare.py": "b09dacf40933fbfe9d24715070b5f705a5c9c43cc03382d22396315eb5632aa8"
+      },
+      "retained_local_source_directory": "build/merlin-vpn-phase1-owner-before"
+    }
+  ],
+  "production_defects_claimed": false,
+  "final_runtime_report": "output/merlin38812_vpn_phase1_tests.json",
+  "final_runtime_report_sha256": "bf3813ec9030619ce94fa0e31dc27ffe5aed4d89dd85e7bf2d9c457997cc46be",
+  "fixes": [
+    "Keep upstream DSO bytes intact; do not add a 4KiB-offset segment that violates their 64KiB p_align",
+    "Link all required private objects as direct helper DT_NEEDED dependencies, resolving the libshared/libnvram cycle together",
+    "Normalize Zig build-absolute DT_NEEDED entries in the new helper only; preserve valid PT_LOAD alignment and use per-process private RUNPATH",
+    "Verify native function owners and reject mixed ABI or missing private libraries before returning a configuration model"
+  ]
+}

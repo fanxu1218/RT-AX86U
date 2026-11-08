@@ -322,3 +322,21 @@
 !/output/r9r2_diagnostic_*.log
 !/output/r9-r2延迟与内存归因.md
 !/output/r9r2_diagnostic_delivery.json
+
+# Phased Merlin VPN migration: preserve the validated official-base candidate.
+!/analysis/merlin_vpn_38812/
+/analysis/merlin_vpn_38812/*
+!/analysis/merlin_vpn_38812/model.c
+!/analysis/merlin_vpn_38812/prepare.py
+!/analysis/merlin_vpn_38812/check.py
+!/analysis/merlin_vpn_38812/audit.py
+!/analysis/merlin_vpn_38812/probe.go
+!/analysis/merlin_vpn_38812/inputs.json
+!/analysis/merlin_vpn_38812/vendor/
+!/analysis/merlin_vpn_38812/vendor/*.c
+!/analysis/merlin_vpn_38812/vendor/*.h
+!/analysis/merlin_vpn_38812/vendor/*.json
+!/analysis/merlin_vpn_38812/vendor/*.txt
+!/output/merlin38812_*.json
+!/output/merlin38812_*.log
+!/output/388.12_2分阶段移植进度.md

@@ -1,0 +1,27 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS factory_ntp_download_checksum_start_and_owned_uu_worker_alive
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108104348, 2026/11/8 ~ 2046/11/9
+PASS factory_https_login_uu_page_and_authenticated_software_center_callback
+panic: model failed exit status 70: PASS early stdio before adapter constructor
+	Private Merlin library failed: /usr/lib/localmod/vpn38812/libovpn.so: ELF load command address/offset not properly aligned
+	
+
+goroutine 1 [running]:
+main.vpModel({0x398fa0, 0x40000a2000}, {0x400009fea0?, 0x1?, 0x1?})
+	./probe.go:30 +0x314
+main.main()
+	./probe.go:100 +0xb7c
+SOAK_REAPER orphans_reaped=3
+LINUX_READONLY_JOB_STATUS=1

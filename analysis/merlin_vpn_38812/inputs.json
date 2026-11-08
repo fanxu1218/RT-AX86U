@@ -1,0 +1,20 @@
+{
+  "source_tag": "3004.388.12_2",
+  "source_commit": "433fc608f5fc1689f3d3c3ab5cd2a7d57102260f",
+  "image_sha256": "864cb94504bd0f036f730089c779aafbf5827721af10d5533924f94d3c20982a",
+  "libraries": {
+    "libovpn.so": {
+      "sha256": "100702e2b9eb991bad74bf5b0e00b6d9c5a901e5c8ed45f456a7a75055b2185d"
+    },
+    "libshared.so": {
+      "sha256": "36a10d140cc94e1f4326a168cdd24475abc14f41c0f7e4a4484c4689cfda20b1"
+    },
+    "libcrypto.so.1.1": {
+      "sha256": "67afdf81a6ab889c58c2893198c37b89b70230456370bf675d5d81a41dc5b581"
+    },
+    "libssl.so.1.1": {
+      "sha256": "1afdb48e254574b334a76b960685bdc5e84ba3955c2c875ed44665110d5df850"
+    }
+  },
+  "readback_report": "output/merlin38812_migration_contracts.json"
+}

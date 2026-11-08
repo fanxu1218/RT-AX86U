@@ -1,0 +1,14 @@
+This directory contains unmodified contract sources from Asuswrt-Merlin
+3004.388.12_2, commit 433fc608f5fc1689f3d3c3ab5cd2a7d57102260f.
+
+The libovpn source files carry the GNU GPL version 2 or later notice.
+Their original copyright and license headers are retained.
+COPYING-GPL-2.0.txt provides the GPL text. Exact source URLs and SHA256
+are recorded in sources.json.
+
+The private prototype uses the original image libovpn, libshared and
+OpenSSL libraries without modifying their bytes. Component license
+notices are retained in sources/localmod/MERLIN_COMPONENTS_NOTICE.txt
+and the pinned upstream source tree referenced by sources.json.
+The source archive intentionally does not include vendor firmware,
+toolchains, generated credentials or a flashable firmware image.

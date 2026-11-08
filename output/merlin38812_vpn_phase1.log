@@ -1,0 +1,26 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS factory_ntp_download_checksum_start_and_owned_uu_worker_alive
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108105232, 2026/11/8 ~ 2046/11/9
+PASS factory_https_login_uu_page_and_authenticated_software_center_callback
+PASS real_merlin_libovpn_and_libshared_loaded_from_private_paths_without_global_replacement
+PASS five_client_two_server_native_models_repeat_three_rounds_tlscrypt_v1_v2_tun_tap_dns_policy_fields
+PASS username_password_and_custom_directives_are_not_returned_by_model_api
+PASS invalid_units_and_write_start_stop_reset_commands_refused
+PASS native_configuration_queries_and_rejected_controls_preserve_all_fixture_nvram_and_openvpn_files
+PASS missing_private_library_refuses_operation_without_factory_service_fallback
+PASS factory_core_tls_certificate_software_center_and_single_uu_worker_preserved_after_prototype_queries
+VPN38812_PHASE1_RESULT {"capabilities":{"mode":"read_only_configuration","private_libovpn":true,"private_libshared":true,"service_control_enabled":false,"upstream":"3004.388.12_2","whole_firmware_upgraded":false},"checks":["factory_ntp_download_checksum_start_and_owned_uu_worker_alive","factory_https_login_uu_page_and_authenticated_software_center_callback","real_merlin_libovpn_and_libshared_loaded_from_private_paths_without_global_replacement","five_client_two_server_native_models_repeat_three_rounds_tlscrypt_v1_v2_tun_tap_dns_policy_fields","username_password_and_custom_directives_are_not_returned_by_model_api","invalid_units_and_write_start_stop_reset_commands_refused","native_configuration_queries_and_rejected_controls_preserve_all_fixture_nvram_and_openvpn_files","missing_private_library_refuses_operation_without_factory_service_fallback","factory_core_tls_certificate_software_center_and_single_uu_worker_preserved_after_prototype_queries"],"factory_files_preserved":{"/usr/lib/libcrypto.so.1.1":"f392e5e30cac8ba62b9a474a17d9620826735e281e23e177d6b41e37f5174735","/usr/lib/libshared.so":"ebaf2a4586a6fe6ca336f6fe6c3ba9955434ad3d4dd11b65bd017e37e13e9fef","/usr/lib/libssl.so.1.1":"5579489cac9b6316b0d993cce06d48a851468b501375217a623ad27dca9751c9","/usr/libexec/localmod/httpd":"d9a24b751b2c6ec0a9bf5931b6b1380e75c136bd672a91a5a5118c6ee9e1586d","/usr/libexec/localmod/rc.vendor":"9af561e30317e211674100aaa48f1eaa520ba726725858151f6c21b0f1d63a62","/www/UUAccelerator.asp":"ee62be7154ea2928f8d8e996e3d5b947e255c571894c2aa4c03fc1064898fe48"},"full_firmware_upgrade_complete":false,"model_queries":22,"models":[{"dns_mode":3,"firewall_mode":2,"interface":"tun11","kind":"client","nat":1,"ncp_ciphers":"AES-256-GCM:AES-128-GCM","port":35325,"protocol":"udp","read_only":true,"redirect_gateway":3,"tls_crypt":2,"unit":1},{"dns_mode":3,"firewall_mode":2,"interface":"tap12","kind":"client","nat":1,"ncp_ciphers":"AES-256-GCM:AES-128-GCM","port":35325,"protocol":"udp","read_only":true,"redirect_gateway":3,"tls_crypt":1,"unit":2},{"dns_mode":3,"firewall_mode":2,"interface":"tun13","kind":"client","nat":1,"ncp_ciphers":"AES-256-GCM:AES-128-GCM","port":35325,"protocol":"udp","read_only":true,"redirect_gateway":3,"tls_crypt":2,"unit":3},{"dns_mode":3,"firewall_mode":2,"interface":"tun14","kind":"client","nat":1,"ncp_ciphers":"AES-256-GCM:AES-128-GCM","port":35325,"protocol":"udp","read_only":true,"redirect_gateway":3,"tls_crypt":2,"unit":4},{"dns_mode":3,"firewall_mode":2,"interface":"tun15","kind":"client","nat":1,"ncp_ciphers":"AES-256-GCM:AES-128-GCM","port":35325,"protocol":"udp","read_only":true,"redirect_gateway":3,"tls_crypt":2,"unit":5},{"client_access":2,"interface":"tun21","kind":"server","ncp_ciphers":"AES-256-GCM","port":35326,"protocol":"udp","push_dns":1,"read_only":true,"tls_crypt":2,"unit":1},{"client_access":2,"interface":"tun22","kind":"server","ncp_ciphers":"AES-256-GCM","port":35326,"protocol":"udp","push_dns":1,"read_only":true,"tls_crypt":2,"unit":2}],"real_uu_acceleration_tested":false,"service_control_enabled":false,"uu_api_calls":1,"uu_downloads":1,"uu_pid":1118}
+SOAK_REAPER orphans_reaped=3
+LINUX_READONLY_JOB_STATUS=0
