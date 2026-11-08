@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Verify native authenticated HTTPS query completion with and without a UU worker."""
+from device_config import compiler_flags
 import hashlib,json,os,re,subprocess
 from pathlib import Path
 from prepare_real_plugins import prepare
@@ -19,7 +20,7 @@ def main():
  assert sha(ROOT/'output/https_r6_reproduction.log')==baseline['log_sha256']
  assert baseline['candidate_sha256']=='d2650339ea0868c472db0f25009642fcf23a5335a40fe2c6a6c3bae1b1cc37eb'
  manifest=prepare()
- flags=['sources/zig-aarch64-macos-0.15.2/zig','cc','-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53','-O2']
+ flags=['sources/zig-aarch64-macos-0.15.2/zig','cc',*compiler_flags(),'-O2']
  subprocess.run(flags+['-shared','-fPIC','-o','build/https_trace_fixture.so','build/https_trace_fixture.c','-ldl'],check=True)
  subprocess.run(flags+['-s','-o','build/relay-idle-fixture','build/relay_idle_fixture.c','-ldl'],check=True)
  subprocess.run(['go','build','-trimpath','-o','build/test-https-stability','build/test_https_stability.go','build/native_runtime_client.go','build/test_online.go','build/coexist_helpers.go'],check=True,env=dict(os.environ,GOOS='linux',GOARCH='arm64',CGO_ENABLED='0'))

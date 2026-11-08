@@ -1,0 +1,10 @@
+{
+  "status": "LOCAL_NATIVE_FANCYSS_SHARED_JQ_ALIAS_REMOVAL_REPRODUCED",
+  "candidate_sha256": "7b6993cec465f563fa7d586c9c5a2289dffb5b844bf265efcaa6e03f2e780e4d",
+  "symptom": "Uninstall removes /koolshare/bin/jq system alias while PushPlus/FRPC remain installed",
+  "system_jq_sha256": "e95800a202b74b6821c36b57c7a72458138a6c75919ab870c02fb0bc996ae65e",
+  "log_sha256": "e832190fc79f38bb47787493d94bf0c0f83a840f480bef5fdb094bd0b1df98e6",
+  "uu_data_loss_observed": false,
+  "fix_pending": true,
+  "physical_router_flashed": false
+}

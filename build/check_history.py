@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Persistent redacted history: native auth, actual faults and new VM boots."""
+from device_config import render_source, compiler_flags
 import argparse
 import hashlib
 import json
@@ -18,7 +19,7 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--candidate',action='store_true');ap.add_argument('--smoke',action='store_true');a=ap.parse_args()
     os.chdir(ROOT)
     v=json.loads((ROOT/'output/verification.json').read_text());assert all(v['checks'].values()) and not v['errors'] and sha(ROOT/v['image'])==v['sha256']
-    flags=['sources/zig-aarch64-macos-0.15.2/zig','cc','-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53','-O2','-s']
+    flags=['sources/zig-aarch64-macos-0.15.2/zig','cc',*compiler_flags(),'-O2','-s']
     overlay={}
     if not a.candidate:
         from prepare_hardening_overlay import prepare_resources
@@ -27,7 +28,7 @@ def main():
         subprocess.run(flags+['-shared','-fPIC','-o','build/httpd_bridge_next.so','sources/localmod/httpd_bridge.c','-ldl'],check=True)
         p=folder/'www/Module_Localmod.asp';p.parent.mkdir(parents=True,exist_ok=True)
         from release_config import CONFIG
-        p.write_text((ROOT/'sources/localmod/Module_Localmod.asp').read_text().replace('@REVISION@',CONFIG['variant']+'-'+CONFIG['revision']))
+        p.write_text(render_source('sources/localmod/Module_Localmod.asp',CONFIG))
         overlay={str(p.relative_to(folder)):sha(p) for p in folder.rglob('*') if p.is_file()}
     else:
         from release_config import CONFIG

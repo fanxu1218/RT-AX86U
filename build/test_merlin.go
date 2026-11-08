@@ -341,7 +341,7 @@ func mUPnP(u *onlineUU) {
 	for _, c := range [][]string{{"-t", "nat", "-N", "VUPNP"}, {"-t", "nat", "-N", "VSERVER"}, {"-N", "FUPNP"}} {
 		mOK(append([]string{"/usr/sbin/iptables"}, c...)...)
 	}
-	cfg := "ext_ifname=wan0\nlistening_ip=192.168.77.1/24\nport=35323\nenable_upnp=yes\nenable_natpmp=yes\nsecure_mode=yes\nupnp_forward_chain=FUPNP\nupnp_nat_chain=VUPNP\nnotify_interval=30\nsystem_uptime=yes\nfriendly_name=owned-fixture\nmodel_name=RT-AX86U\nmodel_description=owned-fixture\nmodel_number=RT-AX86U\nserial=owned\nuuid=3ddcd1d3-2380-45f5-b069-020000000001\nlease_file=/jffs/merlin-fixture/upnp.leases\nallow 45000-45010 192.168.77.0/24 45000-45010\ndeny 0-65535 0.0.0.0/0 0-65535\n"
+	cfg := "ext_ifname=wan0\nlistening_ip=192.168.77.1/24\nport=35323\nenable_upnp=yes\nenable_natpmp=yes\nsecure_mode=yes\nupnp_forward_chain=FUPNP\nupnp_nat_chain=VUPNP\nnotify_interval=30\nsystem_uptime=yes\nfriendly_name=owned-fixture\nmodel_name=" + nrFixtureModel() + "\nmodel_description=owned-fixture\nmodel_number=" + nrFixtureModel() + "\nserial=owned\nuuid=3ddcd1d3-2380-45f5-b069-020000000001\nlease_file=/jffs/merlin-fixture/upnp.leases\nallow 45000-45010 192.168.77.0/24 45000-45010\ndeny 0-65535 0.0.0.0/0 0-65535\n"
 	mWrite("/tmp/merlin/upnp.conf", cfg, 0600)
 	nrMust(os.MkdirAll("/jffs/merlin-fixture", 0700))
 	mWrite("/jffs/uu/merlin-coexist-fixture", "owned-persistent-uu", 0600)

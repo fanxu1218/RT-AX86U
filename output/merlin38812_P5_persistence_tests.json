@@ -1,0 +1,284 @@
+{
+  "status": "LOCAL_NATIVE_PERSISTENCE_SELECTED_CASES_PASS",
+  "candidate": {
+    "image": "output/RT-AX86U_3004_388.12_2_localmod_native_P5_4ea17dd6_NOT_FLASH_READY.w",
+    "bytes": 86769684,
+    "sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+    "rootfs_lebs": 630,
+    "leb_size": 126976,
+    "rootfs_fmt_version": 4,
+    "vendor_boot_region_unchanged": true,
+    "vendor_descriptor_unchanged": true,
+    "vendor_wfi_parameters_unchanged": true,
+    "status": "EXPERIMENTAL_NOT_DEVICE_TESTED"
+  },
+  "foundation": {
+    "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+    "disk_sha256": "e46a3efdb4bacc8865c45a3484293f1273997ba11ef9164d2855d6fc581fb794",
+    "result": {
+      "report": "output/merlin38812_persist_foundation_foundation_tests.json",
+      "sha256": "687a4085f71169ed9c3295455fa7b525cd644a4fe2fdbf014c1891f7aad97a5c",
+      "checks": [
+        "foundation_real_plugin_configuration_and_uu_synced"
+      ]
+    }
+  },
+  "cases": {
+    "download": {
+      "cut": {
+        "report": "output/merlin38812_persist_download_cut_tests.json",
+        "sha256": "48194be74494c4e335030caa6cc699ff33ac953c23027c425045a87d132fca89",
+        "checks": [
+          "download_interrupted_before_mutation",
+          "abrupt_vm_cut_keeps_synced_uu_files",
+          "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+        ]
+      },
+      "verify": {
+        "report": "output/merlin38812_persist_download_verify_tests.json",
+        "sha256": "b6762eb8b2e8ff3b1a03623aa519b02433ed9dbb43eb05c1ca91661a5788538c",
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      },
+      "final_disk_sha256": "8833f855f583a129ba95d0979743ef68eebbd29a282d97b33e173db61090dacf"
+    },
+    "checkpoint": {
+      "cut": {
+        "report": "output/merlin38812_persist_checkpoint_cut_tests.json",
+        "sha256": "cd8ef1ef6d18acfd863a6e8d9dd5dc1ead8eb25181949f55ba7c6a5061720e53",
+        "checks": [
+          "abrupt_vm_cut_keeps_synced_uu_files",
+          "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+        ]
+      },
+      "verify": {
+        "report": "output/merlin38812_persist_checkpoint_verify_tests.json",
+        "sha256": "0fa37f6fc8cef57e1f9d0dde0bf9defa53ab99fb15d1f85cb1acc7d860b43262",
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      },
+      "final_disk_sha256": "157010dbe37eeee26bdf70df7a8bd270f940fc34bad1b9b60296d76845afbd62"
+    },
+    "kill-parent": {
+      "cut": {
+        "report": "output/merlin38812_persist_kill-parent_cut_tests.json",
+        "sha256": "e65b943f11cccbe4d9eaf24c22092396d2a1e2235b60dfc03ef9652fe2a7ea08",
+        "checks": [
+          "killed_installer_blocks_writes_without_changing_uu_or_peer_data",
+          "abrupt_vm_cut_keeps_synced_uu_files",
+          "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+        ]
+      },
+      "recover-db-cut": {
+        "report": "output/merlin38812_persist_kill-parent_recover-db-cut_tests.json",
+        "sha256": "f3419d65f9cc040bc6e857966268e7be942ed07ef22413d372836c0627976713",
+        "checks": [
+          "abrupt_vm_cut_keeps_synced_uu_files",
+          "duplicate_same_boot_recovery_refused_without_moving_live_database",
+          "partial_database_replay_keeps_original_checkpoint_and_restored_files"
+        ]
+      },
+      "verify": {
+        "report": "output/merlin38812_persist_kill-parent_verify_tests.json",
+        "sha256": "fcb548fd1e39e31f5101920e62f7be0a72f107a7068a6a36c25dda629d826ca9",
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      },
+      "final_disk_sha256": "00b08c8b8b22140dfca5cd515c700edf6d52121c28bbd421221ba2aec902ff41"
+    },
+    "kill-tree": {
+      "cut": {
+        "report": "output/merlin38812_persist_kill-tree_cut_tests.json",
+        "sha256": "1af66f2fb49d93ec46c22e193553d28afeb42186f427057160972833e8436867",
+        "checks": [
+          "killed_installer_blocks_writes_without_changing_uu_or_peer_data",
+          "abrupt_vm_cut_keeps_synced_uu_files",
+          "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+        ]
+      },
+      "recover-cut": {
+        "report": "output/merlin38812_persist_kill-tree_recover-cut_tests.json",
+        "sha256": "b5db37cd0180ec3643111e0ec3878a55872b9dbb1516daf0727b9749ca6e78bd",
+        "checks": [
+          "abrupt_vm_cut_keeps_synced_uu_files",
+          "recovery_can_be_interrupted_after_quarantine_with_checkpoint_retained"
+        ]
+      },
+      "verify": {
+        "report": "output/merlin38812_persist_kill-tree_verify_tests.json",
+        "sha256": "c0d6d31388472c21362d472202add0fadfcfe835f8c650b641ac1e5c6bfbbecb",
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      },
+      "final_disk_sha256": "9bf23b45ccee5ac271d25f2189739fea59e857316b5bd2e0ecea977c4ce28c92"
+    },
+    "offline": {
+      "cut": {
+        "report": "output/merlin38812_persist_offline_cut_tests.json",
+        "sha256": "098fa87a6daa4b5eb2e30ab2b8945d4beb976f4fc24fdad9ea8bfed7330de00e",
+        "checks": [
+          "killed_installer_blocks_writes_without_changing_uu_or_peer_data",
+          "abrupt_vm_cut_keeps_synced_uu_files",
+          "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+        ]
+      },
+      "verify": {
+        "report": "output/merlin38812_persist_offline_verify_tests.json",
+        "sha256": "02fbbed1335e198ceb7e64e77212fb622d68ce174b5053d7adddf4d53c3f8994",
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      },
+      "final_disk_sha256": "1b70c7e88778787ee14009ebe7058ddc3baaa4ca707a78ad96537f48c6bf13d5"
+    },
+    "fresh": {
+      "cut": {
+        "report": "output/merlin38812_persist_fresh_cut_tests.json",
+        "sha256": "301b19af6d1837687e90426e1a70058e026a76c5b9c5a8d2986974f93f33df9f",
+        "checks": [
+          "killed_installer_blocks_writes_without_changing_uu_or_peer_data",
+          "abrupt_vm_cut_keeps_synced_uu_files",
+          "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+        ]
+      },
+      "verify": {
+        "report": "output/merlin38812_persist_fresh_verify_tests.json",
+        "sha256": "21bc2c69dca3c25bd403031d74b6ac8faeaf923418ee8c3551d3c525dc1cef00",
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      },
+      "final_disk_sha256": "a46ad21398eac5f9fbf302be46ead301a1f2fe4d61c6756d2d9711f84a3f29d7"
+    },
+    "real-ddnsgo": {
+      "cut": {
+        "report": "output/merlin38812_persist_real-ddnsgo_cut_tests.json",
+        "sha256": "5c2e0724d93b793a55134044090026175cc34556cc06542bc0a83faa0cd30a7e",
+        "checks": [
+          "abrupt_vm_cut_keeps_synced_uu_files",
+          "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+        ]
+      },
+      "verify": {
+        "report": "output/merlin38812_persist_real-ddnsgo_verify_tests.json",
+        "sha256": "a6ef94e96376cdd85a06cd91b1acfb64afc3676b394e58c0eb92d749aa48b619",
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      },
+      "final_disk_sha256": "8b7eb903bad59035c8114a2c12d4a4ca5b031705a231d63cc477f97d6c99b095"
+    },
+    "before-commit": {
+      "cut": {
+        "report": "output/merlin38812_persist_before-commit_cut_tests.json",
+        "sha256": "33663f5c6320f106cf65ce3373923f16eaa323094598283891b5864de02e0657",
+        "checks": [
+          "abrupt_vm_cut_keeps_synced_uu_files",
+          "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+        ]
+      },
+      "verify": {
+        "report": "output/merlin38812_persist_before-commit_verify_tests.json",
+        "sha256": "276c74af62b5b5d0dce895b76c59e88950cd62ff8eb03510d82dacdc257354a2",
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "interrupted_new_state_retained_in_private_history",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      },
+      "final_disk_sha256": "99f00bed3dfc86e7d20edba73ef876bddc3f49c5afc2d89b7a6541f39c672112"
+    },
+    "after-commit": {
+      "cut": {
+        "report": "output/merlin38812_persist_after-commit_cut_tests.json",
+        "sha256": "590a19a3e2ed4fda32269074aee483bbb838305027250c07a8331940c8a3b5d3",
+        "checks": [
+          "abrupt_vm_cut_keeps_synced_uu_files",
+          "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+        ]
+      },
+      "verify": {
+        "report": "output/merlin38812_persist_after-commit_verify_tests.json",
+        "sha256": "523daaa0391ad5532938c608ea4b237a3d761651f0afced7ccc7bcdb5e03c2f4",
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      },
+      "final_disk_sha256": "d6b0c818786e19d9521b5712da6405cbd435f3a4f7a81229bbb1b6a998135910"
+    },
+    "committed-cleanup": {
+      "cut": {
+        "report": "output/merlin38812_persist_committed-cleanup_cut_tests.json",
+        "sha256": "4a85b262fce0c6bc4f68f656b826dfc4dddfaa6173a882d708ba6a7915be4d97",
+        "checks": [
+          "abrupt_vm_cut_keeps_synced_uu_files",
+          "uu_heartbeat_continues_with_one_launch_at_fault_boundary"
+        ]
+      },
+      "verify": {
+        "report": "output/merlin38812_persist_committed-cleanup_verify_tests.json",
+        "sha256": "9a1d8bf811f9c6216e075db3758c664312e1f45fefc86190ed1cad89fcab5067",
+        "checks": [
+          "fresh_vm_restores_exact_config_files_literal_database_and_version",
+          "real_ddnsgo_autostart_and_local_page_restored",
+          "retry_after_recovery_commits_and_keeps_uu_data_and_private_api"
+        ]
+      },
+      "final_disk_sha256": "cc17f7661583a12d9377640bcac570f31e092c570eef3cabc478e0ecccc74c20"
+    },
+    "no-space": {
+      "exercise": {
+        "report": "output/merlin38812_persist_no-space_exercise_tests.json",
+        "sha256": "8c844ae75bc1610cca9c221ebbaedaa64c657460a3cd3e921b33be9c014295ff",
+        "checks": [
+          "checkpoint_write_enospc_aborts_before_mutation_and_preserves_data",
+          "retry_after_preparation_failure_succeeds"
+        ]
+      },
+      "final_disk_sha256": "18cc2cb28c60adff700ab4f213370265798a5d52e01ced9ddbdbe944a500dca2"
+    }
+  },
+  "requested_cases": [
+    "download",
+    "checkpoint",
+    "kill-parent",
+    "kill-tree",
+    "offline",
+    "fresh",
+    "real-ddnsgo",
+    "before-commit",
+    "after-commit",
+    "committed-cleanup",
+    "no-space"
+  ],
+  "complete": true,
+  "all_standard_scenarios_complete": true,
+  "physical_router_flashed": false,
+  "full_upgrade_complete": false
+}

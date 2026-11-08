@@ -1,0 +1,18 @@
+{
+  "source_tag": "3004.388.12_2",
+  "source_commit": "433fc608f5fc1689f3d3c3ab5cd2a7d57102260f",
+  "files": [
+    {
+      "path": "merlin_ntpd.c",
+      "url": "https://raw.githubusercontent.com/RMerl/asuswrt-merlin.ng/433fc608f5fc1689f3d3c3ab5cd2a7d57102260f/release/src/router/rc/ntpd.c",
+      "sha256": "0c9004dbcfcc13cf5f01a2f93b9a3f4586841b42f6e69acf7a19031e69a298e5",
+      "bytes": 3199
+    },
+    {
+      "path": "merlin_scripts.c",
+      "url": "https://raw.githubusercontent.com/RMerl/asuswrt-merlin.ng/433fc608f5fc1689f3d3c3ab5cd2a7d57102260f/release/src/router/shared/scripts.c",
+      "sha256": "17f835f374077b4b6ce30e07e6f6de40214789168d73223ac946049c9e1ae4dd",
+      "bytes": 3186
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+LINUX_BUILDER_READY
+panic: native hook init-start: exit status 127 /work/build/native-hooks/hook-probe: error while loading shared libraries: /Users/apple/Desktop/RT-AX86U/build/casefs/merlin-native-preview-f25123e3d41a03c1/rootfs/usr/lib/libshared.so: cannot open shared object file: No such file or directory
+	
+
+goroutine 1 [running]:
+main.hookCall({0x3407b9, 0xa}, {0x33f018?, 0x3cfd68?})
+	./native_hooks.go:16 +0x1b0
+main.main()
+	./native_hooks.go:39 +0x19c
+SOAK_REAPER orphans_reaped=0
+LINUX_READONLY_JOB_STATUS=1

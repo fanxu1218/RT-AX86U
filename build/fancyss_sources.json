@@ -15,7 +15,7 @@
       "version": "3.5.28",
       "phase": "old",
       "path": "sources/realplugins/fancyss_hnd_v8_full_3.5.28.tar.gz",
-      "adapted_path": "sources/realplugins/fancyss_hnd_v8_full_3.5.28_localmod1.tar.gz",
+      "adapted_path": "sources/realplugins/fancyss_hnd_v8_full_3.5.28_localmod2.tar.gz",
       "source_url": "https://raw.githubusercontent.com/hq450/fancyss_history_package/fa1009b56d36a46b0f205fc8ce860be6d61397d6/fancyss_hnd_v8/fancyss_hnd_v8_full_3.5.28.tar.gz",
       "sha256": "cfd2b43530b637492c975b46d7343c43fc0e2c9e0d776fbc2a0d39f236895e8a",
       "upstream_md5": "2bc26c09c42b558d04bc3b5a6ed35ecc"
@@ -24,7 +24,7 @@
       "version": "3.5.29",
       "phase": "current",
       "path": "sources/realplugins/fancyss_hnd_v8_full_3.5.29.tar.gz",
-      "adapted_path": "sources/realplugins/fancyss_hnd_v8_full_3.5.29_localmod1.tar.gz",
+      "adapted_path": "sources/realplugins/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz",
       "source_url": "https://raw.githubusercontent.com/hq450/fancyss_history_package/fa1009b56d36a46b0f205fc8ce860be6d61397d6/fancyss_hnd_v8/fancyss_hnd_v8_full_3.5.29.tar.gz",
       "sha256": "f481f141f8747e5d26b78411dd44943ad682430a32c24da5d15d7ca6314b3183",
       "upstream_md5": "aabdb77f6837200b14cb853decebebdc"

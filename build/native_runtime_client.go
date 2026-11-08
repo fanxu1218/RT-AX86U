@@ -26,6 +26,13 @@ func nrMust(e error) {
 	}
 }
 func nrRead(path string) []byte { b, e := os.ReadFile(path); nrMust(e); return b }
+func nrFixtureModel() string {
+	model := strings.TrimSpace(nrCommand("/bin/nvram", "get", "productid"))
+	if model == "" {
+		panic("missing fixture productid")
+	}
+	return model
+}
 func nrOutput(name string) string {
 	base := os.Getenv("LOCALMOD_TEST_OUTPUT")
 	if base == "" {

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Check online plugin operations against an owned HTTPS repository and UU worker."""
+from device_config import render_source
 import hashlib
 import json
 import os
@@ -15,7 +16,7 @@ assert hashlib.sha256((root / verification['image']).read_bytes()).hexdigest() =
 assert all(verification['checks'].values()) and not verification['errors']
 for script in ['bootstrap.sh', 'dispatch.sh']:
     assert (root / 'sources/localmod' / script).read_bytes() == (stage / 'usr/libexec/localmod' / script).read_bytes()
-assert (stage / 'usr/libexec/localmod/installer-guard.sh').read_bytes() == (root / 'sources/localmod/installer-guard.sh').read_bytes()
+assert (stage / 'usr/libexec/localmod/installer-guard.sh').read_bytes() == render_source('sources/localmod/installer-guard.sh').encode()
 for artifact, path in [('httpd_bridge.so', 'usr/lib/localmod/httpd_bridge.so'),
                        ('rc_bridge.so', 'usr/lib/localmod/rc_bridge.so')]:
     assert (root / 'build' / artifact).read_bytes() == (stage / path).read_bytes()

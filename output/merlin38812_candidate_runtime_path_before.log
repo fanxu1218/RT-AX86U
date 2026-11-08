@@ -1,0 +1,11 @@
+LINUX_BUILDER_READY
+panic: native hook init-start: exit status 1 Error while loading /work/build/native-hooks/hook-probe: No such file or directory
+	
+
+goroutine 1 [running]:
+main.hookCall({0x340882, 0xa}, {0x33f078?, 0x3d09c0?})
+	./native_hooks.go:16 +0x1b0
+main.main()
+	./native_hooks.go:39 +0x1a0
+SOAK_REAPER orphans_reaped=0
+LINUX_READONLY_JOB_STATUS=1

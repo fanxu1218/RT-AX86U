@@ -1,0 +1,87 @@
+{
+  "status": "P5_P6_ALL_BINARY_AND_SERVICE_SCRIPT_BYTES_IDENTICAL",
+  "prior_image": {
+    "image": "output/RT-AX86U_3004_388.12_2_localmod_native_P5_4ea17dd6_NOT_FLASH_READY.w",
+    "bytes": 86769684,
+    "sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+    "rootfs_lebs": 630,
+    "leb_size": 126976,
+    "rootfs_fmt_version": 4,
+    "vendor_boot_region_unchanged": true,
+    "vendor_descriptor_unchanged": true,
+    "vendor_wfi_parameters_unchanged": true,
+    "status": "EXPERIMENTAL_NOT_DEVICE_TESTED"
+  },
+  "current_image": {
+    "image": "output/RT-AX86U_3004_388.12_2_localmod_native_P6_32bd61b0_NOT_FLASH_READY.w",
+    "bytes": 86769684,
+    "sha256": "fc7af429b6b9824dab8a06882e36b940ea69eb9e54617e8d89c770c6c194d3ab",
+    "rootfs_lebs": 630,
+    "leb_size": 126976,
+    "rootfs_fmt_version": 4,
+    "vendor_boot_region_unchanged": true,
+    "vendor_descriptor_unchanged": true,
+    "vendor_wfi_parameters_unchanged": true,
+    "status": "EXPERIMENTAL_NOT_DEVICE_TESTED"
+  },
+  "identical_paths": 3553,
+  "changed_paths": {
+    "rom/etc/localmod-release.json": {
+      "before": {
+        "mode": 292,
+        "type": "file",
+        "bytes": 411,
+        "sha256": "eccc3451c3d7e87dc0e77ccb18e4f354254b9cb878b161932923bd4fb98329db"
+      },
+      "after": {
+        "mode": 292,
+        "type": "file",
+        "bytes": 469,
+        "sha256": "42af1bbb28969a14deaed430e171fa2c646957e33ad7bdcccbda9f8484e4bc10"
+      }
+    },
+    "www/Module_FancyssLocalmod.asp": {
+      "before": {
+        "mode": 292,
+        "type": "file",
+        "bytes": 4200,
+        "sha256": "f36f3203c897842a722e742147b31c6df8b0863281f789d5398d8b2686209a5f"
+      },
+      "after": {
+        "mode": 292,
+        "type": "file",
+        "bytes": 4343,
+        "sha256": "d1fc87cb17339b266698670722186c3e7b127e3fc8bb96407c8b683fb7c21423"
+      }
+    },
+    "www/Module_Localmod.asp": {
+      "before": {
+        "mode": 420,
+        "type": "file",
+        "bytes": 6790,
+        "sha256": "63dc0563d96ede1d84a3cd673c70133ab7cb8bd8b107877b01e6615dd05bc77a"
+      },
+      "after": {
+        "mode": 420,
+        "type": "file",
+        "bytes": 6777,
+        "sha256": "6ce84892db712089496a4f7219a9319cbca25c8e43ba4c98cd3e8af465a74944"
+      }
+    }
+  },
+  "prior_frozen_validation_reports": {
+    "output/merlin38812_P5_candidate_runtime_tests.json": "baa9aab575738def2b7fc6cb4659dde6ccb7f64f077b30b14a3324e33626aef3",
+    "output/merlin38812_P5_sync_aux_tests.json": "52631a509bb2fdcb7be8198567c992210f6327da78bdd22d029486b7546dede9",
+    "output/merlin38812_P5_persistence_tests.json": "5caca1f248786b1e24a1eff16c98e62e5f922c7c3a53911fb6635e17ce6acd15",
+    "output/merlin38812_P5_plugins_fancyss_tests.json": "79772c3335fe6a4715699edd128a67a8fe3da354b5f1273c9f46c1268f1bd984",
+    "output/merlin38812_P5_plugins_hnd_upgrade_tests.json": "76034e2db2c52de7211f981262b56e806ccab5b6a746afc246569c2801c65afe",
+    "output/merlin38812_P5_plugins_hnd_fresh_tests.json": "0b15b172ca1b33106c03361378bf22a07f6eb85fd673c3eb7a0921823fbafec4",
+    "output/merlin38812_P5_restore_probe_tests.json": "d6408f082cbd4bc0ffab6c58c8db56980f8c8723c44001c05553bb3ea4748c6b",
+    "output/merlin38812_P5_vpn_generation_tests.json": "32f1b1f5027eb9329ade24aa1f10b856862422a480b94b1fbbf0fc92a16fa559",
+    "output/merlin38812_P5_real_tunnel_tests.json": "6a8d3c88ce1224b5f3b17ee0fcb1b565dc53a6bf84c4f9b2825b063c09778d52"
+  },
+  "scope": "Metadata and two informational/install-entry pages differ; preserved P5 tests are not relabeled as P6 executions. Long run will use the P6 image.",
+  "release_url_published": false,
+  "physical_router_flashed": false,
+  "full_upgrade_complete": false
+}

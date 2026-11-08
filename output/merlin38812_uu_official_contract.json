@@ -1,0 +1,21 @@
+{
+  "status": "OFFICIAL_UU_MONITOR_READONLY_CONTRACT_INSPECTED",
+  "api_url": "https://router.uu.163.com/api/script/monitor?type=asuswrt",
+  "monitor_url": "https://uurouter.gdl.netease.com/uuplugin-script/asuswrt/monitor/v7/uuplugin_monitor.sh",
+  "bytes": 19111,
+  "md5": "650a63602ce8f245b9f69a74544ff491",
+  "sha256": "cf7f21ee9307a87f18d908eed5b21d292c463434ae6e7e0e10b25a62820322f2",
+  "tls_certificate_verification_disabled": false,
+  "syntax_checked_only": true,
+  "official_script_executed": false,
+  "plaintext_accept_header_matches_native_api_csv": true,
+  "required_local_context": [
+    "model from /var/model or odmpid/productid",
+    "label MAC from /var/label_macaddr",
+    "existing plugin directory from /var/uu_plugin_dir"
+  ],
+  "limits": [
+    "Static monitor inspection does not verify downloaded accelerator binary, account binding or real acceleration",
+    "Native binary contains matching Accept:text/plain and /var context path strings; runtime candidate context checks are separate"
+  ]
+}

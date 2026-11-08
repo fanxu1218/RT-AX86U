@@ -1,0 +1,8 @@
+LINUX_BUILDER_READY
+panic: added helper never finished
+
+goroutine 1 [running]:
+main.main()
+	./sync_aux.go:55 +0xa4c
+SOAK_REAPER orphans_reaped=1
+LINUX_READONLY_JOB_STATUS=1

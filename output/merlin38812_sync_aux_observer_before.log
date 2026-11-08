@@ -1,0 +1,125 @@
+LINUX_BUILDER_READY
+SYNC_DIAGNOSTIC /tmp/.localmod/native-hooks.log
+
+SYNC_DIAGNOSTIC /tmp/.localmod/bootstrap.log
+
+SYNC_DIAGNOSTIC /tmp/owned-sync-user
+user
+SYNC_DIAGNOSTIC /koolshare/bin/ks-unmount.sh
+#!/bin/sh
+
+# localmod-event-dedup
+if [ -n "$LOCALMOD_EVENT_DIR" ]; then
+ case "$LOCALMOD_EVENT_DIR" in /tmp/.localmod/event.*) ;; *) exit 1;; esac
+ mkdir "$LOCALMOD_EVENT_DIR/ks-unmount.sh" 2>/dev/null || exit 0
+fi
+
+
+source /koolshare/scripts/base.sh
+
+KSPATH=$1
+
+[ $# -lt 1 ] && exit 1
+
+for i in $(find /koolshare/init.d/ -name 'U*' | sort -n);
+do
+	case "$i" in
+		U* | *.sh )
+			# fork subprocess.
+			trap "" INT QUIT TSTP EXIT
+			if [ -r "$i" ]; then
+				_LOG "[软件中心]-[${0##*/}]: $i $KSPATH"
+				"$i" "$KSPATH"
+			fi
+			;;
+		*)
+			# No sh extension, Source shell script for speed.
+			_LOG "[软件中心]-[${0##*/}]: . $i $KSPATH"
+			. $i $KSPATH
+			;;
+	esac
+done
+
+SYNC_PROCESSES
+  PID USER       VSZ STAT COMMAND
+    1 admin     1272 S    {init} /bin/busybox.static sh /init
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [pool_workqueue_]
+    4 admin        0 IW<  [kworker/R-kvfre]
+    5 admin        0 IW<  [kworker/R-rcu_g]
+    6 admin        0 IW<  [kworker/R-sync_]
+    7 admin        0 IW<  [kworker/R-slub_]
+    8 admin        0 IW<  [kworker/R-netns]
+    9 admin        0 IW   [kworker/0:0-eve]
+   10 admin        0 IW<  [kworker/0:0H-ev]
+   11 admin        0 IW   [kworker/0:1-eve]
+   12 admin        0 IW   [kworker/u4:0-ev]
+   13 admin        0 IW<  [kworker/R-mm_pe]
+   14 admin        0 IW   [kworker/u4:1-ev]
+   15 admin        0 IW   [rcu_tasks_kthre]
+   16 admin        0 IW   [rcu_tasks_trace]
+   17 admin        0 SW   [ksoftirqd/0]
+   18 admin        0 IW   [rcu_preempt]
+   19 admin        0 SW   [rcu_exp_par_gp_]
+   20 admin        0 SW   [rcu_exp_gp_kthr]
+   21 admin        0 SW   [migration/0]
+   22 admin        0 SW   [cpuhp/0]
+   23 admin        0 SW   [kdevtmpfs]
+   24 admin        0 IW<  [kworker/R-inet_]
+   25 admin        0 SW   [kauditd]
+   26 admin        0 SW   [khungtaskd]
+   27 admin        0 SW   [oom_reaper]
+   28 admin        0 IW<  [kworker/R-write]
+   29 admin        0 SW   [kcompactd0]
+   30 admin        0 SWN  [ksmd]
+   31 admin        0 SWN  [khugepaged]
+   32 admin        0 IW<  [kworker/R-kinte]
+   33 admin        0 IW<  [kworker/R-kbloc]
+   34 admin        0 IW<  [kworker/R-blkcg]
+   35 admin        0 IW<  [kworker/R-md]
+   36 admin        0 IW<  [kworker/R-md_bi]
+   37 admin        0 IW   [kworker/u4:2-ev]
+   38 admin        0 IW<  [kworker/R-quota]
+   39 admin        0 IW<  [kworker/0:1H]
+   40 admin        0 SW   [kswapd0]
+   53 admin        0 IW<  [kworker/R-kthro]
+   77 admin        0 IW   [kworker/u4:3-ev]
+  114 admin        0 SW   [khvcd]
+  136 admin        0 IW<  [kworker/R-mld]
+  147 admin        0 IW<  [kworker/R-ipv6_]
+  148 admin        0 IW<  [kworker/R-kstrp]
+  293 admin        0 IW   [kworker/u4:4]
+  358 admin        0 IW<  [kworker/u5:0]
+  378 admin        0 IW   [kworker/0:2-eve]
+  380 admin     1272 S    sh /work/build/linux_real_plugins_job.sh
+  435 admin      192 S    /work/build/soak-init-fixture /bin/chroot /router /bin/sh /work/build/native-sync-aux/setup.sh
+  436 admin    1198m S    /work/build/native-sync-aux/probe success
+  656 admin     126m S    {skipd} /usr/bin/qemu-arm /usr/bin/skipd -d /jffs/.localmod/ksdb
+  662 admin     126m S    {log-limit} /usr/bin/qemu-arm /usr/libexec/localmod/log-limit --sink skipd 3
+  696 admin     126m S    {localmod-event} /usr/bin/qemu-arm /usr/libexec/localmod/localmod-event --daemon
+  732 admin     126m S    {log-limit} /usr/bin/qemu-arm /usr/libexec/localmod/log-limit --sink bootstrap 3
+  906 admin     126m S    {perpboot} /usr/bin/qemu-arm /koolshare/bin/perpboot -d
+  908 admin     126m S    {tinylog} /usr/bin/qemu-arm /koolshare/bin/tinylog -k 3 -s 50000 -t /var/log/perpd
+  910 admin     126m S    {perpd} /usr/bin/qemu-arm /koolshare/bin/perpd -a 6 /koolshare/perp
+  928 admin     126m S    {httpdb} /usr/bin/qemu-arm /koolshare/bin/httpdb -p 127.0.0.1:3032 -r 127.0.0.1:80
+  931 admin     126m S    {ks-services-sta} /usr/bin/qemu-arm /bin/sh /koolshare/bin/ks-services-start.sh
+ 1027 admin     126m S    {ks-unmount.sh} /usr/bin/qemu-arm /bin/sh /koolshare/bin/ks-unmount.sh /tmp/owned-mount
+ 1030 admin     126m S    {V01softok.sh} /usr/bin/qemu-arm /bin/sh /koolshare/init.d/V01softok.sh
+ 1082 admin        0 RW   /bin/ps w
+ 1084 admin     126m S    {ks-unmount.sh} /usr/bin/qemu-arm /bin/sh /koolshare/bin/ks-unmount.sh /tmp/owned-mount
+ 1086 admin     126m R    {find} /usr/bin/qemu-arm /usr/bin/find /koolshare/init.d/ -name U*
+ 1087 admin     126m R    {sort} /usr/bin/qemu-arm /usr/bin/sort -n
+ 1092 admin     126m R    {[} /usr/bin/qemu-arm /usr/bin/[ -n 656 ]
+
+panic: added helper never finished [recovered]
+	panic: added helper never finished
+
+goroutine 1 [running]:
+main.main.func1()
+	./sync_aux.go:38 +0x1ec
+panic({0x171d40?, 0x2021d0?})
+	runtime/panic.go:785 +0x124
+main.main()
+	./sync_aux.go:73 +0xadc
+SOAK_REAPER orphans_reaped=1
+LINUX_READONLY_JOB_STATUS=1

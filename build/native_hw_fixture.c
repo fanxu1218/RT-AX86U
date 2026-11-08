@@ -8,6 +8,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#ifndef LOCALMOD_DEVICE_MODEL
+#error Select the fixture device through device_config.fixture_model_flag
+#endif
 static struct {char *key,*value;} entries[4096];static unsigned used;
 static int initializing=1;
 static int state_path(const char *key,char *path,size_t size){
@@ -56,7 +59,7 @@ __attribute__((constructor)) static void load(void){
  FILE *f=fopen("/work/build/native_defaults.bin","rb");if(!f){perror("native defaults");abort();}
  char *k=NULL,*v=NULL;size_t kc=0,vc=0;while(getdelim(&k,&kc,0,f)>0 && getdelim(&v,&vc,0,f)>0)nvram_set(k,v);free(k);free(v);fclose(f);
  if(getenv("LD_PRELOAD"))fputs("PASS early stdio before adapter constructor\n",stderr);
- const char *values[]={"productid","RT-AX86U","odmpid","RT-AX86U","lan_ipaddr","192.168.77.1","lan_netmask","255.255.255.0","lan_ifname","lo","http_lanport","34080","https_lanport","34443","http_enable","2","http_username","admin","http_passwd","local-test-password","x_Setting","1","w_Setting","1","p_Setting","1","territory_code","CN/01","preferred_lang","EN","time_zone_x","UTC0","captcha_enable","0","wl_ifnames","","wl0_ifname","","wl1_ifname","","rc_support","https jffs2 uu_accel","https_crt_save","0","https_crt_gen","0","HTTPD_DBG","1","force_chgpass","0",NULL};
+ const char *values[]={"productid",LOCALMOD_DEVICE_MODEL,"odmpid",LOCALMOD_DEVICE_MODEL,"lan_ipaddr","192.168.77.1","lan_netmask","255.255.255.0","lan_ifname","lo","http_lanport","34080","https_lanport","34443","http_enable","2","http_username","admin","http_passwd","local-test-password","x_Setting","1","w_Setting","1","p_Setting","1","territory_code","CN/01","preferred_lang","EN","time_zone_x","UTC0","captcha_enable","0","wl_ifnames","","wl0_ifname","","wl1_ifname","","rc_support","https jffs2 uu_accel","https_crt_save","0","https_crt_gen","0","HTTPD_DBG","1","force_chgpass","0",NULL};
  for(unsigned i=0;values[i];i+=2)nvram_set(values[i],values[i+1]);
  if(getenv("NATIVE_CERT_CASE")){
   nvram_set("https_crt_save","1");nvram_set("le_enable","0");nvram_set("ntp_ready","1");

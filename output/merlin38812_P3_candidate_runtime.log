@@ -1,0 +1,24 @@
+LINUX_BUILDER_READY
+PASS native_init_start_prepares_center_and_appends_only_supported_uu_capability
+PASS native_user_and_center_exactly_once_services-start
+PASS native_user_and_center_exactly_once_services-stop
+PASS native_user_and_center_exactly_once_wan-start
+PASS native_user_and_center_exactly_once_nat-start
+PASS native_user_and_center_exactly_once_post-mount
+PASS native_user_and_center_exactly_once_unmount
+PASS native_services_start_starts_center_with_private_backend_guard
+PASS repeated_native_notifications_are_not_coalesced_or_duplicated
+PASS unmanaged_native_hook_and_blocking_timeout_forwarded
+PASS native_custom_script_disable_flag_preserved
+PASS uu_advertisement_territory_gate_preserves_merlin_features
+PASS native_postconf_adds_plugin_dns_directory_once_before_user_edit
+panic: center fractional sleep: exit status 1 sleep: invalid number '0.1'
+	
+
+goroutine 1 [running]:
+main.candidateReadWritePages()
+	./candidate_runtime.go:42 +0xbe4
+main.main()
+	./native_hooks.go:130 +0xf7c
+SOAK_REAPER orphans_reaped=25
+LINUX_READONLY_JOB_STATUS=1

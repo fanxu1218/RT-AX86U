@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Check event/log limits on a source overlay in the disposable native root."""
+from device_config import compiler_flags
 import hashlib,json,os,subprocess
 from pathlib import Path
 from check_installer_boundaries import overlay
@@ -8,7 +9,7 @@ ROOT=Path(__file__).resolve().parent.parent
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 os.chdir(ROOT)
 files=overlay();folder=ROOT/'build/hardening-overlay'
-flags=['sources/zig-aarch64-macos-0.15.2/zig','cc','-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53','-O2','-s']
+flags=['sources/zig-aarch64-macos-0.15.2/zig','cc',*compiler_flags(),'-O2','-s']
 for name,src,extra in [('log-limit','log_limit.c',[]),('localmod-event','event.c',['sources/localmod/runtime.c'])]:
  p=folder/'usr/libexec/localmod'/name
  subprocess.run(flags+['-o',str(p),'sources/localmod/'+src]+extra,check=True);p.chmod(0o755)

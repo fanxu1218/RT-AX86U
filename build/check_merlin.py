@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Run actual six-component services with no host writes or guest WAN NIC."""
+from device_config import compiler_flags
 import argparse
 import hashlib
 import json
@@ -37,7 +38,7 @@ def main():
                'build/make_merlin_system_initramfs.py']
     assert (stage/'usr/libexec/localmod/miniupnp-compat').read_bytes()==(ROOT/'build/miniupnp-compat').read_bytes()
     before = {p:sha(ROOT/p) for p in sources}
-    cc = [str(ROOT/'sources/zig-aarch64-macos-0.15.2/zig'),'cc','-target','arm-linux-gnueabi.2.26','-O2']
+    cc = [str(ROOT/'sources/zig-aarch64-macos-0.15.2/zig'),'cc',*compiler_flags(cpu=False),'-O2']
     subprocess.run(cc+['-o','build/merlin-vpn-config-probe','build/merlin_vpn_config_probe.c','-ldl'],check=True)
     subprocess.run(cc+['-shared','-fPIC','-o','build/merlin-vpn-config-fixture.so','build/merlin_vpn_config_fixture.c'],check=True)
     subprocess.run(['go','build','-trimpath','-o','build/test-merlin','build/test_merlin.go',

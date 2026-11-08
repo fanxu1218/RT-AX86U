@@ -1,0 +1,8 @@
+LINUX_BUILDER_READY
+SYNC_NATIVE_BOUNDARY map[elapsed_ms:1841 helper_finished:true loaded_bridge:/usr/lib/localmod/native_boot_bridge.so]
+SYNC_AUX_OBSERVATION timeout=2 elapsed_ms=2124 finished_at_return=true
+SYNC_NATIVE_BOUNDARY map[elapsed_ms:24 helper_finished:false loaded_bridge:/usr/lib/localmod/native_boot_bridge.so]
+SYNC_AUX_OBSERVATION timeout=0 elapsed_ms=1533 finished_at_return=false
+SYNC_AUX_RESULT {"cases":[{"contract_matches":true,"elapsed_ms":2124,"helper_eventually_finished":true,"helper_finished_at_return":true,"native_return":{"elapsed_ms":1841,"helper_finished":true,"loaded_bridge":"/usr/lib/localmod/native_boot_bridge.so"},"timeout_seconds":"2"},{"contract_matches":true,"elapsed_ms":1533,"helper_eventually_finished":true,"helper_finished_at_return":false,"native_return":{"elapsed_ms":24,"helper_finished":false,"loaded_bridge":"/usr/lib/localmod/native_boot_bridge.so"},"timeout_seconds":"0"},{"case":"exhausted_native_budget","contract_matches":true,"helper_eventually_finished":false,"helper_finished_at_return":false,"native_return":{"elapsed_ms":1011,"helper_finished":false,"loaded_bridge":"/usr/lib/localmod/native_boot_bridge.so"},"timeout_seconds":"1"}],"checks":["native_blocking_and_async_observations_recorded"],"full_upgrade_complete":false,"online":{"checks":[]}}
+SOAK_REAPER orphans_reaped=13
+LINUX_READONLY_JOB_STATUS=0

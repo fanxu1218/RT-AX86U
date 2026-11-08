@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Read-only TLS cache/mallinfo observation on the original HTTPd."""
+from device_config import compiler_flags
 import json,os,re,subprocess,sys
 from pathlib import Path
 from check_memory import candidate,sha
@@ -7,8 +8,8 @@ from run_readonly_linux import run
 ROOT=Path(__file__).resolve().parent.parent
 os.chdir(ROOT);v,production=candidate()
 overlay='--overlay' in sys.argv
-if overlay:subprocess.run(['sources/zig-aarch64-macos-0.15.2/zig','cc','-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53','-O2','-shared','-fPIC','-o','build/httpd_bridge_next.so','sources/localmod/httpd_bridge.c','-ldl'],check=True)
-subprocess.run(['sources/zig-aarch64-macos-0.15.2/zig','cc','-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53','-O2','-shared','-fPIC','-o','build/httpd_tls_cache_fixture.so','build/httpd_tls_cache_fixture.c','-ldl'],check=True)
+if overlay:subprocess.run(['sources/zig-aarch64-macos-0.15.2/zig','cc',*compiler_flags(),'-O2','-shared','-fPIC','-o','build/httpd_bridge_next.so','sources/localmod/httpd_bridge.c','-ldl'],check=True)
+subprocess.run(['sources/zig-aarch64-macos-0.15.2/zig','cc',*compiler_flags(),'-O2','-shared','-fPIC','-o','build/httpd_tls_cache_fixture.so','build/httpd_tls_cache_fixture.c','-ldl'],check=True)
 sources=['build/test_soak.go','build/test_memory.go','build/memory_cycles.go','build/httpd_memory.go','build/native_runtime_client.go','build/test_online.go','build/coexist_helpers.go']
 subprocess.run(['go','build','-trimpath','-o','build/test-soak']+sources,check=True,env=dict(os.environ,GOOS='linux',GOARCH='arm64',CGO_ENABLED='0'))
 source_sha={p:sha(ROOT/p) for p in sources+['build/httpd_tls_cache_fixture.c']+(['sources/localmod/httpd_bridge.c'] if overlay else [])}

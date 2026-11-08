@@ -1,0 +1,14 @@
+LINUX_BUILDER_READY
+MERLIN_SYSTEM_PROBE_READY
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS openvpn_real_mutual_tls_27_handshake_and_tun_ping_with_uu_alive
+PASS native_openvpn_27_pam_plugin_authenticates_valid_account_and_rejects_wrong_password
+MERLIN_RESULT {"checks":{"native_openvpn_27_pam_plugin_authenticates_valid_account_and_rejects_wrong_password":true,"openvpn_real_mutual_tls_27_handshake_and_tun_ping_with_uu_alive":true},"full_suite":false,"real_uu_monitor_executed":false,"uu_api_requests":1,"uu_downloads":1,"versions":{}}
+SOAK_REAPER orphans_reaped=1
+NESTED_MERLIN_JOB_STATUS=0
+[   30.411425] reboot: Power down
+LINUX_READONLY_JOB_STATUS=0

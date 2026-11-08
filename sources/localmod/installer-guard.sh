@@ -109,10 +109,10 @@ ks_archive_valid(){
 }
 ks_platform_valid(){
  [ -f "$KS_STAGE/.valid" ] || return 1
- grep -qw hnd "$KS_STAGE/.valid" && return 0
- # This firmware targets the ordinary RT-AX86U with the retained ARM64 loader.
- grep -qx hnd_v8 "$KS_STAGE/.valid" &&
-  [ "$(nvram get productid)" = RT-AX86U ] && [ -x /lib/ld-linux-aarch64.so.1 ]
+ grep -qw @PLUGIN_LEGACY@ "$KS_STAGE/.valid" && return 0
+ # This firmware targets the ordinary @MODEL@ with the retained ARM64 loader.
+ grep -qx @PLUGIN_EXTENDED@ "$KS_STAGE/.valid" &&
+  [ "$(nvram get productid)" = @PLUGIN_MODEL@ ] && [ -x @PLUGIN_LOADER@ ]
 }
 ks_prepare_plugin(){
  /bin/sh /usr/libexec/localmod/plugin-compat.sh "$softcenter_installing_todo" "$KS_STAGE"

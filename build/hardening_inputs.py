@@ -1,4 +1,5 @@
 """Prepare shared fixture inputs serially before sealing independent VM jobs."""
+from device_config import compiler_flags
 import os
 import subprocess
 from check_installer_boundaries import fixtures, ROOT, sha
@@ -7,8 +8,7 @@ from check_installer_boundaries import fixtures, ROOT, sha
 def prepare():
     os.chdir(ROOT)
     fixtures()
-    arm = ['sources/zig-aarch64-macos-0.15.2/zig', 'cc', '-target',
-           'arm-linux-gnueabi.2.26', '-mcpu=cortex_a53', '-O2', '-s']
+    arm = ['sources/zig-aarch64-macos-0.15.2/zig', 'cc', *compiler_flags(), '-O2', '-s']
     fixture = ['-DLM_BASE="/tmp/localmod-bounds"', '-DLM_DISPATCH="/tmp/bounds-dispatch.sh"',
                '-DLM_LOGGER="/work/build/log-limit-bounds-fixture"']
     for name, sources in [('log-limit', ['sources/localmod/log_limit.c']),

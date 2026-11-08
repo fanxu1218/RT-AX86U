@@ -1,0 +1,299 @@
+{
+  "schema": 1,
+  "status": "LOCAL_DEVELOPMENT_HANDOFF_NOT_DEVICE_ACCEPTED",
+  "revision": "P6",
+  "base": "3004.388.12_2",
+  "model": "RT-AX86U",
+  "candidate_sha256": "fc7af429b6b9824dab8a06882e36b940ea69eb9e54617e8d89c770c6c194d3ab",
+  "source_snapshot_sha256": "f9433a4fc4283fe1d1bf51f253334b29a683899aa5d1a902e703c6cf974c3eb4",
+  "source_snapshot_contains_uncommitted_device_profile_dependencies": true,
+  "local_gate_sha256": "9b1c8d3641b2ba26b4307506693a4fc0acf9d00a46a47114981cca78c24b4d72",
+  "files": {
+    "analysis/merlin_vpn_38812/release.json": {
+      "bytes": 280,
+      "sha256": "5f20e2035abfe9b9cedcc00b9d30adf17c17bb07b16a971230655218fb8cd267"
+    },
+    "output/388.12_2\u539f\u751f\u6846\u67b6\u8fdb\u5ea6.md": {
+      "bytes": 12960,
+      "sha256": "c8d38a168ac778abc20ba5053edb9cfb51a8ea2612c08a56e59b99eccb1920aa"
+    },
+    "output/388.12_2\u672c\u5730\u4ea4\u4ed8\u4e0e\u624b\u52a8\u63a8\u9001.md": {
+      "bytes": 5017,
+      "sha256": "1d8a79b38ef29148b672263b7083a27f29bedc52dbeccbb0df08c3a9833bdbb1"
+    },
+    "output/RT-AX86U_3004_388.12_2_localmod_native_P6_32bd61b0_NOT_FLASH_READY.w": {
+      "bytes": 86769684,
+      "sha256": "fc7af429b6b9824dab8a06882e36b940ea69eb9e54617e8d89c770c6c194d3ab"
+    },
+    "output/merlin38812-native-P6-sources.tar.gz": {
+      "bytes": 520676,
+      "sha256": "f9433a4fc4283fe1d1bf51f253334b29a683899aa5d1a902e703c6cf974c3eb4"
+    },
+    "output/merlin38812_P5_P6_equivalence.json": {
+      "bytes": 3688,
+      "sha256": "c91b3331581edb758720981e5a7adf5a9b58b785fa5d829b8276a720f8bfd1db"
+    },
+    "output/merlin38812_P5_candidate_runtime.log": {
+      "bytes": 5560,
+      "sha256": "06625508cd24be4b97d246a8de039517738f430914ca96c100cc957c7cd3f02f"
+    },
+    "output/merlin38812_P5_candidate_runtime.log.vm.json": {
+      "bytes": 4659,
+      "sha256": "aa1d4d84197f748636dc3e138d233c05246e8aade427bacb1da40f0a8b1305dc"
+    },
+    "output/merlin38812_P5_candidate_runtime_tests.json": {
+      "bytes": 13403,
+      "sha256": "baa9aab575738def2b7fc6cb4659dde6ccb7f64f077b30b14a3324e33626aef3"
+    },
+    "output/merlin38812_P5_persistence_tests.json": {
+      "bytes": 12268,
+      "sha256": "5caca1f248786b1e24a1eff16c98e62e5f922c7c3a53911fb6635e17ce6acd15"
+    },
+    "output/merlin38812_P5_plugins_fancyss.log": {
+      "bytes": 12536,
+      "sha256": "f8351038d46ec5d486fec0c1da0796f3d66c54f1e9b79bc0ba5a55b2a6216151"
+    },
+    "output/merlin38812_P5_plugins_fancyss.log.vm.json": {
+      "bytes": 9467,
+      "sha256": "3100dd188ba2a1df4dfbfbca2e98431522dfee5294b2ae9cca48774639459bb7"
+    },
+    "output/merlin38812_P5_plugins_fancyss_tests.json": {
+      "bytes": 20050,
+      "sha256": "79772c3335fe6a4715699edd128a67a8fe3da354b5f1273c9f46c1268f1bd984"
+    },
+    "output/merlin38812_P5_plugins_hnd_fresh.log": {
+      "bytes": 2720,
+      "sha256": "43a77c8dd16ff24a1eec8e23951bf8c5315d19af15aa9b4cf855b078870c93a0"
+    },
+    "output/merlin38812_P5_plugins_hnd_fresh.log.vm.json": {
+      "bytes": 8672,
+      "sha256": "8622dbd00df31cad8f21e3e0bc71b46fc6b354ccb6c5056c2d4846c438a1c70e"
+    },
+    "output/merlin38812_P5_plugins_hnd_fresh_tests.json": {
+      "bytes": 16384,
+      "sha256": "0b15b172ca1b33106c03361378bf22a07f6eb85fd673c3eb7a0921823fbafec4"
+    },
+    "output/merlin38812_P5_plugins_hnd_upgrade.log": {
+      "bytes": 4240,
+      "sha256": "5d2ce358aa0918bb30da1dd50b3092f80f6e13d3c8bc3a61ecc4f5c60995f3ab"
+    },
+    "output/merlin38812_P5_plugins_hnd_upgrade.log.vm.json": {
+      "bytes": 8710,
+      "sha256": "4c90261b3949dee66171e9541c68480d1a64fb1d7ea7ca7f4f888ded93b6dc21"
+    },
+    "output/merlin38812_P5_plugins_hnd_upgrade_tests.json": {
+      "bytes": 17250,
+      "sha256": "76034e2db2c52de7211f981262b56e806ccab5b6a746afc246569c2801c65afe"
+    },
+    "output/merlin38812_P5_real_tunnel.log": {
+      "bytes": 813,
+      "sha256": "f2fbb836265c057f6cbdec66d12449af92b1abe045f5b535881d8f154b188f8b"
+    },
+    "output/merlin38812_P5_real_tunnel.log.vm.json": {
+      "bytes": 5077,
+      "sha256": "8d65f06dc5a98650a83bef4615dcf106a0f844a34585b6aab4791cd7dc209a4a"
+    },
+    "output/merlin38812_P5_real_tunnel_tests.json": {
+      "bytes": 12371,
+      "sha256": "6a8d3c88ce1224b5f3b17ee0fcb1b565dc53a6bf84c4f9b2825b063c09778d52"
+    },
+    "output/merlin38812_P5_restore_probe.log": {
+      "bytes": 838,
+      "sha256": "10997164db686c53caa89dd95684c235be86ea40be808e461065fd914485b412"
+    },
+    "output/merlin38812_P5_restore_probe.log.vm.json": {
+      "bytes": 4581,
+      "sha256": "d387aed2ca81c96ce9c4a098314c562c7dec1a42f40e8e6ef1975ede68339a8d"
+    },
+    "output/merlin38812_P5_restore_probe_tests.json": {
+      "bytes": 11272,
+      "sha256": "d6408f082cbd4bc0ffab6c58c8db56980f8c8723c44001c05553bb3ea4748c6b"
+    },
+    "output/merlin38812_P5_sync_aux.log": {
+      "bytes": 1364,
+      "sha256": "f5de4ea0f01ef33cec2575adda08ea4efd7de586e9d2efb196a7d64f5aa4fc3c"
+    },
+    "output/merlin38812_P5_sync_aux.log.vm.json": {
+      "bytes": 4358,
+      "sha256": "7fe33fc8c24592d2ff6bb17cccaec153cc51c4b0d168c31a9fa0d2294f2247fc"
+    },
+    "output/merlin38812_P5_sync_aux_tests.json": {
+      "bytes": 12056,
+      "sha256": "52631a509bb2fdcb7be8198567c992210f6327da78bdd22d029486b7546dede9"
+    },
+    "output/merlin38812_P5_vpn_generation.log": {
+      "bytes": 1491,
+      "sha256": "fc12f266a4cf0c2fca762db6704a3b43a401b9cfa89bc6840c30ce9d02a2cf40"
+    },
+    "output/merlin38812_P5_vpn_generation.log.vm.json": {
+      "bytes": 4595,
+      "sha256": "449c0cd7b4a584a6bd75625f7e6d0a58229cfdde34e31c8771c0069b52786c3c"
+    },
+    "output/merlin38812_P5_vpn_generation_tests.json": {
+      "bytes": 12047,
+      "sha256": "32f1b1f5027eb9329ade24aa1f10b856862422a480b94b1fbbf0fc92a16fa559"
+    },
+    "output/merlin38812_local_gate.json": {
+      "bytes": 21532,
+      "sha256": "9b1c8d3641b2ba26b4307506693a4fc0acf9d00a46a47114981cca78c24b4d72"
+    },
+    "output/merlin38812_migration_state.json": {
+      "bytes": 11441,
+      "sha256": "acd5693960364f29ade51fe486a80741eb964f8cf01b20a76318c3f8b0d3a0fa"
+    },
+    "output/merlin38812_native_candidate_tests.json": {
+      "bytes": 13506,
+      "sha256": "cb3f47f53c17848e35a06280b7d1e382c9e37b9f5c1e2422d8487cd90830aa68"
+    },
+    "output/merlin38812_native_coexist_60m.log": {
+      "bytes": 457555,
+      "sha256": "02bf114cc050e8fb222d79271045937b9ffc42e90166efffad835cf79888f5a6"
+    },
+    "output/merlin38812_native_coexist_60m.log.vm.json": {
+      "bytes": 5647,
+      "sha256": "3c0f4d104ca501fb39acb3ec205d343bf65c0e6fb327e611777c95fe18fff9a4"
+    },
+    "output/merlin38812_native_coexist_60m_tests.json": {
+      "bytes": 275550,
+      "sha256": "82ff9dab04c5801f8b883f480352f0bfe7fd193f5903d2f3b6d464731d8264ca"
+    },
+    "output/merlin38812_native_coexist_probe.log": {
+      "bytes": 76074,
+      "sha256": "59b3e0d65b768d1e3c565d244e9dd991f65bf44b7b2fa8ed1d8afca3fe3072e6"
+    },
+    "output/merlin38812_native_coexist_probe.log.vm.json": {
+      "bytes": 5647,
+      "sha256": "809f359ef310b8af3c22955340899e24f0e30e32f5dae3233eaa9d4432b6af01"
+    },
+    "output/merlin38812_native_coexist_probe_tests.json": {
+      "bytes": 13792,
+      "sha256": "03de935686f1addc0ae1af6d61ca041838219903f917b2d7d683f572758553e7"
+    },
+    "output/merlin38812_native_coexist_smoke.log": {
+      "bytes": 50296,
+      "sha256": "ea30010cecf1d3dce5f54f6994b2ae54cabfe00fb4739ab492b4db776bc21655"
+    },
+    "output/merlin38812_native_coexist_smoke.log.vm.json": {
+      "bytes": 5647,
+      "sha256": "47bd0ffdac3e45db7de3a619de158ecf43a40757876d0c46fdcd9b22d07fe182"
+    },
+    "output/merlin38812_native_coexist_smoke_tests.json": {
+      "bytes": 42888,
+      "sha256": "71001ef102d31ca7df9a7dc2997f75a39841d60f134f0a3cc10ce89ea9d23554"
+    },
+    "output/merlin38812_persist_after-commit_cut_tests.json": {
+      "bytes": 12490,
+      "sha256": "590a19a3e2ed4fda32269074aee483bbb838305027250c07a8331940c8a3b5d3"
+    },
+    "output/merlin38812_persist_after-commit_verify_tests.json": {
+      "bytes": 12679,
+      "sha256": "523daaa0391ad5532938c608ea4b237a3d761651f0afced7ccc7bcdb5e03c2f4"
+    },
+    "output/merlin38812_persist_before-commit_cut_tests.json": {
+      "bytes": 12491,
+      "sha256": "33663f5c6320f106cf65ce3373923f16eaa323094598283891b5864de02e0657"
+    },
+    "output/merlin38812_persist_before-commit_verify_tests.json": {
+      "bytes": 12802,
+      "sha256": "276c74af62b5b5d0dce895b76c59e88950cd62ff8eb03510d82dacdc257354a2"
+    },
+    "output/merlin38812_persist_checkpoint_cut_tests.json": {
+      "bytes": 12488,
+      "sha256": "cd8ef1ef6d18acfd863a6e8d9dd5dc1ead8eb25181949f55ba7c6a5061720e53"
+    },
+    "output/merlin38812_persist_checkpoint_verify_tests.json": {
+      "bytes": 12677,
+      "sha256": "0fa37f6fc8cef57e1f9d0dde0bf9defa53ab99fb15d1f85cb1acc7d860b43262"
+    },
+    "output/merlin38812_persist_committed-cleanup_cut_tests.json": {
+      "bytes": 12495,
+      "sha256": "4a85b262fce0c6bc4f68f656b826dfc4dddfaa6173a882d708ba6a7915be4d97"
+    },
+    "output/merlin38812_persist_committed-cleanup_verify_tests.json": {
+      "bytes": 12684,
+      "sha256": "9a1d8bf811f9c6216e075db3758c664312e1f45fefc86190ed1cad89fcab5067"
+    },
+    "output/merlin38812_persist_download_cut_tests.json": {
+      "bytes": 12679,
+      "sha256": "48194be74494c4e335030caa6cc699ff33ac953c23027c425045a87d132fca89"
+    },
+    "output/merlin38812_persist_download_verify_tests.json": {
+      "bytes": 12675,
+      "sha256": "b6762eb8b2e8ff3b1a03623aa519b02433ed9dbb43eb05c1ca91661a5788538c"
+    },
+    "output/merlin38812_persist_foundation_foundation_tests.json": {
+      "bytes": 12389,
+      "sha256": "687a4085f71169ed9c3295455fa7b525cd644a4fe2fdbf014c1891f7aad97a5c"
+    },
+    "output/merlin38812_persist_fresh_cut_tests.json": {
+      "bytes": 12727,
+      "sha256": "301b19af6d1837687e90426e1a70058e026a76c5b9c5a8d2986974f93f33df9f"
+    },
+    "output/merlin38812_persist_fresh_verify_tests.json": {
+      "bytes": 12794,
+      "sha256": "21bc2c69dca3c25bd403031d74b6ac8faeaf923418ee8c3551d3c525dc1cef00"
+    },
+    "output/merlin38812_persist_kill-parent_cut_tests.json": {
+      "bytes": 12739,
+      "sha256": "e65b943f11cccbe4d9eaf24c22092396d2a1e2235b60dfc03ef9652fe2a7ea08"
+    },
+    "output/merlin38812_persist_kill-parent_recover-db-cut_tests.json": {
+      "bytes": 12678,
+      "sha256": "f3419d65f9cc040bc6e857966268e7be942ed07ef22413d372836c0627976713"
+    },
+    "output/merlin38812_persist_kill-parent_verify_tests.json": {
+      "bytes": 12800,
+      "sha256": "fcb548fd1e39e31f5101920e62f7be0a72f107a7068a6a36c25dda629d826ca9"
+    },
+    "output/merlin38812_persist_kill-tree_cut_tests.json": {
+      "bytes": 12735,
+      "sha256": "1af66f2fb49d93ec46c22e193553d28afeb42186f427057160972833e8436867"
+    },
+    "output/merlin38812_persist_kill-tree_recover-cut_tests.json": {
+      "bytes": 12521,
+      "sha256": "b5db37cd0180ec3643111e0ec3878a55872b9dbb1516daf0727b9749ca6e78bd"
+    },
+    "output/merlin38812_persist_kill-tree_verify_tests.json": {
+      "bytes": 12798,
+      "sha256": "c0d6d31388472c21362d472202add0fadfcfe835f8c650b641ac1e5c6bfbbecb"
+    },
+    "output/merlin38812_persist_no-space_exercise_tests.json": {
+      "bytes": 12519,
+      "sha256": "8c844ae75bc1610cca9c221ebbaedaa64c657460a3cd3e921b33be9c014295ff"
+    },
+    "output/merlin38812_persist_offline_cut_tests.json": {
+      "bytes": 12731,
+      "sha256": "098fa87a6daa4b5eb2e30ab2b8945d4beb976f4fc24fdad9ea8bfed7330de00e"
+    },
+    "output/merlin38812_persist_offline_verify_tests.json": {
+      "bytes": 12796,
+      "sha256": "02fbbed1335e198ceb7e64e77212fb622d68ce174b5053d7adddf4d53c3f8994"
+    },
+    "output/merlin38812_persist_real-ddnsgo_cut_tests.json": {
+      "bytes": 12489,
+      "sha256": "5c2e0724d93b793a55134044090026175cc34556cc06542bc0a83faa0cd30a7e"
+    },
+    "output/merlin38812_persist_real-ddnsgo_verify_tests.json": {
+      "bytes": 12800,
+      "sha256": "a6ef94e96376cdd85a06cd91b1acfb64afc3676b394e58c0eb92d749aa48b619"
+    },
+    "output/merlin38812_source_snapshot.json": {
+      "bytes": 603,
+      "sha256": "c2fedd86ccf62517b8710310061909a809c5a770c56a8e99fb069a715598afc6"
+    },
+    "sources/realplugins/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz": {
+      "bytes": 19790810,
+      "sha256": "b45d1294022b7914f6ffa6ae67c688e4870ef7aa07f3556657feec37a034d592"
+    }
+  },
+  "flash_ready": false,
+  "agent_pushed_or_published": false,
+  "github_push_owner": "user",
+  "planned_release_tag": "localmod-native-38812-p6-experimental",
+  "planned_release_published": false,
+  "excluded": [
+    "Target Broadcom 4.1 kernel/PID1 boot and firmware updater acceptance",
+    "Physical Wi-Fi/NAT/flash reliability and UU real account/game acceleration",
+    "Every external VPN provider, plugin and transparent/global proxy combination"
+  ]
+}

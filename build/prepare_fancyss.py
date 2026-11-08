@@ -10,9 +10,10 @@ import re
 import subprocess
 import tarfile
 from pathlib import Path, PurePosixPath
+from device_config import DEVICE, render_source
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST = ROOT / 'build/fancyss_sources.json'
+MANIFEST = ROOT / DEVICE['sources']['fancyss']
 
 
 def sha(blob):
@@ -62,10 +63,10 @@ printf '%s\\n' 'localmod: 请在软件中心离线安装经过适配和校验的
 http_response "$1"
 '''.encode()
     if name == 'uninstall.sh':
-        # The upstream nonempty literal test is always true. JQ is shared by
-        # PushPlus and other center plugins; remove only the stock-owned alias.
-        text = replace(blob.decode(), 'if [ -n /usr/bin/jq ];then',
-                       'if [ -x /usr/bin/jq ] && [ -L /koolshare/bin/jq ] && [ "$(readlink /koolshare/bin/jq)" = /usr/bin/jq ];then')
+        # Both regular binaries and system aliases are shared by other plugins.
+        # Keeping the alias costs no duplicated JQ binary on Merlin bases.
+        text = replace(blob.decode(), 'if [ -n /usr/bin/jq ];then\n\trm -rf /koolshare/bin/jq >/dev/null 2>&1\nfi',
+                       '# localmod: retain shared JQ binaries and system aliases for other plugins.')
         return text.encode()
     return blob
 
@@ -119,7 +120,7 @@ def prepare():
                     if name == '.valid':
                         assert data == b'hnd_v8\n'
                 dst.addfile(item, io.BytesIO(data) if data is not None else None)
-            notice=('Fancyss '+package['version']+' HND v8 Full, localmod adaptation 1.\n'
+            notice=('Fancyss '+package['version']+' HND v8 Full, localmod adaptation 2.\n'
                     'Upstream archive: '+package['source_url']+'\n'
                     'Upstream SHA256: '+package['sha256']+'\n'
                     'Corresponding Fancyss source: '+manifest['source_repository']+'\n'
@@ -148,7 +149,7 @@ def prepare():
 
 def render_page(manifest, config):
     p=next(p for p in manifest['packages'] if p['phase']=='current')
-    text=(ROOT/'sources/localmod/Module_FancyssLocalmod.asp').read_text()
+    text=render_source('sources/localmod/Module_FancyssLocalmod.asp',config)
     for key,value in {'@TAG@':config['tag'],'@FANCYSS_VERSION@':p['version'],
                       '@FANCYSS_MD5@':p['adapted_md5'],'@FANCYSS_FILENAME@':Path(p['adapted_path']).name}.items():
         assert key in text

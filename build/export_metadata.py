@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from device_config import leb_size
 import argparse
 import json
 from pathlib import Path
@@ -7,7 +8,7 @@ from ubireader.ubifs import ubifs, walk
 
 ap=argparse.ArgumentParser();ap.add_argument('volume',type=Path);ap.add_argument('out',type=Path)
 args=ap.parse_args()
-image=ubifs(ubi_file(str(args.volume),126976))
+image=ubifs(ubi_file(str(args.volume),leb_size()))
 inodes={};bad=[]
 walk.index(image,image.master_node.root_lnum,image.master_node.root_offs,inodes,bad)
 assert not bad

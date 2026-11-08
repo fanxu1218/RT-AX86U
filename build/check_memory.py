@@ -3,6 +3,7 @@
 
 No diagnostic flag, supervisor edit or memory limit enters the firmware.
 """
+from device_config import compiler_flags
 import argparse
 import hashlib
 import json
@@ -230,7 +231,7 @@ def main():
                                "build/soak-init-fixture", "build/soak_init_fixture.c"], check=True)
         subprocess.run(flags + ["-target", "aarch64-linux-musl", "-static", "-s", "-o",
                                "build/memory-exec-fixture", "build/memory_exec_fixture.c"], check=True)
-        subprocess.run(flags + ["-target", "arm-linux-gnueabi.2.26", "-mcpu=cortex_a53", "-shared", "-fPIC",
+        subprocess.run(flags + [*compiler_flags(), "-shared", "-fPIC",
                                "-o", "build/https_trace_fixture.so", "build/https_trace_fixture.c", "-ldl"], check=True)
         sources = ["build/test_soak.go", "build/test_memory.go", "build/memory_cycles.go", "build/httpd_memory.go", "build/native_runtime_client.go",
                    "build/test_online.go", "build/coexist_helpers.go"]

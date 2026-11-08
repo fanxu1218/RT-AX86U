@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Original r7 HTTPd map separation plus bounded concurrent/disconnect rounds."""
+from device_config import compiler_flags
 import json,os,subprocess
 from pathlib import Path
 from check_memory import candidate,sha
@@ -10,7 +11,7 @@ os.chdir(ROOT);v,production=candidate();prepare()
 flags=['sources/zig-aarch64-macos-0.15.2/zig','cc','-O2']
 subprocess.run(flags+['-target','aarch64-linux-musl','-static','-s','-o','build/memory-exec-fixture','build/memory_exec_fixture.c'],check=True)
 subprocess.run(flags+['-target','aarch64-linux-musl','-static','-s','-o','build/soak-init-fixture','build/soak_init_fixture.c'],check=True)
-subprocess.run(flags+['-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53','-shared','-fPIC','-o','build/https_trace_fixture.so','build/https_trace_fixture.c','-ldl'],check=True)
+subprocess.run(flags+[*compiler_flags(),'-shared','-fPIC','-o','build/https_trace_fixture.so','build/https_trace_fixture.c','-ldl'],check=True)
 sources=['build/test_soak.go','build/test_memory.go','build/memory_cycles.go','build/httpd_memory.go','build/native_runtime_client.go','build/test_online.go','build/coexist_helpers.go']
 subprocess.run(['go','build','-trimpath','-o','build/test-soak']+sources,check=True,env=dict(os.environ,GOOS='linux',GOARCH='arm64',CGO_ENABLED='0'))
 (ROOT/'build/real-plugin-phase').write_text('soak-httpd-memory\n')

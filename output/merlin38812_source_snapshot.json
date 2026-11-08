@@ -1,0 +1,15 @@
+{
+  "status": "LOCAL_DEVELOPMENT_SNAPSHOT_SAVED_NOT_RELEASED",
+  "archive": "output/merlin38812-native-P6-sources.tar.gz",
+  "bytes": 520676,
+  "sha256": "f9433a4fc4283fe1d1bf51f253334b29a683899aa5d1a902e703c6cf974c3eb4",
+  "files": 235,
+  "git_head_at_snapshot": "443f774be00a92339f31b464c13b0dbed5392e02",
+  "working_tree_snapshot": true,
+  "git_commit_created": false,
+  "github_push_owner": "user",
+  "agent_pushed_or_published": false,
+  "full_upgrade_complete": false,
+  "local_validation_complete": true,
+  "candidate_sha256": "fc7af429b6b9824dab8a06882e36b940ea69eb9e54617e8d89c770c6c194d3ab"
+}

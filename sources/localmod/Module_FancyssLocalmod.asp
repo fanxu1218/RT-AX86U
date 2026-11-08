@@ -5,7 +5,7 @@
 </head><body>
 <h1>Fancyss · @FANCYSS_VERSION@</h1>
 <p><a href="/Module_Softcenter.asp">软件中心</a> · <a href="/Module_Localmod.asp">官改状态与恢复</a> · <a href="/UUAccelerator.asp">网易 UU</a></p>
-<section><p>适用于普通 RT-AX86U 的 HND v8 Full 适配包。安装后保持关闭，节点和代理模式由你配置。</p>
+<section><p>适用于普通 @MODEL@ 的 @PLUGIN_PLATFORM@ 适配包。安装后保持关闭，节点和代理模式由你配置。</p>
 <p>适配包保留 UU 文件与原厂日志，通过原厂登录和 HTTPS 管理；状态与日志使用 HTTP 查询。插件内自更新已改为提示使用软件中心安装兼容包。</p>
 <p class="note">安装需要联网下载约 19 MiB，并预留插件及恢复检查点所需的 JFFS 空间。空间不足会拒绝安装。此候选版尚未完成实机网络、DNS、防火墙和真实 UU 加速验收。</p>
 <button id="install" type="button">安装 @FANCYSS_VERSION@ 适配包</button>

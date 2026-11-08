@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Validate authentic HND plugin lifecycles against the read-back candidate."""
+from device_config import render_source
 import hashlib
 import json
 import os
@@ -19,7 +20,7 @@ image = ROOT / verification['image']
 sha256 = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 assert sha256(image) == verification['sha256']
 for name in ['bootstrap.sh', 'dispatch.sh', 'installer-guard.sh']:
-    assert (ROOT / 'sources/localmod' / name).read_bytes() == (stage / 'usr/libexec/localmod' / name).read_bytes()
+    assert render_source('sources/localmod/'+name).encode() == (stage / 'usr/libexec/localmod' / name).read_bytes()
 for name, path in [('httpd_bridge.so', 'usr/lib/localmod/httpd_bridge.so'),
                    ('rc_bridge.so', 'usr/lib/localmod/rc_bridge.so')]:
     assert (ROOT / 'build' / name).read_bytes() == (stage / path).read_bytes()

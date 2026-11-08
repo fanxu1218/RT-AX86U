@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Validate pinned Fancyss on the published base plus a RAM-only source overlay."""
+from device_config import render_source
 import argparse
 import hashlib
 import json
@@ -43,13 +44,13 @@ def main():
         from release_config import CONFIG
         www=ROOT/'build/hardening-overlay/www';www.mkdir(exist_ok=True)
         (www/'Module_FancyssLocalmod.asp').write_text(render_page(manifest,CONFIG))
-        (www/'Module_Localmod.asp').write_text((ROOT/'sources/localmod/Module_Localmod.asp').read_text().replace('@REVISION@',CONFIG['variant']+'-'+CONFIG['revision']))
+        (www/'Module_Localmod.asp').write_text(render_source('sources/localmod/Module_Localmod.asp',CONFIG))
         overlay_files={str(p.relative_to(ROOT/'build/hardening-overlay')):sha(p) for p in (ROOT/'build/hardening-overlay').rglob('*') if p.is_file()}
     if args.candidate:
         from release_config import CONFIG
         assert v['image']==CONFIG['image'] and all(v['checks'].values()) and not v['errors']
         for relative,source in [('usr/libexec/localmod/plugin-compat.sh','sources/localmod/plugin-compat.sh'),('usr/libexec/localmod/installer-guard.sh','sources/localmod/installer-guard.sh'),('usr/libexec/localmod/fancyss-packages.sha256','sources/localmod/fancyss-packages.sha256'),('rom/etc/koolshare/scripts/ks_tar_install.sh','sources/localmod/offline-installer.sh')]:
-            assert (ROOT/'build/casefs/rootfs'/relative).read_bytes()==(ROOT/'build/casefs/roundtrip'/relative).read_bytes()==(ROOT/source).read_bytes(),relative
+            assert (ROOT/'build/casefs/rootfs'/relative).read_bytes()==(ROOT/'build/casefs/roundtrip'/relative).read_bytes()==render_source(source).encode(),relative
         assert (ROOT/'build/casefs/roundtrip/www/Module_FancyssLocalmod.asp').read_text()==render_page(manifest,CONFIG)
         assert (ROOT/'build/httpd_bridge.so').read_bytes()==(ROOT/'build/casefs/rootfs/usr/lib/localmod/httpd_bridge.so').read_bytes()==(ROOT/'build/casefs/roundtrip/usr/lib/localmod/httpd_bridge.so').read_bytes()
     source_paths=['sources/localmod/plugin-compat.sh','build/patch_online_installer.py','build/check_installer_boundaries.py','build/check_fancyss.py','build/prepare_fancyss.py','build/fancyss_sources.json','build/prepare_extended_plugins.py','build/extended_plugin_sources.json','build/test_fancyss.go','build/test_extended_plugins.go','build/test_online.go','build/native_runtime_client.go','build/coexist_helpers.go','build/run_readonly_linux.py','build/linux_real_plugins_job.sh','build/real_plugins_setup.sh','sources/localmod/installer-guard.sh','sources/localmod/offline-installer.sh','sources/localmod/fancyss-packages.sha256','sources/localmod/Module_FancyssLocalmod.asp','sources/localmod/Module_Localmod.asp','sources/localmod/fancyss-LICENSE.txt']

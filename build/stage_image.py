@@ -13,6 +13,7 @@ from prepare_softcenter import prepare as prepare_softcenter, patch_frontend
 from prepare_merlin import stage as stage_merlin
 from pathlib import Path
 from release_config import CONFIG
+from device_config import render_source
 
 root=Path(__file__).resolve().parent.parent
 official=root/'build/casefs/official_rootfs'
@@ -66,6 +67,7 @@ put(root/'build/miniupnp-compat','usr/libexec/localmod/miniupnp-compat',0o500)
 put(root/'sources/localmod/bootstrap.sh','usr/libexec/localmod/bootstrap.sh',0o755)
 put(root/'sources/localmod/dispatch.sh','usr/libexec/localmod/dispatch.sh',0o755)
 put(root/'sources/localmod/installer-guard.sh','usr/libexec/localmod/installer-guard.sh',0o755)
+(stage/'usr/libexec/localmod/installer-guard.sh').write_text(render_source('sources/localmod/installer-guard.sh'))
 put(root/'sources/localmod/plugin-compat.sh','usr/libexec/localmod/plugin-compat.sh',0o755)
 put(root/'sources/localmod/fancyss-packages.sha256','usr/libexec/localmod/fancyss-packages.sha256',0o444)
 put(root/'build/plugin-txn','usr/libexec/localmod/plugin-txn',0o500)
@@ -142,7 +144,7 @@ state.write_text(state.read_text()+'''
 })();
 ''')
 put(root/'sources/localmod/Module_Localmod.asp','www/Module_Localmod.asp',0o644)
-(stage/'www/Module_Localmod.asp').write_text((stage/'www/Module_Localmod.asp').read_text().replace('@REVISION@',CONFIG['variant']+'-'+CONFIG['revision']))
+(stage/'www/Module_Localmod.asp').write_text(render_source('sources/localmod/Module_Localmod.asp',CONFIG))
 fancyss=prepare_fancyss()
 assert (root/'sources/localmod/fancyss-packages.sha256').read_text()==''.join(p['adapted_sha256']+'  shadowsocks\n' for p in fancyss['packages'])
 put(root/'sources/localmod/Module_FancyssLocalmod.asp','www/Module_FancyssLocalmod.asp',0o644)

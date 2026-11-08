@@ -25,11 +25,34 @@ static FILE *filter_snapshot(void){
  if(!WIFEXITED(status) || WEXITSTATUS(status)){fclose(file);return NULL;}
  rewind(file);return file;
 }
-static void policy(FILE *out,int noflush){
+static int policy(FILE *out,int noflush,int *updated){
  fputs(":LOCALMOD_API - [0:0]\n",out);
- if(noflush)fputs("-F LOCALMOD_API\n",out);
+ if(noflush){
+  if(*updated){
+   // A preceding filter COMMIT in this same input installed this exact rule.
+   fputs("-D INPUT -d 127.0.0.1/32 -p tcp --dport 3032 -j LOCALMOD_API\n",out);
+  }else{
+   // --noflush preserves INPUT. Remove its existing owned links in the same
+   // COMMIT before adding one at the head; retain all unrelated INPUT rules.
+   FILE *snapshot=filter_snapshot();if(!snapshot)return -1;
+   char *line=NULL;size_t cap=0,total=0;ssize_t len;int bad=0;
+   while((len=getline(&line,&cap,snapshot))>=0){
+    total+=(size_t)len;
+    if(total>MAX_RULES || memchr(line,0,(size_t)len)){bad=1;break;}
+    if(strncmp(line,"-A INPUT ",9))continue;
+    const char *target=strstr(line," -j LOCALMOD_API");
+    if(!target)continue;target+=strlen(" -j LOCALMOD_API");
+    if(*target && strcmp(target,"\n") && strcmp(target,"\r\n"))continue;
+    if(fputs("-D",out)==EOF || fputs(line+2,out)==EOF){bad=1;break;}
+   }
+   if(ferror(snapshot))bad=1;free(line);fclose(snapshot);
+   if(bad)return -1;
+  }
+  fputs("-F LOCALMOD_API\n",out);
+ }
  fputs(noflush?"-I INPUT 1 -d 127.0.0.1/32 -p tcp --dport 3032 -j LOCALMOD_API\n":"-A INPUT -d 127.0.0.1/32 -p tcp --dport 3032 -j LOCALMOD_API\n",out);
  fputs("-A LOCALMOD_API -i lo -s 127.0.0.1/32 -p tcp --sport 1:1023 -j RETURN\n-A LOCALMOD_API -j REJECT\n",out);
+ *updated=1;return ferror(out)?-1:0;
 }
 int main(int argc,char **argv){
  if(!lm_enabled()){execv(VENDOR_RESTORE,argv);return 127;}
@@ -62,7 +85,7 @@ int main(int argc,char **argv){
  if(lm_directory(LM_BASE))return 1;
  char temp[]=LM_BASE "/restore.XXXXXX";int fd=mkstemp(temp);if(fd<0)return 1;
  FILE *out=fdopen(fd,"w+");if(!out){close(fd);unlink(temp);return 1;}
- char *line=NULL;size_t capacity=0,total=0;ssize_t len;int filter=0,nat=0,saw_filter=0,inserted=0,has_input=0,bad=0;
+ char *line=NULL;size_t capacity=0,total=0;ssize_t len;int filter=0,nat=0,saw_filter=0,inserted=0,has_input=0,bad=0,updated=0;
  while((len=getline(&line,&capacity,input))>=0){
   total+=(size_t)len;if(total>MAX_RULES || memchr(line,0,(size_t)len)){bad=1;break;}
   char *rule=line;while(*rule==' ' || *rule=='\t')rule++;
@@ -78,7 +101,7 @@ int main(int argc,char **argv){
    if(!strncmp(rule,":LOCALMOD_API ",14) || !strncmp(rule,"-A LOCALMOD_API ",16) || !strncmp(rule,"-F LOCALMOD_API\n",16))continue;
    if(!strncmp(rule,"-A INPUT ",9) && strstr(rule,"-j LOCALMOD_API"))continue;
    if(!inserted && rule[0]!=':' && rule[0]!='#' && rule[0]!='*' && rule[0]!='\n' && rule[0]!='\r'){
-    if(!has_input){bad=1;break;}policy(out,noflush);inserted=1;
+    if(!has_input || policy(out,noflush,&updated)){bad=1;break;}inserted=1;
    }
    if(!strncmp(rule,"COMMIT",6)){filter=0;}
   }

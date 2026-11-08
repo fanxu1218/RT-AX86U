@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Prepare synthetic native-runtime inputs from pinned 24437 factory defaults."""
+from device_config import DEVICE
 import struct
 import subprocess
 from pathlib import Path
@@ -10,7 +11,7 @@ library = root / 'build/casefs/official_rootfs/usr/lib/libshared.so'
 data = library.read_bytes()
 with library.open('rb') as stream:
     elf = ELFFile(stream)
-    assert elf.elfclass == 32 and elf.little_endian and elf['e_machine'] == 'EM_ARM'
+    assert elf.elfclass == DEVICE['abi']['bits'] and elf.little_endian == DEVICE['abi']['little_endian'] and elf['e_machine'] == DEVICE['abi']['elf_machine']
     def offset(address):
         return next(address - s['p_vaddr'] + s['p_offset'] for s in elf.iter_segments()
                     if s['p_type'] == 'PT_LOAD' and s['p_vaddr'] <= address < s['p_vaddr'] + s['p_filesz'])
@@ -18,11 +19,11 @@ with library.open('rb') as stream:
         start = offset(address)
         return data[start:data.index(0, start)]
     symbol = elf.get_section_by_name('.dynsym').get_symbol_by_name('router_defaults')[0]
-    assert symbol['st_size'] % 20 == 0  # ARM32 nvram_tuple from the pinned GPL header.
+    assert symbol['st_size'] % DEVICE['abi']['nvram_tuple_bytes'] == 0  # ARM32 nvram_tuple from the pinned GPL header.
     base = offset(symbol['st_value'])
     defaults = bytearray()
     count = 0
-    for position in range(base, base + symbol['st_size'], 20):
+    for position in range(base, base + symbol['st_size'], DEVICE['abi']['nvram_tuple_bytes']):
         key, value = struct.unpack_from('<II', data, position)
         if not key:
             break

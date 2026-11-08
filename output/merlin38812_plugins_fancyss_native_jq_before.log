@@ -1,0 +1,95 @@
+LINUX_BUILDER_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108132329, 2026/11/8 ~ 2046/11/9
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS unadapted_upstream_package_denied_uu_and_router_logs_retained
+PASS native_authenticated_installation_entry_has_pinned_version_and_package_metadata
+PASS hash_pinned_compat_refuses_temp_collision_is_idempotent_and_preserves_unknown_scripts
+FANCYSS_INSTALL_LOG 3.5.28
+【20261108 21:23:49】: 机型：RT-AX86U koolcenter梅林改版固件 符合安装要求，开始安装插件！
+【20261108 21:23:50】: 内核：4.1.52，架构：aarch64，安装fancyss_hnd_v8_full！
+【20261108 21:23:50】: 安装版本：fancyss_hnd_v8_full_3.5.28
+【20261108 21:23:50】: 清理旧文件
+【20261108 21:23:52】: localmod: 保留 UU 安装包和原厂日志，不清理其它服务数据。
+【20261108 21:23:52】: 当前未安装 websocketd，将安装并拉起 websocketd。
+【20261108 21:23:54】: 检测/data分区剩余空间...
+【20261108 21:23:54】: /data分区剩余空间为：KB
+【20261108 21:23:55】: 检测jffs分区剩余空间...
+【20261108 21:23:59】: 当前jffs分区(tmpfs)剩余125644KB
+【20261108 21:23:59】: 插件安装预计需要约21128KB（候选包大小+动态余量2048KB）
+【20261108 21:23:59】: 空间满足，继续安装！
+【20261108 21:23:59】: 开始复制文件！
+【20261108 21:23:59】: 复制相关二进制文件！此步时间可能较长！
+【20261108 21:24:01】: 准备切换 websocketd，先停止旧 websocketd 进程...
+【20261108 21:24:02】: 复制相关的脚本文件！
+【20261108 21:24:02】: 复制相关的网页文件！
+【20261108 21:24:03】: 为新安装文件赋予执行权限...
+【20261108 21:24:04】: 创建一些二进制文件的软链接！
+【20261108 21:24:05】: 节点数据升级将优先使用 node-tool：/koolshare/bin/node-tool
+【20261108 21:24:05】: node-tool 版本：0.1.13
+【20261108 21:24:07】: 开始校正 schema2 密码字段（schema1 -> schema2 升级），共 0 个节点...
+【20261108 21:24:07】: schema2 密码字段校正完成：未发现需要修正的节点。
+【20261108 21:24:08】: 检查旧版订阅节点来源归属...
+【20261108 21:24:08】: 刷新节点运行缓存...
+【20261108 21:24:09】: 设置插件安装参数...
+【20261108 21:24:09】: 科学上网 full插件安装安装成功！
+【20261108 21:24:09】: 更新完毕，请等待网页自动刷新！
+【2026年11月08日 21:24:09】: ============================= end =================================
+XU6J03M6
+
+DIAGNOSTIC /tmp/upload/soft_log.txt
+【20261108 21:23:49】: 机型：RT-AX86U koolcenter梅林改版固件 符合安装要求，开始安装插件！
+【20261108 21:23:50】: 内核：4.1.52，架构：aarch64，安装fancyss_hnd_v8_full！
+【20261108 21:23:50】: 安装版本：fancyss_hnd_v8_full_3.5.28
+【20261108 21:23:50】: 清理旧文件
+【20261108 21:23:52】: localmod: 保留 UU 安装包和原厂日志，不清理其它服务数据。
+【20261108 21:23:52】: 当前未安装 websocketd，将安装并拉起 websocketd。
+【20261108 21:23:54】: 检测/data分区剩余空间...
+【20261108 21:23:54】: /data分区剩余空间为：KB
+【20261108 21:23:55】: 检测jffs分区剩余空间...
+【20261108 21:23:59】: 当前jffs分区(tmpfs)剩余125644KB
+【20261108 21:23:59】: 插件安装预计需要约21128KB（候选包大小+动态余量2048KB）
+【20261108 21:23:59】: 空间满足，继续安装！
+【20261108 21:23:59】: 开始复制文件！
+【20261108 21:23:59】: 复制相关二进制文件！此步时间可能较长！
+【20261108 21:24:01】: 准备切换 websocketd，先停止旧 websocketd 进程...
+【20261108 21:24:02】: 复制相关的脚本文件！
+【20261108 21:24:02】: 复制相关的网页文件！
+【20261108 21:24:03】: 为新安装文件赋予执行权限...
+【20261108 21:24:04】: 创建一些二进制文件的软链接！
+【20261108 21:24:05】: 节点数据升级将优先使用 node-tool：/koolshare/bin/node-tool
+【20261108 21:24:05】: node-tool 版本：0.1.13
+【20261108 21:24:07】: 开始校正 schema2 密码字段（schema1 -> schema2 升级），共 0 个节点...
+【20261108 21:24:07】: schema2 密码字段校正完成：未发现需要修正的节点。
+【20261108 21:24:08】: 检查旧版订阅节点来源归属...
+【20261108 21:24:08】: 刷新节点运行缓存...
+【20261108 21:24:09】: 设置插件安装参数...
+【20261108 21:24:09】: 科学上网 full插件安装安装成功！
+【20261108 21:24:09】: 更新完毕，请等待网页自动刷新！
+【2026年11月08日 21:24:09】: ============================= end =================================
+XU6J03M6
+
+DIAGNOSTIC /tmp/.localmod/bootstrap.log
+
+DIAGNOSTIC /tmp/real-plugin-results/fancyss-server.log
+PASS early stdio before adapter constructor
+cat: can't open '/etc/key.pem': No such file or directory
+cat: can't open '/etc/cert.pem': No such file or directory
+_netlink_recv_mesg:197  return NULL from rec, why socke is not initialized? 
+
+panic: Fancyss installed file changed: bin/jq [recovered]
+	panic: Fancyss installed file changed: bin/jq
+
+goroutine 1 [running]:
+main.main.func1()
+	./test_fancyss.go:74 +0x194
+panic({0x3044a0?, 0x400001aae0?})
+	runtime/panic.go:785 +0x124
+main.main()
+	./test_fancyss.go:188 +0x3174
+SOAK_REAPER orphans_reaped=7
+LINUX_READONLY_JOB_STATUS=1

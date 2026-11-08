@@ -1,0 +1,33 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS native_merlin_ntpd_callback_download_checksum_owned_uu_worker
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108113303, 2026/11/8 ~ 2046/11/9
+PASS native_authentication_denies_center_query_and_vpn_write
+PASS native_merlin_https_certificate_and_login
+PASS native_authenticated_page_Advanced_VPN_OpenVPN.asp
+PASS native_authenticated_page_Advanced_VPNDirector.asp
+PASS native_authenticated_page_DNSDirector.asp
+PASS native_authenticated_page_Advanced_VPNStatus.asp
+PASS native_authenticated_page_UUAccelerator.asp
+PASS native_authenticated_page_Module_Softcenter.asp
+PASS native_authenticated_page_Advanced_OpenVPNClient_Content.asp
+apply: apply 
+validate_instance(0x0f1a): nvram set vpn_client1_desc = owned-preview-profile
+value vpn_client1_desc=owned-preview-profile
+PASS native_authenticated_vpn_profile_save_and_nvram_readback
+PASS native_https_center_callback_and_private_backend_guard
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108113303, 2026/11/8 ~ 2046/11/9
+PASS native_httpd_restart_preserves_certificate_profile_center_and_uu
+NATIVE_PREVIEW_RESULT {"checks":["native_merlin_ntpd_callback_download_checksum_owned_uu_worker","native_authentication_denies_center_query_and_vpn_write","native_merlin_https_certificate_and_login","native_authenticated_page_Advanced_VPN_OpenVPN.asp","native_authenticated_page_Advanced_VPNDirector.asp","native_authenticated_page_DNSDirector.asp","native_authenticated_page_Advanced_VPNStatus.asp","native_authenticated_page_UUAccelerator.asp","native_authenticated_page_Module_Softcenter.asp","native_authenticated_page_Advanced_OpenVPNClient_Content.asp","native_authenticated_vpn_profile_save_and_nvram_readback","native_https_center_callback_and_private_backend_guard","native_httpd_restart_preserves_certificate_profile_center_and_uu","native_base_install_callback_keeps_uu","native_base_update_keeps_config_and_uu","native_base_uninstall_keeps_uu_and_certificates","failed_update_preserves_plugin_config_uu_and_requires_next_boot_recovery"],"failed_update_requires_next_boot_recovery":true,"full_upgrade_complete":false,"native_boot_tested":false,"next_boot_recovery_tested":false,"real_uu_acceleration_tested":false,"uu_api_requests":1,"uu_downloads":1}
+SOAK_REAPER orphans_reaped=32
+LINUX_READONLY_JOB_STATUS=0

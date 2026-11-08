@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Actual parallel native queries, owned cancellation and seal tamper checks."""
+from device_config import render_source, compiler_flags
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 import json
@@ -41,7 +42,7 @@ def main():
     else:
         from prepare_hardening_overlay import prepare_resources
         prepare_resources()
-        arm = ['sources/zig-aarch64-macos-0.15.2/zig', 'cc', '-target', 'arm-linux-gnueabi.2.26', '-mcpu=cortex_a53', '-O2', '-s']
+        arm = ['sources/zig-aarch64-macos-0.15.2/zig', 'cc', *compiler_flags(), '-O2', '-s']
         p = ROOT / 'build/hardening-overlay/usr/libexec/localmod/localmod-status'
         subprocess.run(arm + ['-o', str(p), 'sources/localmod/status.c'], check=True)
         p.chmod(0o755)
@@ -49,7 +50,7 @@ def main():
         p = ROOT / 'build/hardening-overlay/www/Module_Localmod.asp'
         p.parent.mkdir(parents=True, exist_ok=True)
         from release_config import CONFIG
-        p.write_text((ROOT / 'sources/localmod/Module_Localmod.asp').read_text().replace('@REVISION@', CONFIG['variant'] + '-' + CONFIG['revision']))
+        p.write_text(render_source('sources/localmod/Module_Localmod.asp',CONFIG))
     paths = ['build/check_shards.py', 'build/sealed_vm.py', 'build/run_readonly_linux.py',
              'build/hardening_inputs.py', 'build/linux_real_plugins_job.sh', 'build/real_plugins_setup.sh']
     inputs = {p: sha(ROOT / p) for p in paths}

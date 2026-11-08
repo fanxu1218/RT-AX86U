@@ -1,0 +1,156 @@
+{
+  "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS",
+  "result": {
+    "checks": [
+      "foundation_real_plugin_configuration_and_uu_synced"
+    ],
+    "online": {
+      "checks": []
+    },
+    "phases": [
+      {
+        "boot": "foundation",
+        "case": "foundation",
+        "checks": [
+          "foundation_real_plugin_configuration_and_uu_synced"
+        ]
+      }
+    ]
+  },
+  "stage": {
+    "rootfs": "build/casefs/merlin-native-candidate-1ab34fb6e88275bc/rootfs",
+    "inventory_sha256": "152b077dca3867dc379114ef149efe32bd65aecdc94fceabc1d58de38515f62c",
+    "protected_sha256": {
+      "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+      "output/release_gates.json": "e8655961d79d6324ae46956b57b04ecec88a14ed50fc4698966da3ca58722453",
+      "output/local_delivery.json": "8d0acfd7db7cdf527210a046e18e4ddd3f196db51515d4723965566c18389136",
+      "build/release_config.json": "cae36eea33e09883e8af12dbe2e341a2427c6152ad07f572618a7f059bd87a04",
+      "output/merlin38812_native_preview_tests.json": "57af2ef06de120f5d3f7a253ff45e594727fd723495a5ca14fd17ed51c660b1e",
+      "output/merlin38812_native_hooks_tests.json": "d8851eeba38ecad8ffe8c6f3fc4129a5a38cbe6c0f14069da0cee2bb7302210f",
+      "output/merlin38812_uu_matrix_tests.json": "6b86bc429e4359844d426b9e2c2b830ce07e6824ce65826f2947eea997d6c5c8"
+    },
+    "image": {
+      "image": "output/RT-AX86U_3004_388.12_2_localmod_native_P4_152b077d_NOT_FLASH_READY.w",
+      "bytes": 86769684,
+      "sha256": "7b6993cec465f563fa7d586c9c5a2289dffb5b844bf265efcaa6e03f2e780e4d",
+      "rootfs_lebs": 630,
+      "leb_size": 126976,
+      "rootfs_fmt_version": 4,
+      "vendor_boot_region_unchanged": true,
+      "vendor_descriptor_unchanged": true,
+      "vendor_wfi_parameters_unchanged": true,
+      "status": "EXPERIMENTAL_NOT_DEVICE_TESTED"
+    }
+  },
+  "source_sha256": {
+    "build/native_runtime_client.go": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+    "build/test_online.go": "b04471e23505e03d7700884fdad4adb5d526e7fd8fe33bfe669a3a736d81fd14",
+    "build/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+    "build/native_hw_fixture.c": "f995441ea98eabdbf157063bf4086170a288d7c704abf49ac540fc078fb410dd",
+    "build/native_uu_transport.c": "7efed547a60719f5a4845952fd0ec36c2f60f5259fd00019e0cdcdd794760089",
+    "sources/localmod/runtime.c": "68d2d790f4a65fa0f5bf155748e07cbe862f1c1f8b41195fcc5f72f79e43c10d",
+    "sources/localmod/runtime.h": "816914a8ace37e05a51c62854693954020ccc53371cf7c6756bcb20c850b3bca",
+    "sources/localmod/bounded_log.h": "ac86f672fa6e7799e99fd2f0b84658f3e6af6fd00f65b1287e51a28e3d86e7bc",
+    "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
+    "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+    "build/sealed_vm.py": "44e83268f0e72f999648acb8f56e778735e70b7240d71bb1d90a2ec10a563788",
+    "build/run_readonly_linux.py": "eeb77fb1d07ba997388aa0feaa7e558bb4ad96b5fb73a3588643390bef06135f",
+    "analysis/merlin_vpn_38812/native_preview.go": "eeaf5c6ba91a1e39254167d53e215d86a900fa774d73493453a2776fb5150bfa",
+    "analysis/merlin_vpn_38812/native_hooks.go": "0e10c1469b7173d04a46a5910822f6b5bc6e63f85ff2199f3830aea686e76614",
+    "analysis/merlin_vpn_38812/native_boot_bridge.c": "ae0f154f3f7804184240c12f32c9d3b77db12bda4bdd144ab054913e8d864dd4",
+    "analysis/merlin_vpn_38812/native_launcher.c": "d1535c2861b238a5de4bc588b7bbc8910f7596a8fbf04978f7d77677d00e9240",
+    "analysis/merlin_vpn_38812/native_restore.c": "2c90885e0633aaf43eb1361d388ef90b0aed887c8e4978482845f66f5751c114",
+    "analysis/merlin_vpn_38812/native_center_event.sh": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+    "analysis/merlin_vpn_38812/native_hook_probe.c": "e2dd4f251de5983f863da4ef0fd1db226ff79080cba8ce7d24d509fc2cdbcc91",
+    "analysis/merlin_vpn_38812/check_native_hooks.py": "5237d5f8913c0dc08a760bf1aa93c25d3a8dcda17714374d6cbbd348523505aa",
+    "analysis/merlin_vpn_38812/check_candidate_runtime.py": "bb7c78ac31a97b4fc35d8ab60f369d529101cd7eca19dc926cb2a0013eb240f9",
+    "analysis/merlin_vpn_38812/launcher_exec_fixture.c": "c564941866b65a0d3c03590708ca6ee990069c6ca90db44cd5c61a218d6b6878",
+    "analysis/merlin_vpn_38812/candidate_runtime.go": "819c8d027a28a3fd501ed4bf63cb45e64e5701bfa1c7b8b9c44b8cbf5eb68a4b",
+    "analysis/merlin_vpn_38812/check_native_persist.py": "5766bfd36b5146e2ce1c360e02b6928c39c300c79f310aeb10d533f1de4cc93b",
+    "build/test_interrupt_main.go": "6f6e09cd3200832ce24dfc63ca4266144fc314d48070a236012f483b2199c139",
+    "build/interrupt_scenarios.go": "8989dc4c639d00affef9789c67297f74e05fcac03dbb57a4305414b308cdd157",
+    "build/test_interrupt.go": "05988007a852d48db38fefbbefde7e13f8dad59cca6505ae7e87075a3277524b",
+    "build/recovery_safety.go": "d0417977ec0f3532e9535283469b6bd6cb7e5a2f0c0ec3c26f4cbde8600775dc",
+    "build/txn_fault_fixture.c": "f6b634219acffc97a489285fd7c1f62c37e77316a8d1aaaa267bd840ea51f859",
+    "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea"
+  },
+  "baseline_preserved_sha256": {
+    "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+    "output/release_gates.json": "e8655961d79d6324ae46956b57b04ecec88a14ed50fc4698966da3ca58722453",
+    "output/local_delivery.json": "8d0acfd7db7cdf527210a046e18e4ddd3f196db51515d4723965566c18389136",
+    "build/release_config.json": "cae36eea33e09883e8af12dbe2e341a2427c6152ad07f572618a7f059bd87a04",
+    "output/merlin38812_native_preview_tests.json": "57af2ef06de120f5d3f7a253ff45e594727fd723495a5ca14fd17ed51c660b1e",
+    "output/merlin38812_native_hooks_tests.json": "d8851eeba38ecad8ffe8c6f3fc4129a5a38cbe6c0f14069da0cee2bb7302210f",
+    "output/merlin38812_uu_matrix_tests.json": "6b86bc429e4359844d426b9e2c2b830ce07e6824ce65826f2947eea997d6c5c8",
+    "output/merlin38812_native_candidate_tests.json": "745bb88e9bb724b56467018349a25fc69254780fd31801cef574ef7291848ff1",
+    "output/RT-AX86U_3004_388.12_2_localmod_native_P4_152b077d_NOT_FLASH_READY.w": "7b6993cec465f563fa7d586c9c5a2289dffb5b844bf265efcaa6e03f2e780e4d"
+  },
+  "vm": {
+    "schema": 1,
+    "phase": "candidate-merlin-components",
+    "sealed_manifest_sha256": "a18146005bc0e549b0ae876664b6cb947332aa92a4f0f2a10508a2316dc57983",
+    "exported_entries": 7272,
+    "inputs": {
+      "build/casefs/rootfs": "4bc554f2673aba78acb8b7a1fdd49ef3ec73e9aa444b6da488fd6dec2b530ceb",
+      "build/httpd_bridge.so": "edd6d193a7910e547dd903cd8ab0165eb42e87c3e099d02749856abd26761be0",
+      "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+      "build/merlin-vpn-config-fixture.so": "167396db6a0b69fc115c93b0b3770a646b2dbed51eec567e103ef1cc43e068e9",
+      "build/merlin-vpn-config-probe": "8a100a140a403832d2a954747dfb29ca328871020402f686b8e59d94ac72da6f",
+      "build/native-nvram": "a094515a4f72e663274bbb6ace3fb68c0c4a09568c93aede2524d3844851b4f6",
+      "build/native_defaults.bin": "f73ef45c89a87068c1a1da70c0d5399595950cb856276f3a0c57db189beeaae1",
+      "build/native_hw_fixture.so": "5243a2f37e76b79c678ff3df350e269c62ba2eece1fb30cfa3549ce5faafc341",
+      "build/native_shadow_hash.txt": "25904697b50265590713cc146bf647887afa3bb25ef9bca672dece31aea8aa41",
+      "build/native_uu_transport.so": "31486bf9b9c7719689f56076791dd6611efc0251b21dba614044c345a32a5bdd",
+      "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
+      "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
+      "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
+      "build/test-merlin": "0aa0a404cecc495b139f16d03f4021fafc011173590709829b9b85ce2a8087d2",
+      "build/tools/LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52",
+      "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
+      "build/tools/linux-initramfs.gz": "b2cdb4150bd81b7b08edc74a812255e9bc8d8bce6c07d4167c21745599e5baa1",
+      "build/native-persist-root": "152b077dca3867dc379114ef149efe32bd65aecdc94fceabc1d58de38515f62c",
+      "build/native-persist/setup.sh": "12decaa19a87aef9dd09eed4ed0c66a64f474dd8641af8bc1ba83a8973803103",
+      "build/native-persist/txn_fault_fixture.so": "eaa7156cf69aa10635273d2e2a2b1713fb74da912de9ca34fb50a6518a392db8",
+      "build/native-persist/hook-probe": "ecd537f41664174a939dc1833ff147481012c36ab67cd5f6e2763f7775c17416",
+      "build/native-persist/native-center-event.sh": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "build/native-persist/derived_check.py": "e6935475e8ba2111cd33c3916afc89b17be8c11713800516a9239c3fa989a93b",
+      "build/native-persist/native-nvram": "a094515a4f72e663274bbb6ace3fb68c0c4a09568c93aede2524d3844851b4f6",
+      "build/native-persist/launcher_exec_fixture.so": "498a41901c8e9356ed76a4986350ec8a9c3abef7206073c41b1b8e133316a7ce",
+      "build/native-persist/httpd_bridge.so": "edd6d193a7910e547dd903cd8ab0165eb42e87c3e099d02749856abd26761be0",
+      "build/native-persist/native_boot_bridge.so": "10a17a66d4dc459a266b53ffa5def82cbd222d30364a25eeb56997005e3e58de",
+      "build/native-persist/native_hw_fixture.so": "5243a2f37e76b79c678ff3df350e269c62ba2eece1fb30cfa3549ce5faafc341",
+      "build/native-persist/native_uu_transport.so": "31486bf9b9c7719689f56076791dd6611efc0251b21dba614044c345a32a5bdd",
+      "build/native-persist/probe": "68d404912f77f7383e050baadb381f6deb7023c3bfd824e3312c72c2a7b18ffe",
+      "build/native-persist/clear_preload.so": "cbf83c482c3ed65cef0ba507beb5cb568b09b891d0a8cb3a90aa48582a37d6e5",
+      "build/native-persist/compile/native_uu.go": "0992dc8431ffaf68388967548ded0e080b53ddbeb4148b044bfcb3c34a90296e",
+      "build/native-persist/compile/native_runtime_client.go": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+      "build/native-persist/compile/interrupt_scenarios.go": "bd5c806a404a7f831843db6845d346cf8935afbbdd8e8bc4a6677ca09230a736",
+      "build/native-persist/compile/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "build/native-persist/compile/test_interrupt.go": "146c2cf345a7ac27cb3d97b1409801bf7ec3c422a1467be34017f7a0b16180c5",
+      "build/native-persist/compile/test_online.go": "55cc769508e03b1770ea65939aaddbcff4d8923dd6d83848dd045cf46ecd4dd1",
+      "build/native-persist/compile/test_interrupt_main.go": "6f6e09cd3200832ce24dfc63ca4266144fc314d48070a236012f483b2199c139",
+      "build/native-persist/compile/recovery_safety.go": "dea0d37ae550f4c260db2e2229298ab52f5e95b0dfc6a60e2efe28d65145d1ce",
+      "build/interrupt-phase.json": "ade09a162551203bd5f43086568afb7ae5cb2cb7b34adc7e0236fffd152a316c",
+      "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
+      "sources/realplugins/ddnsgo-1.28.0.tar.gz": "c4c44a31df7ec82d76b29267e1c49ac30c1a0818642f377b2cf39b2cca44b67d",
+      "sources/realplugins/ddnsgo-1.29.0.tar.gz": "34f541f8eba6840847a408f408a47032f9ea83b0326a31e21c70a0fbe497dfce",
+      "build/txn_fault_fixture.so": "eaa7156cf69aa10635273d2e2a2b1713fb74da912de9ca34fb50a6518a392db8"
+    },
+    "workspace_path": "build/casefs/sealed-private/job-bdf63bb19279c07cc33f3ef6/workspace",
+    "state_disk_attached": true,
+    "state_lock_exclusive": true,
+    "host_export_readonly": true,
+    "guest_network_devices": 0,
+    "preserved_after_failure": false,
+    "cpus": 1,
+    "memory_mib": 1024,
+    "timeout_seconds": 420,
+    "sealed_inputs_verified_before_and_after": true
+  },
+  "log_sha256": "d3ff21a7c78d2d76a1b97c35b4c0f416ce7fe10048280e9e97ce15065f66066b",
+  "limits": [
+    "Native libshared APIs under QEMU-user with owned board/NVRAM; target PID1 boot not executed",
+    "Actual candidate rc launcher and boot bridge executed for native UU and center aliases; target PID1 boot and restore kernel integration remain unverified",
+    "Cross-boot behavior uses an owned ext4 state disk and persistent board fixture; physical NAND/UBIFS, actual UU account/game acceleration and firmware release acceptance remain unverified"
+  ]
+}

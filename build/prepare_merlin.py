@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Stage the six pinned ARM applications; do not replace vendor global libraries."""
+from device_config import leb_size, DEVICE
 import hashlib
 import json
 import os
@@ -10,7 +11,8 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PIN = json.loads((ROOT / 'build/merlin_sources.json').read_text())
+PIN_PATH = ROOT / DEVICE['sources']['merlin']
+PIN = json.loads(PIN_PATH.read_text())
 SOURCE = ROOT / 'build/casefs/merlin38812_rootfs'
 
 
@@ -32,10 +34,10 @@ def ensure_source():
     assert layout['whole_crc_valid'] and not any(k.endswith('_bad') and v for k,v in layout['checks'].items())
     extraction = ('from ubireader.ubi_io import ubi_file;from ubireader.ubifs import ubifs;'
                   'from ubireader.ubifs.output import extract_files;import sys;'
-                  'extract_files(ubifs(ubi_file(sys.argv[1],126976)),sys.argv[2])')
+                  'extract_files(ubifs(ubi_file(sys.argv[1],int(sys.argv[3]))),sys.argv[2])')
     (scratch/'rootfs').mkdir()
     subprocess.run([str(ROOT/'analysis/.venv/bin/python'), '-c', extraction,
-                    str(scratch/'volumes/rootfs_ubifs'), str(scratch/'rootfs')], check=True)
+                    str(scratch/'volumes'/DEVICE['image']['rootfs_volume_name']), str(scratch/'rootfs'), str(leb_size())], check=True)
     # Never replace an existing input tree. Failed generated inputs stay in scratch.
     assert not SOURCE.exists()
     (scratch/'rootfs').rename(SOURCE)
@@ -91,7 +93,7 @@ def stage(stage_root, put, metadata):
             (stage_root / path).symlink_to(target)
             metadata['/' + path] = dict(mode=stat.S_IFLNK | 0o777, uid=0, gid=0, inum=-1, nlink=1, xattr_count=0)
     receipt = dict(source_tag=PIN['source_tag'], source_commit=PIN['source_commit'],
-                   pin_sha256=sha(ROOT / 'build/merlin_sources.json'), files=entries,
+                   pin_sha256=sha(PIN_PATH), files=entries,
                    disable_marker='/jffs/localmod-merlin-disabled',
                    global_vendor_libraries_replaced=False)
     path = ROOT / 'build/merlin-components.json'
@@ -103,7 +105,7 @@ def stage(stage_root, put, metadata):
 
 def verify(root):
     receipt = json.loads((root / 'rom/etc/localmod-merlin.json').read_text())
-    assert receipt['pin_sha256'] == sha(ROOT / 'build/merlin_sources.json')
+    assert receipt['pin_sha256'] == sha(PIN_PATH)
     assert sha(root/'rom/etc/localmod-merlin-notice.txt') == PIN['notice']['sha256']
     for name, entry in receipt['files'].items():
         assert sha(root / name) == entry['staged_sha256'], name

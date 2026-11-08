@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Unified quick CI, pinned dependency, and complete local release checks."""
+from device_config import render_source, compiler_flags
 import argparse,ast,hashlib,io,json,os,shutil,subprocess,tarfile,tempfile,time
 from pathlib import Path
 from release_config import ROOT,CONFIG
@@ -10,6 +11,7 @@ def owned_sources():
  return {p:sha(ROOT/p) for p in sorted(set(paths)) if (ROOT/p).is_file() and Path(p).suffix in {'.c','.h','.go','.py','.sh','.asp','.swift','.json','.yml','.sha256','.txt','.mjs'}}
 def run(*args):subprocess.run(args,cwd=ROOT,check=True)
 def quick():
+ run('python3','build/check_device_profiles.py')
  paths=owned_sources()
  for p in paths:
   if p.endswith('.py'):ast.parse((ROOT/p).read_text(),filename=p)
@@ -17,7 +19,7 @@ def quick():
   if p.endswith('.mjs'):run('node','--check',p)
  c=[str(p.relative_to(ROOT)) for p in sorted((ROOT/'sources/localmod').glob('*.c'))]
  zig=ROOT/'sources/zig-aarch64-macos-0.15.2/zig'
- cc=[str(zig),'cc','-target','arm-linux-gnueabi.2.26'] if zig.exists() else ['cc']
+ cc=[str(zig),'cc',*compiler_flags(cpu=False)] if zig.exists() else ['cc']
  with tempfile.TemporaryDirectory(prefix='localmod-compile-') as output:
   for p in c:run(*cc,'-O2','-c','-Werror=implicit-function-declaration',p,'-o',str(Path(output)/(Path(p).stem+'.o')))
  # Host-side boundary smoke checks need no router images or private fixtures.
@@ -65,7 +67,7 @@ def finalize(inputs):
  for name,entry in MERLIN_PIN['programs'].items():
   assert (ROOT/('build/merlin-'+name+'-launcher')).read_bytes()==(back/entry['path']).read_bytes()
  for name in ['bootstrap.sh','dispatch.sh','installer-guard.sh','plugin-compat.sh','fancyss-packages.sha256']:
-  assert (ROOT/'sources/localmod'/name).read_bytes()==(back/'usr/libexec/localmod'/name).read_bytes(),name
+  assert render_source('sources/localmod/'+name).encode()==(back/'usr/libexec/localmod'/name).read_bytes(),name
  assert (ROOT/'sources/localmod/offline-installer.sh').read_bytes()==(back/'rom/etc/koolshare/scripts/ks_tar_install.sh').read_bytes()
  from patch_online_installer import patch_online_installer
  from prepare_softcenter import prepare as prepare_softcenter,patch_frontend
@@ -74,7 +76,7 @@ def finalize(inputs):
  assert (back/'rom/etc/koolshare/.soft_ver').read_text().strip()==CONFIG['software_center_version']
  for name in ['webs/Module_Softcenter.asp','res/soft-v19/assets/index-DhXhkv_Y.js']:
   assert patch_frontend((core/name).read_text())==(back/'rom/etc/koolshare'/name).read_text(),name
- assert (ROOT/'sources/localmod/Module_Localmod.asp').read_text().replace('@REVISION@',CONFIG['variant']+'-'+CONFIG['revision'])==(back/'www/Module_Localmod.asp').read_text()
+ assert render_source('sources/localmod/Module_Localmod.asp',CONFIG)==(back/'www/Module_Localmod.asp').read_text()
  from prepare_fancyss import prepare as prepare_fancyss,render_page as fancyss_page
  fancyss=prepare_fancyss()
  assert (ROOT/'sources/localmod/fancyss-packages.sha256').read_text()==''.join(p['adapted_sha256']+'  shadowsocks\n' for p in fancyss['packages'])

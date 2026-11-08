@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Cut isolated VMs at install boundaries; restart with the same owned disk."""
+from device_config import compiler_flags
 import hashlib
 import json
 import os
@@ -21,8 +22,7 @@ def compile_fixtures():
                     'build/test_interrupt.go', 'build/recovery_safety.go', 'build/test_online.go',
                     'build/native_runtime_client.go', 'build/coexist_helpers.go'], check=True,
                    env=dict(os.environ, GOOS='linux', GOARCH='arm64', CGO_ENABLED='0'))
-    subprocess.run(['sources/zig-aarch64-macos-0.15.2/zig', 'cc', '-target',
-                    'arm-linux-gnueabi.2.26', '-mcpu=cortex_a53', '-O2', '-shared', '-fPIC',
+    subprocess.run(['sources/zig-aarch64-macos-0.15.2/zig', 'cc', *compiler_flags(), '-O2', '-shared', '-fPIC',
                     '-o', 'build/txn_fault_fixture.so', 'build/txn_fault_fixture.c', '-ldl'], check=True)
 
 

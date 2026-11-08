@@ -1,0 +1,1229 @@
+{
+  "status": "DEVELOPMENT_SOURCE_SNAPSHOT_NOT_A_RELEASE",
+  "git_head": "443f774be00a92339f31b464c13b0dbed5392e02",
+  "working_tree_snapshot": true,
+  "contains_uncommitted_device_profile_dependencies": true,
+  "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+  "full_upgrade_complete": false,
+  "firmware_or_upstream_monitor_binaries_included": false,
+  "evidence": {
+    "output/merlin38812_native_candidate_tests.json": {
+      "status": "NATIVE_MERLIN_CANDIDATE_BUILT_READBACK_PASS_NOT_FLASH_READY",
+      "sha256": "8390ef8a65a6cb974975c0ae69322420593ce2549faeb2775cd0b4371830fb33",
+      "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+      "matches_snapshot_candidate": true
+    },
+    "output/merlin38812_native_hooks_tests.json": {
+      "status": "LOCAL_NATIVE_MERLIN_HOOK_AUGMENTATION_PASS",
+      "sha256": "d8851eeba38ecad8ffe8c6f3fc4129a5a38cbe6c0f14069da0cee2bb7302210f",
+      "candidate_sha256": null,
+      "matches_snapshot_candidate": false
+    },
+    "output/merlin38812_candidate_runtime_tests.json": {
+      "status": "LOCAL_NATIVE_MERLIN_CANDIDATE_RUNTIME_PASS",
+      "sha256": "baa9aab575738def2b7fc6cb4659dde6ccb7f64f077b30b14a3324e33626aef3",
+      "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+      "matches_snapshot_candidate": true
+    },
+    "output/merlin38812_sync_aux_tests.json": {
+      "status": "LOCAL_SYNC_CENTER_HELPER_CONTRACT_PASS",
+      "sha256": "52631a509bb2fdcb7be8198567c992210f6327da78bdd22d029486b7546dede9",
+      "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+      "matches_snapshot_candidate": true
+    },
+    "output/merlin38812_persistence_tests.json": {
+      "status": "LOCAL_NATIVE_PERSISTENCE_SELECTED_CASES_PASS",
+      "sha256": "5caca1f248786b1e24a1eff16c98e62e5f922c7c3a53911fb6635e17ce6acd15",
+      "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+      "matches_snapshot_candidate": true
+    },
+    "output/merlin38812_plugins_fancyss_tests.json": {
+      "status": "LOCAL_NATIVE_AUTHENTIC_PLUGINS_PASS",
+      "sha256": "79772c3335fe6a4715699edd128a67a8fe3da354b5f1273c9f46c1268f1bd984",
+      "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+      "matches_snapshot_candidate": true
+    },
+    "output/merlin38812_plugins_hnd_upgrade_tests.json": {
+      "status": "LOCAL_NATIVE_AUTHENTIC_PLUGINS_PASS",
+      "sha256": "76034e2db2c52de7211f981262b56e806ccab5b6a746afc246569c2801c65afe",
+      "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+      "matches_snapshot_candidate": true
+    },
+    "output/merlin38812_plugins_hnd_fresh_tests.json": {
+      "status": "LOCAL_NATIVE_AUTHENTIC_PLUGINS_PASS",
+      "sha256": "0b15b172ca1b33106c03361378bf22a07f6eb85fd673c3eb7a0921823fbafec4",
+      "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+      "matches_snapshot_candidate": true
+    },
+    "output/merlin38812_restore_probe_tests.json": {
+      "status": "LOCAL_NATIVE_RESTORE_NOFLUSH_CONTRACT_PASS",
+      "sha256": "d6408f082cbd4bc0ffab6c58c8db56980f8c8723c44001c05553bb3ea4748c6b",
+      "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+      "matches_snapshot_candidate": true
+    },
+    "output/merlin38812_vpn_generation_tests.json": {
+      "status": "LOCAL_NATIVE_VPN_GENERATION_PASS",
+      "sha256": "32f1b1f5027eb9329ade24aa1f10b856862422a480b94b1fbbf0fc92a16fa559",
+      "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+      "matches_snapshot_candidate": true
+    },
+    "output/merlin38812_real_tunnel_tests.json": {
+      "status": "LOCAL_NATIVE_REAL_TUNNEL_PROBE_PASS",
+      "sha256": "6a8d3c88ce1224b5f3b17ee0fcb1b565dc53a6bf84c4f9b2825b063c09778d52",
+      "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+      "matches_snapshot_candidate": true
+    }
+  },
+  "remaining_contracts": [
+    "Correct native labeling and the inherited Fancyss release URL containing spaces",
+    "Integrated native candidate long-run, resource and final delivery gates",
+    "Physical boot/UU acceleration excluded from current no-flash scope"
+  ],
+  "known_fancyss_gap": {
+    "status": "P5_REAL_FANCYSS_COEXISTENCE_PASS",
+    "candidate_sha256": "7b6993cec465f563fa7d586c9c5a2289dffb5b844bf265efcaa6e03f2e780e4d",
+    "log": "output/merlin38812_plugins_fancyss_shared_jq_before.log",
+    "fix_pending": false,
+    "whole_suite_passed": true,
+    "fixed_candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+    "checks": 36,
+    "verified_image_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957"
+  },
+  "files": {
+    ".github/workflows/check.yml": {
+      "bytes": 556,
+      "sha256": "a95dedd894a77d5ea6d2e41ae5951a366a059f4a3856b333c9e958bee436c914",
+      "mode": 420
+    },
+    ".gitignore": {
+      "bytes": 13103,
+      "sha256": "80947048d9a51b30ac75591dc23446dd8f7cb12f5fda9d7053329119827c80e8",
+      "mode": 420
+    },
+    "README.md": {
+      "bytes": 21015,
+      "sha256": "da5e8e2b97ed6811f1aba0d85a0a9787c19188df9496fc1edf7f3eb9390e57d5",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/archive_owned.py": {
+      "bytes": 2898,
+      "sha256": "e95d28c5064aa73014ab82c374080d634a1c08fe7568a9f3c4c24c93a518a2c7",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/audit.py": {
+      "bytes": 6289,
+      "sha256": "76afc6212fec7ff437075f6bdf17a221bb12715796cfbcb643da0aef0f3e4a44",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/candidate_runtime.go": {
+      "bytes": 6856,
+      "sha256": "819c8d027a28a3fd501ed4bf63cb45e64e5701bfa1c7b8b9c44b8cbf5eb68a4b",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/center_sleep.c": {
+      "bytes": 1623,
+      "sha256": "8ae6e6d8155c6a50ad6881a8dc490a82a6be0382c2c6a759d290d932f6390f13",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/check.py": {
+      "bytes": 4161,
+      "sha256": "9a0b040ac122cb19b789f00c46459ff5fe241f1880145a182dfb5e68a9fd3f5c",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/check_candidate_runtime.py": {
+      "bytes": 4668,
+      "sha256": "bb7c78ac31a97b4fc35d8ab60f369d529101cd7eca19dc926cb2a0013eb240f9",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/check_native_fancyss.py": {
+      "bytes": 3721,
+      "sha256": "8a0137a200a868a63a4e453c4ca67342f155bccfda43c240c06ff841501d875b",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/check_native_hooks.py": {
+      "bytes": 8146,
+      "sha256": "5237d5f8913c0dc08a760bf1aa93c25d3a8dcda17714374d6cbbd348523505aa",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/check_native_persist.py": {
+      "bytes": 9962,
+      "sha256": "711326e3cad4e2d51edb0f87b53e35b1395bc23655ba4ebbffd1989a3df88e8e",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/check_native_plugins.py": {
+      "bytes": 5023,
+      "sha256": "ec6c749174d4341a9431abf60a82688a69b0300ec3f312e46165f0f7e0a3e580",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/check_native_preview.py": {
+      "bytes": 5179,
+      "sha256": "73ba2d3cd0273aebacf7385e00eb59e6c9d285adca4ac432360d06592f5ecfcb",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/check_native_restore.py": {
+      "bytes": 2510,
+      "sha256": "e695c415bea9acbdfc1d384bdd5bbb2ff6526dfc744ed535c13597753670971b",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/check_native_tunnel.py": {
+      "bytes": 5028,
+      "sha256": "223760dcfb11df4d463396448a13499cda59bee745ce4291cacdebd5c83b1bd7",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/check_native_vpn.py": {
+      "bytes": 2641,
+      "sha256": "0d500b7eaad3fae8bb39ea8e99a281291ed121cfad264e551b156c8d046c5a1b",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/check_sync_aux.py": {
+      "bytes": 3130,
+      "sha256": "03cc17282a623247c1c2cdb736a9417ac4882e67f8bcd43f2e30890334b4ec8f",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/fancyss_policy.py": {
+      "bytes": 3603,
+      "sha256": "b43a676e2f5717827168e594deb7a9567795bb3cae95646294b9adec02d4154f",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/freeze_sources.py": {
+      "bytes": 4466,
+      "sha256": "2286768eaec6f188ab492121e5ffb5544c50ae04dc45910e1725c928ad4d2c5f",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/inputs.json": {
+      "bytes": 725,
+      "sha256": "184e2cbe0f9ccf9c83947063a745c495e4e53911b2401a43c276cf2d46ca239a",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/launcher_exec_fixture.c": {
+      "bytes": 1685,
+      "sha256": "c564941866b65a0d3c03590708ca6ee990069c6ca90db44cd5c61a218d6b6878",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/model.c": {
+      "bytes": 3217,
+      "sha256": "ae90edc22038d94406961f8121ecbd81108882b3da93e76c4240b830d6ffb25e",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/native_boot_bridge.c": {
+      "bytes": 10644,
+      "sha256": "ae0f154f3f7804184240c12f32c9d3b77db12bda4bdd144ab054913e8d864dd4",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/native_candidate.py": {
+      "bytes": 10876,
+      "sha256": "ad9746f6d2c2352f84f30f747943d2dbd0a2fa04a1ef8c6cd4260ea3e53173d1",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/native_center_event.sh": {
+      "bytes": 739,
+      "sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/native_hook_probe.c": {
+      "bytes": 574,
+      "sha256": "e2dd4f251de5983f863da4ef0fd1db226ff79080cba8ce7d24d509fc2cdbcc91",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/native_hooks.go": {
+      "bytes": 6212,
+      "sha256": "0e10c1469b7173d04a46a5910822f6b5bc6e63f85ff2199f3830aea686e76614",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/native_launcher.c": {
+      "bytes": 1123,
+      "sha256": "d1535c2861b238a5de4bc588b7bbc8910f7596a8fbf04978f7d77677d00e9240",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/native_preview.go": {
+      "bytes": 8264,
+      "sha256": "eeaf5c6ba91a1e39254167d53e215d86a900fa774d73493453a2776fb5150bfa",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/native_preview.py": {
+      "bytes": 10389,
+      "sha256": "72348e7f2513b754fb86c4d21f436cc3b30da4f59985f9e238a2e3fd0a0687d9",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/native_restore.c": {
+      "bytes": 420,
+      "sha256": "2c90885e0633aaf43eb1361d388ef90b0aed887c8e4978482845f66f5751c114",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/prepare.py": {
+      "bytes": 3986,
+      "sha256": "e7370d8c31934a613bb69d718b460d483b42aa8c68ca56726481c7b2c12fd08a",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/probe.go": {
+      "bytes": 7041,
+      "sha256": "8f49b53700def99835ae44589873154a798907ee70010a0791ad9771d55bb5ee",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/restore_kernel_fixture.c": {
+      "bytes": 1406,
+      "sha256": "ec64981af19a753d88297722b9569b6abc441aa36d66719ac5fe43b6854d68f4",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/restore_probe.go": {
+      "bytes": 2647,
+      "sha256": "40869d8a4ad7f093fe6c67d8d52b7454f6517de65c854254719717227f140d48",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/sync_aux.go": {
+      "bytes": 4802,
+      "sha256": "35bb8c56f2f5685c46a6424124511346e67195372126d3df1f71bf35fae73a5b",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/sync_aux_probe.c": {
+      "bytes": 1361,
+      "sha256": "e86d04a2d84528c1e3ec78385bdeafc73cb6d4c4a11c9091eb46e9ba5199fd03",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/uu_matrix.go": {
+      "bytes": 6128,
+      "sha256": "c2fb39955afb28ffae221133ddcf4a1ee0ef5ccfbc3b9110fc5cb0bdaad53788",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/uu_matrix.py": {
+      "bytes": 7406,
+      "sha256": "d9fc908d8cff1931ef09ad54f37c588592b341e6a76a61645a5f8eb842b69118",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vendor/COPYING-GPL-2.0.txt": {
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vendor/COPYING-OpenVPN.txt": {
+      "bytes": 3820,
+      "sha256": "2bb17fe225c16734912c86003329ff44981ddae5f3a55bb2fa55b6938a12241b",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vendor/NOTICE.txt": {
+      "bytes": 771,
+      "sha256": "7fabb2d292d99f9e4775443d44b09e2faa68266ec44b5311ed5322f73cc2de0b",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vendor/fancyss_uninstall_p1.json": {
+      "bytes": 1047,
+      "sha256": "549be957b9634a8f1e0d70df644a988078bbb0c2711e85e2fa02f5691759cbd0",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vendor/merlin_ntpd.c": {
+      "bytes": 3199,
+      "sha256": "0c9004dbcfcc13cf5f01a2f93b9a3f4586841b42f6e69acf7a19031e69a298e5",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vendor/merlin_scripts.c": {
+      "bytes": 3186,
+      "sha256": "17f835f374077b4b6ce30e07e6f6de40214789168d73223ac946049c9e1ae4dd",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vendor/openvpn_config.c": {
+      "bytes": 16219,
+      "sha256": "32c522ef4ef40c327f761a30f109abbffb6c50c9439e9089265ecfb6fdd883bc",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vendor/openvpn_config.h": {
+      "bytes": 5681,
+      "sha256": "1125abebb565c794810e0ab3c5b8679ba0d7f2f2712d275b745faad35f5309a4",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vendor/openvpn_control.c": {
+      "bytes": 20587,
+      "sha256": "d07c485b1583b5c050966e895ab69037ae0a4fe48b3fa117c62b954e0325c282",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vendor/openvpn_control.h": {
+      "bytes": 1275,
+      "sha256": "2e03f29e13dd07be4c3308f0c2dfe53e2251f5a149902c0c9cab88ffecd44ce0",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vendor/sources.json": {
+      "bytes": 1394,
+      "sha256": "3d7640a6e6a9da9e38027207020f971648461ac7ffe850a2ce9952573ecacc09",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vendor/uu_sources.json": {
+      "bytes": 710,
+      "sha256": "31a91b1d760c4f27b6e2cd052b43d145e25b6751e39afdb97e4b825f0df16e9e",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vpn_generate.go": {
+      "bytes": 2663,
+      "sha256": "68c34b0c17511f35ece0bf125b1e9fccbfe8d4269614d849016653024cfe0a3f",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vpn_generate_probe.c": {
+      "bytes": 3254,
+      "sha256": "f825d6bbe445408a007222b078086c37c665c2acaf5ff283850d58251b6b207b",
+      "mode": 420
+    },
+    "analysis/merlin_vpn_38812/vpn_notify_fixture.c": {
+      "bytes": 247,
+      "sha256": "3a9c02fd933f09c74307fc918c52891b6267bd9c41cff5625fd3bb775bfd0891",
+      "mode": 420
+    },
+    "build/LinuxBuilder.swift": {
+      "bytes": 3307,
+      "sha256": "76c5c26a8a857f399f101f0f335df3ff2a4e07f7bff072e4e958531299482de4",
+      "mode": 420
+    },
+    "build/audit_merlin.py": {
+      "bytes": 1989,
+      "sha256": "252f2240292c4c6e9a687dfda23ed7f7417a701c95a303f1e7f2bfae7b0dfda1",
+      "mode": 420
+    },
+    "build/audit_vendor_contracts.py": {
+      "bytes": 1852,
+      "sha256": "7302d2ce8ce271a437cd8787a3a562e892fb3c63a5e13676478029ec50f673ab",
+      "mode": 420
+    },
+    "build/barrier_bounds_fixture.c": {
+      "bytes": 83,
+      "sha256": "196ab9c2dd35e40d8f584a4de918fb76654b62112b550b74ad1bb829b8b2066c",
+      "mode": 420
+    },
+    "build/base_contracts.json": {
+      "bytes": 1961,
+      "sha256": "0827a9a868309f5d27518ed8b7f2a8b432356f54e7baac7c43b28283493b95cb",
+      "mode": 420
+    },
+    "build/base_migration.py": {
+      "bytes": 12904,
+      "sha256": "1c43e145f58c863ab76efca9eda8f130d43f8e04ac4b6312184c840296232344",
+      "mode": 420
+    },
+    "build/bridge_fixture.c": {
+      "bytes": 1453,
+      "sha256": "8bf46ab30acee411ae953ca010c86417bd848796e1559fb51eb715260119e367",
+      "mode": 420
+    },
+    "build/build_candidate.py": {
+      "bytes": 6483,
+      "sha256": "f101a84c0a09606808018404a85251bf616a8279d103a237da0e1e97815450bf",
+      "mode": 420
+    },
+    "build/check.py": {
+      "bytes": 10978,
+      "sha256": "6c93029cd9bade9eb4f04449a44cdccc59e073abe84d034a68319f92dd353eff",
+      "mode": 420
+    },
+    "build/check_device_profiles.py": {
+      "bytes": 11890,
+      "sha256": "94c3ab8f814cffde52a71f17d8ac14dab50f9dd86adfcce5a29e00afb509e553",
+      "mode": 420
+    },
+    "build/check_fancyss.py": {
+      "bytes": 7749,
+      "sha256": "6df3738bab2e1ea29f384869509b4cc7f3c651d08058e1ee9a3dc2f489ab2858",
+      "mode": 420
+    },
+    "build/check_hardening.py": {
+      "bytes": 3228,
+      "sha256": "656c66e3b47ed587e1a73096127aee8ef5510f7de63d1f976f652abe76df46a0",
+      "mode": 420
+    },
+    "build/check_health.py": {
+      "bytes": 1969,
+      "sha256": "84eee827352b1504da0c22e2688976acdbdfafa5650d3dae25789454cbcf93c1",
+      "mode": 420
+    },
+    "build/check_history.py": {
+      "bytes": 7295,
+      "sha256": "adffbbe40436b95c04b9b51d99a7520036f91e2dfc79609a9189540da574be55",
+      "mode": 420
+    },
+    "build/check_httpd_cache.py": {
+      "bytes": 3092,
+      "sha256": "087ae7ca6fec969f920ea7eedac378236c9811e90255882cf1081cd5f72cbb3f",
+      "mode": 420
+    },
+    "build/check_httpd_memory.py": {
+      "bytes": 3546,
+      "sha256": "b612a9e11d4b6bc37b2fc7bb4b29be7114beada3800763f518502d5657a5c8fb",
+      "mode": 420
+    },
+    "build/check_https_stability.py": {
+      "bytes": 5781,
+      "sha256": "0a1e7db10e5da5f0ed111cc024bfcdee8383ec371203bdfb1640be2bf92d30ed",
+      "mode": 420
+    },
+    "build/check_installer_boundaries.py": {
+      "bytes": 7802,
+      "sha256": "5f5307ea5e923ef71f5d3775fd917a6bba988979cec05d215540794ee9223d4b",
+      "mode": 420
+    },
+    "build/check_interrupt.py": {
+      "bytes": 6125,
+      "sha256": "6f1d8e79be0c967628aca83d15b284346a9a14d788b9f3f43370e36672f902e3",
+      "mode": 420
+    },
+    "build/check_lifecycle.py": {
+      "bytes": 7658,
+      "sha256": "8050995f9ef59bfe26d4f99b67992a41aabdbd522f76b9de5e4ce9178e40537b",
+      "mode": 420
+    },
+    "build/check_memory.py": {
+      "bytes": 18270,
+      "sha256": "6090e1acf0d5e66edcd019e4e04f0a41254e900d08bbb3501cb06508022b1219",
+      "mode": 420
+    },
+    "build/check_merlin.py": {
+      "bytes": 8035,
+      "sha256": "26b2ccd02e1ad845dc0c78636760f1852ecf692400ce6cfc8d9970f90ee60931",
+      "mode": 420
+    },
+    "build/check_model_isolation.py": {
+      "bytes": 15199,
+      "sha256": "3c3f612b129d5e5bdc3420909cd2fb879bbdb828e6bbbf4c8312d461ebcef158",
+      "mode": 420
+    },
+    "build/check_online.py": {
+      "bytes": 5861,
+      "sha256": "4481dfd2f62cd954dd74b7fd3df2854b4e0669d730588d64dba5203cb66aef51",
+      "mode": 420
+    },
+    "build/check_real_plugins.py": {
+      "bytes": 6469,
+      "sha256": "617a1430b48014796c87d7acbbbd3f79846119bd2f0a590efce6a8e88f1d76e4",
+      "mode": 420
+    },
+    "build/check_recovery_safety.py": {
+      "bytes": 6467,
+      "sha256": "94e92563d712ec81f0d1284aa7b20bf000662ff46186803511ea723f73d03074",
+      "mode": 420
+    },
+    "build/check_resource_bounds.py": {
+      "bytes": 2500,
+      "sha256": "8b7b8b08bffccc292aa0e1175952ca3f13e01d3214be6714003db9da5b2ab15e",
+      "mode": 420
+    },
+    "build/check_shards.py": {
+      "bytes": 9465,
+      "sha256": "bd7c0b25eb8bb5a2d964f7f4cd8927b6dfe6e8a5bf7c0a559af9678489334ca1",
+      "mode": 420
+    },
+    "build/check_soak.py": {
+      "bytes": 6635,
+      "sha256": "081c1a4254ffa397428c80a014812a950ef7bdff10ce575bde0c3db3e105fb08",
+      "mode": 420
+    },
+    "build/check_softcenter.py": {
+      "bytes": 5162,
+      "sha256": "f9038abda3959473a60a3cfbd2deaa08e8609d8ae6914f796d0e03813aaa2c45",
+      "mode": 420
+    },
+    "build/check_tls_input.py": {
+      "bytes": 4009,
+      "sha256": "f02558a3056cd5038636e4d7f42d5012b734dfb532fb6e68aa9cc981710c3fff",
+      "mode": 420
+    },
+    "build/check_uu_recovery.py": {
+      "bytes": 1685,
+      "sha256": "b2b5e9ed2b71d51192ae384ab90f42da526c181cf7856336e2406e05cd8b659b",
+      "mode": 420
+    },
+    "build/coexist_helpers.go": {
+      "bytes": 3480,
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "mode": 420
+    },
+    "build/dependencies.lock.json": {
+      "bytes": 16024,
+      "sha256": "59b00242146e8381cad51056e8499964d0f5808e94459830a0951a612354971c",
+      "mode": 420
+    },
+    "build/device_config.py": {
+      "bytes": 8003,
+      "sha256": "73da2984cddf690c278a602288bf751ec215faf1779dcdd78654f0b59a7b733d",
+      "mode": 420
+    },
+    "build/devices/README.md": {
+      "bytes": 3152,
+      "sha256": "27283807631548fb0635e629c58a18043b6affbf506b326edca907eb81d8d1bd",
+      "mode": 420
+    },
+    "build/devices/rt-ax86u.json": {
+      "bytes": 1577,
+      "sha256": "1e0387f018231e27a0e4a84d6b89d70be6438d2e5237764c882cfdaa158c42a4",
+      "mode": 420
+    },
+    "build/export_metadata.py": {
+      "bytes": 998,
+      "sha256": "620ebafc8af5b425709299a1a44e55c909e03f5ee49240f635424f637cc407da",
+      "mode": 420
+    },
+    "build/extended_plugin_sources.json": {
+      "bytes": 9686,
+      "sha256": "cdeaa68b2ec8c4e8a3d745ecda5576c5b1ab5d8637e42c651ba3b62ef476ab84",
+      "mode": 420
+    },
+    "build/extract_casefs.py": {
+      "bytes": 1081,
+      "sha256": "2cc68c9a3cb3954a36c15b8fbc5a87f3b75e92578e2f8038a230a442d648222e",
+      "mode": 420
+    },
+    "build/extract_gpl_subset.py": {
+      "bytes": 1872,
+      "sha256": "bf1db679f369ff0422a9b474718a0c8d73d668be40bb03d46731762028bf64a6",
+      "mode": 420
+    },
+    "build/fancyss_inputs.json": {
+      "bytes": 80229,
+      "sha256": "8c74fd83c71823df68d01bc154e39a21c2064881fdc3d1275f34030b4a770552",
+      "mode": 420
+    },
+    "build/fancyss_sources.json": {
+      "bytes": 1619,
+      "sha256": "25e94b7414f962774e45f95b06804e11c180774a924f19f6ada54c60d10ad327",
+      "mode": 420
+    },
+    "build/filemap_fixture.c": {
+      "bytes": 973,
+      "sha256": "16626622bb71b94bfaf8fc7a671c464e438e2cf89f24de5fe5ab6eb0342f7c89",
+      "mode": 420
+    },
+    "build/filemap_vendor.c": {
+      "bytes": 92,
+      "sha256": "508312cb6f34059b03ed22bb9f81807ae58db1498467dc8aaddb7edbbccfbc38",
+      "mode": 420
+    },
+    "build/hardening_inputs.py": {
+      "bytes": 2231,
+      "sha256": "fbe56924b9b6b8f437248649c9a983fc41875b962bea9142dd22b32fa415df7a",
+      "mode": 420
+    },
+    "build/history_fault_fixture.c": {
+      "bytes": 1854,
+      "sha256": "0e65ce8396cbe5f9d29c072f77c0e8aadf4783a328043ff54fdfb565578e7a39",
+      "mode": 420
+    },
+    "build/httpd_memory.go": {
+      "bytes": 5427,
+      "sha256": "398e9817e0b55810ebe244930a2f54afc2787a5ac5ca847ff8bed88b05c523ae",
+      "mode": 420
+    },
+    "build/httpd_tls_cache_fixture.c": {
+      "bytes": 1775,
+      "sha256": "f724da5ab3658f8baacb81e9f9d4e4339354dbfa0563b400d039ed15f3f5b9ef",
+      "mode": 420
+    },
+    "build/https_trace_fixture.c": {
+      "bytes": 3245,
+      "sha256": "8d2c672780430f45c01ad78e7e17667396660aec65564e790bbad9bcb73f872a",
+      "mode": 420
+    },
+    "build/inspect_upstream.py": {
+      "bytes": 3134,
+      "sha256": "739d0afde9ad8706a9304bad66b7d6363d2b90ce9400a8abfc366027df34c81c",
+      "mode": 420
+    },
+    "build/interrupt_scenarios.go": {
+      "bytes": 25555,
+      "sha256": "8989dc4c639d00affef9789c67297f74e05fcac03dbb57a4305414b308cdd157",
+      "mode": 420
+    },
+    "build/linux_build_job.sh": {
+      "bytes": 348,
+      "sha256": "13b8b32ea59f5c9a6a2136f7bcb96413af5e999bdc5ab67b1ea41e2b9aa7bc9f",
+      "mode": 420
+    },
+    "build/linux_center_job.sh": {
+      "bytes": 6764,
+      "sha256": "559e2c2f61f453d31be0dae1e11cf6f3616b424768e436f13179429f1a772424",
+      "mode": 420
+    },
+    "build/linux_cert_generate_job.sh": {
+      "bytes": 137,
+      "sha256": "8e4ea867e89cdf9bc816cc43553c8374214e682b871646f5fc7aba85d45c7b0b",
+      "mode": 420
+    },
+    "build/linux_cert_restore_job.sh": {
+      "bytes": 136,
+      "sha256": "93fb018539c8607e49906b99df74ff98532546ddd7a403f4fcc95e9767039888",
+      "mode": 420
+    },
+    "build/linux_coexist_job.sh": {
+      "bytes": 2852,
+      "sha256": "cf9b203a7bdc22f3102453e12d5935ec6cf07b4f91c2e6097b52dfc27dd95373",
+      "mode": 420
+    },
+    "build/linux_filemap_job.sh": {
+      "bytes": 326,
+      "sha256": "68bdeb4038a8c9edc218a4819663a9f77f8c56c22cd77b455d065158607dc203",
+      "mode": 420
+    },
+    "build/linux_hooks_job.sh": {
+      "bytes": 4262,
+      "sha256": "a1bd58fca2132d0d138e1c68f91b37d321e0620e83c78fcb327a752516bf43ae",
+      "mode": 420
+    },
+    "build/linux_native_httpd_job.sh": {
+      "bytes": 1774,
+      "sha256": "3bc7ba3c48192aa10e522e85a0e4cefea6fff4890afc0ca5e470bf82b05f2ca9",
+      "mode": 420
+    },
+    "build/linux_native_uu_job.sh": {
+      "bytes": 852,
+      "sha256": "a16e25e9239c3fbcda6a528ae8f0a05d1328461812c8323482a1b65c354d7028",
+      "mode": 420
+    },
+    "build/linux_online_job.sh": {
+      "bytes": 4369,
+      "sha256": "d60846b810da09f49a5d40f2f9ba88b75192f7831d0584e9b1d577dc7f473076",
+      "mode": 420
+    },
+    "build/linux_packages.json": {
+      "bytes": 5083,
+      "sha256": "377e92bff9c044e0be4fd64f721d08a82096d62ff8e410e73abca3b8c6fc78dc",
+      "mode": 420
+    },
+    "build/linux_real_plugins_job.sh": {
+      "bytes": 4805,
+      "sha256": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+      "mode": 420
+    },
+    "build/linux_restore_job.sh": {
+      "bytes": 1404,
+      "sha256": "15671b81611e7340a2719d336118865f11b744fba57ef90511218b560879b578",
+      "mode": 420
+    },
+    "build/make_initramfs.py": {
+      "bytes": 3115,
+      "sha256": "befb1bea33cd882f42b1b3fcb2642e1a3be1d564012a2ca509e81b61eb636ae8",
+      "mode": 420
+    },
+    "build/make_merlin_system_initramfs.py": {
+      "bytes": 2486,
+      "sha256": "00efa902e8675d3629e134cf70593de25b00a7b9bdb9e5b7ae44c8b6c1dadf49",
+      "mode": 420
+    },
+    "build/memory_cycles.go": {
+      "bytes": 4839,
+      "sha256": "3e9f90d880baa7959bbbc039520c721303f1d2f0254af6d4e91d63b4660bfc31",
+      "mode": 420
+    },
+    "build/memory_exec_fixture.c": {
+      "bytes": 477,
+      "sha256": "b21e9aa6942f4ce0c21fe1863caf182e1a40b63ea66e073d86855addcd67f6d1",
+      "mode": 420
+    },
+    "build/merlin_sources.json": {
+      "bytes": 4734,
+      "sha256": "0637e35d0b3a404075cae91ab0f2983ec42565edaa0bf3e1c5d9a15b18892dc1",
+      "mode": 420
+    },
+    "build/merlin_system_sources.json": {
+      "bytes": 15764,
+      "sha256": "67da834b6465e7eea49fff0977c00492ad0edff252b9809684665ad8d513c92f",
+      "mode": 420
+    },
+    "build/merlin_vpn_config_fixture.c": {
+      "bytes": 714,
+      "sha256": "90ff082a458318d81aae0869aa7b93d13d4fa0436967b1013648becc4f039e7c",
+      "mode": 420
+    },
+    "build/merlin_vpn_config_probe.c": {
+      "bytes": 1308,
+      "sha256": "50fd196d4c8fc53644d2a33e69c57128fe995d937e2f1724ce299a7008d48b83",
+      "mode": 420
+    },
+    "build/model_helpers_setup.sh": {
+      "bytes": 568,
+      "sha256": "23b5fef2e88dcc95d6b9b1a8aabb07606f86a76eb942981654af85fd37fdcbc7",
+      "mode": 420
+    },
+    "build/model_private.py": {
+      "bytes": 19706,
+      "sha256": "5877cc12ca4ed04bf9763b83ccaffaf71fd1d8dec17417c686ba99902f3e935e",
+      "mode": 420
+    },
+    "build/native_hw_fixture.c": {
+      "bytes": 5375,
+      "sha256": "f995441ea98eabdbf157063bf4086170a288d7c704abf49ac540fc078fb410dd",
+      "mode": 420
+    },
+    "build/native_lifecycle_setup.sh": {
+      "bytes": 1620,
+      "sha256": "1da48bd61bd7a0032264bb0721448e985a4a5a524f59cc5d7007b6d21bf8ce05",
+      "mode": 420
+    },
+    "build/native_runtime_client.go": {
+      "bytes": 6042,
+      "sha256": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+      "mode": 420
+    },
+    "build/native_tls_probe_fixture.c": {
+      "bytes": 2083,
+      "sha256": "738114b75f6d4666df531d40530365cb37a0144d62af8175320858bf400a0754",
+      "mode": 420
+    },
+    "build/native_uu_transport.c": {
+      "bytes": 1338,
+      "sha256": "7efed547a60719f5a4845952fd0ec36c2f60f5259fd00019e0cdcdd794760089",
+      "mode": 420
+    },
+    "build/patch_online_installer.py": {
+      "bytes": 6497,
+      "sha256": "c4a132cece30306b0f7cebf3b4fbbb02f29adf592e375f9c102e25cee80d7ae8",
+      "mode": 420
+    },
+    "build/prepare_extended_plugins.py": {
+      "bytes": 3265,
+      "sha256": "6e46f2d48ea5ce5424059e4431ebcd417f8928d39f073d3189e4813ba384ff7a",
+      "mode": 420
+    },
+    "build/prepare_fancyss.py": {
+      "bytes": 8897,
+      "sha256": "555a7adb1d56cbc889c0b9cafdf754a170f62ba6001e6fe5111c13af7f377afb",
+      "mode": 420
+    },
+    "build/prepare_hardening_overlay.py": {
+      "bytes": 849,
+      "sha256": "caccaa9e555d04c8f6a74c031510ca48de9f4b8ba9fddac6a231ea2440515a47",
+      "mode": 420
+    },
+    "build/prepare_linux_tools.py": {
+      "bytes": 3076,
+      "sha256": "7e9228ffabaea583ffaf536cc6fcd4a6f57dccb6070c49ee307da67ef6b16363",
+      "mode": 420
+    },
+    "build/prepare_merlin.py": {
+      "bytes": 6258,
+      "sha256": "5795d043847f68f6c9290062675964c4a2c0f647f8ee82d67b987e745764b878",
+      "mode": 420
+    },
+    "build/prepare_merlin_system.py": {
+      "bytes": 3032,
+      "sha256": "35cd33a65f100dda3092e221fe05d24ab9869f32afb43fcf522eb6cd98a82eaa",
+      "mode": 420
+    },
+    "build/prepare_native_fixtures.py": {
+      "bytes": 2030,
+      "sha256": "1ae3e47491b4dc5d3c487f3a67bd5b50ed96f0d9c6a15f719d159e4dcae8a139",
+      "mode": 420
+    },
+    "build/prepare_real_plugins.py": {
+      "bytes": 3860,
+      "sha256": "c2888c026f0f4b4ad3ecad5992ec90983f38c5620a3425997bae4fccde28a5a8",
+      "mode": 420
+    },
+    "build/prepare_softcenter.py": {
+      "bytes": 6108,
+      "sha256": "01892b4486673e4489257d547953d09f21e47b10d01fd9faaa6a8fc2856ead5a",
+      "mode": 420
+    },
+    "build/publish_release.py": {
+      "bytes": 8448,
+      "sha256": "2bcd02355e23824a73e844ef1a3be140dc6ed0f11917037ff37245baea5cc89a",
+      "mode": 420
+    },
+    "build/rc_fixture.c": {
+      "bytes": 2573,
+      "sha256": "f9baf8826e6f3cb9000813b4fb6c218d6b24c294223531c8128453f39650229b",
+      "mode": 420
+    },
+    "build/rc_vendor_fixture.c": {
+      "bytes": 2536,
+      "sha256": "9417776dc172bd0850f58ce9dfaebd66f7f070f233221820b1fcd6654a32e79f",
+      "mode": 420
+    },
+    "build/real_plugin_sources.json": {
+      "bytes": 3586,
+      "sha256": "80256a27bfc7ddf18da8f1b2693ffa6debcfbb240083a3d724da6e3641382ea8",
+      "mode": 420
+    },
+    "build/real_plugins_setup.sh": {
+      "bytes": 3256,
+      "sha256": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
+      "mode": 420
+    },
+    "build/recovery_safety.go": {
+      "bytes": 10876,
+      "sha256": "d0417977ec0f3532e9535283469b6bd6cb7e5a2f0c0ec3c26f4cbde8600775dc",
+      "mode": 420
+    },
+    "build/relay_idle_fixture.c": {
+      "bytes": 1246,
+      "sha256": "772ad439956bae7ec0f73e32977b87582d75013ad455e66c8b9d4581f52ed914",
+      "mode": 420
+    },
+    "build/release_config.json": {
+      "bytes": 288,
+      "sha256": "cae36eea33e09883e8af12dbe2e341a2427c6152ad07f572618a7f059bd87a04",
+      "mode": 420
+    },
+    "build/release_config.py": {
+      "bytes": 1156,
+      "sha256": "140b3141e4b4645c88e2f1f0a5b73b11f927b0f0932ef7438392ac7f7c90d4a9",
+      "mode": 420
+    },
+    "build/repack_image.py": {
+      "bytes": 3677,
+      "sha256": "d38c28dc33a5b90a91bec88624d1ef5fd0a14a8f8ea2b1479cde15d9a1e16c53",
+      "mode": 420
+    },
+    "build/run_linux.py": {
+      "bytes": 1495,
+      "sha256": "5c5f0962dd2ce8560950c6284adc30edc6211c50296fae42b0c99d2f1f27d0ca",
+      "mode": 420
+    },
+    "build/run_readonly_linux.py": {
+      "bytes": 5527,
+      "sha256": "eeb77fb1d07ba997388aa0feaa7e558bb4ad96b5fb73a3588643390bef06135f",
+      "mode": 420
+    },
+    "build/runtime_fixture.c": {
+      "bytes": 516,
+      "sha256": "abbde7dabc3672a69e8dddd1cf436056188de948e5f39ef19aa8439d95145861",
+      "mode": 420
+    },
+    "build/sealed_vm.py": {
+      "bytes": 13145,
+      "sha256": "44e83268f0e72f999648acb8f56e778735e70b7240d71bb1d90a2ec10a563788",
+      "mode": 420
+    },
+    "build/soak_init_fixture.c": {
+      "bytes": 753,
+      "sha256": "411aa2c64c3a3c02e4b86b2717e84ba3ad3685d7349a0a5f1efb67d7efe3099a",
+      "mode": 420
+    },
+    "build/softcenter_sources.json": {
+      "bytes": 1309,
+      "sha256": "0e1ddaa0f67c10daf153ff0bee45213c24aa0ffeec042f53dada13f4e8fd47dd",
+      "mode": 420
+    },
+    "build/stage_image.py": {
+      "bytes": 12534,
+      "sha256": "11c607b9a70137bb40abac70c3c8c9a3e96ca5765ce2bc2914d4531618f7befd",
+      "mode": 420
+    },
+    "build/test_bridge.go": {
+      "bytes": 3408,
+      "sha256": "b22a3355d88beea7719b1fdb16c846d2d6838a15f2f4f110a3a2173184f6dbb3",
+      "mode": 420
+    },
+    "build/test_center.go": {
+      "bytes": 7598,
+      "sha256": "93eb4932580bd8e51921dabad2c87848738cfe817a135c34622d748f571d4253",
+      "mode": 420
+    },
+    "build/test_cert_lifecycle.go": {
+      "bytes": 6474,
+      "sha256": "e098da31c7933ec5d55117265728914b24c4613232e24fc043ba464ccfae1115",
+      "mode": 420
+    },
+    "build/test_coexist.go": {
+      "bytes": 7185,
+      "sha256": "cd12bbaca0f9260c5dfdd4bf60c726b16b56f240c1bc36a2205716097cc8d68e",
+      "mode": 420
+    },
+    "build/test_extended_plugins.go": {
+      "bytes": 12659,
+      "sha256": "2d71aac456e85ff0ad4d9bcadd689ea26bce4a95bc9b1a5df806ecc89028d6fa",
+      "mode": 420
+    },
+    "build/test_fancyss.go": {
+      "bytes": 13586,
+      "sha256": "954ad333fef263bd8041d76b8b4652e02205a1f8964207d82395f6a266f749d8",
+      "mode": 420
+    },
+    "build/test_health.go": {
+      "bytes": 3438,
+      "sha256": "895583a4b62a0c07301ff68569fcacc218f6b0220e6f2b8ea29a3ac8be8a6272",
+      "mode": 420
+    },
+    "build/test_history.go": {
+      "bytes": 17757,
+      "sha256": "47737beb5c6546a15a26c4fd05ce730773e3c094cf6f3901bcf62e65f9bc109e",
+      "mode": 420
+    },
+    "build/test_https_stability.go": {
+      "bytes": 7300,
+      "sha256": "d1c5038eecb02e2ad24b99bd55851ce1d0bdf195b0ffb097d17ec0b84bfbf984",
+      "mode": 420
+    },
+    "build/test_installer_boundaries.go": {
+      "bytes": 7867,
+      "sha256": "8286ac006788a4088e10e3b5b1210eabf462cd87e21771ec8cffd8bbaddfe683",
+      "mode": 420
+    },
+    "build/test_interrupt.go": {
+      "bytes": 5589,
+      "sha256": "05988007a852d48db38fefbbefde7e13f8dad59cca6505ae7e87075a3277524b",
+      "mode": 420
+    },
+    "build/test_interrupt_main.go": {
+      "bytes": 403,
+      "sha256": "6f6e09cd3200832ce24dfc63ca4266144fc314d48070a236012f483b2199c139",
+      "mode": 420
+    },
+    "build/test_launcher_vendor.go": {
+      "bytes": 243,
+      "sha256": "fe8e1823dd632797b8e9737bd0a32049d07e7b4bfcc8f3406aa720deddd5cd44",
+      "mode": 420
+    },
+    "build/test_memory.go": {
+      "bytes": 11813,
+      "sha256": "69838169024c9d0b9e31f2e570f9cde728f8193fe4d0e9f71be059fc080ca42f",
+      "mode": 420
+    },
+    "build/test_merlin.go": {
+      "bytes": 36549,
+      "sha256": "83c7c8846f85e6eb0dd61442288be4ee84017e7b58f3d8cbbab7e4c4a12d538b",
+      "mode": 420
+    },
+    "build/test_native_httpd.go": {
+      "bytes": 6428,
+      "sha256": "59862ccf3e8b4633f9a3004d352c6e76438a020934f452863698123534f552c3",
+      "mode": 420
+    },
+    "build/test_native_uu.go": {
+      "bytes": 3857,
+      "sha256": "d6c949404c6c90632604419d323458aeb045959ac80e37dac13f4ef9a4582230",
+      "mode": 420
+    },
+    "build/test_online.go": {
+      "bytes": 25278,
+      "sha256": "b04471e23505e03d7700884fdad4adb5d526e7fd8fe33bfe669a3a736d81fd14",
+      "mode": 420
+    },
+    "build/test_online_main.go": {
+      "bytes": 50,
+      "sha256": "8aec199224aae0c3c42e1bd0fc5d160f439e451261ce36bff98150638b204e8f",
+      "mode": 420
+    },
+    "build/test_real_backend.go": {
+      "bytes": 3232,
+      "sha256": "200caa4f63cfe27b3c07b76f6a0a922fcb0123dff4ea886c975a99d20929c63f",
+      "mode": 420
+    },
+    "build/test_real_plugins.go": {
+      "bytes": 16898,
+      "sha256": "4b868ea6613bedc3f3056cef26c18d92603ac74f928a9fb8edabac11309cd6b4",
+      "mode": 420
+    },
+    "build/test_resource_bounds.go": {
+      "bytes": 7257,
+      "sha256": "418e3774ed31838e6612bec1d35ebc4ad493b48632a2caaf46747e9f084b0b8c",
+      "mode": 420
+    },
+    "build/test_restore.go": {
+      "bytes": 4311,
+      "sha256": "8a5b0367e2028424a932a14a08c7eb8f9c03a1b741ab8fbfefb791250ffdc2ff",
+      "mode": 420
+    },
+    "build/test_soak.go": {
+      "bytes": 16029,
+      "sha256": "908018fec252135807c0df483a5c5951c5866506a0b9b0917a508431c1afa891",
+      "mode": 420
+    },
+    "build/test_softcenter_upgrade.go": {
+      "bytes": 7375,
+      "sha256": "4312da3eca530b1f0b8844b2526fe03712aa5936a9640d5d5380d06a99b61a7f",
+      "mode": 420
+    },
+    "build/test_uu_recovery.go": {
+      "bytes": 7297,
+      "sha256": "1a2a0a6a657f4be4d7e779bbc19f49d736cbf1f9a359bc94058d0631693b3f0d",
+      "mode": 420
+    },
+    "build/txn_fault_fixture.c": {
+      "bytes": 2919,
+      "sha256": "f6b634219acffc97a489285fd7c1f62c37e77316a8d1aaaa267bd840ea51f859",
+      "mode": 420
+    },
+    "build/verify_candidate.py": {
+      "bytes": 6212,
+      "sha256": "dd1692cd6dd20e225e7afead4cd3a53de2a7e869145f3f89f2a37cbce9ad43a7",
+      "mode": 420
+    },
+    "build/verify_compatibility.py": {
+      "bytes": 3753,
+      "sha256": "9e1be208e152a375deca6939cd94d5b4a4748808b29b32415ad8a693a63363d4",
+      "mode": 420
+    },
+    "build/verify_hooks.py": {
+      "bytes": 4178,
+      "sha256": "95de6149bca61148951ec1ef413305fdab8d11e6be7e318d1dc26ff96541506c",
+      "mode": 420
+    },
+    "build/verify_native_runtime.py": {
+      "bytes": 4442,
+      "sha256": "f58fa52277675650afd5982611abec1e51f788d90c5536c94834b7b412dbdd60",
+      "mode": 420
+    },
+    "build/verify_uu_compatibility.py": {
+      "bytes": 2749,
+      "sha256": "802ac809f9f8e283bccafa877d0c981f9266e86df640208912fc80455091567f",
+      "mode": 420
+    },
+    "build/zig_download.json": {
+      "bytes": 180,
+      "sha256": "e0a9a9058908dcc27a4dbd9276292bf2d42675f3535e813192bd15339a491486",
+      "mode": 420
+    },
+    "sources/localmod/MERLIN_COMPONENTS_NOTICE.txt": {
+      "bytes": 124753,
+      "sha256": "e2c1551452e8f8a5380f3d474049216f5f94656a45a3b432299fdc0e9ab7481c",
+      "mode": 420
+    },
+    "sources/localmod/README.md": {
+      "bytes": 24452,
+      "sha256": "3e3bc58bed4b9d701134f6dd661124b390b644391cb23ea98d21950cae63844e",
+      "mode": 420
+    },
+    "sources/localmod/archive_guard.c": {
+      "bytes": 7379,
+      "sha256": "e7a6afb66aa94fb9efbb54a4c2ed9dc884438aa0dc2fa547548a47bddda3c8e4",
+      "mode": 420
+    },
+    "sources/localmod/bootstrap.sh": {
+      "bytes": 10430,
+      "sha256": "43298e06092803e25a7128ba757e4b02587a868819f58b7a2d95a1f494bb9826",
+      "mode": 420
+    },
+    "sources/localmod/bounded_log.h": {
+      "bytes": 3029,
+      "sha256": "ac86f672fa6e7799e99fd2f0b84658f3e6af6fd00f65b1287e51a28e3d86e7bc",
+      "mode": 420
+    },
+    "sources/localmod/checkpoint_integrity.h": {
+      "bytes": 9884,
+      "sha256": "89d4578d57ada05154212108f8b831b0ae0e6d65b3335603a40c1875bd773231",
+      "mode": 420
+    },
+    "sources/localmod/dispatch.sh": {
+      "bytes": 1444,
+      "sha256": "96fee2f2f2507dcc3371f0ccc95ecbec61699c772a23078b811ae9220a467e4e",
+      "mode": 420
+    },
+    "sources/localmod/event.c": {
+      "bytes": 2642,
+      "sha256": "f871e173e06dab3f4bb87ab6f5cb380d257c2dff262e8a15aba20e80f7c0faae",
+      "mode": 420
+    },
+    "sources/localmod/fancyss-LICENSE.txt": {
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "mode": 420
+    },
+    "sources/localmod/health.h": {
+      "bytes": 2559,
+      "sha256": "e9b08eb9f2d2f4eb7ae9ebfc124691ee2f81f7f4395979882728610798fa5128",
+      "mode": 420
+    },
+    "sources/localmod/helper.sh": {
+      "bytes": 287,
+      "sha256": "445b3535b4861b023c3b15253d2cb758bd5f7984277301b7fe5dcb83ef033a9e",
+      "mode": 420
+    },
+    "sources/localmod/httpd_bridge.c": {
+      "bytes": 17859,
+      "sha256": "d689713756d20aeab486352f84f806e08f1b1a3ca03951635b9e171c55bfd8a9",
+      "mode": 420
+    },
+    "sources/localmod/installer-guard.sh": {
+      "bytes": 6734,
+      "sha256": "a956d02b89a0b9a534968909cdcc040c693c770405d572d45a375a969e1e73fe",
+      "mode": 420
+    },
+    "sources/localmod/jffsinit.sh": {
+      "bytes": 169,
+      "sha256": "b65cce70761484b34fe9c9d295549a441bf080c9f03235476942cae3ac30753f",
+      "mode": 420
+    },
+    "sources/localmod/journal.h": {
+      "bytes": 14793,
+      "sha256": "10729e942f6de760bd0b9a53295ab1134bb263f209f529a0c69a04c06c2b9175",
+      "mode": 420
+    },
+    "sources/localmod/kscore.sh": {
+      "bytes": 95,
+      "sha256": "0ff2b96cf05abc1a6941e93fcd57996591768ac08bfda1e7db1f0963bc333142",
+      "mode": 420
+    },
+    "sources/localmod/launcher.c": {
+      "bytes": 1599,
+      "sha256": "bda9ab680a5ba3a6437152f779d61791b7c861ada1dec58dd88f732e842ba41e",
+      "mode": 420
+    },
+    "sources/localmod/log_limit.c": {
+      "bytes": 1219,
+      "sha256": "0d60f5643f5a534e5eb7b6436e2d65ef0a2e721dbc12df5ddcc8d0a3ae94bbcc",
+      "mode": 420
+    },
+    "sources/localmod/merlin_launcher.c": {
+      "bytes": 2263,
+      "sha256": "c9d8411ac01a4cf2d329e9c14381354600201c2491b9578016843f59e7755c18",
+      "mode": 420
+    },
+    "sources/localmod/miniupnp_compat.c": {
+      "bytes": 10776,
+      "sha256": "a770c0724405dd0ee2fc09d2d4d491621cec789363bc227c8e1d3d87a5790c1b",
+      "mode": 420
+    },
+    "sources/localmod/offline-installer.sh": {
+      "bytes": 2938,
+      "sha256": "cf2c039e147179237005080b8aff8042d1342e0707627987261a467c27a2ebed",
+      "mode": 420
+    },
+    "sources/localmod/openvpn_compat.c": {
+      "bytes": 2854,
+      "sha256": "f8ad89cb939aee516ce85a40cd81d4b3f2c7c81a0b29077c501187abb194a7a2",
+      "mode": 420
+    },
+    "sources/localmod/plugin-compat.sh": {
+      "bytes": 1616,
+      "sha256": "7addf5ead49207c9090e0acb48a0ae1c9b2871e329dc11b99ec907c3643bb836",
+      "mode": 420
+    },
+    "sources/localmod/plugin_run.c": {
+      "bytes": 2032,
+      "sha256": "5b1794ad640808d30e21cf316253f03e61a52fda947dc60d7ce82c269d007f27",
+      "mode": 420
+    },
+    "sources/localmod/plugin_txn.c": {
+      "bytes": 22414,
+      "sha256": "cb551629c45b9450b7547ccb5630455cac730e43a3351c2d4bc1db45f99986a5",
+      "mode": 420
+    },
+    "sources/localmod/rc_bridge.c": {
+      "bytes": 12313,
+      "sha256": "91d2c46b2d443f33ff5a5fbced6c9d86122e2319f7c9736082b17f3a8a290e7e",
+      "mode": 420
+    },
+    "sources/localmod/restore.c": {
+      "bytes": 7150,
+      "sha256": "0f1bd2f2be436343246fb8c0611fff8c8b73a738cad765496d86d309cf176346",
+      "mode": 420
+    },
+    "sources/localmod/runtime.c": {
+      "bytes": 6055,
+      "sha256": "68d2d790f4a65fa0f5bf155748e07cbe862f1c1f8b41195fcc5f72f79e43c10d",
+      "mode": 420
+    },
+    "sources/localmod/runtime.h": {
+      "bytes": 808,
+      "sha256": "816914a8ace37e05a51c62854693954020ccc53371cf7c6756bcb20c850b3bca",
+      "mode": 420
+    },
+    "sources/localmod/sha256.h": {
+      "bytes": 2793,
+      "sha256": "b72f0c30bea8f546d5822bb7fd1ee9c631f5cb741fdd56c514469473e0cfce2b",
+      "mode": 420
+    },
+    "sources/localmod/status.c": {
+      "bytes": 1436,
+      "sha256": "9319b7a1fbd8d435f25a23cebfd826f9d4139e3b4d0cf5f910a90fa7798a9395",
+      "mode": 420
+    },
+    "upstream/merlin/metadata.json": {
+      "bytes": 497277,
+      "sha256": "05ec49d94c7b6074acaee315095422a8600ef48aa41b0f05bc1a3bc24e9e349d",
+      "mode": 420
+    }
+  }
+}

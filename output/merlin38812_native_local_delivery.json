@@ -1,0 +1,39 @@
+{
+  "status": "LOCAL_NATIVE_HANDOFF_SAVED_NOT_DEVICE_ACCEPTED",
+  "archive": "output/merlin38812-native-P6-local-handoff.tar.gz",
+  "bytes": 99044090,
+  "sha256": "4fee4cedb5746dfdad3944119505906315213f9f053b0bc21723163de6ee2672",
+  "entries": 69,
+  "candidate": {
+    "image": "output/RT-AX86U_3004_388.12_2_localmod_native_P6_32bd61b0_NOT_FLASH_READY.w",
+    "bytes": 86769684,
+    "sha256": "fc7af429b6b9824dab8a06882e36b940ea69eb9e54617e8d89c770c6c194d3ab",
+    "rootfs_lebs": 630,
+    "leb_size": 126976,
+    "rootfs_fmt_version": 4,
+    "vendor_boot_region_unchanged": true,
+    "vendor_descriptor_unchanged": true,
+    "vendor_wfi_parameters_unchanged": true,
+    "status": "EXPERIMENTAL_NOT_DEVICE_TESTED"
+  },
+  "source_snapshot": {
+    "status": "LOCAL_DEVELOPMENT_SNAPSHOT_SAVED_NOT_RELEASED",
+    "archive": "output/merlin38812-native-P6-sources.tar.gz",
+    "bytes": 520676,
+    "sha256": "f9433a4fc4283fe1d1bf51f253334b29a683899aa5d1a902e703c6cf974c3eb4",
+    "files": 235,
+    "git_head_at_snapshot": "443f774be00a92339f31b464c13b0dbed5392e02",
+    "working_tree_snapshot": true,
+    "git_commit_created": false,
+    "github_push_owner": "user",
+    "agent_pushed_or_published": false,
+    "full_upgrade_complete": false,
+    "local_validation_complete": true,
+    "candidate_sha256": "fc7af429b6b9824dab8a06882e36b940ea69eb9e54617e8d89c770c6c194d3ab"
+  },
+  "local_gate_sha256": "9b1c8d3641b2ba26b4307506693a4fc0acf9d00a46a47114981cca78c24b4d72",
+  "git_commit_created": false,
+  "agent_pushed_or_published": false,
+  "github_push_owner": "user",
+  "flash_ready": false
+}

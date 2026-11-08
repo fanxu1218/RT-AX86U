@@ -16,6 +16,7 @@ import (
 )
 
 func httpdCacheRun(x *soak) {
+	model := nrFixtureModel()
 	nrMust(os.WriteFile("/tmp/ddnsgo-memory-runtime.log", nil, 0600))
 	started := time.Now()
 	samples := []map[string]any{}
@@ -37,7 +38,7 @@ func httpdCacheRun(x *soak) {
 			b, e := io.ReadAll(r.Body)
 			r.Body.Close()
 			nrMust(e)
-			if r.StatusCode != 200 || !bytes.Contains(b, []byte("RT-AX86U")) {
+			if r.StatusCode != 200 || !bytes.Contains(b, []byte(model)) {
 				panic(fmt.Sprintf("protected page %s %d bytes=%d", phase, r.StatusCode, len(b)))
 			}
 		}

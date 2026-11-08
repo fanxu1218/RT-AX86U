@@ -8,8 +8,9 @@ import shutil
 import stat
 import tarfile
 from sealed_vm import ROOT, encoded, inventory, sha
+from device_config import DEVICE
 
-PIN = ROOT / 'build/softcenter_sources.json'
+PIN = ROOT / DEVICE['sources']['softcenter']
 
 
 def read_payload():

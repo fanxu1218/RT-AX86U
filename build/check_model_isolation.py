@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Exercise actual private model jobs, UBIFS readback and owned failure controls."""
+from device_config import leb_size
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
@@ -63,7 +64,7 @@ def readback(volume, out):
     parent.mkdir(mode=0o700, exist_ok=True)
     job = parent / ('audit-' + secrets.token_hex(12))
     job.mkdir(mode=0o700)
-    parsed = ubifs(ubi_file(str(volume), 126976))
+    parsed = ubifs(ubi_file(str(volume), leb_size()))
     actual_meta = metadata(parsed)
     assert len(actual_meta) <= 20000
     stage = ROOT / 'build/casefs/rootfs'

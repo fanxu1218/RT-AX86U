@@ -1,57 +1,321 @@
 {
-  "status": "MIGRATION_IN_PROGRESS_PHASE1_PRIVATE_MODEL_VALIDATED",
+  "status": "LOCAL_NATIVE_P6_IMPLEMENTATION_VALIDATION_COMPLETE_NOT_DEVICE_ACCEPTED",
   "requested_target": "RT-AX86U 3004.388.12_2 complete model-supported Merlin features",
   "user_priority": "Factory UU must be retained; phased migration accepted",
-  "validated_code_commit": "9cce6bf1a695367e7a81d746c8fe3ba9ddfbe8d6",
-  "phase1": {
+  "whole_firmware_upgrade_complete": false,
+  "production_candidate": "localmod2-r9-r2",
+  "production_candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+  "release_selected": false,
+  "experimental_candidate": {
+    "image": "output/RT-AX86U_3004_388.12_2_localmod_native_P6_32bd61b0_NOT_FLASH_READY.w",
+    "bytes": 86769684,
+    "sha256": "fc7af429b6b9824dab8a06882e36b940ea69eb9e54617e8d89c770c6c194d3ab",
+    "rootfs_lebs": 630,
+    "leb_size": 126976,
+    "rootfs_fmt_version": 4,
+    "vendor_boot_region_unchanged": true,
+    "vendor_descriptor_unchanged": true,
+    "vendor_wfi_parameters_unchanged": true,
+    "status": "EXPERIMENTAL_NOT_DEVICE_TESTED"
+  },
+  "experimental_candidate_flash_ready": false,
+  "route": "Complete pinned Merlin AX86U framework plus retained native UU path and scoped software-center augmentation; production selection unchanged",
+  "local_validation": {
+    "merlin38812_uu_matrix_tests.json": {
+      "status": "LOCAL_NATIVE_UU_STARTUP_MATRIX_PASS",
+      "sha256": "6b86bc429e4359844d426b9e2c2b830ce07e6824ce65826f2947eea997d6c5c8"
+    },
+    "merlin38812_native_preview_tests.json": {
+      "status": "LOCAL_NATIVE_MERLIN_PREVIEW_COMPATIBILITY_PASS",
+      "sha256": "57af2ef06de120f5d3f7a253ff45e594727fd723495a5ca14fd17ed51c660b1e"
+    },
+    "merlin38812_native_hooks_tests.json": {
+      "status": "LOCAL_NATIVE_MERLIN_HOOK_AUGMENTATION_PASS",
+      "sha256": "d8851eeba38ecad8ffe8c6f3fc4129a5a38cbe6c0f14069da0cee2bb7302210f"
+    },
+    "merlin38812_native_candidate_tests.json": {
+      "status": "NATIVE_MERLIN_CANDIDATE_BUILT_READBACK_PASS_NOT_FLASH_READY",
+      "sha256": "8390ef8a65a6cb974975c0ae69322420593ce2549faeb2775cd0b4371830fb33"
+    },
+    "merlin38812_candidate_runtime_tests.json": {
+      "status": "LOCAL_NATIVE_MERLIN_CANDIDATE_RUNTIME_PASS",
+      "sha256": "baa9aab575738def2b7fc6cb4659dde6ccb7f64f077b30b14a3324e33626aef3"
+    },
+    "merlin38812_uu_official_contract.json": {
+      "status": "OFFICIAL_UU_MONITOR_READONLY_CONTRACT_INSPECTED",
+      "sha256": "a3fd4295c4fa59269139260bfc07f72a8943d9505a97d8d7d5e86f97df974373"
+    },
+    "merlin38812_sync_aux_tests.json": {
+      "status": "LOCAL_SYNC_CENTER_HELPER_CONTRACT_PASS",
+      "sha256": "52631a509bb2fdcb7be8198567c992210f6327da78bdd22d029486b7546dede9"
+    },
+    "merlin38812_persistence_tests.json": {
+      "status": "LOCAL_NATIVE_PERSISTENCE_SELECTED_CASES_PASS",
+      "sha256": "5caca1f248786b1e24a1eff16c98e62e5f922c7c3a53911fb6635e17ce6acd15"
+    },
+    "merlin38812_plugins_hnd_upgrade_tests.json": {
+      "status": "LOCAL_NATIVE_AUTHENTIC_PLUGINS_PASS",
+      "sha256": "76034e2db2c52de7211f981262b56e806ccab5b6a746afc246569c2801c65afe"
+    },
+    "merlin38812_plugins_hnd_fresh_tests.json": {
+      "status": "LOCAL_NATIVE_AUTHENTIC_PLUGINS_PASS",
+      "sha256": "0b15b172ca1b33106c03361378bf22a07f6eb85fd673c3eb7a0921823fbafec4"
+    },
+    "merlin38812_restore_probe_tests.json": {
+      "status": "LOCAL_NATIVE_RESTORE_NOFLUSH_CONTRACT_PASS",
+      "sha256": "d6408f082cbd4bc0ffab6c58c8db56980f8c8723c44001c05553bb3ea4748c6b"
+    },
+    "merlin38812_plugins_fancyss_tests.json": {
+      "status": "LOCAL_NATIVE_AUTHENTIC_PLUGINS_PASS",
+      "sha256": "79772c3335fe6a4715699edd128a67a8fe3da354b5f1273c9f46c1268f1bd984"
+    },
+    "merlin38812_vpn_generation_tests.json": {
+      "status": "LOCAL_NATIVE_VPN_GENERATION_PASS",
+      "sha256": "32f1b1f5027eb9329ade24aa1f10b856862422a480b94b1fbbf0fc92a16fa559"
+    },
+    "merlin38812_native_coexist_probe_tests.json": {
+      "status": "FINAL_CANDIDATE_HANDSHAKE_RECOVERY_PASS",
+      "sha256": "03de935686f1addc0ae1af6d61ca041838219903f917b2d7d683f572758553e7"
+    },
+    "merlin38812_native_coexist_smoke_tests.json": {
+      "status": "LOCAL_COEXIST_SMOKE_PASS",
+      "sha256": "71001ef102d31ca7df9a7dc2997f75a39841d60f134f0a3cc10ce89ea9d23554"
+    },
+    "merlin38812_real_tunnel_tests.json": {
+      "status": "LOCAL_NATIVE_REAL_TUNNEL_PROBE_PASS",
+      "sha256": "6a8d3c88ce1224b5f3b17ee0fcb1b565dc53a6bf84c4f9b2825b063c09778d52"
+    },
+    "merlin38812_native_coexist_60m_tests.json": {
+      "status": "LOCAL_60_MINUTE_COEXIST_PASS",
+      "sha256": "82ff9dab04c5801f8b883f480352f0bfe7fd193f5903d2f3b6d464731d8264ca"
+    },
+    "merlin38812_local_gate.json": {
+      "status": "LOCAL_NATIVE_P6_VALIDATION_GATE_PASS_NOT_DEVICE_ACCEPTED",
+      "sha256": "9b1c8d3641b2ba26b4307506693a4fc0acf9d00a46a47114981cca78c24b4d72"
+    }
+  },
+  "previous_phase1": {
     "status": "LOCAL_PRIVATE_MERLIN_VPN_MODEL_PASS",
     "checks": 9,
     "successful_native_model_queries": 22,
     "private_libraries_match_pinned_image": true,
     "software_center_factory_https_uu_owned_worker_coexistence_verified": true
   },
-  "whole_firmware_upgrade_complete": false,
-  "vpn_ui_integrated": false,
-  "vpn_service_control_integrated": false,
-  "production_candidate": "localmod2-r9-r2",
-  "production_candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
-  "original_gate_source_inputs_unchanged": 170,
-  "evidence_sha256": {
-    "build/native_runtime_client.go": "2f9515bf6d814c064c7e0957455c0cfaf12ef01483be9732e49fd783cf32acf5",
-    "build/test_online.go": "b04471e23505e03d7700884fdad4adb5d526e7fd8fe33bfe669a3a736d81fd14",
-    "build/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
-    "analysis/merlin_vpn_38812/probe.go": "8f49b53700def99835ae44589873154a798907ee70010a0791ad9771d55bb5ee",
-    "analysis/merlin_vpn_38812/check.py": "9a0b040ac122cb19b789f00c46459ff5fe241f1880145a182dfb5e68a9fd3f5c",
-    "build/sealed_vm.py": "44e83268f0e72f999648acb8f56e778735e70b7240d71bb1d90a2ec10a563788",
-    "build/run_readonly_linux.py": "eeb77fb1d07ba997388aa0feaa7e558bb4ad96b5fb73a3588643390bef06135f",
-    "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
-    "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
-    "analysis/merlin_vpn_38812/model.c": "ae90edc22038d94406961f8121ecbd81108882b3da93e76c4240b830d6ffb25e",
-    "analysis/merlin_vpn_38812/prepare.py": "e7370d8c31934a613bb69d718b460d483b42aa8c68ca56726481c7b2c12fd08a",
-    "analysis/merlin_vpn_38812/inputs.json": "184e2cbe0f9ccf9c83947063a745c495e4e53911b2401a43c276cf2d46ca239a",
-    "build/merlin_sources.json": "0637e35d0b3a404075cae91ab0f2983ec42565edaa0bf3e1c5d9a15b18892dc1",
-    "analysis/merlin_vpn_38812/vendor/openvpn_config.c": "32c522ef4ef40c327f761a30f109abbffb6c50c9439e9089265ecfb6fdd883bc",
-    "analysis/merlin_vpn_38812/vendor/openvpn_config.h": "1125abebb565c794810e0ab3c5b8679ba0d7f2f2712d275b745faad35f5309a4",
-    "analysis/merlin_vpn_38812/vendor/openvpn_control.c": "d07c485b1583b5c050966e895ab69037ae0a4fe48b3fa117c62b954e0325c282",
-    "analysis/merlin_vpn_38812/vendor/openvpn_control.h": "2e03f29e13dd07be4c3308f0c2dfe53e2251f5a149902c0c9cab88ffecd44ce0",
-    "analysis/merlin_vpn_38812/vendor/sources.json": "3d7640a6e6a9da9e38027207020f971648461ac7ffe850a2ce9952573ecacc09",
-    "analysis/merlin_vpn_38812/audit.py": "76afc6212fec7ff437075f6bdf17a221bb12715796cfbcb643da0aef0f3e4a44",
-    "output/merlin38812_vpn_phase1_tests.json": "bf3813ec9030619ce94fa0e31dc27ffe5aed4d89dd85e7bf2d9c457997cc46be",
-    "output/merlin38812_vpn_phase1.log": "cbd2a0ca9eeff3ecc36d3c2618d9e2752621c9525376044808318e9962397a90",
-    "output/merlin38812_migration_contracts.json": "70bbdd2f661669bb207c7d424734bc36d79acbf04e36cbf14d73b959d806d198",
-    "output/merlin38812_vpn_phase1_fixes.json": "03afbb46ba10d9769216db57126bfe4ef5a05f65eb2aeba50ca89d8abbba6cf9",
-    "output/388.12_2\u5206\u9636\u6bb5\u79fb\u690d\u8fdb\u5ea6.md": "67845bc1909c4fab295d1a4baabea419e465303f83212b41648524602c336def"
-  },
-  "next_phase": "Legacy profile/key/custom-directive compatibility and transactional write model, then native PID1 dispatch and VPN UI",
-  "remaining_contracts": [
-    "Native Merlin VPN page rendering and write APIs behind retained factory authentication",
-    "Profile/key/custom-directive migration with rollback",
-    "PID1 start/stop dispatch and all native VPN callbacks",
-    "VPN Director and DNS Director policy integration",
-    "Other Merlin UI/services and hardware-dependent features"
-  ],
+  "next_phase": "User-owned Git review/push; device acceptance only in a separately authorized future no-longer-no-flash phase",
+  "remaining_contracts": [],
   "physical_router_accessed": false,
   "physical_router_flashed": false,
   "github_push_owner": "user",
-  "agent_pushed_or_published": false
+  "agent_pushed_or_published": false,
+  "progress_document": "output/388.12_2\u539f\u751f\u6846\u67b6\u8fdb\u5ea6.md",
+  "actual_candidate_rc_launcher_uu_and_center_aliases_validated": true,
+  "actual_candidate_runtime_checks": {
+    "native_and_integration": 32,
+    "online_plugin_lifecycle": 7
+  },
+  "target_pid1_boot_tested": false,
+  "source_review_risks_pending_reproduction": [],
+  "fixed_native_compatibility_issues": [
+    "Blocking native hook now waits for added center helper within remaining integer-second budget; no helper after exhaustion",
+    "Recovery-abort 100 ms waits use existing native usleep; managed software-center PATH has an independently tested fractional sleep helper"
+  ],
+  "native_hook_timeout_contract_cases": 3,
+  "persistent_cross_boot_selected_scenarios": {
+    "cases": [
+      "download",
+      "checkpoint",
+      "kill-parent",
+      "kill-tree",
+      "offline",
+      "fresh",
+      "real-ddnsgo",
+      "before-commit",
+      "after-commit",
+      "committed-cleanup",
+      "no-space"
+    ],
+    "checks_including_foundation": 69,
+    "boots": 24,
+    "all_standard_scenarios_complete": true,
+    "native_vpn_profile_certificates_plugin_config_and_uu_data_preserved": true
+  },
+  "authentic_hnd_upgrade_scenarios": {
+    "plugins": [
+      "aliddns",
+      "ddnsto",
+      "ddnsgo"
+    ],
+    "checks": 22,
+    "uu_start_count": 1,
+    "native_hook_dispatch_with_real_plugins_exercised": false,
+    "notes": "Existing plugin dispatch tests retained; native hook API tested separately in candidate runtime suite",
+    "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957"
+  },
+  "fancyss_native_coexistence": {
+    "status": "P5_REAL_FANCYSS_COEXISTENCE_PASS",
+    "candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+    "log": "output/merlin38812_plugins_fancyss_shared_jq_before.log",
+    "fix_pending": false,
+    "whole_suite_passed": true,
+    "fixed_candidate_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+    "checks": 36,
+    "verified_image_sha256": "82b8c202b57ab970bf5f9cc4672a8903359ff71e318f3df1ea1d3c772b61e957",
+    "reproduction_candidate_sha256": "7b6993cec465f563fa7d586c9c5a2289dffb5b844bf265efcaa6e03f2e780e4d"
+  },
+  "authentic_hnd_fresh_scenarios": {
+    "checks": 10,
+    "uu_start_count": 1
+  },
+  "historical_P4_runtime_checks": {
+    "native_and_integration": 32,
+    "online_plugin_lifecycle": 7
+  },
+  "native_restore_noflush": {
+    "reproduction_image_sha256": "7b6993cec465f563fa7d586c9c5a2289dffb5b844bf265efcaa6e03f2e780e4d",
+    "observed_input_jump_counts": [
+      1,
+      2,
+      3
+    ],
+    "status": "LOCAL_NATIVE_RESTORE_NOFLUSH_CONTRACT_PASS",
+    "kernel_abi_fixture_declared": true,
+    "fixed_input_jump_counts": [
+      1,
+      1,
+      1
+    ],
+    "seeded_duplicate_links_cleaned": true
+  },
+  "P5_full_persistence_matrix_started": true,
+  "native_vpn_generation": {
+    "configurations": 7,
+    "service_notifications": 14,
+    "checks": 8,
+    "actual_tunnel_started": false,
+    "target_pid1_boot_tested": false
+  },
+  "native_tunnel_probe": {
+    "status": "LOCAL_NATIVE_REAL_TUNNEL_PROBE_PASS",
+    "actual_tun_data": true,
+    "mutual_tls_and_pam": true,
+    "linux_kernel": "6.12 in owned system emulation",
+    "target_4_1_kernel_tested": false
+  },
+  "inherited_ui_release_url_issue": {
+    "status": "CONFIRMED_STATIC_INVALID_RELEASE_TAG",
+    "p5_contains_spaces": true,
+    "fixed": true,
+    "release_tag": "localmod-native-38812-p6-experimental",
+    "published": false
+  },
+  "P5_P6_production_equivalence": "output/merlin38812_P5_P6_equivalence.json",
+  "development_candidate": "localmod-native-P6",
+  "legacy_production_candidate": "localmod2-r9-r2",
+  "native_P6_coexistence_preflight": {
+    "handshake_cases": 14,
+    "center_restart_cycles": 6,
+    "queries": 110,
+    "candidate_sha256": "fc7af429b6b9824dab8a06882e36b940ea69eb9e54617e8d89c770c6c194d3ab"
+  },
+  "native_P6_coexistence_smoke": {
+    "duration_seconds": 319.198055952,
+    "queries": 84,
+    "events": 21,
+    "event_kinds": [
+      "abort",
+      "partial",
+      "backend",
+      "center",
+      "ddns",
+      "uu",
+      "tls",
+      "signals",
+      "dns",
+      "ssh",
+      "upnp",
+      "vpn-client",
+      "fancy-client",
+      "nat",
+      "proxy-upstream",
+      "vpn-upstream"
+    ],
+    "counts": {
+      "abort": 2,
+      "backend": 2,
+      "center": 2,
+      "ddns": 2,
+      "dns": 1,
+      "fancy-client": 1,
+      "nat": 1,
+      "partial": 2,
+      "proxy-upstream": 1,
+      "signals": 1,
+      "ssh": 1,
+      "status": 48,
+      "tls": 1,
+      "upnp": 1,
+      "uu": 1,
+      "version": 36,
+      "vpn-client": 1,
+      "vpn-upstream": 1
+    },
+    "unplanned_failures": 0,
+    "data_preserved": true
+  },
+  "implementation_complete_for_local_scope": true,
+  "local_validation_complete": true,
+  "physical_deployment_complete": false,
+  "excluded_device_acceptance": [
+    "Target Broadcom 4.1 kernel/PID1 boot and firmware updater acceptance",
+    "Physical Wi-Fi/NAT/flash reliability and UU real account/game acceleration",
+    "Every external VPN provider, plugin and transparent/global proxy combination"
+  ],
+  "native_P6_coexistence_60m": {
+    "duration_seconds": 3603.118772384,
+    "queries": 1029,
+    "events": 35,
+    "event_kinds": [
+      "abort",
+      "partial",
+      "backend",
+      "center",
+      "ddns",
+      "uu",
+      "tls",
+      "signals",
+      "dns",
+      "ssh",
+      "upnp",
+      "vpn-client",
+      "fancy-client",
+      "nat",
+      "proxy-upstream",
+      "vpn-upstream"
+    ],
+    "counts": {
+      "abort": 3,
+      "backend": 3,
+      "center": 2,
+      "ddns": 2,
+      "dns": 2,
+      "fancy-client": 2,
+      "nat": 2,
+      "partial": 3,
+      "proxy-upstream": 2,
+      "signals": 2,
+      "ssh": 2,
+      "status": 523,
+      "tls": 2,
+      "upnp": 2,
+      "uu": 2,
+      "version": 506,
+      "vpn-client": 2,
+      "vpn-upstream": 2
+    },
+    "data_preserved": true,
+    "unplanned_failures": 0,
+    "samples": 130,
+    "host_elapsed_seconds": 3718.3202568330016
+  },
+  "local_gate": "output/merlin38812_local_gate.json"
 }

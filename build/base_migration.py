@@ -14,8 +14,9 @@ from ubireader.ubi_io import ubi_file
 from ubireader.ubifs import ubifs, walk
 from ubireader.ubifs.output import extract_files
 from sealed_vm import ROOT, inventory, encoded, sha
+from device_config import DEVICE, DEVICE_INPUTS, leb_size, model_from_image
 
-PINS = ROOT / 'build/base_contracts.json'
+PINS = ROOT / DEVICE['base']['contracts']
 CRITICAL = ['sbin/rc', 'usr/sbin/httpd', 'usr/lib/libssl.so.1.1', 'usr/lib/libcrypto.so.1.1', 'usr/lib/libshared.so',
             'lib/ld-linux.so.3', 'lib/libc.so.6', 'usr/sbin/openssl', 'usr/sbin/gencert.sh',
             'usr/sbin/wget', 'usr/sbin/curl', 'usr/sbin/xtables-multi', 'bin/busybox', 'bin/nvram',
@@ -76,7 +77,8 @@ def contracts(folder, entries):
         try:
             obj = elf(folder / name)
             objects[name] = obj
-            if (obj['machine'], obj['bits'], obj['little_endian']) != ('EM_ARM', 32, True):
+            abi=DEVICE['abi']
+            if (obj['machine'], obj['bits'], obj['little_endian']) != (abi['elf_machine'], abi['bits'], abi['little_endian']):
                 errors.append(name + ': ARM32 little-endian ABI required')
             missing = symbols - set(obj[side])
             if missing:
@@ -103,11 +105,12 @@ def main():
     ap.add_argument('--output', type=Path, default=ROOT / 'output/base_migration_tests.json')
     args = ap.parse_args()
     os.chdir(ROOT)
-    source_names = ['build/base_migration.py', 'build/base_contracts.json', 'build/inspect_upstream.py', 'build/sealed_vm.py']
+    source_names = ['build/base_migration.py', DEVICE['base']['contracts'], 'build/inspect_upstream.py', 'build/sealed_vm.py'] + DEVICE_INPUTS
     source_inputs = {p: sha(ROOT / p) for p in source_names}
     protected = ['build/release_config.json', 'build/dependencies.lock.json', 'upstream/official/metadata.json']
     before = {p: sha(ROOT / p) for p in protected}
     pins = json.loads(PINS.read_text())
+    assert pins['model']==DEVICE['model'] and pins['image']==DEVICE['base']['vendor_image'], 'Device/base contracts mismatch'
     lock = json.loads((ROOT / 'build/dependencies.lock.json').read_text())
     assert pins['image_sha256'] == lock['files'][pins['image']]['sha256']
     assert sha(ROOT / pins['image']) == pins['image_sha256']
@@ -117,11 +120,12 @@ def main():
     assert hashlib.sha256(encoded(baseline)).hexdigest() == pins['tree_sha256'], 'Pinned official extraction changed'
     assert {p: baseline[p]['sha256'] for p in CRITICAL} == pins['critical_sha256']
     path = (args.image or ROOT / pins['image']).resolve()
-    assert 4 * 1024 * 1024 <= path.stat().st_size <= 128 * 1024 * 1024
+    geometry=DEVICE['image']
+    assert geometry['min_image_bytes'] <= path.stat().st_size <= geometry['max_image_bytes']
     raw = path.read_bytes()
     image_sha256 = hashlib.sha256(raw).hexdigest()
-    model_ok = raw[-84:-20][8:24].split(b'\0', 1)[0].decode('ascii') == pins['model']
-    assert model_ok, 'Model footer mismatch: this tool is scoped to ordinary RT-AX86U'
+    model_ok = model_from_image(raw) == DEVICE['model']
+    assert model_ok, 'Model footer mismatch: expected ' + DEVICE['model']
     parent = ROOT / 'build/casefs/migration-private'
     assert not parent.is_symlink() and (ROOT / 'build/casefs').is_mount()
     parent.mkdir(mode=0o700, exist_ok=True)
@@ -134,9 +138,9 @@ def main():
         layout = json.loads((job / 'layout.json').read_text())
         assert layout['sha256'] == image_sha256, 'Selected image changed before carving'
         assert layout['whole_crc_valid'] and not any(k.endswith('_bad') and v for k, v in layout['checks'].items())
-        volume = job / 'rootfs_ubifs'
-        assert volume.is_file() and struct.unpack_from('<I', volume.read_bytes(), 80)[0] == 4
-        parsed = ubifs(ubi_file(str(volume), 126976))
+        volume = job / DEVICE['image']['rootfs_volume_name']
+        assert volume.is_file() and struct.unpack_from('<I', volume.read_bytes(), 80)[0] == geometry['ubifs_format']
+        parsed = ubifs(ubi_file(str(volume), leb_size()))
         meta = metadata(parsed)
         assert len(meta) <= 20000
         for name in meta:
@@ -200,7 +204,7 @@ def main():
                       candidate_image=str(path), candidate_sha256=image_sha256, candidate_is_pinned_base=image_sha256 == pins['image_sha256'],
                       checks=checks, errors=errors, changes=changes, changed_paths=len(changes),
                       critical_changes=[p for p in CRITICAL if baseline.get(p) != target.get(p)],
-                      boot_region_changed=raw[2*131072:0x400000] != (ROOT / pins['image']).read_bytes()[2*131072:0x400000],
+                      boot_region_changed=raw[2*geometry['peb_size']:geometry['rootfs_offset']] != (ROOT / pins['image']).read_bytes()[2*geometry['peb_size']:geometry['rootfs_offset']],
                       kernel_module_changes=[x['path'] for x in changes if x['path'].startswith('lib/modules/')],
                       elf_contracts=objects, source_sha256=source_inputs,
                       rebuild_required=image_sha256 != pins['image_sha256'], automatic_migration_or_flash=False,

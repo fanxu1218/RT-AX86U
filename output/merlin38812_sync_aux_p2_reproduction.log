@@ -1,0 +1,8 @@
+LINUX_BUILDER_READY
+SYNC_NATIVE_BOUNDARY map[elapsed_ms:112 helper_finished:false]
+SYNC_AUX_OBSERVATION timeout=2 elapsed_ms=1600 finished_at_return=false
+SYNC_NATIVE_BOUNDARY map[elapsed_ms:10 helper_finished:false]
+SYNC_AUX_OBSERVATION timeout=0 elapsed_ms=1352 finished_at_return=false
+SYNC_AUX_RESULT {"cases":[{"contract_matches":false,"elapsed_ms":1600,"helper_eventually_finished":true,"helper_finished_at_return":false,"native_return":{"elapsed_ms":112,"helper_finished":false},"timeout_seconds":"2"},{"contract_matches":true,"elapsed_ms":1352,"helper_eventually_finished":true,"helper_finished_at_return":false,"native_return":{"elapsed_ms":10,"helper_finished":false},"timeout_seconds":"0"}],"checks":["native_blocking_and_async_observations_recorded"],"full_upgrade_complete":false,"online":{"checks":[]}}
+SOAK_REAPER orphans_reaped=13
+LINUX_READONLY_JOB_STATUS=0

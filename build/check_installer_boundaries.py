@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build source-overlay checks; never overwrite the published r7 candidate."""
+from device_config import render_source, compiler_flags
 import gzip
 import hashlib
 import io
@@ -74,7 +75,7 @@ def fixtures():
 def overlay():
     folder=ROOT/'build/hardening-overlay'
     if folder.exists():shutil.rmtree(folder)
-    flags=['sources/zig-aarch64-macos-0.15.2/zig','cc','-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53','-O2','-s']
+    flags=['sources/zig-aarch64-macos-0.15.2/zig','cc',*compiler_flags(),'-O2','-s']
     for name,src in [('archive-guard','archive_guard.c'),('plugin-run','plugin_run.c'),('log-limit','log_limit.c')]:
         subprocess.run(flags+['-o','build/'+name,'sources/localmod/'+src],check=True)
     files={
@@ -88,6 +89,7 @@ def overlay():
     }
     for dst,src in files.items():
         target=folder/dst;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,target);target.chmod(0o755)
+        if src==ROOT/'sources/localmod/installer-guard.sh':target.write_text(render_source('sources/localmod/installer-guard.sh'))
     target=folder/'rom/etc/koolshare/scripts/ks_app_install.sh'
     donor=ROOT/'build/casefs/koolcenter_rootfs/rom/etc/koolshare/scripts/ks_app_install.sh'
     target.write_text(patch_online_installer(donor.read_text()));target.chmod(0o755)

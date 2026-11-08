@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Input-phase signal/timeout control on overlay or exact readback candidate."""
+from device_config import compiler_flags
 import argparse,json,shutil,subprocess,os,hashlib,time
 from pathlib import Path
 from check_interrupt import compile_fixtures
@@ -12,7 +13,7 @@ def main():
  if a.candidate:
   assert v['image']==CONFIG['image']
   assert Path('build/httpd_bridge.so').read_bytes()==Path('build/casefs/roundtrip/usr/lib/localmod/httpd_bridge.so').read_bytes()
- flags=['sources/zig-aarch64-macos-0.15.2/zig','cc','-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53','-O2','-s','-shared','-fPIC']
+ flags=['sources/zig-aarch64-macos-0.15.2/zig','cc',*compiler_flags(),'-O2','-s','-shared','-fPIC']
  inputs={p:sha(Path(p)) for p in ['build/native_tls_probe_fixture.c','build/interrupt_scenarios.go','build/check_tls_input.py','sources/localmod/httpd_bridge.c','build/native_runtime_client.go']}
  subprocess.run(flags+['-o','build/httpd_tls_cache_fixture.so','build/native_tls_probe_fixture.c','-ldl'],check=True);compile_fixtures()
  if not a.candidate:subprocess.run(flags+['-o','build/httpd_bridge_patched.so','sources/localmod/httpd_bridge.c','-ldl'],check=True)

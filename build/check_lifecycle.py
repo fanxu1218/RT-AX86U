@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Exercise native certificate persistence and center/UU coexistence, offline."""
+from device_config import compiler_flags, fixture_model_flag
 import argparse
 import hashlib
 import json
@@ -50,11 +51,11 @@ def job(name, destination):
 success = False
 try:
     flags = [str(root / 'sources/zig-aarch64-macos-0.15.2/zig'), 'cc',
-             '-target', 'arm-linux-gnueabi.2.26', '-mcpu=cortex_a53', '-O2']
+             *compiler_flags(), '-O2']
     run(str(root / 'analysis/.venv/bin/python'), 'build/prepare_native_fixtures.py')
-    run(*flags, '-shared', '-fPIC', '-o', 'build/native_hw_fixture.so', 'build/native_hw_fixture.c')
+    run(*flags, fixture_model_flag(), '-shared', '-fPIC', '-o', 'build/native_hw_fixture.so', 'build/native_hw_fixture.c')
     run(*flags, '-shared', '-fPIC', '-o', 'build/native_uu_transport.so', 'build/native_uu_transport.c', '-ldl')
-    run(*flags, '-DNATIVE_NVRAM_CLI', '-o', 'build/native-nvram', 'build/native_hw_fixture.c')
+    run(*flags, fixture_model_flag(), '-DNATIVE_NVRAM_CLI', '-o', 'build/native-nvram', 'build/native_hw_fixture.c')
     programs = [('cert-lifecycle', ['build/test_cert_lifecycle.go', 'build/native_runtime_client.go']),
                 ('coexist', ['build/test_coexist.go', 'build/native_runtime_client.go', 'build/coexist_helpers.go'])]
     if not args.skip_native_regression:

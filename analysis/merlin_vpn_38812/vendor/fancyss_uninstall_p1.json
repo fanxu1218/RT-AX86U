@@ -1,0 +1,21 @@
+{
+  "status": "PINNED_PRIOR_ADAPTATION_DATA",
+  "packages": [
+    {
+      "version": "3.5.28",
+      "old_adapted_path": "sources/realplugins/fancyss_hnd_v8_full_3.5.28_localmod1.tar.gz",
+      "old_archive_sha256": "31cf0b0eb97bcbc51acc04f671ac9d51b488327b3b9e540b21d846e2c18912ed",
+      "upstream_uninstall_sha256": "b1be1d5bb1a3e6faa55ca266b88000d321c1ce121fd07f0ecad23d8d6c153df9",
+      "old_uninstall_sha256": "95fb9a282d10bc33c8be50e93ffc0c1cd39d36f641057b6b50a74b0bad67d00f",
+      "old_adapted_md5": "c0960594007e2115385e5f5bcc3e0f17"
+    },
+    {
+      "version": "3.5.29",
+      "old_adapted_path": "sources/realplugins/fancyss_hnd_v8_full_3.5.29_localmod1.tar.gz",
+      "old_archive_sha256": "154d5f1f38f84c6719fa698ca3979f4178c89c677357f0d25274363238d72cf4",
+      "upstream_uninstall_sha256": "b1be1d5bb1a3e6faa55ca266b88000d321c1ce121fd07f0ecad23d8d6c153df9",
+      "old_uninstall_sha256": "95fb9a282d10bc33c8be50e93ffc0c1cd39d36f641057b6b50a74b0bad67d00f",
+      "old_adapted_md5": "fe8df34ef98843dd202fd149e477f78d"
+    }
+  ]
+}

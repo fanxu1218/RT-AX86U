@@ -1,0 +1,245 @@
+[
+  {
+    "source": "build/casefs/merlin-native-preview-25e44f70a5f0296b",
+    "archive": "build/uu-preview-archive-merlin-native-preview-25e44f70a5f0296b.tar.gz",
+    "sha256": "c138df3cfc53ef52520964dc52e7eb55665dc77a7af36526b1df24d3263df27b",
+    "entries": 5945,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/merlin-native-preview-4a941830b6214e63",
+    "archive": "build/uu-preview-archive-merlin-native-preview-4a941830b6214e63.tar.gz",
+    "sha256": "3c9e4637b61fe95a7aa7983fa5ab83d501f6a9f46ecbc75dce7eea8e9f7751af",
+    "entries": 7229,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-adfcaedc309707467be7d3f1",
+    "archive": "build/uu-preview-archive-job-adfcaedc309707467be7d3f1.tar.gz",
+    "sha256": "680dacc635f886d4963c3e83372586ab1eca784311f277036752f5c3552d8f05",
+    "entries": 3693,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-14d1cdee8bf09ce677360034",
+    "archive": "build/uu-preview-archive-job-14d1cdee8bf09ce677360034.tar.gz",
+    "sha256": "d2fd5a6a371ad3162b16c9ccbe22cb557bcfce03c0058a08ac66b7f9e3121295",
+    "entries": 3694,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-60fc4601750ae5eb37c5a1e1",
+    "archive": "build/uu-preview-archive-job-60fc4601750ae5eb37c5a1e1.tar.gz",
+    "sha256": "51e05a2b8785b0c9512fb0e039bb5ffd6003eaf6f1a092ae914497396e96942c",
+    "entries": 3695,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/merlin-native-preview-d83fdca7b9de6a61",
+    "archive": "build/uu-preview-archive-merlin-native-preview-d83fdca7b9de6a61.tar.gz",
+    "sha256": "15ef2fbb5ba52252f5019e31a7c2012144c02bd4342b184e5406831614d247b8",
+    "entries": 7229,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-2320cc13b3f303297a7d572a",
+    "receipt": "output/merlin38812_native_preview_ua_before.log.vm.json",
+    "archive": "build/uu-preview-archive-job-2320cc13b3f303297a7d572a.tar.gz",
+    "sha256": "d99f002f282619e9f2a87c1bdd94b89a766640f68043502c145922ac67625f65",
+    "entries": 7251,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-5d2503187ea1c48757690652",
+    "receipt": "output/merlin38812_native_preview_equal_version_before.log.vm.json",
+    "archive": "build/uu-preview-archive-job-5d2503187ea1c48757690652.tar.gz",
+    "sha256": "e944a4b0a76ac5e0accf6b2494501322c0b4a78959f310bba4b54d4ef7d2be92",
+    "entries": 7251,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-28fd203df6fa8c1b48b6b9ff",
+    "receipt": "output/merlin38812_native_hooks_loader_before.log.vm.json",
+    "archive": "build/uu-preview-archive-job-28fd203df6fa8c1b48b6b9ff.tar.gz",
+    "sha256": "1d75a5d30ca9643a115c97913aced2d7524a9908e44fab8ebae9e19c136b483b",
+    "entries": 7257,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/merlin-native-candidate-bec157ac5f25085b/readback-rootfs",
+    "archive": "build/native-candidate-readback-merlin-native-candidate-bec157ac5f25085b.tar.gz",
+    "sha256": "a00101e8caa2c86f5e819a443c6c73f9dd6dd1628f05991ef1589b0936d58fb2",
+    "entries": 3551,
+    "verified": true,
+    "purpose": "Generated candidate readback; original image and verified stage retained"
+  },
+  {
+    "source": "build/casefs/sealed-private/job-1f6dc082306a2d8cbb6cd21f",
+    "receipt": "output/merlin38812_candidate_runtime_path_before.log.vm.json",
+    "archive": "build/uu-preview-archive-job-1f6dc082306a2d8cbb6cd21f.tar.gz",
+    "sha256": "a6d93af6ae30fb6d970d5fbb12d20892198a2103182668e08e071fc83542d4bb",
+    "entries": 7261,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-f1da42fd6961db29e68b7bf7",
+    "receipt": "output/merlin38812_candidate_runtime_cli_before.log.vm.json",
+    "archive": "build/uu-preview-archive-job-f1da42fd6961db29e68b7bf7.tar.gz",
+    "sha256": "a0e7f03ffa9e324f2334e0f5103d456ad08c41b87ef479e698572c8d6daa3cb6",
+    "entries": 7261,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-2da5fd338870f608bd262b50",
+    "receipt": "output/merlin38812_candidate_runtime_argv_before.log.vm.json",
+    "archive": "build/uu-preview-archive-job-2da5fd338870f608bd262b50.tar.gz",
+    "sha256": "0c2f54e22fefa37966711ca3ef919d0880ec047b507c1e9f1eb47d602c8292b6",
+    "entries": 7261,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-bbdd5c5a237641014043ba13",
+    "receipt": "output/merlin38812_sync_aux_harness_before.log.vm.json",
+    "archive": "build/uu-preview-archive-job-bbdd5c5a237641014043ba13.tar.gz",
+    "sha256": "5ecabc91acedaca885f49f4ac4318c119125472740c87d6256946a937ebaca49",
+    "entries": 7260,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-df4963b02be79ae4d8b93b3c",
+    "receipt": "output/merlin38812_sync_aux_observer_before.log.vm.json",
+    "archive": "build/uu-preview-archive-job-df4963b02be79ae4d8b93b3c.tar.gz",
+    "sha256": "dbaf449a8df6155bd4aff6d399674acbbcdaeb833483d9c9a1e418b77bce27f3",
+    "entries": 7260,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-106f9fb9e382a99adba4bb78",
+    "receipt": "output/merlin38812_sync_aux_marker_before.log.vm.json",
+    "archive": "build/uu-preview-archive-job-106f9fb9e382a99adba4bb78.tar.gz",
+    "sha256": "3e381249e2c05b5f14a818fd11788069d653c3a776f6d4f84bd6ed440541f201",
+    "entries": 7260,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/merlin-native-candidate-bec157ac5f25085b/readback-volumes",
+    "archive": "build/native-candidate-volumes-merlin-native-candidate-bec157ac5f25085b.tar.gz",
+    "sha256": "17550ad65ff3cc0373834285fdde2d6cf1474404bfb81c63714fbc08b644c954",
+    "entries": 10,
+    "verified": true,
+    "purpose": "Generated P2 carved volumes; original image retained"
+  },
+  {
+    "source": "build/casefs/merlin-native-candidate-5a46ae623ca74f90/readback-rootfs",
+    "archive": "build/verified-generated-merlin-native-candidate-5a46ae623ca74f90-readback-rootfs.tar.gz",
+    "sha256": "ea08de6bada2696f1b652ecb7290f399b56493cae6d6c8f64dc3c6cc765f5229",
+    "entries": 3553,
+    "verified": true,
+    "purpose": "Generated readback/donor extraction; verified images, active stage and metadata retained"
+  },
+  {
+    "source": "build/casefs/merlin-native-candidate-5a46ae623ca74f90/readback-volumes",
+    "archive": "build/verified-generated-merlin-native-candidate-5a46ae623ca74f90-readback-volumes.tar.gz",
+    "sha256": "3e38624c5a31f389c53aff45132c4d49265789aac92e1fb85d257b179f525977",
+    "entries": 10,
+    "verified": true,
+    "purpose": "Generated readback/donor extraction; verified images, active stage and metadata retained"
+  },
+  {
+    "source": "build/casefs/merlin-native-preview-f25123e3d41a03c1/donor-rootfs",
+    "archive": "build/verified-generated-merlin-native-preview-f25123e3d41a03c1-donor-rootfs.tar.gz",
+    "sha256": "773e539f66e84ce93ff9bbb0158c9beb4f777a0c5020743b4c09afe10540ec03",
+    "entries": 3665,
+    "verified": true,
+    "purpose": "Generated readback/donor extraction; verified images, active stage and metadata retained"
+  },
+  {
+    "source": "build/casefs/merlin-native-preview-f25123e3d41a03c1/donor-volumes",
+    "archive": "build/verified-generated-merlin-native-preview-f25123e3d41a03c1-donor-volumes.tar.gz",
+    "sha256": "671a7012812ccb46e4aef7395b1c7d1d00314d01401c3808b467e55ea4e33972",
+    "entries": 10,
+    "verified": true,
+    "purpose": "Generated readback/donor extraction; verified images, active stage and metadata retained"
+  },
+  {
+    "source": "build/casefs/sealed-private/job-32fe306d6f06cdb7300eb708",
+    "receipt": "output/merlin38812_P3_candidate_runtime.log.vm.json",
+    "archive": "build/uu-preview-archive-job-32fe306d6f06cdb7300eb708.tar.gz",
+    "sha256": "d3d165c4d3974e6c1be273c50ef4a2ae64d41bdd0e94954b1b0d123e13c556d0",
+    "entries": 7263,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/merlin-native-candidate-1ab34fb6e88275bc/readback-rootfs",
+    "archive": "build/verified-generated-merlin-native-candidate-1ab34fb6e88275bc-readback-rootfs.tar.gz",
+    "sha256": "70b0549c4b12df4fad13969bb549e2d63288e0fd334416965b26f6994086e2ef",
+    "entries": 3553,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/merlin-native-candidate-1ab34fb6e88275bc/readback-volumes",
+    "archive": "build/verified-generated-merlin-native-candidate-1ab34fb6e88275bc-readback-volumes.tar.gz",
+    "sha256": "c6920e3d05aaaa920f4822428865cf92db8e7c2587e88224d3700f2a2846d978",
+    "entries": 10,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/merlin-native-candidate-5a46ae623ca74f90/rootfs",
+    "archive": "build/verified-generated-merlin-native-candidate-5a46ae623ca74f90-rootfs.tar.gz",
+    "sha256": "e2e1eb2cc45f30aab086f5aae75c0a00477290c4b2a9e6c610c095b88bbe7e83",
+    "entries": 3553,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-c6586821a9163a3af6eef7ca",
+    "receipt": "output/merlin38812_P4_shell_command_before.log.vm.json",
+    "archive": "build/uu-preview-archive-job-c6586821a9163a3af6eef7ca.tar.gz",
+    "sha256": "09b4555e647469cf3baa7b365251f9fcf96ae794aab65bdef871255a82c388ca",
+    "entries": 7263,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-2927e1edafd4433c62401288",
+    "receipt": "output/merlin38812_plugins_fancyss_native_jq_before.log.vm.json",
+    "archive": "build/uu-preview-archive-job-2927e1edafd4433c62401288.tar.gz",
+    "sha256": "9ba3d0206e1593542d3c0c2bf0a6d1829fa52eb8c696f49607cfe4c6f07d2da2",
+    "entries": 7445,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/sealed-private/job-b48b35e5c9de1497cfeba138",
+    "receipt": "output/merlin38812_plugins_fancyss_shared_jq_before.log.vm.json",
+    "archive": "build/uu-preview-archive-job-b48b35e5c9de1497cfeba138.tar.gz",
+    "sha256": "0b1c4bd9dcfa3864732ec29e0cf05054e67c518cc2b06a23ac1f41e5ce09f823",
+    "entries": 7445,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/merlin-native-candidate-4dfd60b362b1780e/readback-rootfs",
+    "archive": "build/verified-generated-merlin-native-candidate-4dfd60b362b1780e-readback-rootfs.tar.gz",
+    "sha256": "8e374b956766dd88a91046947f4d3c51ff93ddea6c8d3560a5d8f4467c29cfc5",
+    "entries": 3556,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/merlin-native-candidate-4dfd60b362b1780e/readback-volumes",
+    "archive": "build/verified-generated-merlin-native-candidate-4dfd60b362b1780e-readback-volumes.tar.gz",
+    "sha256": "a2f0c5c1936eda6a5833d790d4595230ee7a3bac9c9bdce6372629f95f025cf5",
+    "entries": 10,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/merlin-native-candidate-b978d06026d9e8e6/readback-rootfs",
+    "archive": "build/verified-generated-merlin-native-candidate-b978d06026d9e8e6-readback-rootfs.tar.gz",
+    "sha256": "25bb77c50b072a5ec8da9f7bc506093fe76f8231361cca00a8c60c848a08b4f7",
+    "entries": 3556,
+    "verified": true
+  },
+  {
+    "source": "build/casefs/merlin-native-candidate-b978d06026d9e8e6/readback-volumes",
+    "archive": "build/verified-generated-merlin-native-candidate-b978d06026d9e8e6-readback-volumes.tar.gz",
+    "sha256": "3d1fc0d7a14bc54d38be2ff933ad7b7d9e33b68f94d3ddd1ed285d68d81b1adf",
+    "entries": 10,
+    "verified": true
+  }
+]

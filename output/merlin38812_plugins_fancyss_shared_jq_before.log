@@ -1,0 +1,167 @@
+LINUX_BUILDER_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108132625, 2026/11/8 ~ 2046/11/9
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS unadapted_upstream_package_denied_uu_and_router_logs_retained
+PASS native_authenticated_installation_entry_has_pinned_version_and_package_metadata
+PASS hash_pinned_compat_refuses_temp_collision_is_idempotent_and_preserves_unknown_scripts
+FANCYSS_INSTALL_LOG 3.5.28
+【20261108 21:26:49】: 机型：RT-AX86U koolcenter梅林改版固件 符合安装要求，开始安装插件！
+【20261108 21:26:49】: 内核：4.1.52，架构：aarch64，安装fancyss_hnd_v8_full！
+【20261108 21:26:49】: 安装版本：fancyss_hnd_v8_full_3.5.28
+【20261108 21:26:50】: 清理旧文件
+【20261108 21:26:51】: localmod: 保留 UU 安装包和原厂日志，不清理其它服务数据。
+【20261108 21:26:51】: 当前未安装 websocketd，将安装并拉起 websocketd。
+【20261108 21:26:53】: 检测/data分区剩余空间...
+【20261108 21:26:53】: /data分区剩余空间为：KB
+【20261108 21:26:54】: 检测jffs分区剩余空间...
+【20261108 21:26:58】: 当前jffs分区(tmpfs)剩余125644KB
+【20261108 21:26:58】: 插件安装预计需要约21128KB（候选包大小+动态余量2048KB）
+【20261108 21:26:58】: 空间满足，继续安装！
+【20261108 21:26:58】: 开始复制文件！
+【20261108 21:26:58】: 复制相关二进制文件！此步时间可能较长！
+【20261108 21:27:00】: 准备切换 websocketd，先停止旧 websocketd 进程...
+【20261108 21:27:00】: 复制相关的脚本文件！
+【20261108 21:27:00】: 复制相关的网页文件！
+【20261108 21:27:02】: 为新安装文件赋予执行权限...
+【20261108 21:27:02】: 创建一些二进制文件的软链接！
+【20261108 21:27:03】: 节点数据升级将优先使用 node-tool：/koolshare/bin/node-tool
+【20261108 21:27:03】: node-tool 版本：0.1.13
+【20261108 21:27:05】: 开始校正 schema2 密码字段（schema1 -> schema2 升级），共 0 个节点...
+【20261108 21:27:05】: schema2 密码字段校正完成：未发现需要修正的节点。
+【20261108 21:27:06】: 检查旧版订阅节点来源归属...
+【20261108 21:27:06】: 刷新节点运行缓存...
+【20261108 21:27:06】: 设置插件安装参数...
+【20261108 21:27:06】: 科学上网 full插件安装安装成功！
+【20261108 21:27:06】: 更新完毕，请等待网页自动刷新！
+【2026年11月08日 21:27:07】: ============================= end =================================
+XU6J03M6
+
+PASS adapted_3.5.28_installed_disabled_pinned_binaries_native_jq_auth_page_no_803_and_uu
+PASS sc1960_managed_1_9_50_to_1_9_60_preserves_real_fancyss_schema2_config_peers_and_uu
+PASS sc1960_original_https_renders_complete_large_inline_frontend_with_same_origin_status_entry
+PASS sc1960_all_five_pinned_frontend_assets_served_byte_exact_through_original_https
+PASS sc1960_new_frontend_metadata_api_reports_1_9_60
+PASS sc1960_actual_v2_frontend_install_payload_runs_native_backend_with_fancyss_and_uu
+PASS sc1960_actual_v2_frontend_update_without_source_field_updates_ordinary_plugin_preserving_config_fancyss_uu
+PASS sc1960_same_version_skip_is_explicit_and_does_not_block_real_newer_updates
+PASS sc1960_actual_v2_frontend_uninstall_removes_only_owned_plugin_preserving_real_fancyss_uu
+PASS sc1960_center_restart_after_plugin_lifecycle_keeps_1_9_60_fancyss_and_uu
+SOFTCENTER_RESULT {"baseline_image_sha256":"02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50","checks":{"actual_v2_frontend_install_payload_runs_native_backend_with_fancyss_and_uu":true,"actual_v2_frontend_uninstall_removes_only_owned_plugin_preserving_real_fancyss_uu":true,"actual_v2_frontend_update_without_source_field_updates_ordinary_plugin_preserving_config_fancyss_uu":true,"all_five_pinned_frontend_assets_served_byte_exact_through_original_https":true,"center_restart_after_plugin_lifecycle_keeps_1_9_60_fancyss_and_uu":true,"managed_1_9_50_to_1_9_60_preserves_real_fancyss_schema2_config_peers_and_uu":true,"new_frontend_metadata_api_reports_1_9_60":true,"original_https_renders_complete_large_inline_frontend_with_same_origin_status_entry":true,"same_version_skip_is_explicit_and_does_not_block_real_newer_updates":true},"configs_path":"fancyss","fancyss_config_sha256":"5cb95e5511792114529f14d8cb65ff80782abe68606c3d3b1043f8d7cfedf45f","frontend_assets":5,"native_page_bytes":527363,"uu_api_requests":1,"uu_downloads":1,"version":"1.9.60"}
+FANCYSS_INSTALL_LOG 3.5.29
+【20261108 21:28:11】: 机型：RT-AX86U koolcenter梅林改版固件 符合安装要求，开始安装插件！
+【20261108 21:28:12】: 内核：4.1.52，架构：aarch64，安装fancyss_hnd_v8_full！
+【20261108 21:28:12】: 安装版本：fancyss_hnd_v8_full_3.5.29
+【20261108 21:28:14】: 检测到当前节点为空，调整默认节点为节点列表内的第一个节点!
+【20261108 21:28:15】: 清理旧文件
+【20261108 21:28:16】: localmod: 保留 UU 安装包和原厂日志，不清理其它服务数据。
+【20261108 21:28:17】: websocketd 未变化，跳过二进制替换和进程重启。
+【20261108 21:28:17】: 检测/data分区剩余空间...
+【20261108 21:28:17】: /data分区剩余空间为：KB
+【20261108 21:28:18】: 检测jffs分区剩余空间...
+【20261108 21:28:23】: 当前jffs分区(tmpfs)剩余97712KB
+【20261108 21:28:23】: 插件安装预计需要约21096KB（候选包大小+动态余量2048KB）
+【20261108 21:28:23】: 空间满足，继续安装！
+【20261108 21:28:23】: 开始复制文件！
+【20261108 21:28:23】: 复制相关二进制文件！此步时间可能较长！
+【20261108 21:28:23】: 复制相关的脚本文件！
+【20261108 21:28:23】: 复制相关的网页文件！
+【20261108 21:28:25】: 为新安装文件赋予执行权限...
+【20261108 21:28:26】: 创建一些二进制文件的软链接！
+【20261108 21:28:27】: 节点数据升级将优先使用 node-tool：/koolshare/bin/node-tool
+【20261108 21:28:27】: node-tool 版本：0.1.15
+【20261108 21:28:27】: 节点数据已经升级到 schema 2 存储。
+【20261108 21:28:28】: 检测到旧版 fancyss（3.5.28 < 3.6.0），强制清理节点配置缓存和 webtest 缓存...
+【20261108 21:28:29】: 重建节点运行缓存...
+【20261108 21:28:29】: 设置插件安装参数...
+【20261108 21:28:29】: 科学上网 full插件安装安装成功！
+【20261108 21:28:29】: 更新完毕，请等待网页自动刷新！
+【2026年11月08日 21:28:30】: ============================= end =================================
+XU6J03M6
+
+PASS adapted_3.5.29_installed_disabled_pinned_binaries_native_jq_auth_page_no_803_and_uu
+PASS genuine_3_5_28_to_3_5_29_upgrade_preserves_plugin_config_peers_and_uu
+PASS real_schema2_node_selection_and_owned_secret_fields_survive_genuine_fancyss_upgrade
+PASS actual_aarch64_xray_and_node_tool_execute_with_retained_vendor_libraries
+PASS actual_xray_socks_vless_forwarding_private_guard_and_upstream_failure_without_direct_bypass
+PASS frpc_old_authentic_version_install_original_binaries_peers_config_uu_retained
+PASS low_checkpoint_space_refuses_real_frpc_update_before_mutation_and_preserves_fancyss_config_uu
+PASS frpc_current_authentic_version_install_original_binaries_peers_config_uu_retained
+PASS pushplus_old_authentic_version_install_original_binaries_peers_config_uu_retained
+PASS pushplus_current_authentic_version_install_original_binaries_peers_config_uu_retained
+PASS actual_frpc_0_65_0_binary_runs_with_fancyss_and_uu
+PASS disabled_frpc_and_pushplus_real_native_https_callbacks_do_not_stall_or_restart_uu
+PASS plugin_self_update_uses_managed_transaction_path
+PASS real_fancyss_status_http_callback_over_original_https_with_uu
+PASS center_restart_keeps_fancyss_configuration_and_uu
+PASS authentic_uninstaller_removes_plugin_preserves_peer_namespaces_uu_logs_and_certificate
+DIAGNOSTIC /tmp/upload/soft_log.txt
+【20261108 21:28:11】: 机型：RT-AX86U koolcenter梅林改版固件 符合安装要求，开始安装插件！
+【20261108 21:28:12】: 内核：4.1.52，架构：aarch64，安装fancyss_hnd_v8_full！
+【20261108 21:28:12】: 安装版本：fancyss_hnd_v8_full_3.5.29
+【20261108 21:28:14】: 检测到当前节点为空，调整默认节点为节点列表内的第一个节点!
+【20261108 21:28:15】: 清理旧文件
+【20261108 21:28:16】: localmod: 保留 UU 安装包和原厂日志，不清理其它服务数据。
+【20261108 21:28:17】: websocketd 未变化，跳过二进制替换和进程重启。
+【20261108 21:28:17】: 检测/data分区剩余空间...
+【20261108 21:28:17】: /data分区剩余空间为：KB
+【20261108 21:28:18】: 检测jffs分区剩余空间...
+【20261108 21:28:23】: 当前jffs分区(tmpfs)剩余97712KB
+【20261108 21:28:23】: 插件安装预计需要约21096KB（候选包大小+动态余量2048KB）
+【20261108 21:28:23】: 空间满足，继续安装！
+【20261108 21:28:23】: 开始复制文件！
+【20261108 21:28:23】: 复制相关二进制文件！此步时间可能较长！
+【20261108 21:28:23】: 复制相关的脚本文件！
+【20261108 21:28:23】: 复制相关的网页文件！
+【20261108 21:28:25】: 为新安装文件赋予执行权限...
+【20261108 21:28:26】: 创建一些二进制文件的软链接！
+【20261108 21:28:27】: 节点数据升级将优先使用 node-tool：/koolshare/bin/node-tool
+【20261108 21:28:27】: node-tool 版本：0.1.15
+【20261108 21:28:27】: 节点数据已经升级到 schema 2 存储。
+【20261108 21:28:28】: 检测到旧版 fancyss（3.5.28 < 3.6.0），强制清理节点配置缓存和 webtest 缓存...
+【20261108 21:28:29】: 重建节点运行缓存...
+【20261108 21:28:29】: 设置插件安装参数...
+【20261108 21:28:29】: 科学上网 full插件安装安装成功！
+【20261108 21:28:29】: 更新完毕，请等待网页自动刷新！
+【2026年11月08日 21:28:30】: ============================= end =================================
+XU6J03M6
+
+DIAGNOSTIC /tmp/upload/soft_install_log.txt
+【2026年11月08日 21:30:14】: ============================ start ================================
+【2026年11月08日 21:30:14】: 开始卸载【Fancyss】插件，请稍候！
+【2026年11月08日 21:30:14】: 使用插件【Fancyss】自带卸载脚本：uninstall_shadowsocks.sh 卸载！
+【2026年11月08日 21:31:11】: 软件中心：本次卸载释放了25972KB，目前jffs分区剩余容量：123380KB
+【2026年11月08日 21:31:11】: 卸载成功！
+【2026年11月08日 21:31:11】: ============================= end =================================
+XU6J03M6
+
+DIAGNOSTIC /tmp/.localmod/bootstrap.log
+
+DIAGNOSTIC /tmp/real-plugin-results/fancyss-server.log
+PASS early stdio before adapter constructor
+cat: can't open '/etc/key.pem': No such file or directory
+cat: can't open '/etc/cert.pem': No such file or directory
+_netlink_recv_mesg:197  return NULL from rec, why socke is not initialized? 
+
+panic: open /koolshare/bin/jq: no such file or directory [recovered]
+	panic: open /koolshare/bin/jq: no such file or directory
+
+goroutine 1 [running]:
+main.main.func1()
+	./test_fancyss.go:74 +0x194
+panic({0x328880?, 0x4000c37ec0?})
+	runtime/panic.go:785 +0x124
+main.nrMust(...)
+	./native_runtime_client.go:25
+main.nrRead(...)
+	./native_runtime_client.go:28
+main.fancyExtended.func3()
+	./test_extended_plugins.go:150 +0x498
+main.main()
+	./test_fancyss.go:288 +0x2390
+SOAK_REAPER orphans_reaped=77
+LINUX_READONLY_JOB_STATUS=1

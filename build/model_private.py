@@ -18,6 +18,7 @@ import stat
 import subprocess
 import time
 from sealed_vm import ROOT, acquire_slot, copy_file, encoded, inventory, sha
+from device_config import DEVICE_INPUTS, render_build_job, render_source
 
 JOBS = ['build', 'filemap', 'hooks', 'restore', 'center', 'native_httpd', 'native_uu',
         'cert_generate', 'cert_restore', 'coexist', 'online']
@@ -124,6 +125,7 @@ class ModelJob:
         (self.job / 'owner.json').write_bytes(encoded(dict(job=self.job.name, name=name, phase=phase)))
         try:
             paths = ['build/casefs/rootfs', 'build/casefs/official_rootfs']
+            paths += DEVICE_INPUTS
             paths += ['build/' + p for p in INPUTS if (ROOT / 'build' / p).is_file()]
             paths += ['build/tools/' + p for p in ['LinuxBuilder', 'linux-Image', 'linux-initramfs.gz']]
             paths += subprocess.check_output(['git', 'ls-files', '--', 'sources/localmod'], cwd=ROOT, text=True).splitlines()
@@ -143,7 +145,9 @@ class ModelJob:
                     assert original == sha(source) == sha(target), name
                     self.sources[name] = original
             original_job = ROOT / ('build/linux_' + self.name + '_job.sh')
-            body = original_job.read_bytes()
+            body = render_source(original_job.relative_to(ROOT)).encode()
+            if self.name == 'build':
+                body = render_build_job(body.decode()).encode()
             self.sources[original_job.relative_to(ROOT).as_posix()] = sha(original_job)
             script = b'''#!/bin/sh
 set -eu

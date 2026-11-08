@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Verify the real1.9.60 frontend, managed migration and plugin coexistence."""
+from device_config import DEVICE, leb_size
 import hashlib
 import json
 import os
@@ -22,9 +23,9 @@ def prepare_upgrade_inputs():
         job=ROOT/'build/casefs/softcenter-private'/('baseline-'+secrets.token_hex(12))
         job.mkdir(mode=0o700)
         subprocess.run(['python3','build/inspect_upstream.py',str(baseline),str(job)],cwd=ROOT,check=True,stdout=subprocess.DEVNULL)
-        extraction='from ubireader.ubi_io import ubi_file;from ubireader.ubifs import ubifs;from ubireader.ubifs.output import extract_files;import sys;extract_files(ubifs(ubi_file(sys.argv[1],126976)),sys.argv[2])'
+        extraction='from ubireader.ubi_io import ubi_file;from ubireader.ubifs import ubifs;from ubireader.ubifs.output import extract_files;import sys;extract_files(ubifs(ubi_file(sys.argv[1],int(sys.argv[3]))),sys.argv[2])'
         extracted=job/'rootfs';extracted.mkdir()
-        subprocess.run([str(ROOT/'analysis/.venv/bin/python'),'-c',extraction,str(job/'rootfs_ubifs'),str(extracted)],check=True)
+        subprocess.run([str(ROOT/'analysis/.venv/bin/python'),'-c',extraction,str(job/DEVICE['image']['rootfs_volume_name']),str(extracted),str(leb_size())],check=True)
         source=extracted/'rom/etc/koolshare';tree=inventory(source)
         assert hashlib.sha256(encoded(tree)).hexdigest()==pin['baseline_core_tree_sha256']
         core_id=(extracted/'rom/etc/localmod-core-id').read_text().strip()

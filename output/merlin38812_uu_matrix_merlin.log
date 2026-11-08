@@ -1,0 +1,47 @@
+LINUX_BUILDER_READY
++ ulimit -c 0
++ ls /sys/class/net
++ '[' lo '=' lo ]
++ gzip -dc /lib/modules/6.12.114-0-virt/kernel/fs/binfmt_misc.ko.gz
++ insmod /tmp/binfmt.ko
++ mount -t binfmt_misc binfmt_misc /proc/sys/fs/binfmt_misc
++ printf '%s\n' ':arm:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x28\x00:\xff\xff\xff\xff\xff\xff\xff\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/qemu-arm:F'
++ '[' -r /proc/sys/fs/binfmt_misc/arm ]
++ grep -qx 'flags: F' /proc/sys/fs/binfmt_misc/arm
++ grep -qx 'interpreter /usr/bin/qemu-arm' /proc/sys/fs/binfmt_misc/arm
++ mkdir /router
++ cp -a /work/build/uu-matrix-merlin-root/. /router/
++ chown -Rh 0:0 /router
++ mkdir -p /router/work /router/fixture/lib /router/tmp/var/run /router/var/run /router/tmp/native-nvram /router/tmp/uu-matrix /router/jffs
++ cp /usr/bin/qemu-arm /router/usr/bin/qemu-arm
++ cp /lib/ld-musl-aarch64.so.1 /router/lib/
++ cp -a /lib/ld-musl-aarch64.so.1 /lib/libc.musl-aarch64.so.1 /usr/lib/libblkid.so.1 /usr/lib/libblkid.so.1.1.0 /usr/lib/libbrotlicommon.so.1 /usr/lib/libbrotlicommon.so.1.1.1 /usr/lib/libbrotlidec.so.1 /usr/lib/libbrotlidec.so.1.1.1 /usr/lib/libbrotlienc.so.1 /usr/lib/libbrotlienc.so.1.1.1 /usr/lib/libcap.so.2 /usr/lib/libcap.so.2.78 /usr/lib/libcares.so.2 /usr/lib/libcares.so.2.19.8 /usr/lib/libcom_err.so.2 /usr/lib/libcom_err.so.2.1 /usr/lib/libcrypto.so.3 /usr/lib/libcurl.so.4 /usr/lib/libcurl.so.4.8.0 /usr/lib/libe2p.so.2 /usr/lib/libe2p.so.2.3 /usr/lib/libeconf.so.0 /usr/lib/libeconf.so.0.6.2 /usr/lib/libeinfo.so.1 /usr/lib/libelf-0.193.so /usr/lib/libelf.so.1 /usr/lib/libext2fs.so.2 /usr/lib/libext2fs.so.2.4 /usr/lib/libidn2.so.0 /usr/lib/libidn2.so.0.4.0 /usr/lib/libip4tc.so.2 /usr/lib/libip4tc.so.2.0.0 /usr/lib/libip6tc.so.2 /usr/lib/libip6tc.so.2.0.0 /usr/lib/liblzo2.so.2 /usr/lib/liblzo2.so.2.0.0 /usr/lib/libmnl.so.0 /usr/lib/libmnl.so.0.2.0 /usr/lib/libnftnl.so.11 /usr/lib/libnftnl.so.11.6.0 /usr/lib/libnghttp2.so.14 /usr/lib/libnghttp2.so.14.29.4 /usr/lib/libpsl.so.5 /usr/lib/libpsl.so.5.3.5 /usr/lib/libpsx.so.2 /usr/lib/libpsx.so.2.78 /usr/lib/librc.so.1 /usr/lib/libss.so.2 /usr/lib/libss.so.2.0 /usr/lib/libssl.so.3 /usr/lib/libunistring.so.5 /usr/lib/libunistring.so.5.2.0 /usr/lib/libuuid.so.1 /usr/lib/libuuid.so.1.3.0 /usr/lib/libxtables.so.12 /usr/lib/libxtables.so.12.7.0 /usr/lib/libz.so.1 /usr/lib/libz.so.1.3.2 /usr/lib/libzstd.so.1 /usr/lib/libzstd.so.1.5.7 /router/fixture/lib/
++ mount --bind /work /router/work
++ mount --bind /dev /router/dev
++ mount -t proc proc /router/proc
++ mount -t tmpfs -o 'size=32m' tmpfs /router/jffs
++ printf '127.0.0.1 localhost\n'
++ mv /router/usr/sbin/wget /router/fixture/native-wget
++ cat
++ chmod 755 /router/usr/sbin/wget
++ export 'NATIVE_STATE_DIRECTORY=/tmp/native-nvram' 'MATRIX_BASE=merlin' 'MATRIX_RC_PATH=/sbin/rc' 'MATRIX_EVENT=ntpd_step'
++ /work/build/soak-init-fixture /bin/chroot /router /work/build/uu-matrix/probe
+download uuplugin script info successfully
+URL: http://127.0.0.1:35000/monitor
+MD5: 871353642cea91235ba460baf1b4ac4c
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+UU_MATRIX_CASE normal ready=true complete=true api=1 downloads=1 executed=true contract=true
+download uuplugin script info successfully
+URL: http://127.0.0.1:35000/monitor
+MD5: 00000000000000000000000000000000
+download uuplugin script successfully
+UU_MATRIX_CASE bad_checksum ready=true complete=true api=1 downloads=1 executed=false contract=true
+UU_MATRIX_CASE api_503 ready=true complete=true api=1 downloads=0 executed=false contract=true
+download uuplugin script info successfully
+UU_MATRIX_CASE malformed ready=true complete=true api=1 downloads=0 executed=false contract=true
+UU_MATRIX_CASE non_china ready=true complete=true api=0 downloads=0 executed=false contract=true
+UU_MATRIX_CASE ap_mode ready=true complete=true api=0 downloads=0 executed=false contract=true
+UU_MATRIX_RESULT {"base":"merlin","cases":[{"api_calls":1,"downloads":1,"event_completed":true,"event_entry":"ntpd_step","launch_observation_ms":1857,"matches_factory_contract":true,"monitor_executed":true,"monitor_runs":1,"name":"normal","native_log":"","ready":true,"repeat_completed":true},{"api_calls":1,"downloads":1,"event_completed":true,"event_entry":"ntpd_step","launch_observation_ms":1847,"matches_factory_contract":true,"monitor_executed":false,"monitor_runs":0,"name":"bad_checksum","native_log":"","ready":true,"repeat_completed":true},{"api_calls":1,"downloads":0,"event_completed":true,"event_entry":"ntpd_step","launch_observation_ms":1858,"matches_factory_contract":true,"monitor_executed":false,"monitor_runs":0,"name":"api_503","native_log":"","ready":true,"repeat_completed":true},{"api_calls":1,"downloads":0,"event_completed":true,"event_entry":"ntpd_step","launch_observation_ms":1842,"matches_factory_contract":true,"monitor_executed":false,"monitor_runs":0,"name":"malformed","native_log":"","ready":true,"repeat_completed":true},{"api_calls":0,"downloads":0,"event_completed":true,"event_entry":"ntpd_step","launch_observation_ms":1860,"matches_factory_contract":true,"monitor_executed":false,"monitor_runs":0,"name":"non_china","native_log":"","ready":true,"repeat_completed":true},{"api_calls":0,"downloads":0,"event_completed":true,"event_entry":"ntpd_step","launch_observation_ms":1852,"matches_factory_contract":true,"monitor_executed":false,"monitor_runs":0,"name":"ap_mode","native_log":"","ready":true,"repeat_completed":true}],"rc_path":"/sbin/rc","real_uu_monitor_or_acceleration_tested":false}
+SOAK_REAPER orphans_reaped=1
+LINUX_READONLY_JOB_STATUS=0

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Round-trip verification of the generated UBI/UBIFS candidate, not a boot test."""
+from device_config import DEVICE, leb_size, require_model
+from release_config import CONFIG
 import argparse
 import hashlib
 import json
@@ -15,8 +17,8 @@ ap=argparse.ArgumentParser();ap.add_argument('image',type=Path);ap.add_argument(
 root=Path(__file__).resolve().parent.parent
 stage=root/'build/casefs/rootfs';target=root/'build/casefs/roundtrip'
 assert not target.exists();target.mkdir()
-volume=root/'output/recheck/rootfs_ubifs'
-image=ubifs(ubi_file(str(volume),126976));extract_files(image,str(target))
+volume=root/'output/recheck'/DEVICE['image']['rootfs_volume_name']
+image=ubifs(ubi_file(str(volume),leb_size()));extract_files(image,str(target))
 expected={'/'+str(p.relative_to(stage)) for p in stage.rglob('*')}|{'/'}
 actual={'/'+str(p.relative_to(target)) for p in target.rglob('*')}|{'/'}
 errors=[]
@@ -40,10 +42,11 @@ for p in expected:
     for k in ['mode','uid','gid']:
         if source_meta[p][k]!=meta[p][k]:errors.append(['metadata',p,k,source_meta[p][k],meta[p][k]])
     if meta[p]['xattr_cnt']!=0:errors.append(['unexpected_xattr',p,meta[p]['xattr_cnt']])
-raw=a.image.read_bytes();vendor=(root/'upstream/RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w').read_bytes()
+raw=a.image.read_bytes();vendor=(root/CONFIG['vendor_image']).read_bytes()
+g=DEVICE['image'];require_model(raw);require_model(vendor)
 crc=lambda b:zlib.crc32(b)^0xffffffff
 valid_table=0
-for off in [4096,131072+4096]:
+for off in [g['data_offset'],g['peb_size']+g['data_offset']]:
     for n in range(128):
         row=raw[off+n*172:off+(n+1)*172]
         if crc(row[:168])!=struct.unpack_from('>I',row,168)[0]:errors.append(['volume_table_crc',off,n])
@@ -54,7 +57,7 @@ while True:
     if pos<0:break
     if pos+24<=len(volume_data):
         length=struct.unpack_from('<I',volume_data,pos+16)[0];typ=volume_data[pos+20]
-        if 24<=length<=126976 and typ<=13 and pos//126976==(pos+length-1)//126976 and pos+length<=len(volume_data):
+        if 24<=length<=leb_size() and typ<=13 and pos//leb_size()==(pos+length-1)//leb_size() and pos+length<=len(volume_data):
             if crc(volume_data[pos+8:pos+length])==struct.unpack_from('<I',volume_data,pos+4)[0]:valid_nodes+=1
             else:bad_nodes.append(pos)
     pos+=4
@@ -65,8 +68,8 @@ checks={
  'ubi_headers_crc_valid':not any(k.endswith('_bad') and v for k,v in layout['checks'].items()),
  'whole_image_crc_valid':layout['whole_crc_valid'],
  'all_volume_table_crc_valid':valid_table==256,
- 'vendor_boot_region_identical':raw[2*131072:0x400000]==vendor[2*131072:0x400000],
- 'vendor_model_footer_identical':raw[-84:-20]==vendor[-84:-20],
+ 'vendor_boot_region_identical':raw[2*g['peb_size']:g['rootfs_offset']]==vendor[2*g['peb_size']:g['rootfs_offset']],
+ 'vendor_model_footer_identical':raw[-(g['descriptor_size']+g['trailer_size']):-g['trailer_size']]==vendor[-(g['descriptor_size']+g['trailer_size']):-g['trailer_size']],
  'vendor_rc_identical':(target/'usr/libexec/localmod/rc.vendor').read_bytes()==(root/'build/casefs/official_rootfs/sbin/rc').read_bytes(),
  'vendor_xtables_identical':(target/'usr/sbin/xtables-multi').read_bytes()==(root/'build/casefs/official_rootfs/usr/sbin/xtables-multi').read_bytes(),
  'vendor_uu_page_identical':(target/'www/UUAccelerator.asp').read_bytes()==(root/'build/casefs/official_rootfs/www/UUAccelerator.asp').read_bytes(),
@@ -74,7 +77,7 @@ checks={
  'vendor_busybox_retained':(target/'bin/busybox').read_bytes()==(root/'build/casefs/official_rootfs/bin/busybox').read_bytes(),
  'vendor_curl_retained_for_fallback':(target/'usr/libexec/localmod/merlin/vendor/curl').read_bytes()==(root/'build/casefs/official_rootfs/usr/sbin/curl').read_bytes(),
  'vendor_kernel_modules_identical':all(p.read_bytes()==(target/p.relative_to(root/'build/casefs/official_rootfs')).read_bytes() for p in (root/'build/casefs/official_rootfs/lib/modules').rglob('*') if p.is_file() and not p.is_symlink()),
- 'ubifs_format_4':struct.unpack_from('<I',volume_data,80)[0]==4,
+ 'ubifs_format_4':struct.unpack_from('<I',volume_data,80)[0]==g['ubifs_format'],
  'no_host_extended_attributes':all(x['xattr_cnt']==0 for x in meta.values()),
 }
 from prepare_merlin import verify as verify_merlin

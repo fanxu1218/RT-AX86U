@@ -16,7 +16,7 @@ SCRIPT
 chmod 500 /usr/libexec/localmod/plugin-txn
 cat > /bin/nvram <<'EOF'
 #!/bin/sh
-case "$1:$2" in get:jffs2_scripts) echo 1;; get:sc_skin) echo ASUSWRT;; get:odmpid|get:productid) echo RT-AX86U;; esac
+case "$1:$2" in get:jffs2_scripts) echo 1;; get:sc_skin) echo ASUSWRT;; get:odmpid|get:productid) echo @MODEL@;; esac
 EOF
 chmod 755 /bin/nvram
 mkdir -p /tmp/process-tools

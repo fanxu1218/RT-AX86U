@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build and verify the experimental image with the prepared pinned local tools."""
+from device_config import compiler_flags, fixture_model_flag, DEVICE
 import argparse,hashlib,json,os,shutil,subprocess
 from pathlib import Path
 from release_config import CONFIG
@@ -12,7 +13,7 @@ def run(*command,log=None):
     else:subprocess.run(command,cwd=root,check=True)
 assert (root/'build/casefs').is_mount(),'Mount the case-sensitive build volume first'
 zig=str(root/'sources/zig-aarch64-macos-0.15.2/zig')
-flags=[zig,'cc','-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53']
+flags=[zig,'cc',*compiler_flags()]
 common=['sources/localmod/runtime.c']
 run(*flags,'-O2','-s','-shared','-fPIC','-o','build/httpd_bridge.so','sources/localmod/httpd_bridge.c','-ldl')
 for define,name in [('', 'httpd'),('INIT_LAUNCHER','init'),('RC_LAUNCHER','rc')]:
@@ -35,7 +36,7 @@ run(*flags,'-O0','-o','build/rc-fixture','build/rc_fixture.c','-Lbuild','-lrc_ve
 run(*flags,'-O2','-Isources/localmod','-o','build/runtime-fixture','build/runtime_fixture.c',*common)
 run(*flags,'-O2','-DVENDOR_RESTORE="/usr/sbin/iptables-legacy-restore"','-o','build/restore-fixture','sources/localmod/restore.c',*common)
 run(str(root/'analysis/.venv/bin/python'),'build/prepare_native_fixtures.py')
-run(*flags,'-O2','-shared','-fPIC','-o','build/native_hw_fixture.so','build/native_hw_fixture.c')
+run(*flags,fixture_model_flag(),'-O2','-shared','-fPIC','-o','build/native_hw_fixture.so','build/native_hw_fixture.c')
 run(*flags,'-O2','-shared','-fPIC','-o','build/native_uu_transport.so','build/native_uu_transport.c','-ldl')
 for name in ['bridge','real-backend','restore','center','launcher-vendor','native-httpd','native-uu']:
     env=dict(os.environ,GOOS='linux',GOARCH='arm64',CGO_ENABLED='0')
@@ -55,7 +56,7 @@ run('python3','build/verify_uu_compatibility.py')
 image=CONFIG['image']
 run('python3','build/repack_image.py',CONFIG['vendor_image'],'build/localmod-rootfs.ubifs',image)
 run('python3','build/inspect_upstream.py',image,'output/recheck',log='output/structure.json')
-run(str(root/'analysis/.venv/bin/python'),'build/export_metadata.py','output/recheck/rootfs_ubifs','output/recheck/metadata.json')
+run(str(root/'analysis/.venv/bin/python'),'build/export_metadata.py','output/recheck/'+DEVICE['image']['rootfs_volume_name'],'output/recheck/metadata.json')
 roundtrip=root/'build/casefs/roundtrip'
 if roundtrip.exists():
     assert json.loads((root/'output/verification.json').read_text())['status']=='EXPERIMENTAL_NOT_DEVICE_TESTED'

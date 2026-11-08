@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Re-extract both inputs into the mounted case-sensitive build volume."""
+from device_config import DEVICE, leb_size
 import json
 from pathlib import Path
 from ubireader.ubi_io import ubi_file
@@ -13,7 +14,7 @@ for label in ['official','koolcenter']:
     target=base/(label+'_rootfs')
     assert not target.exists(), f'{target} already exists'
     target.mkdir()
-    image=ubifs(ubi_file(str(root/f'upstream/{label}/rootfs_ubifs'),126976))
+    image=ubifs(ubi_file(str(root/f'upstream/{label}'/DEVICE['image']['rootfs_volume_name']),leb_size()))
     extract_files(image,str(target))
     expected=set(json.loads((root/f'upstream/{label}/metadata.json').read_text()))
     found={'/'+str(p.relative_to(target)) for p in target.rglob('*')}|{'/'}

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Corrupt sealed checkpoints and exhaust only an owned guest JFFS disk."""
+from device_config import compiler_flags
 import hashlib,json,os,shutil,subprocess
 from pathlib import Path
 from check_interrupt import compile_fixtures
@@ -13,7 +14,7 @@ def pinned_legacy_helper():
     commit='791ec5eb6c983c1d1ee24bda471d1194afb8734b'
     code=subprocess.check_output(['git','show',commit+':sources/localmod/plugin_txn.c'])
     p=ROOT/'build/r5-pinned-helper.c';p.write_bytes(code)
-    subprocess.run(['sources/zig-aarch64-macos-0.15.2/zig','cc','-target','arm-linux-gnueabi.2.26','-mcpu=cortex_a53','-O2','-s','-o','build/plugin-txn-r5-baseline',str(p)],check=True)
+    subprocess.run(['sources/zig-aarch64-macos-0.15.2/zig','cc',*compiler_flags(),'-O2','-s','-o','build/plugin-txn-r5-baseline',str(p)],check=True)
     old=json.loads(subprocess.check_output(['git','show',commit+':output/interruption_tests.json']))
     actual=sha(ROOT/'build/plugin-txn-r5-baseline')
     assert actual==old['production_files']['usr/libexec/localmod/plugin-txn']

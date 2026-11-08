@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "id": "rt-ax86u",
+  "model": "RT-AX86U",
+  "adapter": "asus-hnd-arm32",
+  "base": {
+    "version": "ASUS 3.0.0.4.388_24437-g81951d7",
+    "display_version": "3.0.0.4.388_24437",
+    "vendor_image": "upstream/RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w",
+    "image_prefix": "RT-AX86U_388_24437",
+    "contracts": "build/base_contracts.json"
+  },
+  "abi": {
+    "zig_target": "arm-linux-gnueabi.2.26",
+    "cpu": "cortex_a53",
+    "elf_machine": "EM_ARM",
+    "bits": 32,
+    "little_endian": true,
+    "nvram_tuple_bytes": 20
+  },
+  "image": {
+    "format": "asus-pure-ubi",
+    "peb_size": 131072,
+    "min_io_size": 2048,
+    "vid_offset": 2048,
+    "data_offset": 4096,
+    "rootfs_offset": 4194304,
+    "rootfs_volume_id": 0,
+    "rootfs_volume_name": "rootfs_ubifs",
+    "boot_volume_id": 10,
+    "layout_volume_id": 2147479551,
+    "min_rootfs_lebs": 32,
+    "max_lebs": 2048,
+    "ubifs_format": 4,
+    "descriptor_size": 64,
+    "trailer_size": 20,
+    "model_offset": 8,
+    "model_size": 16,
+    "min_image_bytes": 4194304,
+    "max_image_bytes": 134217728,
+    "compression": "zlib",
+    "fanout": 8,
+    "log_lebs": 5,
+    "orphan_lebs": 1,
+    "journal_bytes": 8388608
+  },
+  "plugins": {
+    "legacy_marker": "hnd",
+    "extended_marker": "hnd_v8",
+    "extended_productid": "RT-AX86U",
+    "extended_loader": "/lib/ld-linux-aarch64.so.1",
+    "display_platform": "HND v8 Full"
+  },
+  "sources": {
+    "softcenter": "build/softcenter_sources.json",
+    "fancyss": "build/fancyss_sources.json",
+    "merlin": "build/merlin_sources.json"
+  }
+}

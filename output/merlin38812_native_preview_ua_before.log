@@ -1,0 +1,32 @@
+LINUX_BUILDER_READY
+FIXTURE_ARM_ARCH=armv7l
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS native_merlin_ntpd_callback_download_checksum_owned_uu_worker
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108112706, 2026/11/8 ~ 2046/11/9
+PASS native_authentication_denies_center_query_and_vpn_write
+PASS native_merlin_https_certificate_and_login
+PASS native_authenticated_page_Advanced_VPNStatus.asp
+PASS native_authenticated_page_UUAccelerator.asp
+PASS native_authenticated_page_Module_Softcenter.asp
+PASS native_authenticated_page_Advanced_OpenVPNClient_Content.asp
+PASS native_authenticated_page_Advanced_VPN_OpenVPN.asp
+PASS native_authenticated_page_Advanced_VPNDirector.asp
+PASS native_authenticated_page_DNSDirector.asp
+panic: native VPN save status=200 body=<HTML><HEAD><script>window.top.location.href='/Main_Login.asp';</script>
+	</HEAD></HTML>
+	
+
+goroutine 1 [running]:
+main.main()
+	./native_preview.go:122 +0x11e4
+SOAK_REAPER orphans_reaped=2
+LINUX_READONLY_JOB_STATUS=1

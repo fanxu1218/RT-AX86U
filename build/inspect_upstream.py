@@ -7,20 +7,24 @@ import json
 import struct
 import zlib
 from pathlib import Path
+from device_config import DEVICE, require_model
 
 ap = argparse.ArgumentParser()
 ap.add_argument('image', type=Path)
 ap.add_argument('out', type=Path)
 args = ap.parse_args()
 d = args.image.read_bytes()
+require_model(d)
 start = d.find(b'UBI#')
 assert start >= 0
-peb, payload = 131072, 4096
+geometry = DEVICE['image']
+peb, payload, vid_offset = (geometry[k] for k in ['peb_size', 'data_offset', 'vid_offset'])
 vols = collections.defaultdict(list)
 counts = collections.Counter()
 for o in range(start, len(d) - peb + 1, peb):
-    ec, vid = d[o:o+64], d[o+2048:o+2112]
+    ec, vid = d[o:o+64], d[o+vid_offset:o+vid_offset+64]
     assert ec[:4] == b'UBI#' and vid[:4] == b'UBI!'
+    assert struct.unpack_from('>II', ec, 16) == (vid_offset, payload), 'Unexpected device UBI geometry'
     for label, header in [('ec', ec), ('vid', vid)]:
         valid = (zlib.crc32(header[:60]) ^ 0xffffffff) == struct.unpack_from('>I', header, 60)[0]
         counts[label + ('_valid' if valid else '_bad')] += 1
@@ -45,7 +49,7 @@ for v, a in vols.items():
     raw = b''.join(d[o+payload:o+payload+(size if typ==2 else peb-payload)] for l,o,typ,size in a)
     (args.out / names[v]['name']).write_bytes(raw)
     names[v].update({'blocks': len(a), 'first_offset': hex(a[0][1]), 'payload_bytes': len(raw)})
-    if v == 10:
+    if v == geometry['boot_volume_id']:
         offset = 0
         boot = args.out / 'bootfiles'
         boot.mkdir(exist_ok=True)
