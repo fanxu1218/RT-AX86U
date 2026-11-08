@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "status": "LOCAL_ATTRIBUTION_SUPPLEMENT_READY",
+  "revision": "localmod2-r9-r2-experimental",
+  "validated_diagnostic_source_commit": "836892bef4e34f7e7da912cd31d6d4cf2ec100e2",
+  "original_handoff_source_commit": "4482dbef058a68aa582720b278b3c8a99fb5f569",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+  "firmware_bytes_changed": false,
+  "production_sources_changed": false,
+  "original_gate_source_inputs": 170,
+  "baseline_preserved_sha256": {
+    "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+    "output/release_gates.json": "e8655961d79d6324ae46956b57b04ecec88a14ed50fc4698966da3ca58722453",
+    "output/local_delivery.json": "8d0acfd7db7cdf527210a046e18e4ddd3f196db51515d4723965566c18389136",
+    "output/localmod2-r9-r1-local-delivery.tar.gz": "f5837805c4088d8a3d21d43724d6205460d90f658cfc769703fdeba617357a5e",
+    "output/localmod2-r9-local-delivery.tar.gz": "35234c1017282d687adefed0854cf8dd5251801ccfaa66c2d5d77eaac1e6ffcd",
+    "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+    "output/localmod2-r9-r2-local-delivery.tar.gz": "648593d9f644a295109de9de305a8397560ee703e58482a6cd8d83d04a309fad",
+    "output/localmod2-r9-r2-local-delivery.tar.gz.sha256": "51977504505cc692ddf632b1b30419ee6baba368030871fef2f2775eb5e90937",
+    "output/r9r2_coexist_60m_tests.json": "d4c8df038d94514d419c940aa605f296aeda35b6073360a70243e174399bceef",
+    "output/r9r2_coexist_native_probe_tests.json": "2ab559bfb486e727dafa2a6734900b7b53a9d8db58b712d22ad34a174e5a61a4"
+  },
+  "evidence_sha256": {
+    "README.md": "ff8a1e3bef0376e0ae9c6c4df94153e7d6f5070ea74e06fbd260d7456dbd01fc",
+    "output/r9-r2延迟与内存归因.md": "d82d3e240a2bdcae23cb010a1f54486e3539ab6f535d6160a4686d868ad3435a",
+    "output/r9r2_diagnostic_kernel_tests.json": "ca29169334e9d8664ad725c81de7e4d5b397685fa6c1b00e9101e6a97b576088",
+    "output/r9r2_diagnostic_preflight_tests.json": "ea94f384d4d8ec4782a30b1020fe1ba81c4ce0fd5985d31f42f9e657e6f83f78",
+    "output/r9r2_diagnostic_preflight_review.json": "05107af0069514292af74c4523d6550380d9677ba16726b66c837043d02a8dfc",
+    "output/r9r2_diagnostic_preflight.log": "9c0e9e6aced7ddeeed5d65ad05d2c304a806ee333ac6b27bc658823e65203220",
+    "output/r9r2_diagnostic_cycles_tests.json": "9fe3f9eeb02486d73734a510cc9cda03c5788d0867196245e3cb0459b9b431d4",
+    "output/r9r2_diagnostic_cycles_review.json": "80c9bd4aec337df248110a911a4c57954cbc78838f698bfccdf436e8ee869490",
+    "output/r9r2_diagnostic_cycles.log": "87a9878a0566fa4c34a0036bc98ffcea64aa43c14bb789c9117d884c0c42e35c"
+  },
+  "measured_seconds": 3600.933113584,
+  "quiet_rss_kib": [
+    17716,
+    18100,
+    16440,
+    18104,
+    15416,
+    18104,
+    18104
+  ],
+  "no_thp_control_quiet_rss_kib": [
+    13012,
+    12968,
+    13036,
+    13036,
+    13040,
+    13104,
+    12992
+  ],
+  "natural_latency_failures": 0,
+  "controlled_faults_counted_as_natural_failures": false,
+  "original_gate_reexecuted": false,
+  "supplement": {
+    "path": "output/localmod2-r9-r2-diagnostics.tar.gz",
+    "sha256_file": "output/localmod2-r9-r2-diagnostics.tar.gz.sha256",
+    "manifest": "DIAGNOSTIC_MANIFEST.json",
+    "source_archive": "output/localmod2_r9_r2_diagnostic_sources.tar.gz"
+  },
+  "github_push_owner": "user",
+  "agent_pushed_or_published": false,
+  "physical_router_accessed": false,
+  "physical_router_flashed": false,
+  "limits": [
+    "Full-system Cortex-A53/Linux6.12,640MiB inner/1024MiB outer,no NIC or physical router",
+    "Native DDNS-Go RSS excludes QEMU-user; QEMU-system host RSS is outside guest process samples",
+    "GODEBUG traces enabled only in disposable DDNS supervisor, default GC policy unchanged; trace MiB figures are coarse, not exact retained-byte counts",
+    "Fancyss HTTP status diagnostic remains global-proxy-disabled, real Xray traffic uses owned loopback endpoints; original UU flow uses owned worker",
+    "Latency failures are observations, never hidden retries or a stability PASS; controlled pauses are labelled separately",
+    "Finite same-PID load/idle and GC observations cannot prove leak freedom or multi-day/device stability"
+  ]
+}
