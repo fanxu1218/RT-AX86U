@@ -1,0 +1,90 @@
+{
+  "status": "UNPLANNED_HTTPS_EOF_REPRODUCED",
+  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+  "last_successful_sample": {
+    "ddnsgo": {
+      "executable": "/jffs/.koolshare/bin/ddnsgo",
+      "fds": 7,
+      "pid": 27107,
+      "rss_kib": 13212
+    },
+    "dnsmasq": {
+      "executable": "/usr/libexec/localmod/merlin/bin/dnsmasq",
+      "fds": 9,
+      "pid": 12743,
+      "rss_kib": 1868
+    },
+    "dropbear": {
+      "executable": "/usr/libexec/localmod/merlin/bin/dropbearmulti",
+      "fds": 4,
+      "pid": 21608,
+      "rss_kib": 2048
+    },
+    "elapsed_seconds": 2061.916334944,
+    "events": 20,
+    "httpd": {
+      "executable": "/usr/bin/qemu-arm",
+      "fds": 5,
+      "pid": 30676,
+      "rss_kib": 25400
+    },
+    "httpdb": {
+      "executable": "/jffs/.koolshare/bin/httpdb",
+      "fds": 6,
+      "pid": 27108,
+      "rss_kib": 996
+    },
+    "miniupnpd": {
+      "executable": "/usr/libexec/localmod/merlin/bin/miniupnpd",
+      "fds": 7,
+      "pid": 27803,
+      "rss_kib": 2092
+    },
+    "openvpn-client": {
+      "executable": "/usr/libexec/localmod/merlin/bin/openvpn",
+      "fds": 6,
+      "pid": 3465,
+      "rss_kib": 5412
+    },
+    "openvpn-server": {
+      "executable": "/router/usr/libexec/localmod/merlin/bin/openvpn",
+      "fds": 7,
+      "pid": 4113,
+      "rss_kib": 5692
+    },
+    "queries": 331,
+    "skipd": {
+      "executable": "/usr/bin/skipd",
+      "fds": 8,
+      "pid": 26917,
+      "rss_kib": 1188
+    },
+    "uu": {
+      "executable": "/bin/busybox",
+      "fds": 4,
+      "pid": 23462,
+      "rss_kib": 1684
+    },
+    "xray-client": {
+      "executable": "/jffs/.koolshare/bin/xray",
+      "fds": 6,
+      "pid": 12696,
+      "rss_kib": 35684
+    },
+    "xray-server": {
+      "executable": "/jffs/.koolshare/bin/xray",
+      "fds": 6,
+      "pid": 28504,
+      "rss_kib": 37672
+    }
+  },
+  "error": "POST /_api/ status id91427 EOF before response headers",
+  "owner": "UNRESOLVED: no active restarted HTTPd or TLS error metadata in original failure diagnostics",
+  "production_modified": false,
+  "one_hour_result": "NOT_PASS; investigate and repeat complete measured run",
+  "log_sha256": "8fb9fcec9cb2a4fab80932e61e019501c1dec8c530f133c0b5b6ec0eba883fc7",
+  "source_sha256": {
+    "analysis/r9r1_coexist/check.py": "26b9c7f91857e534a8060c3d45d37d963ee0bd551f21f1954e224076042a8b42",
+    "analysis/r9r1_coexist/workload.go": "ae6addd76ffff8e86cbcded75a978f00ab339721bde9b41875ae18816698dea8"
+  }
+}

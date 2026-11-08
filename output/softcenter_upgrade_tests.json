@@ -1,7 +1,7 @@
 {
   "status": "LOCAL_SOFTCENTER_1960_UPGRADE_PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
-  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
   "sources": {
     "schema": 1,
     "version": "1.9.60",
@@ -68,9 +68,9 @@
     "uu_downloads": 1,
     "version": "1.9.60"
   },
-  "frontend_report_sha256": "3aab243f2d97d863a3dbadd84809a8640aee4a5d6b37ec94baecef871709b02f",
-  "full_fancyss_report_sha256": "22dc2b56592060c04eebe1f2200cb98cd1cc2bb45dd0e46ff96ad2ab6d44d723",
-  "log_sha256": "0dfdd1c25e3e8d477dc040ce20a397d1902e0682650a380cd538ce3b65b21746",
+  "frontend_report_sha256": "997e8bf4f0d665b4fffb8a851e3d1c01f9c11669137b86b88675c94b702e23ad",
+  "full_fancyss_report_sha256": "54ecbd777b20768dba4298312be13166169bc5f21ec4ce0ed22a49e81a1ce0dc",
+  "log_sha256": "0f9cdecc7de8a7e0cb2d1439af74c571a5fe2ba26b37fb8c16966c84d155c816",
   "limits": [
     "Real pinned1.9.50 runtime core is copied into synthetic JFFS with authentic Fancyss data, then managed bootstrap upgrades it to1.9.60",
     "New frontend functions generate RPC fixtures executed through actual retained ASUS HTTPS/login/httpdb/skipd; browser rendering is separate",

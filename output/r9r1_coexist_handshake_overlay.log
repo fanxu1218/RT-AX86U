@@ -1,0 +1,491 @@
+LINUX_BUILDER_READY
+MERLIN_SYSTEM_PROBE_READY
+FIXTURE_ARM_ARCH=aarch64
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+COEXIST_SETUP native_https_and_uu
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108023051, 2026/11/8 ~ 2046/11/9
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+COEXIST_SETUP real_ddnsgo_install
+COEXIST_SETUP real_fancyss_install
+COEXIST_SETUP six_components
+miniupnpd[7018]: it is advised to use network interface name instead of 192.168.77.1
+miniupnpd[7018]: system uptime is 130 seconds
+miniupnpd[7018]: Reloading rules from lease file
+miniupnpd[7018]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794105161
+miniupnpd[7018]: IGNORED : Reserved / private IP address 203.0.113.1 on ext interface wan0
+miniupnpd[7018]: HTTP listening on port 35323
+miniupnpd[7018]: Listening for NAT-PMP/PCP traffic on port 5351
+miniupnpd[7018]: HTTP REQUEST from 192.168.77.1:39343 : GET /rootDesc.xml (HTTP/1.1)
+miniupnpd[7018]: Host: 192.168.77.1:35323
+miniupnpd[7018]: HTTP REQUEST from 192.168.77.1:51363 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[7018]: Host: 192.168.77.1:35323
+miniupnpd[7018]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[7018]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[7018]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[7018]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[7018]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[7018]: HTTP REQUEST from 192.168.77.1:58097 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[7018]: Host: 192.168.77.1:35323
+miniupnpd[7018]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[7018]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[7018]: HTTP REQUEST from 192.168.77.1:37877 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[7018]: Host: 192.168.77.1:35323
+miniupnpd[7018]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[7018]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[7018]: removing redirect rule port 45001 TCP
+miniupnpd[7018]: Trying to delete nat rule at index 0
+miniupnpd[7018]: Trying to delete filter rule at index 0
+miniupnpd[7018]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[7018]: Trying to delete peer rule at index 0
+PASS dnsmasq_real_dhcp_discover_offer_request_ack_and_lease_file_retained_after_restart
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:control valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:control valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:control valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:control valid:true]
+miniupnpd[7018]: setting timeout to 60 sec
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:SIGALRM valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:SIGALRM valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:SIGALRM valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:SIGALRM valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:SIGCHLD valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:SIGCHLD valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:SIGCHLD valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:SIGCHLD valid:true]
+COEXIST_HANDSHAKE_CASE map[code:0 error:write tcp4 192.168.77.1:41716->192.168.77.1:34443: write: broken pipe kind:timeout valid:false]
+miniupnpd[7018]: cleaning expired Port Mappings
+COEXIST_HANDSHAKE_CASE map[code:0 error:write tcp4 192.168.77.1:45170->192.168.77.1:34443: write: broken pipe kind:repeated_signal_timeout valid:false]
+SOAK_EVENT_BEGIN index=1 kind=center
+SOAK_PLANNED_WINDOW name=center_restart id=91019 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91020 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91021 code=503 error=<nil> bytes=20
+SOAK_EVENT index=1 kind=center seconds=28.465 details=production_bootstrap_restart center_restart_reads=4 unavailable=3
+SOAK_EVENT_BEGIN index=2 kind=center
+SOAK_PLANNED_WINDOW name=center_restart id=91039 code=200 error=unexpected EOF bytes=0
+SOAK_PLANNED_WINDOW name=center_restart id=91040 code=503 error=<nil> bytes=20
+SOAK_EVENT index=2 kind=center seconds=21.174 details=production_bootstrap_restart center_restart_reads=3 unavailable=2
+SOAK_EVENT_BEGIN index=3 kind=center
+SOAK_PLANNED_WINDOW name=center_restart id=91058 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91059 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91060 code=503 error=<nil> bytes=20
+SOAK_EVENT index=3 kind=center seconds=26.222 details=production_bootstrap_restart center_restart_reads=4 unavailable=3
+SOAK_EVENT_BEGIN index=4 kind=center
+SOAK_PLANNED_WINDOW name=center_restart id=91078 code=200 error=unexpected EOF bytes=0
+SOAK_PLANNED_WINDOW name=center_restart id=91079 code=503 error=<nil> bytes=20
+SOAK_EVENT index=4 kind=center seconds=20.243 details=production_bootstrap_restart center_restart_reads=3 unavailable=2
+SOAK_EVENT_BEGIN index=5 kind=center
+SOAK_PLANNED_WINDOW name=center_restart id=91097 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91098 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91099 code=503 error=<nil> bytes=20
+SOAK_EVENT index=5 kind=center seconds=24.099 details=production_bootstrap_restart center_restart_reads=4 unavailable=3
+SOAK_EVENT_BEGIN index=6 kind=center
+SOAK_PLANNED_WINDOW name=center_restart id=91117 code=200 error=unexpected EOF bytes=0
+SOAK_PLANNED_WINDOW name=center_restart id=91118 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91119 code=503 error=<nil> bytes=20
+SOAK_EVENT index=6 kind=center seconds=21.654 details=production_bootstrap_restart center_restart_reads=4 unavailable=3
+COEXIST_PROBE_RESULT {"center_restart_cycles":6,"data_preserved":true,"handshake_cases":[{"code":200,"error":"\u003cnil\u003e","kind":"control","valid":true},{"code":200,"error":"\u003cnil\u003e","kind":"control","valid":true},{"code":200,"error":"\u003cnil\u003e","kind":"control","valid":true},{"code":200,"error":"\u003cnil\u003e","kind":"control","valid":true},{"code":200,"error":"\u003cnil\u003e","kind":"SIGALRM","valid":true},{"code":200,"error":"\u003cnil\u003e","kind":"SIGALRM","valid":true},{"code":200,"error":"\u003cnil\u003e","kind":"SIGALRM","valid":true},{"code":200,"error":"\u003cnil\u003e","kind":"SIGALRM","valid":true},{"code":200,"error":"\u003cnil\u003e","kind":"SIGCHLD","valid":true},{"code":200,"error":"\u003cnil\u003e","kind":"SIGCHLD","valid":true},{"code":200,"error":"\u003cnil\u003e","kind":"SIGCHLD","valid":true},{"code":200,"error":"\u003cnil\u003e","kind":"SIGCHLD","valid":true},{"code":0,"error":"write tcp4 192.168.77.1:41716-\u003e192.168.77.1:34443: write: broken pipe","kind":"timeout","valid":false},{"code":0,"error":"write tcp4 192.168.77.1:45170-\u003e192.168.77.1:34443: write: broken pipe","kind":"repeated_signal_timeout","valid":false}],"queries":110}
+PROBE_DIAGNOSTIC /tmp/coexist-tls-errors.log
+TLS_IO t=26.975 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=28.768 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=30.222 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=30.431 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=37.772 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=38.277 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=42.619 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=44.067 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=46.568 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=47.168 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=49.392 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=49.979 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=52.125 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=52.722 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=54.493 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=54.868 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=56.232 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=56.618 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=61.126 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=61.887 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=151.115 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=152.657 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=155.305 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=155.715 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=161.143 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=161.543 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=163.250 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=163.635 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=166.751 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=167.519 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=169.114 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=169.564 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=174.291 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=175.246 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=177.360 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=178.015 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=181.417 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=182.388 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=184.451 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=184.998 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=189.760 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=189.961 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=189.981 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=190.621 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=192.388 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=192.862 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=195.802 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=195.982 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=195.984 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=196.651 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=198.399 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=198.883 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=204.208 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=204.374 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=204.378 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=205.431 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=207.102 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=207.506 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=210.391 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=210.568 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=210.570 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=211.155 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=212.596 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=213.000 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=217.162 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=217.340 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=217.342 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=217.925 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=219.398 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=219.810 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=222.533 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=222.763 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=222.768 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=223.353 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=224.868 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=225.259 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=229.476 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=229.652 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=229.653 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=230.467 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=232.447 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=232.848 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=235.695 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=235.873 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=235.875 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=236.435 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=237.833 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=238.229 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=242.322 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=247.778 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=11 ssl_error=2
+TLS_IO t=249.021 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=249.395 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=252.100 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=252.280 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=252.282 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=252.783 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=252.791 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=253.283 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=253.283 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=253.786 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=253.786 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=254.286 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=254.286 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=254.787 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=254.787 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=255.287 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=255.289 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=255.789 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=255.789 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=256.290 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=256.292 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=256.791 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=256.791 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=257.104 pid=626 op=accept_end ssl=0x12dbf8 result=-1 errno=11 ssl_error=2
+TLS_IO t=258.316 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=258.709 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=264.367 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=265.747 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=266.715 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=267.805 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=272.250 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=272.826 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=274.681 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=275.675 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=278.429 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=279.021 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=281.877 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=282.297 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=284.197 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=284.583 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=288.510 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=289.538 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=291.775 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=292.163 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=292.618 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=292.997 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=293.348 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=293.731 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=298.306 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=299.026 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=302.897 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=303.679 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=310.187 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=310.828 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=317.209 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=317.935 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=325.216 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=326.145 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=330.035 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=331.352 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=337.593 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=338.618 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=341.735 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=342.214 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=346.646 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=347.110 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=350.013 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=350.453 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=355.091 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=355.485 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=358.218 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=358.611 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=362.877 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=363.277 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=363.721 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=364.485 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=367.051 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=367.443 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=369.331 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=370.479 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=374.303 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=374.976 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=376.881 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=377.257 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=380.612 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=381.075 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=383.194 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=383.595 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=384.017 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=384.400 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=384.774 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=385.195 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=389.686 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=390.058 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=392.810 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=393.189 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=398.194 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=399.096 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=402.105 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=402.498 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=406.623 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=407.015 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=409.760 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=410.135 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=414.275 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=414.665 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=417.426 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=417.797 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=421.939 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=422.320 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=426.145 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=426.538 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=430.725 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=431.108 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=433.854 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=434.240 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=439.398 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=440.343 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=440.891 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=441.619 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=444.731 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=445.147 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=447.349 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=447.834 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=450.364 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=451.070 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=453.623 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=454.017 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=456.290 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=456.766 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=461.178 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=462.318 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=464.652 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=465.056 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=465.505 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=465.884 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=466.238 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=466.625 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=471.278 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=471.653 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=474.378 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=474.757 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=478.831 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=479.358 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=482.112 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=482.501 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=486.560 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=486.941 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=489.694 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=490.061 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=495.171 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=496.041 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=498.979 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=499.362 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=503.443 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=503.816 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=506.575 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=506.950 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=511.129 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=511.514 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=514.235 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=514.610 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=518.745 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=519.141 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=519.595 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=520.311 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=522.883 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=523.265 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=525.351 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=526.824 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=530.094 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=530.476 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=532.324 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=532.703 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=535.838 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=536.215 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=538.137 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=538.541 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=538.943 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=539.322 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=539.673 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=540.048 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=544.361 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=544.746 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=547.490 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=547.871 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=552.913 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=553.778 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=556.706 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=557.082 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=561.171 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=561.540 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=564.268 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=564.640 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=568.682 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=569.117 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=571.890 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=572.269 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=576.351 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=576.716 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=579.441 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=579.810 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=583.885 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=584.251 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=586.971 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=587.344 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=592.807 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=593.892 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=594.462 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=595.192 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=597.638 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=598.042 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=599.867 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=600.244 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=602.322 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=602.894 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=605.328 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=605.712 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=607.534 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=607.915 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=612.150 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=613.203 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=615.940 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=616.365 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=616.815 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=617.217 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=617.571 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=617.970 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=622.370 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=622.774 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=625.553 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=625.946 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=630.095 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=630.511 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=633.250 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=633.646 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=637.734 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=638.120 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=640.866 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=641.243 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=646.315 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=647.242 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=650.254 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=650.640 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=654.672 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=655.050 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=657.765 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=658.189 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=662.234 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=662.609 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=665.310 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=665.693 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=669.827 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=670.212 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=670.639 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=671.377 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=673.910 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=674.277 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=676.084 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=676.453 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=678.985 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=680.391 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=682.678 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=683.053 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=684.880 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=685.305 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=688.429 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=688.803 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=690.664 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=691.043 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=691.467 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=691.987 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=692.323 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=692.690 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=697.024 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=697.393 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=700.203 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=700.578 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=705.602 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=706.547 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=709.522 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=709.898 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=713.950 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=714.324 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=717.056 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=717.432 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=721.480 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=721.843 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=724.547 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=724.923 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=728.993 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=729.362 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=732.124 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=732.516 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=736.562 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=736.941 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=739.664 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=740.029 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=745.129 pid=626 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=746.010 pid=626 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+
+miniupnpd[7018]: shutting down MiniUPnPd
+SOAK_REAPER orphans_reaped=170
+NESTED_MERLIN_JOB_STATUS=0
+[  747.082796] reboot: Power down
+LINUX_READONLY_JOB_STATUS=0

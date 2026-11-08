@@ -5,7 +5,7 @@ Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
 
 REAL_PLUGIN_SETUP_READY
 cacert.pem doesn't exist !!!!!!
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107170326, 2026/11/7 ~ 2046/11/8
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108025103, 2026/11/8 ~ 2046/11/9
 starting ntp...
 download uuplugin script info successfully
 URL: http://uu.fixture.test:35000/monitor
@@ -13,7 +13,7 @@ MD5: d90649080e15b5165aba44b9ba9ee18f
 download uuplugin script successfully
 prepare to execute uuplugin stript...
 PASS native_shell_resolution_center_start_original_process_helper_private_api_and_uu
-NATIVE_CURL_PROBE numeric_hits=1 numeric_body="owned-curl-probe" hostname_hits=1 hostname_body="  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0\r100    16 100    16   0     0  1001     0  --:--:-- --:--:-- --:--:--  1333\nowned-curl-probe"
+NATIVE_CURL_PROBE numeric_hits=1 numeric_body="owned-curl-probe" hostname_hits=1 hostname_body="  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0\r100    16 100    16   0     0  1402     0  --:--:-- --:--:-- --:--:--  2285\nowned-curl-probe"
 NATIVE_CURL_FACTORY_CONTROL numeric_hits=0 hostname_hits=1
 PASS selected_curl_and_factory_numeric_url_contracts_and_hostname_callback_pinned_to_loopback
 PIPE_REGRESSION "owned-pipe\nowned-pipe\n"

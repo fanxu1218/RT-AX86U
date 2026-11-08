@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "revision": "r9-r1",
+  "revision": "r9-r2",
   "variant": "localmod2",
   "base": "ASUS 3.0.0.4.388_24437-g81951d7",
   "vendor_image": "upstream/RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w",
-  "image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
-  "tag": "localmod2-r9-r1-experimental",
+  "image": "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w",
+  "tag": "localmod2-r9-r2-experimental",
   "status": "EXPERIMENTAL_NOT_DEVICE_TESTED",
   "software_center_version": "1.9.60"
 }

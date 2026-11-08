@@ -1,0 +1,26 @@
+{
+  "status": "NATIVE_TLS_HANDSHAKE_EINTR_REPRODUCED",
+  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+  "controls": {
+    "trials": 4,
+    "success": 4
+  },
+  "sigalrm": {
+    "trials": 4,
+    "success": 0,
+    "ssl_accept_result": -1,
+    "errno": 4,
+    "ssl_error": 2
+  },
+  "root_cause": "Original libmssl closes when SSL_accept returns negative; r9-r1 bridge retries interrupted SSL_read but does not resume SSL_accept",
+  "fix_scope": "Continue same SSL_accept only on saved EINTR + SSL_ERROR_WANT_READ within original SO_RCVTIMEO budget; no TLS/HTTP replay or certificate bypass",
+  "prior_hour_eof_attribution": "Similar client symptom; absent server-side trace prevents retrospective exact attribution",
+  "secondary_failure": "After interrupted handshakes a subsequent fresh version query exceeded client10s deadline",
+  "log_sha256": "cb174d65f51e13d95340868e1e79ae8ec4aebaee97b178f62c8d5d89e19525a5",
+  "source_sha256": {
+    "analysis/r9r1_coexist/check.py": "99d389cf43a5e5b48d8b27b14eda0a829039bdd5be4dfa02b927a9d4279aaaf5",
+    "analysis/r9r1_coexist/workload.go": "f3809868c772d2d6f386d76af1684791add0d35878dfa9383d2ff120e2bf7986",
+    "analysis/r9r1_coexist/tls_trace.c": "0e0d804fd099fc197066e735a0bef10817d897eaa822e4de8aab1d41593b6c7f",
+    "sources/localmod/httpd_bridge.c": "dc8e13705c133bfac44752e31ee24c6746bf6ea9c6fe8a25be72cf9fb9fafb4d"
+  }
+}

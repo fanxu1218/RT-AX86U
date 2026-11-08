@@ -249,6 +249,9 @@
 !/output/softcenter_upgrade_tests.json
 !/output/merlin_component_tests.json
 !/output/merlin_component_tests.log
+!/output/r9r1_coexist_*.log
+!/output/r9r1_coexist_*_tests.json
+!/output/r9-r1长时间共存验证.md
 !/output/merlin_upstream_incompatibilities.json
 !/output/merlin_upstream_incompatibilities.log
 !/output/梅林组件移植说明.md
@@ -285,3 +288,17 @@
 !/output/soak-*.log
 !/output/soak-*_tests.json
 !/output/持续运行验证说明.md
+
+# Independent coexistence soak sources (after the historical analysis rules).
+!/analysis/r9r1_coexist/
+/analysis/r9r1_coexist/*
+!/analysis/r9r1_coexist/check.py
+!/analysis/r9r1_coexist/workload.go
+!/analysis/r9r1_coexist/tls_trace.c
+
+!/output/r9r2_coexist_*.log
+!/output/r9r2_coexist_*_tests.json
+!/output/r9r2_candidate_delta.json
+!/output/r9-r2长时间共存验证.md
+
+!/analysis/r9r1_coexist/review.py

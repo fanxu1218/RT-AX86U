@@ -1,7 +1,7 @@
 {
   "status": "LOCAL_SEALED_SHARDS_PASS",
-  "base_candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
-  "base_candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+  "base_candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w",
+  "base_candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
   "source_overlay_used": false,
   "checks": {
     "third_vm_slot_is_refused_with_bounded_wait": true,
@@ -29,21 +29,21 @@
     "native-health": {
       "schema": 1,
       "phase": "candidate-health",
-      "sealed_manifest_sha256": "b07a70cca3ce84d88a514b46bbc311d1f5af34d12040d84ba1998018ee24e908",
+      "sealed_manifest_sha256": "f658b1e131987460c463da4029ec5a87ae31fe516e493fc436be3ead3c21c496",
       "exported_entries": 3749,
       "inputs": {
         "build/barrier-bounds-fixture": "4179c66e8ca3764f3eeaea85b3b53a5edc840010400a3ce957169af27e7af1e4",
-        "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
+        "build/casefs/rootfs": "4bc554f2673aba78acb8b7a1fdd49ef3ec73e9aa444b6da488fd6dec2b530ceb",
         "build/event-bounds-fixture": "25d82c9528c0114a010838c136ddb1cb0fbd6e7b987b21976d165296cd10108c",
         "build/extended_plugin_inputs.json": "f04a5b419bcbecef8c3f6f89e17f2d832b7d649645a36c0365d5c1ef7b913b1b",
         "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
         "build/history-phase": "c9a0647937075c28f1679e9348c5da8d576ff0014b4a37a6f7c35ffa110c7529",
         "build/history_fault_fixture.so": "b29c8832c837d1311f5c5452c25cf4695efb4a77103837d5215a1f2bb50dbe49",
-        "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
-        "build/httpd_bridge_next.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
+        "build/httpd_bridge.so": "c9077a10841d321723ce9fa23b3335bf9126db99cb8f698f10620c7c281d75ec",
+        "build/httpd_bridge_next.so": "71cf616cfdb5f5af8670c31ba715017b877d0e7de2b9e031db73fc875d155da0",
         "build/httpd_tls_cache_fixture.so": "29cc9b185fc500d788939f6a77b1478cb32b97513ca1e17ebcc2449859ed0f74",
         "build/https_trace_fixture.so": "334f974097e5d9032cd27f153fd45c37583189dbd204a364f03f96235138d3c8",
-        "build/installer-boundary-inputs": "d9f656acca3f7c8b67ba3be314aadc4e9a4f437beb13ad533b2ad8ebb0de61f0",
+        "build/installer-boundary-inputs": "6dfbb28c8490daac51227798f169f9e1860fccef6fcae9944293389fddfb8b0a",
         "build/interrupt-phase.json": "b4f7520fbd17bfa3e3f971e3bc6aae69dc0092382b358d96d503989a759cd333",
         "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
         "build/log-limit-bounds-fixture": "a353d88863f8fb24122c6eb4fc49e6124dfba2d0fd983168cbd122db5a6ccdcb",
@@ -57,7 +57,7 @@
         "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
         "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
         "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
-        "build/relay-idle-fixture": "34cbaa534f6fbb1c1fa2c25bb5146f117477f1471c7adef2093248643022bf8b",
+        "build/relay-idle-fixture": "5099efe55533507ded46a888a7302a17272a7d86e199e09d1d01226aeb0511a2",
         "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
         "build/test-fancyss": "cbd35da285a9f0b0272cbfaf72d109df1e706809ed1e5115f9df49abb354eeaa",
         "build/test-health": "348add1c715e6fab40f1b48e058584b020ecbaaf9dab361232c856da673d7632",
@@ -88,7 +88,7 @@
         "sources/realplugins/pushplus-current-extended.tar.gz": "3000f98a6112c6af49e1be6b6b990fb49d187f04b500a119d5216455829c8e42",
         "sources/realplugins/pushplus-old-extended.tar.gz": "6af79aaa9b10c6ad663865d96ddc69758c6b85bce688c71b342245907d9d2926"
       },
-      "workspace_path": "build/casefs/sealed-private/job-3e40600b26819c0021b0bf77/workspace",
+      "workspace_path": "build/casefs/sealed-private/job-da37f23c3cab9883c314f724/workspace",
       "state_disk_attached": false,
       "state_lock_exclusive": false,
       "host_export_readonly": true,
@@ -102,21 +102,21 @@
     "native-uu": {
       "schema": 1,
       "phase": "candidate-uu",
-      "sealed_manifest_sha256": "aafbcc2f606957e2a852dc2ee48ca4ea3dbcf05eba81d196bc2c1d6c422530bb",
+      "sealed_manifest_sha256": "be8cc72ed59e26f969e8e81dab2491175adac69774a402b6d85e8b7315cece9a",
       "exported_entries": 3749,
       "inputs": {
         "build/barrier-bounds-fixture": "4179c66e8ca3764f3eeaea85b3b53a5edc840010400a3ce957169af27e7af1e4",
-        "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
+        "build/casefs/rootfs": "4bc554f2673aba78acb8b7a1fdd49ef3ec73e9aa444b6da488fd6dec2b530ceb",
         "build/event-bounds-fixture": "25d82c9528c0114a010838c136ddb1cb0fbd6e7b987b21976d165296cd10108c",
         "build/extended_plugin_inputs.json": "f04a5b419bcbecef8c3f6f89e17f2d832b7d649645a36c0365d5c1ef7b913b1b",
         "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
         "build/history-phase": "c9a0647937075c28f1679e9348c5da8d576ff0014b4a37a6f7c35ffa110c7529",
         "build/history_fault_fixture.so": "b29c8832c837d1311f5c5452c25cf4695efb4a77103837d5215a1f2bb50dbe49",
-        "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
-        "build/httpd_bridge_next.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
+        "build/httpd_bridge.so": "c9077a10841d321723ce9fa23b3335bf9126db99cb8f698f10620c7c281d75ec",
+        "build/httpd_bridge_next.so": "71cf616cfdb5f5af8670c31ba715017b877d0e7de2b9e031db73fc875d155da0",
         "build/httpd_tls_cache_fixture.so": "29cc9b185fc500d788939f6a77b1478cb32b97513ca1e17ebcc2449859ed0f74",
         "build/https_trace_fixture.so": "334f974097e5d9032cd27f153fd45c37583189dbd204a364f03f96235138d3c8",
-        "build/installer-boundary-inputs": "d9f656acca3f7c8b67ba3be314aadc4e9a4f437beb13ad533b2ad8ebb0de61f0",
+        "build/installer-boundary-inputs": "6dfbb28c8490daac51227798f169f9e1860fccef6fcae9944293389fddfb8b0a",
         "build/interrupt-phase.json": "b4f7520fbd17bfa3e3f971e3bc6aae69dc0092382b358d96d503989a759cd333",
         "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
         "build/log-limit-bounds-fixture": "a353d88863f8fb24122c6eb4fc49e6124dfba2d0fd983168cbd122db5a6ccdcb",
@@ -130,7 +130,7 @@
         "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
         "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
         "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
-        "build/relay-idle-fixture": "34cbaa534f6fbb1c1fa2c25bb5146f117477f1471c7adef2093248643022bf8b",
+        "build/relay-idle-fixture": "5099efe55533507ded46a888a7302a17272a7d86e199e09d1d01226aeb0511a2",
         "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
         "build/test-fancyss": "cbd35da285a9f0b0272cbfaf72d109df1e706809ed1e5115f9df49abb354eeaa",
         "build/test-health": "348add1c715e6fab40f1b48e058584b020ecbaaf9dab361232c856da673d7632",
@@ -161,7 +161,7 @@
         "sources/realplugins/pushplus-current-extended.tar.gz": "3000f98a6112c6af49e1be6b6b990fb49d187f04b500a119d5216455829c8e42",
         "sources/realplugins/pushplus-old-extended.tar.gz": "6af79aaa9b10c6ad663865d96ddc69758c6b85bce688c71b342245907d9d2926"
       },
-      "workspace_path": "build/casefs/sealed-private/job-30875b6bfefda34651b69c56/workspace",
+      "workspace_path": "build/casefs/sealed-private/job-1a65ccdfdc7500f3d8618ddb/workspace",
       "state_disk_attached": false,
       "state_lock_exclusive": false,
       "host_export_readonly": true,
@@ -175,21 +175,21 @@
     "cancel": {
       "schema": 1,
       "phase": "candidate-shard-cancel",
-      "sealed_manifest_sha256": "cb59bea30dcbef22438d65c52e460982c1fd41b388cbf9e1dd4d0e0c05fefc4e",
+      "sealed_manifest_sha256": "22a91fb07a384ed512157a586a274d65134c6aeaad198a71c335ea5fbf23d255",
       "exported_entries": 3749,
       "inputs": {
         "build/barrier-bounds-fixture": "4179c66e8ca3764f3eeaea85b3b53a5edc840010400a3ce957169af27e7af1e4",
-        "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
+        "build/casefs/rootfs": "4bc554f2673aba78acb8b7a1fdd49ef3ec73e9aa444b6da488fd6dec2b530ceb",
         "build/event-bounds-fixture": "25d82c9528c0114a010838c136ddb1cb0fbd6e7b987b21976d165296cd10108c",
         "build/extended_plugin_inputs.json": "f04a5b419bcbecef8c3f6f89e17f2d832b7d649645a36c0365d5c1ef7b913b1b",
         "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
         "build/history-phase": "c9a0647937075c28f1679e9348c5da8d576ff0014b4a37a6f7c35ffa110c7529",
         "build/history_fault_fixture.so": "b29c8832c837d1311f5c5452c25cf4695efb4a77103837d5215a1f2bb50dbe49",
-        "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
-        "build/httpd_bridge_next.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
+        "build/httpd_bridge.so": "c9077a10841d321723ce9fa23b3335bf9126db99cb8f698f10620c7c281d75ec",
+        "build/httpd_bridge_next.so": "71cf616cfdb5f5af8670c31ba715017b877d0e7de2b9e031db73fc875d155da0",
         "build/httpd_tls_cache_fixture.so": "29cc9b185fc500d788939f6a77b1478cb32b97513ca1e17ebcc2449859ed0f74",
         "build/https_trace_fixture.so": "334f974097e5d9032cd27f153fd45c37583189dbd204a364f03f96235138d3c8",
-        "build/installer-boundary-inputs": "d9f656acca3f7c8b67ba3be314aadc4e9a4f437beb13ad533b2ad8ebb0de61f0",
+        "build/installer-boundary-inputs": "6dfbb28c8490daac51227798f169f9e1860fccef6fcae9944293389fddfb8b0a",
         "build/interrupt-phase.json": "b4f7520fbd17bfa3e3f971e3bc6aae69dc0092382b358d96d503989a759cd333",
         "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
         "build/log-limit-bounds-fixture": "a353d88863f8fb24122c6eb4fc49e6124dfba2d0fd983168cbd122db5a6ccdcb",
@@ -203,7 +203,7 @@
         "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
         "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
         "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
-        "build/relay-idle-fixture": "34cbaa534f6fbb1c1fa2c25bb5146f117477f1471c7adef2093248643022bf8b",
+        "build/relay-idle-fixture": "5099efe55533507ded46a888a7302a17272a7d86e199e09d1d01226aeb0511a2",
         "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
         "build/test-fancyss": "cbd35da285a9f0b0272cbfaf72d109df1e706809ed1e5115f9df49abb354eeaa",
         "build/test-health": "348add1c715e6fab40f1b48e058584b020ecbaaf9dab361232c856da673d7632",
@@ -234,7 +234,7 @@
         "sources/realplugins/pushplus-current-extended.tar.gz": "3000f98a6112c6af49e1be6b6b990fb49d187f04b500a119d5216455829c8e42",
         "sources/realplugins/pushplus-old-extended.tar.gz": "6af79aaa9b10c6ad663865d96ddc69758c6b85bce688c71b342245907d9d2926"
       },
-      "workspace_path": "build/casefs/sealed-private/job-0bca5e9f525fcd3c3872fa14/workspace",
+      "workspace_path": "build/casefs/sealed-private/job-fae9853f2dd449201300f5c7/workspace",
       "state_disk_attached": false,
       "state_lock_exclusive": false,
       "host_export_readonly": true,
@@ -248,21 +248,21 @@
     "survivor": {
       "schema": 1,
       "phase": "candidate-shard-survivor",
-      "sealed_manifest_sha256": "052ef29196217566261f0e78d9b6d4ba463fad51f87baeb1e03cb588b6a0421c",
+      "sealed_manifest_sha256": "ba049f4819ab812a2ba6d1e45f01c77fcd1982cfe6eba33697ec7e257a469341",
       "exported_entries": 3749,
       "inputs": {
         "build/barrier-bounds-fixture": "4179c66e8ca3764f3eeaea85b3b53a5edc840010400a3ce957169af27e7af1e4",
-        "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
+        "build/casefs/rootfs": "4bc554f2673aba78acb8b7a1fdd49ef3ec73e9aa444b6da488fd6dec2b530ceb",
         "build/event-bounds-fixture": "25d82c9528c0114a010838c136ddb1cb0fbd6e7b987b21976d165296cd10108c",
         "build/extended_plugin_inputs.json": "f04a5b419bcbecef8c3f6f89e17f2d832b7d649645a36c0365d5c1ef7b913b1b",
         "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
         "build/history-phase": "c9a0647937075c28f1679e9348c5da8d576ff0014b4a37a6f7c35ffa110c7529",
         "build/history_fault_fixture.so": "b29c8832c837d1311f5c5452c25cf4695efb4a77103837d5215a1f2bb50dbe49",
-        "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
-        "build/httpd_bridge_next.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
+        "build/httpd_bridge.so": "c9077a10841d321723ce9fa23b3335bf9126db99cb8f698f10620c7c281d75ec",
+        "build/httpd_bridge_next.so": "71cf616cfdb5f5af8670c31ba715017b877d0e7de2b9e031db73fc875d155da0",
         "build/httpd_tls_cache_fixture.so": "29cc9b185fc500d788939f6a77b1478cb32b97513ca1e17ebcc2449859ed0f74",
         "build/https_trace_fixture.so": "334f974097e5d9032cd27f153fd45c37583189dbd204a364f03f96235138d3c8",
-        "build/installer-boundary-inputs": "d9f656acca3f7c8b67ba3be314aadc4e9a4f437beb13ad533b2ad8ebb0de61f0",
+        "build/installer-boundary-inputs": "6dfbb28c8490daac51227798f169f9e1860fccef6fcae9944293389fddfb8b0a",
         "build/interrupt-phase.json": "b4f7520fbd17bfa3e3f971e3bc6aae69dc0092382b358d96d503989a759cd333",
         "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
         "build/log-limit-bounds-fixture": "a353d88863f8fb24122c6eb4fc49e6124dfba2d0fd983168cbd122db5a6ccdcb",
@@ -276,7 +276,7 @@
         "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
         "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
         "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
-        "build/relay-idle-fixture": "34cbaa534f6fbb1c1fa2c25bb5146f117477f1471c7adef2093248643022bf8b",
+        "build/relay-idle-fixture": "5099efe55533507ded46a888a7302a17272a7d86e199e09d1d01226aeb0511a2",
         "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
         "build/test-fancyss": "cbd35da285a9f0b0272cbfaf72d109df1e706809ed1e5115f9df49abb354eeaa",
         "build/test-health": "348add1c715e6fab40f1b48e058584b020ecbaaf9dab361232c856da673d7632",
@@ -307,7 +307,7 @@
         "sources/realplugins/pushplus-current-extended.tar.gz": "3000f98a6112c6af49e1be6b6b990fb49d187f04b500a119d5216455829c8e42",
         "sources/realplugins/pushplus-old-extended.tar.gz": "6af79aaa9b10c6ad663865d96ddc69758c6b85bce688c71b342245907d9d2926"
       },
-      "workspace_path": "build/casefs/sealed-private/job-60c41c88bf3ac7ef8bc4ae99/workspace",
+      "workspace_path": "build/casefs/sealed-private/job-127aa8ac76a7ee72a64b7f4c/workspace",
       "state_disk_attached": false,
       "state_lock_exclusive": false,
       "host_export_readonly": true,
@@ -321,21 +321,21 @@
     "tamper": {
       "schema": 1,
       "phase": "candidate-shard-tamper",
-      "sealed_manifest_sha256": "7b1cb22faea8db86be5845f33d9e08b34fe51061afcfb09e98a9dc52497ee0f9",
+      "sealed_manifest_sha256": "cf38a0f46a1ae5ca8b07a9aac68cbc8a9c0e9e0006d973358b37a108bbada9bb",
       "exported_entries": 3749,
       "inputs": {
         "build/barrier-bounds-fixture": "4179c66e8ca3764f3eeaea85b3b53a5edc840010400a3ce957169af27e7af1e4",
-        "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
+        "build/casefs/rootfs": "4bc554f2673aba78acb8b7a1fdd49ef3ec73e9aa444b6da488fd6dec2b530ceb",
         "build/event-bounds-fixture": "25d82c9528c0114a010838c136ddb1cb0fbd6e7b987b21976d165296cd10108c",
         "build/extended_plugin_inputs.json": "f04a5b419bcbecef8c3f6f89e17f2d832b7d649645a36c0365d5c1ef7b913b1b",
         "build/fancyss_inputs.json": "2308a2407d842da6f4193389bc6f82a6cc05bb1861b0e4040e989f5f2052812b",
         "build/history-phase": "c9a0647937075c28f1679e9348c5da8d576ff0014b4a37a6f7c35ffa110c7529",
         "build/history_fault_fixture.so": "b29c8832c837d1311f5c5452c25cf4695efb4a77103837d5215a1f2bb50dbe49",
-        "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
-        "build/httpd_bridge_next.so": "e5ec4f7a33443f6f4d8b794ad416edd422a7997ba6dbb23f56ac9aa69b8d0d8c",
+        "build/httpd_bridge.so": "c9077a10841d321723ce9fa23b3335bf9126db99cb8f698f10620c7c281d75ec",
+        "build/httpd_bridge_next.so": "71cf616cfdb5f5af8670c31ba715017b877d0e7de2b9e031db73fc875d155da0",
         "build/httpd_tls_cache_fixture.so": "29cc9b185fc500d788939f6a77b1478cb32b97513ca1e17ebcc2449859ed0f74",
         "build/https_trace_fixture.so": "334f974097e5d9032cd27f153fd45c37583189dbd204a364f03f96235138d3c8",
-        "build/installer-boundary-inputs": "d9f656acca3f7c8b67ba3be314aadc4e9a4f437beb13ad533b2ad8ebb0de61f0",
+        "build/installer-boundary-inputs": "6dfbb28c8490daac51227798f169f9e1860fccef6fcae9944293389fddfb8b0a",
         "build/interrupt-phase.json": "b4f7520fbd17bfa3e3f971e3bc6aae69dc0092382b358d96d503989a759cd333",
         "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
         "build/log-limit-bounds-fixture": "a353d88863f8fb24122c6eb4fc49e6124dfba2d0fd983168cbd122db5a6ccdcb",
@@ -349,7 +349,7 @@
         "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
         "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
         "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
-        "build/relay-idle-fixture": "34cbaa534f6fbb1c1fa2c25bb5146f117477f1471c7adef2093248643022bf8b",
+        "build/relay-idle-fixture": "5099efe55533507ded46a888a7302a17272a7d86e199e09d1d01226aeb0511a2",
         "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
         "build/test-fancyss": "cbd35da285a9f0b0272cbfaf72d109df1e706809ed1e5115f9df49abb354eeaa",
         "build/test-health": "348add1c715e6fab40f1b48e058584b020ecbaaf9dab361232c856da673d7632",
@@ -380,7 +380,7 @@
         "sources/realplugins/pushplus-current-extended.tar.gz": "3000f98a6112c6af49e1be6b6b990fb49d187f04b500a119d5216455829c8e42",
         "sources/realplugins/pushplus-old-extended.tar.gz": "6af79aaa9b10c6ad663865d96ddc69758c6b85bce688c71b342245907d9d2926"
       },
-      "workspace_path": "build/casefs/sealed-private/job-7793117b000b401a9c10eebf/workspace",
+      "workspace_path": "build/casefs/sealed-private/job-5e715cad690fddb91325489d/workspace",
       "state_disk_attached": false,
       "state_lock_exclusive": false,
       "host_export_readonly": true,
@@ -393,51 +393,51 @@
     }
   },
   "logs": {
-    "output/shard_2573287defe6_native-health.log": "1b994cd1d9edbb2f505059006a5721934bd0f078124d472efb6e8f8a750d3888",
-    "output/shard_2573287defe6_native-uu.log": "fa4bdaee5127b050ea01c2a17f1c874e8a4f542992ca8ce332cc4fd76dd59349",
-    "output/shard_2573287defe6_cancel.log": "5146e291a97fd4fe20423b8eac597e085f96ed30198ff27b0dd6bdaab665d46c",
-    "output/shard_2573287defe6_survivor.log": "c655b4c2ca9a2e92ba892c5a9edd6dfb0852f29f36fc19f29d20ecc0939ab691",
-    "output/shard_2573287defe6_tamper.log": "16a5fa01983210668630a082d3e9244063808206682d720387131fc8f32af71c"
+    "output/shard_a75383c0032e_native-health.log": "7fc3a542eee928748580c9ef9d845aaa0712f70ae4cfe887a5ab6f190903f1b4",
+    "output/shard_a75383c0032e_native-uu.log": "c3d066256b570085f58a810f66bece5215f9ea185f4a2817dbda6701f78939e6",
+    "output/shard_a75383c0032e_cancel.log": "5146e291a97fd4fe20423b8eac597e085f96ed30198ff27b0dd6bdaab665d46c",
+    "output/shard_a75383c0032e_survivor.log": "c655b4c2ca9a2e92ba892c5a9edd6dfb0852f29f36fc19f29d20ecc0939ab691",
+    "output/shard_a75383c0032e_tamper.log": "16a5fa01983210668630a082d3e9244063808206682d720387131fc8f32af71c"
   },
   "timeline": {
     "native-uu": {
-      "pid": 25054,
-      "started": 48606.463740125,
-      "ended": 48663.219491833
+      "pid": 80031,
+      "started": 83359.734934291,
+      "ended": 83415.653185791
     },
     "native-health": {
-      "pid": 25055,
-      "started": 48606.473682,
-      "ended": 48637.085626041
+      "pid": 80032,
+      "started": 83359.739927458,
+      "ended": 83385.006097916
     },
     "survivor": {
-      "pid": 25093,
-      "started": 48672.206644625,
-      "ended": 48679.488913625
+      "pid": 80315,
+      "started": 83423.630653291,
+      "ended": 83430.298177708
     },
     "cancel": {
-      "pid": 25094,
-      "started": 48672.218121666,
-      "ended": 48673.693872958
+      "pid": 80316,
+      "started": 83423.64449125,
+      "ended": 83424.895218
     },
     "tamper": {
-      "pid": 25114,
-      "started": 48685.008716333,
-      "ended": 48691.172195166
+      "pid": 80370,
+      "started": 83435.474217708,
+      "ended": 83441.727872125
     }
   },
   "max_parallel_vms": 2,
   "vcpus_per_vm": 1,
   "memory_mib_per_vm": 1024,
   "failure_workspaces_retained": [
-    "build/casefs/sealed-private/job-0bca5e9f525fcd3c3872fa14",
-    "build/casefs/sealed-private/job-7793117b000b401a9c10eebf"
+    "build/casefs/sealed-private/job-fae9853f2dd449201300f5c7",
+    "build/casefs/sealed-private/job-5e715cad690fddb91325489d"
   ],
   "limits": [
     "Only the sealed executor supports parallel VM execution; legacy checker preparation remains serial",
     "No guest NIC or physical router; root-owned test accounts only",
     "Host manifest checks detect accidental input mutation; they do not defend against malicious host root"
   ],
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
-  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2"
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9"
 }

@@ -1,6 +1,6 @@
 {
   "status": "FINAL_CANDIDATE_NATIVE_INPUT_SIGNAL_PASS",
-  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
   "results": {
     "fixed": {
       "cases": [
@@ -84,10 +84,10 @@
         {
           "case": "empty_input_repeated_signal_budget",
           "disconnected": true,
-          "elapsed_seconds": 5.011778378
+          "elapsed_seconds": 5.00770217
         }
       ],
-      "log_sha256": "e19d6ffdf91a166e16679ba8620cb46b1e667c8cb26683b8ea16c88949c030f9"
+      "log_sha256": "f7086688435a9ed337b8e98709b7977bd81a8aff0f9a7d6c93e53f03c80e3f7d"
     },
     "r7": {
       "cases": [
@@ -171,10 +171,10 @@
         {
           "case": "empty_input_repeated_signal_budget",
           "disconnected": true,
-          "elapsed_seconds": 0.400362751
+          "elapsed_seconds": 0.400921542
         }
       ],
-      "log_sha256": "33f1f529f10084b5fd2bebd9630cfbe57773ad6b6bf41bbb0b61885fa07be7bd"
+      "log_sha256": "9ed2dd5d1bebe9363c5ff0852b3ab8665c15b6f53265a733a070180cdb2add7d"
     }
   },
   "firmware_rebuilt": true,
@@ -182,7 +182,7 @@
     "build/native_tls_probe_fixture.c": "738114b75f6d4666df531d40530365cb37a0144d62af8175320858bf400a0754",
     "build/interrupt_scenarios.go": "8989dc4c639d00affef9789c67297f74e05fcac03dbb57a4305414b308cdd157",
     "build/check_tls_input.py": "82bbfbe587b538bb9ec18c9c813cd1e05c1d42b08d590c84c790052bfaa23723",
-    "sources/localmod/httpd_bridge.c": "dc8e13705c133bfac44752e31ee24c6746bf6ea9c6fe8a25be72cf9fb9fafb4d",
+    "sources/localmod/httpd_bridge.c": "d689713756d20aeab486352f84f806e08f1b1a3ca03951635b9e171c55bfd8a9",
     "build/native_runtime_client.go": "2f9515bf6d814c064c7e0957455c0cfaf12ef01483be9732e49fd783cf32acf5"
   },
   "r7_baseline_source_commit": "a2ff36df57a555ce6319dc82e2e230c3ec5db15d",

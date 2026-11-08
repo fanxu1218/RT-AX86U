@@ -6,7 +6,6 @@ Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
 
 REAL_PLUGIN_SETUP_READY
 starting ntp...
-NTP_START_READY elapsed=5.833874912s start_attempts=1
 download uuplugin script info successfully
 URL: http://uu.fixture.test:35000/monitor
 MD5: d90649080e15b5165aba44b9ba9ee18f
@@ -21,97 +20,97 @@ PASS curl_wget_actual_verified_https_downloads_match_bytes_with_uu
 PASS both_download_clients_reject_wrong_hostname_and_untrusted_ca_without_disabling_tls_verification
 PASS dropbear_factory_flags_ed25519_key_auth_and_shell_without_private_library_environment
 PASS dropbear_restart_keeps_jffs_host_key_and_rejects_unapproved_client_key_with_uu_alive
-FACTORY_HOSTKEY_FIXTURE kind=rsa elapsed=6.03894424s attempts=1
+FACTORY_HOSTKEY_FIXTURE kind=rsa elapsed=25.443982096s attempts=1
 PASS dropbear_retains_factory_rsa_host_key_format_and_authentication
-FACTORY_HOSTKEY_FIXTURE kind=ecdsa elapsed=123.577536ms attempts=1
+FACTORY_HOSTKEY_FIXTURE kind=ecdsa elapsed=114.16832ms attempts=1
 PASS dropbear_retains_factory_ecdsa_host_key_format_and_authentication
-miniupnpd[2521]: it is advised to use network interface name instead of 192.168.77.1
-miniupnpd[2521]: system uptime is 83 seconds
-miniupnpd[2521]: Reloading rules from lease file
-miniupnpd[2521]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794071737
-miniupnpd[2521]: IGNORED : Reserved / private IP address 203.0.113.1 on ext interface wan0
-miniupnpd[2521]: HTTP listening on port 35323
-miniupnpd[2521]: Listening for NAT-PMP/PCP traffic on port 5351
-miniupnpd[2521]: HTTP REQUEST from 192.168.77.1:55487 : GET /rootDesc.xml (HTTP/1.1)
-miniupnpd[2521]: Host: 192.168.77.1:35323
-miniupnpd[2521]: HTTP REQUEST from 192.168.77.1:52389 : POST /ctl/IPConn (HTTP/1.1)
-miniupnpd[2521]: Host: 192.168.77.1:35323
-miniupnpd[2521]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
-miniupnpd[2521]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
-miniupnpd[2521]: UPnP permission rule 0 matched : port mapping accepted
-miniupnpd[2521]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
-miniupnpd[2521]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
-miniupnpd[2521]: HTTP REQUEST from 192.168.77.1:51523 : POST /ctl/IPConn (HTTP/1.1)
-miniupnpd[2521]: Host: 192.168.77.1:35323
-miniupnpd[2521]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
-miniupnpd[2521]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
-miniupnpd[2521]: HTTP REQUEST from 192.168.77.1:55975 : POST /ctl/IPConn (HTTP/1.1)
-miniupnpd[2521]: Host: 192.168.77.1:35323
-miniupnpd[2521]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
-miniupnpd[2521]: Client 192.168.77.1 tried to redirect port to 192.168.77.2
-miniupnpd[2521]: Returning UPnPError 718: ConflictInMappingEntry
-miniupnpd[2521]: HTTP REQUEST from 192.168.77.1:57861 : POST /ctl/IPConn (HTTP/1.1)
-miniupnpd[2521]: Host: 192.168.77.1:35323
-miniupnpd[2521]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
-miniupnpd[2521]: DeletePortMapping: external port: 45001, protocol: TCP
-miniupnpd[2521]: removing redirect rule port 45001 TCP
-miniupnpd[2521]: Trying to delete nat rule at index 0
-miniupnpd[2521]: Trying to delete filter rule at index 0
-miniupnpd[2521]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
-miniupnpd[2521]: Trying to delete peer rule at index 0
+miniupnpd[4149]: it is advised to use network interface name instead of 192.168.77.1
+miniupnpd[4149]: system uptime is 79 seconds
+miniupnpd[4149]: Reloading rules from lease file
+miniupnpd[4149]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794106691
+miniupnpd[4149]: IGNORED : Reserved / private IP address 203.0.113.1 on ext interface wan0
+miniupnpd[4149]: HTTP listening on port 35323
+miniupnpd[4149]: Listening for NAT-PMP/PCP traffic on port 5351
+miniupnpd[4149]: HTTP REQUEST from 192.168.77.1:38847 : GET /rootDesc.xml (HTTP/1.1)
+miniupnpd[4149]: Host: 192.168.77.1:35323
+miniupnpd[4149]: HTTP REQUEST from 192.168.77.1:45757 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[4149]: Host: 192.168.77.1:35323
+miniupnpd[4149]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[4149]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[4149]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[4149]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[4149]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[4149]: HTTP REQUEST from 192.168.77.1:42339 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[4149]: Host: 192.168.77.1:35323
+miniupnpd[4149]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[4149]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[4149]: HTTP REQUEST from 192.168.77.1:55057 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[4149]: Host: 192.168.77.1:35323
+miniupnpd[4149]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[4149]: Client 192.168.77.1 tried to redirect port to 192.168.77.2
+miniupnpd[4149]: Returning UPnPError 718: ConflictInMappingEntry
+miniupnpd[4149]: HTTP REQUEST from 192.168.77.1:57821 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[4149]: Host: 192.168.77.1:35323
+miniupnpd[4149]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[4149]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[4149]: removing redirect rule port 45001 TCP
+miniupnpd[4149]: Trying to delete nat rule at index 0
+miniupnpd[4149]: Trying to delete filter rule at index 0
+miniupnpd[4149]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[4149]: Trying to delete peer rule at index 0
 PASS miniupnpd_factory_chain_names_real_soap_mapping_query_delete_and_secure_mode_with_uu
-miniupnpd[2521]: HTTP REQUEST from 192.168.77.1:57019 : POST /ctl/IPConn (HTTP/1.1)
-miniupnpd[2521]: Host: 192.168.77.1:35323
-miniupnpd[2521]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
-miniupnpd[2521]: AddPortMapping: ext port 45002 to 192.168.77.1:45002 protocol TCP for: owned-test leaseduration=120 rhost=
-miniupnpd[2521]: UPnP permission rule 0 matched : port mapping accepted
-miniupnpd[2521]: Check protocol TCP for port 45002 on ext_if wan0 203.0.113.1, 017100CB
-miniupnpd[2521]: redirecting port 45002 to 192.168.77.1:45002 protocol TCP for: owned-test
-miniupnpd[2521]: HTTP REQUEST from 192.168.77.1:60945 : POST /ctl/IPConn (HTTP/1.1)
-miniupnpd[2521]: Host: 192.168.77.1:35323
-miniupnpd[2521]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
-miniupnpd[2521]: DeletePortMapping: external port: 45002, protocol: TCP
-miniupnpd[2521]: removing redirect rule port 45002 TCP
-miniupnpd[2521]: Trying to delete nat rule at index 0
-miniupnpd[2521]: Trying to delete filter rule at index 0
-miniupnpd[2521]: postrouting rule #0: MASQUERADE 192.168.77.1 45002
-miniupnpd[2521]: Trying to delete peer rule at index 0
+miniupnpd[4149]: HTTP REQUEST from 192.168.77.1:32883 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[4149]: Host: 192.168.77.1:35323
+miniupnpd[4149]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[4149]: AddPortMapping: ext port 45002 to 192.168.77.1:45002 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[4149]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[4149]: Check protocol TCP for port 45002 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[4149]: redirecting port 45002 to 192.168.77.1:45002 protocol TCP for: owned-test
+miniupnpd[4149]: HTTP REQUEST from 192.168.77.1:53765 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[4149]: Host: 192.168.77.1:35323
+miniupnpd[4149]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[4149]: DeletePortMapping: external port: 45002, protocol: TCP
+miniupnpd[4149]: removing redirect rule port 45002 TCP
+miniupnpd[4149]: Trying to delete nat rule at index 0
+miniupnpd[4149]: Trying to delete filter rule at index 0
+miniupnpd[4149]: postrouting rule #0: MASQUERADE 192.168.77.1 45002
+miniupnpd[4149]: Trying to delete peer rule at index 0
 PASS miniupnpd_postrouting_dependency_recovers_after_factory_nat_restore_without_custom_scripts_or_duplicate_hooks
-miniupnpd[2521]: shutting down MiniUPnPd
-miniupnpd[2633]: it is advised to use network interface name instead of 192.168.77.1
-miniupnpd[2633]: system uptime is 84 seconds
-miniupnpd[2633]: Reloading rules from lease file
-miniupnpd[2633]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794071738
-miniupnpd[2633]: Reserved / private IP address 203.0.113.1 on ext interface wan0: Port forwarding is impossible
-miniupnpd[2633]: You are probably behind NAT, enable option ext_perform_stun=yes to detect public IP address
-miniupnpd[2633]: Or use ext_ip= / -o option to declare public IP address
-miniupnpd[2633]: In case that miniupnpd is thinking that it's behind symmetric NAT while it actually is full-cone
-miniupnpd[2633]: You can set option ext_allow_private_ipv4=yes to enable port forwarding
-miniupnpd[2633]: But you may still need to configure stun server or ext_ip to make it work correctly
-miniupnpd[2633]: Public IP address is required by UPnP/PCP/PMP protocols and clients do not work without it
-miniupnpd[2633]: HTTP listening on port 35323
-miniupnpd[2633]: Listening for NAT-PMP/PCP traffic on port 5351
-miniupnpd[2633]: HTTP REQUEST from 192.168.77.1:58127 : GET /rootDesc.xml (HTTP/1.1)
-miniupnpd[2633]: Host: 192.168.77.1:35323
-miniupnpd[2633]: HTTP REQUEST from 192.168.77.1:54101 : POST /ctl/IPConn (HTTP/1.1)
-miniupnpd[2633]: Host: 192.168.77.1:35323
-miniupnpd[2633]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
-miniupnpd[2633]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
-miniupnpd[2633]: UPnP permission rule 0 matched : port mapping accepted
-miniupnpd[2633]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
-miniupnpd[2633]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
-miniupnpd[2633]: Returning UPnPError 501: Action Failed
-miniupnpd[2633]: shutting down MiniUPnPd
-miniupnpd[2633]: finalize_sendto(): 475 bytes on socket 5
-miniupnpd[2633]: finalize_sendto(): 491 bytes on socket 5
-miniupnpd[2633]: finalize_sendto(): 473 bytes on socket 5
-miniupnpd[2633]: finalize_sendto(): 420 bytes on socket 5
-miniupnpd[2633]: finalize_sendto(): 459 bytes on socket 5
-miniupnpd[2633]: finalize_sendto(): 420 bytes on socket 5
-miniupnpd[2633]: finalize_sendto(): 479 bytes on socket 5
-miniupnpd[2633]: finalize_sendto(): 420 bytes on socket 5
-miniupnpd[2633]: finalize_sendto(): 483 bytes on socket 5
-miniupnpd[2633]: finalize_sendto(): 411 bytes on socket 5
+miniupnpd[4149]: shutting down MiniUPnPd
+miniupnpd[4262]: it is advised to use network interface name instead of 192.168.77.1
+miniupnpd[4262]: system uptime is 80 seconds
+miniupnpd[4262]: Reloading rules from lease file
+miniupnpd[4262]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794106692
+miniupnpd[4262]: Reserved / private IP address 203.0.113.1 on ext interface wan0: Port forwarding is impossible
+miniupnpd[4262]: You are probably behind NAT, enable option ext_perform_stun=yes to detect public IP address
+miniupnpd[4262]: Or use ext_ip= / -o option to declare public IP address
+miniupnpd[4262]: In case that miniupnpd is thinking that it's behind symmetric NAT while it actually is full-cone
+miniupnpd[4262]: You can set option ext_allow_private_ipv4=yes to enable port forwarding
+miniupnpd[4262]: But you may still need to configure stun server or ext_ip to make it work correctly
+miniupnpd[4262]: Public IP address is required by UPnP/PCP/PMP protocols and clients do not work without it
+miniupnpd[4262]: HTTP listening on port 35323
+miniupnpd[4262]: Listening for NAT-PMP/PCP traffic on port 5351
+miniupnpd[4262]: HTTP REQUEST from 192.168.77.1:60569 : GET /rootDesc.xml (HTTP/1.1)
+miniupnpd[4262]: Host: 192.168.77.1:35323
+miniupnpd[4262]: HTTP REQUEST from 192.168.77.1:47015 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[4262]: Host: 192.168.77.1:35323
+miniupnpd[4262]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[4262]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[4262]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[4262]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[4262]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[4262]: Returning UPnPError 501: Action Failed
+miniupnpd[4262]: shutting down MiniUPnPd
+miniupnpd[4262]: finalize_sendto(): 475 bytes on socket 5
+miniupnpd[4262]: finalize_sendto(): 491 bytes on socket 5
+miniupnpd[4262]: finalize_sendto(): 473 bytes on socket 5
+miniupnpd[4262]: finalize_sendto(): 420 bytes on socket 5
+miniupnpd[4262]: finalize_sendto(): 459 bytes on socket 5
+miniupnpd[4262]: finalize_sendto(): 420 bytes on socket 5
+miniupnpd[4262]: finalize_sendto(): 479 bytes on socket 5
+miniupnpd[4262]: finalize_sendto(): 420 bytes on socket 5
+miniupnpd[4262]: finalize_sendto(): 483 bytes on socket 5
+miniupnpd[4262]: finalize_sendto(): 411 bytes on socket 5
 PASS miniupnpd_explicit_private_wan_disabled_setting_is_preserved
 PASS openvpn_real_mutual_tls_27_handshake_and_tun_ping_with_uu_alive
 PASS openvpn_27_retained_factory_pam_plugin_authenticates_valid_account_and_rejects_wrong_password
@@ -123,5 +122,5 @@ PASS all_component_flows_keep_original_uu_download_start_once_and_owned_data
 MERLIN_RESULT {"checks":{"all_component_flows_keep_original_uu_download_start_once_and_owned_data":true,"both_download_clients_reject_wrong_hostname_and_untrusted_ca_without_disabling_tls_verification":true,"curl_wget_actual_verified_https_downloads_match_bytes_with_uu":true,"dnsmasq_real_dhcp_discover_offer_request_ack_and_lease_file_retained_after_restart":true,"dnsmasq_real_udp_tcp_queries_and_repeated_connections":true,"dnsmasq_reload_restart_and_partial_client_disconnect_preserve_config_and_uu":true,"dropbear_factory_flags_ed25519_key_auth_and_shell_without_private_library_environment":true,"dropbear_restart_keeps_jffs_host_key_and_rejects_unapproved_client_key_with_uu_alive":true,"dropbear_retains_factory_ecdsa_host_key_format_and_authentication":true,"dropbear_retains_factory_rsa_host_key_format_and_authentication":true,"factory_legacy_ncp_disable_profile_keeps_original_program_output_while_modern_default_remains_27":true,"miniupnpd_explicit_private_wan_disabled_setting_is_preserved":true,"miniupnpd_factory_chain_names_real_soap_mapping_query_delete_and_secure_mode_with_uu":true,"miniupnpd_postrouting_dependency_recovers_after_factory_nat_restore_without_custom_scripts_or_duplicate_hooks":true,"openvpn_27_retained_factory_pam_plugin_authenticates_valid_account_and_rejects_wrong_password":true,"openvpn_only_disable_marker_retains_other_new_components":true,"openvpn_real_mutual_tls_27_handshake_and_tun_ping_with_uu_alive":true,"retained_factory_libvpn_generates_real_client_configuration_accepted_by_new_option_parser":true,"six_default_entries_run_requested_versions_and_component_marker_selects_exact_factory_output":true},"full_suite":true,"real_uu_monitor_executed":false,"uu_api_requests":1,"uu_downloads":1,"versions":{"curl":"curl 8.17.0 (arm-buildroot-linux-gnueabi) libcurl/8.17.0 OpenSSL/1.1.1w","dnsmasq":"Dnsmasq version 2.93  Copyright (c) 2000-2026 Simon Kelley","dropbear":"Dropbear v2026.94","miniupnpd":"miniupnpd 2.3.11 3004.388-433fc608f5 Aug 20 2026","openvpn":"OpenVPN 2.7.6 [git:3004.388/433fc608f5fc1689+] arm-buildroot-linux-gnueabi [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [MH/PKTINFO] [AEAD] built on Aug 20 2026","wget":"GNU Wget 1.25.0 built on linux-gnueabi."}}
 SOAK_REAPER orphans_reaped=3
 NESTED_MERLIN_JOB_STATUS=0
-[   99.140991] reboot: Power down
+[   93.882421] reboot: Power down
 LINUX_READONLY_JOB_STATUS=0

@@ -1,0 +1,17 @@
+{
+  "status": "FIXTURE_CERT_EXPIRY_REPRODUCED",
+  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+  "last_successful_sample": {
+    "seconds": 3485.106687568,
+    "queries": 570,
+    "events": 34
+  },
+  "error": "curl60/OpenSSL10 certificate has expired",
+  "owner": "Owned onlineRepository fixture certificate NotAfter=time.Now()+1h created before setup",
+  "source": "build/test_online.go:56",
+  "production_modified": false,
+  "one_hour_result": "NOT_PASS; complete measured run must repeat",
+  "log_sha256": "5140a81387d27e5b62849d3f475953d3f8dd5f5d9743c276a8c5f2fba784c8ca",
+  "controller_source_sha256": "8529510a6717b6f1558da157d03bb62815ef2b53466b69a6dc5d00852396fd5d",
+  "workload_sha256": "ae6addd76ffff8e86cbcded75a978f00ab339721bde9b41875ae18816698dea8"
+}

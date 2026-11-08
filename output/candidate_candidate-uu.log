@@ -5,7 +5,7 @@ Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
 
 REAL_PLUGIN_SETUP_READY
 cacert.pem doesn't exist !!!!!!
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107175723, 2026/11/7 ~ 2046/11/8
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108033705, 2026/11/8 ~ 2046/11/9
 starting ntp...
 download uuplugin script info successfully
 URL: http://uu.fixture.test:35000/monitor

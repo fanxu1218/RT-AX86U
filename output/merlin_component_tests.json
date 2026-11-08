@@ -1,7 +1,7 @@
 {
   "status": "LOCAL_MERLIN_COMPONENTS_PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
-  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
   "staged_overlay": false,
   "selected_service_probe": null,
   "full_system_emulation": true,
@@ -445,11 +445,11 @@
   "vm": {
     "schema": 1,
     "phase": "candidate-merlin-system",
-    "sealed_manifest_sha256": "c6780cb245996bd5f6332c229896cafa7feb93f163aa8e425b58a791604a831b",
+    "sealed_manifest_sha256": "53cf277087be8d14d7b53b7fa21ba926e7036c598aa3d66462a6fc225d8ca159",
     "exported_entries": 3909,
     "inputs": {
-      "build/casefs/rootfs": "1b1c80a0d7ee962c9dc29c1d88e826e9eadabecd434abc92cd87c824df32cd5a",
-      "build/httpd_bridge.so": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
+      "build/casefs/rootfs": "4bc554f2673aba78acb8b7a1fdd49ef3ec73e9aa444b6da488fd6dec2b530ceb",
+      "build/httpd_bridge.so": "c9077a10841d321723ce9fa23b3335bf9126db99cb8f698f10620c7c281d75ec",
       "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
       "build/merlin-system": "d57d0aa959ff853acd3b7e55f3f982b1e8a062a874d87fa1f971e8c98bdb7e47",
       "build/merlin-vpn-config-fixture.so": "167396db6a0b69fc115c93b0b3770a646b2dbed51eec567e103ef1cc43e068e9",
@@ -469,7 +469,7 @@
       "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
       "build/tools/linux-initramfs.gz": "b2cdb4150bd81b7b08edc74a812255e9bc8d8bce6c07d4167c21745599e5baa1"
     },
-    "workspace_path": "build/casefs/sealed-private/job-46a01245a22c13fab003bb69/workspace",
+    "workspace_path": "build/casefs/sealed-private/job-267cf08f0ebc913367e7bea2/workspace",
     "state_disk_attached": false,
     "state_lock_exclusive": false,
     "host_export_readonly": true,
@@ -480,7 +480,7 @@
     "timeout_seconds": 1200,
     "sealed_inputs_verified_before_and_after": true
   },
-  "log_sha256": "3db95ab0cc3b0ef39142b6b76979e20ba2b228ecac52c5d5478f160e2f0ea2c9",
+  "log_sha256": "2d8e563f306b132a856d1d89a12384fdafe2e473c5382ea1baf1e5272cf34123",
   "limits": [
     "Networkless full Cortex-A53 Linux6.12 system emulation with native kernel ARM32 compatibility",
     "No physical router, target kernel4.1, NAND flash, wireless drivers or real WAN packet forwarding",

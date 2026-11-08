@@ -1,7 +1,7 @@
 {
   "status": "LOCAL_ISOLATION_PASS",
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
-  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
   "checks": {
     "upgrade_native_shell_resolution_center_start_original_process_helper_private_api_and_uu": true,
     "upgrade_selected_curl_and_factory_numeric_url_contracts_and_hostname_callback_pinned_to_loopback": true,

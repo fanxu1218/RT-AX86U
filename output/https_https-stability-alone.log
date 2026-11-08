@@ -7,52 +7,52 @@ REAL_PLUGIN_SETUP_READY
 RELAY_IDLE_RESULT result=-1 errno=11 signals=40 seconds=1.003 production_idle_seconds=120 test_idle_seconds=1
 PASS repeated_signals_do_not_restart_the_receive_idle_deadline
 cacert.pem doesn't exist !!!!!!
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107171950, 2026/11/7 ~ 2046/11/8
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108030218, 2026/11/8 ~ 2046/11/9
 starting ntp...
 download uuplugin script info successfully
 URL: http://uu.fixture.test:35000/monitor
 MD5: d90649080e15b5165aba44b9ba9ee18f
 download uuplugin script successfully
 prepare to execute uuplugin stript...
-READONLY_QUERY id=89000 action=status status=200 bytes=59 valid=true duration=276.743541ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89001 action=version status=200 bytes=21 valid=true duration=692.983959ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89002 action=status status=200 bytes=59 valid=true duration=276.586334ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89003 action=version status=200 bytes=21 valid=true duration=756.231375ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89004 action=status status=200 bytes=59 valid=true duration=278.210875ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89005 action=version status=200 bytes=21 valid=true duration=715.458542ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89006 action=status status=200 bytes=59 valid=true duration=287.950708ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89007 action=version status=200 bytes=21 valid=true duration=723.83575ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89008 action=status status=200 bytes=59 valid=true duration=289.909542ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89009 action=version status=200 bytes=21 valid=true duration=701.722626ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89010 action=status status=200 bytes=59 valid=true duration=287.39ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89011 action=version status=200 bytes=21 valid=true duration=714.743042ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89012 action=status status=200 bytes=59 valid=true duration=283.564625ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89013 action=version status=200 bytes=21 valid=true duration=699.788542ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89014 action=status status=200 bytes=59 valid=true duration=277.195459ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89015 action=version status=200 bytes=21 valid=true duration=710.737292ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89016 action=status status=200 bytes=59 valid=true duration=277.292458ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89017 action=version status=200 bytes=21 valid=true duration=683.353459ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89018 action=status status=200 bytes=59 valid=true duration=274.852791ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89019 action=version status=200 bytes=21 valid=true duration=694.612334ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89020 action=status status=200 bytes=59 valid=true duration=281.676792ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89021 action=version status=200 bytes=21 valid=true duration=703.453376ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89022 action=status status=200 bytes=59 valid=true duration=384.156083ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89023 action=version status=200 bytes=21 valid=true duration=818.398918ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89024 action=status status=200 bytes=59 valid=true duration=302.014958ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89025 action=version status=200 bytes=21 valid=true duration=746.548876ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89026 action=status status=200 bytes=59 valid=true duration=389.483417ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89027 action=version status=200 bytes=21 valid=true duration=1.095738167s error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89028 action=status status=200 bytes=59 valid=true duration=315.443584ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89029 action=version status=200 bytes=21 valid=true duration=802.983834ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89030 action=status status=200 bytes=59 valid=true duration=309.397291ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89031 action=version status=200 bytes=21 valid=true duration=763.113042ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89032 action=status status=200 bytes=59 valid=true duration=306.034209ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89033 action=version status=200 bytes=21 valid=true duration=817.219584ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
-READONLY_QUERY id=89034 action=status status=200 bytes=59 valid=true duration=346.466125ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89000 action=status status=200 bytes=59 valid=true duration=256.44025ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89001 action=version status=200 bytes=21 valid=true duration=665.894167ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89002 action=status status=200 bytes=59 valid=true duration=273.258667ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89003 action=version status=200 bytes=21 valid=true duration=692.33725ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89004 action=status status=200 bytes=59 valid=true duration=280.702167ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89005 action=version status=200 bytes=21 valid=true duration=688.382417ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89006 action=status status=200 bytes=59 valid=true duration=273.024792ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89007 action=version status=200 bytes=21 valid=true duration=694.876208ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89008 action=status status=200 bytes=59 valid=true duration=274.650917ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89009 action=version status=200 bytes=21 valid=true duration=667.167959ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89010 action=status status=200 bytes=59 valid=true duration=275.004333ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89011 action=version status=200 bytes=21 valid=true duration=689.529042ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89012 action=status status=200 bytes=59 valid=true duration=277.18275ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89013 action=version status=200 bytes=21 valid=true duration=693.957042ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89014 action=status status=200 bytes=59 valid=true duration=270.96425ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89015 action=version status=200 bytes=21 valid=true duration=689.661167ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89016 action=status status=200 bytes=59 valid=true duration=272.26725ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89017 action=version status=200 bytes=21 valid=true duration=669.263042ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89018 action=status status=200 bytes=59 valid=true duration=273.344084ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89019 action=version status=200 bytes=21 valid=true duration=723.288834ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89020 action=status status=200 bytes=59 valid=true duration=278.619209ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89021 action=version status=200 bytes=21 valid=true duration=699.770001ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89022 action=status status=200 bytes=59 valid=true duration=278.044042ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89023 action=version status=200 bytes=21 valid=true duration=694.42475ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89024 action=status status=200 bytes=59 valid=true duration=272.189875ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89025 action=version status=200 bytes=21 valid=true duration=678.043542ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89026 action=status status=200 bytes=59 valid=true duration=273.507583ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89027 action=version status=200 bytes=21 valid=true duration=698.307875ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89028 action=status status=200 bytes=59 valid=true duration=275.769208ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89029 action=version status=200 bytes=21 valid=true duration=732.93075ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89030 action=status status=200 bytes=59 valid=true duration=276.871458ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89031 action=version status=200 bytes=21 valid=true duration=692.579792ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89032 action=status status=200 bytes=59 valid=true duration=278.374959ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89033 action=version status=200 bytes=21 valid=true duration=677.13725ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89034 action=status status=200 bytes=59 valid=true duration=279.681834ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
 FORCED_SIGNAL_QUERY id=89034 signals=3 kernel_eintr=3
-READONLY_QUERY id=89035 action=version status=200 bytes=21 valid=true duration=880.6245ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
+READONLY_QUERY id=89035 action=version status=200 bytes=21 valid=true duration=690.865084ms error=<nil> headers=map[Connection:[keep-alive] Content-Type:[application/json]]
 FORCED_SIGNAL_QUERY id=89035 signals=3 kernel_eintr=3
-HTTPS_STABILITY_RESULT phase=https-stability-alone queries=36 failures=0 uu_running=false uu_pid=1684 uu_api_requests=1 uu_downloads=1 uu_launches=start trace_eintr=7
+HTTPS_STABILITY_RESULT phase=https-stability-alone queries=36 failures=0 uu_running=false uu_pid=1684 uu_api_requests=1 uu_downloads=1 uu_launches=start trace_eintr=6
 PASS same_connection_resume_complete_json_and_no_request_replay
 PASS original_login_tls_uu_page_and_private_plugin_state_preserved
 PASS interrupted_reads_keep_config_certificates_and_uu_data
@@ -156,6 +156,11 @@ fwrite stream=0x139950 size=1 count=409 returned=409 error=0 errno=2
 recv fd=6 requested=8192 returned=0 errno=0 header=0
 SSL_write ssl=0x12dd78 requested=409 returned=409 errno=0
 SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=409 errno=0 header=1
+fwrite stream=0x139950 size=1 count=409 returned=409 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=409 returned=409 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
 recv fd=6 requested=8192 returned=497 errno=0 header=1
 fwrite stream=0x139950 size=1 count=497 returned=497 error=0 errno=2
 recv fd=6 requested=8192 returned=0 errno=0 header=0
@@ -186,20 +191,15 @@ fwrite stream=0x139950 size=1 count=592 returned=592 error=0 errno=2
 recv fd=6 requested=8192 returned=0 errno=0 header=0
 SSL_write ssl=0x12dd78 requested=592 returned=592 errno=0
 SSL_shutdown ssl=0x12dd78 returned=0 errno=0
-recv fd=6 requested=8192 returned=592 errno=0 header=1
-fwrite stream=0x139950 size=1 count=592 returned=592 error=0 errno=2
-recv fd=6 requested=8192 returned=0 errno=0 header=0
-SSL_write ssl=0x12dd78 requested=592 returned=592 errno=0
-SSL_shutdown ssl=0x12dd78 returned=0 errno=0
 recv fd=6 requested=8192 returned=759 errno=0 header=1
 fwrite stream=0x139950 size=1 count=759 returned=759 error=0 errno=2
 recv fd=6 requested=8192 returned=0 errno=0 header=0
 SSL_write ssl=0x12dd78 requested=759 returned=759 errno=0
 SSL_shutdown ssl=0x12dd78 returned=0 errno=0
-recv fd=6 requested=8192 returned=759 errno=0 header=1
-fwrite stream=0x139950 size=1 count=759 returned=759 error=0 errno=2
+recv fd=6 requested=8192 returned=824 errno=0 header=1
+fwrite stream=0x139950 size=1 count=824 returned=824 error=0 errno=2
 recv fd=6 requested=8192 returned=0 errno=0 header=0
-SSL_write ssl=0x12dd78 requested=759 returned=759 errno=0
+SSL_write ssl=0x12dd78 requested=824 returned=824 errno=0
 SSL_shutdown ssl=0x12dd78 returned=0 errno=0
 recv fd=6 requested=8192 returned=824 errno=0 header=1
 fwrite stream=0x139950 size=1 count=824 returned=824 error=0 errno=2
@@ -341,11 +341,6 @@ fwrite stream=0x139950 size=1 count=1515 returned=1515 error=0 errno=2
 recv fd=6 requested=8192 returned=0 errno=0 header=0
 SSL_write ssl=0x12dd78 requested=1515 returned=1515 errno=0
 SSL_shutdown ssl=0x12dd78 returned=0 errno=0
-recv fd=6 requested=8192 returned=1515 errno=0 header=1
-fwrite stream=0x139950 size=1 count=1515 returned=1515 error=0 errno=2
-recv fd=6 requested=8192 returned=0 errno=0 header=0
-SSL_write ssl=0x12dd78 requested=1515 returned=1515 errno=0
-SSL_shutdown ssl=0x12dd78 returned=0 errno=0
 recv fd=6 requested=8192 returned=1577 errno=0 header=1
 fwrite stream=0x139950 size=1 count=1577 returned=1577 error=0 errno=2
 recv fd=6 requested=8192 returned=0 errno=0 header=0
@@ -401,10 +396,10 @@ fwrite stream=0x139950 size=1 count=1640 returned=1640 error=0 errno=2
 recv fd=6 requested=8192 returned=0 errno=0 header=0
 SSL_write ssl=0x12dd78 requested=1640 returned=1640 errno=0
 SSL_shutdown ssl=0x12dd78 returned=0 errno=0
-recv fd=6 requested=8192 returned=1742 errno=0 header=1
-fwrite stream=0x139950 size=1 count=1742 returned=1742 error=0 errno=2
+recv fd=6 requested=8192 returned=1822 errno=0 header=1
+fwrite stream=0x139950 size=1 count=1822 returned=1822 error=0 errno=2
 recv fd=6 requested=8192 returned=0 errno=0 header=0
-SSL_write ssl=0x12dd78 requested=1742 returned=1742 errno=0
+SSL_write ssl=0x12dd78 requested=1822 returned=1822 errno=0
 SSL_shutdown ssl=0x12dd78 returned=0 errno=0
 recv fd=6 requested=8192 returned=1822 errno=0 header=1
 fwrite stream=0x139950 size=1 count=1822 returned=1822 error=0 errno=2
@@ -446,6 +441,11 @@ fwrite stream=0x139950 size=1 count=2092 returned=2092 error=0 errno=2
 recv fd=6 requested=8192 returned=0 errno=0 header=0
 SSL_write ssl=0x12dd78 requested=2092 returned=2092 errno=0
 SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+recv fd=6 requested=8192 returned=2092 errno=0 header=1
+fwrite stream=0x139950 size=1 count=2092 returned=2092 error=0 errno=2
+recv fd=6 requested=8192 returned=0 errno=0 header=0
+SSL_write ssl=0x12dd78 requested=2092 returned=2092 errno=0
+SSL_shutdown ssl=0x12dd78 returned=0 errno=0
 recv fd=6 requested=8192 returned=103 errno=0 header=1
 fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
 recv fd=6 requested=8192 returned=30 errno=0 header=0
@@ -453,6 +453,7 @@ fwrite stream=0x139950 size=1 count=30 returned=30 error=0 errno=2
 recv fd=6 requested=8192 returned=0 errno=0 header=0
 SSL_write ssl=0x12dd78 requested=133 returned=133 errno=0
 SSL_shutdown ssl=0x12dd78 returned=0 errno=0
+native_alarm seconds=20 previous=0
 recv fd=6 requested=8192 returned=103 errno=0 header=1
 fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
 recv fd=6 requested=8192 returned=70 errno=0 header=0
@@ -480,8 +481,6 @@ SSL_write ssl=0x12dd78 requested=1879 returned=1879 errno=0
 SSL_shutdown ssl=0x12dd78 returned=0 errno=0
 recv fd=6 requested=8192 returned=103 errno=0 header=1
 fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
-native_alarm seconds=20 previous=0
-recv fd=6 requested=8192 returned=-1 errno=4 header=0
 recv fd=6 requested=8192 returned=32 errno=0 header=0
 fwrite stream=0x139950 size=1 count=32 returned=32 error=0 errno=2
 recv fd=6 requested=8192 returned=0 errno=0 header=0
@@ -787,7 +786,7 @@ SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
 SSL_shutdown ssl=0x12dd78 returned=0 errno=0
 recv fd=6 requested=8192 returned=103 errno=0 header=1
 fwrite stream=0x139950 size=1 count=103 returned=103 error=0 errno=2
-native_alarm seconds=20 previous=2
+native_alarm seconds=20 previous=1
 recv fd=6 requested=8192 returned=-1 errno=4 header=0
 native_alarm seconds=20 previous=20
 recv fd=6 requested=8192 returned=-1 errno=4 header=0
@@ -814,52 +813,52 @@ SSL_write ssl=0x12dd78 requested=135 returned=135 errno=0
 DIAGNOSTIC /tmp/.localmod/bootstrap.log
 
 DIAGNOSTIC /var/log/perpd/current
-20261107T171949.180994: perpd[925]: starting on /koolshare/perp ...
-20261107T171949.184645: perpd[925]: supervising 0 active services
-20261107T171949.184656: perpd[925]: monitoring 0 client connections
-20261107T171949.185362: perpd[925]: activated new service: httpdb
-20261107T171949.185871: perpd[925]: supervising 1 active service
-20261107T171959.354776: Http on addr 127.0.0.1:3032
-20261107T171959.354790: root=/koolshare/webs/
-20261107T171959.354792: upload=/tmp/upload
-20261107T171959.354794: conn=0x1064c8 nc=0x1063e0 id=87001 removed
-20261107T172006.229998: conn=0x106448 nc=0x106970 id=87002 removed
-20261107T172010.015756: conn=0x1063e0 nc=0x107a60 id=89000 removed
-20261107T172010.750471: conn=0x108b20 nc=0x107a60 id=89001 removed
-20261107T172011.028624: conn=0x106940 nc=0x107a60 id=89002 removed
-20261107T172011.782630: conn=0x106940 nc=0x107a60 id=89003 removed
-20261107T172012.063365: conn=0x106940 nc=0x107a60 id=89004 removed
-20261107T172012.777980: conn=0x108b20 nc=0x106830 id=89005 removed
-20261107T172013.065487: conn=0x108b20 nc=0x106830 id=89006 removed
-20261107T172013.790252: conn=0x108b20 nc=0x106830 id=89007 removed
-20261107T172014.079723: conn=0x108b20 nc=0x106830 id=89008 removed
-20261107T172014.827477: conn=0x108b20 nc=0x106830 id=89009 removed
-20261107T172015.114794: conn=0x108b20 nc=0x106830 id=89010 removed
-20261107T172015.829787: conn=0x108b20 nc=0x107a60 id=89011 removed
-20261107T172016.113367: conn=0x108b20 nc=0x107a60 id=89012 removed
-20261107T172016.813277: conn=0x108b20 nc=0x107a60 id=89013 removed
-20261107T172017.090754: conn=0x108b20 nc=0x107a60 id=89014 removed
-20261107T172017.801315: conn=0x108b20 nc=0x107a60 id=89015 removed
-20261107T172018.077445: conn=0x108b20 nc=0x107a60 id=89016 removed
-20261107T172018.803348: conn=0x108b20 nc=0x107a60 id=89017 removed
-20261107T172019.076281: conn=0x108b20 nc=0x107a60 id=89018 removed
-20261107T172019.771668: conn=0x108b20 nc=0x107a60 id=89019 removed
-20261107T172020.053399: conn=0x108b20 nc=0x107a60 id=89020 removed
-20261107T172020.756897: conn=0x108b20 nc=0x107a60 id=89021 removed
-20261107T172021.142552: conn=0x108b20 nc=0x107a60 id=89022 removed
-20261107T172021.959793: conn=0x108b20 nc=0x107a60 id=89023 removed
-20261107T172022.259601: conn=0x1068d8 nc=0x113d90 id=89024 removed
-20261107T172023.061951: conn=0x108b20 nc=0x113d90 id=89025 removed
-20261107T172023.447908: conn=0x106988 nc=0x1068d8 id=89026 removed
-20261107T172024.547781: conn=0x108b20 nc=0x113d90 id=89027 removed
-20261107T172024.869598: conn=0x106988 nc=0x1068d8 id=89028 removed
-20261107T172025.671790: conn=0x108b20 nc=0x113d90 id=89029 removed
-20261107T172025.980217: conn=0x108b20 nc=0x113d90 id=89030 removed
-20261107T172026.745867: conn=0x108b20 nc=0x113d90 id=89031 removed
-20261107T172027.050761: conn=0x108b20 nc=0x113d90 id=89032 removed
-20261107T172027.907441: conn=0x108b20 nc=0x113d90 id=89033 removed
-20261107T172028.256290: conn=0x108b20 nc=0x113d90 id=89034 removed
-20261107T172029.138916: conn=0x108b20 nc=0x113d90 id=89035 removed
+20261108T030217.103590: perpd[926]: starting on /koolshare/perp ...
+20261108T030217.106228: perpd[926]: supervising 0 active services
+20261108T030217.106238: perpd[926]: monitoring 0 client connections
+20261108T030217.107043: perpd[926]: activated new service: httpdb
+20261108T030217.107190: perpd[926]: supervising 1 active service
+20261108T030230.080469: Http on addr 127.0.0.1:3032
+20261108T030230.080485: root=/koolshare/webs/
+20261108T030230.080487: upload=/tmp/upload
+20261108T030230.080489: conn=0x1064c8 nc=0x1063e0 id=87001 removed
+20261108T030236.742665: conn=0x1064c8 nc=0x1063e0 id=87002 removed
+20261108T030240.521492: conn=0x1063e0 nc=0x106b18 id=89000 removed
+20261108T030241.231932: conn=0x1064c8 nc=0x1063e0 id=89001 removed
+20261108T030241.503343: conn=0x106b18 nc=0x106a30 id=89002 removed
+20261108T030242.196717: conn=0x106a90 nc=0x106a10 id=89003 removed
+20261108T030242.477557: conn=0x1070f8 nc=0x106410 id=89004 removed
+20261108T030243.164254: conn=0x106b18 nc=0x1063e0 id=89005 removed
+20261108T030243.440120: conn=0x106b18 nc=0x1063e0 id=89006 removed
+20261108T030244.134158: conn=0x106b18 nc=0x1063e0 id=89007 removed
+20261108T030244.407987: conn=0x106b18 nc=0x1063e0 id=89008 removed
+20261108T030245.114570: conn=0x106b18 nc=0x1063e0 id=89009 removed
+20261108T030245.389976: conn=0x106b18 nc=0x1063e0 id=89010 removed
+20261108T030246.081014: conn=0x1064c8 nc=0x1063e0 id=89011 removed
+20261108T030246.358238: conn=0x1064c8 nc=0x1063e0 id=89012 removed
+20261108T030247.052280: conn=0x1064c8 nc=0x1063e0 id=89013 removed
+20261108T030247.323310: conn=0x1064c8 nc=0x1063e0 id=89014 removed
+20261108T030248.013109: conn=0x1064c8 nc=0x1063e0 id=89015 removed
+20261108T030248.285478: conn=0x1064c8 nc=0x1063e0 id=89016 removed
+20261108T030248.998247: conn=0x1064c8 nc=0x1063e0 id=89017 removed
+20261108T030249.271677: conn=0x1064c8 nc=0x1063e0 id=89018 removed
+20261108T030249.994300: conn=0x1064c8 nc=0x1063e0 id=89019 removed
+20261108T030250.273766: conn=0x1064c8 nc=0x1063e0 id=89020 removed
+20261108T030250.975038: conn=0x1064c8 nc=0x1063e0 id=89021 removed
+20261108T030251.252334: conn=0x1064c8 nc=0x1063e0 id=89022 removed
+20261108T030251.947730: conn=0x1064c8 nc=0x1063e0 id=89023 removed
+20261108T030252.219189: conn=0x106b80 nc=0x106550 id=89024 removed
+20261108T030252.951016: conn=0x106448 nc=0x106550 id=89025 removed
+20261108T030253.225938: conn=0x106b80 nc=0x106550 id=89026 removed
+20261108T030253.924121: conn=0x106448 nc=0x106550 id=89027 removed
+20261108T030254.199342: conn=0x106b80 nc=0x106550 id=89028 removed
+20261108T030254.931858: conn=0x106448 nc=0x106550 id=89029 removed
+20261108T030255.209201: conn=0x106448 nc=0x106540 id=89030 removed
+20261108T030255.903047: conn=0x106448 nc=0x106540 id=89031 removed
+20261108T030256.181291: conn=0x106448 nc=0x106540 id=89032 removed
+20261108T030256.903331: conn=0x106448 nc=0x106540 id=89033 removed
+20261108T030257.184907: conn=0x106448 nc=0x106540 id=89034 removed
+20261108T030257.874549: conn=0x106448 nc=0x106540 id=89035 removed
 
 DIAGNOSTIC /tmp/real-plugin-results/https-stability-server.log
 PASS early stdio before adapter constructor

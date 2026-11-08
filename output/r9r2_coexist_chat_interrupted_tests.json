@@ -1,0 +1,93 @@
+{
+  "status": "CONTROLLER_INTERRUPTED_WITHOUT_FINAL_RESULT",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
+  "last_sample": {
+    "ddnsgo": {
+      "executable": "/jffs/.koolshare/bin/ddnsgo",
+      "fds": 7,
+      "pid": 18835,
+      "rss_kib": 15348
+    },
+    "dnsmasq": {
+      "executable": "/usr/libexec/localmod/merlin/bin/dnsmasq",
+      "fds": 9,
+      "pid": 7959,
+      "rss_kib": 1932
+    },
+    "dropbear": {
+      "executable": "/usr/libexec/localmod/merlin/bin/dropbearmulti",
+      "fds": 4,
+      "pid": 13787,
+      "rss_kib": 2216
+    },
+    "elapsed_seconds": 2754.253410432,
+    "events": 27,
+    "httpd": {
+      "executable": "/usr/bin/qemu-arm",
+      "fds": 5,
+      "pid": 29260,
+      "rss_kib": 27112
+    },
+    "httpdb": {
+      "executable": "/jffs/.koolshare/bin/httpdb",
+      "fds": 6,
+      "pid": 13086,
+      "rss_kib": 1052
+    },
+    "miniupnpd": {
+      "executable": "/usr/libexec/localmod/merlin/bin/miniupnpd",
+      "fds": 7,
+      "pid": 21336,
+      "rss_kib": 2044
+    },
+    "openvpn-client": {
+      "executable": "/usr/libexec/localmod/merlin/bin/openvpn",
+      "fds": 6,
+      "pid": 30135,
+      "rss_kib": 5392
+    },
+    "openvpn-server": {
+      "executable": "/router/usr/libexec/localmod/merlin/bin/openvpn",
+      "fds": 7,
+      "pid": 22009,
+      "rss_kib": 5544
+    },
+    "queries": 407,
+    "skipd": {
+      "executable": "/usr/bin/skipd",
+      "fds": 8,
+      "pid": 12879,
+      "rss_kib": 1188
+    },
+    "uu": {
+      "executable": "/bin/busybox",
+      "fds": 4,
+      "pid": 24183,
+      "rss_kib": 1604
+    },
+    "xray-client": {
+      "executable": "/jffs/.koolshare/bin/xray",
+      "fds": 6,
+      "pid": 3168,
+      "rss_kib": 36812
+    },
+    "xray-server": {
+      "executable": "/jffs/.koolshare/bin/xray",
+      "fds": 6,
+      "pid": 15839,
+      "rss_kib": 34692
+    }
+  },
+  "sample_count": 81,
+  "controller_was_running_before_chat_disconnection": true,
+  "live_controller_found_on_resume": false,
+  "completion_marker_present": false,
+  "one_hour_result": "NOT_PASS; must repeat one complete measured hour",
+  "unplanned_failure_logged": false,
+  "log_sha256": "2b9efca4911f93b2ba869f65602d66a00ce9b1694ea6805a6fa68b6860829ce6",
+  "source_sha256": {
+    "analysis/r9r1_coexist/check.py": "85b9358ea234d1f0a61872d9e6e1514c8ee04c9ef1ebdec651ef52973c6bc4f6",
+    "analysis/r9r1_coexist/workload.go": "598e0f23c5e45c742e381ae9e06d5d705cb7ddeec3ef3baa246fcc74450aeb50",
+    "analysis/r9r1_coexist/tls_trace.c": "0e0d804fd099fc197066e735a0bef10817d897eaa822e4de8aab1d41593b6c7f"
+  }
+}

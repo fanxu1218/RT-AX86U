@@ -1,0 +1,352 @@
+LINUX_BUILDER_READY
+MERLIN_SYSTEM_PROBE_READY
+FIXTURE_ARM_ARCH=aarch64
+start-stop-daemon 1.9.18 for Debian - small and fast C version written by
+Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
+
+REAL_PLUGIN_SETUP_READY
+COEXIST_SETUP native_https_and_uu
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108022521, 2026/11/8 ~ 2046/11/9
+starting ntp...
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+COEXIST_SETUP real_ddnsgo_install
+COEXIST_SETUP real_fancyss_install
+COEXIST_SETUP six_components
+miniupnpd[6865]: it is advised to use network interface name instead of 192.168.77.1
+miniupnpd[6865]: system uptime is 133 seconds
+miniupnpd[6865]: Reloading rules from lease file
+miniupnpd[6865]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794104832
+miniupnpd[6865]: IGNORED : Reserved / private IP address 203.0.113.1 on ext interface wan0
+miniupnpd[6865]: HTTP listening on port 35323
+miniupnpd[6865]: Listening for NAT-PMP/PCP traffic on port 5351
+miniupnpd[6865]: HTTP REQUEST from 192.168.77.1:34963 : GET /rootDesc.xml (HTTP/1.1)
+miniupnpd[6865]: Host: 192.168.77.1:35323
+miniupnpd[6865]: HTTP REQUEST from 192.168.77.1:43789 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[6865]: Host: 192.168.77.1:35323
+miniupnpd[6865]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[6865]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[6865]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[6865]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[6865]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[6865]: HTTP REQUEST from 192.168.77.1:57015 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[6865]: Host: 192.168.77.1:35323
+miniupnpd[6865]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[6865]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[6865]: HTTP REQUEST from 192.168.77.1:50963 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[6865]: Host: 192.168.77.1:35323
+miniupnpd[6865]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[6865]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[6865]: removing redirect rule port 45001 TCP
+miniupnpd[6865]: Trying to delete nat rule at index 0
+miniupnpd[6865]: Trying to delete filter rule at index 0
+miniupnpd[6865]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[6865]: Trying to delete peer rule at index 0
+PASS dnsmasq_real_dhcp_discover_offer_request_ack_and_lease_file_retained_after_restart
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:control valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:control valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:control valid:true]
+COEXIST_HANDSHAKE_CASE map[code:200 error:<nil> kind:control valid:true]
+miniupnpd[6865]: setting timeout to 60 sec
+COEXIST_HANDSHAKE_CASE map[code:0 error:EOF kind:SIGALRM valid:false]
+COEXIST_HANDSHAKE_CASE map[code:0 error:write tcp4 192.168.77.1:43954->192.168.77.1:34443: write: broken pipe kind:SIGALRM valid:false]
+COEXIST_HANDSHAKE_CASE map[code:0 error:write tcp4 192.168.77.1:52618->192.168.77.1:34443: write: broken pipe kind:SIGALRM valid:false]
+COEXIST_HANDSHAKE_CASE map[code:0 error:write tcp4 192.168.77.1:52628->192.168.77.1:34443: write: broken pipe kind:SIGALRM valid:false]
+miniupnpd[6865]: shutting down MiniUPnPd
+COEXIST_FAILURE unplanned query failure id=91012 action=version code=0 error=Post "https://192.168.77.1:34443/_api/": context deadline exceeded (Client.Timeout exceeded while awaiting headers) body=""
+DIAGNOSTIC /tmp/upload/soft_log.txt
+【20261108 10:26:26】: 机型：RT-AX86U koolcenter梅林改版固件 符合安装要求，开始安装插件！
+【20261108 10:26:27】: 内核：4.1.52，架构：aarch64，安装fancyss_hnd_v8_full！
+【20261108 10:26:27】: 安装版本：fancyss_hnd_v8_full_3.5.29
+【20261108 10:26:27】: 清理旧文件
+【20261108 10:26:29】: localmod: 保留 UU 安装包和原厂日志，不清理其它服务数据。
+【20261108 10:26:29】: 当前未安装 websocketd，将安装并拉起 websocketd。
+【20261108 10:26:31】: 检测/data分区剩余空间...
+【20261108 10:26:31】: /data分区剩余空间为：KB
+【20261108 10:26:32】: 检测jffs分区剩余空间...
+gzip: short write
+tar: write error: Broken pipe
+【20261108 10:26:45】: 当前jffs分区(tmpfs)剩余119756KB
+【20261108 10:26:45】: 插件安装预计需要约6252KB（候选包大小+动态余量2048KB）
+【20261108 10:26:45】: 空间满足，继续安装！
+【20261108 10:26:45】: 开始复制文件！
+【20261108 10:26:45】: 复制相关二进制文件！此步时间可能较长！
+【20261108 10:26:47】: 准备切换 websocketd，先停止旧 websocketd 进程...
+【20261108 10:26:48】: 复制相关的脚本文件！
+【20261108 10:26:48】: 复制相关的网页文件！
+【20261108 10:26:51】: 为新安装文件赋予执行权限...
+【20261108 10:26:52】: 创建一些二进制文件的软链接！
+【20261108 10:26:55】: 节点数据升级将优先使用 node-tool：/koolshare/bin/node-tool
+【20261108 10:26:55】: node-tool 版本：0.1.15
+【20261108 10:26:57】: 开始校正 schema2 密码字段（schema1 -> schema2 升级），共 0 个节点...
+【20261108 10:26:57】: schema2 密码字段校正完成：未发现需要修正的节点。
+【20261108 10:26:58】: 检查旧版订阅节点来源归属...
+【20261108 10:26:58】: 刷新节点运行缓存...
+【20261108 10:26:59】: 设置插件安装参数...
+【20261108 10:26:59】: 科学上网 full插件安装安装成功！
+【20261108 10:26:59】: 更新完毕，请等待网页自动刷新！
+【2026年11月08日 10:27:00】: ============================= end =================================
+XU6J03M6
+
+DIAGNOSTIC /tmp/.localmod/bootstrap.log
+
+DIAGNOSTIC /tmp/real-plugin-results/coexist-server.log
+PASS early stdio before adapter constructor
+cat: can't open '/etc/key.pem': No such file or directory
+cat: can't open '/etc/cert.pem': No such file or directory
+_netlink_recv_mesg:197  return NULL from rec, why socke is not initialized? 
+fdopen(ssl): Interrupted system call
+fdopen(ssl): Interrupted system call
+fdopen(ssl): Interrupted system call
+fdopen(ssl): Interrupted system call
+
+DIAGNOSTIC /tmp/coexist-tls-errors.log
+TLS_IO t=32.115 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=33.546 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=34.382 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=34.558 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=41.537 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=41.987 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=45.485 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=46.052 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=48.988 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=50.363 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=52.543 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=53.098 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=55.419 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=55.990 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=57.615 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=57.981 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=59.340 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=59.719 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=63.987 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=64.572 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=160.028 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=161.657 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=164.026 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=164.588 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=171.229 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=171.696 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=173.753 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=174.150 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=177.449 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=178.217 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=179.996 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=180.447 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=184.785 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=185.548 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=187.044 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=187.428 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=190.213 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=190.960 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=192.439 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=192.854 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=198.050 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=198.267 pid=629 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=198.461 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=199.330 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=202.310 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=202.493 pid=629 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=202.693 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=203.094 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=207.602 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=207.780 pid=629 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=207.988 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=208.487 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+TLS_IO t=211.731 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=211.906 pid=629 op=accept_end ssl=0x12dbf8 result=-1 errno=4 ssl_error=2
+TLS_IO t=212.175 pid=629 op=accept_begin ssl=0x12dbf8 result=0 errno=0 ssl_error=0
+TLS_IO t=217.037 pid=629 op=accept_end ssl=0x12dbf8 result=1 errno=0 ssl_error=0
+
+SERVICE_LOG openvpn-server
+ --persist-key option ignored. Keys are now always persisted across restarts. 
+2026-11-08 02:27:13 Note: --cipher is not set. OpenVPN versions before 2.5 defaulted to BF-CBC as fallback when cipher negotiation failed in this case. If you need this fallback please add '--data-ciphers-fallback BF-CBC' to your configuration and/or add BF-CBC to --data-ciphers. E.g. --data-ciphers AES-256-GCM:BF-CBC
+2026-11-08 02:27:13 OpenVPN 2.7.6 [git:3004.388/433fc608f5fc1689+] arm-buildroot-linux-gnueabi [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [MH/PKTINFO] [AEAD] built on Aug 20 2026
+2026-11-08 02:27:13 library versions: OpenSSL 1.1.1w  11 Sep 2023, LZO 2.08
+2026-11-08 02:27:13 WARNING: --keepalive option is missing from server config
+2026-11-08 02:27:13 net_route_v4_best_gw query: dst 0.0.0.0
+2026-11-08 02:27:13 net_route_v4_best_gw result: via 0.0.0.0 dev 
+2026-11-08 02:27:13 TUN/TAP device ovpns0 opened
+2026-11-08 02:27:13 tun/tap device [ovpns0] opened
+2026-11-08 02:27:13 /usr/sbin/ip link set dev ovpns0 up mtu 1500
+2026-11-08 02:27:13 /usr/sbin/ip link set dev ovpns0 up
+2026-11-08 02:27:13 /usr/sbin/ip addr add dev ovpns0 10.244.0.1/24 broadcast +
+2026-11-08 02:27:13 Socket Buffers: R=[212992->212992] S=[212992->212992]
+2026-11-08 02:27:13 UDPv4 link local (bound): [AF_INET]192.0.2.2:35325
+2026-11-08 02:27:13 UDPv4 link remote: [AF_UNSPEC]
+2026-11-08 02:27:13 MULTI: multi_init called, r=4096 v=4096
+2026-11-08 02:27:13 IFCONFIG POOL IPv4: base=10.244.0.2 size=253
+2026-11-08 02:27:13 MULTI IO: MULTI_IO INIT maxclients=1024 maxevents=1029
+2026-11-08 02:27:13 Initialization Sequence Completed
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 VERIFY OK: depth=1, CN=owned-vpn-ca
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 VERIFY OK: depth=0, CN=client
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 peer info: IV_VER=2.7.6
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 peer info: IV_PLAT=linux
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 peer info: IV_TCPNL=1
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 peer info: IV_MTU=1600
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 peer info: IV_CIPHERS=AES-256-GCM
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 peer info: IV_PROTO=8094
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 peer info: IV_LZO_STUB=1
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 peer info: IV_COMP_STUB=1
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 peer info: IV_COMP_STUBv2=1
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 256 bits EC, curve prime256v1, signature: ecdsa-with-SHA256, peer temporary key: 253 bits X25519, peer signing digest/type: SHA256 ECDSA
+2026-11-08 02:27:15 udp4:192.0.2.1:60695 [client] Peer Connection Initiated with [AF_INET]192.0.2.1:60695
+2026-11-08 02:27:15 client/udp4:192.0.2.1:60695 MULTI_sva: pool returned IPv4=10.244.0.2, IPv6=(Not enabled)
+2026-11-08 02:27:15 client/udp4:192.0.2.1:60695 MULTI: Learn: 10.244.0.2 -> client/udp4:192.0.2.1:60695
+2026-11-08 02:27:15 client/udp4:192.0.2.1:60695 MULTI: primary virtual IP for client/udp4:192.0.2.1:60695: 10.244.0.2
+2026-11-08 02:27:15 client/udp4:192.0.2.1:60695 SENT CONTROL [client]: 'PUSH_REPLY,route-gateway 10.244.0.1,topology subnet,ifconfig 10.244.0.2 255.255.255.0,peer-id 0,cipher AES-256-GCM,protocol-flags cc-exit tls-ekm dyn-tls-crypt aead-epoch,tun-mtu 1500' (status=1)
+2026-11-08 02:27:16 client/udp4:192.0.2.1:60695 Data Channel: cipher 'AES-256-GCM', peer-id: 0
+2026-11-08 02:27:16 client/udp4:192.0.2.1:60695 Timers: ping 2, ping-restart 6
+2026-11-08 02:27:16 client/udp4:192.0.2.1:60695 Protocol options: protocol-flags cc-exit tls-ekm dyn-tls-crypt aead-epoch
+2026-11-08 02:28:41 Closing tun/tap interface
+2026-11-08 02:28:41 /usr/sbin/ip addr del dev ovpns0 10.244.0.1/24
+2026-11-08 02:28:42 SIGTERM[hard,] received, process exiting
+
+SERVICE_LOG openvpn-client
+2026-11-08 02:27:13 DEPRECATED OPTION: --persist-key option ignored. Keys are now always persisted across restarts. 
+2026-11-08 02:27:13 Note: --cipher is not set. OpenVPN versions before 2.5 defaulted to BF-CBC as fallback when cipher negotiation failed in this case. If you need this fallback please add '--data-ciphers-fallback BF-CBC' to your configuration and/or add BF-CBC to --data-ciphers. E.g. --data-ciphers AES-256-GCM:BF-CBC
+2026-11-08 02:27:13 OpenVPN 2.7.6 [git:3004.388/433fc608f5fc1689+] arm-buildroot-linux-gnueabi [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [MH/PKTINFO] [AEAD] built on Aug 20 2026
+2026-11-08 02:27:13 library versions: OpenSSL 1.1.1w  11 Sep 2023, LZO 2.08
+2026-11-08 02:27:13 TCP/UDP: Preserving recently used remote address: [AF_INET]192.0.2.2:35325
+2026-11-08 02:27:13 Socket Buffers: R=[212992->212992] S=[212992->212992]
+2026-11-08 02:27:13 UDPv4 link local: (not bound)
+2026-11-08 02:27:13 UDPv4 link remote: [AF_INET]192.0.2.2:35325
+2026-11-08 02:27:13 read UDPv4 [ECONNREFUSED]: Connection refused (fd=4,code=111)
+2026-11-08 02:27:15 TLS: Initial packet from [AF_INET]192.0.2.2:35325, sid=ddd9736b cd6bbb7d
+2026-11-08 02:27:15 VERIFY OK: depth=1, CN=owned-vpn-ca
+2026-11-08 02:27:15 VERIFY KU OK
+2026-11-08 02:27:15 Validating certificate extended key usage
+2026-11-08 02:27:15 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2026-11-08 02:27:15 VERIFY EKU OK
+2026-11-08 02:27:15 VERIFY X509NAME OK: CN=server
+2026-11-08 02:27:15 VERIFY OK: depth=0, CN=server
+2026-11-08 02:27:15 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 256 bits EC, curve prime256v1, signature: ecdsa-with-SHA256, peer temporary key: 253 bits X25519, peer signing digest/type: SHA256 ECDSA
+2026-11-08 02:27:15 [server] Peer Connection Initiated with [AF_INET]192.0.2.2:35325
+2026-11-08 02:27:15 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2026-11-08 02:27:15 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2026-11-08 02:27:15 PUSH: Received control message: 'PUSH_REPLY,route-gateway 10.244.0.1,topology subnet,ifconfig 10.244.0.2 255.255.255.0,peer-id 0,cipher AES-256-GCM,protocol-flags cc-exit tls-ekm dyn-tls-crypt aead-epoch,tun-mtu 1500'
+2026-11-08 02:27:15 OPTIONS IMPORT: --ifconfig/up options modified
+2026-11-08 02:27:15 OPTIONS IMPORT: route-related options modified
+2026-11-08 02:27:15 OPTIONS IMPORT: tun-mtu set to 1500
+2026-11-08 02:27:15 TUN/TAP device ovpnc0 opened
+2026-11-08 02:27:15 tun/tap device [ovpnc0] opened
+2026-11-08 02:27:15 /usr/sbin/ip link set dev ovpnc0 up mtu 1500
+2026-11-08 02:27:15 /usr/sbin/ip link set dev ovpnc0 up
+2026-11-08 02:27:15 /usr/sbin/ip addr add dev ovpnc0 10.244.0.2/24 broadcast +
+2026-11-08 02:27:15 Initialization Sequence Completed
+2026-11-08 02:27:16 Data Channel: cipher 'AES-256-GCM', peer-id: 0
+2026-11-08 02:27:16 Timers: ping 2, ping-restart 6
+2026-11-08 02:27:16 Protocol options: protocol-flags cc-exit tls-ekm dyn-tls-crypt aead-epoch
+2026-11-08 02:28:42 event_wait : Interrupted system call (fd=-1,code=4)
+2026-11-08 02:28:42 Closing tun/tap interface
+2026-11-08 02:28:42 /usr/sbin/ip addr del dev ovpnc0 10.244.0.2/24
+2026-11-08 02:28:42 SIGTERM[hard,] received, process exiting
+
+SERVICE_LOG xray-server
+Xray 26.5.9 (Xray, Penetrates Everything.) 1bdb488 (go1.26.3 linux/arm64)
+A unified platform for anti-censorship.
+2026/11/08 02:27:23.767556 [Info] infra/conf/serial: Reading config: &{Name:/koolshare/configs/fancyss/coexist-0.json Format:json}
+2026/11/08 02:27:24.110574 [Warning] core: Xray 26.5.9 started
+2026/11/08 02:27:32.532402 from 127.0.0.1:50834 accepted tcp:127.0.0.1:35017
+2026/11/08 02:27:54.149945 from 127.0.0.1:56566 accepted tcp:127.0.0.1:35017
+2026/11/08 02:28:01.591141 from 127.0.0.1:56570 accepted tcp:127.0.0.1:35017
+2026/11/08 02:28:07.048864 from 127.0.0.1:36402 accepted tcp:127.0.0.1:35017
+2026/11/08 02:28:14.716163 from 127.0.0.1:50626 accepted tcp:127.0.0.1:35017
+2026/11/08 02:28:19.144599 from 127.0.0.1:50628 accepted tcp:127.0.0.1:35017
+2026/11/08 02:28:24.380891 from 127.0.0.1:57512 accepted tcp:127.0.0.1:35017
+2026/11/08 02:28:28.552119 from 127.0.0.1:57516 accepted tcp:127.0.0.1:35017
+
+SERVICE_LOG xray-client
+Xray 26.5.9 (Xray, Penetrates Everything.) 1bdb488 (go1.26.3 linux/arm64)
+A unified platform for anti-censorship.
+2026/11/08 02:27:32.240958 [Info] infra/conf/serial: Reading config: &{Name:/koolshare/configs/fancyss/coexist-1.json Format:json}
+2026/11/08 02:27:32.373166 [Warning] core: Xray 26.5.9 started
+2026/11/08 02:27:32.477082 from tcp:127.0.0.1:46826 accepted tcp:127.0.0.1:35017
+2026/11/08 02:27:54.013837 from tcp:127.0.0.1:49874 accepted tcp:127.0.0.1:35017
+2026/11/08 02:28:01.563924 from tcp:127.0.0.1:49880 accepted tcp:127.0.0.1:35017
+2026/11/08 02:28:07.029069 from tcp:127.0.0.1:35094 accepted tcp:127.0.0.1:35017
+2026/11/08 02:28:14.581147 from tcp:127.0.0.1:50016 accepted tcp:127.0.0.1:35017
+2026/11/08 02:28:19.130945 from tcp:127.0.0.1:50024 accepted tcp:127.0.0.1:35017
+2026/11/08 02:28:24.361012 from tcp:127.0.0.1:36840 accepted tcp:127.0.0.1:35017
+2026/11/08 02:28:28.533592 from tcp:127.0.0.1:36846 accepted tcp:127.0.0.1:35017
+
+SERVICE_LOG dnsmasq
+dnsmasq[6600]: started, version 2.93 cachesize 150
+dnsmasq[6600]: compile time options: IPv6 GNU-getopt no-RTC no-DBus no-UBus no-i18n no-IDN DHCP DHCPv6 no-Lua TFTP no-conntrack ipset no-nftset no-auth DNSSEC no-ID loop-detect no-inotify no-dumpfile
+dnsmasq[6600]: warning: no upstream servers configured
+dnsmasq[6600]: read /tmp/merlin/dns.hosts - 1 names
+dnsmasq[6600]: exiting on receipt of SIGTERM
+
+SERVICE_LOG dropbear
+PASS early stdio before adapter constructor
+PASS early stdio before adapter constructor
+[6628] Nov 08 02:27:09 Not backgrounding
+[6806] Nov 08 02:27:09 Child connection from 127.0.0.1:35316
+[6806] Nov 08 02:27:09 Exit before auth from <127.0.0.1:35316>: Exited normally
+[6823] Nov 08 02:27:10 Child connection from 127.0.0.1:35330
+connect: No such file or directory
+connect: No such file or directory
+connect: No such file or directory
+[6823] Nov 08 02:27:11 Pubkey auth succeeded for 'admin' with ssh-ed25519 key SHA256:oel/C3sW7Ls1L4rlESZnkWq67M/cZex3/52+PxPq6rA from 127.0.0.1:35330
+[6823] Nov 08 02:27:11 Exit (admin) from <127.0.0.1:35330>: Exited normally
+[6628] Nov 08 02:28:41 Early exit: Terminated by signal
+
+SERVICE_LOG miniupnpd
+miniupnpd[6865]: it is advised to use network interface name instead of 192.168.77.1
+miniupnpd[6865]: system uptime is 133 seconds
+miniupnpd[6865]: Reloading rules from lease file
+miniupnpd[6865]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794104832
+miniupnpd[6865]: IGNORED : Reserved / private IP address 203.0.113.1 on ext interface wan0
+miniupnpd[6865]: HTTP listening on port 35323
+miniupnpd[6865]: Listening for NAT-PMP/PCP traffic on port 5351
+miniupnpd[6865]: HTTP REQUEST from 192.168.77.1:34963 : GET /rootDesc.xml (HTTP/1.1)
+miniupnpd[6865]: Host: 192.168.77.1:35323
+miniupnpd[6865]: HTTP REQUEST from 192.168.77.1:43789 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[6865]: Host: 192.168.77.1:35323
+miniupnpd[6865]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[6865]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[6865]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[6865]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[6865]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[6865]: HTTP REQUEST from 192.168.77.1:57015 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[6865]: Host: 192.168.77.1:35323
+miniupnpd[6865]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[6865]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[6865]: HTTP REQUEST from 192.168.77.1:50963 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[6865]: Host: 192.168.77.1:35323
+miniupnpd[6865]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[6865]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[6865]: removing redirect rule port 45001 TCP
+miniupnpd[6865]: Trying to delete nat rule at index 0
+miniupnpd[6865]: Trying to delete filter rule at index 0
+miniupnpd[6865]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[6865]: Trying to delete peer rule at index 0
+miniupnpd[6865]: setting timeout to 60 sec
+miniupnpd[6865]: shutting down MiniUPnPd
+
+panic: unplanned query failure id=91012 action=version code=0 error=Post "https://192.168.77.1:34443/_api/": context deadline exceeded (Client.Timeout exceeded while awaiting headers) body="" [recovered]
+	panic: unplanned query failure id=91012 action=version code=0 error=Post "https://192.168.77.1:34443/_api/": context deadline exceeded (Client.Timeout exceeded while awaiting headers) body=""
+
+goroutine 1 [running]:
+main.main.func1()
+	./workload.go:466 +0x378
+panic({0x2e3440?, 0x4000347ac0?})
+	runtime/panic.go:785 +0x124
+main.(*soak).query(0x40000a6000, {0x351d2f, 0x7})
+	./test_soak.go:74 +0x400
+main.(*coexistRun).core(0x4000263de8)
+	./workload.go:192 +0x84
+main.(*coexistRun).handshakeProbe(0x4000263de8)
+	./workload.go:101 +0xa8
+main.main()
+	./workload.go:577 +0x1690
+SOAK_REAPER orphans_reaped=18
+NESTED_MERLIN_JOB_STATUS=1
+[  226.161633] reboot: Power down
+LINUX_READONLY_JOB_STATUS=1

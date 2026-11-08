@@ -1,13 +1,15 @@
 # RT-AX86U 官方底包官改实验
 
-基于 **ASUS 3.0.0.4.388_24437**，集成 **KoolCenter 软件中心 1.9.60**，保留官方 **网易 UU**。当前工作候选为 **localmod2-r9-r1**；原 r9、r8 及历史镜像、标签和发布附件保留。
+基于 **ASUS 3.0.0.4.388_24437**，集成 **KoolCenter 软件中心 1.9.60**，保留官方 **网易 UU**。当前工作候选为 **localmod2-r9-r2**；原 r9-r1、r9、r8 及历史镜像、标签和发布附件保留。
 
-**r9-r1 已通过完整本地门禁；GitHub 推送和可选发布由用户操作，本轮未刷机或推送。** 本地交付状态见 [local_delivery.json](output/local_delivery.json)，操作见 [手动推送与发布步骤](output/手动推送与发布步骤.md)。`release_delivery.json` 当前仍是历史 r8 发布回执，不能当作 r9 已发布证明。
+**r9-r2 已通过完整本地门禁和最终候选握手对照，独立小时共存长测仍在运行；GitHub 推送和可选发布由用户操作，本轮未刷机或推送。** 交付回执暂记录上一轮 r9-r1，待本轮长测完成后更新：[local_delivery.json](output/local_delivery.json)，操作见 [手动推送与发布步骤](output/手动推送与发布步骤.md)。`release_delivery.json` 当前仍是历史 r8 发布回执，不能当作当前候选已发布证明。
 
 > **实验候选版，尚未实机验收，暂不建议直接刷入日常主路由。**
 > 源码适配、模型/仿真测试和镜像回读通过；刷入启动、原厂登录/TLS、无线/NAT、具体第三方插件及 UU 实际加速仍待实机验证。
 
 ## 本轮变化
+
+r9-r2 修复原厂 HTTPS 握手被信号中断后直接放弃连接的问题：仅对 EINTR/WANT_READ 在原接收超时预算内继续同一次握手，不重放请求。最终候选通过 14 个握手/超时用例、六轮软件中心重启和 110 次正常查询；完整门禁重新绑定新镜像。小时共存长测仍在执行，发现过程、失败对照及边界见 [r9-r2 长时间共存验证](output/r9-r2长时间共存验证.md)。原 r9-r1 和历史镜像、交付包保留。
 
 r9-r1 将软件中心升级到 1.9.60，并移植 Merlin 3004.388.12_2 的 OpenVPN 2.7.6、dnsmasq 2.93、curl 8.17.0、wget 1.25.0、Dropbear 2026.94 和 miniupnpd 2.3.11。六个原入口默认使用新版和私有依赖，保留原厂程序、全局认证/TLS 库；为原厂旧 VPN 配置和 UPnP 启动/NAT 重载增加兼容适配。范围及限制见 [软件中心升级](output/软件中心1.9.60升级说明.md) 和 [梅林组件移植](output/梅林组件移植说明.md)。本轮镜像和完整本地门禁均已通过；后文标注为历史的 r9/r7 结果属于前序版本。
 
@@ -51,7 +53,7 @@ r8 集成六项后续完善：归档边界与脚本超时、事件/日志容量�
 
 ## 下载与说明
 
-- r9-r1 本地候选：见 [本地交付状态](output/local_delivery.json)；[计划预发布地址](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r9-r1-experimental) 仅在后续手动发布成功后可用。
+- r9-r2 本地候选：见 [本地交付状态](output/local_delivery.json)；[计划预发布地址](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r9-r2-experimental) 仅在后续手动发布成功后可用。
 - [localmod2-r8 历史实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r8-experimental)
 - [localmod2-r7 历史实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r7-experimental)
 - [完整适配范围与验证边界](output/官改候选版说明.md)
@@ -68,10 +70,10 @@ r8 集成六项后续完善：归档边界与脚本超时、事件/日志容量�
 - [镜像回读](output/verification.json) · [卷布局](output/structure.json) · [原始 Alpha 3 分析](analysis/固件分析报告.md)
 - [localmod2-r6](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r6-experimental) · [localmod2-r5](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r5-experimental) · [localmod2-r4](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r4-experimental) · [localmod2-r3](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r3-experimental) · [localmod2-r2](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r2-experimental) · [localmod2-r1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r1-experimental) · [原 localmod2](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-experimental) · [上一版 localmod1](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod1-experimental)
 
-当前 r9-r1 固件 `RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w`，90,177,556 字节。
+当前 r9-r2 固件 `RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w`，90,177,556 字节。
 
 ```text
-SHA256: b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2
+SHA256: 9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9
 ```
 
 保留的 r9 固件 `RT-AX86U_388_24437_localmod2_r9_EXPERIMENTAL.w`，85,852,180 字节。
@@ -82,11 +84,11 @@ SHA256: 02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50
 
 ## 验证摘要
 
-当前 r9-r1 候选验证（170 项源码输入、93 个依赖文件、17 份绑定/关联报告）：[完整 gate](output/release_gates.json) · [最终镜像组合回归](output/hardening_tests.json) · [本地交付状态](output/local_delivery.json)。[发布回执](output/release_delivery.json) 仍记录历史 r8，后续实际发布新候选后才更新。早期源码覆盖层报告明确标注未重建镜像，最终组合回归使用组装/回读后的字节。
+当前 r9-r2 候选验证（170 项源码输入、93 个依赖文件、17 份绑定/关联报告）：[完整 gate](output/release_gates.json) · [最终镜像组合回归](output/hardening_tests.json) · [本地交付状态](output/local_delivery.json)。[发布回执](output/release_delivery.json) 仍记录历史 r8，后续实际发布新候选后才更新。早期源码覆盖层报告明确标注未重建镜像，最终组合回归使用组装/回读后的字节。
 
 历史 r9 的 Fancyss/FRPC/PushPlus 26 项、原有三个真实 HND 插件 32 项、在线插件 28 项、证书/共存 17 项、持久化记录 85 次阶段断言、HTTPS 18 项、安装中断 69 项、损坏/低空间 94 项检查使用同一 r9 候选；另有 12 项封存/并行与 13 项官方底包审计。构建模型及其负面对照单独记录在 [模型隔离报告](output/model_isolation_tests.json)。
 
-当前 r9-r1 已完成软件中心迁移九项、发布前端函数七项、Fancyss/FRPC/PushPlus 组合 35 项、六个梅林组件服务 19 项、真实 HND 插件 32 项、在线管理 28 项、证书/共存 17 项、持久化记录 85 项、HTTPS 18 项、中断恢复 69 项、损坏/低空间 94 项、模型隔离 16 项、分片隔离 12 项及六组组合加固/TLS 输入回归。三处后续测试修正及重复模型回归报告的替换来源在门禁记录中列出；生产程序重编译与回读一致。浏览器界面另为模拟服务验证，实机与真实 UU/外网服务尚未验收。
+当前 r9-r2 已完成软件中心迁移九项、发布前端函数七项、Fancyss/FRPC/PushPlus 组合 35 项、六个梅林组件服务 19 项、真实 HND 插件 32 项、在线管理 28 项、证书/共存 17 项、持久化记录 85 项、HTTPS 18 项、中断恢复 69 项、损坏/低空间 94 项、模型隔离 16 项、分片隔离 12 项及六组组合加固/TLS 输入回归。本轮从头运行完整门禁，无沿用前序候选的动态服务结果；生产程序重编译与回读一致。浏览器界面另为模拟服务验证，实机与真实 UU/外网服务尚未验收。
 
 以下长时间采样属于 r7：
 

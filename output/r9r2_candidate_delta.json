@@ -1,0 +1,69 @@
+{
+  "status": "LOCAL_CANDIDATE_READBACK_DELTA_VERIFIED",
+  "baseline_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+  "compared_content_entries": 3424,
+  "modified_paths": [
+    {
+      "path": "rom/etc/localmod-release.json",
+      "before": {
+        "bytes": 706,
+        "sha256": "304c805a3e9b73d8cd817cda5fc8638dfb6f58c9dcaab0357aeabb0708c3bd95",
+        "type": "file"
+      },
+      "after": {
+        "type": "file",
+        "bytes": 706,
+        "sha256": "56d5b855afd20855a2b1581e9e528174b6ff2ca7d051ddbca85e230a53a4f066"
+      },
+      "reason": "r9-r2 revision label"
+    },
+    {
+      "path": "usr/lib/localmod/httpd_bridge.so",
+      "before": {
+        "bytes": 28092,
+        "sha256": "608cd920552382d4f0dba4e4f227d72e7dc332976fcc57bd55847765d8edaed8",
+        "type": "file"
+      },
+      "after": {
+        "type": "file",
+        "bytes": 28220,
+        "sha256": "c9077a10841d321723ce9fa23b3335bf9126db99cb8f698f10620c7c281d75ec"
+      },
+      "reason": "Bounded interrupted TLS handshake recovery"
+    },
+    {
+      "path": "www/Module_FancyssLocalmod.asp",
+      "before": {
+        "bytes": 4184,
+        "sha256": "da48632402ea0a41857bed06372f087f6591cdb6bde9799649779e53dd77f52d",
+        "type": "file"
+      },
+      "after": {
+        "type": "file",
+        "bytes": 4184,
+        "sha256": "048f767e7a006907e29767f048baabbc2dcc23080716c76d3e500d1132051435"
+      },
+      "reason": "r9-r2 revision label"
+    },
+    {
+      "path": "www/Module_Localmod.asp",
+      "before": {
+        "bytes": 6770,
+        "sha256": "a15ce168211e13fbef88f5f551c879bd4df73e6ad7a19d5a7b768f7ecc753613",
+        "type": "file"
+      },
+      "after": {
+        "type": "file",
+        "bytes": 6770,
+        "sha256": "dfea5cb799bce3af09faa311036394dad34a56b32aa620955da649fbb0ebe477"
+      },
+      "reason": "r9-r2 revision label"
+    }
+  ],
+  "unchanged_all_other_files_and_symlinks": true,
+  "limits": [
+    "Content and link targets; final build gates separately check vendor metadata and image readback"
+  ],
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9"
+}

@@ -5,7 +5,7 @@ Marek Michalkiewicz <marekm@i17linuxb.ists.pwr.wroc.pl>, public domain.
 
 REAL_PLUGIN_SETUP_READY
 cacert.pem doesn't exist !!!!!!
-S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261107170457, 2026/11/7 ~ 2046/11/8
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261108025159, 2026/11/8 ~ 2046/11/9
 starting ntp...
 download uuplugin script info successfully
 URL: http://uu.fixture.test:35000/monitor
@@ -16,35 +16,35 @@ PASS unadapted_upstream_package_denied_uu_and_router_logs_retained
 PASS native_authenticated_installation_entry_has_pinned_version_and_package_metadata
 PASS hash_pinned_compat_refuses_temp_collision_is_idempotent_and_preserves_unknown_scripts
 FANCYSS_INSTALL_LOG 3.5.28
-【20261108 01:05:22】: 机型：RT-AX86U koolcenter梅林改版固件 符合安装要求，开始安装插件！
-【20261108 01:05:23】: 内核：4.1.52，架构：aarch64，安装fancyss_hnd_v8_full！
-【20261108 01:05:23】: 安装版本：fancyss_hnd_v8_full_3.5.28
-【20261108 01:05:23】: 清理旧文件
-【20261108 01:05:24】: localmod: 保留 UU 安装包和原厂日志，不清理其它服务数据。
-【20261108 01:05:24】: 当前未安装 websocketd，将安装并拉起 websocketd。
-【20261108 01:05:26】: 检测/data分区剩余空间...
-【20261108 01:05:26】: /data分区剩余空间为：KB
-【20261108 01:05:27】: 检测jffs分区剩余空间...
-【20261108 01:05:32】: 当前jffs分区(tmpfs)剩余125644KB
-【20261108 01:05:32】: 插件安装预计需要约21360KB（候选包大小+动态余量2048KB）
-【20261108 01:05:32】: 空间满足，继续安装！
-【20261108 01:05:32】: 开始复制文件！
-【20261108 01:05:32】: 复制相关二进制文件！此步时间可能较长！
-【20261108 01:05:34】: 准备切换 websocketd，先停止旧 websocketd 进程...
-【20261108 01:05:34】: 复制相关的脚本文件！
-【20261108 01:05:35】: 复制相关的网页文件！
-【20261108 01:05:36】: 为新安装文件赋予执行权限...
-【20261108 01:05:36】: 创建一些二进制文件的软链接！
-【20261108 01:05:37】: 节点数据升级将优先使用 node-tool：/koolshare/bin/node-tool
-【20261108 01:05:37】: node-tool 版本：0.1.13
-【20261108 01:05:39】: 开始校正 schema2 密码字段（schema1 -> schema2 升级），共 0 个节点...
-【20261108 01:05:39】: schema2 密码字段校正完成：未发现需要修正的节点。
-【20261108 01:05:39】: 检查旧版订阅节点来源归属...
-【20261108 01:05:39】: 刷新节点运行缓存...
-【20261108 01:05:40】: 设置插件安装参数...
-【20261108 01:05:40】: 科学上网 full插件安装安装成功！
-【20261108 01:05:40】: 更新完毕，请等待网页自动刷新！
-【2026年11月08日 01:05:40】: ============================= end =================================
+【20261108 10:52:19】: 机型：RT-AX86U koolcenter梅林改版固件 符合安装要求，开始安装插件！
+【20261108 10:52:20】: 内核：4.1.52，架构：aarch64，安装fancyss_hnd_v8_full！
+【20261108 10:52:20】: 安装版本：fancyss_hnd_v8_full_3.5.28
+【20261108 10:52:20】: 清理旧文件
+【20261108 10:52:21】: localmod: 保留 UU 安装包和原厂日志，不清理其它服务数据。
+【20261108 10:52:22】: 当前未安装 websocketd，将安装并拉起 websocketd。
+【20261108 10:52:23】: 检测/data分区剩余空间...
+【20261108 10:52:24】: /data分区剩余空间为：KB
+【20261108 10:52:24】: 检测jffs分区剩余空间...
+【20261108 10:52:29】: 当前jffs分区(tmpfs)剩余125644KB
+【20261108 10:52:29】: 插件安装预计需要约21360KB（候选包大小+动态余量2048KB）
+【20261108 10:52:29】: 空间满足，继续安装！
+【20261108 10:52:29】: 开始复制文件！
+【20261108 10:52:29】: 复制相关二进制文件！此步时间可能较长！
+【20261108 10:52:30】: 准备切换 websocketd，先停止旧 websocketd 进程...
+【20261108 10:52:31】: 复制相关的脚本文件！
+【20261108 10:52:31】: 复制相关的网页文件！
+【20261108 10:52:32】: 为新安装文件赋予执行权限...
+【20261108 10:52:32】: 创建一些二进制文件的软链接！
+【20261108 10:52:33】: 节点数据升级将优先使用 node-tool：/koolshare/bin/node-tool
+【20261108 10:52:33】: node-tool 版本：0.1.13
+【20261108 10:52:34】: 开始校正 schema2 密码字段（schema1 -> schema2 升级），共 0 个节点...
+【20261108 10:52:35】: schema2 密码字段校正完成：未发现需要修正的节点。
+【20261108 10:52:35】: 检查旧版订阅节点来源归属...
+【20261108 10:52:35】: 刷新节点运行缓存...
+【20261108 10:52:36】: 设置插件安装参数...
+【20261108 10:52:36】: 科学上网 full插件安装安装成功！
+【20261108 10:52:36】: 更新完毕，请等待网页自动刷新！
+【2026年11月08日 10:52:36】: ============================= end =================================
 XU6J03M6
 
 PASS adapted_3.5.28_installed_disabled_original_binaries_auth_page_no_803_and_uu
@@ -59,34 +59,34 @@ PASS sc1960_actual_v2_frontend_uninstall_removes_only_owned_plugin_preserving_re
 PASS sc1960_center_restart_after_plugin_lifecycle_keeps_1_9_60_fancyss_and_uu
 SOFTCENTER_RESULT {"baseline_image_sha256":"02ae38a3c0a4fc0942a0608512dd0ab2a9609d2dcf97641e486d9741febd1e50","checks":{"actual_v2_frontend_install_payload_runs_native_backend_with_fancyss_and_uu":true,"actual_v2_frontend_uninstall_removes_only_owned_plugin_preserving_real_fancyss_uu":true,"actual_v2_frontend_update_without_source_field_updates_ordinary_plugin_preserving_config_fancyss_uu":true,"all_five_pinned_frontend_assets_served_byte_exact_through_original_https":true,"center_restart_after_plugin_lifecycle_keeps_1_9_60_fancyss_and_uu":true,"managed_1_9_50_to_1_9_60_preserves_real_fancyss_schema2_config_peers_and_uu":true,"new_frontend_metadata_api_reports_1_9_60":true,"original_https_renders_complete_large_inline_frontend_with_same_origin_status_entry":true,"same_version_skip_is_explicit_and_does_not_block_real_newer_updates":true},"configs_path":"fancyss","fancyss_config_sha256":"5cb95e5511792114529f14d8cb65ff80782abe68606c3d3b1043f8d7cfedf45f","frontend_assets":5,"native_page_bytes":527363,"uu_api_requests":1,"uu_downloads":1,"version":"1.9.60"}
 FANCYSS_INSTALL_LOG 3.5.29
-【20261108 01:06:27】: 机型：RT-AX86U koolcenter梅林改版固件 符合安装要求，开始安装插件！
-【20261108 01:06:28】: 内核：4.1.52，架构：aarch64，安装fancyss_hnd_v8_full！
-【20261108 01:06:28】: 安装版本：fancyss_hnd_v8_full_3.5.29
-【20261108 01:06:29】: 检测到当前节点为空，调整默认节点为节点列表内的第一个节点!
-【20261108 01:06:30】: 清理旧文件
-【20261108 01:06:31】: localmod: 保留 UU 安装包和原厂日志，不清理其它服务数据。
-【20261108 01:06:31】: websocketd 未变化，跳过二进制替换和进程重启。
-【20261108 01:06:31】: 检测/data分区剩余空间...
-【20261108 01:06:31】: /data分区剩余空间为：KB
-【20261108 01:06:32】: 检测jffs分区剩余空间...
-【20261108 01:06:37】: 当前jffs分区(tmpfs)剩余97248KB
-【20261108 01:06:37】: 插件安装预计需要约21332KB（候选包大小+动态余量2048KB）
-【20261108 01:06:37】: 空间满足，继续安装！
-【20261108 01:06:37】: 开始复制文件！
-【20261108 01:06:37】: 复制相关二进制文件！此步时间可能较长！
-【20261108 01:06:37】: 复制相关的脚本文件！
-【20261108 01:06:37】: 复制相关的网页文件！
-【20261108 01:06:38】: 为新安装文件赋予执行权限...
-【20261108 01:06:39】: 创建一些二进制文件的软链接！
-【20261108 01:06:39】: 节点数据升级将优先使用 node-tool：/koolshare/bin/node-tool
-【20261108 01:06:40】: node-tool 版本：0.1.15
-【20261108 01:06:40】: 节点数据已经升级到 schema 2 存储。
-【20261108 01:06:41】: 检测到旧版 fancyss（3.5.28 < 3.6.0），强制清理节点配置缓存和 webtest 缓存...
-【20261108 01:06:41】: 重建节点运行缓存...
-【20261108 01:06:41】: 设置插件安装参数...
-【20261108 01:06:41】: 科学上网 full插件安装安装成功！
-【20261108 01:06:41】: 更新完毕，请等待网页自动刷新！
-【2026年11月08日 01:06:42】: ============================= end =================================
+【20261108 10:53:22】: 机型：RT-AX86U koolcenter梅林改版固件 符合安装要求，开始安装插件！
+【20261108 10:53:22】: 内核：4.1.52，架构：aarch64，安装fancyss_hnd_v8_full！
+【20261108 10:53:23】: 安装版本：fancyss_hnd_v8_full_3.5.29
+【20261108 10:53:24】: 检测到当前节点为空，调整默认节点为节点列表内的第一个节点!
+【20261108 10:53:24】: 清理旧文件
+【20261108 10:53:25】: localmod: 保留 UU 安装包和原厂日志，不清理其它服务数据。
+【20261108 10:53:26】: websocketd 未变化，跳过二进制替换和进程重启。
+【20261108 10:53:26】: 检测/data分区剩余空间...
+【20261108 10:53:26】: /data分区剩余空间为：KB
+【20261108 10:53:27】: 检测jffs分区剩余空间...
+【20261108 10:53:31】: 当前jffs分区(tmpfs)剩余97248KB
+【20261108 10:53:31】: 插件安装预计需要约21332KB（候选包大小+动态余量2048KB）
+【20261108 10:53:31】: 空间满足，继续安装！
+【20261108 10:53:31】: 开始复制文件！
+【20261108 10:53:31】: 复制相关二进制文件！此步时间可能较长！
+【20261108 10:53:31】: 复制相关的脚本文件！
+【20261108 10:53:31】: 复制相关的网页文件！
+【20261108 10:53:32】: 为新安装文件赋予执行权限...
+【20261108 10:53:33】: 创建一些二进制文件的软链接！
+【20261108 10:53:34】: 节点数据升级将优先使用 node-tool：/koolshare/bin/node-tool
+【20261108 10:53:34】: node-tool 版本：0.1.15
+【20261108 10:53:34】: 节点数据已经升级到 schema 2 存储。
+【20261108 10:53:35】: 检测到旧版 fancyss（3.5.28 < 3.6.0），强制清理节点配置缓存和 webtest 缓存...
+【20261108 10:53:35】: 重建节点运行缓存...
+【20261108 10:53:36】: 设置插件安装参数...
+【20261108 10:53:36】: 科学上网 full插件安装安装成功！
+【20261108 10:53:36】: 更新完毕，请等待网页自动刷新！
+【2026年11月08日 10:53:37】: ============================= end =================================
 XU6J03M6
 
 PASS adapted_3.5.29_installed_disabled_original_binaries_auth_page_no_803_and_uu

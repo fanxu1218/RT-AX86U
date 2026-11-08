@@ -1,7 +1,7 @@
 {
   "status": "LOCAL_CANDIDATE_PLUGINS_PASS",
-  "base_candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
-  "base_candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2",
+  "base_candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w",
+  "base_candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9",
   "firmware_rebuilt": true,
   "checks": {
     "actual_aarch64_xray_and_node_tool_execute_with_retained_vendor_libraries": true,
@@ -1879,7 +1879,7 @@
     "xray_version": "Xray 26.5.9 (Xray, Penetrates Everything.) 1bdb488 (go1.26.3 linux/arm64)\nA unified platform for anti-censorship."
   },
   "overlay_files": {},
-  "log_sha256": "0dfdd1c25e3e8d477dc040ce20a397d1902e0682650a380cd538ce3b65b21746",
+  "log_sha256": "0f9cdecc7de8a7e0cb2d1439af74c571a5fe2ba26b37fb8c16966c84d155c816",
   "source_sha256": {
     "sources/localmod/plugin-compat.sh": "7addf5ead49207c9090e0acb48a0ae1c9b2871e329dc11b99ec907c3643bb836",
     "build/patch_online_installer.py": "c4a132cece30306b0f7cebf3b4fbbb02f29adf592e375f9c102e25cee80d7ae8",
@@ -1922,6 +1922,6 @@
     "Original 4.1.52 kernel: package identity check uses a declared uname fixture on Alpine 6.12",
     "WebSocket-only live streaming features: upstream authenticated HTTP fallbacks selected"
   ],
-  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r1_EXPERIMENTAL.w",
-  "candidate_sha256": "b99589f7cf68bedbc2687b4168abd594632c381c331290e23ddaf53276e1c9e2"
+  "candidate_image": "output/RT-AX86U_388_24437_localmod2_r9_r2_EXPERIMENTAL.w",
+  "candidate_sha256": "9ed280d8966b7a88e03f66ae74d87f7dacc760b2a173f50309b2c20372ef27a9"
 }

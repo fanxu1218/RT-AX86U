@@ -70,23 +70,22 @@ __attribute__((constructor)) static void setup(void) {
  unsetenv("LD_PRELOAD");
 }
 
-/* The native mssl stdio reader treats SSL_read <= 0 as EOF, including
- * SSL_ERROR_WANT_READ after EINTR. Resume only that explicitly retryable TLS
- * read, with identical arguments and the socket's original receive budget.
- * Real EOF, fatal SSL errors and ordinary timeouts remain native decisions. */
-int SSL_read(void *ssl,void *buffer,int size){
- static int (*read_next)(void *,void *,int);
+/* Native mssl abandons interrupted SSL_accept and SSL_read. Resume only
+ * EINTR + SSL_ERROR_WANT_READ with identical arguments under the original
+ * socket receive budget. This continues one TLS operation, never an HTTP
+ * request. EOF, fatal SSL errors and ordinary timeouts remain native. */
+static int tls_receive(void *ssl,void *buffer,int size,
+ int (*read_call)(void *,void *,int),int (*accept_call)(void *)){
  static int (*get_fd)(const void *),(*get_error)(const void *,int);
- if(!read_next){read_next=dlsym(RTLD_NEXT,"SSL_read");get_fd=dlsym(RTLD_NEXT,"SSL_get_fd");get_error=dlsym(RTLD_NEXT,"SSL_get_error");}
- if(!read_next){errno=ENOSYS;return -1;}
+ if(!get_fd){get_fd=dlsym(RTLD_NEXT,"SSL_get_fd");get_error=dlsym(RTLD_NEXT,"SSL_get_error");}
  struct timeval original;struct timespec now;socklen_t length=sizeof(original);
  int fd=get_fd?get_fd(ssl):-1;
  if(fd<0 || !get_error || getsockopt(fd,SOL_SOCKET,SO_RCVTIMEO,&original,&length) ||
-    original.tv_sec<0 || original.tv_sec>120 || (!original.tv_sec&&!original.tv_usec) || clock_gettime(CLOCK_MONOTONIC,&now))return read_next(ssl,buffer,size);
+    original.tv_sec<0 || original.tv_sec>120 || (!original.tv_sec&&!original.tv_usec) || clock_gettime(CLOCK_MONOTONIC,&now))return read_call?read_call(ssl,buffer,size):accept_call(ssl);
  int64_t deadline=(int64_t)now.tv_sec*1000000000+now.tv_nsec+(int64_t)original.tv_sec*1000000000+original.tv_usec*1000;
  int changed=0,n,saved;
  for(;;){
-  n=read_next(ssl,buffer,size);saved=errno;
+  n=read_call?read_call(ssl,buffer,size):accept_call(ssl);saved=errno;
   /* SSL_get_error must immediately follow the I/O on this same thread. */
   if(n>0 || saved!=EINTR || get_error(ssl,n)!=2)break;
   if(clock_gettime(CLOCK_MONOTONIC,&now)){n=-1;saved=EIO;break;}
@@ -99,6 +98,13 @@ int SSL_read(void *ssl,void *buffer,int size){
  }
  if(changed)setsockopt(fd,SOL_SOCKET,SO_RCVTIMEO,&original,sizeof(original));
  errno=saved;return n;
+}
+
+int SSL_read(void *ssl,void *buffer,int size){
+ static int (*read_next)(void *,void *,int);
+ if(!read_next)read_next=dlsym(RTLD_NEXT,"SSL_read");
+ if(!read_next){errno=ENOSYS;return -1;}
+ return tls_receive(ssl,buffer,size,read_next,NULL);
 }
 
 /* The retained server configures 20480 OpenSSL sessions for two hours. Native
@@ -115,7 +121,7 @@ int SSL_accept(void *ssl){
  if(!accept_next){accept_next=dlsym(RTLD_NEXT,"SSL_accept");get_ctx=dlsym(RTLD_NEXT,"SSL_get_SSL_CTX");ctx_ctrl=dlsym(RTLD_NEXT,"SSL_CTX_ctrl");get_timeout=dlsym(RTLD_NEXT,"SSL_CTX_get_timeout");set_timeout=dlsym(RTLD_NEXT,"SSL_CTX_set_timeout");}
  if(!accept_next){errno=ENOSYS;return -1;}
  if(get_ctx && ctx_ctrl && get_timeout && set_timeout){void *ctx=get_ctx(ssl);if(ctx){long capacity=ctx_ctrl(ctx,43,0,NULL);if(capacity==0 || capacity>TLS_CACHE_ENTRIES)ctx_ctrl(ctx,42,TLS_CACHE_ENTRIES,NULL);if(get_timeout(ctx)>TLS_CACHE_SECONDS)set_timeout(ctx,TLS_CACHE_SECONDS);}}
- return accept_next(ssl);
+ return tls_receive(ssl,NULL,0,NULL,accept_next);
 }
 
 static int api_uri(const char *p) {
