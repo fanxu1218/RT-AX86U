@@ -11,6 +11,8 @@
     "warmup": 31
   },
   "gc_cycles": 1,
+  "gc_cycles_in_measured_window": 1,
+  "no_thp_control_gc_cycles_in_measured_window": 1,
   "gc_live_trace_mb_values": [
     0.0
   ],
@@ -84,6 +86,8 @@
         "Swap": 0,
         "SwapPss": 0
       },
+      "fds": 6,
+      "threads": "4",
       "default_minus_control_rss_kib": 2440
     },
     {
@@ -127,6 +131,8 @@
         "Swap": 0,
         "SwapPss": 0
       },
+      "fds": 6,
+      "threads": "4",
       "default_minus_control_rss_kib": 2424
     }
   ],
@@ -206,56 +212,64 @@
       "first_rss_kib": 0,
       "final_rss_kib": 0,
       "rss_delta_kib": 0,
-      "private_dirty_delta_kib": 0
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
     },
     {
       "group": "r--p /jffs/.koolshare/bin/ddnsgo",
       "first_rss_kib": 0,
       "final_rss_kib": 0,
       "rss_delta_kib": 0,
-      "private_dirty_delta_kib": 0
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
     },
     {
       "group": "r--p anonymous",
       "first_rss_kib": 4792,
       "final_rss_kib": 4792,
       "rss_delta_kib": 0,
-      "private_dirty_delta_kib": 0
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
     },
     {
       "group": "r-xp [sigpage]",
       "first_rss_kib": 4,
       "final_rss_kib": 4,
       "rss_delta_kib": 0,
-      "private_dirty_delta_kib": 0
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
     },
     {
       "group": "r-xp [vectors]",
       "first_rss_kib": 0,
       "final_rss_kib": 0,
       "rss_delta_kib": 0,
-      "private_dirty_delta_kib": 0
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
     },
     {
       "group": "r-xp anonymous",
       "first_rss_kib": 5412,
       "final_rss_kib": 5412,
       "rss_delta_kib": 0,
-      "private_dirty_delta_kib": 0
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
     },
     {
       "group": "rw-p [stack]",
       "first_rss_kib": 260,
       "final_rss_kib": 260,
       "rss_delta_kib": 0,
-      "private_dirty_delta_kib": 0
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
     },
     {
       "group": "rw-p anonymous",
       "first_rss_kib": 7156,
       "final_rss_kib": 7160,
       "rss_delta_kib": 4,
-      "private_dirty_delta_kib": 4
+      "private_dirty_delta_kib": 4,
+      "virtual_delta_kib": 0
     }
   ],
   "timing_groups": [
@@ -926,6 +940,44 @@
       "maximum": 0
     }
   },
+  "no_thp_control_resource_ranges": {
+    "smaps_rss_kib": {
+      "count": 16,
+      "minimum": 11960,
+      "median": 14722.0,
+      "maximum": 15204
+    },
+    "private_dirty_kib": {
+      "count": 16,
+      "minimum": 11956,
+      "median": 14718.0,
+      "maximum": 15200
+    },
+    "anonymous_kib": {
+      "count": 16,
+      "minimum": 11956,
+      "median": 14718.0,
+      "maximum": 15200
+    },
+    "anon_huge_pages_kib": {
+      "count": 16,
+      "minimum": 0,
+      "median": 0.0,
+      "maximum": 0
+    },
+    "swap_kib": {
+      "count": 16,
+      "minimum": 0,
+      "median": 0.0,
+      "maximum": 0
+    }
+  },
+  "no_thp_control_fd_range": {
+    "count": 16,
+    "minimum": 6,
+    "median": 6.0,
+    "maximum": 6
+  },
   "fd_range": {
     "count": 16,
     "minimum": 6,
@@ -937,7 +989,7 @@
   ],
   "source_sha256": {
     "output/r9r2_diagnostic_preflight_tests.json": "ea94f384d4d8ec4782a30b1020fe1ba81c4ce0fd5985d31f42f9e657e6f83f78",
-    "analysis/r9r2_diagnostics/analyze.py": "44d40c28f99e80cecbc55297e34681debdc6561385671b74ce4f4234f6512be8"
+    "analysis/r9r2_diagnostics/analyze.py": "05731eaa586a9d230dd2a165e4b021a4cc6ebdcc539d9e95b03de2f0d273b705"
   },
   "limits": [
     "Deliberate SIGSTOP is an attribution control, not reproduction of the unexplained natural timeout",
@@ -945,5 +997,593 @@
     "GC trace labels have coarse MB precision; RSS is resident mappings, not retained application objects",
     "Target DDNS-Go is native ARM32 in the system guest; only the labelled HTTPd calibration uses QEMU-user",
     "Repeated quiet baselines bound observed growth only; no multiday or real-device proof"
+  ],
+  "mapping_class_ranges": {
+    "readonly_anonymous": {
+      "count": 16,
+      "minimum": 4792,
+      "median": 4792.0,
+      "maximum": 4792
+    },
+    "executable_anonymous": {
+      "count": 16,
+      "minimum": 5412,
+      "median": 5412.0,
+      "maximum": 5412
+    },
+    "writable_anonymous": {
+      "count": 16,
+      "minimum": 2736,
+      "median": 4872.0,
+      "maximum": 7160
+    },
+    "stack": {
+      "count": 16,
+      "minimum": 260,
+      "median": 260.0,
+      "maximum": 260
+    },
+    "other": {
+      "count": 16,
+      "minimum": 4,
+      "median": 4.0,
+      "maximum": 4
+    }
+  },
+  "no_thp_control_mapping_class_ranges": {
+    "readonly_anonymous": {
+      "count": 16,
+      "minimum": 4792,
+      "median": 4792.0,
+      "maximum": 4792
+    },
+    "executable_anonymous": {
+      "count": 16,
+      "minimum": 5412,
+      "median": 5412.0,
+      "maximum": 5412
+    },
+    "writable_anonymous": {
+      "count": 16,
+      "minimum": 1492,
+      "median": 4254.0,
+      "maximum": 4736
+    },
+    "stack": {
+      "count": 16,
+      "minimum": 260,
+      "median": 260.0,
+      "maximum": 260
+    },
+    "other": {
+      "count": 16,
+      "minimum": 4,
+      "median": 4.0,
+      "maximum": 4
+    }
+  },
+  "no_thp_control_mapping_changes_after_first_idle": [
+    {
+      "group": "---p anonymous",
+      "first_rss_kib": 0,
+      "final_rss_kib": 0,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
+    },
+    {
+      "group": "r--p /jffs/.koolshare/bin/diag-ddnsgo-control",
+      "first_rss_kib": 0,
+      "final_rss_kib": 0,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
+    },
+    {
+      "group": "r--p anonymous",
+      "first_rss_kib": 4792,
+      "final_rss_kib": 4792,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
+    },
+    {
+      "group": "r-xp [sigpage]",
+      "first_rss_kib": 4,
+      "final_rss_kib": 4,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
+    },
+    {
+      "group": "r-xp [vectors]",
+      "first_rss_kib": 0,
+      "final_rss_kib": 0,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
+    },
+    {
+      "group": "r-xp anonymous",
+      "first_rss_kib": 5412,
+      "final_rss_kib": 5412,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
+    },
+    {
+      "group": "rw-p [stack]",
+      "first_rss_kib": 260,
+      "final_rss_kib": 260,
+      "rss_delta_kib": 0,
+      "private_dirty_delta_kib": 0,
+      "virtual_delta_kib": 0
+    },
+    {
+      "group": "rw-p anonymous",
+      "first_rss_kib": 4716,
+      "final_rss_kib": 4736,
+      "rss_delta_kib": 20,
+      "private_dirty_delta_kib": 20,
+      "virtual_delta_kib": 0
+    }
+  ],
+  "idle_resident_transitions": [
+    {
+      "stage": "idle_1",
+      "from_seconds": 93.443076416,
+      "to_seconds": 111.718368016,
+      "default": {
+        "rss_delta_kib": 2052,
+        "huge_delta_kib": 2048,
+        "gc_delta": 0,
+        "scav_delta": 0,
+        "latest_scav": null,
+        "mapping_deltas": [
+          {
+            "group": "---p anonymous",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": -4100
+          },
+          {
+            "group": "r--p /jffs/.koolshare/bin/ddnsgo",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r--p anonymous",
+            "first_rss_kib": 4792,
+            "final_rss_kib": 4792,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp [sigpage]",
+            "first_rss_kib": 4,
+            "final_rss_kib": 4,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp [vectors]",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp anonymous",
+            "first_rss_kib": 5412,
+            "final_rss_kib": 5412,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "rw-p [stack]",
+            "first_rss_kib": 260,
+            "final_rss_kib": 260,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "rw-p anonymous",
+            "first_rss_kib": 4872,
+            "final_rss_kib": 6924,
+            "rss_delta_kib": 2052,
+            "private_dirty_delta_kib": 2052,
+            "virtual_delta_kib": 4100
+          }
+        ]
+      },
+      "no_thp_control": {
+        "rss_delta_kib": 52,
+        "huge_delta_kib": 0,
+        "gc_delta": 0,
+        "scav_delta": 0,
+        "latest_scav": null,
+        "mapping_deltas": [
+          {
+            "group": "---p anonymous",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r--p /jffs/.koolshare/bin/diag-ddnsgo-control",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r--p anonymous",
+            "first_rss_kib": 4792,
+            "final_rss_kib": 4792,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp [sigpage]",
+            "first_rss_kib": 4,
+            "final_rss_kib": 4,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp [vectors]",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp anonymous",
+            "first_rss_kib": 5412,
+            "final_rss_kib": 5412,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "rw-p [stack]",
+            "first_rss_kib": 260,
+            "final_rss_kib": 260,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "rw-p anonymous",
+            "first_rss_kib": 4268,
+            "final_rss_kib": 4320,
+            "rss_delta_kib": 52,
+            "private_dirty_delta_kib": 52,
+            "virtual_delta_kib": 0
+          }
+        ]
+      }
+    },
+    {
+      "stage": "idle_1",
+      "from_seconds": 127.182184688,
+      "to_seconds": 145.745913936,
+      "default": {
+        "rss_delta_kib": 224,
+        "huge_delta_kib": 0,
+        "gc_delta": 1,
+        "scav_delta": 1,
+        "latest_scav": "scav 0 KiB work (bg), 0 KiB work (eager), 3968 KiB now, 22% util",
+        "mapping_deltas": [
+          {
+            "group": "---p anonymous",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r--p /jffs/.koolshare/bin/ddnsgo",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r--p anonymous",
+            "first_rss_kib": 4792,
+            "final_rss_kib": 4792,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp [sigpage]",
+            "first_rss_kib": 4,
+            "final_rss_kib": 4,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp [vectors]",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp anonymous",
+            "first_rss_kib": 5412,
+            "final_rss_kib": 5412,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "rw-p [stack]",
+            "first_rss_kib": 260,
+            "final_rss_kib": 260,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "rw-p anonymous",
+            "first_rss_kib": 6924,
+            "final_rss_kib": 7148,
+            "rss_delta_kib": 224,
+            "private_dirty_delta_kib": 224,
+            "virtual_delta_kib": 320
+          }
+        ]
+      },
+      "no_thp_control": {
+        "rss_delta_kib": 28,
+        "huge_delta_kib": 0,
+        "gc_delta": 0,
+        "scav_delta": 0,
+        "latest_scav": null,
+        "mapping_deltas": [
+          {
+            "group": "---p anonymous",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r--p /jffs/.koolshare/bin/diag-ddnsgo-control",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r--p anonymous",
+            "first_rss_kib": 4792,
+            "final_rss_kib": 4792,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp [sigpage]",
+            "first_rss_kib": 4,
+            "final_rss_kib": 4,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp [vectors]",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp anonymous",
+            "first_rss_kib": 5412,
+            "final_rss_kib": 5412,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "rw-p [stack]",
+            "first_rss_kib": 260,
+            "final_rss_kib": 260,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "rw-p anonymous",
+            "first_rss_kib": 4372,
+            "final_rss_kib": 4400,
+            "rss_delta_kib": 28,
+            "private_dirty_delta_kib": 28,
+            "virtual_delta_kib": 0
+          }
+        ]
+      }
+    },
+    {
+      "stage": "idle_1",
+      "from_seconds": 145.745913936,
+      "to_seconds": 161.080741664,
+      "default": {
+        "rss_delta_kib": 8,
+        "huge_delta_kib": 0,
+        "gc_delta": 0,
+        "scav_delta": 0,
+        "latest_scav": "scav 0 KiB work (bg), 0 KiB work (eager), 3968 KiB now, 22% util",
+        "mapping_deltas": [
+          {
+            "group": "---p anonymous",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r--p /jffs/.koolshare/bin/ddnsgo",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r--p anonymous",
+            "first_rss_kib": 4792,
+            "final_rss_kib": 4792,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp [sigpage]",
+            "first_rss_kib": 4,
+            "final_rss_kib": 4,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp [vectors]",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp anonymous",
+            "first_rss_kib": 5412,
+            "final_rss_kib": 5412,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "rw-p [stack]",
+            "first_rss_kib": 260,
+            "final_rss_kib": 260,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "rw-p anonymous",
+            "first_rss_kib": 7148,
+            "final_rss_kib": 7156,
+            "rss_delta_kib": 8,
+            "private_dirty_delta_kib": 8,
+            "virtual_delta_kib": 0
+          }
+        ]
+      },
+      "no_thp_control": {
+        "rss_delta_kib": 312,
+        "huge_delta_kib": 0,
+        "gc_delta": 1,
+        "scav_delta": 1,
+        "latest_scav": "scav 0 KiB work (bg), 0 KiB work (eager), 3960 KiB now, 21% util",
+        "mapping_deltas": [
+          {
+            "group": "---p anonymous",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r--p /jffs/.koolshare/bin/diag-ddnsgo-control",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r--p anonymous",
+            "first_rss_kib": 4792,
+            "final_rss_kib": 4792,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp [sigpage]",
+            "first_rss_kib": 4,
+            "final_rss_kib": 4,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp [vectors]",
+            "first_rss_kib": 0,
+            "final_rss_kib": 0,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "r-xp anonymous",
+            "first_rss_kib": 5412,
+            "final_rss_kib": 5412,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "rw-p [stack]",
+            "first_rss_kib": 260,
+            "final_rss_kib": 260,
+            "rss_delta_kib": 0,
+            "private_dirty_delta_kib": 0,
+            "virtual_delta_kib": 0
+          },
+          {
+            "group": "rw-p anonymous",
+            "first_rss_kib": 4400,
+            "final_rss_kib": 4712,
+            "rss_delta_kib": 312,
+            "private_dirty_delta_kib": 312,
+            "virtual_delta_kib": 320
+          }
+        ]
+      }
+    }
+  ],
+  "no_thp_control_thread_values": [
+    "4"
   ]
 }

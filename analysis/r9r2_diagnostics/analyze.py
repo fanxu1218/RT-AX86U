@@ -18,6 +18,41 @@ def stages_parse(text):
   m=re.match(r'([\d.]+) pid=(\d+) stage=([a-z_]+)',l)
   if m:out.setdefault(m[3],[]).append(float(m[1]))
  return out
+def map_changes(first,last):
+ out=[]
+ for k in sorted(set(first['maps'])|set(last['maps'])):
+  aa=first['maps'].get(k,{});b=last['maps'].get(k,{})
+  out.append(dict(group=k,first_rss_kib=aa.get('rss_kib',0),final_rss_kib=b.get('rss_kib',0),rss_delta_kib=b.get('rss_kib',0)-aa.get('rss_kib',0),private_dirty_delta_kib=b.get('private_dirty_kib',0)-aa.get('private_dirty_kib',0),virtual_delta_kib=b.get('virtual_kib',0)-aa.get('virtual_kib',0)))
+ return out
+def mapping_ranges(samples):
+ # Permissions describe resident mappings, not an exact Go heap profile.
+ classes=['readonly_anonymous','executable_anonymous','writable_anonymous','stack','other']
+ totals={k:[] for k in classes}
+ for sample in samples:
+  row={k:0 for k in classes}
+  for name,m in sample['maps'].items():
+   perms,path=name.split(' ',1)
+   if path=='[stack]':key='stack'
+   elif path!='anonymous':key='other'
+   elif 'x' in perms:key='executable_anonymous'
+   elif 'w' in perms:key='writable_anonymous'
+   else:key='readonly_anonymous'
+   row[key]+=m['rss_kib']
+  assert sum(row.values())==sample['smaps_rss_kib']
+  for key in classes:totals[key].append(row[key])
+ return {k:summary(v) for k,v in totals.items()}
+def idle_transitions(samples):
+ # Large RSS changes in a page-load-free phase are useful observations, not
+ # proof of a unique cause. Both GC and scavenger counts stay in the record.
+ out=[]
+ for aa,b in zip(samples,samples[1:]):
+  if aa['stage']!=b['stage'] or not (b['stage'].startswith('idle_') or b['stage']=='final_idle'):continue
+  ca,cb=aa['no_thp_control'],b['no_thp_control']
+  if max(abs(b['smaps_rss_kib']-aa['smaps_rss_kib']),abs(cb['smaps_rss_kib']-ca['smaps_rss_kib']))<64:continue
+  def delta(a,z):
+   return dict(rss_delta_kib=z['smaps_rss_kib']-a['smaps_rss_kib'],huge_delta_kib=z['anon_huge_pages_kib']-a['anon_huge_pages_kib'],gc_delta=z['gc_count']-a['gc_count'],scav_delta=z.get('scav_count',0)-a.get('scav_count',0),latest_scav=z.get('latest_scav'),mapping_deltas=map_changes(a,z))
+  out.append(dict(stage=b['stage'],from_seconds=aa['elapsed_seconds'],to_seconds=b['elapsed_seconds'],default=delta(aa,b),no_thp_control=delta(ca,cb)))
+ return out
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--mode',choices=['preflight','cycles'],default='preflight');a=ap.parse_args()
  p=ROOT/f'output/r9r2_diagnostic_{a.mode}_tests.json';r=json.loads(p.read_text());x=r['result'];assert r['status']=='LOCAL_ATTRIBUTION_DIAGNOSTIC_COMPLETE'
@@ -27,6 +62,7 @@ def main():
  assert x['no_thp_control_same_pid'] and x['no_thp_control_binary_matches']
  assert all(s['no_thp_control']['process']['THP_enabled']=='0' and s['no_thp_control']['anon_huge_pages_kib']==0 for s in x['samples'])
  assert x['same_memory_pid'] and x['data_preserved'] and x['runtime_script_restored'] and x['background_load_errors']==[]
+ assert x['page_counts']==x['no_thp_control_page_counts'],'Unbalanced paired page load'
  samples=x['samples'];assert samples and len({(s['process']['pid'],s['process']['start_ticks']) for s in samples})==1
  assert all(s['process']['executable'].endswith('/ddnsgo') and 'qemu' not in s['process']['executable'] for s in samples)
  assert all(s['coexist_processes'][k]['pid']==v for s in samples for k,v in x['pids'].items())
@@ -59,14 +95,13 @@ def main():
  quiet_control=[]
  for b in quiet:
   s=next(s for s in samples if s['stage']==b['stage'] and s['role']==b['role']);c=s['no_thp_control'];g=gc_parse(c.get('latest_gc',''))
-  quiet_control.append(dict(stage=b['stage'],elapsed_seconds=b['elapsed_seconds'],rss_kib=c['smaps_rss_kib'],anonymous_kib=c['anonymous_kib'],huge_kib=c['anon_huge_pages_kib'],gc_count=c['gc_count'],latest_gc=g,rollup=c['rollup'],default_minus_control_rss_kib=s['smaps_rss_kib']-c['smaps_rss_kib']))
+  quiet_control.append(dict(stage=b['stage'],elapsed_seconds=b['elapsed_seconds'],rss_kib=c['smaps_rss_kib'],anonymous_kib=c['anonymous_kib'],huge_kib=c['anon_huge_pages_kib'],gc_count=c['gc_count'],latest_gc=g,rollup=c['rollup'],fds=c['process']['fds'],threads=c['process']['Threads'],default_minus_control_rss_kib=s['smaps_rss_kib']-c['smaps_rss_kib']))
  quiet_delta=[b['rss_kib']-aa['rss_kib'] for aa,b in zip(quiet,quiet[1:])]
- mapping_changes=[];first,last=quiet[0],quiet[-1]
+ first,last=quiet[0],quiet[-1]
  first_sample=next(s for s in samples if s['stage']==first['stage'] and s['role']==first['role']);last_sample=samples[-1]
- for k in sorted(set(first_sample['maps'])|set(last_sample['maps'])):
-  aa=first_sample['maps'].get(k,{});b=last_sample['maps'].get(k,{})
-  mapping_changes.append(dict(group=k,first_rss_kib=aa.get('rss_kib',0),final_rss_kib=b.get('rss_kib',0),rss_delta_kib=b.get('rss_kib',0)-aa.get('rss_kib',0),private_dirty_delta_kib=b.get('private_dirty_kib',0)-aa.get('private_dirty_kib',0)))
- report=dict(status='LOCAL_ATTRIBUTION_REVIEW_COMPLETE',mode=a.mode,candidate_sha256=r['candidate_sha256'],same_pid=x['memory_pid'],duration_seconds=x['duration_seconds'],normal_status_queries=x['normal_status_queries'],page_requests=x['target_page_requests'],page_counts=x['page_counts'],gc_cycles=len(gc),gc_live_trace_mb_values=sorted(set(g['live_heap_trace_mb'] for g in gc)),runtime_forced_gc_count=sum(g['runtime_forced'] for g in gc),gc=gc,no_thp_control_gc=control_gc,no_thp_control_gc_live_trace_mb_values=sorted(set(g['live_heap_trace_mb'] for g in control_gc)),no_thp_control_quiet_boundaries=quiet_control,no_thp_control_page_counts=x['no_thp_control_page_counts'],no_thp_control_final_minus_first_idle_rss_kib=quiet_control[-1]['rss_kib']-quiet_control[0]['rss_kib'],quiet_boundaries=quiet,load_boundaries=load,quiet_rss_deltas_kib=quiet_delta,final_minus_first_idle_rss_kib=quiet[-1]['rss_kib']-quiet[0]['rss_kib'],mapping_changes_after_first_idle=mapping_changes,timing_groups=timing,latency_observations=observations,natural_latency_failures=unexpected,controlled_fault_observations=expected,pprof_available=x['heap_profile_probe']['available'],resource_ranges={k:summary([s[k] for s in samples]) for k in ['smaps_rss_kib','private_dirty_kib','anonymous_kib','anon_huge_pages_kib','swap_kib']},fd_range=summary([s['process']['fds'] for s in samples]),thread_values=sorted(set(s['process']['Threads'] for s in samples)),source_sha256={str(p.relative_to(ROOT)):sha(p),'analysis/r9r2_diagnostics/analyze.py':sha(Path(__file__).resolve())},limits=['Deliberate SIGSTOP is an attribution control, not reproduction of the unexplained natural timeout','No latency success threshold turns failure observations into a stability pass; requests are not replayed','GC trace labels have coarse MB precision; RSS is resident mappings, not retained application objects','Target DDNS-Go is native ARM32 in the system guest; only the labelled HTTPd calibration uses QEMU-user','Repeated quiet baselines bound observed growth only; no multiday or real-device proof'])
+ mapping_changes=map_changes(first_sample,last_sample)
+ report=dict(status='LOCAL_ATTRIBUTION_REVIEW_COMPLETE',mode=a.mode,candidate_sha256=r['candidate_sha256'],same_pid=x['memory_pid'],duration_seconds=x['duration_seconds'],normal_status_queries=x['normal_status_queries'],page_requests=x['target_page_requests'],page_counts=x['page_counts'],gc_cycles=len(gc),gc_cycles_in_measured_window=samples[-1]['gc_count']-samples[0]['gc_count'],no_thp_control_gc_cycles_in_measured_window=samples[-1]['no_thp_control']['gc_count']-samples[0]['no_thp_control']['gc_count'],gc_live_trace_mb_values=sorted(set(g['live_heap_trace_mb'] for g in gc)),runtime_forced_gc_count=sum(g['runtime_forced'] for g in gc),gc=gc,no_thp_control_gc=control_gc,no_thp_control_gc_live_trace_mb_values=sorted(set(g['live_heap_trace_mb'] for g in control_gc)),no_thp_control_quiet_boundaries=quiet_control,no_thp_control_page_counts=x['no_thp_control_page_counts'],no_thp_control_final_minus_first_idle_rss_kib=quiet_control[-1]['rss_kib']-quiet_control[0]['rss_kib'],quiet_boundaries=quiet,load_boundaries=load,quiet_rss_deltas_kib=quiet_delta,final_minus_first_idle_rss_kib=quiet[-1]['rss_kib']-quiet[0]['rss_kib'],mapping_changes_after_first_idle=mapping_changes,timing_groups=timing,latency_observations=observations,natural_latency_failures=unexpected,controlled_fault_observations=expected,pprof_available=x['heap_profile_probe']['available'],resource_ranges={k:summary([s[k] for s in samples]) for k in ['smaps_rss_kib','private_dirty_kib','anonymous_kib','anon_huge_pages_kib','swap_kib']},no_thp_control_resource_ranges={k:summary([s['no_thp_control'][k] for s in samples]) for k in ['smaps_rss_kib','private_dirty_kib','anonymous_kib','anon_huge_pages_kib','swap_kib']},no_thp_control_fd_range=summary([s['no_thp_control']['process']['fds'] for s in samples]),fd_range=summary([s['process']['fds'] for s in samples]),thread_values=sorted(set(s['process']['Threads'] for s in samples)),source_sha256={str(p.relative_to(ROOT)):sha(p),'analysis/r9r2_diagnostics/analyze.py':sha(Path(__file__).resolve())},limits=['Deliberate SIGSTOP is an attribution control, not reproduction of the unexplained natural timeout','No latency success threshold turns failure observations into a stability pass; requests are not replayed','GC trace labels have coarse MB precision; RSS is resident mappings, not retained application objects','Target DDNS-Go is native ARM32 in the system guest; only the labelled HTTPd calibration uses QEMU-user','Repeated quiet baselines bound observed growth only; no multiday or real-device proof'])
+ report.update(mapping_class_ranges=mapping_ranges(samples),no_thp_control_mapping_class_ranges=mapping_ranges([s['no_thp_control'] for s in samples]),no_thp_control_mapping_changes_after_first_idle=map_changes(first_sample['no_thp_control'],last_sample['no_thp_control']),idle_resident_transitions=idle_transitions(samples),no_thp_control_thread_values=sorted(set(s['no_thp_control']['process']['Threads'] for s in samples)))
  (ROOT/f'output/r9r2_diagnostic_{a.mode}_review.json').write_text(json.dumps(report,indent=2)+'\n')
  print('Reviewed',a.mode,'GC',len(gc),'natural latency failures',len(unexpected),'quiet RSS',[q['rss_kib'] for q in quiet],'live trace MB',report['gc_live_trace_mb_values'])
  print('Latency groups',json.dumps(timing,separators=(',',':')))
