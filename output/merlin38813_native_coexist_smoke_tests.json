@@ -1,0 +1,1453 @@
+{
+  "maintenance_windows": [
+    {
+      "name": "center_restart",
+      "queries": 21,
+      "unavailable": 20
+    },
+    {
+      "name": "ddns_restart",
+      "queries": 3,
+      "unavailable": 0
+    },
+    {
+      "name": "uu_restart",
+      "queries": 15,
+      "unavailable": 0
+    },
+    {
+      "name": "dns_restart",
+      "queries": 1,
+      "unavailable": 0
+    },
+    {
+      "name": "ssh_restart",
+      "queries": 11,
+      "unavailable": 0
+    },
+    {
+      "name": "upnp_restart",
+      "queries": 1,
+      "unavailable": 0
+    },
+    {
+      "name": "vpn-client_restart",
+      "queries": 2,
+      "unavailable": 0
+    },
+    {
+      "name": "fancy-client_restart",
+      "queries": 10,
+      "unavailable": 0
+    },
+    {
+      "name": "nat_restart",
+      "queries": 1,
+      "unavailable": 0
+    },
+    {
+      "name": "proxy-upstream_restart",
+      "queries": 16,
+      "unavailable": 0
+    },
+    {
+      "name": "vpn-upstream_restart",
+      "queries": 26,
+      "unavailable": 0
+    },
+    {
+      "name": "center_restart",
+      "queries": 22,
+      "unavailable": 21
+    },
+    {
+      "name": "ddns_restart",
+      "queries": 3,
+      "unavailable": 0
+    },
+    {
+      "name": "uu_restart",
+      "queries": 14,
+      "unavailable": 0
+    }
+  ],
+  "resource_ranges": [
+    {
+      "name": "ddnsgo",
+      "pid": 1399,
+      "samples": 3,
+      "executable": "/jffs/.koolshare/bin/ddnsgo",
+      "rss_min_kib": 13196,
+      "rss_max_kib": 13248,
+      "fd_min": 7,
+      "fd_max": 7
+    },
+    {
+      "name": "ddnsgo",
+      "pid": 6062,
+      "samples": 6,
+      "executable": "/jffs/.koolshare/bin/ddnsgo",
+      "rss_min_kib": 13192,
+      "rss_max_kib": 15316,
+      "fd_min": 7,
+      "fd_max": 7
+    },
+    {
+      "name": "ddnsgo",
+      "pid": 14699,
+      "samples": 2,
+      "executable": "/jffs/.koolshare/bin/ddnsgo",
+      "rss_min_kib": 13188,
+      "rss_max_kib": 13224,
+      "fd_min": 7,
+      "fd_max": 7
+    },
+    {
+      "name": "dnsmasq",
+      "pid": 3006,
+      "samples": 5,
+      "executable": "/usr/sbin/dnsmasq",
+      "rss_min_kib": 1864,
+      "rss_max_kib": 1864,
+      "fd_min": 9,
+      "fd_max": 9
+    },
+    {
+      "name": "dnsmasq",
+      "pid": 8107,
+      "samples": 6,
+      "executable": "/usr/sbin/dnsmasq",
+      "rss_min_kib": 1856,
+      "rss_max_kib": 1856,
+      "fd_min": 9,
+      "fd_max": 9
+    },
+    {
+      "name": "dropbear",
+      "pid": 3015,
+      "samples": 5,
+      "executable": "/usr/bin/qemu-arm",
+      "rss_min_kib": 12376,
+      "rss_max_kib": 12376,
+      "fd_min": 4,
+      "fd_max": 4
+    },
+    {
+      "name": "dropbear",
+      "pid": 8306,
+      "samples": 6,
+      "executable": "/usr/bin/qemu-arm",
+      "rss_min_kib": 10412,
+      "rss_max_kib": 10412,
+      "fd_min": 4,
+      "fd_max": 4
+    },
+    {
+      "name": "httpd",
+      "pid": 585,
+      "samples": 4,
+      "executable": "/usr/libexec/localmod/httpd",
+      "rss_min_kib": 9876,
+      "rss_max_kib": 10012,
+      "fd_min": 5,
+      "fd_max": 5
+    },
+    {
+      "name": "httpd",
+      "pid": 7510,
+      "samples": 7,
+      "executable": "/usr/libexec/localmod/httpd",
+      "rss_min_kib": 9864,
+      "rss_max_kib": 10080,
+      "fd_min": 5,
+      "fd_max": 5
+    },
+    {
+      "name": "httpdb",
+      "pid": 574,
+      "samples": 2,
+      "executable": "/jffs/.koolshare/bin/httpdb",
+      "rss_min_kib": 988,
+      "rss_max_kib": 996,
+      "fd_min": 6,
+      "fd_max": 6
+    },
+    {
+      "name": "httpdb",
+      "pid": 4792,
+      "samples": 1,
+      "executable": "/jffs/.koolshare/bin/httpdb",
+      "rss_min_kib": 992,
+      "rss_max_kib": 992,
+      "fd_min": 6,
+      "fd_max": 6
+    },
+    {
+      "name": "httpdb",
+      "pid": 5622,
+      "samples": 5,
+      "executable": "/jffs/.koolshare/bin/httpdb",
+      "rss_min_kib": 1032,
+      "rss_max_kib": 1268,
+      "fd_min": 6,
+      "fd_max": 6
+    },
+    {
+      "name": "httpdb",
+      "pid": 13430,
+      "samples": 1,
+      "executable": "/jffs/.koolshare/bin/httpdb",
+      "rss_min_kib": 992,
+      "rss_max_kib": 992,
+      "fd_min": 6,
+      "fd_max": 6
+    },
+    {
+      "name": "httpdb",
+      "pid": 13951,
+      "samples": 2,
+      "executable": "/jffs/.koolshare/bin/httpdb",
+      "rss_min_kib": 1040,
+      "rss_max_kib": 1124,
+      "fd_min": 6,
+      "fd_max": 6
+    },
+    {
+      "name": "miniupnpd",
+      "pid": 3097,
+      "samples": 6,
+      "executable": "/usr/sbin/miniupnpd",
+      "rss_min_kib": 2072,
+      "rss_max_kib": 2096,
+      "fd_min": 7,
+      "fd_max": 7
+    },
+    {
+      "name": "miniupnpd",
+      "pid": 9231,
+      "samples": 5,
+      "executable": "/usr/sbin/miniupnpd",
+      "rss_min_kib": 2088,
+      "rss_max_kib": 2100,
+      "fd_min": 7,
+      "fd_max": 7
+    },
+    {
+      "name": "openvpn-client",
+      "pid": 3134,
+      "samples": 6,
+      "executable": "/usr/sbin/openvpn",
+      "rss_min_kib": 7932,
+      "rss_max_kib": 7932,
+      "fd_min": 6,
+      "fd_max": 6
+    },
+    {
+      "name": "openvpn-client",
+      "pid": 9440,
+      "samples": 5,
+      "executable": "/usr/sbin/openvpn",
+      "rss_min_kib": 7932,
+      "rss_max_kib": 7948,
+      "fd_min": 6,
+      "fd_max": 6
+    },
+    {
+      "name": "openvpn-server",
+      "pid": 3133,
+      "samples": 7,
+      "executable": "/router/usr/sbin/openvpn",
+      "rss_min_kib": 7912,
+      "rss_max_kib": 8068,
+      "fd_min": 7,
+      "fd_max": 7
+    },
+    {
+      "name": "openvpn-server",
+      "pid": 12149,
+      "samples": 4,
+      "executable": "/router/usr/sbin/openvpn",
+      "rss_min_kib": 8016,
+      "rss_max_kib": 8016,
+      "fd_min": 7,
+      "fd_max": 7
+    },
+    {
+      "name": "skipd",
+      "pid": 519,
+      "samples": 3,
+      "executable": "/usr/bin/skipd",
+      "rss_min_kib": 1200,
+      "rss_max_kib": 1200,
+      "fd_min": 8,
+      "fd_max": 8
+    },
+    {
+      "name": "skipd",
+      "pid": 5522,
+      "samples": 6,
+      "executable": "/usr/bin/skipd",
+      "rss_min_kib": 1188,
+      "rss_max_kib": 1188,
+      "fd_min": 8,
+      "fd_max": 8
+    },
+    {
+      "name": "skipd",
+      "pid": 13849,
+      "samples": 2,
+      "executable": "/usr/bin/skipd",
+      "rss_min_kib": 1188,
+      "rss_max_kib": 1188,
+      "fd_min": 8,
+      "fd_max": 8
+    },
+    {
+      "name": "uu",
+      "pid": 832,
+      "samples": 4,
+      "executable": "/bin/busybox",
+      "rss_min_kib": 1528,
+      "rss_max_kib": 1528,
+      "fd_min": 4,
+      "fd_max": 4
+    },
+    {
+      "name": "uu",
+      "pid": 6910,
+      "samples": 6,
+      "executable": "/bin/busybox",
+      "rss_min_kib": 1632,
+      "rss_max_kib": 1632,
+      "fd_min": 4,
+      "fd_max": 5
+    },
+    {
+      "name": "uu",
+      "pid": 15519,
+      "samples": 1,
+      "executable": "/bin/busybox",
+      "rss_min_kib": 1488,
+      "rss_max_kib": 1488,
+      "fd_min": 5,
+      "fd_max": 5
+    },
+    {
+      "name": "xray-client",
+      "pid": 3305,
+      "samples": 6,
+      "executable": "/jffs/.koolshare/bin/xray",
+      "rss_min_kib": 33824,
+      "rss_max_kib": 36792,
+      "fd_min": 6,
+      "fd_max": 6
+    },
+    {
+      "name": "xray-client",
+      "pid": 9692,
+      "samples": 5,
+      "executable": "/jffs/.koolshare/bin/xray",
+      "rss_min_kib": 33896,
+      "rss_max_kib": 34820,
+      "fd_min": 6,
+      "fd_max": 6
+    },
+    {
+      "name": "xray-server",
+      "pid": 3266,
+      "samples": 7,
+      "executable": "/jffs/.koolshare/bin/xray",
+      "rss_min_kib": 33796,
+      "rss_max_kib": 34128,
+      "fd_min": 6,
+      "fd_max": 6
+    },
+    {
+      "name": "xray-server",
+      "pid": 10933,
+      "samples": 4,
+      "executable": "/jffs/.koolshare/bin/xray",
+      "rss_min_kib": 33856,
+      "rss_max_kib": 34836,
+      "fd_min": 6,
+      "fd_max": 6
+    }
+  ],
+  "status": "LOCAL_COEXIST_SMOKE_PASS",
+  "candidate_image": "output/RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w",
+  "candidate_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b",
+  "requested_seconds": 300,
+  "host_elapsed_seconds": 424.4089284579968,
+  "result": {
+    "actual_fancyss_global_proxy_enabled": false,
+    "counts": {
+      "abort": 2,
+      "backend": 2,
+      "center": 2,
+      "ddns": 2,
+      "dns": 1,
+      "fancy-client": 1,
+      "nat": 1,
+      "partial": 2,
+      "proxy-upstream": 1,
+      "signals": 1,
+      "ssh": 1,
+      "status": 52,
+      "tls": 1,
+      "upnp": 1,
+      "uu": 2,
+      "version": 38,
+      "vpn-client": 1,
+      "vpn-upstream": 1
+    },
+    "data_preserved": true,
+    "duration_seconds": 321.599868608,
+    "event_kinds": [
+      "abort",
+      "partial",
+      "backend",
+      "center",
+      "ddns",
+      "uu",
+      "tls",
+      "signals",
+      "dns",
+      "ssh",
+      "upnp",
+      "vpn-client",
+      "fancy-client",
+      "nat",
+      "proxy-upstream",
+      "vpn-upstream"
+    ],
+    "events": 22,
+    "finished_utc": "2026-11-09T12:56:16Z",
+    "queries": 90,
+    "requested_seconds": 300,
+    "samples": [
+      {
+        "ddnsgo": {
+          "executable": "/jffs/.koolshare/bin/ddnsgo",
+          "fds": 7,
+          "pid": 1399,
+          "rss_kib": 13196
+        },
+        "dnsmasq": {
+          "executable": "/usr/sbin/dnsmasq",
+          "fds": 9,
+          "pid": 3006,
+          "rss_kib": 1864
+        },
+        "dropbear": {
+          "executable": "/usr/bin/qemu-arm",
+          "fds": 4,
+          "pid": 3015,
+          "rss_kib": 12376
+        },
+        "elapsed_seconds": 0.170037616,
+        "events": 0,
+        "httpd": {
+          "executable": "/usr/libexec/localmod/httpd",
+          "fds": 5,
+          "pid": 585,
+          "rss_kib": 9876
+        },
+        "httpdb": {
+          "executable": "/jffs/.koolshare/bin/httpdb",
+          "fds": 6,
+          "pid": 574,
+          "rss_kib": 988
+        },
+        "miniupnpd": {
+          "executable": "/usr/sbin/miniupnpd",
+          "fds": 7,
+          "pid": 3097,
+          "rss_kib": 2072
+        },
+        "openvpn-client": {
+          "executable": "/usr/sbin/openvpn",
+          "fds": 6,
+          "pid": 3134,
+          "rss_kib": 7932
+        },
+        "openvpn-server": {
+          "executable": "/router/usr/sbin/openvpn",
+          "fds": 7,
+          "pid": 3133,
+          "rss_kib": 7912
+        },
+        "queries": 0,
+        "skipd": {
+          "executable": "/usr/bin/skipd",
+          "fds": 8,
+          "pid": 519,
+          "rss_kib": 1200
+        },
+        "uu": {
+          "executable": "/bin/busybox",
+          "fds": 4,
+          "pid": 832,
+          "rss_kib": 1528
+        },
+        "xray-client": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3305,
+          "rss_kib": 33824
+        },
+        "xray-server": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3266,
+          "rss_kib": 33796
+        }
+      },
+      {
+        "ddnsgo": {
+          "executable": "/jffs/.koolshare/bin/ddnsgo",
+          "fds": 7,
+          "pid": 1399,
+          "rss_kib": 13208
+        },
+        "dnsmasq": {
+          "executable": "/usr/sbin/dnsmasq",
+          "fds": 9,
+          "pid": 3006,
+          "rss_kib": 1864
+        },
+        "dropbear": {
+          "executable": "/usr/bin/qemu-arm",
+          "fds": 4,
+          "pid": 3015,
+          "rss_kib": 12376
+        },
+        "elapsed_seconds": 8.129046384,
+        "events": 0,
+        "httpd": {
+          "executable": "/usr/libexec/localmod/httpd",
+          "fds": 5,
+          "pid": 585,
+          "rss_kib": 9884
+        },
+        "httpdb": {
+          "executable": "/jffs/.koolshare/bin/httpdb",
+          "fds": 6,
+          "pid": 574,
+          "rss_kib": 996
+        },
+        "miniupnpd": {
+          "executable": "/usr/sbin/miniupnpd",
+          "fds": 7,
+          "pid": 3097,
+          "rss_kib": 2088
+        },
+        "openvpn-client": {
+          "executable": "/usr/sbin/openvpn",
+          "fds": 6,
+          "pid": 3134,
+          "rss_kib": 7932
+        },
+        "openvpn-server": {
+          "executable": "/router/usr/sbin/openvpn",
+          "fds": 7,
+          "pid": 3133,
+          "rss_kib": 7912
+        },
+        "queries": 1,
+        "skipd": {
+          "executable": "/usr/bin/skipd",
+          "fds": 8,
+          "pid": 519,
+          "rss_kib": 1200
+        },
+        "uu": {
+          "executable": "/bin/busybox",
+          "fds": 4,
+          "pid": 832,
+          "rss_kib": 1528
+        },
+        "xray-client": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3305,
+          "rss_kib": 33844
+        },
+        "xray-server": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3266,
+          "rss_kib": 33816
+        }
+      },
+      {
+        "ddnsgo": {
+          "executable": "/jffs/.koolshare/bin/ddnsgo",
+          "fds": 7,
+          "pid": 1399,
+          "rss_kib": 13248
+        },
+        "dnsmasq": {
+          "executable": "/usr/sbin/dnsmasq",
+          "fds": 9,
+          "pid": 3006,
+          "rss_kib": 1864
+        },
+        "dropbear": {
+          "executable": "/usr/bin/qemu-arm",
+          "fds": 4,
+          "pid": 3015,
+          "rss_kib": 12376
+        },
+        "elapsed_seconds": 45.439448512,
+        "events": 3,
+        "httpd": {
+          "executable": "/usr/libexec/localmod/httpd",
+          "fds": 5,
+          "pid": 585,
+          "rss_kib": 9944
+        },
+        "httpdb": {
+          "executable": "/jffs/.koolshare/bin/httpdb",
+          "fds": 6,
+          "pid": 4792,
+          "rss_kib": 992
+        },
+        "miniupnpd": {
+          "executable": "/usr/sbin/miniupnpd",
+          "fds": 7,
+          "pid": 3097,
+          "rss_kib": 2088
+        },
+        "openvpn-client": {
+          "executable": "/usr/sbin/openvpn",
+          "fds": 6,
+          "pid": 3134,
+          "rss_kib": 7932
+        },
+        "openvpn-server": {
+          "executable": "/router/usr/sbin/openvpn",
+          "fds": 7,
+          "pid": 3133,
+          "rss_kib": 7912
+        },
+        "queries": 18,
+        "skipd": {
+          "executable": "/usr/bin/skipd",
+          "fds": 8,
+          "pid": 519,
+          "rss_kib": 1200
+        },
+        "uu": {
+          "executable": "/bin/busybox",
+          "fds": 4,
+          "pid": 832,
+          "rss_kib": 1528
+        },
+        "xray-client": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3305,
+          "rss_kib": 33940
+        },
+        "xray-server": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3266,
+          "rss_kib": 33900
+        }
+      },
+      {
+        "ddnsgo": {
+          "executable": "/jffs/.koolshare/bin/ddnsgo",
+          "fds": 7,
+          "pid": 6062,
+          "rss_kib": 13192
+        },
+        "dnsmasq": {
+          "executable": "/usr/sbin/dnsmasq",
+          "fds": 9,
+          "pid": 3006,
+          "rss_kib": 1864
+        },
+        "dropbear": {
+          "executable": "/usr/bin/qemu-arm",
+          "fds": 4,
+          "pid": 3015,
+          "rss_kib": 12376
+        },
+        "elapsed_seconds": 73.494811872,
+        "events": 5,
+        "httpd": {
+          "executable": "/usr/libexec/localmod/httpd",
+          "fds": 5,
+          "pid": 585,
+          "rss_kib": 10012
+        },
+        "httpdb": {
+          "executable": "/jffs/.koolshare/bin/httpdb",
+          "fds": 6,
+          "pid": 5622,
+          "rss_kib": 1032
+        },
+        "miniupnpd": {
+          "executable": "/usr/sbin/miniupnpd",
+          "fds": 7,
+          "pid": 3097,
+          "rss_kib": 2088
+        },
+        "openvpn-client": {
+          "executable": "/usr/sbin/openvpn",
+          "fds": 6,
+          "pid": 3134,
+          "rss_kib": 7932
+        },
+        "openvpn-server": {
+          "executable": "/router/usr/sbin/openvpn",
+          "fds": 7,
+          "pid": 3133,
+          "rss_kib": 7912
+        },
+        "queries": 28,
+        "skipd": {
+          "executable": "/usr/bin/skipd",
+          "fds": 8,
+          "pid": 5522,
+          "rss_kib": 1188
+        },
+        "uu": {
+          "executable": "/bin/busybox",
+          "fds": 4,
+          "pid": 832,
+          "rss_kib": 1528
+        },
+        "xray-client": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3305,
+          "rss_kib": 33964
+        },
+        "xray-server": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3266,
+          "rss_kib": 33920
+        }
+      },
+      {
+        "ddnsgo": {
+          "executable": "/jffs/.koolshare/bin/ddnsgo",
+          "fds": 7,
+          "pid": 6062,
+          "rss_kib": 13232
+        },
+        "dnsmasq": {
+          "executable": "/usr/sbin/dnsmasq",
+          "fds": 9,
+          "pid": 3006,
+          "rss_kib": 1864
+        },
+        "dropbear": {
+          "executable": "/usr/bin/qemu-arm",
+          "fds": 4,
+          "pid": 3015,
+          "rss_kib": 12376
+        },
+        "elapsed_seconds": 108.740865136,
+        "events": 7,
+        "httpd": {
+          "executable": "/usr/libexec/localmod/httpd",
+          "fds": 5,
+          "pid": 7510,
+          "rss_kib": 9864
+        },
+        "httpdb": {
+          "executable": "/jffs/.koolshare/bin/httpdb",
+          "fds": 6,
+          "pid": 5622,
+          "rss_kib": 1136
+        },
+        "miniupnpd": {
+          "executable": "/usr/sbin/miniupnpd",
+          "fds": 7,
+          "pid": 3097,
+          "rss_kib": 2096
+        },
+        "openvpn-client": {
+          "executable": "/usr/sbin/openvpn",
+          "fds": 6,
+          "pid": 3134,
+          "rss_kib": 7932
+        },
+        "openvpn-server": {
+          "executable": "/router/usr/sbin/openvpn",
+          "fds": 7,
+          "pid": 3133,
+          "rss_kib": 7912
+        },
+        "queries": 38,
+        "skipd": {
+          "executable": "/usr/bin/skipd",
+          "fds": 8,
+          "pid": 5522,
+          "rss_kib": 1188
+        },
+        "uu": {
+          "executable": "/bin/busybox",
+          "fds": 4,
+          "pid": 6910,
+          "rss_kib": 1632
+        },
+        "xray-client": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3305,
+          "rss_kib": 36024
+        },
+        "xray-server": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3266,
+          "rss_kib": 34052
+        }
+      },
+      {
+        "ddnsgo": {
+          "executable": "/jffs/.koolshare/bin/ddnsgo",
+          "fds": 7,
+          "pid": 6062,
+          "rss_kib": 13256
+        },
+        "dnsmasq": {
+          "executable": "/usr/sbin/dnsmasq",
+          "fds": 9,
+          "pid": 8107,
+          "rss_kib": 1856
+        },
+        "dropbear": {
+          "executable": "/usr/bin/qemu-arm",
+          "fds": 4,
+          "pid": 8306,
+          "rss_kib": 10412
+        },
+        "elapsed_seconds": 147.456210944,
+        "events": 10,
+        "httpd": {
+          "executable": "/usr/libexec/localmod/httpd",
+          "fds": 5,
+          "pid": 7510,
+          "rss_kib": 9920
+        },
+        "httpdb": {
+          "executable": "/jffs/.koolshare/bin/httpdb",
+          "fds": 6,
+          "pid": 5622,
+          "rss_kib": 1220
+        },
+        "miniupnpd": {
+          "executable": "/usr/sbin/miniupnpd",
+          "fds": 7,
+          "pid": 3097,
+          "rss_kib": 2096
+        },
+        "openvpn-client": {
+          "executable": "/usr/sbin/openvpn",
+          "fds": 6,
+          "pid": 3134,
+          "rss_kib": 7932
+        },
+        "openvpn-server": {
+          "executable": "/router/usr/sbin/openvpn",
+          "fds": 7,
+          "pid": 3133,
+          "rss_kib": 7912
+        },
+        "queries": 47,
+        "skipd": {
+          "executable": "/usr/bin/skipd",
+          "fds": 8,
+          "pid": 5522,
+          "rss_kib": 1188
+        },
+        "uu": {
+          "executable": "/bin/busybox",
+          "fds": 4,
+          "pid": 6910,
+          "rss_kib": 1632
+        },
+        "xray-client": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3305,
+          "rss_kib": 36792
+        },
+        "xray-server": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3266,
+          "rss_kib": 34080
+        }
+      },
+      {
+        "ddnsgo": {
+          "executable": "/jffs/.koolshare/bin/ddnsgo",
+          "fds": 7,
+          "pid": 6062,
+          "rss_kib": 15308
+        },
+        "dnsmasq": {
+          "executable": "/usr/sbin/dnsmasq",
+          "fds": 9,
+          "pid": 8107,
+          "rss_kib": 1856
+        },
+        "dropbear": {
+          "executable": "/usr/bin/qemu-arm",
+          "fds": 4,
+          "pid": 8306,
+          "rss_kib": 10412
+        },
+        "elapsed_seconds": 184.795686256,
+        "events": 13,
+        "httpd": {
+          "executable": "/usr/libexec/localmod/httpd",
+          "fds": 5,
+          "pid": 7510,
+          "rss_kib": 9968
+        },
+        "httpdb": {
+          "executable": "/jffs/.koolshare/bin/httpdb",
+          "fds": 6,
+          "pid": 5622,
+          "rss_kib": 1220
+        },
+        "miniupnpd": {
+          "executable": "/usr/sbin/miniupnpd",
+          "fds": 7,
+          "pid": 9231,
+          "rss_kib": 2088
+        },
+        "openvpn-client": {
+          "executable": "/usr/sbin/openvpn",
+          "fds": 6,
+          "pid": 9440,
+          "rss_kib": 7932
+        },
+        "openvpn-server": {
+          "executable": "/router/usr/sbin/openvpn",
+          "fds": 7,
+          "pid": 3133,
+          "rss_kib": 8068
+        },
+        "queries": 53,
+        "skipd": {
+          "executable": "/usr/bin/skipd",
+          "fds": 8,
+          "pid": 5522,
+          "rss_kib": 1188
+        },
+        "uu": {
+          "executable": "/bin/busybox",
+          "fds": 5,
+          "pid": 6910,
+          "rss_kib": 1632
+        },
+        "xray-client": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 9692,
+          "rss_kib": 33896
+        },
+        "xray-server": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 3266,
+          "rss_kib": 34128
+        }
+      },
+      {
+        "ddnsgo": {
+          "executable": "/jffs/.koolshare/bin/ddnsgo",
+          "fds": 7,
+          "pid": 6062,
+          "rss_kib": 15316
+        },
+        "dnsmasq": {
+          "executable": "/usr/sbin/dnsmasq",
+          "fds": 9,
+          "pid": 8107,
+          "rss_kib": 1856
+        },
+        "dropbear": {
+          "executable": "/usr/bin/qemu-arm",
+          "fds": 4,
+          "pid": 8306,
+          "rss_kib": 10412
+        },
+        "elapsed_seconds": 232.443496944,
+        "events": 16,
+        "httpd": {
+          "executable": "/usr/libexec/localmod/httpd",
+          "fds": 5,
+          "pid": 7510,
+          "rss_kib": 10068
+        },
+        "httpdb": {
+          "executable": "/jffs/.koolshare/bin/httpdb",
+          "fds": 6,
+          "pid": 5622,
+          "rss_kib": 1268
+        },
+        "miniupnpd": {
+          "executable": "/usr/sbin/miniupnpd",
+          "fds": 7,
+          "pid": 9231,
+          "rss_kib": 2100
+        },
+        "openvpn-client": {
+          "executable": "/usr/sbin/openvpn",
+          "fds": 6,
+          "pid": 9440,
+          "rss_kib": 7948
+        },
+        "openvpn-server": {
+          "executable": "/router/usr/sbin/openvpn",
+          "fds": 7,
+          "pid": 12149,
+          "rss_kib": 8016
+        },
+        "queries": 59,
+        "skipd": {
+          "executable": "/usr/bin/skipd",
+          "fds": 8,
+          "pid": 5522,
+          "rss_kib": 1188
+        },
+        "uu": {
+          "executable": "/bin/busybox",
+          "fds": 4,
+          "pid": 6910,
+          "rss_kib": 1632
+        },
+        "xray-client": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 9692,
+          "rss_kib": 34760
+        },
+        "xray-server": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 10933,
+          "rss_kib": 33856
+        }
+      },
+      {
+        "ddnsgo": {
+          "executable": "/jffs/.koolshare/bin/ddnsgo",
+          "fds": 7,
+          "pid": 6062,
+          "rss_kib": 15316
+        },
+        "dnsmasq": {
+          "executable": "/usr/sbin/dnsmasq",
+          "fds": 9,
+          "pid": 8107,
+          "rss_kib": 1856
+        },
+        "dropbear": {
+          "executable": "/usr/bin/qemu-arm",
+          "fds": 4,
+          "pid": 8306,
+          "rss_kib": 10412
+        },
+        "elapsed_seconds": 259.699375616,
+        "events": 19,
+        "httpd": {
+          "executable": "/usr/libexec/localmod/httpd",
+          "fds": 5,
+          "pid": 7510,
+          "rss_kib": 10080
+        },
+        "httpdb": {
+          "executable": "/jffs/.koolshare/bin/httpdb",
+          "fds": 6,
+          "pid": 13430,
+          "rss_kib": 992
+        },
+        "miniupnpd": {
+          "executable": "/usr/sbin/miniupnpd",
+          "fds": 7,
+          "pid": 9231,
+          "rss_kib": 2100
+        },
+        "openvpn-client": {
+          "executable": "/usr/sbin/openvpn",
+          "fds": 6,
+          "pid": 9440,
+          "rss_kib": 7948
+        },
+        "openvpn-server": {
+          "executable": "/router/usr/sbin/openvpn",
+          "fds": 7,
+          "pid": 12149,
+          "rss_kib": 8016
+        },
+        "queries": 74,
+        "skipd": {
+          "executable": "/usr/bin/skipd",
+          "fds": 8,
+          "pid": 5522,
+          "rss_kib": 1188
+        },
+        "uu": {
+          "executable": "/bin/busybox",
+          "fds": 4,
+          "pid": 6910,
+          "rss_kib": 1632
+        },
+        "xray-client": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 9692,
+          "rss_kib": 34780
+        },
+        "xray-server": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 10933,
+          "rss_kib": 34824
+        }
+      },
+      {
+        "ddnsgo": {
+          "executable": "/jffs/.koolshare/bin/ddnsgo",
+          "fds": 7,
+          "pid": 14699,
+          "rss_kib": 13188
+        },
+        "dnsmasq": {
+          "executable": "/usr/sbin/dnsmasq",
+          "fds": 9,
+          "pid": 8107,
+          "rss_kib": 1856
+        },
+        "dropbear": {
+          "executable": "/usr/bin/qemu-arm",
+          "fds": 4,
+          "pid": 8306,
+          "rss_kib": 10412
+        },
+        "elapsed_seconds": 293.514769008,
+        "events": 21,
+        "httpd": {
+          "executable": "/usr/libexec/localmod/httpd",
+          "fds": 5,
+          "pid": 7510,
+          "rss_kib": 10080
+        },
+        "httpdb": {
+          "executable": "/jffs/.koolshare/bin/httpdb",
+          "fds": 6,
+          "pid": 13951,
+          "rss_kib": 1040
+        },
+        "miniupnpd": {
+          "executable": "/usr/sbin/miniupnpd",
+          "fds": 7,
+          "pid": 9231,
+          "rss_kib": 2100
+        },
+        "openvpn-client": {
+          "executable": "/usr/sbin/openvpn",
+          "fds": 6,
+          "pid": 9440,
+          "rss_kib": 7948
+        },
+        "openvpn-server": {
+          "executable": "/router/usr/sbin/openvpn",
+          "fds": 7,
+          "pid": 12149,
+          "rss_kib": 8016
+        },
+        "queries": 84,
+        "skipd": {
+          "executable": "/usr/bin/skipd",
+          "fds": 8,
+          "pid": 13849,
+          "rss_kib": 1188
+        },
+        "uu": {
+          "executable": "/bin/busybox",
+          "fds": 4,
+          "pid": 6910,
+          "rss_kib": 1632
+        },
+        "xray-client": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 9692,
+          "rss_kib": 34808
+        },
+        "xray-server": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 10933,
+          "rss_kib": 34836
+        }
+      },
+      {
+        "ddnsgo": {
+          "executable": "/jffs/.koolshare/bin/ddnsgo",
+          "fds": 7,
+          "pid": 14699,
+          "rss_kib": 13224
+        },
+        "dnsmasq": {
+          "executable": "/usr/sbin/dnsmasq",
+          "fds": 9,
+          "pid": 8107,
+          "rss_kib": 1856
+        },
+        "dropbear": {
+          "executable": "/usr/bin/qemu-arm",
+          "fds": 4,
+          "pid": 8306,
+          "rss_kib": 10412
+        },
+        "elapsed_seconds": 321.56200448,
+        "events": 22,
+        "httpd": {
+          "executable": "/usr/libexec/localmod/httpd",
+          "fds": 5,
+          "pid": 7510,
+          "rss_kib": 10080
+        },
+        "httpdb": {
+          "executable": "/jffs/.koolshare/bin/httpdb",
+          "fds": 6,
+          "pid": 13951,
+          "rss_kib": 1124
+        },
+        "miniupnpd": {
+          "executable": "/usr/sbin/miniupnpd",
+          "fds": 7,
+          "pid": 9231,
+          "rss_kib": 2100
+        },
+        "openvpn-client": {
+          "executable": "/usr/sbin/openvpn",
+          "fds": 6,
+          "pid": 9440,
+          "rss_kib": 7948
+        },
+        "openvpn-server": {
+          "executable": "/router/usr/sbin/openvpn",
+          "fds": 7,
+          "pid": 12149,
+          "rss_kib": 8016
+        },
+        "queries": 90,
+        "skipd": {
+          "executable": "/usr/bin/skipd",
+          "fds": 8,
+          "pid": 13849,
+          "rss_kib": 1188
+        },
+        "uu": {
+          "executable": "/bin/busybox",
+          "fds": 5,
+          "pid": 15519,
+          "rss_kib": 1488
+        },
+        "xray-client": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 9692,
+          "rss_kib": 34820
+        },
+        "xray-server": {
+          "executable": "/jffs/.koolshare/bin/xray",
+          "fds": 6,
+          "pid": 10933,
+          "rss_kib": 34836
+        }
+      }
+    ],
+    "service_checks": {
+      "core_page_queries": 8,
+      "curl_wget_https_pairs": 9,
+      "dns_queries": 96,
+      "proxy_queries": 51,
+      "ssh_queries": 9,
+      "tun_traffic": 8,
+      "upnp_cycles": 11
+    },
+    "started_utc": "2026-11-09T12:50:54Z",
+    "unplanned_failures": 0,
+    "uu_launches": 3
+  },
+  "source_sha256": {
+    "analysis/r9r1_coexist/check.py": "85b9358ea234d1f0a61872d9e6e1514c8ee04c9ef1ebdec651ef52973c6bc4f6",
+    "analysis/r9r1_coexist/workload.go": "598e0f23c5e45c742e381ae9e06d5d705cb7ddeec3ef3baa246fcc74450aeb50",
+    "build/test_merlin.go": "83c7c8846f85e6eb0dd61442288be4ee84017e7b58f3d8cbbab7e4c4a12d538b",
+    "build/test_soak.go": "908018fec252135807c0df483a5c5951c5866506a0b9b0917a508431c1afa891",
+    "build/test_memory.go": "69838169024c9d0b9e31f2e570f9cde728f8193fe4d0e9f71be059fc080ca42f",
+    "build/memory_cycles.go": "3e9f90d880baa7959bbbc039520c721303f1d2f0254af6d4e91d63b4660bfc31",
+    "build/httpd_memory.go": "398e9817e0b55810ebe244930a2f54afc2787a5ac5ca847ff8bed88b05c523ae",
+    "build/native_runtime_client.go": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+    "build/test_online.go": "b04471e23505e03d7700884fdad4adb5d526e7fd8fe33bfe669a3a736d81fd14",
+    "build/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+    "build/check_merlin.py": "26b2ccd02e1ad845dc0c78636760f1852ecf692400ce6cfc8d9970f90ee60931",
+    "build/sealed_vm.py": "44e83268f0e72f999648acb8f56e778735e70b7240d71bb1d90a2ec10a563788",
+    "build/run_readonly_linux.py": "eeb77fb1d07ba997388aa0feaa7e558bb4ad96b5fb73a3588643390bef06135f",
+    "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
+    "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+    "build/make_merlin_system_initramfs.py": "00efa902e8675d3629e134cf70593de25b00a7b9bdb9e5b7ae44c8b6c1dadf49",
+    "build/prepare_merlin_system.py": "35cd33a65f100dda3092e221fe05d24ab9869f32afb43fcf522eb6cd98a82eaa",
+    "build/merlin_system_sources.json": "67da834b6465e7eea49fff0977c00492ad0edff252b9809684665ad8d513c92f",
+    "build/prepare_fancyss.py": "555a7adb1d56cbc889c0b9cafdf754a170f62ba6001e6fe5111c13af7f377afb",
+    "build/fancyss_sources.json": "25e94b7414f962774e45f95b06804e11c180774a924f19f6ada54c60d10ad327",
+    "build/real_plugin_sources.json": "80256a27bfc7ddf18da8f1b2693ffa6debcfbb240083a3d724da6e3641382ea8",
+    "build/https_trace_fixture.c": "8d2c672780430f45c01ad78e7e17667396660aec65564e790bbad9bcb73f872a",
+    "analysis/r9r1_coexist/tls_trace.c": "0e0d804fd099fc197066e735a0bef10817d897eaa822e4de8aab1d41593b6c7f",
+    "sources/localmod/httpd_bridge.c": "d689713756d20aeab486352f84f806e08f1b1a3ca03951635b9e171c55bfd8a9",
+    "analysis/merlin_vpn_38813/check_native_soak.py": "e9d0f92547289ff4554d78bb39d64c94b790e2e5afff0deebbaf0521ddfb494f",
+    "analysis/merlin_vpn_38813/native_preview.go": "36c9546dd3c199c3e81fe030e1026d7243f50113b620d49dcdcb112a13645e67",
+    "analysis/merlin_vpn_38813/launcher_exec_fixture.c": "c564941866b65a0d3c03590708ca6ee990069c6ca90db44cd5c61a218d6b6878"
+  },
+  "generated_test_source": {
+    "analysis/r9r1_coexist/workload.go": {
+      "sha256": "28b3d05a4ff928e9ba99ec3ae3c4eb32a33e2a8044ccd7e1eafdb2d6cb7a1bb2",
+      "changes": []
+    },
+    "build/test_merlin.go": {
+      "sha256": "199bcd8d1f214423c0a01a2921409c8d54f63e615fce314416e30649011d9379",
+      "changes": [
+        "Rename historical standalone main; helpers unchanged",
+        "Owned test VPN certificate expiry3h for1h run, not router credentials"
+      ]
+    },
+    "build/test_soak.go": {
+      "sha256": "8331422dacf973c3a3e64e387baff764eacdfcbe4a4ae65f274324cf98faa418",
+      "changes": [
+        "Rename historical standalone main; helpers unchanged"
+      ]
+    },
+    "build/test_memory.go": {
+      "sha256": "69838169024c9d0b9e31f2e570f9cde728f8193fe4d0e9f71be059fc080ca42f",
+      "changes": []
+    },
+    "build/memory_cycles.go": {
+      "sha256": "3e9f90d880baa7959bbbc039520c721303f1d2f0254af6d4e91d63b4660bfc31",
+      "changes": []
+    },
+    "build/httpd_memory.go": {
+      "sha256": "398e9817e0b55810ebe244930a2f54afc2787a5ac5ca847ff8bed88b05c523ae",
+      "changes": []
+    },
+    "build/native_runtime_client.go": {
+      "sha256": "21d1da622a3b4d38816ea41d327465aad3582e340edde3350156ba64f9972aa7",
+      "changes": []
+    },
+    "build/test_online.go": {
+      "sha256": "bcf78c2efc1eab2920af9e83cf4a2612f249c4d8be670a27ba9046518dc3ce5a",
+      "changes": [
+        "Owned HTTPS repository fixture certificate expiry3h; normal certificate verification remains enabled"
+      ]
+    },
+    "build/coexist_helpers.go": {
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "changes": []
+    },
+    "native_uu_owned_fixture": {
+      "sha256": "c5158b11569d4af7b6b81e0c2a378755e804427396c10cd5b5c123f83313413a",
+      "changes": [
+        "Native Merlin launcher and ntpd_synced callback; reset only owned volatile NTP/PID fixture state on planned starts"
+      ]
+    }
+  },
+  "vm": {
+    "schema": 1,
+    "phase": "candidate-merlin-system",
+    "sealed_manifest_sha256": "70ecd192b50944bc17f42011920ea82af4bfb9948850e4d762ffc29bda54ac96",
+    "exported_entries": 3833,
+    "inputs": {
+      "build/casefs/rootfs": "3c7521ae8212982fd3d2da3676f361edfd59f761f17e4f9fc896d92c069adb97",
+      "build/httpd_bridge.so": "c9077a10841d321723ce9fa23b3335bf9126db99cb8f698f10620c7c281d75ec",
+      "build/linux_real_plugins_job.sh": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+      "build/merlin-system": "d57d0aa959ff853acd3b7e55f3f982b1e8a062a874d87fa1f971e8c98bdb7e47",
+      "build/merlin-vpn-config-fixture.so": "167396db6a0b69fc115c93b0b3770a646b2dbed51eec567e103ef1cc43e068e9",
+      "build/merlin-vpn-config-probe": "8a100a140a403832d2a954747dfb29ca328871020402f686b8e59d94ac72da6f",
+      "build/merlin_nested_initramfs.gz": "4162de079ecb4e57ed3db762f7fcced85814b0fc7a490333240f09592146cd8c",
+      "build/merlin_nested_job.sh": "599833390dd0398ce96e156dc57ea6c218a08207d063a247385b85a4e8f3a912",
+      "build/native-nvram": "a094515a4f72e663274bbb6ace3fb68c0c4a09568c93aede2524d3844851b4f6",
+      "build/native_defaults.bin": "f73ef45c89a87068c1a1da70c0d5399595950cb856276f3a0c57db189beeaae1",
+      "build/native_hw_fixture.so": "5243a2f37e76b79c678ff3df350e269c62ba2eece1fb30cfa3549ce5faafc341",
+      "build/native_shadow_hash.txt": "25904697b50265590713cc146bf647887afa3bb25ef9bca672dece31aea8aa41",
+      "build/native_uu_transport.so": "31486bf9b9c7719689f56076791dd6611efc0251b21dba614044c345a32a5bdd",
+      "build/rc_bridge.so": "e7fb0b7c412786b3460c13a3fd268e11c281d2f36e4d1b64d241cbc7f3859734",
+      "build/real_plugins_setup.sh": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
+      "build/soak-init-fixture": "850dfc6db15d0279bfd02a0dde2eec40f6ad95455b8ea1746392d453d2c425e5",
+      "build/test-merlin": "0aa0a404cecc495b139f16d03f4021fafc011173590709829b9b85ce2a8087d2",
+      "build/tools/LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52",
+      "build/tools/linux-Image": "42a15047f7cfc785e008b43f48c090f6340f34ead8446d7568126bb5cb9bc9f1",
+      "build/tools/linux-initramfs.gz": "b2cdb4150bd81b7b08edc74a812255e9bc8d8bce6c07d4167c21745599e5baa1",
+      "build/merlin38813-native-soak/setup.sh": "097dce1383e4425246c0ab76ac6ee32547c9df2e9ebf8206bab0c25c592a0d63",
+      "build/merlin38813-native-soak/https_trace_fixture.so": "e589a9c2af47de0f5a538ae4db9340e7d66f2bf67803bcefb5c8ef0c11d9876e",
+      "build/merlin38813-native-soak/nested_initramfs.gz": "4162de079ecb4e57ed3db762f7fcced85814b0fc7a490333240f09592146cd8c",
+      "build/merlin38813-native-soak/derived_check.py": "f964c9f752eda0250a9efc80314fae690db0e2c557cb626cb970c2c01310434a",
+      "build/merlin38813-native-soak/native-nvram": "a094515a4f72e663274bbb6ace3fb68c0c4a09568c93aede2524d3844851b4f6",
+      "build/merlin38813-native-soak/launcher_exec_fixture.so": "8274e50449ceea54a4287bb3cf7db9b489f3761932934b30307b71e108cc2a4b",
+      "build/merlin38813-native-soak/native_hw_fixture.so": "5243a2f37e76b79c678ff3df350e269c62ba2eece1fb30cfa3549ce5faafc341",
+      "build/merlin38813-native-soak/native_uu_transport.so": "31486bf9b9c7719689f56076791dd6611efc0251b21dba614044c345a32a5bdd",
+      "build/merlin38813-native-soak/nested_job.sh": "599833390dd0398ce96e156dc57ea6c218a08207d063a247385b85a4e8f3a912",
+      "build/merlin38813-native-soak/probe": "4e8310e322e677676cf8d7dccb0b16e5f13171835481eaa7620f246a704b2960",
+      "build/merlin38813-native-soak/clear_preload.so": "a2481a4be99997a55a556e1108da2509917c204ea39baa0e4daa4b030eaafa75",
+      "build/merlin38813-native-soak/compile/workload.go": "28b3d05a4ff928e9ba99ec3ae3c4eb32a33e2a8044ccd7e1eafdb2d6cb7a1bb2",
+      "build/merlin38813-native-soak/compile/httpd_memory.go": "398e9817e0b55810ebe244930a2f54afc2787a5ac5ca847ff8bed88b05c523ae",
+      "build/merlin38813-native-soak/compile/native_uu.go": "c5158b11569d4af7b6b81e0c2a378755e804427396c10cd5b5c123f83313413a",
+      "build/merlin38813-native-soak/compile/native_runtime_client.go": "21d1da622a3b4d38816ea41d327465aad3582e340edde3350156ba64f9972aa7",
+      "build/merlin38813-native-soak/compile/coexist_helpers.go": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "build/merlin38813-native-soak/compile/memory_cycles.go": "3e9f90d880baa7959bbbc039520c721303f1d2f0254af6d4e91d63b4660bfc31",
+      "build/merlin38813-native-soak/compile/test_memory.go": "69838169024c9d0b9e31f2e570f9cde728f8193fe4d0e9f71be059fc080ca42f",
+      "build/merlin38813-native-soak/compile/test_soak.go": "8331422dacf973c3a3e64e387baff764eacdfcbe4a4ae65f274324cf98faa418",
+      "build/merlin38813-native-soak/compile/test_merlin.go": "199bcd8d1f214423c0a01a2921409c8d54f63e615fce314416e30649011d9379",
+      "build/merlin38813-native-soak/compile/test_online.go": "bcf78c2efc1eab2920af9e83cf4a2612f249c4d8be670a27ba9046518dc3ce5a",
+      "build/https_trace_fixture.so": "e589a9c2af47de0f5a538ae4db9340e7d66f2bf67803bcefb5c8ef0c11d9876e",
+      "build/fancyss_inputs.json": "8c74fd83c71823df68d01bc154e39a21c2064881fdc3d1275f34030b4a770552",
+      "build/real_plugin_inputs.json": "e819edc34fe67336d9d9116e335066b4de2aabdd2680bc131204e15f4c266dea",
+      "sources/realplugins/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz": "b45d1294022b7914f6ffa6ae67c688e4870ef7aa07f3556657feec37a034d592",
+      "sources/realplugins/ddnsgo-1.29.0.tar.gz": "34f541f8eba6840847a408f408a47032f9ea83b0326a31e21c70a0fbe497dfce"
+    },
+    "workspace_path": "build/casefs/sealed-private/job-c3995e038232d98b87afdf81/workspace",
+    "state_disk_attached": false,
+    "state_lock_exclusive": false,
+    "host_export_readonly": true,
+    "guest_network_devices": 0,
+    "preserved_after_failure": false,
+    "cpus": 1,
+    "memory_mib": 1024,
+    "timeout_seconds": 1500,
+    "sealed_inputs_verified_before_and_after": true
+  },
+  "baseline_preserved_sha256": {
+    "output/merlin38812_native_candidate_tests.json": "cb3f47f53c17848e35a06280b7d1e382c9e37b9f5c1e2422d8487cd90830aa68",
+    "output/merlin38812_local_gate.json": "9b1c8d3641b2ba26b4307506693a4fc0acf9d00a46a47114981cca78c24b4d72",
+    "output/merlin38812_release_documentation_delivery.json": "47c24d3ba4fc7e4d037f3a0ceba371710f6522522b8101db87be7df5989ff004",
+    "output/RT-AX86U_3004_388.12_2_localmod_native_P6_32bd61b0_NOT_FLASH_READY.w": "fc7af429b6b9824dab8a06882e36b940ea69eb9e54617e8d89c770c6c194d3ab",
+    "build/merlin_sources.json": "0637e35d0b3a404075cae91ab0f2983ec42565edaa0bf3e1c5d9a15b18892dc1",
+    "build/release_config.json": "cae36eea33e09883e8af12dbe2e341a2427c6152ad07f572618a7f059bd87a04",
+    "output/merlin38813_native_candidate_tests.json": "d30c5d4ceac483205900f9a38428cb777f89edc376a0a0a4c9ad65c67f421a2b",
+    "output/RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+  },
+  "log_sha256": "2ec9af6a9aa50c064d716f7169b14c4d6b3d06939a19d1fe91e9ac84274e8399",
+  "limits": [
+    "Native Merlin candidate; direct owned daemon configs include a declared UPnP postrouting chain/private documentation WAN allowance and synthetic passwd home. Native RC firewall template generation is a separate boundary",
+    "Networkless full Cortex-A53 Linux6.12 system emulation,640MiB inner/1024MiB outer; no target4.1 kernel or physical router",
+    "Actual pinned Fancyss installed via production installer; real Xray SOCKS/VLESS traffic uses owned loopback endpoints, transparent/global proxy mode remains disabled",
+    "UU uses original NTP/download/checksum flow and owned worker; no real UU monitor/account/game acceleration",
+    "Program restarts and upstream failures are owned/manual maintenance; only existing perp/OpenVPN recovery is automatic",
+    "RSS includes guest program/runtime and QEMU-user overhead where observed executable is qemu-arm; QEMU-system host RAM is outside guest samples",
+    "One-hour bounded observation cannot establish day/week stability or leak freedom"
+  ]
+}

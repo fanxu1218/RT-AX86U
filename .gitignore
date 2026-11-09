@@ -406,3 +406,25 @@
 !/output/merlin38812-native-P6-sources.tar.manifest.json
 !/output/merlin38812-native-P6-local-handoff.tar.gz.sha256
 !/output/merlin38812-native-P6-local-handoff.tar.manifest.json
+
+# Independent 388.13 native candidate and bound validation evidence.
+!/analysis/merlin_vpn_38813/
+/analysis/merlin_vpn_38813/*
+!/analysis/merlin_vpn_38813/*.py
+!/analysis/merlin_vpn_38813/*.c
+!/analysis/merlin_vpn_38813/*.go
+!/analysis/merlin_vpn_38813/*.sh
+!/analysis/merlin_vpn_38813/*.json
+!/analysis/merlin_vpn_38813/vendor/
+/analysis/merlin_vpn_38813/vendor/*
+!/analysis/merlin_vpn_38813/vendor/*.c
+!/analysis/merlin_vpn_38813/vendor/*.h
+!/analysis/merlin_vpn_38813/vendor/*.json
+!/build/merlin38813_sources.json
+!/output/merlin38813_*.json
+!/output/merlin38813_*.log
+!/output/388.13升级与本地验证.md
+!/analysis/merlin_vpn_38813/vendor/*.txt
+!/output/merlin38813-P7-SHA256SUMS
+!/output/merlin38813-P7-sources.tar.gz
+!/output/merlin38813-P7-sources.manifest.json

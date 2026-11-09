@@ -16,5 +16,7 @@ jobs:
         run: python3 build/check.py quick
       - name: Check native Merlin variant sources
         run: python3 analysis/merlin_vpn_38812/quick.py
+      - name: Check 388.13 native variant sources
+        run: python3 analysis/merlin_vpn_38813/quick.py
 # Full firmware gates require pinned vendor inputs, macOS Virtualization.framework,
 # a case-sensitive mounted volume and isolated VMs. CI does not claim device QA.

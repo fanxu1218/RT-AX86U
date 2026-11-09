@@ -1,0 +1,30 @@
+{
+  "source_tag": "3004.388.13",
+  "source_commit": "d1a59dcffbe0402c7ac8ac3090cb7c928510fbcd",
+  "files": [
+    {
+      "path": "openvpn_control.h",
+      "url": "https://raw.githubusercontent.com/RMerl/asuswrt-merlin.ng/d1a59dcffbe0402c7ac8ac3090cb7c928510fbcd/release/src/router/libovpn/openvpn_control.h",
+      "bytes": 1275,
+      "sha256": "2e03f29e13dd07be4c3308f0c2dfe53e2251f5a149902c0c9cab88ffecd44ce0"
+    },
+    {
+      "path": "openvpn_config.h",
+      "url": "https://raw.githubusercontent.com/RMerl/asuswrt-merlin.ng/d1a59dcffbe0402c7ac8ac3090cb7c928510fbcd/release/src/router/libovpn/openvpn_config.h",
+      "bytes": 5681,
+      "sha256": "1125abebb565c794810e0ab3c5b8679ba0d7f2f2712d275b745faad35f5309a4"
+    },
+    {
+      "path": "openvpn_control.c",
+      "url": "https://raw.githubusercontent.com/RMerl/asuswrt-merlin.ng/d1a59dcffbe0402c7ac8ac3090cb7c928510fbcd/release/src/router/libovpn/openvpn_control.c",
+      "bytes": 20587,
+      "sha256": "d07c485b1583b5c050966e895ab69037ae0a4fe48b3fa117c62b954e0325c282"
+    },
+    {
+      "path": "openvpn_config.c",
+      "url": "https://raw.githubusercontent.com/RMerl/asuswrt-merlin.ng/d1a59dcffbe0402c7ac8ac3090cb7c928510fbcd/release/src/router/libovpn/openvpn_config.c",
+      "bytes": 16219,
+      "sha256": "32c522ef4ef40c327f761a30f109abbffb6c50c9439e9089265ecfb6fdd883bc"
+    }
+  ]
+}

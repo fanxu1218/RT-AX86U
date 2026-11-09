@@ -1,0 +1,59 @@
+{
+  "status": "LOCAL_P7_38813_HANDOFF_COMPLETE_NOT_DEVICE_ACCEPTED",
+  "candidate": {
+    "image": "output/RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w",
+    "bytes": 87949332,
+    "sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b",
+    "rootfs_lebs": 639,
+    "leb_size": 126976,
+    "rootfs_fmt_version": 4,
+    "vendor_boot_region_unchanged": true,
+    "vendor_descriptor_unchanged": true,
+    "vendor_wfi_parameters_unchanged": true,
+    "status": "EXPERIMENTAL_NOT_DEVICE_TESTED"
+  },
+  "handoff": "output/merlin38813-P7-local-handoff.tar.gz",
+  "handoff_sha256": "12098b98a2ca00ccb3b6407452a36260079dba617cb01b92a34a8aeeb3859478",
+  "source_archive": "output/merlin38813-P7-sources.tar.gz",
+  "source_archive_sha256": "1b46d8f72814dd4488c8479da299d8c99ffb7f12b2d71c61b6b26d849bf424e5",
+  "source_files": 363,
+  "assets": {
+    "output/388.13\u5347\u7ea7\u4e0e\u672c\u5730\u9a8c\u8bc1.md": {
+      "bytes": 6982,
+      "sha256": "a0bc208c80ab911063ded8c728cc4f2aeb964bcfdbaa4da2fa3728096f27013a"
+    },
+    "output/RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w": {
+      "bytes": 87949332,
+      "sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    "output/merlin38813-P7-SHA256SUMS": {
+      "bytes": 690,
+      "sha256": "d207174f411846771be1924ac8e578a3de7b31f71c5c4766d7d63de98b708802"
+    },
+    "output/merlin38813-P7-sources.manifest.json": {
+      "bytes": 57502,
+      "sha256": "0b07c6997b734b9fc098de7cc0dfef3bb00be920df6f355ece3fdb9482386b8d"
+    },
+    "output/merlin38813-P7-sources.tar.gz": {
+      "bytes": 636208,
+      "sha256": "1b46d8f72814dd4488c8479da299d8c99ffb7f12b2d71c61b6b26d849bf424e5"
+    },
+    "output/merlin38813_local_gate.json": {
+      "bytes": 5816,
+      "sha256": "1f2d0075c5b6cd1dc06b3cb77a78aa3148fef44765c306477cde0f5c1bb0400e"
+    },
+    "sources/realplugins/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz": {
+      "bytes": 19790810,
+      "sha256": "b45d1294022b7914f6ffa6ae67c688e4870ef7aa07f3556657feec37a034d592"
+    }
+  },
+  "source_sha256": {
+    "analysis/merlin_vpn_38813/package_local.py": "35aa3bdfe6c1113e5f8c69e0705607e9ac2cff04421ca0e58e3db217e8e94d54"
+  },
+  "flash_ready": false,
+  "physical_router_flashed": false,
+  "actual_uu_acceleration_tested": false,
+  "github_pushed_by_packager": false,
+  "github_release_published": false,
+  "source_push_status": "Verify the Git remote separately; this packager only writes local artifacts"
+}

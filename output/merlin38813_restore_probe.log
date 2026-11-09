@@ -1,0 +1,14 @@
+LINUX_BUILDER_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261109122213, 2026/11/9 ~ 2046/11/10
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+RESTORE_PROBE_ROUND index=0 input_guard_jumps=1
+RESTORE_PROBE_ROUND index=1 input_guard_jumps=1
+RESTORE_PROBE_ROUND index=2 input_guard_jumps=1
+RESTORE_PROBE_RESULT {"checks":["actual_candidate_restore_applies_guard_and_preserves_private_api_uu"],"contract_matches":true,"full_upgrade_complete":false,"input_guard_jump_counts":[1,1,1],"kernel_boundary_fixture":true,"online":{"checks":[]},"target_4_1_kernel_tested":false}
+SOAK_REAPER orphans_reaped=1
+LINUX_READONLY_JOB_STATUS=0

@@ -1,0 +1,120 @@
+{
+  "status": "LOCAL_NATIVE_P7_38813_GATE_PASS_NOT_DEVICE_ACCEPTED",
+  "candidate": {
+    "image": "output/RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w",
+    "bytes": 87949332,
+    "sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b",
+    "rootfs_lebs": 639,
+    "leb_size": 126976,
+    "rootfs_fmt_version": 4,
+    "vendor_boot_region_unchanged": true,
+    "vendor_descriptor_unchanged": true,
+    "vendor_wfi_parameters_unchanged": true,
+    "status": "EXPERIMENTAL_NOT_DEVICE_TESTED"
+  },
+  "upstream_tag": "3004.388.13",
+  "upstream_commit": "d1a59dcffbe0402c7ac8ac3090cb7c928510fbcd",
+  "upstream_paths": 3445,
+  "total_paths": 3559,
+  "upstream_paths_changed": [
+    "rom/etc/profile",
+    "sbin/rc",
+    "usr/sbin/httpd",
+    "usr/sbin/iptables-restore",
+    "www/state.js"
+  ],
+  "all_other_native_paths_types_bytes_links_modes_retained": true,
+  "runtime_checks": 35,
+  "online_lifecycle_checks": 7,
+  "persistence_cases": [
+    "kill-parent",
+    "kill-tree",
+    "no-space",
+    "real-ddnsgo"
+  ],
+  "persistence_boots": 10,
+  "soak": {
+    "seconds": 321.599868608,
+    "queries": 90,
+    "events": 22
+  },
+  "evidence": {
+    "output/merlin38813_build_inputs.json": {
+      "sha256": "493b8fb628a945bb25fd7bfaa6fe6a2550a5d0cfd099ed0465335951c86bbaf4",
+      "status": "P7_ADAPTER_RECOMPILE_BYTE_EQUIVALENCE_PASS"
+    },
+    "output/merlin38813_candidate_runtime_tests.json": {
+      "sha256": "d80bd110fcd37414ce6e790bb0ee6afd8d78f84547a8d5156b233382473e6d0f",
+      "status": "LOCAL_NATIVE_MERLIN_CANDIDATE_RUNTIME_PASS",
+      "executed_candidate_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    "output/merlin38813_sync_aux_tests.json": {
+      "sha256": "66722a96f4bf363f8c08e6bb314c176bf35f3fd00a6c6afd542ff4123b9cc4fb",
+      "status": "LOCAL_SYNC_CENTER_HELPER_CONTRACT_PASS",
+      "executed_candidate_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    "output/merlin38813_restore_probe_tests.json": {
+      "sha256": "fddeedb2e13216835a5e5ab15d83a588b8b604c1328f5ca1caabf49f9a046cea",
+      "status": "LOCAL_NATIVE_RESTORE_NOFLUSH_CONTRACT_PASS",
+      "executed_candidate_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    "output/merlin38813_vpn_generation_tests.json": {
+      "sha256": "f6d6664f199bd1a272ce876c327a17bf93421029774d1b5f9b76c0a6051b83f6",
+      "status": "LOCAL_NATIVE_VPN_GENERATION_PASS",
+      "executed_candidate_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    "output/merlin38813_real_tunnel_tests.json": {
+      "sha256": "fe63df68472e5bb3e1e324ca39ff97a41c59b41f85d6d536d0fdd2d054ce3e73",
+      "status": "LOCAL_NATIVE_REAL_TUNNEL_PROBE_PASS",
+      "executed_candidate_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    "output/merlin38813_plugins_fancyss_tests.json": {
+      "sha256": "350173071fbf86d21145ee93dcbd2ce397313bd7ce9c54f1ea5bbb11ae73a39c",
+      "status": "LOCAL_NATIVE_AUTHENTIC_PLUGINS_PASS",
+      "executed_candidate_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    "output/merlin38813_plugins_hnd_upgrade_tests.json": {
+      "sha256": "769e8863870e7fd79b8ca02add0851a7f7e6804e8ef7f3f8896ca3f5d91a52c9",
+      "status": "LOCAL_NATIVE_AUTHENTIC_PLUGINS_PASS",
+      "executed_candidate_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    "output/merlin38813_plugins_hnd_fresh_tests.json": {
+      "sha256": "5b5288008cfb715e9828f0ac821a1fe0a410f76a2b346a4989015e9d176ce0d5",
+      "status": "LOCAL_NATIVE_AUTHENTIC_PLUGINS_PASS",
+      "executed_candidate_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    "output/merlin38813_native_coexist_probe_tests.json": {
+      "sha256": "be440fdf5db3651d56baf9417f315ac14baab781a285afdb4360e3e2e2ec677b",
+      "status": "FINAL_CANDIDATE_HANDSHAKE_RECOVERY_PASS",
+      "executed_candidate_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    "output/merlin38813_native_coexist_smoke_tests.json": {
+      "sha256": "07c72ea2a515b9f672c0c438d142a2eb0f4241ce6c4680fa267b49ccc54cfd19",
+      "status": "LOCAL_COEXIST_SMOKE_PASS",
+      "executed_candidate_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    "output/merlin38813_persistence_tests.json": {
+      "sha256": "3450e2f781b7ad14015559b3004877155a3bc6aad24771fac13732ba67c5c93f",
+      "status": "LOCAL_NATIVE_PERSISTENCE_SELECTED_CASES_PASS"
+    },
+    "output/merlin38813_uu_matrix_tests.json": {
+      "sha256": "701951fdc3846375c85334d95bf26da6e907df13e2258a1d63aa7c132bd6e708",
+      "status": "LOCAL_NATIVE_UU_STARTUP_MATRIX_PASS"
+    }
+  },
+  "source_sha256": {
+    "analysis/merlin_vpn_38813/check_local_gate.py": "13ab56bfd56dfbd3ab255f81764e0f43bb7790c05c6311e104fe95eac3f68a7e"
+  },
+  "flash_ready": false,
+  "physical_router_flashed": false,
+  "target_pid1_boot_tested": false,
+  "actual_uu_cloud_or_game_acceleration_tested": false,
+  "full_hardware_feature_acceptance_complete": false,
+  "p7_one_hour_soak_executed": false,
+  "limits": [
+    "All candidate-bound dynamic reports are fresh P7 executions; the UU matrix separately compares the retained factory and untouched 388.13 userspaces. P6 hour-long results are historical only",
+    "No real router, physical NAND/UBIFS, Wi-Fi, hardware NAT, AiMesh, provider/subscription or actual UU account tested",
+    "Selected recovery uses synthetic NVRAM and a dedicated ext4 disk; selected tunnels run under Cortex-A53 Linux6.12, not the target Broadcom4.1 kernel",
+    "Fancyss local SOCKS/VLESS coexistence does not validate transparent/global routing or every plugin"
+  ]
+}

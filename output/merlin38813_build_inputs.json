@@ -1,0 +1,28 @@
+{
+  "status": "P7_ADAPTER_RECOMPILE_BYTE_EQUIVALENCE_PASS",
+  "candidate_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b",
+  "programs": {
+    "usr/lib/localmod/native_boot_bridge.so": "f24b4786be8ea6e5a593a4bef1d59d77bef9295c70b9c8d3de1b411da93daac2",
+    "sbin/rc": "5c964a0a2e268f462689a76d5649e3c494a690b12168b327bd24ab73e697319f",
+    "usr/sbin/iptables-restore": "1e02c1f6b37bf555dae5d62da5e01b57d2aa41bb83d554d87a25ec18e8aefcad",
+    "usr/libexec/localmod/compat-bin/sleep": "609bd7e7aead06da2ea0db7ba5d863bd0812d4f1ac13ce677d1226928803d759",
+    "usr/lib/localmod/httpd_bridge.so": "c9077a10841d321723ce9fa23b3335bf9126db99cb8f698f10620c7c281d75ec",
+    "usr/sbin/httpd": "b41af2a016a3b374c89be8c32a1c4d9a6dde944ef026372f750cfeaf4a02b178"
+  },
+  "source_sha256": {
+    "analysis/merlin_vpn_38813/verify_build_inputs.py": "1fa24cad4386cdce40e82a4f9f18cfd1526cde88a5c6837a621aa3ce1de8cab6",
+    "sources/localmod/runtime.c": "68d2d790f4a65fa0f5bf155748e07cbe862f1c1f8b41195fcc5f72f79e43c10d",
+    "sources/localmod/runtime.h": "816914a8ace37e05a51c62854693954020ccc53371cf7c6756bcb20c850b3bca",
+    "sources/localmod/bounded_log.h": "ac86f672fa6e7799e99fd2f0b84658f3e6af6fd00f65b1287e51a28e3d86e7bc",
+    "sources/zig-aarch64-macos-0.15.2/zig": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c",
+    "build/softcenter_sources.json": "0e1ddaa0f67c10daf153ff0bee45213c24aa0ffeec042f53dada13f4e8fd47dd",
+    "build/fancyss_sources.json": "25e94b7414f962774e45f95b06804e11c180774a924f19f6ada54c60d10ad327",
+    "analysis/merlin_vpn_38813/native_boot_bridge.c": "ae0f154f3f7804184240c12f32c9d3b77db12bda4bdd144ab054913e8d864dd4",
+    "analysis/merlin_vpn_38813/native_launcher.c": "d1535c2861b238a5de4bc588b7bbc8910f7596a8fbf04978f7d77677d00e9240",
+    "analysis/merlin_vpn_38813/native_restore.c": "2c90885e0633aaf43eb1361d388ef90b0aed887c8e4978482845f66f5751c114",
+    "analysis/merlin_vpn_38813/center_sleep.c": "8ae6e6d8155c6a50ad6881a8dc490a82a6be0382c2c6a759d290d932f6390f13",
+    "sources/localmod/httpd_bridge.c": "d689713756d20aeab486352f84f806e08f1b1a3ca03951635b9e171c55bfd8a9",
+    "sources/localmod/launcher.c": "bda9ab680a5ba3a6437152f779d61791b7c861ada1dec58dd88f732e842ba41e"
+  },
+  "note": "Independent compilation supplements the immutable candidate build receipt; no firmware bytes or execution reports changed"
+}

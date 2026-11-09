@@ -1,0 +1,389 @@
+LINUX_BUILDER_READY
+MERLIN_SYSTEM_PROBE_READY
+COEXIST_SETUP native_https_and_uu
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261109124941, 2026/11/9 ~ 2046/11/10
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+COEXIST_SETUP real_ddnsgo_install
+COEXIST_SETUP real_fancyss_install
+COEXIST_SETUP six_components
+miniupnpd[3097]: it is advised to use network interface name instead of 192.168.77.1
+miniupnpd[3097]: system uptime is 73 seconds
+miniupnpd[3097]: Reloading rules from lease file
+miniupnpd[3097]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794228637
+miniupnpd[3097]: IGNORED : Reserved / private IP address 203.0.113.1 on ext interface wan0
+miniupnpd[3097]: HTTP listening on port 35323
+miniupnpd[3097]: Listening for NAT-PMP/PCP traffic on port 5351
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:55593 : GET /rootDesc.xml (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:60427 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[3097]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[3097]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[3097]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[3097]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:36229 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[3097]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:34667 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[3097]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[3097]: removing redirect rule port 45001 TCP
+miniupnpd[3097]: Trying to delete nat rule at index 0
+miniupnpd[3097]: Trying to delete filter rule at index 0
+miniupnpd[3097]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[3097]: Trying to delete peer rule at index 0
+PASS dnsmasq_real_dhcp_discover_offer_request_ack_and_lease_file_retained_after_restart
+COEXIST_SAMPLE {"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":1399,"rss_kib":13196},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":3006,"rss_kib":1864},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":3015,"rss_kib":12376},"elapsed_seconds":0.170037616,"events":0,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":585,"rss_kib":9876},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":574,"rss_kib":988},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":3097,"rss_kib":2072},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":3134,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":7912},"queries":0,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":519,"rss_kib":1200},"uu":{"executable":"/bin/busybox","fds":4,"pid":832,"rss_kib":1528},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3305,"rss_kib":33824},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":33796}}
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:57929 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[3097]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[3097]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[3097]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[3097]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:55463 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[3097]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:54913 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[3097]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[3097]: removing redirect rule port 45001 TCP
+miniupnpd[3097]: Trying to delete nat rule at index 0
+miniupnpd[3097]: Trying to delete filter rule at index 0
+miniupnpd[3097]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[3097]: Trying to delete peer rule at index 0
+COEXIST_SAMPLE {"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":1399,"rss_kib":13208},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":3006,"rss_kib":1864},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":3015,"rss_kib":12376},"elapsed_seconds":8.129046384,"events":0,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":585,"rss_kib":9884},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":574,"rss_kib":996},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":3097,"rss_kib":2088},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":3134,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":7912},"queries":1,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":519,"rss_kib":1200},"uu":{"executable":"/bin/busybox","fds":4,"pid":832,"rss_kib":1528},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3305,"rss_kib":33844},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":33816}}
+SOAK_EVENT_BEGIN index=1 kind=abort
+SOAK_EVENT index=1 kind=abort seconds=3.080 details=client_tcp_rst_while_backend_body_pending
+SOAK_EVENT_BEGIN index=2 kind=partial
+SOAK_EVENT index=2 kind=partial seconds=2.071 details=client_rst_with_incomplete_request_body
+SOAK_EVENT_BEGIN index=3 kind=backend
+SOAK_EVENT index=3 kind=backend seconds=4.075 details=backend_killed=574 pending_http_status=200 pending_body_bytes=0 expected_read_error=unexpected EOF
+miniupnpd[3097]: setting timeout to 60 sec
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:37043 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[3097]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[3097]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[3097]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[3097]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:43635 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[3097]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:42255 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[3097]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[3097]: removing redirect rule port 45001 TCP
+miniupnpd[3097]: Trying to delete nat rule at index 0
+miniupnpd[3097]: Trying to delete filter rule at index 0
+miniupnpd[3097]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[3097]: Trying to delete peer rule at index 0
+COEXIST_SAMPLE {"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":1399,"rss_kib":13248},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":3006,"rss_kib":1864},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":3015,"rss_kib":12376},"elapsed_seconds":45.439448512,"events":3,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":585,"rss_kib":9944},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":4792,"rss_kib":992},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":3097,"rss_kib":2088},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":3134,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":7912},"queries":18,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":519,"rss_kib":1200},"uu":{"executable":"/bin/busybox","fds":4,"pid":832,"rss_kib":1528},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3305,"rss_kib":33940},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":33900}}
+SOAK_EVENT_BEGIN index=4 kind=center
+SOAK_PLANNED_WINDOW name=center_restart id=91028 code=200 error=unexpected EOF bytes=0
+SOAK_PLANNED_WINDOW name=center_restart id=91029 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91030 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91031 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91032 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91033 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91034 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91035 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91036 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91037 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91038 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91039 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91040 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91041 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91042 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91043 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91044 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91045 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91046 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91047 code=503 error=<nil> bytes=20
+SOAK_EVENT index=4 kind=center seconds=9.712 details=production_bootstrap_restart center_restart_reads=21 unavailable=20
+SOAK_EVENT_BEGIN index=5 kind=ddns
+SOAK_WINDOW_RESULT ddns_restart_reads=3 unavailable=0
+SOAK_EVENT index=5 kind=ddns seconds=5.586 details=one_original_plugin_restart_rpc
+COEXIST_SAMPLE {"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":6062,"rss_kib":13192},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":3006,"rss_kib":1864},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":3015,"rss_kib":12376},"elapsed_seconds":73.494811872,"events":5,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":585,"rss_kib":10012},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":5622,"rss_kib":1032},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":3097,"rss_kib":2088},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":3134,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":7912},"queries":28,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":5522,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":4,"pid":832,"rss_kib":1528},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3305,"rss_kib":33964},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":33920}}
+SOAK_EVENT_BEGIN index=6 kind=uu
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+SOAK_EVENT index=6 kind=uu seconds=12.685 details=one_fresh_native_ntp_uu_control_start uu_restart_reads=15 unavailable=0
+miniupnpd[3097]: setting timeout to 8 sec
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:44807 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[3097]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[3097]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[3097]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[3097]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:50083 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[3097]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:35937 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[3097]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[3097]: removing redirect rule port 45001 TCP
+miniupnpd[3097]: Trying to delete nat rule at index 0
+miniupnpd[3097]: Trying to delete filter rule at index 0
+miniupnpd[3097]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[3097]: Trying to delete peer rule at index 0
+SOAK_EVENT_BEGIN index=7 kind=tls
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261109124941, 2026/11/9 ~ 2046/11/10
+SOAK_EVENT index=7 kind=tls seconds=3.857 details=native_https_restart_and_new_login
+miniupnpd[3097]: cleaning expired Port Mappings
+COEXIST_SAMPLE {"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":6062,"rss_kib":13232},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":3006,"rss_kib":1864},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":3015,"rss_kib":12376},"elapsed_seconds":108.740865136,"events":7,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":9864},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":5622,"rss_kib":1136},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":3097,"rss_kib":2096},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":3134,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":7912},"queries":38,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":5522,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":4,"pid":6910,"rss_kib":1632},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3305,"rss_kib":36024},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":34052}}
+SOAK_EVENT_BEGIN index=8 kind=signals
+SOAK_EVENT index=8 kind=signals seconds=3.375 details=three_sigalrm_during_pending_body
+COEXIST_EVENT_BEGIN dns
+COEXIST_WINDOW dns_restart_reads=1 unavailable=0
+COEXIST_EVENT kind=dns seconds=3.974
+COEXIST_EVENT_BEGIN ssh
+COEXIST_WINDOW ssh_restart_reads=11 unavailable=0
+COEXIST_EVENT kind=ssh seconds=14.710
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:43383 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[3097]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[3097]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[3097]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[3097]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:58255 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[3097]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[3097]: HTTP REQUEST from 192.168.77.1:52463 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[3097]: Host: 192.168.77.1:35323
+miniupnpd[3097]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[3097]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[3097]: removing redirect rule port 45001 TCP
+miniupnpd[3097]: Trying to delete nat rule at index 0
+miniupnpd[3097]: Trying to delete filter rule at index 0
+miniupnpd[3097]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[3097]: Trying to delete peer rule at index 0
+COEXIST_SAMPLE {"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":6062,"rss_kib":13256},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":8107,"rss_kib":1856},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":8306,"rss_kib":10412},"elapsed_seconds":147.456210944,"events":10,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":9920},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":5622,"rss_kib":1220},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":3097,"rss_kib":2096},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":3134,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":7912},"queries":47,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":5522,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":4,"pid":6910,"rss_kib":1632},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3305,"rss_kib":36792},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":34080}}
+COEXIST_EVENT_BEGIN upnp
+miniupnpd[3097]: shutting down MiniUPnPd
+miniupnpd[9231]: it is advised to use network interface name instead of 192.168.77.1
+miniupnpd[9231]: system uptime is 238 seconds
+miniupnpd[9231]: Reloading rules from lease file
+miniupnpd[9231]: version 2.3.11 starting NAT-PMP/PCP UPnP-IGD ext if wan0 BOOTID=1794228802
+miniupnpd[9231]: IGNORED : Reserved / private IP address 203.0.113.1 on ext interface wan0
+miniupnpd[9231]: HTTP listening on port 35323
+miniupnpd[9231]: Listening for NAT-PMP/PCP traffic on port 5351
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:35699 : GET /rootDesc.xml (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:49673 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[9231]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[9231]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[9231]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[9231]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:58615 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[9231]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=119
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:33105 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[9231]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[9231]: removing redirect rule port 45001 TCP
+miniupnpd[9231]: Trying to delete nat rule at index 0
+miniupnpd[9231]: Trying to delete filter rule at index 0
+miniupnpd[9231]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[9231]: Trying to delete peer rule at index 0
+COEXIST_WINDOW upnp_restart_reads=1 unavailable=0
+COEXIST_EVENT kind=upnp seconds=4.609
+COEXIST_EVENT_BEGIN vpn-client
+COEXIST_WINDOW vpn-client_restart_reads=2 unavailable=0
+COEXIST_EVENT kind=vpn-client seconds=5.190
+COEXIST_EVENT_BEGIN fancy-client
+COEXIST_WINDOW fancy-client_restart_reads=10 unavailable=0
+COEXIST_EVENT kind=fancy-client seconds=14.053
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:44191 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[9231]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[9231]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[9231]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[9231]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:55021 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[9231]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:55767 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[9231]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[9231]: removing redirect rule port 45001 TCP
+miniupnpd[9231]: Trying to delete nat rule at index 0
+miniupnpd[9231]: Trying to delete filter rule at index 0
+miniupnpd[9231]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[9231]: Trying to delete peer rule at index 0
+COEXIST_SAMPLE {"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":6062,"rss_kib":15308},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":8107,"rss_kib":1856},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":8306,"rss_kib":10412},"elapsed_seconds":184.795686256,"events":13,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":9968},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":5622,"rss_kib":1220},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":9231,"rss_kib":2088},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":9440,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":8068},"queries":53,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":5522,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":5,"pid":6910,"rss_kib":1632},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":9692,"rss_kib":33896},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":34128}}
+COEXIST_EVENT_BEGIN nat
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:39469 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[9231]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[9231]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[9231]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[9231]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:38973 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[9231]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=119
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:35827 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[9231]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[9231]: removing redirect rule port 45001 TCP
+miniupnpd[9231]: Trying to delete nat rule at index 0
+miniupnpd[9231]: Trying to delete filter rule at index 0
+miniupnpd[9231]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[9231]: Trying to delete peer rule at index 0
+COEXIST_WINDOW nat_restart_reads=1 unavailable=0
+COEXIST_EVENT kind=nat seconds=5.673
+COEXIST_EVENT_BEGIN proxy-upstream
+COEXIST_WINDOW proxy-upstream_restart_reads=16 unavailable=0
+COEXIST_EVENT kind=proxy-upstream seconds=13.514
+miniupnpd[9231]: setting timeout to 60 sec
+miniupnpd[9231]: setting timeout to 59 sec
+miniupnpd[9231]: setting timeout to 59 sec
+COEXIST_EVENT_BEGIN vpn-upstream
+COEXIST_WINDOW vpn-upstream_restart_reads=26 unavailable=0
+COEXIST_EVENT kind=vpn-upstream seconds=15.924
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:35791 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[9231]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[9231]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[9231]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[9231]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[9231]: setting timeout to 38 sec
+miniupnpd[9231]: setting timeout to 38 sec
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:51795 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[9231]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[9231]: setting timeout to 38 sec
+miniupnpd[9231]: setting timeout to 38 sec
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:55169 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[9231]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[9231]: removing redirect rule port 45001 TCP
+miniupnpd[9231]: Trying to delete nat rule at index 0
+miniupnpd[9231]: Trying to delete filter rule at index 0
+miniupnpd[9231]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[9231]: Trying to delete peer rule at index 0
+miniupnpd[9231]: setting timeout to 38 sec
+COEXIST_SAMPLE {"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":6062,"rss_kib":15316},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":8107,"rss_kib":1856},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":8306,"rss_kib":10412},"elapsed_seconds":232.443496944,"events":16,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":10068},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":5622,"rss_kib":1268},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":9231,"rss_kib":2100},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":9440,"rss_kib":7948},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":12149,"rss_kib":8016},"queries":59,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":5522,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":4,"pid":6910,"rss_kib":1632},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":9692,"rss_kib":34760},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":10933,"rss_kib":33856}}
+SOAK_EVENT_BEGIN index=17 kind=abort
+SOAK_EVENT index=17 kind=abort seconds=4.019 details=client_tcp_rst_while_backend_body_pending
+SOAK_EVENT_BEGIN index=18 kind=partial
+SOAK_EVENT index=18 kind=partial seconds=2.228 details=client_rst_with_incomplete_request_body
+SOAK_EVENT_BEGIN index=19 kind=backend
+SOAK_EVENT index=19 kind=backend seconds=3.474 details=backend_killed=5622 pending_http_status=200 pending_body_bytes=0 expected_read_error=unexpected EOF
+COEXIST_SAMPLE {"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":6062,"rss_kib":15316},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":8107,"rss_kib":1856},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":8306,"rss_kib":10412},"elapsed_seconds":259.699375616,"events":19,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":10080},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":13430,"rss_kib":992},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":9231,"rss_kib":2100},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":9440,"rss_kib":7948},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":12149,"rss_kib":8016},"queries":74,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":5522,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":4,"pid":6910,"rss_kib":1632},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":9692,"rss_kib":34780},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":10933,"rss_kib":34824}}
+SOAK_EVENT_BEGIN index=20 kind=center
+SOAK_PLANNED_WINDOW name=center_restart id=91200 code=200 error=unexpected EOF bytes=0
+SOAK_PLANNED_WINDOW name=center_restart id=91201 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91202 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91203 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91204 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91205 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91206 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91207 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91208 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91209 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91210 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91211 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91212 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91213 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91214 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91215 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91216 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91217 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91218 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91219 code=503 error=<nil> bytes=20
+SOAK_PLANNED_WINDOW name=center_restart id=91220 code=503 error=<nil> bytes=20
+miniupnpd[9231]: cleaning expired Port Mappings
+SOAK_EVENT index=20 kind=center seconds=9.687 details=production_bootstrap_restart center_restart_reads=22 unavailable=21
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:44415 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[9231]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[9231]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[9231]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[9231]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:39335 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[9231]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:59765 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[9231]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[9231]: removing redirect rule port 45001 TCP
+miniupnpd[9231]: Trying to delete nat rule at index 0
+miniupnpd[9231]: Trying to delete filter rule at index 0
+miniupnpd[9231]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[9231]: Trying to delete peer rule at index 0
+SOAK_EVENT_BEGIN index=21 kind=ddns
+SOAK_WINDOW_RESULT ddns_restart_reads=3 unavailable=0
+SOAK_EVENT index=21 kind=ddns seconds=5.767 details=one_original_plugin_restart_rpc
+COEXIST_SAMPLE {"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":14699,"rss_kib":13188},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":8107,"rss_kib":1856},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":8306,"rss_kib":10412},"elapsed_seconds":293.514769008,"events":21,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":10080},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":13951,"rss_kib":1040},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":9231,"rss_kib":2100},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":9440,"rss_kib":7948},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":12149,"rss_kib":8016},"queries":84,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":13849,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":4,"pid":6910,"rss_kib":1632},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":9692,"rss_kib":34808},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":10933,"rss_kib":34836}}
+SOAK_EVENT_BEGIN index=22 kind=uu
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+SOAK_EVENT index=22 kind=uu seconds=13.041 details=one_fresh_native_ntp_uu_control_start uu_restart_reads=14 unavailable=0
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:60285 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping
+miniupnpd[9231]: AddPortMapping: ext port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test leaseduration=120 rhost=
+miniupnpd[9231]: UPnP permission rule 0 matched : port mapping accepted
+miniupnpd[9231]: Check protocol TCP for port 45001 on ext_if wan0 203.0.113.1, 017100CB
+miniupnpd[9231]: redirecting port 45001 to 192.168.77.1:45001 protocol TCP for: owned-test
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:49627 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry
+miniupnpd[9231]: GetSpecificPortMappingEntry: rhost='' 45001 TCP found => 192.168.77.1:45001 desc='owned-test' duration=120
+miniupnpd[9231]: HTTP REQUEST from 192.168.77.1:58423 : POST /ctl/IPConn (HTTP/1.1)
+miniupnpd[9231]: Host: 192.168.77.1:35323
+miniupnpd[9231]: SOAPAction: urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping
+miniupnpd[9231]: DeletePortMapping: external port: 45001, protocol: TCP
+miniupnpd[9231]: removing redirect rule port 45001 TCP
+miniupnpd[9231]: Trying to delete nat rule at index 0
+miniupnpd[9231]: Trying to delete filter rule at index 0
+miniupnpd[9231]: postrouting rule #0: MASQUERADE 192.168.77.1 45001
+miniupnpd[9231]: Trying to delete peer rule at index 0
+COEXIST_SAMPLE {"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":14699,"rss_kib":13224},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":8107,"rss_kib":1856},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":8306,"rss_kib":10412},"elapsed_seconds":321.56200448,"events":22,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":10080},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":13951,"rss_kib":1124},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":9231,"rss_kib":2100},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":9440,"rss_kib":7948},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":12149,"rss_kib":8016},"queries":90,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":13849,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":5,"pid":15519,"rss_kib":1488},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":9692,"rss_kib":34820},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":10933,"rss_kib":34836}}
+COEXIST_RESULT {"actual_fancyss_global_proxy_enabled":false,"counts":{"abort":2,"backend":2,"center":2,"ddns":2,"dns":1,"fancy-client":1,"nat":1,"partial":2,"proxy-upstream":1,"signals":1,"ssh":1,"status":52,"tls":1,"upnp":1,"uu":2,"version":38,"vpn-client":1,"vpn-upstream":1},"data_preserved":true,"duration_seconds":321.599868608,"event_kinds":["abort","partial","backend","center","ddns","uu","tls","signals","dns","ssh","upnp","vpn-client","fancy-client","nat","proxy-upstream","vpn-upstream"],"events":22,"finished_utc":"2026-11-09T12:56:16Z","queries":90,"requested_seconds":300,"samples":[{"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":1399,"rss_kib":13196},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":3006,"rss_kib":1864},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":3015,"rss_kib":12376},"elapsed_seconds":0.170037616,"events":0,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":585,"rss_kib":9876},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":574,"rss_kib":988},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":3097,"rss_kib":2072},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":3134,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":7912},"queries":0,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":519,"rss_kib":1200},"uu":{"executable":"/bin/busybox","fds":4,"pid":832,"rss_kib":1528},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3305,"rss_kib":33824},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":33796}},{"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":1399,"rss_kib":13208},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":3006,"rss_kib":1864},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":3015,"rss_kib":12376},"elapsed_seconds":8.129046384,"events":0,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":585,"rss_kib":9884},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":574,"rss_kib":996},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":3097,"rss_kib":2088},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":3134,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":7912},"queries":1,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":519,"rss_kib":1200},"uu":{"executable":"/bin/busybox","fds":4,"pid":832,"rss_kib":1528},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3305,"rss_kib":33844},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":33816}},{"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":1399,"rss_kib":13248},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":3006,"rss_kib":1864},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":3015,"rss_kib":12376},"elapsed_seconds":45.439448512,"events":3,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":585,"rss_kib":9944},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":4792,"rss_kib":992},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":3097,"rss_kib":2088},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":3134,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":7912},"queries":18,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":519,"rss_kib":1200},"uu":{"executable":"/bin/busybox","fds":4,"pid":832,"rss_kib":1528},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3305,"rss_kib":33940},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":33900}},{"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":6062,"rss_kib":13192},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":3006,"rss_kib":1864},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":3015,"rss_kib":12376},"elapsed_seconds":73.494811872,"events":5,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":585,"rss_kib":10012},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":5622,"rss_kib":1032},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":3097,"rss_kib":2088},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":3134,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":7912},"queries":28,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":5522,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":4,"pid":832,"rss_kib":1528},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3305,"rss_kib":33964},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":33920}},{"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":6062,"rss_kib":13232},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":3006,"rss_kib":1864},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":3015,"rss_kib":12376},"elapsed_seconds":108.740865136,"events":7,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":9864},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":5622,"rss_kib":1136},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":3097,"rss_kib":2096},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":3134,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":7912},"queries":38,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":5522,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":4,"pid":6910,"rss_kib":1632},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3305,"rss_kib":36024},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":34052}},{"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":6062,"rss_kib":13256},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":8107,"rss_kib":1856},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":8306,"rss_kib":10412},"elapsed_seconds":147.456210944,"events":10,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":9920},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":5622,"rss_kib":1220},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":3097,"rss_kib":2096},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":3134,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":7912},"queries":47,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":5522,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":4,"pid":6910,"rss_kib":1632},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3305,"rss_kib":36792},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":34080}},{"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":6062,"rss_kib":15308},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":8107,"rss_kib":1856},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":8306,"rss_kib":10412},"elapsed_seconds":184.795686256,"events":13,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":9968},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":5622,"rss_kib":1220},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":9231,"rss_kib":2088},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":9440,"rss_kib":7932},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":3133,"rss_kib":8068},"queries":53,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":5522,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":5,"pid":6910,"rss_kib":1632},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":9692,"rss_kib":33896},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":3266,"rss_kib":34128}},{"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":6062,"rss_kib":15316},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":8107,"rss_kib":1856},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":8306,"rss_kib":10412},"elapsed_seconds":232.443496944,"events":16,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":10068},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":5622,"rss_kib":1268},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":9231,"rss_kib":2100},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":9440,"rss_kib":7948},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":12149,"rss_kib":8016},"queries":59,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":5522,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":4,"pid":6910,"rss_kib":1632},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":9692,"rss_kib":34760},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":10933,"rss_kib":33856}},{"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":6062,"rss_kib":15316},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":8107,"rss_kib":1856},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":8306,"rss_kib":10412},"elapsed_seconds":259.699375616,"events":19,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":10080},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":13430,"rss_kib":992},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":9231,"rss_kib":2100},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":9440,"rss_kib":7948},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":12149,"rss_kib":8016},"queries":74,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":5522,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":4,"pid":6910,"rss_kib":1632},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":9692,"rss_kib":34780},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":10933,"rss_kib":34824}},{"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":14699,"rss_kib":13188},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":8107,"rss_kib":1856},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":8306,"rss_kib":10412},"elapsed_seconds":293.514769008,"events":21,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":10080},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":13951,"rss_kib":1040},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":9231,"rss_kib":2100},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":9440,"rss_kib":7948},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":12149,"rss_kib":8016},"queries":84,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":13849,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":4,"pid":6910,"rss_kib":1632},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":9692,"rss_kib":34808},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":10933,"rss_kib":34836}},{"ddnsgo":{"executable":"/jffs/.koolshare/bin/ddnsgo","fds":7,"pid":14699,"rss_kib":13224},"dnsmasq":{"executable":"/usr/sbin/dnsmasq","fds":9,"pid":8107,"rss_kib":1856},"dropbear":{"executable":"/usr/bin/qemu-arm","fds":4,"pid":8306,"rss_kib":10412},"elapsed_seconds":321.56200448,"events":22,"httpd":{"executable":"/usr/libexec/localmod/httpd","fds":5,"pid":7510,"rss_kib":10080},"httpdb":{"executable":"/jffs/.koolshare/bin/httpdb","fds":6,"pid":13951,"rss_kib":1124},"miniupnpd":{"executable":"/usr/sbin/miniupnpd","fds":7,"pid":9231,"rss_kib":2100},"openvpn-client":{"executable":"/usr/sbin/openvpn","fds":6,"pid":9440,"rss_kib":7948},"openvpn-server":{"executable":"/router/usr/sbin/openvpn","fds":7,"pid":12149,"rss_kib":8016},"queries":90,"skipd":{"executable":"/usr/bin/skipd","fds":8,"pid":13849,"rss_kib":1188},"uu":{"executable":"/bin/busybox","fds":5,"pid":15519,"rss_kib":1488},"xray-client":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":9692,"rss_kib":34820},"xray-server":{"executable":"/jffs/.koolshare/bin/xray","fds":6,"pid":10933,"rss_kib":34836}}],"service_checks":{"core_page_queries":8,"curl_wget_https_pairs":9,"dns_queries":96,"proxy_queries":51,"ssh_queries":9,"tun_traffic":8,"upnp_cycles":11},"started_utc":"2026-11-09T12:50:54Z","unplanned_failures":0,"uu_launches":3}
+PASS coexist continuous queries restarts faults and preserved data
+miniupnpd[9231]: shutting down MiniUPnPd
+SOAK_REAPER orphans_reaped=239
+NESTED_MERLIN_JOB_STATUS=0
+[  412.602844] reboot: Power down
+LINUX_READONLY_JOB_STATUS=0

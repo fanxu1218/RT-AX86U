@@ -1,0 +1,14 @@
+This directory contains unmodified contract sources from Asuswrt-Merlin
+3004.388.13, commit d1a59dcffbe0402c7ac8ac3090cb7c928510fbcd.
+The original copyright and GNU GPL version 2 or later headers are retained.
+Exact source URLs and SHA256 digests are recorded in sources.json and
+uu_sources.json. COPYING-GPL-2.0.txt provides the license text.
+
+The P7 candidate inherits the complete ordinary RT-AX86U upstream image,
+including its OpenSSL 3.5 libraries, compatibility shims and native modules.
+Corresponding upstream source: https://github.com/RMerl/asuswrt-merlin.ng/tree/d1a59dcffbe0402c7ac8ac3090cb7c928510fbcd
+The upstream image/ZIP hashes and download URL are pinned separately in
+build/merlin38813_sources.json. The software-center and Fancyss augmentation
+retains the notices and source origins recorded by the P6 donor manifests.
+The local source archive excludes firmware images, toolchains, credentials,
+user configuration and actual router data.

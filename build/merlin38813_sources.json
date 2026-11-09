@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "source_tag": "3004.388.13",
+  "source_commit": "d1a59dcffbe0402c7ac8ac3090cb7c928510fbcd",
+  "source_url": "https://github.com/RMerl/asuswrt-merlin.ng/tree/d1a59dcffbe0402c7ac8ac3090cb7c928510fbcd",
+  "archive": {
+    "zip": "upstream/merlin38813/RT-AX86U_3004_388.13_0.zip",
+    "zip_bytes": 76237351,
+    "zip_sha256": "8c0597ba7b17d04a30c546e3e73d03d204d7076cc36e06a0210d0616b90b2286",
+    "image": "upstream/merlin38813/RT-AX86U_3004_388.13_0_pureubi.w",
+    "image_bytes": 84803604,
+    "image_sha256": "087be9aac11abe57701486dca08fac207b8433b354bc00a3bbb314732f4f4103",
+    "published_image_sha256_matches": true,
+    "zip_crc_valid": true,
+    "download_url": "https://sourceforge.net/projects/asuswrt-merlin/files/RT-AX86U/Release/RT-AX86U_3004_388.13_0.zip/download"
+  }
+}

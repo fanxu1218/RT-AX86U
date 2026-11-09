@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "model": "RT-AX86U",
+  "base": "3004.388.13",
+  "revision": "P7",
+  "release_tag": "localmod-native-38813-p7-experimental",
+  "repository": "https://github.com/fanxu1218/RT-AX86U",
+  "status": "NOT_FLASH_READY",
+  "published": false,
+  "flash_ready": false
+}

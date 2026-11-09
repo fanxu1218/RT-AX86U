@@ -1,6 +1,16 @@
 # RT-AX86U 原生梅林与软件中心集成实验
 
-当前开发候选为普通大陆版 RT-AX86U 的 **3004.388.12_2 / localmod-native-P6**：完整继承该机型的上游梅林框架，追加 **软件中心 1.9.60**，保留原生 **网易 UU** 启动路径及页面，提供 Fancyss 3.5.29 HND v8 Full 兼容安装入口。
+## 当前 388.13 / P7 候选
+
+当前开发候选已更新为普通大陆版 RT-AX86U 的 **3004.388.13 / localmod-native-P7**，保留软件中心 **1.9.60**、原厂 UU 启动适配与 Fancyss **3.5.29 HND v8 Full** 兼容包。完整继承新版原生框架、OpenSSL 3.5 与其兼容 shim、OpenVPN 2.7.8、内核和驱动；5 个既有路径用于追加软件中心接入，其余原生路径保持上游版本。
+
+**实验候选，NOT_FLASH_READY，未刷机、未实机验收。** 本轮本地门禁已通过：35 项原生/认证/TLS/组件检查、7 项在线管理检查、36 项 Fancyss/软件中心共存检查、32 项真实 HND 插件检查、4 类恢复场景共 10 次隔离启动，以及 321.6 秒共存测量（90 次正常查询、22 次异常/重启、零计划外失败）。最终以 [P7 独立门禁](output/merlin38813_local_gate.json) 和 [本地交付记录](output/merlin38813_local_delivery.json)为准。来源、校验、专项入口和验证边界见 [388.13 升级与本地验证](output/388.13升级与本地验证.md)。P7 二进制先作本地交付，尚未发布 P7 Release；下方 P6 的线上附件继续保留。
+
+P7 使用独立的 `analysis/merlin_vpn_38813/`、`build/merlin38813_sources.json` 和 `merlin38813_*` 报告；通用旧构建配置继续绑定历史候选。P6 的一小时长测不算作 P7 证据。真实 UU 云端/游戏、目标内核/PID1 启动、Wi-Fi/NAT/AiMesh 等仍未实机验收。
+
+## 已保留的 388.12_2 / P6 记录
+
+P6 历史候选为普通大陆版 RT-AX86U 的 **3004.388.12_2 / localmod-native-P6**：完整继承该机型的上游梅林框架，追加 **软件中心 1.9.60**，保留原生 **网易 UU** 启动路径及页面，提供 Fancyss 3.5.29 HND v8 Full 兼容安装入口。
 
 **P6 已发布为[实验预发布](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod-native-38812-p6-experimental)，仍标记 `NOT_FLASH_READY`，未刷机、未实机验收。** 本地集成与验证已完成：P6 实测 3,603.1 秒、1,029 次正常查询、35 次异常/重启，16 类事件各至少两轮，零计划外失败；完整数据与独立门禁见 [P6 本地门禁](output/merlin38812_local_gate.json)。本地交付以 [交付记录](output/merlin38812_native_local_delivery.json) 为准。线上固件、Fancyss 兼容包及校验见 [Release](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod-native-38812-p6-experimental)，上传核对见 [发布回执](output/merlin38812_release_delivery.json)。原生框架范围、真实 UU 验证边界和进度见 [388.12_2 原生框架进度](output/388.12_2原生框架进度.md)，复核与手动推送见 [本地交付说明](output/388.12_2本地交付与手动推送.md)。旧 r9-r2 镜像与历史发布保留。
 
