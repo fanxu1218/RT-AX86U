@@ -4,7 +4,11 @@
 
 当前开发候选已更新为普通大陆版 RT-AX86U 的 **3004.388.13 / localmod-native-P7**，保留软件中心 **1.9.60**、原厂 UU 启动适配与 Fancyss **3.5.29 HND v8 Full** 兼容包。完整继承新版原生框架、OpenSSL 3.5 与其兼容 shim、OpenVPN 2.7.8、内核和驱动；5 个既有路径用于追加软件中心接入，其余原生路径保持上游版本。
 
-**实验候选，NOT_FLASH_READY，未刷机、未实机验收。** 本轮本地门禁已通过：35 项原生/认证/TLS/组件检查、7 项在线管理检查、36 项 Fancyss/软件中心共存检查、32 项真实 HND 插件检查、4 类恢复场景共 10 次隔离启动，以及 321.6 秒共存测量（90 次正常查询、22 次异常/重启、零计划外失败）。最终以 [P7 独立门禁](output/merlin38813_local_gate.json) 和 [本地交付记录](output/merlin38813_local_delivery.json)为准。来源、校验、专项入口和验证边界见 [388.13 升级与本地验证](output/388.13升级与本地验证.md)。P7 固件、Fancyss 兼容包、源码、校验值及验证说明已附到 [P7 实验预发布](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod-native-38813-p7-experimental)，不设为 Latest；附件摘要和公开下载回读见 [发布回执](output/merlin38813_release_delivery.json)。[发布说明](output/merlin38813_release_notes.md)保留未实机验收标识；下方 P6 及其他 GitHub 历史 Release 继续保留。
+**实验候选，NOT_FLASH_READY，未刷机、未实机验收。** 首次发布的本地门禁包括：35 项原生/认证/TLS/组件检查、7 项在线管理检查、36 项 Fancyss/软件中心共存检查、32 项真实 HND 插件检查、4 类恢复场景共 10 次隔离启动，以及 321.6 秒共存测量（90 次正常查询、22 次异常/重启、零计划外失败）。首次发布证据见 [P7 独立门禁](output/merlin38813_local_gate.json) 和 [本地交付记录](output/merlin38813_local_delivery.json)。来源、校验、专项入口和验证边界见 [388.13 升级与本地验证](output/388.13升级与本地验证.md)。P7 固件、Fancyss 兼容包、源码、校验值及验证说明已附到 [P7 实验预发布](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod-native-38813-p7-experimental)，不设为 Latest；附件摘要和公开下载回读见 [发布回执](output/merlin38813_release_delivery.json)。[发布说明](output/merlin38813_release_notes.md)保留未实机验收标识；下方 P6 及其他 GitHub 历史 Release 继续保留。
+
+同一 P7 固件追加完成 **3,603.9 秒共存长测、1,024 次正常查询、35 次计划异常/重启、127 次资源采样，零计划外失败**；16 类事件各至少两轮，配置、证书及 UU 合成数据保留。未复现需要修改生产固件的问题，镜像字节保持不变。新增 [小时验证说明](output/merlin38813_hour_validation.md)、[小时门禁](output/merlin38813_hour_gate.json)、[原始数据](output/merlin38813_native_coexist_60m_tests.json) 和 [缓存清理回执](output/merlin38813_hour_cleanup.json)；原发布的五分钟门禁保持原字节，后续一小时证据单独记录。8 个补充验证附件已追加到 P7 实验预发布并逐个公开下载核对 SHA256，原九个附件和 tag 提交不变，见 [补充发布回执](output/merlin38813_hour_release_delivery.json)。DDNS-Go 两个最长进程周期的 RSS 均升至约 17.6 MiB，期间有回落，未证明跨天无泄漏；真实 UU 云端/游戏仍未验证。
+
+后续按改动范围选择回归：文档/上传仅做静态与摘要校验，插件或局部逻辑做专项回归，底包、TLS、服务框架或 VPN/网络栈等重大变化再追加长测。同一固件与测试条件可运行 `analysis/.venv/bin/python analysis/merlin_vpn_38813/check_hour_gate.py --verify-only` 复核既有小时证据，不启动 VM、不改写报告，不因重复提交或推送再等一小时。
 
 按用户要求，本地已清理 20 个旧固件/完整交付包（约 1.66GiB），保留 P7 交付物、原版回退文件及仍被构建/门禁引用的依赖。源码、报告和 GitHub 历史 Release 继续保留；历史交付记录中的本地旧包路径属于封存时状态。
 

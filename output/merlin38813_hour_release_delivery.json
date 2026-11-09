@@ -1,0 +1,100 @@
+{
+  "status": "P7_HOUR_SUPPLEMENT_PUBLISHED_PUBLIC_BYTES_VERIFIED_NOT_DEVICE_ACCEPTED",
+  "repository": "fanxu1218/RT-AX86U",
+  "url": "https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod-native-38813-p7-experimental",
+  "tag": "localmod-native-38813-p7-experimental",
+  "release_id": 439147522,
+  "prerelease": true,
+  "is_latest": false,
+  "flash_ready": false,
+  "physical_router_flashed": false,
+  "real_uu_acceleration_tested": false,
+  "main_firmware_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b",
+  "tag_commit": "147032c384732124f3dd2f2f47bdea3a30edf5a8",
+  "original_nine_assets_unchanged": true,
+  "original_release_receipt_unchanged": true,
+  "supplemental_assets": {
+    "merlin38813_native_coexist_60m_tests.json": {
+      "id": 727769150,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_native_coexist_60m_tests.json",
+      "bytes": 269876,
+      "sha256": "a7694e642e9407f93e791549af8a686b9a184b0e806d1c9f67305f6c8a848318",
+      "github_digest_matches_local": true,
+      "public_download_status": 200,
+      "public_download_sha256_matches_local": true,
+      "verification_method": "Unauthenticated HTTPS streamed to SHA256; no download copy retained"
+    },
+    "merlin38813_native_coexist_60m.log": {
+      "id": 727769159,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_native_coexist_60m.log",
+      "bytes": 448923,
+      "sha256": "7c7bf3db36c79c8125cc00a7f3d96a970ca032ff93913c9519725b17d85ccada",
+      "github_digest_matches_local": true,
+      "public_download_status": 200,
+      "public_download_sha256_matches_local": true,
+      "verification_method": "Unauthenticated HTTPS streamed to SHA256; no download copy retained"
+    },
+    "merlin38813_native_coexist_60m.log.vm.json": {
+      "id": 727769132,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_native_coexist_60m.log.vm.json",
+      "bytes": 5780,
+      "sha256": "8cdb7e4ad7623e7c5db9ead9ae6fa407b34582936f69dda06a003b6fa56dd2eb",
+      "github_digest_matches_local": true,
+      "public_download_status": 200,
+      "public_download_sha256_matches_local": true,
+      "verification_method": "Unauthenticated HTTPS streamed to SHA256; no download copy retained"
+    },
+    "merlin38813_hour_gate.json": {
+      "id": 727769135,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_hour_gate.json",
+      "bytes": 19863,
+      "sha256": "1778cd33a1d570deea3ca078653c89ebd306e2f69205248361f4351d16a89bb7",
+      "github_digest_matches_local": true,
+      "public_download_status": 200,
+      "public_download_sha256_matches_local": true,
+      "verification_method": "Unauthenticated HTTPS streamed to SHA256; no download copy retained"
+    },
+    "merlin38813_hour_generated_inputs.tar.gz": {
+      "id": 727769163,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_hour_generated_inputs.tar.gz",
+      "bytes": 47635,
+      "sha256": "e6ca48b34a59b5634600512d27e311e83c1354942783bf591aee95a6ee9fbaf0",
+      "github_digest_matches_local": true,
+      "public_download_status": 200,
+      "public_download_sha256_matches_local": true,
+      "verification_method": "Unauthenticated HTTPS streamed to SHA256; no download copy retained"
+    },
+    "merlin38813_hour_cleanup.json": {
+      "id": 727769209,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_hour_cleanup.json",
+      "bytes": 837,
+      "sha256": "b5e0d83daba7b5c926203510cc68a25b490d9ec09751b33cc95dfaa7273bae65",
+      "github_digest_matches_local": true,
+      "public_download_status": 200,
+      "public_download_sha256_matches_local": true,
+      "verification_method": "Unauthenticated HTTPS streamed to SHA256; no download copy retained"
+    },
+    "P7-HOUR-VALIDATION.md": {
+      "id": 727769220,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/P7-HOUR-VALIDATION.md",
+      "bytes": 7571,
+      "sha256": "5ff8f108cc9b1b7e9db0c421c73930f9880373d73dcaa8c1ca521096c9da3aae",
+      "github_digest_matches_local": true,
+      "public_download_status": 200,
+      "public_download_sha256_matches_local": true,
+      "verification_method": "Unauthenticated HTTPS streamed to SHA256; no download copy retained"
+    },
+    "P7-HOUR-SHA256SUMS": {
+      "id": 727769245,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/P7-HOUR-SHA256SUMS",
+      "bytes": 702,
+      "sha256": "4b57abc023986e910c2dfed2604e4416b9039884e1d2c7260620d8492026a593",
+      "github_digest_matches_local": true,
+      "public_download_status": 200,
+      "public_download_sha256_matches_local": true,
+      "verification_method": "Unauthenticated HTTPS streamed to SHA256; no download copy retained"
+    }
+  },
+  "release_body_sha256": "d0d4ac96bfdb7df0f6cc017bb3c7ce0b979d2682cd15442490f3f58b59a6ad3b",
+  "no_large_staging_or_download_copies_created": true
+}

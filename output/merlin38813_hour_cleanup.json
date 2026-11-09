@@ -1,0 +1,24 @@
+{
+  "status": "P7_HOUR_TEMPORARY_CACHE_CLEANED",
+  "removed_directories": {
+    "build/merlin38813-native-soak": 26780960
+  },
+  "logical_bytes_removed": 26780960,
+  "system_free_before": 25959956480,
+  "system_free_after": 25982783488,
+  "successful_vm_workspace_auto_removed": true,
+  "firmware_and_generated_source_audit_retained": true,
+  "source_sha256": {
+    "analysis/merlin_vpn_38813/cleanup_hour_cache.py": "b59cd03ba17dd817498dffeeb112b2ee62b8da507bf521beca73ace6e23aea58"
+  },
+  "owned_sparseimage_compaction": {
+    "image": "build/RTAX86UBuild.sparseimage",
+    "compact_exit_code": 0,
+    "allocated_before": 1931485184,
+    "allocated_after": 1513103360,
+    "allocated_bytes_reclaimed": 418381824,
+    "system_free_before": 25981526016,
+    "system_free_after": 26397401088,
+    "candidate_volume_remounted": true
+  }
+}

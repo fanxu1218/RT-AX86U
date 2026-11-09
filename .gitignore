@@ -429,3 +429,5 @@
 !/output/merlin38813-P7-sources.tar.gz
 !/output/merlin38813-P7-sources.manifest.json
 !/output/merlin38813_release_notes.md
+!/output/merlin38813_hour_validation.md
+!/output/merlin38813_hour_generated_inputs.tar.gz
