@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "status": "P6_GUIDE_AND_ACCEPTANCE_DOCS_PUBLISHED_NOT_DEVICE_ACCEPTED",
+  "repository": "fanxu1218/RT-AX86U",
+  "release_id": 438357174,
+  "tag": "localmod-native-38812-p6-experimental",
+  "url": "https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod-native-38812-p6-experimental",
+  "release_title": "RT-AX86U 388.12_2 P6 实验预发布（未实机验收 / NOT_FLASH_READY）",
+  "documentation_commit": "e6a627066539e03371e23f9b3da91fc000e8ccfc",
+  "firmware_tag_commit": "266dc076542a69710cadf9e5dfbebb942f6e025c",
+  "tag_unchanged": true,
+  "prerelease": true,
+  "draft": false,
+  "is_latest": false,
+  "flash_ready": false,
+  "physical_router_accessed": false,
+  "physical_router_flashed": false,
+  "device_backup_executed": false,
+  "acceptance_items": 44,
+  "acceptance_items_executed": 0,
+  "original_asset_count": 9,
+  "original_asset_ids_bytes_and_digests_preserved": true,
+  "release_asset_count": 13,
+  "added_assets": {
+    "Alpha3-to-P6-Upgrade-and-Rollback.md": {
+      "source_path": "output/Alpha3升级P6与实机验收.md",
+      "bytes": 31881,
+      "sha256": "b114301d6ca31448bf3f6f9757d926d05db7cd2f8ea4b03ed8e397e1c39bbd08",
+      "source_filename": "Alpha3升级P6与实机验收.md",
+      "id": 727245110,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/Alpha3-to-P6-Upgrade-and-Rollback.md",
+      "github_digest": "sha256:b114301d6ca31448bf3f6f9757d926d05db7cd2f8ea4b03ed8e397e1c39bbd08",
+      "public_download_sha256_verified": true
+    },
+    "P6-Hardware-Acceptance-Checklist.md": {
+      "source_path": "output/P6实机验收记录模板.md",
+      "bytes": 6875,
+      "sha256": "33e7f5ed4a33447542291d3aac0441eb04c05f24bb6e0a7eb6a4d5dd1ccb8722",
+      "source_filename": "P6实机验收记录模板.md",
+      "id": 727245113,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/P6-Hardware-Acceptance-Checklist.md",
+      "github_digest": "sha256:33e7f5ed4a33447542291d3aac0441eb04c05f24bb6e0a7eb6a4d5dd1ccb8722",
+      "public_download_sha256_verified": true
+    },
+    "P6-upgrade-guide-and-acceptance.zip": {
+      "bytes": 36147,
+      "sha256": "bb249a179849d75850d8231150676c07e5fd0c5594da3b05f4057cc90d2c2dd8",
+      "contains_original_names_and_relative_link_targets": true,
+      "id": 727252213,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/P6-upgrade-guide-and-acceptance.zip",
+      "github_digest": "sha256:bb249a179849d75850d8231150676c07e5fd0c5594da3b05f4057cc90d2c2dd8",
+      "public_download_sha256_verified": true
+    },
+    "P6-DOCS-SHA256SUMS": {
+      "bytes": 307,
+      "sha256": "82bf1f45e5fe903b88bad6f9440ce6e7936935c240860883d03d0d1c1d7dff2f",
+      "id": 727252462,
+      "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38812-p6-experimental/P6-DOCS-SHA256SUMS",
+      "github_digest": "sha256:82bf1f45e5fe903b88bad6f9440ce6e7936935c240860883d03d0d1c1d7dff2f",
+      "public_download_sha256_verified": true
+    }
+  },
+  "offline_zip_entries": [
+    "Alpha3升级P6与实机验收.md",
+    "P6实机验收记录模板.md",
+    "merlin38812_local_gate.json",
+    "merlin38812_native_coexist_60m_tests.json",
+    "SHA256SUMS"
+  ],
+  "release_notes_sha256": "09605c1d051f89e4ac9572ccca321b811d4d2e9ff1ee1f30dc3ef9a63e783ba8"
+}
