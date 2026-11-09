@@ -6,6 +6,8 @@
 
 原厂 UU 为必保留项，用户接受分阶段移植。原生 VPN 页面、库、服务控制框架和内核模块均来自固定上游镜像；本地已验证配置生成、启停通知、真实 OpenVPN 隧道，以及软件中心和插件恢复流程。配置/通知夹具、隔离系统通信和目标设备启动分别记录，不能互相替代。
 
+实机准备见 [Alpha 3 → P6 备份、升级、验收与回退指南](output/Alpha3升级P6与实机验收.md)及 [P6 记录模板](output/P6实机验收记录模板.md)。当前只完成文档整理，设备备份和全部实机项目尚未执行。
+
 2026-11-09 源码、必要配置依赖和验证报告已提交推送；随后按用户授权发布 P6 实验预发布，共 9 个附件。两个主附件的公开下载入口返回 HTTP 200，全部附件的 GitHub SHA256 摘要与本地一致。Release 绑定已验证源码提交 `266dc07`，不设为 Latest；普通 Git 分支和发布附件分别记录。封存交付包中的 `git_commit_created: false`、`agent_pushed_or_published: false` 记录封存当时的状态，后续提交不改写这些校验绑定的历史证据。
 
 ## 已保留的官方底包 r9-r2 历史记录
@@ -62,7 +64,8 @@ r8 集成六项后续完善：归档边界与脚本超时、事件/日志容量�
 - [localmod2-r8 历史实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r8-experimental)
 - [localmod2-r7 历史实验预发布与固件附件](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod2-r7-experimental)
 - [完整适配范围与验证边界](output/官改候选版说明.md)
-- [Alpha 3 升级、实机验收与回退步骤](output/Alpha3升级localmod2与实机验收.md) · [验收记录模板](output/localmod2实机验收记录模板.md)
+- [Alpha 3 → P6：备份、升级、实机验收与回退](output/Alpha3升级P6与实机验收.md) · [P6 验收记录模板](output/P6实机验收记录模板.md)（均为待执行方案，本次不刷机）
+- [早期 localmod2 升级与回退历史指南](output/Alpha3升级localmod2与实机验收.md) · [历史验收模板](output/localmod2实机验收记录模板.md)
 - [事件测试](output/hooks_tests.json) · [兼容测试](output/compatibility_tests.json) · [原厂接口清单](output/vendor_contracts.json) · [UU 静态及模型检查](output/uu_compatibility_tests.json) · [原厂登录/TLS/UU 本地运行检查](output/native_runtime_tests.json)
 - [30 分钟持续运行说明](output/持续运行验证说明.md) · [实测报告](output/soak-30m_tests.json)
 - [DDNS-Go RSS 分层排查](output/DDNS-Go内存排查说明.md) · [连续采样](output/ddnsgo_memory_continuous_tests.json) · [重复负载](output/ddnsgo_memory_reuse_tests.json) · [禁用大页对照](output/ddnsgo_memory_no-thp_tests.json)
