@@ -12,6 +12,8 @@
 
 已另行整理本批 [备份、升级、实机验收与回退步骤](output/merlin38813gui24447_device_guide.md)、[50 项空白验收记录](output/merlin38813gui24447_device_acceptance.md)及 [离线文档包](output/merlin38813gui24447_device_preparation.zip)，区分原 P7 单文件修补、P6 底座升级及 Alpha 3 跨版本迁移；通过语言文件摘要和实际菜单确认修补身份。文档与 ZIP 校验见 [文档附件清单](output/GUI24447-DOCS-SHA256SUMS)，静态检查见 [文档准备记录](output/merlin38813gui24447_device_preparation.json)。50 项设备检查均未验证，未访问设备、未执行备份/停服务/刷机或实机验收；NOT_FLASH_READY 和冻结固件/运行证据保持原样。
 
+文档、ZIP、独立 ZIP 校验、静态准备记录及文档清单共 6 个附件已追加到 GUI24447 实验预发布，现共 20 个上传附件；六项均已公开下载回读，并与文档提交 `b55bbc4` 逐字节核对，ZIP 内文档与校验也通过。见 [文档发布回执](output/merlin38813gui24447_device_release_delivery.json)及 [补充发布说明](output/merlin38813gui24447_device_release_notes.md)。原 GUI24447 首批 14 个附件、固件标签提交和原 P7 发布/17 个附件保持原样；预发布继续不设为 Latest。冻结准备记录中的未提交/未发布字段保留上传前状态，实际线上交付以单独发布回执为准。
+
 ## 当前 388.13 / P7 候选
 
 当前开发候选已更新为普通大陆版 RT-AX86U 的 **3004.388.13 / localmod-native-P7**，保留软件中心 **1.9.60**、原厂 UU 启动适配与 Fancyss **3.5.29 HND v8 Full** 兼容包。完整继承新版原生框架、OpenSSL 3.5 与其兼容 shim、OpenVPN 2.7.8、内核和驱动；5 个既有路径用于追加软件中心接入，其余原生路径保持上游版本。
