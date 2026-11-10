@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "status": "GUI24447_DEVICE_DOCUMENTS_VALIDATED_FOR_PUBLICATION_NOT_EXECUTED",
+  "guide": "output/merlin38813gui24447_device_guide.md",
+  "guide_sha256": "c4337c19eafd8391ee2a01b162cce8f53ebb5e6d551c53e2b6e646711f176e7a",
+  "acceptance_template": "output/merlin38813gui24447_device_acceptance.md",
+  "acceptance_template_sha256": "00fb9cc3b91ac990780ed7a4dfd330c4edd725c436b390acc2d49dee85163cbc",
+  "acceptance_items": 50,
+  "all_initial_device_results": "未验证",
+  "source_branches": [
+    "original P7",
+    "localmod P6",
+    "KoolCenter Alpha 3",
+    "stock or other verified firmware"
+  ],
+  "shell_blocks_syntax_checked_only": [
+    {
+      "document": "merlin38813gui24447_device_guide.md",
+      "block": 1,
+      "syntax_only": true
+    },
+    {
+      "document": "merlin38813gui24447_device_guide.md",
+      "block": 2,
+      "syntax_only": true
+    },
+    {
+      "document": "merlin38813gui24447_device_guide.md",
+      "block": 3,
+      "syntax_only": true
+    },
+    {
+      "document": "merlin38813gui24447_device_guide.md",
+      "block": 4,
+      "syntax_only": true
+    },
+    {
+      "document": "merlin38813gui24447_device_guide.md",
+      "block": 5,
+      "syntax_only": true
+    },
+    {
+      "document": "merlin38813gui24447_device_guide.md",
+      "block": 6,
+      "syntax_only": true
+    },
+    {
+      "document": "merlin38813gui24447_device_guide.md",
+      "block": 7,
+      "syntax_only": true
+    },
+    {
+      "document": "merlin38813gui24447_device_guide.md",
+      "block": 8,
+      "syntax_only": true
+    }
+  ],
+  "remote_shell_strings_syntax_checked_only": [
+    {
+      "document": "merlin38813gui24447_device_guide.md",
+      "block": 2,
+      "syntax_only": true
+    },
+    {
+      "document": "merlin38813gui24447_device_guide.md",
+      "block": 3,
+      "syntax_only": true
+    },
+    {
+      "document": "merlin38813gui24447_device_guide.md",
+      "block": 4,
+      "syntax_only": true
+    }
+  ],
+  "local_markdown_link_checks": 85,
+  "local_files_rehashed": [
+    {
+      "path": "output/RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w",
+      "bytes": 87949332,
+      "sha256": "2e395d86ed6c9fae6797a426bca72ea4b7c59a39e81c7a6e366b5fe1b6e95115"
+    },
+    {
+      "path": "upstream/p7/RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w",
+      "bytes": 87949332,
+      "sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    {
+      "path": "sources/realplugins/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz",
+      "bytes": 19790810,
+      "sha256": "b45d1294022b7914f6ffa6ae67c688e4870ef7aa07f3556657feec37a034d592"
+    },
+    {
+      "path": "upstream/asus24447/RT-AX86U_3.0.0.4_388_24447-g81951d7_pureubi.w",
+      "bytes": 83492884,
+      "sha256": "e133b645f1a656530805ee86ff363198f54117fa0fab74b85e00f6d5049deffa"
+    }
+  ],
+  "historic_P6_Alpha3_hashes_checked_against_existing_guide_not_local_images": true,
+  "target_metadata_verified_against_local_readback": {
+    "base": "3004.388.13",
+    "variant": "localmod-native-preview",
+    "revision": "P7",
+    "release_tag": "localmod-native-38813-p7-experimental",
+    "status": "NOT_FLASH_READY",
+    "software_center": "1.9.60",
+    "merlin_framework": "complete pinned native image with center augmentation",
+    "uu": "native NTP callback retained; territory-gated capability; real acceleration unverified",
+    "automatic_center_hook_augmentation": true,
+    "target_pid1_boot_tested": false
+  },
+  "target_core_id": "95b2436bb2ebc635f946a60517972119dd92ea44b201a8b2b424cfd33380180d",
+  "target_language_sha256": "1e2e75c17ef60586a278cc77c6a4a780fa257441b15f1cfb44ef1b3a44cbe946",
+  "protected_evidence_unchanged": [
+    "output/merlin38813_gui24447_candidate.json",
+    "output/merlin38813gui24447_full_gate.json",
+    "output/merlin38813gui24447_runtime_notes.md",
+    "output/merlin38813gui24447_release_delivery.json",
+    "output/merlin38813_native_candidate_tests.json",
+    "output/merlin38813_local_gate.json",
+    "output/merlin38813_hour_gate.json",
+    "output/merlin38813_release_delivery.json"
+  ],
+  "archive": "output/merlin38813gui24447_device_preparation.zip",
+  "archive_sha256": "0841df332092db4af709625c447893cb52914cd922a6b79f216a071b4c9adda5",
+  "archive_bytes": 20079,
+  "archive_members": {
+    "merlin38813gui24447_device_guide.md": {
+      "bytes": 30770,
+      "sha256": "c4337c19eafd8391ee2a01b162cce8f53ebb5e6d551c53e2b6e646711f176e7a"
+    },
+    "merlin38813gui24447_device_acceptance.md": {
+      "bytes": 9252,
+      "sha256": "00fb9cc3b91ac990780ed7a4dfd330c4edd725c436b390acc2d49dee85163cbc"
+    },
+    "README.txt": {
+      "bytes": 1075,
+      "sha256": "a5fdad0e7a9171d11dc8c61cddf09704934a5650229a91d7c3833703a304b054"
+    },
+    "GUI24447-GUIDE-SHA256SUMS": {
+      "bytes": 286,
+      "sha256": "fdaa3c39255380d34fc935fa4cb527df1373c4dd7e5e30b371ab8a494296e1c2"
+    }
+  },
+  "archive_readback_verified": true,
+  "online_primary_procedure_sources_checked": [
+    "https://www.asus.com/support/faq/1008000/",
+    "https://www.asus.com/support/faq/1001376/",
+    "https://www.asus.com/support/faq/1000814/",
+    "https://www.asus.com/support/faq/1035717/",
+    "https://www.asus.com/support/faq/1039078/",
+    "https://github.com/RMerl/asuswrt-merlin.ng/wiki/Installation",
+    "https://github.com/RMerl/asuswrt-merlin.ng/wiki/Jffs"
+  ],
+  "router_accessed": false,
+  "device_backup_executed": false,
+  "services_stopped": false,
+  "firmware_rebuilt": false,
+  "new_full_source_compile_executed": false,
+  "new_runtime_regression_executed": false,
+  "router_flashed": false,
+  "device_or_visual_accepted": false,
+  "flash_ready": false,
+  "git_commit_created_for_this_documentation": false,
+  "pushed_or_published_this_documentation": false,
+  "release_modified": false,
+  "validation_limits": "Static documentation, checksum, shell syntax and offline archive checks only; no shell example was executed and no device recovery was rehearsed.",
+  "prepublication_stage_note": "This validation record is frozen before commit/push and release upload; actual publication is recorded by the separate device release receipt.",
+  "initial_local_preparation_record_sha256": "592b6f76b9d9cdc4ab77a8bcc54864b8f5c332311b09b001c95c251ae64980c0",
+  "publication_text_adjustment": "Clarified original 14 release assets versus supplemental documents; removed local-only publication wording. No operational procedure or device result changed."
+}

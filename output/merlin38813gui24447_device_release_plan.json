@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "status": "DOCUMENTS_PREPARED_NOT_YET_PUBLISHED",
+  "repository": "fanxu1218/RT-AX86U",
+  "release_id": 440095751,
+  "release_tag": "localmod-native-38813-p7-gui24447-experimental",
+  "tested_firmware_tag_commit": "ece5df372e2c4d01264758e9ecd5598faa69efe3",
+  "original_release_assets": 14,
+  "supplemental_assets": 6,
+  "expected_total_assets": 20,
+  "unchanged_parent_release_id": 439147522,
+  "unchanged_parent_assets": 17,
+  "prerelease": true,
+  "is_latest": false,
+  "flash_ready": false,
+  "physical_router_accessed": false,
+  "physical_router_flashed": false,
+  "device_or_visual_accepted": false,
+  "acceptance_items": 50,
+  "all_device_items_unverified": true,
+  "assets": [
+    {
+      "name": "GUI24447-DOCS-SHA256SUMS",
+      "path": "output/GUI24447-DOCS-SHA256SUMS",
+      "bytes": 544,
+      "sha256": "b36ec4b1f6bf226bac10627ee3dad87045bd9b2d5efd4f8f54332d07c21d9e18"
+    },
+    {
+      "name": "merlin38813gui24447_device_acceptance.md",
+      "path": "output/merlin38813gui24447_device_acceptance.md",
+      "bytes": 9252,
+      "sha256": "00fb9cc3b91ac990780ed7a4dfd330c4edd725c436b390acc2d49dee85163cbc"
+    },
+    {
+      "name": "merlin38813gui24447_device_guide.md",
+      "path": "output/merlin38813gui24447_device_guide.md",
+      "bytes": 30770,
+      "sha256": "c4337c19eafd8391ee2a01b162cce8f53ebb5e6d551c53e2b6e646711f176e7a"
+    },
+    {
+      "name": "merlin38813gui24447_device_preparation.json",
+      "path": "output/merlin38813gui24447_device_preparation.json",
+      "bytes": 6480,
+      "sha256": "460a4ca780ceff81a791fb08ecb4e0742cad3cb97ae65675c6aa6270614ed9db"
+    },
+    {
+      "name": "merlin38813gui24447_device_preparation.zip",
+      "path": "output/merlin38813gui24447_device_preparation.zip",
+      "bytes": 20079,
+      "sha256": "0841df332092db4af709625c447893cb52914cd922a6b79f216a071b4c9adda5"
+    },
+    {
+      "name": "merlin38813gui24447_device_preparation.zip.sha256",
+      "path": "output/merlin38813gui24447_device_preparation.zip.sha256",
+      "bytes": 109,
+      "sha256": "58769cb2b68347a6e64bbf3e579590acbb8a6514d618be53586ed51b8b44c668"
+    }
+  ]
+}

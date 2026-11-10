@@ -440,4 +440,7 @@
 !/output/merlin38813gui24447_*.log
 !/output/merlin38813gui24447_*.md
 !/output/merlin38813gui24447_*.tar.gz
+!/output/merlin38813gui24447_device_preparation.zip
+!/output/merlin38813gui24447_device_preparation.zip.sha256
+!/output/GUI24447-DOCS-SHA256SUMS
 /output/merlin38813gui24447_bootstrap*

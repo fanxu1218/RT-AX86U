@@ -8,7 +8,9 @@
 
 新镜像的 [完整门禁](output/merlin38813gui24447_full_gate.json) 绑定 39 份本轮报告，256 个源码/输入文件另行封存，24 个逐启动控制器已重建并与封存摘要核对。范围、维护窗口、测试输入来源及只读复核入口见 [完整回归说明](output/merlin38813gui24447_runtime_notes.md)；此前的 [组装交付说明](output/merlin38813_gui24447_notes.md) 保留组装阶段的历史状态。下方原 P7、P6 及旧官改的发布回执和验证数字继续作为各自镜像的历史记录。
 
-本修补镜像已发布为独立的 [GUI24447 实验预发布](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod-native-38813-p7-gui24447-experimental)，标签固定于通过回归的 `ece5df3`，标记 Pre-release，不设为 Latest；固件、Fancyss 兼容包、完整源码/证据快照、运行源码封存包、门禁和校验清单共 14 个附件。线上附件摘要及逐个公开下载回读见 [GUI24447 发布回执](output/merlin38813gui24447_release_delivery.json)，范围和验收边界见 [发布说明](output/merlin38813gui24447_release_notes.md)。原 P7 的标签、发布说明和全部 17 个附件保持原样；封存证据中的未发布状态不改写，本次线上状态另行记录。
+本修补镜像已发布为独立的 [GUI24447 实验预发布](https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod-native-38813-p7-gui24447-experimental)，标签固定于通过回归的 `ece5df3`，标记 Pre-release，不设为 Latest；固件、Fancyss 兼容包、完整源码/证据快照、运行源码封存包、门禁和校验清单为首批 14 个附件。首批附件摘要及逐个公开下载回读见 [GUI24447 发布回执](output/merlin38813gui24447_release_delivery.json)，范围和验收边界见 [发布说明](output/merlin38813gui24447_release_notes.md)。原 P7 的标签、发布说明和全部 17 个附件保持原样；封存证据中的未发布状态不改写，实际线上状态另行记录。
+
+已另行整理本批 [备份、升级、实机验收与回退步骤](output/merlin38813gui24447_device_guide.md)、[50 项空白验收记录](output/merlin38813gui24447_device_acceptance.md)及 [离线文档包](output/merlin38813gui24447_device_preparation.zip)，区分原 P7 单文件修补、P6 底座升级及 Alpha 3 跨版本迁移；通过语言文件摘要和实际菜单确认修补身份。文档与 ZIP 校验见 [文档附件清单](output/GUI24447-DOCS-SHA256SUMS)，静态检查见 [文档准备记录](output/merlin38813gui24447_device_preparation.json)。50 项设备检查均未验证，未访问设备、未执行备份/停服务/刷机或实机验收；NOT_FLASH_READY 和冻结固件/运行证据保持原样。
 
 ## 当前 388.13 / P7 候选
 
