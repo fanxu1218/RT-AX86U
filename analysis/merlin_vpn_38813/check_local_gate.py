@@ -8,6 +8,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'build'))
 from sealed_vm import encoded, inventory, sha
+from gui24447 import payload
 
 
 def read(name):
@@ -41,7 +42,9 @@ def main():
     assert hashlib.sha256(encoded(original)).hexdigest() == upstream['inventory_sha256']
     changed = sorted(n for n in original if original[n] != stage.get(n))
     assert changed == candidate['upstream_paths_changed']
-    assert changed == ['rom/etc/profile', 'sbin/rc', 'usr/sbin/httpd', 'usr/sbin/iptables-restore', 'www/state.js']
+    assert changed == ['rom/etc/profile', 'sbin/rc', 'usr/sbin/httpd', 'usr/sbin/iptables-restore', 'www/Lang_Hdr.txt', 'www/state.js']
+    language_pin, language_data = payload()
+    assert (ROOT / candidate['rootfs'] / language_pin['path']).read_bytes() == language_data
     for source, saved in [('sbin/rc', 'usr/libexec/localmod/rc.vendor'), ('usr/sbin/httpd', 'usr/libexec/localmod/httpd')]:
         assert sha(ROOT / upstream['rootfs'] / source) == sha(ROOT / candidate['rootfs'] / saved)
     for name in ['usr/lib/libssl.so.1.1', 'usr/lib/libcrypto.so.1.1', 'usr/lib/libssl.so.3', 'usr/lib/libcrypto.so.3']:

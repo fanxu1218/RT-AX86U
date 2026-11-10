@@ -20,6 +20,7 @@ from repack_image import repack
 from ubireader.ubi_io import ubi_file
 from ubireader.ubifs import ubifs, walk
 from ubireader.ubifs.output import extract_files
+from gui24447 import apply as apply_gui24447
 
 
 def main():
@@ -104,6 +105,7 @@ def main():
     identity = stage / 'rom/etc/localmod-release.json'; identity.chmod(0o644)
     data = json.loads(identity.read_text()); data.update(base=release['base'], revision='P7', release_tag=release['release_tag'])
     identity.write_text(json.dumps(data, indent=2) + '\n')
+    apply_gui24447(stage)
     # Restore only the new upstream's native hardlinks.
     groups = {}
     for name, row in meta.items():
@@ -118,7 +120,7 @@ def main():
         if not p.is_symlink(): p.chmod(row['mode'] & 0o7777)
     final = inventory(stage)
     changed = {n for n in upstream if final.get(n) != upstream[n]}
-    assert changed == overrides, changed
+    assert changed == overrides | {'www/Lang_Hdr.txt'}, changed
     assert sha(stage / 'usr/libexec/localmod/rc.vendor') == sha(original / 'sbin/rc')
     assert sha(stage / 'usr/libexec/localmod/httpd') == sha(original / 'usr/sbin/httpd')
     stage_sha = hashlib.sha256(encoded(final)).hexdigest()
@@ -172,7 +174,7 @@ def main():
         upstream_image_sha256=pin['archive']['image_sha256'], upstream_paths_changed=sorted(changed),
         overlay_donor_sha256=prior['image']['sha256'], protected_sha256=protected, build_vm=receipt,
         physical_router_flashed=False, target_pid1_boot_tested=False, actual_uu_acceleration_tested=False,
-        source_sha256={str(p.relative_to(ROOT)): sha(p) for p in [HERE / 'build_candidate.py', HERE / 'release.json', HERE / 'native_boot_bridge.c', HERE / 'native_launcher.c', HERE / 'native_restore.c', HERE / 'center_sleep.c', ROOT / 'sources/localmod/httpd_bridge.c', ROOT / 'sources/localmod/launcher.c', ROOT / 'build/merlin38813_sources.json']})
+        source_sha256={str(p.relative_to(ROOT)): sha(p) for p in [HERE / 'build_candidate.py', HERE / 'release.json', HERE / 'native_boot_bridge.c', HERE / 'native_launcher.c', HERE / 'native_restore.c', HERE / 'center_sleep.c', HERE / 'gui24447.py', ROOT / 'sources/localmod/httpd_bridge.c', ROOT / 'sources/localmod/launcher.c', ROOT / 'sources/localmod/Lang_Hdr.txt', ROOT / 'build/asus24447_sources.json', ROOT / 'build/merlin38813_sources.json']})
     (work / 'manifest.json').write_text(json.dumps(report, indent=2) + '\n')
     for suffix in ['native_candidate_tests', 'native_preview_stage']:
         (ROOT / ('output/merlin38813_' + suffix + '.json')).write_text(json.dumps(report, indent=2) + '\n')

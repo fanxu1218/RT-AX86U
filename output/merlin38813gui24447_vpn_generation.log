@@ -1,0 +1,19 @@
+LINUX_BUILDER_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261110055333, 2026/11/10 ~ 2046/11/11
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS native_client1_configuration_and_user_postconf
+PASS native_client2_configuration_and_user_postconf
+PASS native_client3_configuration_and_user_postconf
+PASS native_client4_configuration_and_user_postconf
+PASS native_client5_configuration_and_user_postconf
+PASS native_server1_configuration_and_user_postconf
+PASS native_server2_configuration_and_user_postconf
+PASS native_five_client_two_server_start_stop_notifications_and_uu_private_api_preserved
+VPN_GENERATE_RESULT {"actual_tunnel_started":false,"checks":["native_client1_configuration_and_user_postconf","native_client2_configuration_and_user_postconf","native_client3_configuration_and_user_postconf","native_client4_configuration_and_user_postconf","native_client5_configuration_and_user_postconf","native_server1_configuration_and_user_postconf","native_server2_configuration_and_user_postconf","native_five_client_two_server_start_stop_notifications_and_uu_private_api_preserved"],"configurations":7,"full_upgrade_complete":false,"online":{"checks":[]},"service_notifications":14,"target_pid1_boot_tested":false}
+SOAK_REAPER orphans_reaped=1
+LINUX_READONLY_JOB_STATUS=0

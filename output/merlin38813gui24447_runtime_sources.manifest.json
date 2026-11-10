@@ -1,0 +1,1289 @@
+{
+  "schema": 1,
+  "candidate_sha256": "2e395d86ed6c9fae6797a426bca72ea4b7c59a39e81c7a6e366b5fe1b6e95115",
+  "files": {
+    "analysis/merlin_vpn_38813/archive_gui24447_runtime.py": {
+      "bytes": 8541,
+      "sha256": "4eb106f4e0cce73bfe049af319fce6107154551433c119f93dcaacd5ac00fe03",
+      "origin": "Reproduction and verification entry"
+    },
+    "analysis/merlin_vpn_38813/regress_gui24447.py": {
+      "bytes": 12292,
+      "sha256": "163f15155e01dfa3ae2a1062619ec0bd48403af85033fca846f0cdee44c7eec6",
+      "origin": "Reproduction and verification entry"
+    },
+    "analysis/merlin_vpn_38813/rehydrate_gui24447.py": {
+      "bytes": 5226,
+      "sha256": "0ffe26a0fa098e434b94ea6a09e9a42e7f71091c7c55a8f1f53f175edd2ee74d",
+      "origin": "Reproduction and verification entry"
+    },
+    "analysis/merlin_vpn_38813/verify_gui24447_regression.py": {
+      "bytes": 12678,
+      "sha256": "48191bb3cd38743893217979868def7c9ff934c1ed36fd87ed41cf3858081adb",
+      "origin": "Reproduction and verification entry"
+    },
+    "analysis/merlin_vpn_38813gui24447/audit_gui24447.py": {
+      "bytes": 6935,
+      "sha256": "071b436cfef7989f60d2eb4c27f46ca15b6a2d87a8a6fc4277db42bc27de1acd",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/build_candidate.py": {
+      "bytes": 12265,
+      "sha256": "206ac268c57a225dd78eee4b0c8c29211842c1d773c84096b8c334be3b6a8692",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/build_gui24447.py": {
+      "bytes": 8177,
+      "sha256": "f29dfd86bbc086d558bc743eae96155992db9953533dba5c831fa8db148c069e",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/candidate_runtime.go": {
+      "bytes": 8765,
+      "sha256": "54b8394e0cbf6762bf1a37664bd98dda0ee4e59c4cfc5bee43c2ebcc8545ffb4",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/center_sleep.c": {
+      "bytes": 1623,
+      "sha256": "8ae6e6d8155c6a50ad6881a8dc490a82a6be0382c2c6a759d290d932f6390f13",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_candidate_runtime.py": {
+      "bytes": 4952,
+      "sha256": "8eab1c4abbca5ad3f9487cc6fc12205e65415385b83e38cdae2b17bd81fad705",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_gui24447.py": {
+      "bytes": 2086,
+      "sha256": "0b73b1a5acf733eddcaa8b720c4a3d4e82de161867fc5a633d1474a996355c0b",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_hour_gate.py": {
+      "bytes": 8940,
+      "sha256": "0df3f6422c39ffb059495dbb9e3681fa91471fe08423f190e0f02d66a96f2677",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_local_gate.py": {
+      "bytes": 8253,
+      "sha256": "f2b0f1acb8b9fda77525eab814cc6b1834b53318cda56a21fe997396364e0643",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_fancyss.py": {
+      "bytes": 3769,
+      "sha256": "7e6ad3b8a1c26a71e30df81a5a0be09eda6ac48670007c368e6e74b4c9ff9236",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_hooks.py": {
+      "bytes": 8376,
+      "sha256": "7f59befa17c9d5ce386e8dda03a607e1b869406c31089e8a0ab19a8b8ac84451",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_persist.py": {
+      "bytes": 10246,
+      "sha256": "e8c7b959f3cc3486c01c2e602e2281dadbd2a48b649461a456743aa0cc8f5be5",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_plugins.py": {
+      "bytes": 5186,
+      "sha256": "86d32b2a165a051fc7663444cecec795260aa9c48b545d61d5a27d7fee2f3a27",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_restore.py": {
+      "bytes": 2678,
+      "sha256": "bcdb92e07bcc9d1201d9e62b9d1c08bdb7c699c0f983360b71e305008110c9c5",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_soak.py": {
+      "bytes": 10433,
+      "sha256": "cdc07af1e65470097e62e1b60886f549898a87e20ab27653d169c53f65632e6e",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_tunnel.py": {
+      "bytes": 5211,
+      "sha256": "758368b3d82dedb3ef7891f9e4009ae5fb9a3f0893e6ea3f4943f417099718a6",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_vpn.py": {
+      "bytes": 2753,
+      "sha256": "b391a1df533ceac4b6bcc0e2ac4c7e05089ae3a9a1d345664b2f23da5b96017a",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_sync_aux.py": {
+      "bytes": 3326,
+      "sha256": "9f2b19cb861f2b51239c898ee9287c553118a0679f823a6faea30cf38fe486c3",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/cleanup_hour_cache.py": {
+      "bytes": 3627,
+      "sha256": "5412810dc9fbcc69aa6b3dce8d82d58249810afefbc9e2c2f1f30825361933ae",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/gui24447.py": {
+      "bytes": 1858,
+      "sha256": "199410a1c51e40d47896208728c94cc3054e2749881530a80f203d099e7537b4",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/harness_lineage.json": {
+      "bytes": 7878,
+      "sha256": "ad60d95221ba12e753e71338074943ddc2f80b58505db92baec471cd6c90ec6d",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/launcher_exec_fixture.c": {
+      "bytes": 1685,
+      "sha256": "c564941866b65a0d3c03590708ca6ee990069c6ca90db44cd5c61a218d6b6878",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_boot_bridge.c": {
+      "bytes": 10644,
+      "sha256": "ae0f154f3f7804184240c12f32c9d3b77db12bda4bdd144ab054913e8d864dd4",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_center_event.sh": {
+      "bytes": 739,
+      "sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_hook_probe.c": {
+      "bytes": 574,
+      "sha256": "e2dd4f251de5983f863da4ef0fd1db226ff79080cba8ce7d24d509fc2cdbcc91",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_hooks.go": {
+      "bytes": 6252,
+      "sha256": "5f69e8a6652637413603a5c03f5cb3e835466787ade4c4739c0fe67fb279ef0d",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_launcher.c": {
+      "bytes": 1123,
+      "sha256": "d1535c2861b238a5de4bc588b7bbc8910f7596a8fbf04978f7d77677d00e9240",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_preview.go": {
+      "bytes": 8284,
+      "sha256": "2f5996073c77e011ca544e5389f669574ce54849e0c7d41ebe0371735095e947",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_restore.c": {
+      "bytes": 420,
+      "sha256": "2c90885e0633aaf43eb1361d388ef90b0aed887c8e4978482845f66f5751c114",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/package_local.py": {
+      "bytes": 4308,
+      "sha256": "87b1cd47542b4e585e4a36608ad28634f9ab44f4f13a9f8a2a2906ea98eb47c4",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/prepare.py": {
+      "bytes": 6394,
+      "sha256": "b3c242715cdb46393dad76f5137fdc83bd367ce8195aa83c910c68fe8ea2d5df",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/quick.py": {
+      "bytes": 1651,
+      "sha256": "00164d4cb7670d06468f270494038859e35e13731171336fa6a49174d5fcdc4a",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/release.json": {
+      "bytes": 278,
+      "sha256": "8ee2d251b69df80c2ed7bb9dd1ceee6a81d7442c8b3d41b5ff96d30a2ac8cdd6",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/restore_kernel_fixture.c": {
+      "bytes": 1406,
+      "sha256": "ec64981af19a753d88297722b9569b6abc441aa36d66719ac5fe43b6854d68f4",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/restore_probe.go": {
+      "bytes": 2667,
+      "sha256": "41bece7fb009c074c41ad51f8ca7e2ab04df9d804b73b66202e590452f4676c7",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/sync_aux.go": {
+      "bytes": 4822,
+      "sha256": "457646174260aed9cee137ad2c01e3281da972e0a4f988eb42c0f1f9b9514073",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/sync_aux_probe.c": {
+      "bytes": 1361,
+      "sha256": "e86d04a2d84528c1e3ec78385bdeafc73cb6d4c4a11c9091eb46e9ba5199fd03",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/uu_matrix.go": {
+      "bytes": 6188,
+      "sha256": "09d1921f2cb632873cc3b5b68b92ce2271d31dc661bd4344b7533faf8d773525",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/uu_matrix.py": {
+      "bytes": 7940,
+      "sha256": "406bcdf15f0cd601f1b8b8fb3ee85d020c85cbea5fe2663592b79e0bdf466cc2",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/COPYING-GPL-2.0.txt": {
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/COPYING-OpenVPN.txt": {
+      "bytes": 3820,
+      "sha256": "2bb17fe225c16734912c86003329ff44981ddae5f3a55bb2fa55b6938a12241b",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/Lang_Hdr_38813.before.txt": {
+      "bytes": 395,
+      "sha256": "1cf2b327d508253947c6c97887ed182fb88140c1457fbb85c380b7d620ed9f93",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/NOTICE.txt": {
+      "bytes": 966,
+      "sha256": "083fb8eb9de5635a8ceb3744a354e7adec7a854c94b501833f46b8799d3c9bf6",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/fancyss_uninstall_p1.json": {
+      "bytes": 1047,
+      "sha256": "549be957b9634a8f1e0d70df644a988078bbb0c2711e85e2fa02f5691759cbd0",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/merlin_ntpd.c": {
+      "bytes": 3199,
+      "sha256": "0c9004dbcfcc13cf5f01a2f93b9a3f4586841b42f6e69acf7a19031e69a298e5",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/merlin_scripts.c": {
+      "bytes": 3186,
+      "sha256": "17f835f374077b4b6ce30e07e6f6de40214789168d73223ac946049c9e1ae4dd",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/openvpn_config.c": {
+      "bytes": 16219,
+      "sha256": "32c522ef4ef40c327f761a30f109abbffb6c50c9439e9089265ecfb6fdd883bc",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/openvpn_config.h": {
+      "bytes": 5681,
+      "sha256": "1125abebb565c794810e0ab3c5b8679ba0d7f2f2712d275b745faad35f5309a4",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/openvpn_control.c": {
+      "bytes": 20587,
+      "sha256": "d07c485b1583b5c050966e895ab69037ae0a4fe48b3fa117c62b954e0325c282",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/openvpn_control.h": {
+      "bytes": 1275,
+      "sha256": "2e03f29e13dd07be4c3308f0c2dfe53e2251f5a149902c0c9cab88ffecd44ce0",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/sources.json": {
+      "bytes": 1360,
+      "sha256": "cff4867bbc1e21cc6c61951ca74cbf1fbc1a6e7cad2d792be5b6d6bec73b55de",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/uu_sources.json": {
+      "bytes": 708,
+      "sha256": "2d75ab57b04ac209490a78564b6f86f4678d9dfa0f80958d1a54171d6062cfaa",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/verify_build_inputs.py": {
+      "bytes": 2844,
+      "sha256": "15194471d208060bfd44af6ed166e324f35e6916e1cf861a00e55ee429db5548",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vpn_generate.go": {
+      "bytes": 2703,
+      "sha256": "a0d579a26e7699bf17d9be04b01238e06496b4a22de4e37829fc0ef4db888338",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vpn_generate_probe.c": {
+      "bytes": 3254,
+      "sha256": "f825d6bbe445408a007222b078086c37c665c2acaf5ff283850d58251b6b207b",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/merlin_vpn_38813gui24447/vpn_notify_fixture.c": {
+      "bytes": 247,
+      "sha256": "3a9c02fd933f09c74307fc918c52891b6267bd9c41cff5625fd3bb775bfd0891",
+      "origin": "Namespaced controller/contract source"
+    },
+    "analysis/r9r1_coexist/check.py": {
+      "bytes": 10437,
+      "sha256": "85b9358ea234d1f0a61872d9e6e1514c8ee04c9ef1ebdec651ef52973c6bc4f6",
+      "origin": "Observed source or generated input"
+    },
+    "analysis/r9r1_coexist/tls_trace.c": {
+      "bytes": 4775,
+      "sha256": "0e0d804fd099fc197066e735a0bef10817d897eaa822e4de8aab1d41593b6c7f",
+      "origin": "Observed source or generated input"
+    },
+    "analysis/r9r1_coexist/workload.go": {
+      "bytes": 25308,
+      "sha256": "598e0f23c5e45c742e381ae9e06d5d705cb7ddeec3ef3baa246fcc74450aeb50",
+      "origin": "Observed source or generated input"
+    },
+    "build/check_merlin.py": {
+      "bytes": 8035,
+      "sha256": "26b2ccd02e1ad845dc0c78636760f1852ecf692400ce6cfc8d9970f90ee60931",
+      "origin": "Observed source or generated input"
+    },
+    "build/coexist_helpers.go": {
+      "bytes": 3480,
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "origin": "Observed source or generated input"
+    },
+    "build/extended_plugin_inputs.json": {
+      "bytes": 19844,
+      "sha256": "f04a5b419bcbecef8c3f6f89e17f2d832b7d649645a36c0365d5c1ef7b913b1b",
+      "origin": "Observed source or generated input"
+    },
+    "build/extended_plugin_sources.json": {
+      "bytes": 9686,
+      "sha256": "cdeaa68b2ec8c4e8a3d745ecda5576c5b1ab5d8637e42c651ba3b62ef476ab84",
+      "origin": "Fixed dependency/source contract"
+    },
+    "build/fancyss_inputs.json": {
+      "bytes": 80229,
+      "sha256": "8c74fd83c71823df68d01bc154e39a21c2064881fdc3d1275f34030b4a770552",
+      "origin": "Observed source or generated input"
+    },
+    "build/fancyss_sources.json": {
+      "bytes": 1619,
+      "sha256": "25e94b7414f962774e45f95b06804e11c180774a924f19f6ada54c60d10ad327",
+      "origin": "Fixed dependency/source contract"
+    },
+    "build/gui24447-factory-input.json": {
+      "bytes": 324,
+      "sha256": "f5abbfdd3b3a1143eac93f934ec03e67320f509e686017b8ba0fdb51ac3d8948",
+      "origin": "Fixed dependency/source contract"
+    },
+    "build/httpd_memory.go": {
+      "bytes": 5427,
+      "sha256": "398e9817e0b55810ebe244930a2f54afc2787a5ac5ca847ff8bed88b05c523ae",
+      "origin": "Observed source or generated input"
+    },
+    "build/https_trace_fixture.c": {
+      "bytes": 3245,
+      "sha256": "8d2c672780430f45c01ad78e7e17667396660aec65564e790bbad9bcb73f872a",
+      "origin": "Observed source or generated input"
+    },
+    "build/interrupt_scenarios.go": {
+      "bytes": 25555,
+      "sha256": "8989dc4c639d00affef9789c67297f74e05fcac03dbb57a4305414b308cdd157",
+      "origin": "Observed source or generated input"
+    },
+    "build/linux_packages.json": {
+      "bytes": 5083,
+      "sha256": "377e92bff9c044e0be4fd64f721d08a82096d62ff8e410e73abca3b8c6fc78dc",
+      "origin": "Fixed dependency/source contract"
+    },
+    "build/linux_real_plugins_job.sh": {
+      "bytes": 4805,
+      "sha256": "e9f945f251c55b0b62b1a027e7a193eaac63f28ac90e62a09d4ec7076413b2df",
+      "origin": "Observed source or generated input"
+    },
+    "build/make_merlin_system_initramfs.py": {
+      "bytes": 2486,
+      "sha256": "00efa902e8675d3629e134cf70593de25b00a7b9bdb9e5b7ae44c8b6c1dadf49",
+      "origin": "Observed source or generated input"
+    },
+    "build/memory_cycles.go": {
+      "bytes": 4839,
+      "sha256": "3e9f90d880baa7959bbbc039520c721303f1d2f0254af6d4e91d63b4660bfc31",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-candidate-runtime/compile/candidate_runtime.go": {
+      "bytes": 8769,
+      "sha256": "83d43e770e18d9e5110775010cf3dc5da504ccead0989d7ca11c64064492a7bd",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-candidate-runtime/compile/coexist_helpers.go": {
+      "bytes": 3480,
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-candidate-runtime/compile/native_hooks.go": {
+      "bytes": 6308,
+      "sha256": "22d87c49972f5bc9e7616948547261edd755b3293148c30938efe33e363ff6c9",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-candidate-runtime/compile/native_runtime_client.go": {
+      "bytes": 6042,
+      "sha256": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-candidate-runtime/compile/native_uu.go": {
+      "bytes": 2059,
+      "sha256": "9aa187f2d74e95f05f7f6ac55aa2dda163709fb04b4b71745cc88f59a36806a3",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-candidate-runtime/compile/test_online.go": {
+      "bytes": 25311,
+      "sha256": "66abdca4d23441e3ea946c00181cdeae86a26a31f05a84ff47b74d764b7fd6fb",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-candidate-runtime/derived_check.py": {
+      "bytes": 9746,
+      "sha256": "f13305d7f1d7d06b9ceb4e1f4fe5c7a9a8bd09a7d2b51dd1f5ce0a0015e48bd4",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-candidate-runtime/native-center-event.sh": {
+      "bytes": 739,
+      "sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-candidate-runtime/setup.sh": {
+      "bytes": 1746,
+      "sha256": "2274e23320feff6da9c90106c8dd470b1e0f7d6d752837f5332b8e9130aeab95",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-persist/compile/coexist_helpers.go": {
+      "bytes": 3480,
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-persist/compile/interrupt_scenarios.go": {
+      "bytes": 25801,
+      "sha256": "9d5b31c4fc9c96f3c84363d7d809511ce5273aaeb66f4f9708084e75645bf02a",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-persist/compile/native_runtime_client.go": {
+      "bytes": 6042,
+      "sha256": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-persist/compile/native_uu.go": {
+      "bytes": 2039,
+      "sha256": "e2139f642f9988f4a2efb1ea5eff19c5a75803ae22db17c27408ad90adc6e825",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-persist/compile/recovery_safety.go": {
+      "bytes": 10899,
+      "sha256": "709a94141eee670d6bfbd51e4196fb60d78d3d24be4b429c340c2213863dfc8d",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-persist/compile/test_interrupt.go": {
+      "bytes": 5590,
+      "sha256": "146c2cf345a7ac27cb3d97b1409801bf7ec3c422a1467be34017f7a0b16180c5",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-persist/compile/test_interrupt_main.go": {
+      "bytes": 403,
+      "sha256": "6f6e09cd3200832ce24dfc63ca4266144fc314d48070a236012f483b2199c139",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-persist/compile/test_online.go": {
+      "bytes": 25289,
+      "sha256": "55cc769508e03b1770ea65939aaddbcff4d8923dd6d83848dd045cf46ecd4dd1",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-persist/derived_check.py": {
+      "bytes": 12751,
+      "sha256": "605565aea685f8a46a0c56927726c0cced63bfc26ad78c39019b593f248fbf45",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-persist/native-center-event.sh": {
+      "bytes": 739,
+      "sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-persist/setup.sh": {
+      "bytes": 1822,
+      "sha256": "59c453ac9a419170ace4835c43d4b7361aa830e4a709f6f20207e70871a37cbc",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-fancyss/compile/coexist_helpers.go": {
+      "bytes": 3480,
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-fancyss/compile/merlin38813gui24447-softcenter-upgrade.go": {
+      "bytes": 7375,
+      "sha256": "1b5499c306acc5794aa01074099712f399cec7c4d9831d9bfc2c03ad2fc5aded",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-fancyss/compile/native_runtime_client.go": {
+      "bytes": 6042,
+      "sha256": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-fancyss/compile/native_uu.go": {
+      "bytes": 2055,
+      "sha256": "f402c4fa1786c7961d92d6478a4ff73e974ea94e22ef4a25af3c4db46b1c8dfc",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-fancyss/compile/test_extended_plugins.go": {
+      "bytes": 12659,
+      "sha256": "2d71aac456e85ff0ad4d9bcadd689ea26bce4a95bc9b1a5df806ecc89028d6fa",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-fancyss/compile/test_fancyss.go": {
+      "bytes": 14615,
+      "sha256": "d0c366a4e54040635fcd2601baf102a963f073567cf66f3d2ec554e5a0d66af5",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-fancyss/compile/test_online.go": {
+      "bytes": 25289,
+      "sha256": "55cc769508e03b1770ea65939aaddbcff4d8923dd6d83848dd045cf46ecd4dd1",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-fancyss/derived_check.py": {
+      "bytes": 12308,
+      "sha256": "f5c40e33063da92446b8333df796d3689bbead1482c522ae4d86e2529578d62b",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-fancyss/native-center-event.sh": {
+      "bytes": 739,
+      "sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-fancyss/prior-uninstall-fixture.sh": {
+      "bytes": 6162,
+      "sha256": "95fb9a282d10bc33c8be50e93ffc0c1cd39d36f641057b6b50a74b0bad67d00f",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-fancyss/setup.sh": {
+      "bytes": 1834,
+      "sha256": "be71c527af98e2cfeb2523c77cc3183a98f425ef30d2db9766854ee1a1eb9e26",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-fresh/compile/coexist_helpers.go": {
+      "bytes": 3480,
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-fresh/compile/native_runtime_client.go": {
+      "bytes": 6042,
+      "sha256": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-fresh/compile/native_uu.go": {
+      "bytes": 2059,
+      "sha256": "15cba61629556eef40ff87837eeb189dc9a46fe6e1622530b608005a95973dc2",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-fresh/compile/test_online.go": {
+      "bytes": 25289,
+      "sha256": "55cc769508e03b1770ea65939aaddbcff4d8923dd6d83848dd045cf46ecd4dd1",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-fresh/compile/test_real_plugins.go": {
+      "bytes": 16044,
+      "sha256": "6562e229b2ba6863f030de069904c5a6ea97b2c6e785c78f512269a930eeaa84",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-fresh/derived_check.py": {
+      "bytes": 10674,
+      "sha256": "ffc591f4f6078d1e2001512789580049c422934beba5bcb47bf1ce9d8bdec3fb",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-fresh/native-center-event.sh": {
+      "bytes": 739,
+      "sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-fresh/setup.sh": {
+      "bytes": 1824,
+      "sha256": "058501d2165a625048186453ece8850d0d03501530f61e2151ee1b904c83c959",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-upgrade/compile/coexist_helpers.go": {
+      "bytes": 3480,
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-upgrade/compile/native_runtime_client.go": {
+      "bytes": 6042,
+      "sha256": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-upgrade/compile/native_uu.go": {
+      "bytes": 2063,
+      "sha256": "83e5778c2e061dd3dd0a442b5533406ef567e2fbdc9b56822a12c3d4d6723fed",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-upgrade/compile/test_online.go": {
+      "bytes": 25289,
+      "sha256": "55cc769508e03b1770ea65939aaddbcff4d8923dd6d83848dd045cf46ecd4dd1",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-upgrade/compile/test_real_plugins.go": {
+      "bytes": 16044,
+      "sha256": "6562e229b2ba6863f030de069904c5a6ea97b2c6e785c78f512269a930eeaa84",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-upgrade/derived_check.py": {
+      "bytes": 10698,
+      "sha256": "999493744f2e07911c64278204b28ca840ffb96ca6a70100cc22316364658fff",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-upgrade/native-center-event.sh": {
+      "bytes": 739,
+      "sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-plugins-hnd-upgrade/setup.sh": {
+      "bytes": 1828,
+      "sha256": "9f79e192c19ab1dfb19afdb7d9337807b6782f452d898bbb0bbee9622e9d0ca0",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-real-tunnel/compile/coexist_helpers.go": {
+      "bytes": 3480,
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-real-tunnel/compile/native_runtime_client.go": {
+      "bytes": 6042,
+      "sha256": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-real-tunnel/compile/native_uu.go": {
+      "bytes": 2047,
+      "sha256": "35293b35c8a93012ddf23437b54e9e5908d914bfd7df86281344f54a257ea2f3",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-real-tunnel/compile/test_merlin.go": {
+      "bytes": 36540,
+      "sha256": "183c26ecaf8b0b8a5d559a554259a54406c51c519253cea3bf74e7d98c41f162",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-real-tunnel/compile/test_online.go": {
+      "bytes": 25289,
+      "sha256": "55cc769508e03b1770ea65939aaddbcff4d8923dd6d83848dd045cf46ecd4dd1",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-real-tunnel/derived_check.py": {
+      "bytes": 12566,
+      "sha256": "a827a73727560aefc1a9ce4314b8961fdc3a7170a1826f0678bfafee1fa36329",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-real-tunnel/native-center-event.sh": {
+      "bytes": 739,
+      "sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-real-tunnel/nested_job.sh": {
+      "bytes": 4563,
+      "sha256": "731c6380e81fc7e4f3e1ba1044e75d02e183995537297b9e9c2e7555fcb94db5",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-real-tunnel/setup.sh": {
+      "bytes": 1773,
+      "sha256": "994aba3e7c64073662a10d423cf2f63cffa9d3b155442556a33ad07f9387de66",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-restore-probe/compile/coexist_helpers.go": {
+      "bytes": 3480,
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-restore-probe/compile/native_runtime_client.go": {
+      "bytes": 6042,
+      "sha256": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-restore-probe/compile/native_uu.go": {
+      "bytes": 2051,
+      "sha256": "9ca2e1a0eeb0287d79a52b1a7fa979554c2a5701b5e1cd41a167a2edb393d94d",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-restore-probe/compile/restore_probe.go": {
+      "bytes": 2667,
+      "sha256": "41bece7fb009c074c41ad51f8ca7e2ab04df9d804b73b66202e590452f4676c7",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-restore-probe/compile/test_online.go": {
+      "bytes": 25289,
+      "sha256": "55cc769508e03b1770ea65939aaddbcff4d8923dd6d83848dd045cf46ecd4dd1",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-restore-probe/derived_check.py": {
+      "bytes": 9981,
+      "sha256": "4c10a0e51954dbab2355d7d8c882d55ded85c06309add6a90ae05a6882e66a59",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-restore-probe/native-center-event.sh": {
+      "bytes": 739,
+      "sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-restore-probe/setup.sh": {
+      "bytes": 1775,
+      "sha256": "6911608edbe42996ef0c71dbf335b6c4b99a92d70872240fa1d36afe2daa186f",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/compile/coexist_helpers.go": {
+      "bytes": 3480,
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/compile/httpd_memory.go": {
+      "bytes": 5427,
+      "sha256": "398e9817e0b55810ebe244930a2f54afc2787a5ac5ca847ff8bed88b05c523ae",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/compile/memory_cycles.go": {
+      "bytes": 4839,
+      "sha256": "3e9f90d880baa7959bbbc039520c721303f1d2f0254af6d4e91d63b4660bfc31",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/compile/native_runtime_client.go": {
+      "bytes": 6024,
+      "sha256": "21d1da622a3b4d38816ea41d327465aad3582e340edde3350156ba64f9972aa7",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/compile/native_uu.go": {
+      "bytes": 2154,
+      "sha256": "fbd4f74e2fa37588099a10b109a033de13e0fa0abb1bfdfc68bc378a48e5ec19",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/compile/test_memory.go": {
+      "bytes": 11813,
+      "sha256": "69838169024c9d0b9e31f2e570f9cde728f8193fe4d0e9f71be059fc080ca42f",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/compile/test_merlin.go": {
+      "bytes": 36788,
+      "sha256": "ef381c84be5857d554854b0e432b00a0f839b1a981f9bea93b29bd9e01831c29",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/compile/test_online.go": {
+      "bytes": 25281,
+      "sha256": "bcf78c2efc1eab2920af9e83cf4a2612f249c4d8be670a27ba9046518dc3ce5a",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/compile/test_soak.go": {
+      "bytes": 16095,
+      "sha256": "8331422dacf973c3a3e64e387baff764eacdfcbe4a4ae65f274324cf98faa418",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/compile/workload.go": {
+      "bytes": 25552,
+      "sha256": "28b3d05a4ff928e9ba99ec3ae3c4eb32a33e2a8044ccd7e1eafdb2d6cb7a1bb2",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/derived_check.py": {
+      "bytes": 17079,
+      "sha256": "9afde0cd2bac7bcf6381117156648496a65b3432cfa46c5be4af0a7f7f205c9a",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/nested_job.sh": {
+      "bytes": 4799,
+      "sha256": "d1e3f0ca694fd48735b69e4a6845b714f42d71c6eb85a8ba66afc47cca0c7a26",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-soak/setup.sh": {
+      "bytes": 1766,
+      "sha256": "282b7f15ef38f50cf9ea4228caec6dedbd993a1b4db48a2694a426bb26388cbe",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-sync-aux/compile/coexist_helpers.go": {
+      "bytes": 3480,
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-sync-aux/compile/native_runtime_client.go": {
+      "bytes": 6042,
+      "sha256": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-sync-aux/compile/native_uu.go": {
+      "bytes": 2041,
+      "sha256": "da8c76a96e744e813ab270c5781ee5955e96a6e108fd5bb4cccf2daa1103917c",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-sync-aux/compile/sync_aux.go": {
+      "bytes": 4822,
+      "sha256": "457646174260aed9cee137ad2c01e3281da972e0a4f988eb42c0f1f9b9514073",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-sync-aux/compile/test_online.go": {
+      "bytes": 25289,
+      "sha256": "55cc769508e03b1770ea65939aaddbcff4d8923dd6d83848dd045cf46ecd4dd1",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-sync-aux/derived_check.py": {
+      "bytes": 9610,
+      "sha256": "b831729ca1f04cdace6fea853b97e90826e0e33de09e4e027f3806a15c8069c7",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-sync-aux/native-center-event.sh": {
+      "bytes": 739,
+      "sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-sync-aux/setup.sh": {
+      "bytes": 1737,
+      "sha256": "9521b86bc9c165bb7e9c561e758a12fd25b41c8e96b2e57530d777658fd723ec",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-vpn-generation/compile/coexist_helpers.go": {
+      "bytes": 3480,
+      "sha256": "57bef4aeda3a3bc0a299f4af1a12323f1d2cdb82f6fb13a3f7ce28d76f511d55",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-vpn-generation/compile/native_runtime_client.go": {
+      "bytes": 6042,
+      "sha256": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-vpn-generation/compile/native_uu.go": {
+      "bytes": 2053,
+      "sha256": "27d11ae45965504f3a6d2b0e4ec5d01cf2fe61b10e3b84c3a0ea797790e00bde",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-vpn-generation/compile/test_online.go": {
+      "bytes": 25289,
+      "sha256": "55cc769508e03b1770ea65939aaddbcff4d8923dd6d83848dd045cf46ecd4dd1",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-vpn-generation/compile/vpn_generate.go": {
+      "bytes": 2703,
+      "sha256": "a0d579a26e7699bf17d9be04b01238e06496b4a22de4e37829fc0ef4db888338",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-vpn-generation/derived_check.py": {
+      "bytes": 10191,
+      "sha256": "0a9cc23165e6ede39ae348b18bf0f8d4c8f1f2910daed8fb4e62432d64db1cd4",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-vpn-generation/native-center-event.sh": {
+      "bytes": 739,
+      "sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-native-vpn-generation/setup.sh": {
+      "bytes": 1776,
+      "sha256": "b71542b06d3e0a1844946ffd3fa5f78fdf1dafa68558ade9b99d35690f62c24e",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin38813gui24447-softcenter-upgrade.go": {
+      "bytes": 7375,
+      "sha256": "1b5499c306acc5794aa01074099712f399cec7c4d9831d9bfc2c03ad2fc5aded",
+      "origin": "Observed source or generated input"
+    },
+    "build/merlin_system_sources.json": {
+      "bytes": 15764,
+      "sha256": "67da834b6465e7eea49fff0977c00492ad0edff252b9809684665ad8d513c92f",
+      "origin": "Fixed dependency/source contract"
+    },
+    "build/native_hw_fixture.c": {
+      "bytes": 5375,
+      "sha256": "f995441ea98eabdbf157063bf4086170a288d7c704abf49ac540fc078fb410dd",
+      "origin": "Observed source or generated input"
+    },
+    "build/native_runtime_client.go": {
+      "bytes": 6042,
+      "sha256": "93e2d19d52cdcecfee37da85c2f9a773588d83a8d0dad286e486cf30f97cbb6c",
+      "origin": "Observed source or generated input"
+    },
+    "build/native_uu_transport.c": {
+      "bytes": 1338,
+      "sha256": "7efed547a60719f5a4845952fd0ec36c2f60f5259fd00019e0cdcdd794760089",
+      "origin": "Observed source or generated input"
+    },
+    "build/prepare_fancyss.py": {
+      "bytes": 8897,
+      "sha256": "555a7adb1d56cbc889c0b9cafdf754a170f62ba6001e6fe5111c13af7f377afb",
+      "origin": "Observed source or generated input"
+    },
+    "build/prepare_merlin_system.py": {
+      "bytes": 3032,
+      "sha256": "35cd33a65f100dda3092e221fe05d24ab9869f32afb43fcf522eb6cd98a82eaa",
+      "origin": "Observed source or generated input"
+    },
+    "build/real_plugin_inputs.json": {
+      "bytes": 12095,
+      "sha256": "43a5ab2f51e210744ec52ecbfc50214a05421d5148455fb93cc3d7a33a169001",
+      "origin": "Observed source or generated input"
+    },
+    "build/real_plugin_sources.json": {
+      "bytes": 3586,
+      "sha256": "80256a27bfc7ddf18da8f1b2693ffa6debcfbb240083a3d724da6e3641382ea8",
+      "origin": "Fixed dependency/source contract"
+    },
+    "build/real_plugins_setup.sh": {
+      "bytes": 3256,
+      "sha256": "cc44037354be64eac4fbe651307052c5d06dec97073831c16da23bffd5450418",
+      "origin": "Observed source or generated input"
+    },
+    "build/recovery_safety.go": {
+      "bytes": 10876,
+      "sha256": "d0417977ec0f3532e9535283469b6bd6cb7e5a2f0c0ec3c26f4cbde8600775dc",
+      "origin": "Observed source or generated input"
+    },
+    "build/run_readonly_linux.py": {
+      "bytes": 5527,
+      "sha256": "eeb77fb1d07ba997388aa0feaa7e558bb4ad96b5fb73a3588643390bef06135f",
+      "origin": "Observed source or generated input"
+    },
+    "build/sealed_vm.py": {
+      "bytes": 13145,
+      "sha256": "44e83268f0e72f999648acb8f56e778735e70b7240d71bb1d90a2ec10a563788",
+      "origin": "Observed source or generated input"
+    },
+    "build/softcenter-old-inputs.json": {
+      "bytes": 12665,
+      "sha256": "afa6a59954f3d33d4c8f6aec70e461e5c698e8997b250e486719fc168fc5e2a7",
+      "origin": "Observed source or generated input"
+    },
+    "build/softcenter_frontend_payloads.json": {
+      "bytes": 1461,
+      "sha256": "c9a2d847c1c2731c9f4d1e17765508dfa7e93faa4eca1750d3134b6f7d22764e",
+      "origin": "Observed source or generated input"
+    },
+    "build/softcenter_sources.json": {
+      "bytes": 1309,
+      "sha256": "0e1ddaa0f67c10daf153ff0bee45213c24aa0ffeec042f53dada13f4e8fd47dd",
+      "origin": "Observed source or generated input"
+    },
+    "build/test_extended_plugins.go": {
+      "bytes": 12659,
+      "sha256": "2d71aac456e85ff0ad4d9bcadd689ea26bce4a95bc9b1a5df806ecc89028d6fa",
+      "origin": "Observed source or generated input"
+    },
+    "build/test_fancyss.go": {
+      "bytes": 13586,
+      "sha256": "954ad333fef263bd8041d76b8b4652e02205a1f8964207d82395f6a266f749d8",
+      "origin": "Observed source or generated input"
+    },
+    "build/test_interrupt.go": {
+      "bytes": 5589,
+      "sha256": "05988007a852d48db38fefbbefde7e13f8dad59cca6505ae7e87075a3277524b",
+      "origin": "Observed source or generated input"
+    },
+    "build/test_interrupt_main.go": {
+      "bytes": 403,
+      "sha256": "6f6e09cd3200832ce24dfc63ca4266144fc314d48070a236012f483b2199c139",
+      "origin": "Observed source or generated input"
+    },
+    "build/test_memory.go": {
+      "bytes": 11813,
+      "sha256": "69838169024c9d0b9e31f2e570f9cde728f8193fe4d0e9f71be059fc080ca42f",
+      "origin": "Observed source or generated input"
+    },
+    "build/test_merlin.go": {
+      "bytes": 36549,
+      "sha256": "83c7c8846f85e6eb0dd61442288be4ee84017e7b58f3d8cbbab7e4c4a12d538b",
+      "origin": "Observed source or generated input"
+    },
+    "build/test_online.go": {
+      "bytes": 25278,
+      "sha256": "b04471e23505e03d7700884fdad4adb5d526e7fd8fe33bfe669a3a736d81fd14",
+      "origin": "Observed source or generated input"
+    },
+    "build/test_real_plugins.go": {
+      "bytes": 16898,
+      "sha256": "4b868ea6613bedc3f3056cef26c18d92603ac74f928a9fb8edabac11309cd6b4",
+      "origin": "Observed source or generated input"
+    },
+    "build/test_soak.go": {
+      "bytes": 16029,
+      "sha256": "908018fec252135807c0df483a5c5951c5866506a0b9b0917a508431c1afa891",
+      "origin": "Observed source or generated input"
+    },
+    "build/txn_fault_fixture.c": {
+      "bytes": 2919,
+      "sha256": "f6b634219acffc97a489285fd7c1f62c37e77316a8d1aaaa267bd840ea51f859",
+      "origin": "Observed source or generated input"
+    },
+    "build/zig_download.json": {
+      "bytes": 180,
+      "sha256": "e0a9a9058908dcc27a4dbd9276292bf2d42675f3535e813192bd15339a491486",
+      "origin": "Fixed dependency/source contract"
+    },
+    "reconstructed/persist-after-commit-cut/derived_check.py": {
+      "bytes": 12751,
+      "sha256": "bd8ec9f698ecac85e58159c8969c9903761e49b624ef1e18f1ad9e248a6f4171",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-after-commit-cut/interrupt-phase.json": {
+      "bytes": 61,
+      "sha256": "71f552f735b00e16c029a37dec32f4ef54e9d0f2cda608a9a16d60b314895cda",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-after-commit-verify/derived_check.py": {
+      "bytes": 12761,
+      "sha256": "37510f4998a23bc5acc61d2dd9476f94b67cbff2899b098b599843f8dc9faadd",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-after-commit-verify/interrupt-phase.json": {
+      "bytes": 64,
+      "sha256": "88db5dd7aa3581f1f04b6ab70368b35d6b69f532e87dcadf772fbced426003e2",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-before-commit-cut/derived_check.py": {
+      "bytes": 12755,
+      "sha256": "d3321e2c71285e60e91478db54ca5f417c1edd93356efa5f3781fc65f30666e4",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-before-commit-cut/interrupt-phase.json": {
+      "bytes": 62,
+      "sha256": "14ae57d3b29b5fc090aa2960cf981d8d6dd62d7d8565b4b403f2ff5a1c446342",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-before-commit-verify/derived_check.py": {
+      "bytes": 12765,
+      "sha256": "fdf9524732c058ebce73d1d26274c9a6cc93bc6e46ae6f905399842f21084548",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-before-commit-verify/interrupt-phase.json": {
+      "bytes": 65,
+      "sha256": "56053bd1d0e69c542c2902a13c4cde8a6b22eb13a22b198991a197656b0e8bba",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-checkpoint-cut/derived_check.py": {
+      "bytes": 12743,
+      "sha256": "e076aaba2f73b2faecb5736997dd89b98cec65615503f5d70fe95580ca25f8c4",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-checkpoint-cut/interrupt-phase.json": {
+      "bytes": 59,
+      "sha256": "053cdf38f4314a7f55f4a01f6a0212ddb5095b2cf43d784b87eb59e4856535db",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-checkpoint-verify/derived_check.py": {
+      "bytes": 12753,
+      "sha256": "2f4d9ba877b69e846cc157c16dec36517bf44c127076a0e8fe4910777e0add6c",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-checkpoint-verify/interrupt-phase.json": {
+      "bytes": 62,
+      "sha256": "ad8eb1e4fd4a0032426eaf266001b1d9e73411d0ce1dd5164f2e84331db3bca8",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-committed-cleanup-cut/derived_check.py": {
+      "bytes": 12771,
+      "sha256": "9f028284f2e4f84f0357a13ba0aa9120c0d9d5527e86e6660da7b9d5ad4636b9",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-committed-cleanup-cut/interrupt-phase.json": {
+      "bytes": 66,
+      "sha256": "c0ef50c6634f555d472773b83114f5e81eec194830cdc73b522b58e288fb2f88",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-committed-cleanup-verify/derived_check.py": {
+      "bytes": 12781,
+      "sha256": "348047834fd75e0e914d44be360815a8f9b91f74eab305002895705eacd99c14",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-committed-cleanup-verify/interrupt-phase.json": {
+      "bytes": 69,
+      "sha256": "5017416ccfa7ab637188402156a3462c13bf5e38f4642a807a88516de85bd799",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-download-cut/derived_check.py": {
+      "bytes": 12735,
+      "sha256": "eebbf2e6ab57a308ee42ea722ecc46a61fb27189283252e48bb7af2ef17dbc30",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-download-cut/interrupt-phase.json": {
+      "bytes": 57,
+      "sha256": "90fe6cc4bde79b5688c87d1f6bec8d0d0b9af92e54b86bd63c2091659b6d87b2",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-download-verify/derived_check.py": {
+      "bytes": 12745,
+      "sha256": "3d8c92fba6bd41304892d823f27a03bf73f87f9d32d72e5469f6ac303af20a8b",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-download-verify/interrupt-phase.json": {
+      "bytes": 60,
+      "sha256": "c4a90f783a13acb1b9c7d5e30056ea7a6e314f91e86663e84508d6a0f5b9c6ec",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-foundation-foundation/derived_check.py": {
+      "bytes": 12764,
+      "sha256": "596e202b1f401a5983e5162fb947d8ad1667843e0d5bb429b506615ab613c964",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-foundation-foundation/interrupt-phase.json": {
+      "bytes": 65,
+      "sha256": "ade09a162551203bd5f43086568afb7ae5cb2cb7b34adc7e0236fffd152a316c",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-fresh-cut/derived_check.py": {
+      "bytes": 12723,
+      "sha256": "df21921f9761eadc49fa5ddc910a07c4a50fc5d05fe8c5651a8a8654782216a5",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-fresh-cut/interrupt-phase.json": {
+      "bytes": 54,
+      "sha256": "b0fa1923bb558f49684638523afe272e4e22c1636986d5af9f812276970e7be9",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-fresh-verify/derived_check.py": {
+      "bytes": 12733,
+      "sha256": "5fce6a60a811470c593bad5807d2666aebca082b7af981c50a7719128926b9b0",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-fresh-verify/interrupt-phase.json": {
+      "bytes": 57,
+      "sha256": "9b0d4ef3c0f6dbf46c01c4e882be504bdba4186b6a5dfe67e0db542b7c6410eb",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-kill-parent-cut/derived_check.py": {
+      "bytes": 12747,
+      "sha256": "b4d078952c6337156fa4644233b40ad2a801072477f69b532abaf3b7e3bd8eb8",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-kill-parent-cut/interrupt-phase.json": {
+      "bytes": 60,
+      "sha256": "89453bb57d3e4f5bf860efb4808c022882f85a612e98df6c5185eff55e52f5a1",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-kill-parent-recover-db-cut/derived_check.py": {
+      "bytes": 12780,
+      "sha256": "7d9f5b7b655517199e21d127f25e6669d086be50d03cc713d7c8f8fbdb9c0215",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-kill-parent-recover-db-cut/interrupt-phase.json": {
+      "bytes": 71,
+      "sha256": "72e2d2009595a11255fec36fd9fe62e1790ea294d1240af533efbdfea98023d9",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-kill-parent-verify/derived_check.py": {
+      "bytes": 12757,
+      "sha256": "8adb912d4b996ba1ce0ff9567d5230e4dcc9d0c08f93d16390986236540c490f",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-kill-parent-verify/interrupt-phase.json": {
+      "bytes": 63,
+      "sha256": "9c6d0f551b6ef8bbe42b5bfa8fdf58aa3b7f3db8c80c384d5aa6e025df8a21f9",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-kill-tree-cut/derived_check.py": {
+      "bytes": 12739,
+      "sha256": "2693bbd858e5ba4db70fc9e391f6db0b0f22fecf9b4ef75109a5f776e6a85cdb",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-kill-tree-cut/interrupt-phase.json": {
+      "bytes": 58,
+      "sha256": "41bf40a0dafbc913b74f0f90be550af3c4dd2489e57fa701969fe17fb7591eb0",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-kill-tree-recover-cut/derived_check.py": {
+      "bytes": 12763,
+      "sha256": "f229d1c35773ed0ef905f9f18deb636a8f6254663afa955c60a46bef684db2da",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-kill-tree-recover-cut/interrupt-phase.json": {
+      "bytes": 66,
+      "sha256": "17882de9e2c69e14da64df3ea74edb017a9412142c227f24f00a90383f3fd3a4",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-kill-tree-verify/derived_check.py": {
+      "bytes": 12749,
+      "sha256": "adda1ac1a27cc0a1a865e5c71a9156de009c95867c0908e51804c6c5e78b5239",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-kill-tree-verify/interrupt-phase.json": {
+      "bytes": 61,
+      "sha256": "e8c82856944d69291fb85a2cd468ae010021444bb4a38a45785685e4e64e4551",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-no-space-exercise/derived_check.py": {
+      "bytes": 12751,
+      "sha256": "605565aea685f8a46a0c56927726c0cced63bfc26ad78c39019b593f248fbf45",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-no-space-exercise/interrupt-phase.json": {
+      "bytes": 62,
+      "sha256": "68e43829efcb850316e965670833237b0e90dd3062efcf616cd69ac9d9569577",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-offline-cut/derived_check.py": {
+      "bytes": 12731,
+      "sha256": "519ae23269e2f0c919917efc1bf9dd3b1cc367920b54ccd1c5c9a483d619de06",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-offline-cut/interrupt-phase.json": {
+      "bytes": 56,
+      "sha256": "b3c1b90001f40402fb121b9a64223a17867e511d341aa7991f77217c5f5d8b02",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-offline-verify/derived_check.py": {
+      "bytes": 12741,
+      "sha256": "219b9601be148515d2a2006a5ccc5bca3d551117aea6443ecc047e99571d9f53",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-offline-verify/interrupt-phase.json": {
+      "bytes": 59,
+      "sha256": "9d349cb737125b29a572b19e33f03e03c0b72d06ee681d3fb17374b17e6bd242",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-real-ddnsgo-cut/derived_check.py": {
+      "bytes": 12747,
+      "sha256": "2c4f22d8cf7fde61915dd64d0c3f2a6587659b5bc4e660a79467a3f4bd3d2c40",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-real-ddnsgo-cut/interrupt-phase.json": {
+      "bytes": 60,
+      "sha256": "3d6cd89343f6b63af227cfd27f6f41addcb88548df900175a21393d537b41ec3",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/persist-real-ddnsgo-verify/derived_check.py": {
+      "bytes": 12757,
+      "sha256": "d6b61599864463d5fea041a75191ecdb2d11f27d6cef79e52131cd0aef1eb4ae",
+      "origin": "Exact per-boot controller reconstructed and compared with sealed VM hash"
+    },
+    "reconstructed/persist-real-ddnsgo-verify/interrupt-phase.json": {
+      "bytes": 63,
+      "sha256": "ee60f71ec50f1c89ba4ecc56e32983b51abb6a5ade4c6d036c7ab9eeff09eb47",
+      "origin": "Exact sealed phase input"
+    },
+    "reconstructed/soak-hour/nested_job.sh": {
+      "bytes": 4799,
+      "sha256": "d1e3f0ca694fd48735b69e4a6845b714f42d71c6eb85a8ba66afc47cca0c7a26",
+      "origin": "Known duration/probe variant; verified against sealed input hashes below"
+    },
+    "reconstructed/soak-probe/nested_job.sh": {
+      "bytes": 4798,
+      "sha256": "db3aa9ad73c740cd2a17259b8bc3b2867cbe69d6dc0e14175154e9d93d1fed55",
+      "origin": "Known duration/probe variant; verified against sealed input hashes below"
+    },
+    "reconstructed/soak-smoke/nested_job.sh": {
+      "bytes": 4798,
+      "sha256": "af60efb9f971a50f1229c7d5a2c1d43bed97cd38564177506858fe3d7adb14bc",
+      "origin": "Known duration/probe variant; verified against sealed input hashes below"
+    },
+    "sources/localmod/bounded_log.h": {
+      "bytes": 3029,
+      "sha256": "ac86f672fa6e7799e99fd2f0b84658f3e6af6fd00f65b1287e51a28e3d86e7bc",
+      "origin": "Observed source or generated input"
+    },
+    "sources/localmod/fancyss-LICENSE.txt": {
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "origin": "Fixed dependency/source contract"
+    },
+    "sources/localmod/httpd_bridge.c": {
+      "bytes": 17859,
+      "sha256": "d689713756d20aeab486352f84f806e08f1b1a3ca03951635b9e171c55bfd8a9",
+      "origin": "Observed source or generated input"
+    },
+    "sources/localmod/launcher.c": {
+      "bytes": 1599,
+      "sha256": "bda9ab680a5ba3a6437152f779d61791b7c861ada1dec58dd88f732e842ba41e",
+      "origin": "Observed source or generated input"
+    },
+    "sources/localmod/runtime.c": {
+      "bytes": 6055,
+      "sha256": "68d2d790f4a65fa0f5bf155748e07cbe862f1c1f8b41195fcc5f72f79e43c10d",
+      "origin": "Observed source or generated input"
+    },
+    "sources/localmod/runtime.h": {
+      "bytes": 808,
+      "sha256": "816914a8ace37e05a51c62854693954020ccc53371cf7c6756bcb20c850b3bca",
+      "origin": "Observed source or generated input"
+    },
+    "upstream/gui24447/metadata.json": {
+      "bytes": 316603,
+      "sha256": "0b11c1b60b41455b5e05120f1225a317ff6dd5cb64969245f7e4843d31fc9de4",
+      "origin": "Observed source or generated input"
+    },
+    "variants/731c6380e81fc7e4f3e1ba1044e75d02e183995537297b9e9c2e7555fcb94db5/build/merlin_nested_job.sh": {
+      "bytes": 4563,
+      "sha256": "731c6380e81fc7e4f3e1ba1044e75d02e183995537297b9e9c2e7555fcb94db5",
+      "origin": "Exact sealed alias recovered from its controller-private source"
+    }
+  },
+  "per_boot_controllers_reconstructed": 24,
+  "unarchived_generated_aliases_or_data": [],
+  "note": "Source/contract data only; shared dispatch overrides are reproducible from archived controllers/templates and bound by VM hashes. Tool binaries, firmware and plugin archives remain separate inputs"
+}

@@ -1,0 +1,31 @@
+$ python3 build/check.py quick
+test_alternate_device_propagates_to_build_and_pages (__main__.DeviceProfiles.test_alternate_device_propagates_to_build_and_pages) ... ok
+test_bad_geometry_abi_and_shell_values_rejected (__main__.DeviceProfiles.test_bad_geometry_abi_and_shell_values_rejected) ... ok
+test_existing_release_identity (__main__.DeviceProfiles.test_existing_release_identity) ... ok
+test_inspector_uses_selected_profile_geometry (__main__.DeviceProfiles.test_inspector_uses_selected_profile_geometry) ... ok
+test_missing_release_values_are_rejected (__main__.DeviceProfiles.test_missing_release_values_are_rejected) ... ok
+test_registered_profiles_and_base_contracts (__main__.DeviceProfiles.test_registered_profiles_and_base_contracts) ... ok
+test_release_cannot_mix_devices_or_override_base (__main__.DeviceProfiles.test_release_cannot_mix_devices_or_override_base) ... ok
+test_rendered_plugin_gate_preserves_model_and_loader_checks (__main__.DeviceProfiles.test_rendered_plugin_gate_preserves_model_and_loader_checks) ... ok
+test_repack_obeys_alternate_geometry_and_preserves_boot_and_footer (__main__.DeviceProfiles.test_repack_obeys_alternate_geometry_and_preserves_boot_and_footer) ... ok
+test_repack_rejects_wrong_model_geometry_or_rootfs (__main__.DeviceProfiles.test_repack_rejects_wrong_model_geometry_or_rootfs) ... ok
+test_rtax86u_packer_matches_pre_refactor_bytes (__main__.DeviceProfiles.test_rtax86u_packer_matches_pre_refactor_bytes) ... ok
+test_rtax86u_templates_match_pre_refactor_bytes (__main__.DeviceProfiles.test_rtax86u_templates_match_pre_refactor_bytes) ... ok
+test_unknown_traversal_and_symlink_profiles_rejected (__main__.DeviceProfiles.test_unknown_traversal_and_symlink_profiles_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.074s
+
+OK
+PASS quick syntax, ARM ABI (when Zig available), archive boundaries and owned timeout
+
+$ python3 analysis/merlin_vpn_38812/quick.py
+PASS native-variant syntax and release metadata; no firmware/runtime/device claim
+
+$ python3 analysis/merlin_vpn_38813/quick.py
+PASS native-variant syntax and release metadata; no firmware/runtime/device claim
+
+$ python3 analysis/merlin_vpn_38813/check_gui24447.py
+PASS 25 language keys/UTF-8, real P7 fixture replacement, mode/neighbor preservation, idempotence, unexpected-input/symlink/hardlink refusal; no device claim
+
+$ git diff --check

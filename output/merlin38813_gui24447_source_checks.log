@@ -1,0 +1,7 @@
+$ python3 analysis/merlin_vpn_38813/quick.py
+PASS native-variant syntax and release metadata; no firmware/runtime/device claim
+
+$ python3 analysis/merlin_vpn_38813/check_gui24447.py
+PASS 25 language keys/UTF-8, real P7 fixture replacement, mode/neighbor preservation, idempotence, unexpected-input/symlink/hardlink refusal; no device claim
+
+$ git diff --check

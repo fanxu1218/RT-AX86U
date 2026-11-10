@@ -1,0 +1,7 @@
+{
+  "config": {
+    "image": "upstream/RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w"
+  },
+  "candidate_sha256": "5b643b9555a27a0aa48f00640fad962fec5bcff7c9d24b4705a35898e93bf129",
+  "url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod2-r8-experimental/RT-AX86U_388_24437_localmod2_r8_EXPERIMENTAL.w"
+}

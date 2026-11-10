@@ -1,0 +1,4374 @@
+{
+  "schema": 1,
+  "status": "OFFICIAL_24447_COMPARED_P7_LANGUAGE_DEFECT_CONFIRMED",
+  "inputs": {
+    "24437": {
+      "url": "https://dlcdnets.asus.com/pub/ASUS/wireless/RT-AX86U/FW_RT-AX86U_300438824437.zip?model=RT-AX86U",
+      "zip": "upstream/asus24437/FW_RT-AX86U_300438824437.zip",
+      "zip_sha256": "7b9341b3e6bffd3a8b5f4635f92c4a1b75248e46915e86b3b1fe78bf3e793d6a",
+      "image": "upstream/asus24437/RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w",
+      "image_sha256": "de1caf609347beea394ebab956bddf0b391db592d1ad5f99e9d37e4d0b876af0"
+    },
+    "24447": {
+      "url": "https://dlcdnets.asus.com/pub/ASUS/wireless/RT-AX86U/FW_RT-AX86U_300438824447.zip?model=RT-AX86U",
+      "zip": "upstream/asus24447/FW_RT-AX86U_300438824447.zip",
+      "zip_sha256": "f7c7b70ae5b0451aa133b56d10f9d08da9175500a24ed0683aa3f95aa0fc42a7",
+      "image": "upstream/asus24447/RT-AX86U_3.0.0.4_388_24447-g81951d7_pureubi.w",
+      "image_sha256": "e133b645f1a656530805ee86ff363198f54117fa0fab74b85e00f6d5049deffa"
+    }
+  },
+  "target_image": "upstream/p7/RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w",
+  "target_image_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b",
+  "image_paths": {
+    "24437": 3500,
+    "24447": 3508
+  },
+  "p7_paths": 3560,
+  "changed_paths": 1980,
+  "metadata_only_paths": 1752,
+  "content_or_type_changes": 228,
+  "permission_changes": [
+    {
+      "before": "0o100644",
+      "after": "0o100664",
+      "paths": 1491
+    },
+    {
+      "before": "0o100755",
+      "after": "0o100664",
+      "paths": 1
+    },
+    {
+      "before": "0o100755",
+      "after": "0o100775",
+      "paths": 209
+    },
+    {
+      "before": "0o40755",
+      "after": "0o40775",
+      "paths": 157
+    }
+  ],
+  "web_content_changes": [
+    "/www/Lang_Hdr.txt"
+  ],
+  "unchanged_anchor_bytes": {
+    "usr/sbin/httpd": true,
+    "sbin/rc": true,
+    "usr/lib/libssl.so.1.1": true,
+    "www/state.js": true,
+    "www/Main_Login.asp": true,
+    "www/UUAccelerator.asp": true
+  },
+  "changed_bootfiles": [
+    "vmlinux.lz"
+  ],
+  "content_changes": [
+    {
+      "path": "/bin/busybox",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 465980,
+        "sha256": "e0cf740ee6906a4cdd7cfdb8c259cb7d347d16d4b58fdf5a589c1602f74ca409"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 465980,
+        "sha256": "bbd13fab3a95f0e62b1e3221945391d57eb06e0972bcd0d08617504211c12f55"
+      }
+    },
+    {
+      "path": "/bin/swmdk",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 122240,
+        "sha256": "c04c4028474b892ca004f1b5b8c190014db815ac017c8c31cbb6d0a960ba6129"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 122240,
+        "sha256": "1fc175a6cb2c697c0ad9cf6ef6a96e1b6948c375a870c1cd155839aef090fa6e"
+      }
+    },
+    {
+      "path": "/lib/libbmdapi.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 62474,
+        "sha256": "be5a459c999ff00e47bd808cec3cb6f891a4dce66fbf3c1b60aebc22b1764db0"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 62474,
+        "sha256": "14e058ff8f922117573a2df154db22a6b0a395ff5d8103aad74e638e8ebf931d"
+      }
+    },
+    {
+      "path": "/lib/libbmdpkgsrc.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 101818,
+        "sha256": "662648c83b18c04c467270cddabdc06c3deba634cf83b6d677a8bea382842c74"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 101818,
+        "sha256": "2b98facddae146073a409d575628b21b9ee043500bd97b11c8757777a68f5771"
+      }
+    },
+    {
+      "path": "/lib/libbmdshared.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14868,
+        "sha256": "ba6156eb003f5da4500ac8523a0fac4ebf6747e74ac5125840d9098cbe4d10f7"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14868,
+        "sha256": "803aa06763697341806039387eca9b3a24be41d67e71a30e679c14c493b5e8f3"
+      }
+    },
+    {
+      "path": "/lib/libbmdshell.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 48106,
+        "sha256": "74753a43ef7fbdc13d432db35e3d2f78fd5e00b88a4e6e9b16a0dc0f60d80089"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 48106,
+        "sha256": "8292be86c2845dc3e8459ddcab73e733af467f53b572804b89b9586577516454"
+      }
+    },
+    {
+      "path": "/lib/libcdklibc.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 25022,
+        "sha256": "b1db81db794459d810d00cb60e0a2d2030ca66b8d9864ddc3fe7b48cd824c099"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 25022,
+        "sha256": "0a773a327c90c687bc9b08ccbdb6f8f504cbbe88d16f5cc8f5d4badebe333165"
+      }
+    },
+    {
+      "path": "/lib/libcdkmain.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14326,
+        "sha256": "fd23d7c73f950805fbfe7734fdd7589919ba7c4f1a930df08dc6ddc029ea05f8"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14326,
+        "sha256": "9285f5a75e36d45c87339aff5472fada7f7d2420c74e34f9b96c7b3916d0edee"
+      }
+    },
+    {
+      "path": "/lib/libcdkpkgsrc.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 25172,
+        "sha256": "d2f05833005778455957c9891cc06c240fe95394f60869afeba4aea47e278b3d"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 25172,
+        "sha256": "15f0b9157310603ef743090f88f021f7f59f2ae804f4ea7efa1c906dce15fb45"
+      }
+    },
+    {
+      "path": "/lib/libcdkshared.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 15088,
+        "sha256": "1def1cc9cc037f212bd98a3964dfbb9395114e45e1e2092a9a0cd002a90a17bd"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 15088,
+        "sha256": "960475f1f7a970cd0a183823c7c942e2fc31618b8d4c8ef730ca16618f1ba849"
+      }
+    },
+    {
+      "path": "/lib/libcdkshell.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 38254,
+        "sha256": "0d45dd5185515726adb8855e9fc0e4ce409dba37f67d145b7a8672a78a8098b2"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 38254,
+        "sha256": "e132845a0b2dec68f04adbb436bfef3f53beccd06f213393591179e259e3d755"
+      }
+    },
+    {
+      "path": "/lib/libcdksym.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1176,
+        "sha256": "a20baecf1ef4acc65e64f7f2b0a51958bee7e87ef7ff2e0982b327d7e4b57efb"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1176,
+        "sha256": "4374b892115156a67c291a500a8c60296297325fdb693f2e977508189f8359ee"
+      }
+    },
+    {
+      "path": "/lib/libnl-cli-3.so.200.20.0",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 38892,
+        "sha256": "e82f6dc06a703b83c13b8e89d6201e90cbfc5213d3a2e699119e4b9d91f8a4de"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 38892,
+        "sha256": "17c939f91d17053df4b026eb5aa2fa7bee90b4c3ee266e762a371e337ec293a7"
+      }
+    },
+    {
+      "path": "/lib/libnl-genl-3.so.200.20.0",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 22600,
+        "sha256": "a933cf51bf3d9f768a0f392f1ec06f43a06380c8cef1109c273051ade61f5d1e"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 22600,
+        "sha256": "7197a449d020e17e6ae764cdc24d08467eaa4e92818b743378a2e69aa16dc00d"
+      }
+    },
+    {
+      "path": "/lib/libnl-idiag-3.so.200.20.0",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 30752,
+        "sha256": "d22f4b37c9c653593bc7f18ac626441bc68d587c87dffdca7ecff3b035cf2de2"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 30752,
+        "sha256": "cc52a9c3bda7d01642c65c0d41f9e7a6fea15e0e0fc13680b72dd894f963704b"
+      }
+    },
+    {
+      "path": "/lib/libnl-nf-3.so.200.20.0",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 90412,
+        "sha256": "61a7e0be85e79cfc447f45af7306790368ee4aaaa69502b8d684aba0e93f7b1b"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 90412,
+        "sha256": "1239fd083b1039222e16955550dda4373a04947363980ff2e703b3e288559b45"
+      }
+    },
+    {
+      "path": "/lib/libnl-route-3.so.200.20.0",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 374152,
+        "sha256": "a58445361983b06812dfbe0d561be0421672864e4fc73e612c0d54c02454719c"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 374152,
+        "sha256": "33ff682c5ca0e48b5e5b913cc250aa57eaf243406e30e727cf096796f30bed26"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/cls/basic.a",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13292,
+        "sha256": "dd5a0eab0f52e080f93894e1b33d79656add6427573d33d6a2ba8c66acde810b"
+      },
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13320,
+        "sha256": "1cf41ac4cdc3dff9fa71801a92d2b54816e250d9315502163e7c1aaf889cb7ed"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/cls/basic.la",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1169,
+        "sha256": "dfa4d29edf4c12d55a4e38c19215abb5557520eebdf4695a73fa8d564b6681cc"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1198,
+        "sha256": "895acb35890353d76abbe4a2cb65dcfa66debc55b53da80a91890a196784090c"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/cls/basic.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 15472,
+        "sha256": "c65bb14d9693041f9b2d1468f2a5d1bd2185c3a713fac4a98327281cb33308c8"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 15500,
+        "sha256": "054704aaa0ba1a6e9e123966ea7ed66ab9d5c5a2cc70e3d866cef4e2b555033e"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/cls/cgroup.a",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12076,
+        "sha256": "e18d90a046a7b0c5222b1884a866dc164884b8653239ce1317d0a01e871b275c"
+      },
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12104,
+        "sha256": "bec8e3472ed615d160edacec4a1356ea69efb636027121d549d9e135dc062616"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/cls/cgroup.la",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1176,
+        "sha256": "f0bcb31baa525e2ba054654a40de1df81026d1f52035bfec81f0d67dd7b9d1b0"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1205,
+        "sha256": "0734713af8f41e8bc17f3e33aedc9e5db5960caf1245243dc562643f7c29abe9"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/cls/cgroup.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14944,
+        "sha256": "468ab3c827a3c06b0cef2909a8ceeb973ceb482c545b274686075713df63be81"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14976,
+        "sha256": "c0768a043c8cf0a8299c5d2452ca06dce126ab5c79d0b4dc8a0d13d75fb96915"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/bfifo.a",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12324,
+        "sha256": "a4238663f4e29a265602657dc20de98bf115289d63e9d0dd297b756945fb2a6b"
+      },
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12352,
+        "sha256": "f018228e5e2df5c47a0708f4266a1279a1b3adff8b357b8f4d9e947e559ac121"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/bfifo.la",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1171,
+        "sha256": "9a545c7de7dce808142aa5c97888baaae444fcdcba80a510a7cb63d83fcb530e"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1200,
+        "sha256": "47b8ae51ce2fbf7e2fa34b9410e22f544ce3255aa017d7d9325e148689bffb65"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/bfifo.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14928,
+        "sha256": "5d837e79c6e01bbba3eb456df6d4a6daefe57cc175c20e780bede955bdbd72fc"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14956,
+        "sha256": "f153e355a93618bad3e62fb1302e48eeeef09ba12f82b93d4537be60501f20a9"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/blackhole.a",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 11376,
+        "sha256": "ae15e9eab406af5fb33b72c56ce81b2a41da46c417ecce27d16d2e044be955c5"
+      },
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 11408,
+        "sha256": "df7a1311084ac67eb7d2d6291c93cad46c7d445d5718bdd488d18e12c5d4d44b"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/blackhole.la",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1199,
+        "sha256": "86e07816cc4f89e810f2326e69e89312132262e47f3c960a168645654ec00a97"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1228,
+        "sha256": "89571564b80d10a89bc4dbabebb2bc005ed32834fb75d0b3c51f28e176646ee7"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/blackhole.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14436,
+        "sha256": "0b3a3a1716dc4029716a683498b1eaee502785b771893306f0e29f3cf20655a5"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14468,
+        "sha256": "b9bb2d6a6ecbaef0261feedc176a598280e3028f0a1f55724c4dc8a7d0b04ded"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/fq_codel.a",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13792,
+        "sha256": "347fe3433dafac818d4f70efb7e3adef3c40e8c9bea70faddc73b1cfa9e1d1ea"
+      },
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13824,
+        "sha256": "33e3e0b1cc9accebb6af9e0f75496ad7f31549a91830f91fe706df9fd02eefc2"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/fq_codel.la",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1192,
+        "sha256": "daf4fc3e84892c1dfa113af25f69640195b5d836b34b93a0baa831baffc4c72e"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1221,
+        "sha256": "326f82bd71ec28cfafd61d6b4408bdb936819dc61dd8d86be8cb62d487b5b6ca"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/fq_codel.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 15672,
+        "sha256": "4f0b131910484164e456c5a7f2b30f17a8272124b9a375d17d52350bdde4a2f2"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 15700,
+        "sha256": "bdfad132cbaf3f4ca8202ef24a8a2ab4d8b91d0752abe639d790ebe8d8144426"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/htb.a",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 17692,
+        "sha256": "4ad7d6e989b3cd903413c63c630b36714eb2349d271143a0a5b6ccf95c4cf486"
+      },
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 17720,
+        "sha256": "bde7eae148056dfca044c67d664cae02a8f8d89d7532fec1ca066ac299dc6800"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/htb.la",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1157,
+        "sha256": "fc6e546b1524fce9c40592a22af4d29b59ce704dab5e327a07a8b1e6855b2170"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1186,
+        "sha256": "86010fb33b7bd99fc18bc088b3156e70e317f2bd26a854c2e7881e23bd284292"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/htb.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 21160,
+        "sha256": "b5076d992383288b882edd2fb2185eb2f4bffec6534ef1e23d2500917e825616"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 21188,
+        "sha256": "8c1d787f963b2cbedecb5a2986b1a706b06bc7a5d62e67d7a937cf8a41bc55b3"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/ingress.a",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 11328,
+        "sha256": "6be47c9e398357c82fd1cfe4adc4a9b9c15c3fe97b25407ac085a66cf79ed6d5"
+      },
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 11356,
+        "sha256": "543c74b39a4478e106ca1d4100cf527d20b11378d19b7c270b6905db0e0828f1"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/ingress.la",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1185,
+        "sha256": "9fd3a33797bfc32715f7ac66ec69bc29e8dd8a8802bfb96f8b50c4a2f07085b7"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1214,
+        "sha256": "646f2ea02f6c20daf55ff78cf7bde1ee4ac1cb3c7a02f1338aa7e707b9b9e300"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/ingress.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14420,
+        "sha256": "5c1d079c6d8234ae91849dfaceb3b628759032ab88eab1178e1b14dd137b7efc"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14448,
+        "sha256": "fe1469b17b5694afe31777200c0935532f6e591547900ec13096e9f6788cabfe"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/pfifo.a",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 11880,
+        "sha256": "0bfd29bb7af7dc97ac99d34fe4fd228e8156c2d60a617aff3293e851587befde"
+      },
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 11912,
+        "sha256": "6f943c5d3674fba48025a67528b4a25ce155dc0c14994e9371c5155273ee76d2"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/pfifo.la",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1171,
+        "sha256": "fe036140983d9ad5760b1ac13cef05a2b2c5dd5090b13bfe3111c3c4726b3b57"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1200,
+        "sha256": "60d475eee1e6e657400a1c1ed7ff29316ca9054be3f821c679c3ee350fe884da"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/pfifo.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14744,
+        "sha256": "29a01d90651fa81c53b9ad56d707202d8933feb20e5a8bce609752649e922694"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14772,
+        "sha256": "646323425c068a6228bc2a2b3e385604f032eff6ace61713ad46d1fa9fc0b852"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/plug.a",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13764,
+        "sha256": "35870a423cbdbce6c4d80904a58b4a560bc503ae8d271b6dee2f6c6c617df48c"
+      },
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13792,
+        "sha256": "7ddca0bda91c23cff8983024d1f19019e4980cf89fa1f0f53dca17c19302a73a"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/plug.la",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1164,
+        "sha256": "cf61f508846775201ce3a7fc899834f913df943ce330a033cd74552768374e2f"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1193,
+        "sha256": "51b3f0c6dd3d60445a9681ab6ef633c5e9ebdd87c2e50d05cf0722de9ef7dc35"
+      }
+    },
+    {
+      "path": "/lib/libnl/cli/qdisc/plug.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 19264,
+        "sha256": "e9f81e1b24519625276d306c1bc6299d2337ee2ef718187b108cffc737ee6ea4"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 19292,
+        "sha256": "e923a490367fe0d63f5a951dfc30c863258684f5c96aa2224723a7c351d4c9c6"
+      }
+    },
+    {
+      "path": "/lib/libphygeneric.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12682,
+        "sha256": "eab8e812bfecb27774e0800a5cf562f627f59ca797846566e47caee58c9099f3"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12682,
+        "sha256": "41328db9b80d9b5b676177e128e1420687a5216c992d3c8211c1f39e9443f877"
+      }
+    },
+    {
+      "path": "/lib/libphypkgsrc.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4228,
+        "sha256": "cce95e475fae6946bb25597f40eac1b1e171053448dbf708275abc12adaeddb9"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4228,
+        "sha256": "e4dc959a9482e585dc8ecfa1f763d8ace6a68e6b7465e78716a01ffc902b5097"
+      }
+    },
+    {
+      "path": "/lib/libphysym.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 592,
+        "sha256": "ba7790cd4dec497c67d88fde35b5fc23f33e8dd034f18c56c830737084d71cf9"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 592,
+        "sha256": "d7b3e49541b0bf18ed9a072e52c9b5a390e583f67c9b00bd09340b6cc9b074be"
+      }
+    },
+    {
+      "path": "/lib/libphyutil.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 17880,
+        "sha256": "1b836ad4abbf03b6325dc17e5c056b47485913f6e8aada7468cf928e3a568452"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 17880,
+        "sha256": "1940a0a1bce765a0e66c4f29d1498cbae8d305e15a43b8eb2cc7a4c33bf5dee1"
+      }
+    },
+    {
+      "path": "/lib/libwlcsm.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 36584,
+        "sha256": "9960f438cbc05cc1569cc60b143035e006594dd44394faf2caeba79f49185dd8"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 36584,
+        "sha256": "64248fd2edb6a42e2c350e22f46b24db3dde5cadecb8fd67a8514a92ef271cfa"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/extra/bcm_enet.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 301376,
+        "sha256": "a1fc0c206209eb265bfa1d0485c19c299df24918234a9287511ea29c9d892a8c"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 301376,
+        "sha256": "658fba537ab1d779ba7d63844ff5fce024c856e2747e6fb168504d2af7b63755"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/extra/chipinfo.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5072,
+        "sha256": "a1ffe0405d1fd92f3322d2d4504e435fb0d7df07cf120aa001fe4589736b89a7"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5072,
+        "sha256": "30120cce7a72db594bc87f2614d6b0c7c3192e93d45afb294ebb2438a93d2fe9"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/extra/otp.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 6960,
+        "sha256": "8f41877b7d836198c7b721223e8c8eaeae7782b8f22a58ae3b01834ba8da9a76"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 6960,
+        "sha256": "c0d869c80bccea2e0423644d6794cad41b77872b1fa94ac9e0a49db37f2e9813"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/extra/wfd.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 48536,
+        "sha256": "933ab5abe17543c6b8d8f27ff11f9d9360aaeeca87ff5e3e8dd4126e8a879223"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 48600,
+        "sha256": "a3bdb9d07080c8dc3b2410e883719eff5bb4032950483456338ffd2a9cbb168e"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/extra/wl.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9390296,
+        "sha256": "1a7bbf20ae7bd7c2d917c147000c28b1bb92b9f841a2361627011608e5d8c475"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9390296,
+        "sha256": "b8d22c230896e1953db606e4db378e536fd6a737684309be0b434efd214d2441"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/cdrom/cdrom.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 42456,
+        "sha256": "967fa67b39e8fb1e28ce77ab91a209261434670d5b9468ff8581c35da196c7d9"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 42456,
+        "sha256": "5ba0e6b7c56122aeec5fcd940ad6228ea3ba3caf1086c032821dbcd2391aa60d"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/bonding/bonding.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 195064,
+        "sha256": "b97c63146ce260e314240e9395e53895ccf847e0da1e1c552d430d44f902fe9d"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 195064,
+        "sha256": "b7fb919f68e75bf95327a4c89c89074840fc9e742856231cb048dc9929f181b7"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/mii.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8256,
+        "sha256": "640341ef7d188d24f656617166d0eebfaa81409f23a542260dc745caa2aa3a7b"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8256,
+        "sha256": "08a4a6e22fa687c46fdb43203219b74286fb1143f041c8a2724aab2e05cf7c15"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/phy/libphy.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 53120,
+        "sha256": "47dff98fed4efa2482168260c6611b6f4684961e9289abb2e65a0b57cf65a76f"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 53120,
+        "sha256": "c7a9710baed64a65382895f4c9ca81af92066dcad788838c4327956ededb399f"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/tun.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 38240,
+        "sha256": "547d20771766e820e7cd8855e7f884ada9d7d05adcab9246fcf44ce5307aafc8"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 38240,
+        "sha256": "59ada312a5461a9eda801c636c9856af555f93be3666c69e75dde8e67e0a57c6"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/usb/asix.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 44368,
+        "sha256": "fcf4f883ecfd4d22f7fd7b7285e38f9684fd5486e65e25a54b25cdaaf616f6d6"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 44368,
+        "sha256": "e0852d0a47f0f4dab416cb93af6a5fd9c69cc8ab207385914318fc3b2fe75077"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/usb/ax88179_178a.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 25928,
+        "sha256": "6ed5775ec342bdd5377b80ab6dadfae4e06073c998e638e56e65a0d137b194f4"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 25928,
+        "sha256": "7ef81f94234842ae3bcb974efd72ad0f5d967b2e23f50f7e7f6f61b66be0ce2e"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/usb/cdc_ether.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14136,
+        "sha256": "26d08503ba66e0c68c745a58171158035eb6bfb58bb8e33147ee471ae4b657d9"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14136,
+        "sha256": "176215add923b859036ee0d8207ae3bf35925457d6b0558760d0eb31da9d2892"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/usb/cdc_mbim.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12272,
+        "sha256": "90d1bb73a5285a91bdcb55cc2941edcbb77051c21560baf12867cab498daa03b"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12272,
+        "sha256": "8d9bb6b70e189c55159ec06577885fd9930029139b57230827bfcfb5752abaa7"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/usb/cdc_ncm.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 32480,
+        "sha256": "72da1e464edc76df8fb1c9f39eb4eda60a10f8dc340cbb7b541fc51fa22944fc"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 32480,
+        "sha256": "e6147b09fb030bef6626db24ae357b6f900fecdf93196cf93b149ab982415969"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/usb/ipheth.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 17368,
+        "sha256": "fb88a94a116ee9bcd0504ef2b56f34c1030b72acccbb6828473cb1619ccd9fd5"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 17368,
+        "sha256": "92e2822fc66c88f663e54fc934887dcf93f25fcc34f3849a7a0dabced3afb513"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/usb/qmi_wwan.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 56824,
+        "sha256": "3dbdb5268fc050754d625a3e78bc9b12070c1ecf272f9ff2107affcb0286f092"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 56824,
+        "sha256": "57b340a5b2c56f89e08c9d5e40d9ee8f7ac949cadda8394fa0e46391cd7b2f45"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/usb/rndis_host.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14208,
+        "sha256": "cfb26ce6c173382fea0523e44e172d4b46c27db7060e81c4f9fb766449d7b0c2"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14208,
+        "sha256": "664b67c7256b0918b222ab2abe26b22febb3a0949446574afbd153031d6a8fef"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/net/usb/usbnet.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 41728,
+        "sha256": "850e0b1e977b1f49373fd1358ad3ac766405ff091688024eb5e230b07ea7e30b"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 41728,
+        "sha256": "f781b69892f882b9702d705cbf469b36ae7bfd320b975f995fe53cee4cdd80cd"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/of/of_mdio.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 7456,
+        "sha256": "2ff385a57abf8a6b3d2f1f68a842b936587d9ed99c32370b1b5361d0078da239"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 7456,
+        "sha256": "38c222179e85095934ce7d3e591bc14be18401bd8061396465c6554654822bf8"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/scsi/scsi_mod.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 303632,
+        "sha256": "63171585a825f2d67ee28ad8452109291e4f18be17e4af09eef048487dd77924"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 303632,
+        "sha256": "20952b554b1271a7be4f237e1a011126616c45e49de27de558112f11897971df"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/scsi/sd_mod.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 52376,
+        "sha256": "48f59aa359d95a44b44d0b5ab63ec827fbc2d37be13762cc375a2115345caff8"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 52376,
+        "sha256": "78098d6388f6fedda1b68b5ae6dbd28d9f863e5a71ade736156f32dea376ec96"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/scsi/sg.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 52176,
+        "sha256": "53a323b989b3e62577deb9d0fdbea652530a3ee93c73d7ff65d53bc42dcf41fe"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 52176,
+        "sha256": "cc1b767268451c628b50f5f952cfcddfb457f817427353a7f41b8645445bb627"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/scsi/sr_mod.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 25864,
+        "sha256": "a886edacfea1f78f0293cc185ab377d0d99437a9813d626ae1af4f9e26ac88b8"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 25864,
+        "sha256": "dbb970221a7646775d8f98ad6351c2c691d8adeb3c13b9454cd4e9329892e63e"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/class/cdc-acm.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 41272,
+        "sha256": "e005bce3d93b32a47230c35d9fb5b870dcd7e842b97d2ee1575ed4dd4fa6f78a"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 41272,
+        "sha256": "c6b8eaf2318843772eddb12f9db8bea6efea207d5d66a230da344928d72c4862"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/class/cdc-wdm.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 21400,
+        "sha256": "6f188aee1d3d7eabb82e6a467c4f17bc3f9b05d2021a0d82b1d68e99b42ce290"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 21400,
+        "sha256": "505d4f668d013bb24627278b0ad1df0328d499ee80e7e8bb13677b4e5f70fcae"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/class/usblp.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 27576,
+        "sha256": "53f0ebaaef3306495af0f7825055a85ab4ec8e2d0e0422b14606cb2f94d7cc3a"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 27576,
+        "sha256": "4a68dfda622f0728a2f3397aa6c89a9848dfb19077872daa38b93b4124fa951e"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/common/usb-common.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 7448,
+        "sha256": "aa62ba683502e314d9f83fe3f4d31201b848538ec3661f3ba919a557de3f505b"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 7448,
+        "sha256": "fa618c8e5578d2c36a562b0083a73bf1c1268b998a1037cdc36879ee95c3f758"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/core/usbcore.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 270040,
+        "sha256": "ab6f11352c04e43eccca9e816012b350754978bd17a700e788a87b99e05c4f7a"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 270040,
+        "sha256": "fa7108cbe2048af902e5a955eb0b2523a0875275cfbc2bd05c98558551a5de78"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/host/ehci-hcd.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 58512,
+        "sha256": "f75ad32854c2a649906471448dcf0d9cf77029e13c0f08b7e99167a44107b1c8"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 58512,
+        "sha256": "d615a7c57abcab196f7c4e367c5a1507b29f1566190d1c9257fddf0551686b16"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/host/ehci-pci.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 10648,
+        "sha256": "4a6bd5b75fe199a0ed4cd3b5c4d3fa0c50751d9d17a009646a545fb77b21ba57"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 10648,
+        "sha256": "27ab46aa98747e71f29376cf3d98cbd02754fbc377d5e9ec1803fa3522c6fe85"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/host/ehci-platform.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12864,
+        "sha256": "6f05fad7bbd29e89670d045a09a81e5f2309724e71d724de0826bc4bba3536a4"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12864,
+        "sha256": "5a241285005c21caba697549fcafab04ed5787d1b4b83926b299785d1fbdc6b9"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/host/ohci-hcd.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 51272,
+        "sha256": "bc8c7e136aac1339225582c0b3b1d3bc4b10ccc422de5bc09d3e9ebfa92775c2"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 51272,
+        "sha256": "88e1fe41fde4fc4e3706e025b38692acaece6c5298289759ee1a1bef010b77dd"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/host/ohci-pci.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8872,
+        "sha256": "5337775f7dd0e1f1d313dd73386ed85b1ac2148860aaad4e69163d721f45496c"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8872,
+        "sha256": "38d21a77e85cab3014ebf0db844cfd5b9ba7b51fc984a135c3a3ce84de62d119"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/host/ohci-platform.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12216,
+        "sha256": "df51bf362281e5cff4cf3bd06cc88a892db7be2a0ed29dfff47c546f3aecc67c"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12216,
+        "sha256": "a77b029032b26dbe28149347ee71cc23e880be8c5a3fcf62f50cdd6edfccb4f8"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/host/xhci-hcd.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 148208,
+        "sha256": "e4576e931f442d6238f5c97b81eefee01ff02d117805e21bd700449c5836ce9b"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 148208,
+        "sha256": "d61886ce1b271c79f03177316377392b396dd43c54570b1102a76807e48898b7"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/host/xhci-pci.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9168,
+        "sha256": "39788b73376d91fa952454c36938040e93fc134b1e251a61b1ce832a57a449fa"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9168,
+        "sha256": "dc4883fab644c8ea2d9d1011fcca710a475d16047afd5f1475ac622645e0b4de"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/host/xhci-plat-hcd.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 10544,
+        "sha256": "e2962da0536af151a539ef12f9e34b57a87b849cae624f5b432d53d96daa1f46"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 10544,
+        "sha256": "a4ce8e6a4a2648ace8821b698154b238b723aca54913090d0cbd548538c32de6"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/mon/usbmon.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 39104,
+        "sha256": "e12f87f943e2b80da662c4b9285b5f6aa52d2a5d4cb41a343e4be5477b801e94"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 39104,
+        "sha256": "9bc4935bd5b4b7026bc97901208e73d71e182f2dee983db76623a537becb901f"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/serial/option.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 164424,
+        "sha256": "e9ebfdb68062c44088fc7228ce323dc92e66713bf543c6a968e0a52d45857fc8"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 164424,
+        "sha256": "79728bf7287c7c80bbd4cf8b7745fe5743ceb3d2ef58cf11222ad2b84f480d62"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/serial/usb_wwan.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12472,
+        "sha256": "33fed0ac3ecfd3a153f04dc209ceee1f8ce977f4442fd5b388eacbaac4d8f423"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12472,
+        "sha256": "ce9d1114f35d1a1f51667321a63c5e6288a8f75d8035706b6dfc8236e920995d"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/serial/usbserial.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 49216,
+        "sha256": "bc51e33e21284594af910a9c4bf8882e1626e77c4ef1e1f8e4bc0470fb704864"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 49216,
+        "sha256": "4b8276e3dd55ace435f5c08cd7c1eb20de0f9e04c1cddcdeab85e611a99b7676"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/storage/uas.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 29040,
+        "sha256": "c830ac577cd33ca47393cd2ea37f33474f8e7e0eda6525a114bfadee536d51bb"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 29040,
+        "sha256": "9313ceb34570e1093ea90797ad635a8b1b274f757c177fbae61389d18e5611f5"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/drivers/usb/storage/usb-storage.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 131440,
+        "sha256": "c5c1eecc16833e1363034e82d71196a284c445abc654f844c5e22ce05f08fe48"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 131440,
+        "sha256": "2d7cff5021454db9f211745571df49af0a61086ec56c8cbf5785aaec0f22bdde"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/fs/nls/nls_cp437.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9568,
+        "sha256": "220068fb823b5e5968d9a61edf85b717cb072ff58ca0a9e15708d26891232ff6"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9568,
+        "sha256": "996d99cdf9749b4dc190cf72362d26b5a86c87f2cd6cd9c4f102c68f86590990"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/fs/nls/nls_cp850.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8640,
+        "sha256": "9dde66f41d8a56829d4ebd219dd09ebfc3b56b5bc970e5509398cfeaf54bc134"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8640,
+        "sha256": "b29b5d577ea8f11a0602ef5fcfa913b4072f6db0fa35441e714bf41097c40f76"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/fs/nls/nls_cp852.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8640,
+        "sha256": "dd700887d14545ce3cea0588230af05da5e40e625ce7b9de9e9c06e668f25535"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8640,
+        "sha256": "3f0c91eed7600b11e220ae2a8fe4c03b42cfcf55fbf394695fbdf2928f8113dd"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/fs/nls/nls_cp866.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8944,
+        "sha256": "8a8a753d7abcfef7fd4eb03f8cdfc0f3757ee3eea5c937f51dd71c2d58bde1ce"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8944,
+        "sha256": "acf7bafc6c749bca36a58cb4f5fb0952549fb5bf2d5cacc72bc8b473c8bb33e5"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/fs/nls/nls_cp932.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 90592,
+        "sha256": "66e9e573c08bb86cbce5a8e15a0afb58b08f688684f13f330cbf9a6b31db26a2"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 90592,
+        "sha256": "78b73959ddfd62d0553c6eae72174ba9d6f20cd658444146e33eb44f0ff90c04"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/fs/nls/nls_cp936.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 139112,
+        "sha256": "5230b2b07592f9aa274343044cedd79989da9e67e8c9fa102b78d80df8891f7a"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 139112,
+        "sha256": "c2c67cac4869b2f3da414492b2256a7b643c410e898bf1fab04705988afd7870"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/fs/nls/nls_cp949.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 162240,
+        "sha256": "0e4ed8cd9a73ce822fd0a659160581b1df77992123c94eb133c40c5e38d18267"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 162240,
+        "sha256": "9f9cfa46bf8df5a94520fa93de442fe3ed0d1e6f133472c7c04fb0dad4cbeaca"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/fs/nls/nls_cp950.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 114616,
+        "sha256": "be160e7b2499b1709557fec26fb7e0296d05e44f41a55a023ef3b6d7923db694"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 114616,
+        "sha256": "6939b8641b6caa3aaf4d1b11ddcebf2d6fc9f5ae16bb0d249077ada39589e427"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/fs/nls/nls_euc-jp.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8544,
+        "sha256": "c6cc20bfa4b7aef05d42515d3a9ce27d782e7c7e672a4491d978d753b696412b"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8544,
+        "sha256": "4749b294908929eb8baf9404c495fbe2a36f970ac07733fa9e80d9abe576c961"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/ah4.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13392,
+        "sha256": "ea49b268baa6e8b8471d5cc78302fb587536f68932c6c3aea6ebf8dc790bce60"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13392,
+        "sha256": "b7c7bba80b0061fcbc054d6917079e3d905383f3f1047f622e331f34fe9ed06d"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/esp4.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14240,
+        "sha256": "2f3a2507d7dce43fc8a6279e8083bd15c0c2ddb6a38f2e7dc01626befa1f7348"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14240,
+        "sha256": "15f84f43a9967a523a36ccb29499cbfd48d67e8510d0c5dbc7f8883102a647db"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/ip_gre.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 21672,
+        "sha256": "f0e612bfb635794d3c5252de92e9e8a5fa0e6b4f25cceb2f526e1a45beeba23d"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 21672,
+        "sha256": "71ab6af79f4dcec84035dc083be0df26b38cc3338b34efe73a691b53ed1a6930"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/ipcomp.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 7120,
+        "sha256": "3796770996575733504a4b238359759df0a9074677a5b8c098881a5749cbc666"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 7120,
+        "sha256": "4d8fa54617ffb717025314a0074a04f8dffdff4e99d00305ec98f8f1fc5235ce"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/netfilter/ipt_TOS.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4432,
+        "sha256": "96d544b0834b09ff56098fc8ae6566c9a8edebd9ee08f30767e31b20099611e7"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4432,
+        "sha256": "e6b3c83baa3ae9c96a5813dbfd3f7ba931c7cfc95cc68983827feeb22ae61c7b"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/netfilter/ipt_ipp2p.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 15184,
+        "sha256": "b520a0a19318ac94688295b52c7dd0633d49b0b48ecd5f88e3cf3a64ca8c0564"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 15184,
+        "sha256": "0b28473353e9e8f44f585837fd0c776d6a29100e6361d3f4105050a3d570021b"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/netfilter/ipt_tos.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 3544,
+        "sha256": "2163ba59a535dff5d97883d47d6f02c5de77bb38dba47565951d0c0c636d2a2f"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 3544,
+        "sha256": "7097ce160def2a5ffbb5d250dc649bbb73e960f5ff32fc66d0419f2a51c04211"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/netfilter/ipt_web.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5512,
+        "sha256": "8564cd6851e74ed66c72dc83e5f96e961213e6e862a94dfae2dfe81db3264a6e"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5512,
+        "sha256": "c5fc768ecebc51bfe94e68603330410741b26d5ffe43e2f7dc0586dafcb08ed3"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/netfilter/ipt_webmon.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 31424,
+        "sha256": "cf3cdf5b784a4d581040ba50de03cbfcbfd2a705dfe3d022553aa55cdf8728f1"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 31424,
+        "sha256": "2bdb7bf8b528469745df62ca6f31cef13fa75db9e2c65171b34f52e46a91cc8b"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/netfilter/nf_nat_h323.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 15168,
+        "sha256": "7adf1e2eb65dcac9900f2f2dbf865188be2a9be4acf1cf34cb1f7f975cba1776"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 15168,
+        "sha256": "9e7bb3ce8d6a259a54eda4d171cbd505b6143d8b647fbdbaaa502f9d75b5b4f4"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/netfilter/nf_nat_pt.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12952,
+        "sha256": "ba16af2b045be6bbd0049887dbf8607fac5d7ea6fb8b95d2cd0e6d108ec5b6a1"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12952,
+        "sha256": "0674662987f9b3707762b64652fe0a008e124d25d5f0d34008acd7bb2a65fbc3"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/tcp_bic.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8232,
+        "sha256": "ce106581b0fac4b86d11248e102914836bc6cb41df80ae7bbadcedc5fcbd5bc3"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8232,
+        "sha256": "0b852127b3d4b58adc0e3fdad9ea63c2f6a8070461e4014d8e9d2b3392bc7c36"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/tcp_htcp.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 7712,
+        "sha256": "7088798450b165b721cd5a6976b22219b8bcf4295aa422166654301efa9afe19"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 7712,
+        "sha256": "dd4bd9751f1837382be9e7db149858bfa22373554d94766acc722765c32dced9"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/tcp_westwood.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5336,
+        "sha256": "0a08ea7b8089f758acaaab4f0e2c3e9604254183f4b9f7be4c76638e90a421c8"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5336,
+        "sha256": "458f259270e11999566c56b32ec6ada57f7f95d802c5854f29d66026695705a4"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/ipv4/xfrm4_tunnel.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 6352,
+        "sha256": "1f9c28fb4b5680697a20256d77c540f187d4687feeeca5d7daacbd80ec06ca6f"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 6352,
+        "sha256": "4c19c4faecf27426732a68bf68c5951442c2d0d175efd5bab320973bee55b8ac"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/nf_conntrack_ftp.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14872,
+        "sha256": "99d5374e74564974f6b755178814e8f2fbfa8a91cfe8498b4b178cbbe84361a0"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14872,
+        "sha256": "f8c19a91270a360d9075b515c81dab75aef0ffafb9d96547eb3bc7237d897f30"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/nf_conntrack_h323.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 65976,
+        "sha256": "a24f5f1430874b1b225569ceaf87ddaa822f3a6a63b87d335397d3ca9c0acfde"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 65976,
+        "sha256": "d7da9f7ba031efbe3ae26a6fdc9b2e668c4cb573fe31add3a41fb10bdc5fcd42"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/nf_conntrack_rtsp.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 16936,
+        "sha256": "3ac88312063ffca12e4b517af80c44969177ca0bcd1311c5643b7ac85d1149c1"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 16936,
+        "sha256": "062b3d7e5f9a2db9176f8b55a2907a8833ff44824fbb8f4b7197891b717a6c15"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/nf_conntrack_sip.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 39616,
+        "sha256": "a5b338774c905314ac4fc5ddf9d14c33c230c200a96bb8d282b01ed975d86355"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 39616,
+        "sha256": "f6cecee35bc210fca184d394dbfeea48eca781c0b693ca713e9b446c717555ea"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/nf_conntrack_tftp.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9832,
+        "sha256": "39f7cc84c118cd0a77d2b85943e04b5815b51524713dd86df211058a536e70f6"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9832,
+        "sha256": "80ab807f18976ef3a1745319db6bae8b7c4229e350197ccc3c3b929e5c5261d4"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/nf_dyndscp.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 15984,
+        "sha256": "1b3e3ba126a2ba99eba1842bc942dfc89a433d4839341f8dfdf51e752b73a2fd"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 15984,
+        "sha256": "cae69188ecc39689f1374b9312d24f0438aef746dd354ad0b686e3ac9875dfc8"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/nf_nat_ftp.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 6624,
+        "sha256": "32cee50294f5bc0c77bd4f2e6064f2fea36083adeaec6531f9627ba168086642"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 6624,
+        "sha256": "eb9a348422b03eec6444cec902a5e1add8290d2c62b65ef29233e7f0986512e1"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/nf_nat_rtsp.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 10744,
+        "sha256": "fcf1817fc6bb7a1e5d18ca21e89d52ede76d61afbed0b2de26eee1b0db84593c"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 10744,
+        "sha256": "d6dd0d65ea88b8ca49d5d7cfbf1fcbd48a4b8ff3432ed2e137a5a8451e93e6ed"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/nf_nat_sip.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 16600,
+        "sha256": "44672cbaaac9227087ad7355a5cc64d5f57406cfd1ee5684c5118a04ba43a90d"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 16600,
+        "sha256": "73f9da4f5d4275dd2a8d88997c10d45173e5f7ca514ce7e7b050c5408341ecf7"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/nf_nat_tftp.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4680,
+        "sha256": "3a72552ceca913e43db4aa8110ea257dd094aaf8375b2fbbd53042575ff60813"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4680,
+        "sha256": "35f80c411896c305eeb3a90018e07a1394d8b6b7dec8ed47dcf0204d37abe37e"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_HL.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5664,
+        "sha256": "7012a2dcd8ad06ea7a1ee35f7c9c957d0791c593f420bc1d954f5c3196e27ed3"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5664,
+        "sha256": "95208f287013574d0ae41385d66c522e18be9fe7d06d92f3ce7e90ab72488182"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_TPROXY.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 11016,
+        "sha256": "400547121e4519671735ee2eb5b236c149aa93988309ba31347645409b3f0aef"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 11016,
+        "sha256": "962968a6ae650f418d03e708306e01f54549650ca9e2f802ecf997bd3401d2a7"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_blog.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 3864,
+        "sha256": "0420e4b591c0f8df46fbda09f42043140a41796c68bfa26770ef313ccd108e8c"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 3864,
+        "sha256": "bb5a518cbc373938a58b311648e807c3b88895b417ae8732df5c7cc0b76b4e5f"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_comment.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 3864,
+        "sha256": "ed189c0334b91924c4dd2ff6b9409266ab3eccadcb54630e7b55013246f02e1f"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 3864,
+        "sha256": "8f05fbc0cbde96ae47c9c35d055ee7a8fed106120de21c8e5c889cbd3fdb294a"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_condition.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 11312,
+        "sha256": "8c66be407b78d0754027cd94dce4d607b260c49dbe2029b2d90c343d77a913bd"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 11312,
+        "sha256": "3ed514d23886ab4a5968fc7b63eecf2944c7fd67cb8c5752f286416c6d8ab46e"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_flowlabel.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4288,
+        "sha256": "c0cf697f6383e0d1a9314bce446e56a73201cf8400b07bfb7a72d7592ad94cce"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4288,
+        "sha256": "0eed04572ca05c22651086e4d61c2aaadf7720952afa4fe668b8a2916e80f094"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_geoip.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 7128,
+        "sha256": "2ba167e6519a9f9878ff496724c945128d9843d673a4a4a6227b6c25caf5473c"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 7128,
+        "sha256": "449c97ac52ab215b698d081e0462a83c98bc266cf23ad0085b136b427cff2d83"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_hashlimit.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 19408,
+        "sha256": "641e7beb1d9054062e6144738847e770720a7877f0ab150965c9045376bef3ec"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 19408,
+        "sha256": "684798873025f4e5eeb85a23277dfc344e1bb4a9f61f9dc39846a6f68d428580"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_hl.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4656,
+        "sha256": "f65c8106da5d91fb5b778ec0dcfc073b05f66ea38ef75b2305b5f0f17d81ece3"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4656,
+        "sha256": "d44efa83a861da82b4318d0c02d3ca4de5354cdc8e0e35e6ea5ef2019322aab3"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_length.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4264,
+        "sha256": "3f1cca264c0f713fac69ffd164aefe95640d39be6ce2f0806256b2236c384deb"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4264,
+        "sha256": "51ff5eccf5a00573cf8401f6779b80ac4181a75bee7f2adcb0848e8ad17e6e22"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_quota.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4656,
+        "sha256": "2c69cc491ccc200b1b76298e717b561eaebd8bb5ef15aca418e0095093765116"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4656,
+        "sha256": "579ae971b8fe9db94ce87866a9ee47c4167cd382ed3fc8b7494ec5dd39751df0"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_recent.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 21176,
+        "sha256": "6ea779301a4da24e25f93563a26a5a437aa2800697cc912170e5558ff8333d43"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 21176,
+        "sha256": "1add1bfe7dc44e6eccbe60cd44c9f6e478d4e8b241e5cc5814f83a50faac4aa9"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/netfilter/xt_socket.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8784,
+        "sha256": "a8ca8ff4116e95adf42e68e374b2a364be3b2376eaa920991d2e97614a5fb2fb"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 8784,
+        "sha256": "86c7fcdfc36e8487c40a9f7b3e86dc508bad3b25b6c6d28a01e8d203e57353ce"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/sched/sch_hfsc.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 22088,
+        "sha256": "0219b55bf5814b0cae59e5706ed27c76600a42379e751fd926a76e6218b65a52"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 22088,
+        "sha256": "a1bc37601f5c6d10a6d43e01d0cd2ca9f42569a0295bcd5c5cb21cf77257d8a7"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/wireguard/wireguard.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 158600,
+        "sha256": "d67c5c2a1d117dcdccab6af7714830017064a6efc35f9f65bb613d136577f30a"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 158600,
+        "sha256": "8b23bd1d18005f5bc8c4b62cac6768a6d97a8ca84630c6e80eaecd137746365a"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/wireless/cfg80211.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 336144,
+        "sha256": "015cc1c581360277a75b2f695570dc8204655e98fc8bb1c8af3550410d11d44b"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 336144,
+        "sha256": "6fe7c1ca7c71ae9a60787c9b9646c8bd225b45173e28f5c1fbe6ff5311b7f591"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/kernel/net/xfrm/xfrm_user.ko",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 41520,
+        "sha256": "bb0f0362947d76c9ee143c47395ed063119791bc94ca286c7b7281a5e7e9f8d4"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 41520,
+        "sha256": "0e234786eef70ab60f6996e36e139ec7bd7880d6100af0d75efc666dfc1bb319"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/modules.alias",
+      "before": null,
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 124983,
+        "sha256": "d8328d07c98d6decafe6877d662e7fb9cc9dcfc2cdf081ece5e41e8e890121c3"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/modules.alias.bin",
+      "before": null,
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 124720,
+        "sha256": "b8d1a367136f6c874a32226837e814f19f3db31a2daa6d3d3196c7497da58d23"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/modules.builtin.bin",
+      "before": null,
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 12134,
+        "sha256": "6333a3e52fb32e4476761918a23d439d30e8a52c7f6b66b5794a63d846e247a3"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/modules.dep",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 6672,
+        "sha256": "24a2c773e0f46e4cdff85bf8e87ba172cb88f0ad1d5466190128c0e39382d519"
+      },
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 6672,
+        "sha256": "1e586fc688ead9f4ff27adecb7702c901674b1d299b035e8ff009a5ebe24d4f2"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/modules.dep.bin",
+      "before": null,
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 10013,
+        "sha256": "23e5c82118650023041e6a397dc74b55c4b994b510bbea523d429d4d15c884d9"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/modules.devname",
+      "before": null,
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 72,
+        "sha256": "511c5abe3be32271757d9ae27984664345b63548b5f0498181429b17690d30ee"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/modules.order",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5565,
+        "sha256": "07758562d81e3f440f341bd0cdb9b6c7d2c19751d359a7488f6bc8f4a4e70f56"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5565,
+        "sha256": "f7dc26b8d55ebe2eb8991b46b8e7c55dc16d024c7f9ac7e763af517ff089c944"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/modules.softdep",
+      "before": null,
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 86,
+        "sha256": "69ceaf12d9cc3610aff3d2bf6606f8c3126e6c93b1e9c25e7154337b97bb3b5b"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/modules.symbols",
+      "before": null,
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 24411,
+        "sha256": "112ac47450e73417b890880e64690a5057b7ffcd90f59285ec288dce5d78a719"
+      }
+    },
+    {
+      "path": "/lib/modules/4.1.52/modules.symbols.bin",
+      "before": null,
+      "after": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 30134,
+        "sha256": "0ef0f3f772c458b5818b6af9edeab2470b2dfb26d44a348d77bd558060781d20"
+      }
+    },
+    {
+      "path": "/rom/dh2048.pem",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 830,
+        "sha256": "ed9d7df379074d860e44d6269bd6b55fea20fa3846c91611bf6ac02e7f83f1ee"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 830,
+        "sha256": "414fb0e3910d12716bfdd0403bf2ceb577ebf45d9e5073760401ed4f423bfa55"
+      }
+    },
+    {
+      "path": "/rom/etc/image_version",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14,
+        "sha256": "41251fc85069704d0a77c6ab587e16397f00dca2a4a9f03b2e3facc710e4bf01"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 14,
+        "sha256": "58b81ad3ba76a2d72a82e1d24766f5c04e194a9c56fe52cdb21d2455d91a5351"
+      }
+    },
+    {
+      "path": "/rom/etc/wlan/dhd/43684b0/rtecdc.bin",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 2605300,
+        "sha256": "67765104147d96ec0a286bafb8da0dd295e7290297ca443272402f737f7841dd"
+      },
+      "after": {
+        "mode": 33277,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 2605501,
+        "sha256": "00ff1e7354413bf1eebeeeac66f3564bb571af5070fdf649576778736379092d"
+      }
+    },
+    {
+      "path": "/usr/bin/asd",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 18140,
+        "sha256": "acfeca54355b9b470e999ac8930e86c72900b3252d4aa7fc7af8da9f091ab735"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 18140,
+        "sha256": "01272d405c6c8390e916a1f99ebe2d1de63476d59c76463c125b8a7d5ce73b95"
+      }
+    },
+    {
+      "path": "/usr/bin/usbmuxd",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 191344,
+        "sha256": "edb0b5993fce4ea064880caf496e8e0adcecdc4ae3a02def1b13fb8e55c77200"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 191344,
+        "sha256": "a638ac50784d12fc4f724c4a5cba6476e92c0dbdadd55c049f0a1e8bcebafdd9"
+      }
+    },
+    {
+      "path": "/usr/lib/libFLAC.so.8",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 163500,
+        "sha256": "9b3553a0f11ec249c3bb2bc9ddeeef218df490ffdf09974226e0201684b0bbfb"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 163500,
+        "sha256": "8f781f7b54e23317116caf0a284fcefa1a3dd7c416cf4b41af86c76a11301513"
+      }
+    },
+    {
+      "path": "/usr/lib/libasd.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 63624,
+        "sha256": "95de10c2e2e793051e220f3e84774df03ab84cdedcb553757ecbb1c85bcd3981"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 63624,
+        "sha256": "baaa1395817f2ae750767cc7f806fbc662cd9f96b43fc3b55c3536e057235228"
+      }
+    },
+    {
+      "path": "/usr/lib/libatalk.so.6.0.0",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 319976,
+        "sha256": "aacf2b93482414cd74ff9ed65483bf00ce8dfd4ff994ca3e7fd6d643f51be266"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 324072,
+        "sha256": "837eca2029b8515fe293ee5dcd7f3e77d87ea0be69e15671408b5ba5fbd38afd"
+      }
+    },
+    {
+      "path": "/usr/lib/libavahi-core.so.7.1.0",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 219928,
+        "sha256": "e16fd46e7c1c405a0df1ac6446afc4a9edfd75b1f42cfbf715226ffc89442fc2"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 219928,
+        "sha256": "eb1bb0d7b2240106dcd4e91778184ca1ee1d0b7b0efaf3549dbcd88520425219"
+      }
+    },
+    {
+      "path": "/usr/lib/libavcodec.so.58",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1532096,
+        "sha256": "5a4079e3f882bc6600ec0402e77e6b30fcdeba6d1b6ab62a619da72df4b7756f"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 1532096,
+        "sha256": "df11fff84c6d7bce36ccc0c364c917bc44e53eac418a49c2410c7d95f1b792a3"
+      }
+    },
+    {
+      "path": "/usr/lib/libavformat.so.58",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 672872,
+        "sha256": "fe0e200f501e282badaf623bfef511e5c3ad190a463ffc4d9bdab7f315d4b506"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 672872,
+        "sha256": "61d32e8c1d7ffb778f9de514b8262557e42149c7bcb8273dd43c0a0123d62618"
+      }
+    },
+    {
+      "path": "/usr/lib/libavutil.so.56",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 432676,
+        "sha256": "dcd2f1b8d4d2909028ac3899b4090949ecfaed9f5a04d8e30d0a978d4ce111be"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 432676,
+        "sha256": "6e6df0fa5421089950ac209e0dccd9750c512239ed90d3fd4705a01ce348c07a"
+      }
+    },
+    {
+      "path": "/usr/lib/libbwdpi.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 138052,
+        "sha256": "5fca1c9c8a09b788d010253684c32e14873fb3e19b97de854cad0a91d08fd3dd"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 138052,
+        "sha256": "db874292604cb695b64fc109488021d2cb58cbe36d05b4611d3ec443148e806b"
+      }
+    },
+    {
+      "path": "/usr/lib/libcrypto.so.1.1",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 2262564,
+        "sha256": "f392e5e30cac8ba62b9a474a17d9620826735e281e23e177d6b41e37f5174735"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 2262564,
+        "sha256": "e18242f22a7512366f5a81bfc7bf5890471ea260a8d66751ac44bc7b80f9c89a"
+      }
+    },
+    {
+      "path": "/usr/lib/libgcrypt.so.11.8.0",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 527676,
+        "sha256": "969e3be929130667daaefd47ad40acb21e1754ceee7bedd5efeda35a91aa2575"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 527676,
+        "sha256": "47a04e2e9dda885121361412bffe005140a69398e85dc6228cfe390f3f3b61ef"
+      }
+    },
+    {
+      "path": "/usr/lib/libgdbm.so.3.0.0",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 17896,
+        "sha256": "be08a60d1bae12db06a00561006943d33e8768839bbdfd7a51a3ac9900cc41d0"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 17896,
+        "sha256": "f4d9a5d03533db9881ab6d3faff1290dacdb60df4cb346d9aa9e2ed8540a1e3d"
+      }
+    },
+    {
+      "path": "/usr/lib/libipset.so.13.1.0",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 132056,
+        "sha256": "a9c5cca4c1649adc9979281822ed8bc51b35214156cf88fc88500029a426cc3a"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 132056,
+        "sha256": "eaddef10f1ef3637d57611b54eda7de23f3f55c235d79e0077f137eaf772b4c6"
+      }
+    },
+    {
+      "path": "/usr/lib/libiptc.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5336,
+        "sha256": "f5f687caacde22faf0920c23b0b8b5bf25c022fffa6c098f2aff9f6f20f6784f"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5336,
+        "sha256": "39bda054bac12e871bd31f88590f8719c2607a3718755df4750dfec2355ed4fe"
+      }
+    },
+    {
+      "path": "/usr/lib/liblightsql.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9544,
+        "sha256": "d65625c589e3b64d2a74cc9215a8c6ca84206a183e08b71dcc60a2b28bdfc144"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9544,
+        "sha256": "69c6a8ee068d9e5dbd2df201fd8c8106bc286b10dbcd580190a63d08a5ac2d40"
+      }
+    },
+    {
+      "path": "/usr/lib/liblldpctl.so.4.8.0",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 71296,
+        "sha256": "4c576fb850db70382a85c589898f71785117931ab30f71a5e760a7700829bbdc"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 71296,
+        "sha256": "421702607cc4fd82cbfe8cb85e1fd3d4df89b295f1755dcd61d09e3409301fca"
+      }
+    },
+    {
+      "path": "/usr/lib/libneon.so.27.3.2",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 121700,
+        "sha256": "c8cfca567b47d7af3e72449eea078748b9b1659d993464bc4ffd9947813da4ea"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 121700,
+        "sha256": "61aaadd00cf2114d9b792c986af191f47f73d15f5126502ff904ef22656b245d"
+      }
+    },
+    {
+      "path": "/usr/lib/libnetfilter_conntrack.so.3",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 120400,
+        "sha256": "37d5c3f7995e82467aa7da69dd7c153ae3eb3df3294daa2ca670c430826eb13b"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 120400,
+        "sha256": "05ecb53724114fb11242de58eebcecd1ed05c8c0f128f61d832abb0b7a68aecf"
+      }
+    },
+    {
+      "path": "/usr/lib/libnetfilter_cttimeout.so.1",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13812,
+        "sha256": "088d291c6c5f5c0051eb447022d33efe0b38c568da81fbe1c778bd4df9ded686"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13812,
+        "sha256": "7c758ded407e7555998975c1d94af6b570982e91cea3882637a5c005c0bd2b24"
+      }
+    },
+    {
+      "path": "/usr/lib/libpcreposix.so.0.0.1",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9568,
+        "sha256": "d84dc3b79da391595a4856247498d061d356a5616dcac001b79eec31c9dc495d"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9568,
+        "sha256": "5c87aa6ef3e3255551ed931b06fe29f063f9456d2b8a1ec2721791870febb0b9"
+      }
+    },
+    {
+      "path": "/usr/lib/libshared.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 607176,
+        "sha256": "ebaf2a4586a6fe6ca336f6fe6c3ba9955434ad3d4dd11b65bd017e37e13e9fef"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 607176,
+        "sha256": "073138068060a040981265d4d18c078d02983abc943b607ab524c3ebef4d4e34"
+      }
+    },
+    {
+      "path": "/usr/lib/libusb-0.1.so.4",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13744,
+        "sha256": "edf3dae7ab443ae9f9b1f2b5a14779954095dc38f0d17fdae9b4a9a75158ff96"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13744,
+        "sha256": "98ef44c33b32816810dc940129b3f1a1b20d0a091524685d8a43d00340186d0f"
+      }
+    },
+    {
+      "path": "/usr/lib/libvorbis.so.0",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 161536,
+        "sha256": "76910feb65452677fe7db10d9fe39a6b8ac84c094e8136b4c4e2f8847f22a75b"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 161536,
+        "sha256": "f4aed295bbb7bf4269459fcb7c1c637663d04195e52506a30945e1243e79fe87"
+      }
+    },
+    {
+      "path": "/usr/lib/libwpa_client.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 119652,
+        "sha256": "1a749f2e14bac8e41dd573c32616075a3295d7587cc875dd2f5309f93535313b"
+      },
+      "after": {
+        "mode": 33277,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 119736,
+        "sha256": "e7ad46a9081a366196cfeaddb07a0a98a8de9d43cafa6cdafb2ef12460c74c2a"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_access.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9560,
+        "sha256": "952d98a8b49faff02d8d1e8d1c41278add39fb24876b43ec9d00ffe7b69f1c39"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9560,
+        "sha256": "5ed75e02ca8f1e88322226560bec75680af38bf5b2a762fce688b96289170436"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_aicloud_auth.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 30456,
+        "sha256": "0226d8f84817337cf6b766eb4399bf2c3a8187ba1bc14c72053231d58aea3af5"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 30456,
+        "sha256": "94cd103bdf9a02cc0c58aa4f1a3239b1a15ba5735a6e6cf42b16b33ce1b31af5"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_aicloud_invite.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13764,
+        "sha256": "7bbf1c6b0f4bb6a76625138c50bdf16fe82272f395ca2a891c00dca56ab9c84e"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13764,
+        "sha256": "77780e24525ba9cd1c06521d2f5f070ae298af4bcf1439b78be5e6ee92171fe3"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_aicloud_sharelink.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13740,
+        "sha256": "45983a0fb12bdfcae356710c7f555a5b178bfddcc396933cb117c98809886802"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13740,
+        "sha256": "ae7712bc9ef48df5bdb57b248a771e252657f0cfc94478de7c04a9c0c8d2e50a"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_aidisk_access.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 17924,
+        "sha256": "5d09d9c2a1ca861b4de56d917c96e616821d00039edccce2ce370356b5f98fbf"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 17924,
+        "sha256": "78afe030bd4e73a9782fbf429f893d3b5d2061c5f413b2575a6121251c9972e9"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_alias.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9572,
+        "sha256": "cf8f49dd388c13e9a6dfeea456a5ecb993f3b7d53566f5bb8818b4b864f8d3b8"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9572,
+        "sha256": "e18950f908c7386910a28cb44de12fea2b1b5c85d266935697e36cef06c6471f"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_auth.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 26496,
+        "sha256": "d267bb14ea5b19b937ada98929589d2d6108ffad950fbc52e82b9335fdc77a57"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 26496,
+        "sha256": "d434596efc4660fd6cb218a9d84c74d29c1aa3a67a47f29225088b58ff1781b6"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_captive_portal_uam.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9640,
+        "sha256": "e2e8cc12788590af000a092da37543d348f39adfaf5de96523547633f1172f13"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9640,
+        "sha256": "29ac7b4a217c01226fe501354e04a72e31d13868047e1505fde60ba2bf0b7fb2"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_compress.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9676,
+        "sha256": "0acf7f70c5b973bcd75e2340f3e2a635ad5ff944c812c16b1be0998e525c2fa3"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9676,
+        "sha256": "a59ec5b2b1cd8db71daadfb401c55aaa8a907bb825b5546d68228e3ba764ad4a"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_create_captcha_image.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 21912,
+        "sha256": "872864166927b46367c82442267f8a5c5095e4ea5301f612212172ef1e6b1fbd"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 21912,
+        "sha256": "a658244330d5f78689f461fd8088c251fb4665a51a59b0441f38572f6f6b22cf"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_dirlisting.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 18096,
+        "sha256": "bcae98c65c32147c0b52ddb4ad968c9b9dea3fb0b723b7e53ecedf144e3fcdcf"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 18096,
+        "sha256": "55ea13f0f4166190824f4fe3d24e5c5db3e817c683aa5dbe3fb1e987367b901b"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_indexfile.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9600,
+        "sha256": "d39f685a08bf14c84f82f74a337dc25574abbd59d51edea77126d2fbc86ac8c7"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9600,
+        "sha256": "24be8a8605b4501b21bf57aee952ff6b15fe69ef718ad2832f53c9cd3e287184"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_query_field_json.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 17876,
+        "sha256": "5d43cf117bf92844f205eeda818497d717e6fadd1ba09e2a58999414bacd7de4"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 17876,
+        "sha256": "ee2c5fcfa724f2a099d9272e45c109e99921a38de71bfde54138948c84a58243"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_redirect.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9620,
+        "sha256": "37f7255f9d6ee9e7a8fd931c64467c4fff7f957a948c388f64fd1dbd648699dc"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9620,
+        "sha256": "58e8287d04605536de31a0f98e7ff2146c9541bb8d7bcfa2699f9ce40a3c0ded"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_rewrite.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9688,
+        "sha256": "2c772222e6cab38de30be69c00646cc4f610dc4d3b0d44e7e0685cbe4e87dfd1"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9688,
+        "sha256": "0a73f32922162ae6ae3756b63595464668bc1ee392b254f46a7e8bcc47969f43"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_smbdav.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 76124,
+        "sha256": "ec9c6a6e2ebddf7075353f3da05576eb930ab1a2be21b5f71f7853f7aca7f534"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 80220,
+        "sha256": "c43d86020b3a7ae044916a87d8910239d09f42f2fa4d88b5216da86a02a43750"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_staticfile.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13792,
+        "sha256": "62f5848671aa8212369f40424e857c22f76e7971f76adb19e2cf111e566390c5"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13792,
+        "sha256": "49a56d20fcdd13bca9dfd9fbabf615079d014fe1f3a5321fa95057520544ae63"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_userdir.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9696,
+        "sha256": "293166d5921cc9a09c437cda9434afa1902660e59b0be8eef045ee52a87461e7"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9696,
+        "sha256": "cd22a2d70c69a8e2aaa4a59c99dc0ad2744930b8d0e6c16f01072532eadb0196"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_usertrack.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9672,
+        "sha256": "e19a83a35bf6fddc1885fc2df1051fd8a892ca75006b101544c4c24d70dd6cf1"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 9672,
+        "sha256": "5461c7139020619af8644ac66779192c15600065544bb2ce71bf8ae1116a1519"
+      }
+    },
+    {
+      "path": "/usr/lib/mod_webdav.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 71720,
+        "sha256": "8264b5b087ff51a0f3c8ecc61421d072ae56c0086844975bc7a54e56e7dae9b4"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 71720,
+        "sha256": "b3775874a6ed972291457491dd8ade7bdd6ecc020b045c5267d2cbd8bb48d711"
+      }
+    },
+    {
+      "path": "/usr/lib/netatalk/uams_dhx2_passwd.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13788,
+        "sha256": "50b0944f4769f953c8e4f5da6852e10a49b6528f5fcfed15462f61aba1980456"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13788,
+        "sha256": "a892dcab640d6ba9476d7c93161a9002d9985131bf0d33c376607f832c5fa56b"
+      }
+    },
+    {
+      "path": "/usr/lib/openvpn-plugin-auth-pam.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13708,
+        "sha256": "cdaa123fe23202119d72d7b7a730518fc3a62bbc9eac2fc05291e849d4d0f265"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13708,
+        "sha256": "895b5deb5dcf9d78ae04f946f7010b4216c9601f9497a8c43976f2e2f357325c"
+      }
+    },
+    {
+      "path": "/usr/lib/pam_unix.so",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5364,
+        "sha256": "d044ed7f18910b7f74b673efcf2053bd90f44943bab6787873a11b464f59de1b"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5364,
+        "sha256": "24772379099e05bff98cb9980a43ec0e4423dbd27b9664aea593671d31e655c3"
+      }
+    },
+    {
+      "path": "/usr/sbin/ahs",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 63392,
+        "sha256": "65da9862be5d058742fd1ed5c05dc916e0f8631c6ff31e3fcd269df01f0ddb84"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 63392,
+        "sha256": "af1ab0dfd654a85204290a3eba24412d2618f516f5db956d9d569febf1c53598"
+      }
+    },
+    {
+      "path": "/usr/sbin/avahi-daemon",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 63660,
+        "sha256": "02f423424df8b4e0d693c483d75cc97124fbc99cbe0e39057ec1db46795c2bfd"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 63660,
+        "sha256": "341110057dc7404bb9b673ac28cb462bcb946d55bdb9da7f4203dcee2cb71505"
+      }
+    },
+    {
+      "path": "/usr/sbin/hostapd",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5843216,
+        "sha256": "827940bbbdfcb62678bc06af58bffbd55d4899156e76985ba054b0482c6c20c7"
+      },
+      "after": {
+        "mode": 33277,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 5853712,
+        "sha256": "362e048fc1b2d14d3753f85627e6eeb71edebf8cc0bd6e325f6e7fa8f77f5361"
+      }
+    },
+    {
+      "path": "/usr/sbin/hostapd_cli",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 260088,
+        "sha256": "968f191125ed93fd562092d9af3967820fae8231a5996a4848bc1603bc975519"
+      },
+      "after": {
+        "mode": 33277,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 260288,
+        "sha256": "e554722824f89ca12f5354844b4fabc04e7fdc1dfc91f1d8155480d8f1ef376c"
+      }
+    },
+    {
+      "path": "/usr/sbin/ip",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 321580,
+        "sha256": "b7d81d827e743c034791d6a426c28952c9dc3e9cfa70ba5f3a0d25980681902c"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 321580,
+        "sha256": "9d2aef5792558fd77c757fa5ac4b6cd830750332d8022027e64cdd15ad976a99"
+      }
+    },
+    {
+      "path": "/usr/sbin/ipset",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 111204,
+        "sha256": "f0e008e624207d4b1f96a13f45173c7a7c8768e3074e29ee2cfb15f0276c6d37"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 111204,
+        "sha256": "f0ba716b807ebc289deda46f859215ac2315c50be080797383bd65a9b92618e5"
+      }
+    },
+    {
+      "path": "/usr/sbin/iw",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 593440,
+        "sha256": "8a90995e18a10da218d76220c38ba634582e8e49a39960cd17ead3405282ade5"
+      },
+      "after": {
+        "mode": 33277,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 595208,
+        "sha256": "b3c3bd360afceaaf926750a73385b92688d01cb6382458507ec3610e6bb2ca2a"
+      }
+    },
+    {
+      "path": "/usr/sbin/lighttpd",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 216820,
+        "sha256": "ced6fc6ca71d8b3b578d8af9a448403c05e8f0cbf3655b4bddffa824189dda92"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 216820,
+        "sha256": "0240433319e44dceb22c00d05fdbaf8f91d6be8bd1577bd0b01199120ce3d428"
+      }
+    },
+    {
+      "path": "/usr/sbin/lldpcli",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 79480,
+        "sha256": "3a9ee461a1e4e4706f751f776c4331478d15ec2f57b168190b9da583583b0b71"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 79480,
+        "sha256": "95f3f2282b079400fb61c9ebc96462c210f1689bf2e632c62b36a41dd04790e5"
+      }
+    },
+    {
+      "path": "/usr/sbin/lldpd",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 143516,
+        "sha256": "3a691d457fef01f892cd62aff175ecb8717581381db5824f35a4b4bae5fb32b2"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 143516,
+        "sha256": "4087e15f4b40fedb376406ba4ea21efd65a87672de353bc84087cc1eeb6d305a"
+      }
+    },
+    {
+      "path": "/usr/sbin/miniupnpd",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 129744,
+        "sha256": "82e7f3c5302ca1307a1243660d113be70b18135575143a1ddef5b4d469b5cd33"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 129744,
+        "sha256": "5e36cf0e0f8432c8ed6a3621bd13e516be7963f82bd0edd2ecb9960209c896a6"
+      }
+    },
+    {
+      "path": "/usr/sbin/networkmap",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 97792,
+        "sha256": "f9d0bad86ce7ae7b94f1c3eb97cb90d90d20c4d8cbb582cd282e9b28b989d070"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 97792,
+        "sha256": "1fd0e9dc81c303f1e74076d21370f7f08e996f88b41e520fec09fe0398335110"
+      }
+    },
+    {
+      "path": "/usr/sbin/openvpn",
+      "before": {
+        "mode": 33088,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 498660,
+        "sha256": "3a8d0f379e958464fa2a64551c25c1a7674d00bc9cd681ca50984871590bf022"
+      },
+      "after": {
+        "mode": 33088,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 498660,
+        "sha256": "f5497d2947df14af55834b860addb5288364742f8fcc270f6402949626eb90c0"
+      }
+    },
+    {
+      "path": "/usr/sbin/public.pem",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 451,
+        "sha256": "fb168c9d7ac12e97a996ea57c6a35c2db47a8fbfe7de57c4ad712bdf4546f157"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 451,
+        "sha256": "96be045f42d46a694518e94380b54bb479688c7fc7cde8239e01579927a7e109"
+      }
+    },
+    {
+      "path": "/usr/sbin/rdisc6",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13860,
+        "sha256": "e6327a7a00ffed697b61fa1d2e7dd3f051d2999eb3737db3adfd3185eac50026"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 13860,
+        "sha256": "28c0d92ff56087d381b69df0a4242502bd029dc05a0d32d8576972aa4aa99186"
+      }
+    },
+    {
+      "path": "/usr/sbin/socat",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 195072,
+        "sha256": "2b551afadfb97b896ba6fa5fb825f33fe1c30f64581728765c7cddc2cb3729e3"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 195072,
+        "sha256": "8dfa1508acc25247c862054d244ee2c3855dd5887a3f25871f0c002e404c255d"
+      }
+    },
+    {
+      "path": "/usr/sbin/stubby",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 339252,
+        "sha256": "89b4e2361d6036f14cd5c7290f261a271fffe714bb4953294009be81544a3ffb"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 339252,
+        "sha256": "fb58e2cd6d947b028619bd91a279ff99f9472b8725e98602d295620678e73301"
+      }
+    },
+    {
+      "path": "/usr/sbin/tc",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 281908,
+        "sha256": "5295bb50b78c1d8400cdf144f1930cb03ee329230ff4f061ad69587ed73da6d6"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 281908,
+        "sha256": "abb4a9e20c75c4a38efa667d04d2e9a9a00de2adca23a95db8c49a5867d0df4e"
+      }
+    },
+    {
+      "path": "/usr/sbin/traceroute",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 61672,
+        "sha256": "20bdaefa9b392d995a3eeb3cced7931d180d818a4863710237d198ae57c02d98"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 61668,
+        "sha256": "d63b5f13820537b0879018682a4240623b6f1c66bc37e4e7d842c7cbd9467931"
+      }
+    },
+    {
+      "path": "/usr/sbin/usbmode",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 18236,
+        "sha256": "bce0524a3a2658da842b2371bd2d0bcc406c21b87c74d83f283777186fea3cc6"
+      },
+      "after": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 18236,
+        "sha256": "24b57b72474054ded4e5e84ccae9eac5efdf38fdd34ecfc69ebdefd07e8a6819"
+      }
+    },
+    {
+      "path": "/usr/sbin/wpa_cli-2.7",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 320880,
+        "sha256": "6a44ab769bc69880661ad01388855f9ef84621411cc4cf1ba5a154d406d50784"
+      },
+      "after": {
+        "mode": 33277,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 321084,
+        "sha256": "f19b80dba2a59463aca7b128fb2df43fb7920ea3e40b56e805e504d9bfc8b0d0"
+      }
+    },
+    {
+      "path": "/usr/sbin/wpa_supplicant-2.7",
+      "before": {
+        "mode": 33261,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4686980,
+        "sha256": "46cacf47ce0778728529b9132588342d5bf66806292d603977667d58d9a18db7"
+      },
+      "after": {
+        "mode": 33277,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 4695856,
+        "sha256": "1e89a78f169f15ebe5d130ecde9b14889c30edde9343d9305a8513f271df5a7d"
+      }
+    },
+    {
+      "path": "/www/Lang_Hdr.txt",
+      "before": {
+        "mode": 33188,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 394,
+        "sha256": "95e3aea38de03aeac76fd4733fab71b7576dfcdcf94061515591a94e41381240"
+      },
+      "after": {
+        "mode": 33204,
+        "uid": 0,
+        "gid": 0,
+        "type": "file",
+        "bytes": 452,
+        "sha256": "1e2e75c17ef60586a278cc77c6a4a780fa257441b15f1cfb44ef1b3a44cbe946"
+      }
+    }
+  ],
+  "image_crc_checks": {
+    "24437": {
+      "ec_valid": 636,
+      "vid_valid": 636,
+      "data_valid": 28
+    },
+    "24447": {
+      "ec_valid": 637,
+      "vid_valid": 637,
+      "data_valid": 28
+    }
+  },
+  "language_before_sha256": "1cf2b327d508253947c6c97887ed182fb88140c1457fbb85c380b7d620ed9f93",
+  "language_after_sha256": "1e2e75c17ef60586a278cc77c6a4a780fa257441b15f1cfb44ef1b3a44cbe946",
+  "transplanted_paths": [
+    "www/Lang_Hdr.txt"
+  ],
+  "source_sha256": {
+    "analysis/merlin_vpn_38813/audit_gui24447.py": "2278936699f6ec6508988eaa6f05baf2f55714874b0cf206e736566788ac5d8e",
+    "analysis/merlin_vpn_38813/gui24447.py": "199410a1c51e40d47896208728c94cc3054e2749881530a80f203d099e7537b4",
+    "build/asus24447_sources.json": "c743a658924e3dd9b70984c2cd5efc3e8f1b0d1051b857f2f555061b9a5293e4",
+    "build/inspect_upstream.py": "739d0afde9ad8706a9304bad66b7d6363d2b90ce9400a8abfc366027df34c81c",
+    "build/device_config.py": "73da2984cddf690c278a602288bf751ec215faf1779dcdd78654f0b59a7b733d",
+    "sources/localmod/Lang_Hdr.txt": "1e2e75c17ef60586a278cc77c6a4a780fa257441b15f1cfb44ef1b3a44cbe946"
+  },
+  "limits": [
+    "Binary differences are not proof of functional fixes or compatibility.",
+    "Only the confirmed language-name fix is selected; official binaries, kernel, drivers and permission changes are not transplanted.",
+    "No router access, flashing or device/visual acceptance."
+  ]
+}

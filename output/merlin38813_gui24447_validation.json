@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "status": "GUI24447_SOURCE_DATA_BUILD_BINDINGS_PASS_NOT_DEVICE_ACCEPTED",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "analysis/merlin_vpn_38813/quick.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "analysis/merlin_vpn_38813/check_gui24447.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "candidate_image": "output/RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w",
+  "candidate_sha256": "2e395d86ed6c9fae6797a426bca72ea4b7c59a39e81c7a6e366b5fe1b6e95115",
+  "candidate_report_sha256": "e3df1ef4fd01563fe8eacaea51fcd249305ab7375d27bc055c4929330a40e5b2",
+  "audit_report_sha256": "d3ba76fb40ab038a593d1ceef9b5c70a6b2d19493fcf470419165c175a4fd26f",
+  "source_sha256": {
+    ".github/workflows/check.yml": "5a6fef3f33f713c3245c17570a832d68a9c97dee76e1a1cbd43c1381c8af19c8",
+    ".gitignore": "af759da7496635c785df8ef32efcbedc85074f9b6d94cd2a4ec8426284976765",
+    "README.md": "ae321818d9e6b61f26c0436d7e066ab209eebbca546862e60acd0ba8295d7136",
+    "analysis/merlin_vpn_38813/audit_gui24447.py": "2278936699f6ec6508988eaa6f05baf2f55714874b0cf206e736566788ac5d8e",
+    "analysis/merlin_vpn_38813/build_candidate.py": "45734b183a2fa11276ca55c1baccc62a3b60b565ed9113c6f58f80664d1efde1",
+    "analysis/merlin_vpn_38813/build_gui24447.py": "5d2be8312b8871ef99a9c578b4a5bca06ac88d5ffc67b4db1c0ef6b60ae30b59",
+    "analysis/merlin_vpn_38813/check_gui24447.py": "0b73b1a5acf733eddcaa8b720c4a3d4e82de161867fc5a633d1474a996355c0b",
+    "analysis/merlin_vpn_38813/check_local_gate.py": "dd90e301feafe73e0b54eba39e99d0755294c9cc93a5c2be69316b0603ae9315",
+    "analysis/merlin_vpn_38813/gui24447.py": "199410a1c51e40d47896208728c94cc3054e2749881530a80f203d099e7537b4",
+    "analysis/merlin_vpn_38813/quick.py": "00164d4cb7670d06468f270494038859e35e13731171336fa6a49174d5fcdc4a",
+    "analysis/merlin_vpn_38813/vendor/Lang_Hdr_38813.before.txt": "1cf2b327d508253947c6c97887ed182fb88140c1457fbb85c380b7d620ed9f93",
+    "build/asus24447_sources.json": "c743a658924e3dd9b70984c2cd5efc3e8f1b0d1051b857f2f555061b9a5293e4",
+    "output/merlin38813_gui24447_notes.md": "e987e7f23d2ad1f2d8d184b90ed996b694b6919d794f2122427a96649b8e9fe2",
+    "sources/localmod/Lang_Hdr.txt": "1e2e75c17ef60586a278cc77c6a4a780fa257441b15f1cfb44ef1b3a44cbe946"
+  },
+  "source_checks_log_sha256": "dbdf56c594f874cdf7cfe8ab5c73f14fb5483c5a14d2b9458fa5d09d7ba704da",
+  "local_build_packages": [
+    {
+      "file": "busybox-static-1.37.0-r20.apk",
+      "sha256": "ee469aee2958feffd7f64dd96655704025ff60af614f77a1d7323dc237c34da2"
+    },
+    {
+      "file": "libcrypto3-3.5.9-r0.apk",
+      "sha256": "ede2ef7eca3b65a42e902aaf7890f9c5647dca0c55123a817179ad9f3bc6ef24"
+    },
+    {
+      "file": "libuuid-2.41.6-r1.apk",
+      "sha256": "24e944e8270c0626a0c2083bcdd4f3ee636923ca1f86fc32caa22c5462ce26b9"
+    },
+    {
+      "file": "linux-virt-6.12.115-r0.apk",
+      "sha256": "445dd29708c1df38c6643e2d6e7b4ac86ff6ab1e26e14f6c512c1e64794b51ef"
+    },
+    {
+      "file": "lzo-2.10-r5.apk",
+      "sha256": "4a031a091b2c2756df771678fc20469ff1ace0512124117cc7c2cc6d4d92f0f2"
+    },
+    {
+      "file": "mtd-utils-ubi-2.2.1-r0.apk",
+      "sha256": "050370223d822b483057a13e15d360262b572650a52f42af2e36ce4c71aafadb"
+    },
+    {
+      "file": "musl-1.2.5-r13.apk",
+      "sha256": "d616c430bcbe0bf452b7f6ea2669f2cad14e85644a7599f4f495115d021742ef"
+    },
+    {
+      "file": "zlib-1.3.2-r1.apk",
+      "sha256": "2d274cb1b2a36d0e8347d802e6dea8648cab952ea5fae1989ab72e725842a2c3"
+    },
+    {
+      "file": "zstd-libs-1.5.7-r0.apk",
+      "sha256": "a0e92d2225941a514eb0b2325b137fe6444ef9171627aae8129b74a6ad934ac4"
+    }
+  ],
+  "build_environment": "Alpine aarch64 kernel 6.12.115 in Virtualization.framework; no network device; 1 CPU / 1024 MiB",
+  "note": "The restored build kernel differs from the historical P7 test kernel. It is used only to generate UBIFS and is not included in the firmware.",
+  "firmware_repacked": true,
+  "whole_firmware_recompiled_from_source": false,
+  "full_runtime_gate_rerun": false,
+  "hour_soak_rerun": false,
+  "physical_router_accessed": false,
+  "physical_router_flashed": false,
+  "device_behavior_or_visual_accepted": false,
+  "published": false
+}

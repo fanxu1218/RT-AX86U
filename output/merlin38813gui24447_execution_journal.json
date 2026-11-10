@@ -1,0 +1,42 @@
+[
+  {
+    "command": [
+      "/Users/apple/Desktop/RT-AX86U/analysis/.runtime-venv/bin/python",
+      "analysis/merlin_vpn_38813gui24447/check_native_persist.py",
+      "--cases",
+      "download,checkpoint,kill-parent,kill-tree,offline,fresh,real-ddnsgo,before-commit,after-commit,committed-cleanup,no-space"
+    ],
+    "started_utc": "2026-11-10T06:04:45.758542+00:00",
+    "exit_code": 0,
+    "finished_utc": "2026-11-10T06:13:39.929376+00:00"
+  },
+  {
+    "command": [
+      "/Users/apple/Desktop/RT-AX86U/analysis/.runtime-venv/bin/python",
+      "analysis/merlin_vpn_38813gui24447/check_native_soak.py",
+      "--probe"
+    ],
+    "started_utc": "2026-11-10T06:13:39.930185+00:00",
+    "exit_code": 0,
+    "finished_utc": "2026-11-10T06:19:57.357058+00:00"
+  },
+  {
+    "command": [
+      "/Users/apple/Desktop/RT-AX86U/analysis/.runtime-venv/bin/python",
+      "analysis/merlin_vpn_38813gui24447/check_native_soak.py",
+      "--smoke"
+    ],
+    "started_utc": "2026-11-10T06:19:57.357422+00:00",
+    "exit_code": 0,
+    "finished_utc": "2026-11-10T06:26:23.571163+00:00"
+  },
+  {
+    "command": [
+      "/Users/apple/Desktop/RT-AX86U/analysis/.runtime-venv/bin/python",
+      "analysis/merlin_vpn_38813gui24447/check_native_soak.py"
+    ],
+    "started_utc": "2026-11-10T06:26:23.571503+00:00",
+    "exit_code": 0,
+    "finished_utc": "2026-11-10T07:27:49.834793+00:00"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "status": "ALL_SIX_HISTORICAL_PAYLOADS_BYTE_MODE_VERIFIED",
+  "historical_report": "output/real_plugin_tests.json",
+  "historical_report_sha256": "d4051cc99b5a44dfdf94ff37802fc48d4c11ff7a721a62a52b10b43dfc9bc0e7",
+  "ddnsto_payload_source_commit": "d86e8bd3ae524bf557d0e95b070ecc1ccf3cda1f",
+  "packages": [
+    {
+      "path": "sources/realplugins/gui24447-aliddns-history.tar.gz",
+      "historical_archive_sha256": "09da7e6ed0449375e71f805e509572d942f5714bd54fa1d19ba97cbf628e3461",
+      "archive_sha256": "09da7e6ed0449375e71f805e509572d942f5714bd54fa1d19ba97cbf628e3461",
+      "all_payload_files_modes_versions_and_sizes_identical": true,
+      "payload_files": 8
+    },
+    {
+      "path": "sources/realplugins/gui24447-aliddns-2.4.tar.gz",
+      "historical_archive_sha256": "73f5743f02a2b08fe5a9a7858ec96e7adc0290f5cdf84898842bf97ec0a24995",
+      "archive_sha256": "ede2c37b12ebabadd5289b4cafec18f011fe0fc3d4806729331757eda37cdedf",
+      "all_payload_files_modes_versions_and_sizes_identical": true,
+      "payload_files": 8
+    },
+    {
+      "path": "sources/realplugins/gui24447-ddnsto-history.tar.gz",
+      "historical_archive_sha256": "75e894172bf78433c10956b3821a0f85192a97ecf0f68f59c9244b846f17860b",
+      "archive_sha256": "75e894172bf78433c10956b3821a0f85192a97ecf0f68f59c9244b846f17860b",
+      "all_payload_files_modes_versions_and_sizes_identical": true,
+      "payload_files": 12
+    },
+    {
+      "path": "sources/realplugins/gui24447-ddnsto-4.2.2.tar.gz",
+      "historical_archive_sha256": "afef31317d72c43f2557e66acd6c33cf802ec3db6ca201737537ce73a79bfaf3",
+      "archive_sha256": "2609b6c2919ba509409dafd964d308fdd55a0b472909704ee561d4465986dc3b",
+      "all_payload_files_modes_versions_and_sizes_identical": true,
+      "payload_files": 10
+    },
+    {
+      "path": "sources/realplugins/gui24447-ddnsgo-1.28.0.tar.gz",
+      "historical_archive_sha256": "c4c44a31df7ec82d76b29267e1c49ac30c1a0818642f377b2cf39b2cca44b67d",
+      "archive_sha256": "c4c44a31df7ec82d76b29267e1c49ac30c1a0818642f377b2cf39b2cca44b67d",
+      "all_payload_files_modes_versions_and_sizes_identical": true,
+      "payload_files": 7
+    },
+    {
+      "path": "sources/realplugins/gui24447-ddnsgo-1.29.0.tar.gz",
+      "historical_archive_sha256": "34f541f8eba6840847a408f408a47032f9ea83b0326a31e21c70a0fbe497dfce",
+      "archive_sha256": "f58284d87580fb05d515d283fffea5a8c37694df2e067691e7213396a81c87ed",
+      "all_payload_files_modes_versions_and_sizes_identical": true,
+      "payload_files": 8
+    }
+  ]
+}

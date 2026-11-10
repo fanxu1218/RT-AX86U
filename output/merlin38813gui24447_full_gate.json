@@ -1,0 +1,266 @@
+{
+  "schema": 1,
+  "status": "GUI24447_FULL_LOCAL_RUNTIME_REGRESSION_PASS_NOT_DEVICE_ACCEPTED",
+  "candidate_image": "output/RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w",
+  "candidate_sha256": "2e395d86ed6c9fae6797a426bca72ea4b7c59a39e81c7a6e366b5fe1b6e95115",
+  "test_selector_manifest": {
+    "path": "output/merlin38813gui24447_native_candidate_tests.json",
+    "sha256": "94ffcb6db2259c79c918ce68f74a935357147a5075dda95e31e5c1d27d7eadbb",
+    "actual_build_receipt": "output/merlin38813_gui24447_candidate.json",
+    "inherited_parent_reference_fields": [
+      "metadata",
+      "build_vm",
+      "overlay_donor_sha256"
+    ],
+    "note": "The selector chooses the patched image/rootfs; inherited P7 ancestry fields are historical references. GUI24447 build/readback facts are in the separate actual build receipt."
+  },
+  "native_checks": 36,
+  "online_checks": 7,
+  "compiled_adapters": 6,
+  "candidate_uu_cases": 6,
+  "frontend_checks": 7,
+  "persistence_cases": [
+    "after-commit",
+    "before-commit",
+    "checkpoint",
+    "committed-cleanup",
+    "download",
+    "fresh",
+    "kill-parent",
+    "kill-tree",
+    "no-space",
+    "offline",
+    "real-ddnsgo"
+  ],
+  "persistence_boots": 24,
+  "measured_hour_seconds": 3605.78023352,
+  "host_elapsed_seconds": 3683.5042571248487,
+  "hour_queries": 1249,
+  "hour_events": 35,
+  "resource_samples": 135,
+  "event_counts": {
+    "abort": 3,
+    "backend": 3,
+    "center": 2,
+    "ddns": 2,
+    "dns": 2,
+    "fancy-client": 2,
+    "nat": 2,
+    "partial": 3,
+    "proxy-upstream": 2,
+    "signals": 2,
+    "ssh": 2,
+    "tls": 2,
+    "upnp": 2,
+    "uu": 2,
+    "vpn-client": 2,
+    "vpn-upstream": 2
+  },
+  "service_checks": {
+    "core_page_queries": 103,
+    "curl_wget_https_pairs": 104,
+    "dns_queries": 2384,
+    "proxy_queries": 1197,
+    "ssh_queries": 104,
+    "tun_traffic": 103,
+    "upnp_cycles": 108
+  },
+  "unplanned_failures": 0,
+  "data_preserved": true,
+  "evidence": {
+    "output/merlin38813gui24447_candidate_runtime_tests.json": {
+      "sha256": "905cedc076e0609b66e9f029cb0d8d8739e88334ddbe6add0bacff67278dc710",
+      "status": "LOCAL_NATIVE_MERLIN_CANDIDATE_RUNTIME_PASS"
+    },
+    "output/merlin38813gui24447_sync_aux_tests.json": {
+      "sha256": "5320d3456d4794585d8332cd6a0902081f5ca7fa2987bc306fbb3619e89bc029",
+      "status": "LOCAL_SYNC_CENTER_HELPER_CONTRACT_PASS"
+    },
+    "output/merlin38813gui24447_restore_probe_tests.json": {
+      "sha256": "a9cfce8a85c2b25f62f0beec4860210351b9b4d9e271da330c7f7394c5102027",
+      "status": "LOCAL_NATIVE_RESTORE_NOFLUSH_CONTRACT_PASS"
+    },
+    "output/merlin38813gui24447_vpn_generation_tests.json": {
+      "sha256": "9dc07b7c1eba0460da17a572aca2a8064bfeb1a00db652c3afa3e932175f859b",
+      "status": "LOCAL_NATIVE_VPN_GENERATION_PASS"
+    },
+    "output/merlin38813gui24447_real_tunnel_tests.json": {
+      "sha256": "5cfa94212bcf30d9aaf80ee92e79cfd5204da2f9bc256e958f51ee81f666ac7c",
+      "status": "LOCAL_NATIVE_REAL_TUNNEL_PROBE_PASS"
+    },
+    "output/merlin38813gui24447_plugins_fancyss_tests.json": {
+      "sha256": "12dcda6bbae0f24ae028028327c0e4601fc828662b3a0cc98c5eadbe170bed6c",
+      "status": "LOCAL_NATIVE_AUTHENTIC_PLUGINS_PASS"
+    },
+    "output/merlin38813gui24447_plugins_hnd_upgrade_tests.json": {
+      "sha256": "40b018aaefb625842a7906070b582fb76feb98208872a738d594fce05ff28ba4",
+      "status": "LOCAL_NATIVE_AUTHENTIC_PLUGINS_PASS"
+    },
+    "output/merlin38813gui24447_plugins_hnd_fresh_tests.json": {
+      "sha256": "6ba2a89be34eabc646de4b9ee630b613bff434ecead498621a9ccacd9af4528b",
+      "status": "LOCAL_NATIVE_AUTHENTIC_PLUGINS_PASS"
+    },
+    "output/merlin38813gui24447_native_coexist_probe_tests.json": {
+      "sha256": "6e7a524bf784dcc7c8a5b8aa672360561f0fac1d1b90915861f3b2b1d69f3bb4",
+      "status": "FINAL_CANDIDATE_HANDSHAKE_RECOVERY_PASS"
+    },
+    "output/merlin38813gui24447_native_coexist_smoke_tests.json": {
+      "sha256": "b128387b34be1efc8c021b1229e8a060703740ca90c030161d6006e2f87a3844",
+      "status": "LOCAL_COEXIST_SMOKE_PASS"
+    },
+    "output/merlin38813gui24447_native_coexist_60m_tests.json": {
+      "sha256": "7756f4a447acf8dc4d7be6b8fd026db7ed5383df9a8aed282ca43a6fb6155872",
+      "status": "LOCAL_60_MINUTE_COEXIST_PASS"
+    },
+    "output/merlin38813gui24447_build_inputs.json": {
+      "sha256": "bf70752464aeb217cf0c0e5a2ed348f25e8e18e506a001bfb80e19155251724a",
+      "status": "P7_ADAPTER_RECOMPILE_BYTE_EQUIVALENCE_PASS"
+    },
+    "output/merlin38813gui24447_uu_matrix_tests.json": {
+      "sha256": "3e9eac458107fe72dd4b5d1ced79c6071137adf6a836215fe8877995adacbe7e",
+      "status": "NATIVE_UU_USERSPACE_COMPARISON_OBSERVED"
+    },
+    "output/merlin38813gui24447_persist_foundation_foundation_tests.json": {
+      "sha256": "1698d691941c2a91af9bf2c853ac96b0f126b438f1bc6289858015cbe5703b1f",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_download_cut_tests.json": {
+      "sha256": "fdd6cc29bb6240da4dcf699ca0aff8f50742fba272c3c940541780cc38a80f28",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_download_verify_tests.json": {
+      "sha256": "c53baea479328d9925bc1a05858b934a1a33b3a919cd2283cbbfa7820396c700",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_checkpoint_cut_tests.json": {
+      "sha256": "afdb1789aaec72971f06b92db220b00023aba8ec4a24ac54a05416aa6730cdf4",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_checkpoint_verify_tests.json": {
+      "sha256": "48d2c9d313c5e63d363ddd67f932bfb705e4dcf68540d34234f44bf42fd2d07b",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_kill-parent_cut_tests.json": {
+      "sha256": "4dac195394747b955d809f5b0df2f312aa9daf278ce7a138b1790464ab4a43ce",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_kill-parent_recover-db-cut_tests.json": {
+      "sha256": "2ff2ee9b0274cb8041c6ba80c0117dd370b79c8cc659a6a76e467552b2ce3516",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_kill-parent_verify_tests.json": {
+      "sha256": "8014452e27fbd8b1868bb3c6d13bb1e36fe09643f4422a08e3faa3596f6cf74e",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_kill-tree_cut_tests.json": {
+      "sha256": "d7d9210f941ab5b5944d5def39e30fd09eaffacd344ef18f64e8120edb1630a6",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_kill-tree_recover-cut_tests.json": {
+      "sha256": "d297e729c5722a0bed35039165a822ada20defd17d20a279e673e6cf9d42b62c",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_kill-tree_verify_tests.json": {
+      "sha256": "87bd51f240bcc16ec06dee7594a080c3d785485f1ceb739cc8182718faa02d0e",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_offline_cut_tests.json": {
+      "sha256": "ed209a26a548eff54dee6d10bbb795ce48e71c08f39abebc6095bccbfd9f6a8a",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_offline_verify_tests.json": {
+      "sha256": "cbba1b8baab3e45c7aa036b11da8e8b0c3569450ada7fd77285ae1c6faca9010",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_fresh_cut_tests.json": {
+      "sha256": "21b70426dccd0fc9498dc27656884369ecc501e4d5c7a22e342ceed021eb4510",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_fresh_verify_tests.json": {
+      "sha256": "4bc79b4d9babef438a4174d3f257e60042db080b01cbdb7c8b08311206de562b",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_real-ddnsgo_cut_tests.json": {
+      "sha256": "ebbe008b5845b8bf9856031c2610ac45b1665e01f089a1540a658bf105073be0",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_real-ddnsgo_verify_tests.json": {
+      "sha256": "cb62dfaf0faa14119a391fdd7a731955f8929e0acd82406263b239256f108198",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_before-commit_cut_tests.json": {
+      "sha256": "a8a1f167873bc718195df1a94b6b1ca4fc1c9417c7e6f0fc6036cb7978e06721",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_before-commit_verify_tests.json": {
+      "sha256": "8e239371e5c47dd9dea1e383357a83fc224ff94dc67c67562b017fa35908b4aa",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_after-commit_cut_tests.json": {
+      "sha256": "8cb10ff8437ab6cc5297b8dce74417c8077ef50a98406860f9ca222510ac0d1c",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_after-commit_verify_tests.json": {
+      "sha256": "29577eb940613e1e140b4935f56c3f654e888a52ab45ec78edb06b1877277f59",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_committed-cleanup_cut_tests.json": {
+      "sha256": "5eff91a1414396523da2fde9bad1e81f36efdf83906cc23a225c690e46653b32",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_committed-cleanup_verify_tests.json": {
+      "sha256": "c8c6b2fa4c6ecff9a30e4bbf1afa8dd5506fea797aaad202cfe25cf46fb6cf9c",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persist_no-space_exercise_tests.json": {
+      "sha256": "0022e2d3a969c54194d87409c941ca567cd20ad85432d76f5238eddaa1b09bca",
+      "status": "LOCAL_NATIVE_PERSISTENCE_BOOT_PASS"
+    },
+    "output/merlin38813gui24447_persistence_tests.json": {
+      "sha256": "882c3308848bd8a04e96029a98c39c519c532733c439f252e65d741b91423638",
+      "status": "LOCAL_NATIVE_PERSISTENCE_SELECTED_CASES_PASS"
+    },
+    "output/merlin38813gui24447_frontend_tests.json": {
+      "sha256": "c85144df3bbdd89bc65b251d32766c545ecba7200af335d8d125c472aab3a11d",
+      "status": "LOCAL_DISTRIBUTED_FRONTEND_CONTRACT_PASS"
+    }
+  },
+  "legacy_factory_reference": [
+    {
+      "base": "factory",
+      "cases": 6,
+      "contract_matches": 2
+    }
+  ],
+  "runtime_source_archive": {
+    "path": "output/merlin38813gui24447_runtime_sources.tar.gz",
+    "sha256": "0f75fe0a283e87d16c0b78b11e933610a573d65f2e6c237b6976b201298cd2ce",
+    "bytes": 513990,
+    "manifest": "output/merlin38813gui24447_runtime_sources.manifest.json",
+    "manifest_sha256": "20685ff2a53c6678d514a9497c4574844619361966094d5b9f1a9f765406aa55",
+    "archived_files": 256,
+    "reconstructed_persistence_boots": 24
+  },
+  "source_sha256": {
+    "analysis/merlin_vpn_38813/verify_gui24447_regression.py": "48191bb3cd38743893217979868def7c9ff934c1ed36fd87ed41cf3858081adb",
+    "analysis/merlin_vpn_38813/archive_gui24447_runtime.py": "4eb106f4e0cce73bfe049af319fce6107154551433c119f93dcaacd5ac00fe03"
+  },
+  "original_p7_evidence_unchanged": true,
+  "firmware_bytes_unchanged_during_regression": true,
+  "flash_ready": false,
+  "physical_router_accessed": false,
+  "physical_router_flashed": false,
+  "target_pid1_boot_tested": false,
+  "actual_uu_cloud_account_or_game_tested": false,
+  "real_wan_wifi_nat_aimesh_tested": false,
+  "browser_visual_accepted": false,
+  "published": false,
+  "limits": [
+    "All runtime gates concern the exact GUI24447 candidate, under isolated Linux 6.12.115/QEMU fixtures.",
+    "The archived r8 UU observation is a separate reference, not a pass/fail result for this candidate; its raw differences are retained.",
+    "The old-core upgrade fixture is the actual archived r8 1.9.50 core, distinct from the historical r9 fixture.",
+    "Plugin payloads retain all historical file bytes/modes/versions; changed archive containers and DDNSTO recovery are documented.",
+    "No target Broadcom4.1/PID1, physical NAND/UBIFS, Wi-Fi/NAT/AiMesh, real providers/UU, or live browser/device acceptance.",
+    "One bounded hour and per-process RSS/FD observations cannot prove multi-day stability or absence of leaks."
+  ]
+}

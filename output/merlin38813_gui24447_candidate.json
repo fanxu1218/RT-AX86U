@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "status": "P7_GUI24447_BUILT_FULL_READBACK_PASS_NOT_FLASH_READY",
+  "image": "output/RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w",
+  "sha256": "2e395d86ed6c9fae6797a426bca72ea4b7c59a39e81c7a6e366b5fe1b6e95115",
+  "bytes": 87949332,
+  "base_image": "upstream/p7/RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w",
+  "base_sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b",
+  "changed_paths": [
+    "www/Lang_Hdr.txt"
+  ],
+  "readback_paths": 3560,
+  "packing": {
+    "image": null,
+    "bytes": 87949332,
+    "sha256": "2e395d86ed6c9fae6797a426bca72ea4b7c59a39e81c7a6e366b5fe1b6e95115",
+    "rootfs_lebs": 639,
+    "leb_size": 126976,
+    "rootfs_fmt_version": 4,
+    "vendor_boot_region_unchanged": true,
+    "vendor_descriptor_unchanged": true,
+    "vendor_wfi_parameters_unchanged": true,
+    "status": "EXPERIMENTAL_NOT_DEVICE_TESTED"
+  },
+  "content_modes_owners_symlinks_hardlinks_verified": true,
+  "image_and_ubi_crcs_verified": true,
+  "firmware_base_remains": "Merlin 3004.388.13 / P7; ASUS language-name backport only",
+  "stage": "build/casefs/gui24447-build-e3c4f55a1652bce8/rootfs",
+  "protected_sha256": {
+    "output/merlin38813_native_candidate_tests.json": "d30c5d4ceac483205900f9a38428cb777f89edc376a0a0a4c9ad65c67f421a2b",
+    "output/merlin38813_local_gate.json": "1f2d0075c5b6cd1dc06b3cb77a78aa3148fef44765c306477cde0f5c1bb0400e",
+    "output/merlin38813_hour_gate.json": "1778cd33a1d570deea3ca078653c89ebd306e2f69205248361f4351d16a89bb7",
+    "output/merlin38813_release_delivery.json": "a2536887de5d314c035dde9d8a076592bbe0593433b4c1695cc562cf4090c9e4"
+  },
+  "source_sha256": {
+    "analysis/merlin_vpn_38813/build_gui24447.py": "5d2be8312b8871ef99a9c578b4a5bca06ac88d5ffc67b4db1c0ef6b60ae30b59",
+    "analysis/merlin_vpn_38813/gui24447.py": "199410a1c51e40d47896208728c94cc3054e2749881530a80f203d099e7537b4",
+    "analysis/merlin_vpn_38813/audit_gui24447.py": "2278936699f6ec6508988eaa6f05baf2f55714874b0cf206e736566788ac5d8e",
+    "build/asus24447_sources.json": "c743a658924e3dd9b70984c2cd5efc3e8f1b0d1051b857f2f555061b9a5293e4",
+    "sources/localmod/Lang_Hdr.txt": "1e2e75c17ef60586a278cc77c6a4a780fa257441b15f1cfb44ef1b3a44cbe946",
+    "build/repack_image.py": "d38c28dc33a5b90a91bec88624d1ef5fd0a14a8f8ea2b1479cde15d9a1e16c53",
+    "build/LinuxBuilder.swift": "76c5c26a8a857f399f101f0f335df3ff2a4e07f7bff072e4e958531299482de4",
+    "build/make_initramfs.py": "befb1bea33cd882f42b1b3fcb2642e1a3be1d564012a2ca509e81b61eb636ae8"
+  },
+  "build_tools_sha256": {
+    "LinuxBuilder": "44272e10999838c4b14b959f783a4f336490cdca40c09c4cc8aa0e57530def52",
+    "linux-Image": "ee66670649107e2efe319a436c9b9caf84b093d471f73577d54292e5c081b80b",
+    "linux-initramfs.gz": "e660fc1570019a4563be43bb8864e5d0d526903f382d449bd867dfe88078b685"
+  },
+  "build_log_sha256": "f34ec473c97124e987e09db83f700829aa3fffff6ce6c6dd494f5b2cad682b58",
+  "physical_router_accessed": false,
+  "physical_router_flashed": false,
+  "device_or_visual_accepted": false,
+  "published": false,
+  "limits": [
+    "Repacked/read back; not a fresh full P7 runtime gate or hour-long test.",
+    "Kernel/driver/WAN/Wi-Fi/NAT/AiMesh, actual UU and physical upgrade remain untested.",
+    "The original P7 release and its bound evidence remain unchanged."
+  ]
+}

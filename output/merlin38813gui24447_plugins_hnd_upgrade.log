@@ -1,0 +1,34 @@
+LINUX_BUILDER_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261110060054, 2026/11/10 ~ 2046/11/11
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+PASS native_shell_resolution_center_start_original_process_helper_private_api_and_uu
+NATIVE_CURL_PROBE numeric_hits=1 numeric_body="owned-curl-probe" hostname_hits=1 hostname_body="  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0\r100    16 100    16   0     0   860     0  --:--:-- --:--:-- --:--:--  1142\nowned-curl-probe"
+PASS native_merlin_curl_numeric_and_hostname_requests_pinned_to_loopback
+PIPE_REGRESSION "owned-pipe\nowned-pipe\n"
+PASS required_tee_xargs_added_without_replacing_official_busybox
+PASS aliddns_fresh_old_original_scripts_files_and_authenticated_page
+PASS ddnsto_fresh_old_original_scripts_files_and_authenticated_page
+PASS ddnsgo_fresh_old_original_scripts_files_and_authenticated_page
+PASS ddnsgo_old_real_arm_binary_runs_local_web_ui_alongside_uu
+PASS aliddns_update_original_scripts_files_and_authenticated_page
+PASS ddnsto_update_original_scripts_files_and_authenticated_page
+PASS nonempty_registered_runtime_directory_rejected_without_stopping_plugin_or_uu
+PASS ddnsgo_update_original_scripts_files_and_authenticated_page
+PASS three_genuine_version_updates_preserve_configuration_and_restart_running_ddnsgo
+PASS aliddns_real_disabled_configuration_callback
+PASS ddnsto_real_disabled_configuration_callback
+PASS ddnsgo_real_status_callback_and_uu_coexist
+PASS ddnsgo_real_perp_supervision_shares_center_supervisor_with_uu_alive
+PASS wan_hook_uses_official_shell_and_restarts_real_plugin_without_restarting_uu
+PASS real_ddnsgo_nat_hook_preserves_private_api_and_uu
+PASS center_restart_restores_real_supervised_plugin_configuration_and_keeps_uu
+PASS aliddns_updated_custom_uninstall_preserves_peers_and_uu
+PASS ddnsto_updated_custom_uninstall_preserves_peers_and_uu
+PASS ddnsgo_updated_custom_uninstall_preserves_peers_and_uu
+REAL_PLUGIN_RESULT {"checks":["native_shell_resolution_center_start_original_process_helper_private_api_and_uu","native_merlin_curl_numeric_and_hostname_requests_pinned_to_loopback","required_tee_xargs_added_without_replacing_official_busybox","aliddns_fresh_old_original_scripts_files_and_authenticated_page","ddnsto_fresh_old_original_scripts_files_and_authenticated_page","ddnsgo_fresh_old_original_scripts_files_and_authenticated_page","ddnsgo_old_real_arm_binary_runs_local_web_ui_alongside_uu","aliddns_update_original_scripts_files_and_authenticated_page","ddnsto_update_original_scripts_files_and_authenticated_page","nonempty_registered_runtime_directory_rejected_without_stopping_plugin_or_uu","ddnsgo_update_original_scripts_files_and_authenticated_page","three_genuine_version_updates_preserve_configuration_and_restart_running_ddnsgo","aliddns_real_disabled_configuration_callback","ddnsto_real_disabled_configuration_callback","ddnsgo_real_status_callback_and_uu_coexist","ddnsgo_real_perp_supervision_shares_center_supervisor_with_uu_alive","wan_hook_uses_official_shell_and_restarts_real_plugin_without_restarting_uu","real_ddnsgo_nat_hook_preserves_private_api_and_uu","center_restart_restores_real_supervised_plugin_configuration_and_keeps_uu","aliddns_updated_custom_uninstall_preserves_peers_and_uu","ddnsto_updated_custom_uninstall_preserves_peers_and_uu","ddnsgo_updated_custom_uninstall_preserves_peers_and_uu"],"details":{"actual_process_helper_sha256":"7b2f5abaf14b8df0bbec3c3f5221c500d13c7dd9f02469ce918b59e80f92b1d3","ddnsgo_binary_version":"v6.17.7","ddnsto_binary_version":"4.2.2","guest_architecture":"armv7l","native_wget_sha256":"443c4c91445200a55191df437cb57209422a1c01ca6506f5fae05db10fb71bc3","plugin_binaries_replaced_by_fixtures":false,"real_third_party_packages_executed":true,"real_uu_monitor_executed":false,"uu_api_requests":1,"uu_launches":1,"uu_monitor_downloads":1}}
+LINUX_READONLY_JOB_STATUS=0

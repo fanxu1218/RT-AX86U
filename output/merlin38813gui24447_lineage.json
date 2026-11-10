@@ -1,0 +1,311 @@
+{
+  "schema": 1,
+  "candidate_sha256": "2e395d86ed6c9fae6797a426bca72ea4b7c59a39e81c7a6e366b5fe1b6e95115",
+  "generator_sha256": "163f15155e01dfa3ae2a1062619ec0bd48403af85033fca846f0cdee44c7eec6",
+  "files": {
+    "analysis/merlin_vpn_38813gui24447/audit_gui24447.py": {
+      "source": "analysis/merlin_vpn_38813/audit_gui24447.py",
+      "source_sha256": "2278936699f6ec6508988eaa6f05baf2f55714874b0cf206e736566788ac5d8e",
+      "generated_sha256": "071b436cfef7989f60d2eb4c27f46ca15b6a2d87a8a6fc4277db42bc27de1acd"
+    },
+    "analysis/merlin_vpn_38813gui24447/build_candidate.py": {
+      "source": "analysis/merlin_vpn_38813/build_candidate.py",
+      "source_sha256": "45734b183a2fa11276ca55c1baccc62a3b60b565ed9113c6f58f80664d1efde1",
+      "generated_sha256": "206ac268c57a225dd78eee4b0c8c29211842c1d773c84096b8c334be3b6a8692"
+    },
+    "analysis/merlin_vpn_38813gui24447/build_gui24447.py": {
+      "source": "analysis/merlin_vpn_38813/build_gui24447.py",
+      "source_sha256": "5d2be8312b8871ef99a9c578b4a5bca06ac88d5ffc67b4db1c0ef6b60ae30b59",
+      "generated_sha256": "f29dfd86bbc086d558bc743eae96155992db9953533dba5c831fa8db148c069e"
+    },
+    "analysis/merlin_vpn_38813gui24447/candidate_runtime.go": {
+      "source": "analysis/merlin_vpn_38813/candidate_runtime.go",
+      "source_sha256": "fe96114a1d449817d3cbdac690a6af86eaf6154d8d025449aed9df4febf9b925",
+      "generated_sha256": "54b8394e0cbf6762bf1a37664bd98dda0ee4e59c4cfc5bee43c2ebcc8545ffb4"
+    },
+    "analysis/merlin_vpn_38813gui24447/center_sleep.c": {
+      "source": "analysis/merlin_vpn_38813/center_sleep.c",
+      "source_sha256": "8ae6e6d8155c6a50ad6881a8dc490a82a6be0382c2c6a759d290d932f6390f13",
+      "generated_sha256": "8ae6e6d8155c6a50ad6881a8dc490a82a6be0382c2c6a759d290d932f6390f13"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_candidate_runtime.py": {
+      "source": "analysis/merlin_vpn_38813/check_candidate_runtime.py",
+      "source_sha256": "50512d1a7879a2c3fed3e1e66a797ab7ed5c6283e1abb5ff390b46345d53c695",
+      "generated_sha256": "8eab1c4abbca5ad3f9487cc6fc12205e65415385b83e38cdae2b17bd81fad705"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_gui24447.py": {
+      "source": "analysis/merlin_vpn_38813/check_gui24447.py",
+      "source_sha256": "0b73b1a5acf733eddcaa8b720c4a3d4e82de161867fc5a633d1474a996355c0b",
+      "generated_sha256": "0b73b1a5acf733eddcaa8b720c4a3d4e82de161867fc5a633d1474a996355c0b"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_hour_gate.py": {
+      "source": "analysis/merlin_vpn_38813/check_hour_gate.py",
+      "source_sha256": "04b2567b6970fe77963356334c37191778807e57d0cb84b42c72e1eb81e6808a",
+      "generated_sha256": "0df3f6422c39ffb059495dbb9e3681fa91471fe08423f190e0f02d66a96f2677"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_local_gate.py": {
+      "source": "analysis/merlin_vpn_38813/check_local_gate.py",
+      "source_sha256": "dd90e301feafe73e0b54eba39e99d0755294c9cc93a5c2be69316b0603ae9315",
+      "generated_sha256": "f2b0f1acb8b9fda77525eab814cc6b1834b53318cda56a21fe997396364e0643"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_fancyss.py": {
+      "source": "analysis/merlin_vpn_38813/check_native_fancyss.py",
+      "source_sha256": "42d0ed9c6cf9ee49c3a4ce329de0e197edc67d1eca8bfb22d6b9caae65fbcd20",
+      "generated_sha256": "7e6ad3b8a1c26a71e30df81a5a0be09eda6ac48670007c368e6e74b4c9ff9236"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_hooks.py": {
+      "source": "analysis/merlin_vpn_38813/check_native_hooks.py",
+      "source_sha256": "3cc9afdee7e39d5c66395aba0b33e0affbf90f6e2ce2b3be647b4e222a129b45",
+      "generated_sha256": "7f59befa17c9d5ce386e8dda03a607e1b869406c31089e8a0ab19a8b8ac84451"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_persist.py": {
+      "source": "analysis/merlin_vpn_38813/check_native_persist.py",
+      "source_sha256": "5876cad7cad3d2260877d97f7965351140875e421ee1c88fb99f13867fcc0c70",
+      "generated_sha256": "e8c7b959f3cc3486c01c2e602e2281dadbd2a48b649461a456743aa0cc8f5be5"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_plugins.py": {
+      "source": "analysis/merlin_vpn_38813/check_native_plugins.py",
+      "source_sha256": "d56920e304c001a2851192965836485230c52f86cdecb4fe2aa53918ee56735f",
+      "generated_sha256": "86d32b2a165a051fc7663444cecec795260aa9c48b545d61d5a27d7fee2f3a27"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_restore.py": {
+      "source": "analysis/merlin_vpn_38813/check_native_restore.py",
+      "source_sha256": "4be32657188347775515b152003b30c0a1fe27840aa17e3e2e807e03214d4978",
+      "generated_sha256": "bcdb92e07bcc9d1201d9e62b9d1c08bdb7c699c0f983360b71e305008110c9c5"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_soak.py": {
+      "source": "analysis/merlin_vpn_38813/check_native_soak.py",
+      "source_sha256": "e9d0f92547289ff4554d78bb39d64c94b790e2e5afff0deebbaf0521ddfb494f",
+      "generated_sha256": "cdc07af1e65470097e62e1b60886f549898a87e20ab27653d169c53f65632e6e"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_tunnel.py": {
+      "source": "analysis/merlin_vpn_38813/check_native_tunnel.py",
+      "source_sha256": "808281306a1dc41537f77604dfbb774b9b36bdd2c95472fde921f0e1bd7cc68c",
+      "generated_sha256": "758368b3d82dedb3ef7891f9e4009ae5fb9a3f0893e6ea3f4943f417099718a6"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_native_vpn.py": {
+      "source": "analysis/merlin_vpn_38813/check_native_vpn.py",
+      "source_sha256": "653402cfdc9fb649250c48e6b56accb3496a675b4d9ce9c86f2a388142eedcb8",
+      "generated_sha256": "b391a1df533ceac4b6bcc0e2ac4c7e05089ae3a9a1d345664b2f23da5b96017a"
+    },
+    "analysis/merlin_vpn_38813gui24447/check_sync_aux.py": {
+      "source": "analysis/merlin_vpn_38813/check_sync_aux.py",
+      "source_sha256": "7757b1f31923486fb71df5dec88abd38e5de7c2edb477177609b08027f065b19",
+      "generated_sha256": "9f2b19cb861f2b51239c898ee9287c553118a0679f823a6faea30cf38fe486c3"
+    },
+    "analysis/merlin_vpn_38813gui24447/cleanup_hour_cache.py": {
+      "source": "analysis/merlin_vpn_38813/cleanup_hour_cache.py",
+      "source_sha256": "b59cd03ba17dd817498dffeeb112b2ee62b8da507bf521beca73ace6e23aea58",
+      "generated_sha256": "5412810dc9fbcc69aa6b3dce8d82d58249810afefbc9e2c2f1f30825361933ae"
+    },
+    "analysis/merlin_vpn_38813gui24447/gui24447.py": {
+      "source": "analysis/merlin_vpn_38813/gui24447.py",
+      "source_sha256": "199410a1c51e40d47896208728c94cc3054e2749881530a80f203d099e7537b4",
+      "generated_sha256": "199410a1c51e40d47896208728c94cc3054e2749881530a80f203d099e7537b4"
+    },
+    "analysis/merlin_vpn_38813gui24447/harness_lineage.json": {
+      "source": "analysis/merlin_vpn_38813/harness_lineage.json",
+      "source_sha256": "2614bf71e912e445450cdc4c4b62227b5e16e5e4b9b44c543ccece17d3deb40c",
+      "generated_sha256": "ad60d95221ba12e753e71338074943ddc2f80b58505db92baec471cd6c90ec6d"
+    },
+    "analysis/merlin_vpn_38813gui24447/launcher_exec_fixture.c": {
+      "source": "analysis/merlin_vpn_38813/launcher_exec_fixture.c",
+      "source_sha256": "c564941866b65a0d3c03590708ca6ee990069c6ca90db44cd5c61a218d6b6878",
+      "generated_sha256": "c564941866b65a0d3c03590708ca6ee990069c6ca90db44cd5c61a218d6b6878"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_boot_bridge.c": {
+      "source": "analysis/merlin_vpn_38813/native_boot_bridge.c",
+      "source_sha256": "ae0f154f3f7804184240c12f32c9d3b77db12bda4bdd144ab054913e8d864dd4",
+      "generated_sha256": "ae0f154f3f7804184240c12f32c9d3b77db12bda4bdd144ab054913e8d864dd4"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_center_event.sh": {
+      "source": "analysis/merlin_vpn_38813/native_center_event.sh",
+      "source_sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3",
+      "generated_sha256": "ed71385dbf0eacc4fc055ccc0ee4bd2646a1caa837d46ec10783b1cb9436ebf3"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_hook_probe.c": {
+      "source": "analysis/merlin_vpn_38813/native_hook_probe.c",
+      "source_sha256": "e2dd4f251de5983f863da4ef0fd1db226ff79080cba8ce7d24d509fc2cdbcc91",
+      "generated_sha256": "e2dd4f251de5983f863da4ef0fd1db226ff79080cba8ce7d24d509fc2cdbcc91"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_hooks.go": {
+      "source": "analysis/merlin_vpn_38813/native_hooks.go",
+      "source_sha256": "fff95a61fd554704be8352d5bca7c9838c3a4d047804a5a3e61af8b9af5ac944",
+      "generated_sha256": "5f69e8a6652637413603a5c03f5cb3e835466787ade4c4739c0fe67fb279ef0d"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_launcher.c": {
+      "source": "analysis/merlin_vpn_38813/native_launcher.c",
+      "source_sha256": "d1535c2861b238a5de4bc588b7bbc8910f7596a8fbf04978f7d77677d00e9240",
+      "generated_sha256": "d1535c2861b238a5de4bc588b7bbc8910f7596a8fbf04978f7d77677d00e9240"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_preview.go": {
+      "source": "analysis/merlin_vpn_38813/native_preview.go",
+      "source_sha256": "36c9546dd3c199c3e81fe030e1026d7243f50113b620d49dcdcb112a13645e67",
+      "generated_sha256": "2f5996073c77e011ca544e5389f669574ce54849e0c7d41ebe0371735095e947"
+    },
+    "analysis/merlin_vpn_38813gui24447/native_restore.c": {
+      "source": "analysis/merlin_vpn_38813/native_restore.c",
+      "source_sha256": "2c90885e0633aaf43eb1361d388ef90b0aed887c8e4978482845f66f5751c114",
+      "generated_sha256": "2c90885e0633aaf43eb1361d388ef90b0aed887c8e4978482845f66f5751c114"
+    },
+    "analysis/merlin_vpn_38813gui24447/package_local.py": {
+      "source": "analysis/merlin_vpn_38813/package_local.py",
+      "source_sha256": "35aa3bdfe6c1113e5f8c69e0705607e9ac2cff04421ca0e58e3db217e8e94d54",
+      "generated_sha256": "87b1cd47542b4e585e4a36608ad28634f9ab44f4f13a9f8a2a2906ea98eb47c4"
+    },
+    "analysis/merlin_vpn_38813gui24447/prepare.py": {
+      "source": "analysis/merlin_vpn_38813/prepare.py",
+      "source_sha256": "fe019cd9950604ccce347825888bfd71dbd1318145e7e28c75044b9d19f7875f",
+      "generated_sha256": "b3c242715cdb46393dad76f5137fdc83bd367ce8195aa83c910c68fe8ea2d5df"
+    },
+    "analysis/merlin_vpn_38813gui24447/quick.py": {
+      "source": "analysis/merlin_vpn_38813/quick.py",
+      "source_sha256": "00164d4cb7670d06468f270494038859e35e13731171336fa6a49174d5fcdc4a",
+      "generated_sha256": "00164d4cb7670d06468f270494038859e35e13731171336fa6a49174d5fcdc4a"
+    },
+    "analysis/merlin_vpn_38813gui24447/release.json": {
+      "source": "analysis/merlin_vpn_38813/release.json",
+      "source_sha256": "8ee2d251b69df80c2ed7bb9dd1ceee6a81d7442c8b3d41b5ff96d30a2ac8cdd6",
+      "generated_sha256": "8ee2d251b69df80c2ed7bb9dd1ceee6a81d7442c8b3d41b5ff96d30a2ac8cdd6"
+    },
+    "analysis/merlin_vpn_38813gui24447/restore_kernel_fixture.c": {
+      "source": "analysis/merlin_vpn_38813/restore_kernel_fixture.c",
+      "source_sha256": "ec64981af19a753d88297722b9569b6abc441aa36d66719ac5fe43b6854d68f4",
+      "generated_sha256": "ec64981af19a753d88297722b9569b6abc441aa36d66719ac5fe43b6854d68f4"
+    },
+    "analysis/merlin_vpn_38813gui24447/restore_probe.go": {
+      "source": "analysis/merlin_vpn_38813/restore_probe.go",
+      "source_sha256": "db7fb76b702b755cfe3742949a78217b2622b59659ced3995f043205792c891e",
+      "generated_sha256": "41bece7fb009c074c41ad51f8ca7e2ab04df9d804b73b66202e590452f4676c7"
+    },
+    "analysis/merlin_vpn_38813gui24447/sync_aux.go": {
+      "source": "analysis/merlin_vpn_38813/sync_aux.go",
+      "source_sha256": "53daad521b751ca4747a65422f4fed51a26285ec7b14534fcc1bf9660665cffe",
+      "generated_sha256": "457646174260aed9cee137ad2c01e3281da972e0a4f988eb42c0f1f9b9514073"
+    },
+    "analysis/merlin_vpn_38813gui24447/sync_aux_probe.c": {
+      "source": "analysis/merlin_vpn_38813/sync_aux_probe.c",
+      "source_sha256": "e86d04a2d84528c1e3ec78385bdeafc73cb6d4c4a11c9091eb46e9ba5199fd03",
+      "generated_sha256": "e86d04a2d84528c1e3ec78385bdeafc73cb6d4c4a11c9091eb46e9ba5199fd03"
+    },
+    "analysis/merlin_vpn_38813gui24447/uu_matrix.go": {
+      "source": "analysis/merlin_vpn_38813/uu_matrix.go",
+      "source_sha256": "e64409061eae2c16ae007bea64c1b2c1ae67521c9d7f981cbf7dd5d39a3ff5f0",
+      "generated_sha256": "09d1921f2cb632873cc3b5b68b92ce2271d31dc661bd4344b7533faf8d773525"
+    },
+    "analysis/merlin_vpn_38813gui24447/uu_matrix.py": {
+      "source": "analysis/merlin_vpn_38813/uu_matrix.py",
+      "source_sha256": "17df45f5aa2a0bd2abe627c3a7be34531112318d3b7f88eebb28321244302a20",
+      "generated_sha256": "406bcdf15f0cd601f1b8b8fb3ee85d020c85cbea5fe2663592b79e0bdf466cc2"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/COPYING-GPL-2.0.txt": {
+      "source": "analysis/merlin_vpn_38813/vendor/COPYING-GPL-2.0.txt",
+      "source_sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "generated_sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/COPYING-OpenVPN.txt": {
+      "source": "analysis/merlin_vpn_38813/vendor/COPYING-OpenVPN.txt",
+      "source_sha256": "2bb17fe225c16734912c86003329ff44981ddae5f3a55bb2fa55b6938a12241b",
+      "generated_sha256": "2bb17fe225c16734912c86003329ff44981ddae5f3a55bb2fa55b6938a12241b"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/Lang_Hdr_38813.before.txt": {
+      "source": "analysis/merlin_vpn_38813/vendor/Lang_Hdr_38813.before.txt",
+      "source_sha256": "1cf2b327d508253947c6c97887ed182fb88140c1457fbb85c380b7d620ed9f93",
+      "generated_sha256": "1cf2b327d508253947c6c97887ed182fb88140c1457fbb85c380b7d620ed9f93"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/NOTICE.txt": {
+      "source": "analysis/merlin_vpn_38813/vendor/NOTICE.txt",
+      "source_sha256": "91b0b1d837f8aeb07c45b0dc44de58458f1cb49a6d068b561ef219c643eb68b3",
+      "generated_sha256": "083fb8eb9de5635a8ceb3744a354e7adec7a854c94b501833f46b8799d3c9bf6"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/fancyss_uninstall_p1.json": {
+      "source": "analysis/merlin_vpn_38813/vendor/fancyss_uninstall_p1.json",
+      "source_sha256": "549be957b9634a8f1e0d70df644a988078bbb0c2711e85e2fa02f5691759cbd0",
+      "generated_sha256": "549be957b9634a8f1e0d70df644a988078bbb0c2711e85e2fa02f5691759cbd0"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/merlin_ntpd.c": {
+      "source": "analysis/merlin_vpn_38813/vendor/merlin_ntpd.c",
+      "source_sha256": "0c9004dbcfcc13cf5f01a2f93b9a3f4586841b42f6e69acf7a19031e69a298e5",
+      "generated_sha256": "0c9004dbcfcc13cf5f01a2f93b9a3f4586841b42f6e69acf7a19031e69a298e5"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/merlin_scripts.c": {
+      "source": "analysis/merlin_vpn_38813/vendor/merlin_scripts.c",
+      "source_sha256": "17f835f374077b4b6ce30e07e6f6de40214789168d73223ac946049c9e1ae4dd",
+      "generated_sha256": "17f835f374077b4b6ce30e07e6f6de40214789168d73223ac946049c9e1ae4dd"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/openvpn_config.c": {
+      "source": "analysis/merlin_vpn_38813/vendor/openvpn_config.c",
+      "source_sha256": "32c522ef4ef40c327f761a30f109abbffb6c50c9439e9089265ecfb6fdd883bc",
+      "generated_sha256": "32c522ef4ef40c327f761a30f109abbffb6c50c9439e9089265ecfb6fdd883bc"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/openvpn_config.h": {
+      "source": "analysis/merlin_vpn_38813/vendor/openvpn_config.h",
+      "source_sha256": "1125abebb565c794810e0ab3c5b8679ba0d7f2f2712d275b745faad35f5309a4",
+      "generated_sha256": "1125abebb565c794810e0ab3c5b8679ba0d7f2f2712d275b745faad35f5309a4"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/openvpn_control.c": {
+      "source": "analysis/merlin_vpn_38813/vendor/openvpn_control.c",
+      "source_sha256": "d07c485b1583b5c050966e895ab69037ae0a4fe48b3fa117c62b954e0325c282",
+      "generated_sha256": "d07c485b1583b5c050966e895ab69037ae0a4fe48b3fa117c62b954e0325c282"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/openvpn_control.h": {
+      "source": "analysis/merlin_vpn_38813/vendor/openvpn_control.h",
+      "source_sha256": "2e03f29e13dd07be4c3308f0c2dfe53e2251f5a149902c0c9cab88ffecd44ce0",
+      "generated_sha256": "2e03f29e13dd07be4c3308f0c2dfe53e2251f5a149902c0c9cab88ffecd44ce0"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/sources.json": {
+      "source": "analysis/merlin_vpn_38813/vendor/sources.json",
+      "source_sha256": "cff4867bbc1e21cc6c61951ca74cbf1fbc1a6e7cad2d792be5b6d6bec73b55de",
+      "generated_sha256": "cff4867bbc1e21cc6c61951ca74cbf1fbc1a6e7cad2d792be5b6d6bec73b55de"
+    },
+    "analysis/merlin_vpn_38813gui24447/vendor/uu_sources.json": {
+      "source": "analysis/merlin_vpn_38813/vendor/uu_sources.json",
+      "source_sha256": "2d75ab57b04ac209490a78564b6f86f4678d9dfa0f80958d1a54171d6062cfaa",
+      "generated_sha256": "2d75ab57b04ac209490a78564b6f86f4678d9dfa0f80958d1a54171d6062cfaa"
+    },
+    "analysis/merlin_vpn_38813gui24447/verify_build_inputs.py": {
+      "source": "analysis/merlin_vpn_38813/verify_build_inputs.py",
+      "source_sha256": "1fa24cad4386cdce40e82a4f9f18cfd1526cde88a5c6837a621aa3ce1de8cab6",
+      "generated_sha256": "15194471d208060bfd44af6ed166e324f35e6916e1cf861a00e55ee429db5548"
+    },
+    "analysis/merlin_vpn_38813gui24447/vpn_generate.go": {
+      "source": "analysis/merlin_vpn_38813/vpn_generate.go",
+      "source_sha256": "6fe0d92f9c55511dd590bc23875efe7f55794f096dfd7ff30795fad10d9c2fe8",
+      "generated_sha256": "a0d579a26e7699bf17d9be04b01238e06496b4a22de4e37829fc0ef4db888338"
+    },
+    "analysis/merlin_vpn_38813gui24447/vpn_generate_probe.c": {
+      "source": "analysis/merlin_vpn_38813/vpn_generate_probe.c",
+      "source_sha256": "f825d6bbe445408a007222b078086c37c665c2acaf5ff283850d58251b6b207b",
+      "generated_sha256": "f825d6bbe445408a007222b078086c37c665c2acaf5ff283850d58251b6b207b"
+    },
+    "analysis/merlin_vpn_38813gui24447/vpn_notify_fixture.c": {
+      "source": "analysis/merlin_vpn_38813/vpn_notify_fixture.c",
+      "source_sha256": "3a9c02fd933f09c74307fc918c52891b6267bd9c41cff5625fd3bb775bfd0891",
+      "generated_sha256": "3a9c02fd933f09c74307fc918c52891b6267bd9c41cff5625fd3bb775bfd0891"
+    },
+    "build/merlin38813gui24447-softcenter-upgrade.go": {
+      "source": "build/test_softcenter_upgrade.go",
+      "source_sha256": "4312da3eca530b1f0b8844b2526fe03712aa5936a9640d5d5380d06a99b61a7f",
+      "generated_sha256": "1b5499c306acc5794aa01074099712f399cec7c4d9831d9bfc2c03ad2fc5aded"
+    },
+    "build/merlin38813gui24447-frontend.mjs": {
+      "source": "build/softcenter_frontend_contract.mjs",
+      "source_sha256": "aab9178890ef765b91640efdf620cad528d483e9f5bb139c0543e78c19b6b9e8",
+      "generated_sha256": "09d741f912cb2d060219438fdb6d011acb35fc14f6c5de02014f63290f0ed469"
+    }
+  },
+  "preserved_sha256": {
+    "output/merlin38813_gui24447_candidate.json": "e3df1ef4fd01563fe8eacaea51fcd249305ab7375d27bc055c4929330a40e5b2",
+    "output/merlin38813_native_candidate_tests.json": "d30c5d4ceac483205900f9a38428cb777f89edc376a0a0a4c9ad65c67f421a2b",
+    "output/merlin38813_local_gate.json": "1f2d0075c5b6cd1dc06b3cb77a78aa3148fef44765c306477cde0f5c1bb0400e",
+    "output/merlin38813_hour_gate.json": "1778cd33a1d570deea3ca078653c89ebd306e2f69205248361f4351d16a89bb7",
+    "output/merlin38813_release_delivery.json": "a2536887de5d314c035dde9d8a076592bbe0593433b4c1695cc562cf4090c9e4",
+    "output/RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w": "2e395d86ed6c9fae6797a426bca72ea4b7c59a39e81c7a6e366b5fe1b6e95115"
+  },
+  "adaptations": [
+    "Separate controller/output namespace; original dynamic assertions retained",
+    "UU matrix executes archived factory r8 plus the actual GUI24447 native rc; candidate launcher is separately covered by candidate_runtime",
+    "Old 1.9.50 upgrade fixture is the actual archived r8 core, with strict image/core/tree identities; it is distinct from the historical r9 core",
+    "Additional authenticated native HTTPS assertion verifies the corrected language menu"
+  ]
+}

@@ -7,6 +7,7 @@
 !/sources/localmod/
 /sources/localmod/*
 !/sources/localmod/README.md
+!/sources/localmod/Lang_Hdr.txt
 !/sources/localmod/Module_Localmod.asp
 !/sources/localmod/Module_FancyssLocalmod.asp
 !/sources/localmod/bootstrap.sh
@@ -421,6 +422,8 @@
 !/analysis/merlin_vpn_38813/vendor/*.h
 !/analysis/merlin_vpn_38813/vendor/*.json
 !/build/merlin38813_sources.json
+!/build/asus24447_sources.json
+!/build/gui24447-factory-input.json
 !/output/merlin38813_*.json
 !/output/merlin38813_*.log
 !/output/388.13升级与本地验证.md
@@ -431,3 +434,10 @@
 !/output/merlin38813_release_notes.md
 !/output/merlin38813_hour_validation.md
 !/output/merlin38813_hour_generated_inputs.tar.gz
+!/output/merlin38813_gui24447_notes.md
+!/output/merlin38813_GUI24447_SHA256SUMS
+!/output/merlin38813gui24447_*.json
+!/output/merlin38813gui24447_*.log
+!/output/merlin38813gui24447_*.md
+!/output/merlin38813gui24447_*.tar.gz
+/output/merlin38813gui24447_bootstrap*

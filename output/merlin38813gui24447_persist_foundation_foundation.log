@@ -1,0 +1,12 @@
+LINUX_BUILDER_READY
+cacert.pem doesn't exist !!!!!!
+S:local-fixture Server Certificate, I:local-fixture Root Certificate 20261110060505, 2026/11/10 ~ 2046/11/11
+download uuplugin script info successfully
+URL: http://uu.fixture.test:35000/monitor
+MD5: d90649080e15b5165aba44b9ba9ee18f
+download uuplugin script successfully
+prepare to execute uuplugin stript...
+DDNS_READY elapsed_ms=1699 budget_ms=20000
+PASS foundation_real_plugin_configuration_and_uu_synced
+INTERRUPT_RESULT {"boot":"foundation","case":"foundation","checks":["foundation_real_plugin_configuration_and_uu_synced"]}
+LINUX_READONLY_JOB_STATUS=0
