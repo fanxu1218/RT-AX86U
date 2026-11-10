@@ -1,0 +1,98 @@
+{
+  "status": "P7_UPGRADE_DOCUMENTATION_LOCAL_REVIEW_PASS_NOT_DEVICE_ACCEPTED",
+  "date": "2026-11-09",
+  "timezone": "Asia/Taipei",
+  "documents": {
+    "output/Alpha3升级P7与实机验收.md": {
+      "bytes": 37017,
+      "sha256": "dc79ddedf41c80e9496d5d192763484d25b260dc10bd3a4b7421a58aa76b40cc"
+    },
+    "output/P7实机验收记录模板.md": {
+      "bytes": 8592,
+      "sha256": "7decfdd6cb05679b71ac3cd743c1ab1c1da49f827e81641edb92405dbfb80316"
+    }
+  },
+  "device_acceptance_items": 49,
+  "all_device_items_initially_unverified": true,
+  "shell_examples_syntax_checked": 11,
+  "shell_examples_executed": false,
+  "local_links_verified": [
+    {
+      "source": "output/Alpha3升级P7与实机验收.md",
+      "target": "output/P7实机验收记录模板.md"
+    },
+    {
+      "source": "output/Alpha3升级P7与实机验收.md",
+      "target": "output/merlin38813_local_gate.json"
+    },
+    {
+      "source": "output/Alpha3升级P7与实机验收.md",
+      "target": "output/merlin38813_hour_gate.json"
+    },
+    {
+      "source": "output/Alpha3升级P7与实机验收.md",
+      "target": "output/merlin38813_hour_validation.md"
+    },
+    {
+      "source": "output/Alpha3升级P7与实机验收.md",
+      "target": "output/merlin38813_native_coexist_60m_tests.json"
+    },
+    {
+      "source": "output/P7实机验收记录模板.md",
+      "target": "output/Alpha3升级P7与实机验收.md"
+    }
+  ],
+  "firmware_and_package_sha256_verified": {
+    "output/RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w": {
+      "bytes": 87949332,
+      "sha256": "9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b"
+    },
+    "sources/realplugins/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz": {
+      "bytes": 19790810,
+      "sha256": "b45d1294022b7914f6ffa6ae67c688e4870ef7aa07f3556657feec37a034d592"
+    },
+    "RT-AX86U_386.3_2_cferom_pureubi_koolcenter_alpha3.w": {
+      "bytes": 90570772,
+      "sha256": "c3d01f6df5916ab5f14a2dabd9c79b6d7c28c73b44bed122fdc2636568cf6838"
+    },
+    "upstream/RT-AX86U_3.0.0.4_388_24437-g81951d7_pureubi.w": {
+      "bytes": 83361812,
+      "sha256": "de1caf609347beea394ebab956bddf0b391db592d1ad5f99e9d37e4d0b876af0"
+    }
+  },
+  "expected_native_metadata": {
+    "base": "3004.388.13",
+    "variant": "localmod-native-preview",
+    "revision": "P7",
+    "release_tag": "localmod-native-38813-p7-experimental",
+    "status": "NOT_FLASH_READY",
+    "software_center": "1.9.60",
+    "merlin_framework": "complete pinned native image with center augmentation",
+    "uu": "native NTP callback retained; territory-gated capability; real acceleration unverified",
+    "automatic_center_hook_augmentation": true,
+    "target_pid1_boot_tested": false
+  },
+  "expected_core_id": "95b2436bb2ebc635f946a60517972119dd92ea44b201a8b2b424cfd33380180d",
+  "existing_hour_report": {
+    "path": "output/merlin38813_hour_gate.json",
+    "sha256": "1778cd33a1d570deea3ca078653c89ebd306e2f69205248361f4351d16a89bb7",
+    "reused_without_new_vm": true
+  },
+  "physical_router_accessed": false,
+  "device_backup_created_or_verified_this_turn": false,
+  "physical_router_flashed": false,
+  "target_pid1_boot_tested": false,
+  "real_uu_acceleration_tested": false,
+  "flash_ready": false,
+  "previous_p6_documents_and_p7_runtime_publication_evidence_unchanged": true,
+  "new_documents_committed": false,
+  "new_documents_pushed_or_uploaded_to_release": false,
+  "checks": [
+    "Exact P7 filename/bytes/SHA256 and core identity bound to current local image",
+    "Forty-nine unique device checks remain unverified",
+    "All shell examples parsed only; no SSH/router/firmware commands executed",
+    "Relative links resolve to existing local documentation and reports",
+    "Alpha3 CFE-ROM rollback conditions, backup coverage, TLS/VPN migration and G/F/V coexistence included",
+    "Normal cold-start acceptance is separate from deliberate power-loss faults"
+  ]
+}
