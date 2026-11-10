@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "status": "PREPARED_NOT_YET_PUBLISHED",
+  "repository": "fanxu1218/RT-AX86U",
+  "tag": "localmod-native-38813-p7-gui24447-experimental",
+  "target_commit": "ece5df372e2c4d01264758e9ecd5598faa69efe3",
+  "title": "RT-AX86U 388.13 P7 GUI24447 实验预发布（未实机验收 / NOT_FLASH_READY）",
+  "prerelease": true,
+  "make_latest": false,
+  "flash_ready": false,
+  "physical_router_flashed": false,
+  "device_or_visual_accepted": false,
+  "source_snapshot_files": 1082,
+  "parent_release_id": 439147522,
+  "assets": [
+    {
+      "name": "GUI24447-SHA256SUMS",
+      "path": "build/gui24447-release-assets/GUI24447-SHA256SUMS",
+      "bytes": 1476,
+      "sha256": "fbdf2e95c0e2ffec3745f7db59ffe7fbceb67717b5b8c1c6492a497b6fdf91c4"
+    },
+    {
+      "name": "GUI24447-VALIDATION.md",
+      "path": "build/gui24447-release-assets/GUI24447-VALIDATION.md",
+      "bytes": 8827,
+      "sha256": "ddf39f0a598442b38bfdbf6b75510bc9a5d046cd53f59436e4ac5d0cf2138e1a"
+    },
+    {
+      "name": "RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w",
+      "path": "build/gui24447-release-assets/RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w",
+      "bytes": 87949332,
+      "sha256": "2e395d86ed6c9fae6797a426bca72ea4b7c59a39e81c7a6e366b5fe1b6e95115"
+    },
+    {
+      "name": "RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w.sha256",
+      "path": "build/gui24447-release-assets/RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w.sha256",
+      "bytes": 144,
+      "sha256": "f69294a1c814faf940bb00ee2a2f20dbd81a2305034637c412e6960b59160110"
+    },
+    {
+      "name": "fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz",
+      "path": "build/gui24447-release-assets/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz",
+      "bytes": 19790810,
+      "sha256": "b45d1294022b7914f6ffa6ae67c688e4870ef7aa07f3556657feec37a034d592"
+    },
+    {
+      "name": "fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz.sha256",
+      "path": "build/gui24447-release-assets/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz.sha256",
+      "bytes": 110,
+      "sha256": "14ec3af2b53ca569b7d60d897e2237ab651510219f8a1c87e9c1bfcee0536960"
+    },
+    {
+      "name": "merlin38813_gui24447_audit.json",
+      "path": "build/gui24447-release-assets/merlin38813_gui24447_audit.json",
+      "bytes": 116589,
+      "sha256": "d3ba76fb40ab038a593d1ceef9b5c70a6b2d19493fcf470419165c175a4fd26f"
+    },
+    {
+      "name": "merlin38813_gui24447_candidate.json",
+      "path": "build/gui24447-release-assets/merlin38813_gui24447_candidate.json",
+      "bytes": 3343,
+      "sha256": "e3df1ef4fd01563fe8eacaea51fcd249305ab7375d27bc055c4929330a40e5b2"
+    },
+    {
+      "name": "merlin38813gui24447_full_gate.json",
+      "path": "build/gui24447-release-assets/merlin38813gui24447_full_gate.json",
+      "bytes": 12299,
+      "sha256": "3ef55848a958281cd937d156e94672548be4a69a85dca2b48f2b0a82991b08f7"
+    },
+    {
+      "name": "merlin38813gui24447_release_sources.manifest.json",
+      "path": "build/gui24447-release-assets/merlin38813gui24447_release_sources.manifest.json",
+      "bytes": 202995,
+      "sha256": "cb073e876ddef971fef8061d2d94884b8a39efb569ac9a058831540b02f6b1e1"
+    },
+    {
+      "name": "merlin38813gui24447_runtime_sources.manifest.json",
+      "path": "build/gui24447-release-assets/merlin38813gui24447_runtime_sources.manifest.json",
+      "bytes": 60098,
+      "sha256": "20685ff2a53c6678d514a9497c4574844619361966094d5b9f1a9f765406aa55"
+    },
+    {
+      "name": "merlin38813gui24447_runtime_sources.tar.gz",
+      "path": "build/gui24447-release-assets/merlin38813gui24447_runtime_sources.tar.gz",
+      "bytes": 513990,
+      "sha256": "0f75fe0a283e87d16c0b78b11e933610a573d65f2e6c237b6976b201298cd2ce"
+    },
+    {
+      "name": "merlin38813gui24447_source_checks.json",
+      "path": "build/gui24447-release-assets/merlin38813gui24447_source_checks.json",
+      "bytes": 35310,
+      "sha256": "2718b6c4f48de69dbf812efa4a84f4cb29f819a36e2458c9eeb50da13fb8cbb0"
+    },
+    {
+      "name": "merlin38813gui24447_sources_evidence_ece5df3.tar.gz",
+      "path": "build/gui24447-release-assets/merlin38813gui24447_sources_evidence_ece5df3.tar.gz",
+      "bytes": 5581124,
+      "sha256": "1238133fb5e714139d5423867649087a3bf44a50daeb1cbe5699dd928bba0ea0"
+    }
+  ]
+}

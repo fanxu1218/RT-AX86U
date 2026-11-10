@@ -1,0 +1,380 @@
+{
+  "schema": 1,
+  "status": "GUI24447_EXPERIMENTAL_PRERELEASE_PUBLISHED_ALL_PUBLIC_BYTES_VERIFIED_NOT_DEVICE_ACCEPTED",
+  "verified_at_utc": "2026-11-10T08:20:27.502550+00:00",
+  "repository": "fanxu1218/RT-AX86U",
+  "url": "https://github.com/fanxu1218/RT-AX86U/releases/tag/localmod-native-38813-p7-gui24447-experimental",
+  "tag": "localmod-native-38813-p7-gui24447-experimental",
+  "tag_object": "597780623ace70255127a3af0eb5ac90746e6da2",
+  "tag_commit": "ece5df372e2c4d01264758e9ecd5598faa69efe3",
+  "release_id": 440095751,
+  "release_title": "RT-AX86U 388.13 P7 GUI24447 实验预发布（未实机验收 / NOT_FLASH_READY）",
+  "published_at": "2026-11-10T08:17:44Z",
+  "draft": false,
+  "prerelease": true,
+  "is_latest": false,
+  "latest_check": {
+    "before_http_status": 404,
+    "after_http_status": 404,
+    "meaning": "No stable Latest release before or after this prerelease"
+  },
+  "firmware_base_remains": "Merlin 3004.388.13 / P7; ASUS GUI24447 language-name backport only",
+  "candidate_sha256": "2e395d86ed6c9fae6797a426bca72ea4b7c59a39e81c7a6e366b5fe1b6e95115",
+  "full_gate_sha256": "3ef55848a958281cd937d156e94672548be4a69a85dca2b48f2b0a82991b08f7",
+  "flash_ready": false,
+  "physical_router_accessed": false,
+  "physical_router_flashed": false,
+  "device_or_visual_accepted": false,
+  "actual_uu_acceleration_tested": false,
+  "release_body_sha256": "56a2ad269dcad23820ed46372b4673bfa8c43776c8702b332cb3c3d3c89fea56",
+  "release_body_normalized_matches_local_notes": true,
+  "release_notes_sha256": "1aa6fe508c7b1b25f26073af910cd3c628129a4273ef3df4bd9c44bfa80041b3",
+  "source_snapshot_commit": "ece5df372e2c4d01264758e9ecd5598faa69efe3",
+  "source_snapshot_tracked_files": 1082,
+  "runtime_source_snapshot_files": 256,
+  "assets": [
+    {
+      "name": "fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz",
+      "asset_id": 730653183,
+      "bytes": 19790810,
+      "sha256": "b45d1294022b7914f6ffa6ae67c688e4870ef7aa07f3556657feec37a034d592",
+      "github_digest": "sha256:b45d1294022b7914f6ffa6ae67c688e4870ef7aa07f3556657feec37a034d592",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz.sha256",
+      "asset_id": 730653569,
+      "bytes": 110,
+      "sha256": "14ec3af2b53ca569b7d60d897e2237ab651510219f8a1c87e9c1bfcee0536960",
+      "github_digest": "sha256:14ec3af2b53ca569b7d60d897e2237ab651510219f8a1c87e9c1bfcee0536960",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz.sha256",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "GUI24447-SHA256SUMS",
+      "asset_id": 730652446,
+      "bytes": 1476,
+      "sha256": "fbdf2e95c0e2ffec3745f7db59ffe7fbceb67717b5b8c1c6492a497b6fdf91c4",
+      "github_digest": "sha256:fbdf2e95c0e2ffec3745f7db59ffe7fbceb67717b5b8c1c6492a497b6fdf91c4",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/GUI24447-SHA256SUMS",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "GUI24447-VALIDATION.md",
+      "asset_id": 730652568,
+      "bytes": 8827,
+      "sha256": "ddf39f0a598442b38bfdbf6b75510bc9a5d046cd53f59436e4ac5d0cf2138e1a",
+      "github_digest": "sha256:ddf39f0a598442b38bfdbf6b75510bc9a5d046cd53f59436e4ac5d0cf2138e1a",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/GUI24447-VALIDATION.md",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "merlin38813gui24447_full_gate.json",
+      "asset_id": 730653777,
+      "bytes": 12299,
+      "sha256": "3ef55848a958281cd937d156e94672548be4a69a85dca2b48f2b0a82991b08f7",
+      "github_digest": "sha256:3ef55848a958281cd937d156e94672548be4a69a85dca2b48f2b0a82991b08f7",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/merlin38813gui24447_full_gate.json",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "merlin38813gui24447_release_sources.manifest.json",
+      "asset_id": 730653817,
+      "bytes": 202995,
+      "sha256": "cb073e876ddef971fef8061d2d94884b8a39efb569ac9a058831540b02f6b1e1",
+      "github_digest": "sha256:cb073e876ddef971fef8061d2d94884b8a39efb569ac9a058831540b02f6b1e1",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/merlin38813gui24447_release_sources.manifest.json",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "merlin38813gui24447_runtime_sources.manifest.json",
+      "asset_id": 730653887,
+      "bytes": 60098,
+      "sha256": "20685ff2a53c6678d514a9497c4574844619361966094d5b9f1a9f765406aa55",
+      "github_digest": "sha256:20685ff2a53c6678d514a9497c4574844619361966094d5b9f1a9f765406aa55",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/merlin38813gui24447_runtime_sources.manifest.json",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "merlin38813gui24447_runtime_sources.tar.gz",
+      "asset_id": 730653946,
+      "bytes": 513990,
+      "sha256": "0f75fe0a283e87d16c0b78b11e933610a573d65f2e6c237b6976b201298cd2ce",
+      "github_digest": "sha256:0f75fe0a283e87d16c0b78b11e933610a573d65f2e6c237b6976b201298cd2ce",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/merlin38813gui24447_runtime_sources.tar.gz",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "merlin38813gui24447_sources_evidence_ece5df3.tar.gz",
+      "asset_id": 730654026,
+      "bytes": 5581124,
+      "sha256": "1238133fb5e714139d5423867649087a3bf44a50daeb1cbe5699dd928bba0ea0",
+      "github_digest": "sha256:1238133fb5e714139d5423867649087a3bf44a50daeb1cbe5699dd928bba0ea0",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/merlin38813gui24447_sources_evidence_ece5df3.tar.gz",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "merlin38813gui24447_source_checks.json",
+      "asset_id": 730653982,
+      "bytes": 35310,
+      "sha256": "2718b6c4f48de69dbf812efa4a84f4cb29f819a36e2458c9eeb50da13fb8cbb0",
+      "github_digest": "sha256:2718b6c4f48de69dbf812efa4a84f4cb29f819a36e2458c9eeb50da13fb8cbb0",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/merlin38813gui24447_source_checks.json",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "merlin38813_gui24447_audit.json",
+      "asset_id": 730653650,
+      "bytes": 116589,
+      "sha256": "d3ba76fb40ab038a593d1ceef9b5c70a6b2d19493fcf470419165c175a4fd26f",
+      "github_digest": "sha256:d3ba76fb40ab038a593d1ceef9b5c70a6b2d19493fcf470419165c175a4fd26f",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/merlin38813_gui24447_audit.json",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "merlin38813_gui24447_candidate.json",
+      "asset_id": 730653701,
+      "bytes": 3343,
+      "sha256": "e3df1ef4fd01563fe8eacaea51fcd249305ab7375d27bc055c4929330a40e5b2",
+      "github_digest": "sha256:e3df1ef4fd01563fe8eacaea51fcd249305ab7375d27bc055c4929330a40e5b2",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/merlin38813_gui24447_candidate.json",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w",
+      "asset_id": 730652609,
+      "bytes": 87949332,
+      "sha256": "2e395d86ed6c9fae6797a426bca72ea4b7c59a39e81c7a6e366b5fe1b6e95115",
+      "github_digest": "sha256:2e395d86ed6c9fae6797a426bca72ea4b7c59a39e81c7a6e366b5fe1b6e95115",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w",
+      "http_status": 200,
+      "public_download_verified": true
+    },
+    {
+      "name": "RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w.sha256",
+      "asset_id": 730653131,
+      "bytes": 144,
+      "sha256": "f69294a1c814faf940bb00ee2a2f20dbd81a2305034637c412e6960b59160110",
+      "github_digest": "sha256:f69294a1c814faf940bb00ee2a2f20dbd81a2305034637c412e6960b59160110",
+      "download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-gui24447-experimental/RT-AX86U_3004_388.13_0_localmod_native_P7_GUI24447_2e395d86_NOT_FLASH_READY.w.sha256",
+      "http_status": 200,
+      "public_download_verified": true
+    }
+  ],
+  "all_github_digests_match": true,
+  "all_public_downloads_http200_and_sha256_match": true,
+  "public_verification_authenticated": false,
+  "public_download_elapsed_seconds": 20.715699911117554,
+  "original_P7_release_and_all_assets_unchanged": true,
+  "original_P7_tag_commit": "147032c384732124f3dd2f2f47bdea3a30edf5a8",
+  "original_P7_before_after_snapshot": {
+    "id": 439147522,
+    "tag_name": "localmod-native-38813-p7-experimental",
+    "target_commitish": "147032c384732124f3dd2f2f47bdea3a30edf5a8",
+    "name": "RT-AX86U 388.13 P7 实验预发布（未实机验收 / NOT_FLASH_READY）",
+    "body": "# RT-AX86U 388.13 / P7 实验预发布\n\n**未实机验收 / NOT_FLASH_READY。此为实验预发布，不设为 Latest；本次不执行刷机。**\n\n适用范围：大陆销售的普通 **RT-AX86U**，不适用于 RT-AX86U Pro、RT-AX86S 或其他机型。\n\n完整采用固定上游 Asuswrt-Merlin **3004.388.13** 正式镜像，继承该机型支持的原生 VPN 页面、服务控制、内核和驱动，追加软件中心 **1.9.60**、原厂 UU 启动适配，提供 Fancyss **3.5.29 HND v8 Full / adaptation 2** 兼容包。OpenSSL 为上游 3.5 系列，保留其闭源组件兼容 shim；OpenVPN 为 2.7.8。\n\n## 下载与校验\n\n- 固件：`RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w`，87,949,332 字节。\n- 固件 SHA256：`9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b`。\n- Fancyss：`fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz`，19,790,810 字节。\n- Fancyss SHA256：`b45d1294022b7914f6ffa6ae67c688e4870ef7aa07f3556657feec37a034d592`。\n- 各附件摘要见 `SHA256SUMS`，两个主附件另附独立 `.sha256` 文件。将附件下载到同一目录后，可运行 `shasum -a 256 -c SHA256SUMS`；只下载主附件时可核对各自的 `.sha256`。\n\n本 Release 附带同批源码归档、源码文件清单和独立本地门禁报告。归档中的本地交付记录、`release.json` 和构建时说明冻结在发布前，里面的 `published: false` 等字段反映封存当时状态；本次线上发布状态以此 Release 和后续发布回执为准，保留这些冻结文件的原字节与校验值。\n\n## 本地验证\n\n所有列明的候选运行证据绑定本次 P7 镜像，未把 P6 长测改记为 P7：\n\n- 35 项原生事件、认证、页面读写、TCP/TLS 空闲预连接和组件加载检查；7 项在线安装、更新、卸载检查通过。\n- 36 项 Fancyss/软件中心/FRPC/PushPlus 共存检查通过，包含实际 Xray SOCKS/VLESS 转发、真实版本升级、卸载和共享 JQ 保护。\n- 阿里 DDNS、DDNSTO、DDNS-Go 的真实升级及全新安装合计 32 项检查通过。\n- 原生 VPN 配置/通知 8 项、隔离系统中的 OpenVPN TUN/双向 TLS/PAM 2 项检查通过。\n- 安装进程树/父进程中断、恢复再次中断、真实 DDNS-Go 更新中断、空间不足四类场景，共 10 次隔离启动、28 次阶段断言通过；配置、证书、VPN 测试配置和 UU 合成数据保留。\n- TLS 定向检查：14 个握手场景、6 轮软件中心重启、110 次正常查询通过。\n- 综合共存实际测量 **321.6 秒、90 次正常查询、22 次异常/重启**，覆盖 16 类事件，零计划外失败。计划内停服窗口的暂时不可用响应单独记录。\n- 6 个适配程序独立重编译，字节与候选一致。最终镜像完整回读 3,559 个路径；除 5 个接入路径外，其余上游原生路径字节、类型、链接和权限保留。\n\n## 未覆盖与升级准备\n\n**尚未执行目标路由器刷写和冷启动，尚未验证真实 UU 云端/账号/游戏加速。**\n\n目标 Broadcom 4.1 内核/PID1、物理 NAND/UBIFS 断电、Wi-Fi、硬件 NAT、AiMesh、真实 WAN、外部 VPN 服务商、Fancyss 订阅和透明/全局代理、全部第三方插件仍需实机验收。隔离隧道检查使用 Cortex-A53 系统仿真的 Linux 6.12；UU 使用受控监控程序和本地端点。五分钟共存结果不代表多日稳定性或长期无内存泄漏。\n\nOpenSSL 3.5 对过时或弱密钥/证书的校验更严格，已有 VPN 配置可能需要更新，应结合系统日志逐项验收。\n\n当前设备的配置、JFFS 和插件数据备份尚未实际执行。后续升级前应先完成备份、型号/身份核对、回退材料和 P7 独立验收记录。本次仅发布文件，刷机与实机验收留待后续安排。\n\n## 固定来源\n\n- 项目源码与本次测试绑定提交：[147032c](https://github.com/fanxu1218/RT-AX86U/tree/147032c384732124f3dd2f2f47bdea3a30edf5a8)。\n- 上游源码：`3004.388.13`，实际提交 `d1a59dcffbe0402c7ac8ac3090cb7c928510fbcd`。\n- 原始上游镜像 SHA256：`087be9aac11abe57701486dca08fac207b8433b354bc00a3bbb314732f4f4103`。\n- [本地升级、校验与验证边界说明](https://github.com/fanxu1218/RT-AX86U/blob/147032c384732124f3dd2f2f47bdea3a30edf5a8/output/388.13%E5%8D%87%E7%BA%A7%E4%B8%8E%E6%9C%AC%E5%9C%B0%E9%AA%8C%E8%AF%81.md)。\n\nP6 及其历史附件继续保留；本次为独立 P7 标签和实验预发布。\n\n<!-- P7_ONE_HOUR_SUPPLEMENT -->\n## P7 一小时共存补充验证（仍未实机验收）\n\n同一 P7 固件完成 3603.9 秒连续测量，1024 次正常查询、35 次计划异常/重启，16 类事件各至少两次；计划外失败为 0，配置、证书和 UU 合成数据保留。该结果属于 P7 / 388.13，不复用 P6 结果；未复现需要修改固件的问题。\n\n新增附件 `P7-HOUR-VALIDATION.md`、原始数据/日志、小时门禁、生成输入审计包、清理回执和 `P7-HOUR-SHA256SUMS`。原先九个附件、固件及 tag 提交保持不变。原 `P7-VALIDATION.md` 和 `merlin38813_local_gate.json` 保留首次发布的五分钟快照，以本次补充说明了解后续一小时证据。\n\nUU 为原生启动路径加自有工作进程；真实账号/游戏加速、目标内核/PID1、Wi-Fi/NAT/AiMesh 和跨天稳定性仍未验收。实验预发布 / NOT_FLASH_READY 标识保留，本次未刷机。同一固件与测试条件的有效证据可用 `check_hour_gate.py --verify-only` 复核，无需因推送或文档更新重复长测。\n",
+    "draft": false,
+    "prerelease": true,
+    "created_at": "2026-11-09T12:57:37Z",
+    "published_at": "2026-11-09T13:13:41Z",
+    "updated_at": "2026-11-09T14:25:42Z",
+    "assets": [
+      {
+        "id": 727533793,
+        "name": "fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz",
+        "size": 19790810,
+        "digest": "sha256:b45d1294022b7914f6ffa6ae67c688e4870ef7aa07f3556657feec37a034d592",
+        "created_at": "2026-11-09T13:10:06Z",
+        "updated_at": "2026-11-09T13:10:40Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz"
+      },
+      {
+        "id": 727533794,
+        "name": "merlin38813_local_gate.json",
+        "size": 5816,
+        "digest": "sha256:1f2d0075c5b6cd1dc06b3cb77a78aa3148fef44765c306477cde0f5c1bb0400e",
+        "created_at": "2026-11-09T13:10:06Z",
+        "updated_at": "2026-11-09T13:10:06Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_local_gate.json"
+      },
+      {
+        "id": 727533812,
+        "name": "merlin38813-P7-sources.tar.gz",
+        "size": 636208,
+        "digest": "sha256:1b46d8f72814dd4488c8479da299d8c99ffb7f12b2d71c61b6b26d849bf424e5",
+        "created_at": "2026-11-09T13:10:06Z",
+        "updated_at": "2026-11-09T13:10:07Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813-P7-sources.tar.gz"
+      },
+      {
+        "id": 727533815,
+        "name": "merlin38813-P7-sources.manifest.json",
+        "size": 57502,
+        "digest": "sha256:0b07c6997b734b9fc098de7cc0dfef3bb00be920df6f355ece3fdb9482386b8d",
+        "created_at": "2026-11-09T13:10:06Z",
+        "updated_at": "2026-11-09T13:10:07Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813-P7-sources.manifest.json"
+      },
+      {
+        "id": 727533817,
+        "name": "RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w",
+        "size": 87949332,
+        "digest": "sha256:9f4b392a9a2575d7fbbf32e1efb747386199e7fb1babe502590c8cb6ef31ea8b",
+        "created_at": "2026-11-09T13:10:06Z",
+        "updated_at": "2026-11-09T13:13:35Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w"
+      },
+      {
+        "id": 727533884,
+        "name": "RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w.sha256",
+        "size": 135,
+        "digest": "sha256:968143eb0cffe69a3b0282d1005edaa29082293e586caee0dafaf67735dafef5",
+        "created_at": "2026-11-09T13:10:08Z",
+        "updated_at": "2026-11-09T13:10:08Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/RT-AX86U_3004_388.13_0_localmod_native_P7_3c7521ae_NOT_FLASH_READY.w.sha256"
+      },
+      {
+        "id": 727533972,
+        "name": "fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz.sha256",
+        "size": 110,
+        "digest": "sha256:14ec3af2b53ca569b7d60d897e2237ab651510219f8a1c87e9c1bfcee0536960",
+        "created_at": "2026-11-09T13:10:10Z",
+        "updated_at": "2026-11-09T13:10:10Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/fancyss_hnd_v8_full_3.5.29_localmod2.tar.gz.sha256"
+      },
+      {
+        "id": 727533991,
+        "name": "P7-VALIDATION.md",
+        "size": 4441,
+        "digest": "sha256:2191115297d18f160f8ea86a69c7b242598141b20619c64c7d968b365c08dfce",
+        "created_at": "2026-11-09T13:10:10Z",
+        "updated_at": "2026-11-09T13:10:10Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/P7-VALIDATION.md"
+      },
+      {
+        "id": 727534025,
+        "name": "SHA256SUMS",
+        "size": 880,
+        "digest": "sha256:08479cc153c348f4899f93e925fc6e1d25aaf76aa43f3d2567e93e2bd7ae877b",
+        "created_at": "2026-11-09T13:10:11Z",
+        "updated_at": "2026-11-09T13:10:11Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/SHA256SUMS"
+      },
+      {
+        "id": 727769132,
+        "name": "merlin38813_native_coexist_60m.log.vm.json",
+        "size": 5780,
+        "digest": "sha256:8cdb7e4ad7623e7c5db9ead9ae6fa407b34582936f69dda06a003b6fa56dd2eb",
+        "created_at": "2026-11-09T14:25:16Z",
+        "updated_at": "2026-11-09T14:25:16Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_native_coexist_60m.log.vm.json"
+      },
+      {
+        "id": 727769135,
+        "name": "merlin38813_hour_gate.json",
+        "size": 19863,
+        "digest": "sha256:1778cd33a1d570deea3ca078653c89ebd306e2f69205248361f4351d16a89bb7",
+        "created_at": "2026-11-09T14:25:16Z",
+        "updated_at": "2026-11-09T14:25:17Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_hour_gate.json"
+      },
+      {
+        "id": 727769150,
+        "name": "merlin38813_native_coexist_60m_tests.json",
+        "size": 269876,
+        "digest": "sha256:a7694e642e9407f93e791549af8a686b9a184b0e806d1c9f67305f6c8a848318",
+        "created_at": "2026-11-09T14:25:16Z",
+        "updated_at": "2026-11-09T14:25:17Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_native_coexist_60m_tests.json"
+      },
+      {
+        "id": 727769159,
+        "name": "merlin38813_native_coexist_60m.log",
+        "size": 448923,
+        "digest": "sha256:7c7bf3db36c79c8125cc00a7f3d96a970ca032ff93913c9519725b17d85ccada",
+        "created_at": "2026-11-09T14:25:17Z",
+        "updated_at": "2026-11-09T14:25:17Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_native_coexist_60m.log"
+      },
+      {
+        "id": 727769163,
+        "name": "merlin38813_hour_generated_inputs.tar.gz",
+        "size": 47635,
+        "digest": "sha256:e6ca48b34a59b5634600512d27e311e83c1354942783bf591aee95a6ee9fbaf0",
+        "created_at": "2026-11-09T14:25:17Z",
+        "updated_at": "2026-11-09T14:25:17Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_hour_generated_inputs.tar.gz"
+      },
+      {
+        "id": 727769209,
+        "name": "merlin38813_hour_cleanup.json",
+        "size": 837,
+        "digest": "sha256:b5e0d83daba7b5c926203510cc68a25b490d9ec09751b33cc95dfaa7273bae65",
+        "created_at": "2026-11-09T14:25:17Z",
+        "updated_at": "2026-11-09T14:25:18Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/merlin38813_hour_cleanup.json"
+      },
+      {
+        "id": 727769220,
+        "name": "P7-HOUR-VALIDATION.md",
+        "size": 7571,
+        "digest": "sha256:5ff8f108cc9b1b7e9db0c421c73930f9880373d73dcaa8c1ca521096c9da3aae",
+        "created_at": "2026-11-09T14:25:17Z",
+        "updated_at": "2026-11-09T14:25:18Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/P7-HOUR-VALIDATION.md"
+      },
+      {
+        "id": 727769245,
+        "name": "P7-HOUR-SHA256SUMS",
+        "size": 702,
+        "digest": "sha256:4b57abc023986e910c2dfed2604e4416b9039884e1d2c7260620d8492026a593",
+        "created_at": "2026-11-09T14:25:18Z",
+        "updated_at": "2026-11-09T14:25:18Z",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/fanxu1218/RT-AX86U/releases/download/localmod-native-38813-p7-experimental/P7-HOUR-SHA256SUMS"
+      }
+    ]
+  },
+  "protected_local_P7_evidence_sha256": {
+    "output/merlin38813_native_candidate_tests.json": "d30c5d4ceac483205900f9a38428cb777f89edc376a0a0a4c9ad65c67f421a2b",
+    "output/merlin38813_local_gate.json": "1f2d0075c5b6cd1dc06b3cb77a78aa3148fef44765c306477cde0f5c1bb0400e",
+    "output/merlin38813_hour_gate.json": "1778cd33a1d570deea3ca078653c89ebd306e2f69205248361f4351d16a89bb7",
+    "output/merlin38813_release_delivery.json": "a2536887de5d314c035dde9d8a076592bbe0593433b4c1695cc562cf4090c9e4"
+  },
+  "frozen_prepublication_evidence_rewritten": false,
+  "publication_method": "Git tag pushed through SSH; authenticated GitHub browser release form and uploads; public REST metadata plus unauthenticated HTTPS download verification",
+  "browser_screenshot": {
+    "path": "build/gui24447-release-published.jpg",
+    "sha256": "0f309c8e7618ddf565e33f2a5c4b6e7875f7fc00a2ff5d6a527bb3bdcb084418"
+  },
+  "verification_scope": "Publishing, metadata, immutable source snapshot, and exact asset bytes; no VM rerun, new source compilation, router flashing, device or visual acceptance."
+}
